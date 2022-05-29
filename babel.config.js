@@ -1,0 +1,27 @@
+module.exports = {
+  plugins: [
+    ['macros'],
+    [
+      '@babel/plugin-transform-react-jsx',
+      {
+        runtime: 'automatic',
+      },
+    ],
+    [
+      'module-resolver',
+      {
+        root: ['./'],
+        extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
+        alias: {
+          '@': './src',
+        },
+      },
+    ],
+  ],
+  presets: ['module:metro-react-native-babel-preset'],
+  env: {
+    production: {
+      plugins: ['transform-remove-console'],
+    },
+  },
+};
