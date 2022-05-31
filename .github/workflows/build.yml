@@ -13,7 +13,13 @@ jobs:
     steps:
 
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+        cache: 'gradle'
 
     - name: sync purge and compile lingui.js locales
       run: |
@@ -23,4 +29,4 @@ jobs:
         TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
 
     - name: test build
-      run: ./android/gradlew build -x lint
+      run: ./android/gradlew --no-daemon build -x lint
