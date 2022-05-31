@@ -55,7 +55,7 @@ export const prayerTranslations = {
     message: 'Isha',
   }),
   motn: defineMessage({
-    id: 'motn',
+    id: 'sunnah.motn',
     message: 'Middle Of The Night',
   }),
 } as Record<string, MessageDescriptor>;
