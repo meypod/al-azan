@@ -13,4 +13,8 @@ module.exports = {
     default: 'en',
   },
   compileNamespace: 'es',
+  service: {
+    name: 'TranslationIO',
+    apiKey: '<TRANSLATION_IO_APIKEY>',
+  },
 };
