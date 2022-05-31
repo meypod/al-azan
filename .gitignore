@@ -65,3 +65,4 @@ buck-out/
 .vscode/.react/
 
 *.mp3
+lingui.config.js
