@@ -1,0 +1,26 @@
+name: test build
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: cimg/android:2022.04.1-node
+    
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: sync purge and compile lingui.js locales
+      run: |
+        sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
+        yarn sync_and_purge;
+      with:
+        TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
+
+    - name: test build
+      run: ./android/gradlew build -x lint
