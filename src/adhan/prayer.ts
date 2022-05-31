@@ -27,7 +27,7 @@ export const PrayersInOrder = [
 
 export const prayerTranslations = {
   fajr: defineMessage({
-    id: 'fajr',
+    id: 'fajr.prayer',
     message: 'Fajr',
   }),
   sunrise: defineMessage({
@@ -35,11 +35,11 @@ export const prayerTranslations = {
     message: 'Sunrise',
   }),
   dhuhr: defineMessage({
-    id: 'dhuhr',
+    id: 'dhuhr.prayer',
     message: 'Dhuhr',
   }),
   asr: defineMessage({
-    id: 'asr',
+    id: 'asr.prayer',
     message: 'Asr',
   }),
   sunset: defineMessage({
@@ -47,11 +47,11 @@ export const prayerTranslations = {
     message: 'Sunset',
   }),
   maghrib: defineMessage({
-    id: 'maghrib',
+    id: 'maghrib.prayer',
     message: 'Maghrib',
   }),
   isha: defineMessage({
-    id: 'isha',
+    id: 'isha.prayer',
     message: 'Isha',
   }),
   motn: defineMessage({
