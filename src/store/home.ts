@@ -34,8 +34,10 @@ export const useStore = create<AppState>()(set => ({
     set(
       produce(draft => {
         const now = new Date();
-        draft.date.setHours(now.getHours());
-        draft.date.setMinutes(now.getMinutes());
+        const newDate = new Date(draft.date);
+        newDate.setHours(now.getHours());
+        newDate.setMinutes(now.getMinutes());
+        draft.date = newDate;
       }),
     ),
 }));

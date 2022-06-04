@@ -1,4 +1,5 @@
-import {Flex, Spacer, Text, useTheme, useColorMode} from 'native-base';
+import {Flex, Spacer, Text, useTheme, useColorMode, HStack} from 'native-base';
+import {MutedIcon} from '@/assets/icons/muted';
 import {isRTL} from '@/i18n';
 import {getTime24} from '@/utils/date';
 
@@ -6,9 +7,15 @@ type TimeRowProps = {
   date?: Date;
   title: string;
   active?: boolean;
+  isActiveDismissed?: boolean;
 };
 
-export function PrayerTimeRow({date, title, active}: TimeRowProps) {
+export function PrayerTimeRow({
+  date,
+  title,
+  active,
+  isActiveDismissed,
+}: TimeRowProps) {
   const {colors} = useTheme();
   const {colorMode} = useColorMode();
   const isDarkMode = colorMode === 'dark';
@@ -25,7 +32,11 @@ export function PrayerTimeRow({date, title, active}: TimeRowProps) {
       marginBottom="3"
       bg={active && !isDarkMode ? colors.yellow[100] : null}
       padding="4">
-      <Text>{title}</Text>
+      <HStack alignItems="center">
+        <Text>{title}</Text>
+        {active && isActiveDismissed && <MutedIcon mx="1"></MutedIcon>}
+      </HStack>
+
       <Spacer />
       {<Text>{date ? getTime24(date) : '--:--'}</Text>}
     </Flex>

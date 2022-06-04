@@ -48,7 +48,10 @@ export function Home() {
   }, [currentDate, settingsState]);
 
   return (
-    <Box safeArea style={[styles.hCenter]}>
+    <Box
+      safeArea
+      style={[styles.hCenter]}
+      onTouchStart={() => updateCurrentDate()}>
       <AppBar
         dayName={todayName}
         monthName={monthName}

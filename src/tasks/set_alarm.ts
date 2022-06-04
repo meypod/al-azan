@@ -101,7 +101,6 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       },
       trigger,
     );
-    // todo: feature: maybe add a pre-adhan notification to dismiss the upcoming adhan notification
   } finally {
     settingAlarm = false;
   }
