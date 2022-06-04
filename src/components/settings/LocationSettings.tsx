@@ -12,7 +12,7 @@ import {
   FormControl,
   WarningOutlineIcon,
 } from 'native-base';
-import {useCallback} from 'react';
+import {useCallback, useLayoutEffect, useState} from 'react';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {
   LOCATION_CITY,
@@ -30,12 +30,23 @@ import {
 } from '@/utils/geonames';
 import {useAction} from '@/utils/hooks/use_action';
 
+function isValidCoords(num: number) {
+  return num >= -180 && num <= 180;
+}
+
 export function LocationSettings(props: IStackProps) {
-  const [lat, setLat] = useStoreHelper<number>(LOCATION_LAT);
-  const [long, setLong] = useStoreHelper<number>(LOCATION_LONG);
+  const [lat, setLat] = useStoreHelper<number | undefined>(LOCATION_LAT);
+  const [long, setLong] = useStoreHelper<number | undefined>(LOCATION_LONG);
+  const [tempLat, setTempLat] = useState<string>('-');
+  const [tempLong, setTempLong] = useState<string>('-');
   const [selectedCountry, setSelectedCountry] = useStoreHelper<
     CountryInfo | undefined
   >(LOCATION_COUNTRY);
+
+  useLayoutEffect(() => {
+    setTempLat(lat?.toString() || '-');
+    setTempLong(long?.toString() || '-');
+  }, [lat, long]);
 
   const [selectedCity, setSelectedCity] = useStoreHelper<
     SearchResult | undefined
@@ -87,14 +98,22 @@ export function LocationSettings(props: IStackProps) {
 
   const onLatChangeText = (str: string) => {
     const parsedValue = parseFloat(str);
-    if (!isNaN(parsedValue)) {
+    if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
       setLat(parsedValue);
+      setTempLat(parsedValue.toString());
+    } else {
+      setLat(undefined);
+      setTempLat('-');
     }
   };
   const onLongChangeText = (str: string) => {
-    const parsedValue = parseFloat(str);
-    if (!isNaN(parsedValue)) {
+    let parsedValue = parseFloat(str);
+    if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
       setLong(parsedValue);
+      setTempLong(parsedValue.toString());
+    } else {
+      setLong(undefined);
+      setTempLong('-');
     }
   };
 
@@ -183,9 +202,10 @@ export function LocationSettings(props: IStackProps) {
           <Input
             height="8"
             placeholder="latitude"
-            value={lat?.toString() || '-'}
+            value={tempLat?.toString()}
             keyboardType="number-pad"
-            onChangeText={onLatChangeText}
+            onChangeText={str => setTempLat(str)}
+            onEndEditing={e => onLatChangeText(e.nativeEvent.text)}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             Latitude is invalid
@@ -197,9 +217,10 @@ export function LocationSettings(props: IStackProps) {
             py="0"
             height="8"
             placeholder="longitude"
-            value={long?.toString() || '-'}
+            value={tempLong?.toString()}
+            onChangeText={str => setTempLong(str)}
             keyboardType="number-pad"
-            onChangeText={onLongChangeText}
+            onEndEditing={e => onLongChangeText(e.nativeEvent.text)}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             Longitude is invalid
