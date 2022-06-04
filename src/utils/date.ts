@@ -13,9 +13,9 @@ export function addDays(date: Date, days: number) {
   return new Date(date.valueOf() + days * oneDayInMs);
 }
 
-export function getDayName(date: Date) {
+export function getDayName(date: Date, length: 'long' | 'short' = 'long') {
   return new Intl.DateTimeFormat(PREFERRED_LOCALE, {
-    weekday: 'long',
+    weekday: length,
   }).format(date);
 }
 
