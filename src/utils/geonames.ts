@@ -1,16 +1,19 @@
 import {URL, URLSearchParams} from 'react-native-url-polyfill';
 
 const baseURL = 'https://secure.geonames.org/';
-const username = ''; // TODO
+const username = 'meypod';
 const responseStyle = 'short';
 const responseType = 'json';
 const maxRows = 10;
 
-const baseSearchParams = new URLSearchParams();
-baseSearchParams.set('username', username);
-baseSearchParams.set('style', responseStyle);
-baseSearchParams.set('type', responseType);
-baseSearchParams.set('maxRows', maxRows.toString());
+function getBaseSearchParams() {
+  const baseSearchParams = new URLSearchParams();
+  baseSearchParams.set('username', username);
+  baseSearchParams.set('style', responseStyle);
+  baseSearchParams.set('type', responseType);
+  baseSearchParams.set('maxRows', maxRows.toString());
+  return baseSearchParams;
+}
 
 type GeonamesResponse<T> = {
   geonames: T;
@@ -34,7 +37,7 @@ export type CountryInfo = {
 
 export async function getCountries(): Promise<CountryInfo[]> {
   const url = new URL('/countryInfo', baseURL);
-  const searchParams = new URLSearchParams(baseSearchParams);
+  const searchParams = getBaseSearchParams();
   const request = new Request(`${url}?${searchParams}`);
   const resp = (await fetch(request).then(r => r.json())) as GeonamesResponse<
     Array<CountryInfo>
@@ -57,7 +60,7 @@ export async function search(
   abortControllerSignal?: AbortSignal,
 ) {
   const url = new URL('/search', baseURL);
-  const searchParams = new URLSearchParams(baseSearchParams);
+  const searchParams = getBaseSearchParams();
   searchParams.set('country', countryCode);
   searchParams.set('name', term);
   const request = new Request(`${url}?${searchParams}`, {
