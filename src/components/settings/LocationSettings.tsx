@@ -85,6 +85,19 @@ export function LocationSettings(props: IStackProps) {
     [searchCitiesAction],
   );
 
+  const onLatChangeText = (str: string) => {
+    const parsedValue = parseFloat(str);
+    if (!isNaN(parsedValue)) {
+      setLat(parsedValue);
+    }
+  };
+  const onLongChangeText = (str: string) => {
+    const parsedValue = parseFloat(str);
+    if (!isNaN(parsedValue)) {
+      setLong(parsedValue);
+    }
+  };
+
   return (
     <VStack {...props}>
       <HStack display="flex" flexGrow={0}>
@@ -172,7 +185,7 @@ export function LocationSettings(props: IStackProps) {
             placeholder="latitude"
             value={lat?.toString() || '-'}
             keyboardType="number-pad"
-            onChangeText={(str: string) => setLat(parseFloat(str))}
+            onChangeText={onLatChangeText}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             Latitude is invalid
@@ -186,7 +199,7 @@ export function LocationSettings(props: IStackProps) {
             placeholder="longitude"
             value={long?.toString() || '-'}
             keyboardType="number-pad"
-            onChangeText={(str: string) => setLong(parseFloat(str))}
+            onChangeText={onLongChangeText}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             Longitude is invalid
