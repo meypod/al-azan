@@ -61,7 +61,7 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
   },
 
   Dubai: {
-    label: t`The Gulf Region`,
+    label: t`The Gulf Region (Dubai)`,
     info: 'Uses Fajr and Isha angles of 18.2 degrees.',
     get: CalculationMethod.Dubai,
   },
