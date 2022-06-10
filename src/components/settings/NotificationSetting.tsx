@@ -1,4 +1,5 @@
 import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import {HStack, Text, Checkbox, Stack} from 'native-base';
 import {Prayer, prayerTranslations} from '@/adhan';
 import {getAdhanSettingKey} from '@/constants/settings';
@@ -31,20 +32,20 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
     setNotify(s);
   };
 
+  const prayerName = i18n._(prayerTranslations[prayer.toLowerCase()]);
+
   return (
     <HStack
       direction={isRTL ? 'row-reverse' : 'row'}
       justifyContent="space-between">
-      <Text width="1/3">
-        {i18n._(prayerTranslations[prayer.toLowerCase()])}
-      </Text>
+      <Text width="1/3">{prayerName}</Text>
 
       <Stack width="1/3" justifyContent="center" alignItems="center">
         <Checkbox
           value="notify"
           isChecked={!!notify}
           onChange={setNotifyProxy}
-          accessibilityLabel={prayer + ' notification will be shown'}
+          accessibilityLabel={t`{prayerName} notification will be shown`}
         />
       </Stack>
       <Stack width="1/6" justifyContent="center" alignItems="center">
@@ -52,7 +53,7 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
           value="sound"
           isChecked={!!sound}
           onChange={setSoundProxy}
-          accessibilityLabel={prayer + ' sound will be played'}
+          accessibilityLabel={t`{prayerName} sound will be played`}
         />
       </Stack>
     </HStack>

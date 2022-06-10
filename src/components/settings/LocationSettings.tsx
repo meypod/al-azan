@@ -1,3 +1,4 @@
+import {t} from '@lingui/macro';
 import {debounce} from 'lodash';
 import {
   HStack,
@@ -124,7 +125,7 @@ export function LocationSettings(props: IStackProps) {
           display="flex"
           width={selectedCountry ? '1/3' : '100%'}
           isInvalid={!!getCountryError}>
-          <FormControl.Label>Country</FormControl.Label>
+          <FormControl.Label>{t`Country`}</FormControl.Label>
           <HStack alignItems="center" justifyContent="space-between" mb="2">
             {selectedCountry ? (
               <Text borderBottomWidth="1" borderColor="coolGray.500">
@@ -145,7 +146,7 @@ export function LocationSettings(props: IStackProps) {
             {isLoadingCountries && <Spinner />}
           </HStack>
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-            Could not load countries
+            {t`Error in loading countries`}
           </FormControl.ErrorMessage>
         </FormControl>
 
@@ -154,7 +155,7 @@ export function LocationSettings(props: IStackProps) {
             width={selectedCity ? undefined : '2/3'}
             flexGrow={1}
             isInvalid={!!searchCitiesError}>
-            <FormControl.Label>City/Area</FormControl.Label>
+            <FormControl.Label>{t`City/Area`}</FormControl.Label>
             <HStack alignItems="center" justifyContent="space-between" mb="2">
               {selectedCity ? (
                 <Text borderBottomWidth="1" borderColor="coolGray.500">
@@ -176,7 +177,7 @@ export function LocationSettings(props: IStackProps) {
             </HStack>
             <FormControl.ErrorMessage
               leftIcon={<WarningOutlineIcon size="xs" />}>
-              Could not load search results
+              {t`Error in loading search results`}
             </FormControl.ErrorMessage>
           </FormControl>
         )}
@@ -198,32 +199,32 @@ export function LocationSettings(props: IStackProps) {
 
       <HStack>
         <FormControl width="1/2" pr="1">
-          <FormControl.Label>Latitude</FormControl.Label>
+          <FormControl.Label>{t`Latitude`}</FormControl.Label>
           <Input
             height="8"
-            placeholder="latitude"
+            placeholder={t`Latitude`}
             value={tempLat?.toString()}
             keyboardType="number-pad"
             onChangeText={str => setTempLat(str)}
             onEndEditing={e => onLatChangeText(e.nativeEvent.text)}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-            Latitude is invalid
+            {t`Latitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
         <FormControl width="1/2" pl="1">
-          <FormControl.Label>Longitude</FormControl.Label>
+          <FormControl.Label>{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
             height="8"
-            placeholder="longitude"
+            placeholder={t`Longitude`}
             value={tempLong?.toString()}
             onChangeText={str => setTempLong(str)}
             keyboardType="number-pad"
             onEndEditing={e => onLongChangeText(e.nativeEvent.text)}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-            Longitude is invalid
+            {t`Longitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
       </HStack>

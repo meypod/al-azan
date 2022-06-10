@@ -1,3 +1,4 @@
+import {t} from '@lingui/macro';
 import {
   useColorMode,
   HStack,
@@ -19,18 +20,18 @@ export function ThemeSettings(props: IStackProps) {
   return (
     <HStack {...props}>
       <FormControl fontSize="md">
-        <FormControl.Label>Theme Color:</FormControl.Label>
+        <FormControl.Label>{t`Theme Color`}:</FormControl.Label>
         <Radio.Group
           name="colorMode"
           defaultValue={colorMode || 'light'}
-          accessibilityLabel="Theme Color"
+          accessibilityLabel={t`Theme Color`}
           onChange={changeColor}>
           <HStack mb="3">
             <Radio value="light">
-              <Text fontSize="sm">Light</Text>
+              <Text fontSize="sm">{t`Light`}</Text>
             </Radio>
             <Radio value="dark" ml="4">
-              <Text fontSize="sm">Dark</Text>
+              <Text fontSize="sm">{t`Dark`}</Text>
             </Radio>
           </HStack>
         </Radio.Group>

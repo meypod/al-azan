@@ -1,3 +1,5 @@
+import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import {PolarCircleResolution, HighLatitudeRule, Madhab} from 'adhan';
 import {VStack, HStack, IStackProps, Select, FormControl} from 'native-base';
 
@@ -43,17 +45,17 @@ export function CalculationSettings(props: IStackProps) {
     <VStack {...props}>
       <FormControl mb="3">
         <HStack alignItems="center">
-          <FormControl.Label m="0">Calculation Method:</FormControl.Label>
+          <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
           <Select
             selectedValue={calculationMethodKey}
             ml="1"
             height="8"
-            accessibilityLabel="Choose Calculation Method"
+            accessibilityLabel={t`Choose Calculation Method`}
             onValueChange={calculationMethodKeyChanged}
             flex="1">
             {Object.keys(CalculationMethods).map(key => (
               <Select.Item
-                label={(CalculationMethods as any)[key].label}
+                label={i18n._((CalculationMethods as any)[key].label)}
                 value={key}
                 key={key}
               />
@@ -63,25 +65,25 @@ export function CalculationSettings(props: IStackProps) {
       </FormControl>
       <FormControl mb="3">
         <HStack alignItems="center">
-          <FormControl.Label m="0">High Latitude:</FormControl.Label>
+          <FormControl.Label m="0">{t`High Latitude`}:</FormControl.Label>
           <Select
             ml="1"
             height="8"
-            accessibilityLabel="Choose High Latitude Setting"
+            accessibilityLabel={t`Choose High Latitude Setting`}
             selectedValue={highLatitudeRuleSetting || 'none'}
             onValueChange={highLatitudeSettingChanged}
             flex="1">
-            <Select.Item label="None (Automatic)" value="none" />
+            <Select.Item label={t`None (Automatic)`} value="none" />
             <Select.Item
-              label="Middle of the Night"
+              label={t`Middle of the Night`}
               value={HighLatitudeRule.MiddleOfTheNight.toString()}
             />
             <Select.Item
-              label="One-Seventh of the Night"
+              label={t`One-Seventh of the Night`}
               value={HighLatitudeRule.SeventhOfTheNight.toString()}
             />
             <Select.Item
-              label="Twilight Angle"
+              label={t`Twilight Angle`}
               value={HighLatitudeRule.TwilightAngle.toString()}
             />
           </Select>
@@ -89,29 +91,29 @@ export function CalculationSettings(props: IStackProps) {
       </FormControl>
       <FormControl mb="3">
         <HStack alignItems="center">
-          <FormControl.Label m="0">Asr Calculation:</FormControl.Label>
+          <FormControl.Label m="0">{t`Asr Calculation`}:</FormControl.Label>
           <Select
             ml="1"
             height="8"
-            accessibilityLabel="Choose Asr Calculation Madhab"
+            accessibilityLabel={t`Choose Asr Calculation Madhab`}
             selectedValue={asrCalculationSetting || Madhab.Shafi.toString()}
             onValueChange={asrCalculationSettingChanged}
             flex="1">
             <Select.Item
-              label="Shafi (Default)"
+              label={t`Shafi (Default)`}
               value={Madhab.Shafi.toString()}
             />
-            <Select.Item label="Hanafi" value={Madhab.Hanafi.toString()} />
+            <Select.Item label="{t`Hanafi`}" value={Madhab.Hanafi.toString()} />
           </Select>
         </HStack>
       </FormControl>
       <FormControl mb="3">
         <HStack alignItems="center">
-          <FormControl.Label m="0">Polar Resolution:</FormControl.Label>
+          <FormControl.Label m="0">{t`Polar Resolution`}:</FormControl.Label>
           <Select
             ml="1"
             height="8"
-            accessibilityLabel="Choose Polar Resolution"
+            accessibilityLabel={t`Choose Polar Resolution`}
             onValueChange={polarResolutionSettingChanged}
             selectedValue={
               polarResolutionSetting ||
@@ -119,15 +121,15 @@ export function CalculationSettings(props: IStackProps) {
             }
             flex="1">
             <Select.Item
-              label="Unresolved (default)"
+              label={t`Unresolved (default)`}
               value={PolarCircleResolution.Unresolved.toString()}
             />
             <Select.Item
-              label="AqrabBalad"
+              label={t`Closest City`}
               value={PolarCircleResolution.AqrabBalad.toString()}
             />
             <Select.Item
-              label="AqrabYaum"
+              label={t`Closest Date`}
               value={PolarCircleResolution.AqrabYaum.toString()}
             />
           </Select>

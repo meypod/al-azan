@@ -91,7 +91,7 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
   },
 
   Turkey: {
-    label: 'Diyanet İşleri Başkanlığı, Turkey',
+    label: t`Diyanet İşleri Başkanlığı, Turkey`,
     info: 'Uses a Fajr angle of 18 and an Isha angle of 17.',
     get: CalculationMethod.Turkey,
   },
