@@ -1,8 +1,8 @@
 import {t} from '@lingui/macro';
 import {HStack, VStack, Text, IStackProps} from 'native-base';
 import {PrayersInOrder} from '@/adhan';
-import {NotificationSetting} from '@/components/settings/NotificationSetting';
 import {isRTL} from '@/i18n';
+import {NotificationSetting} from '@/screens/settings/components/NotificationSetting';
 
 export function NotificationSettings(props: IStackProps) {
   return (

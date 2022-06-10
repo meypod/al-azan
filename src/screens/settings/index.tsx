@@ -1,9 +1,9 @@
 import {Box, ScrollView} from 'native-base';
 import {useEffect} from 'react';
-import {CalculationSettings} from '@/components/settings/CalculationSettings';
-import {LocationSettings} from '@/components/settings/LocationSettings';
-import {NotificationSettings} from '@/components/settings/NotificationSettings';
-import {ThemeSettings} from '@/components/settings/ThemeSettings';
+import {CalculationSettings} from '@/screens/settings/components/CalculationSettings';
+import {LocationSettings} from '@/screens/settings/components/LocationSettings';
+import {NotificationSettings} from '@/screens/settings/components/NotificationSettings';
+import {ThemeSettings} from '@/screens/settings/components/ThemeSettings';
 import {useStore as useSettingStore} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
