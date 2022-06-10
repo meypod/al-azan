@@ -1,22 +1,43 @@
 import {i18n} from '@lingui/core';
-
+import {en, ar, fa} from 'make-plural/plurals';
 import {isRtlLang} from 'rtl-detect';
 
 import {messages as enMessages} from '../locales/en/messages.mjs';
 
+i18n.loadLocaleData({
+  en: {plurals: en},
+  fa: {plurals: fa},
+  ar: {plurals: ar},
+});
 i18n.load('en', enMessages);
 
-let isLocaleRTL = false;
+export let isRTL = false;
 
-export function isRTL() {
-  return isLocaleRTL;
-}
+const localeFallbacks = [
+  {
+    startsWith: 'en',
+    fallback: 'en',
+  },
+  {
+    startsWith: 'fa',
+    fallback: 'fa',
+  },
+  {
+    startsWith: 'ar',
+    fallback: 'ar',
+  },
+];
 
-export async function loadLocale(locale: string) {
-  if (locale in i18n.messages) {
-    i18n.activate(locale);
-    return;
+export async function loadLocale(targetLocale: string) {
+  let locale;
+  for (const lf of localeFallbacks) {
+    if (targetLocale.startsWith(lf.startsWith)) {
+      locale = lf.fallback;
+      break;
+    }
   }
+  if (!locale) locale = targetLocale;
+
   try {
     const {messages} = await import(
       /* webpackInclude: /\.mjs$/ */
@@ -26,7 +47,7 @@ export async function loadLocale(locale: string) {
     );
     if (messages) {
       i18n.load(locale, messages);
-      isLocaleRTL = !!isRtlLang(locale);
+      isRTL = isRtlLang(locale)!;
       i18n.activate(locale);
     } else {
       throw new Error('import failed');

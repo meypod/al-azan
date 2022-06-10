@@ -13,7 +13,7 @@ export function NotificationSettings(props: IStackProps) {
       mb="3"
       {...props}>
       <HStack
-        direction={isRTL() ? 'row-reverse' : 'row'}
+        direction={isRTL ? 'row-reverse' : 'row'}
         justifyContent="space-between">
         <Text width="1/3">{t`Adhan`}</Text>
         <Text width="1/3" textAlign="center">

@@ -33,7 +33,7 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
 
   return (
     <HStack
-      direction={isRTL() ? 'row-reverse' : 'row'}
+      direction={isRTL ? 'row-reverse' : 'row'}
       justifyContent="space-between">
       <Text width="1/3">
         {i18n._(prayerTranslations[prayer.toLowerCase()])}

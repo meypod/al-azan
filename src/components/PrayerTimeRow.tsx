@@ -22,7 +22,7 @@ export function PrayerTimeRow({
 
   return (
     <Flex
-      direction={isRTL() ? 'row-reverse' : 'row'}
+      direction={isRTL ? 'row-reverse' : 'row'}
       width="100%"
       py="2"
       align="center"
