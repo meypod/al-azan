@@ -1,3 +1,5 @@
+import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import notifee, {
   TimestampTrigger,
   TriggerType,
@@ -10,7 +12,6 @@ import {
   PRE_ADHAN_CHANNEL_NAME,
   PRE_ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
-import {i18n} from '@/i18n';
 import {getDayName, getTime24} from '@/utils/date';
 
 export type SetPreAlarmTaskOptions = {
@@ -48,7 +49,7 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
     await notifee.createTriggerNotification(
       {
         id: PRE_ADHAN_NOTIFICATION_ID,
-        title: i18n._({
+        title: t({
           message: 'Upcoming alarm',
           comment: 'notification title',
         }),

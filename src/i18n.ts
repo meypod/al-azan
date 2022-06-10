@@ -1,5 +1,4 @@
 import {i18n} from '@lingui/core';
-export {i18n} from '@lingui/core';
 
 import {isRtlLang} from 'rtl-detect';
 

@@ -1,4 +1,4 @@
-import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import {HStack, VStack, Text, IStackProps} from 'native-base';
 import {PrayersInOrder} from '@/adhan';
 import {NotificationSetting} from '@/components/settings/NotificationSetting';
@@ -15,12 +15,12 @@ export function NotificationSettings(props: IStackProps) {
       <HStack
         direction={isRTL() ? 'row-reverse' : 'row'}
         justifyContent="space-between">
-        <Text width="1/3">{i18n._({message: 'Adhan'})}</Text>
+        <Text width="1/3">{t`Adhan`}</Text>
         <Text width="1/3" textAlign="center">
-          {i18n._({message: 'Notification'})}
+          {t`Notification`}
         </Text>
         <Text width="1/6" textAlign="center">
-          {i18n._({message: 'Sound'})}
+          {t`Sound`}
         </Text>
       </HStack>
       {PrayersInOrder.map(p => (

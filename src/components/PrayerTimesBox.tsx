@@ -1,8 +1,8 @@
+import {i18n} from '@lingui/core';
 import {Box} from 'native-base';
 import {useEffect, useState} from 'react';
 import {PrayersInOrder, PrayerTimesExtended, prayerTranslations} from '@/adhan';
 import {PrayerTimeRow} from '@/components/PrayerTimeRow';
-import {i18n} from '@/i18n';
 import {getSecheduledAdhanNotificationOptions} from '@/notifee';
 
 type PrayerTimesBoxProps = {

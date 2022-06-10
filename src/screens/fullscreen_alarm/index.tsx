@@ -1,9 +1,9 @@
+import {i18n} from '@lingui/core';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
 import {useLayoutEffect, useState} from 'react';
 import {BackHandler} from 'react-native';
 import {Prayer, prayerTranslations} from '@/adhan';
-import {i18n} from '@/i18n';
 import {replace} from '@/navigation/root_navigation';
 import {RootStackParamList} from '@/navigation/types';
 import {cancelAdhanNotif, isAdhanPlaying} from '@/notifee';

@@ -1,3 +1,4 @@
+import {i18n} from '@lingui/core';
 import HeaderTitle from '@react-navigation/elements/src/Header/HeaderTitle';
 import {
   NavigationContainer,
@@ -8,7 +9,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useColorMode} from 'native-base';
 import {useEffect, useRef} from 'react';
 import {AppState} from 'react-native';
-import {i18n} from '@/i18n';
 import {
   getCurrentRoute,
   navigationRef,

@@ -1,9 +1,10 @@
 import {ChunkManager} from '@callstack/repack/dist/client/api/ChunkManager';
+import {i18n} from '@lingui/core';
 import {AppRegistry} from 'react-native';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {APP_KEY} from '@/constants/app';
-import {i18n, loadLocale} from '@/i18n';
+import {loadLocale} from '@/i18n';
 import {setupNotifeeHandlers} from '@/notifee';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 

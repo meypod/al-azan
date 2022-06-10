@@ -1,4 +1,5 @@
 import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
 import {getPrayerTimes, prayerTranslations} from '@/adhan';
 import {getSettings, hasAtLeastOneNotificationSetting} from '@/store/settings';
@@ -42,7 +43,7 @@ export async function setNextAdhan(fromDate?: Date) {
         prayerTranslations[prayer.toLowerCase()],
       );
       ToastAndroid.show(
-        i18n._({
+        t({
           message: `Next: ${translatedPrayerName} at ${getTime24(date)}`,
           comment:
             'this message is shown inside the toast that says when the next notification/sound will be shown/played',

@@ -1,3 +1,4 @@
+import {i18n} from '@lingui/core';
 import notifee, {
   TimestampTrigger,
   TriggerType,
@@ -12,7 +13,6 @@ import {
   ADHAN_CHANNEL_NAME,
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
-import {i18n} from '@/i18n';
 
 export type SetAlarmTaskOptions = {
   /** When the adhan is  */
