@@ -21,6 +21,7 @@ import {
   LOCATION_LAT,
   LOCATION_LONG,
 } from '@/constants/settings';
+import {isRTL} from '@/i18n';
 import {useStoreHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
 import {
@@ -125,7 +126,10 @@ export function LocationSettings(props: IStackProps) {
           display="flex"
           width={selectedCountry ? '1/3' : '100%'}
           isInvalid={!!getCountryError}>
-          <FormControl.Label>{t`Country`}</FormControl.Label>
+          <FormControl.Label
+            flexDirection={
+              isRTL ? 'row-reverse' : 'row'
+            }>{t`Country`}</FormControl.Label>
           <HStack alignItems="center" justifyContent="space-between" mb="2">
             {selectedCountry ? (
               <Text borderBottomWidth="1" borderColor="coolGray.500">
@@ -145,7 +149,9 @@ export function LocationSettings(props: IStackProps) {
             )}
             {isLoadingCountries && <Spinner />}
           </HStack>
-          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
+          <FormControl.ErrorMessage
+            flexDirection={isRTL ? 'row-reverse' : 'row'}
+            leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Error in loading countries`}
           </FormControl.ErrorMessage>
         </FormControl>
@@ -155,7 +161,10 @@ export function LocationSettings(props: IStackProps) {
             width={selectedCity ? undefined : '2/3'}
             flexGrow={1}
             isInvalid={!!searchCitiesError}>
-            <FormControl.Label>{t`City/Area`}</FormControl.Label>
+            <FormControl.Label
+              flexDirection={
+                isRTL ? 'row-reverse' : 'row'
+              }>{t`City/Area`}</FormControl.Label>
             <HStack alignItems="center" justifyContent="space-between" mb="2">
               {selectedCity ? (
                 <Text borderBottomWidth="1" borderColor="coolGray.500">
@@ -176,6 +185,7 @@ export function LocationSettings(props: IStackProps) {
               {isLoadingCities && <Spinner pl="1" />}
             </HStack>
             <FormControl.ErrorMessage
+              flexDirection={isRTL ? 'row-reverse' : 'row'}
               leftIcon={<WarningOutlineIcon size="xs" />}>
               {t`Error in loading search results`}
             </FormControl.ErrorMessage>
@@ -199,7 +209,10 @@ export function LocationSettings(props: IStackProps) {
 
       <HStack>
         <FormControl width="1/2" pr="1">
-          <FormControl.Label>{t`Latitude`}</FormControl.Label>
+          <FormControl.Label
+            flexDirection={
+              isRTL ? 'row-reverse' : 'row'
+            }>{t`Latitude`}</FormControl.Label>
           <Input
             height="8"
             placeholder={t`Latitude`}
@@ -208,12 +221,17 @@ export function LocationSettings(props: IStackProps) {
             onChangeText={str => setTempLat(str)}
             onEndEditing={e => onLatChangeText(e.nativeEvent.text)}
           />
-          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
+          <FormControl.ErrorMessage
+            flexDirection={isRTL ? 'row-reverse' : 'row'}
+            leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Latitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
         <FormControl width="1/2" pl="1">
-          <FormControl.Label>{t`Longitude`}</FormControl.Label>
+          <FormControl.Label
+            flexDirection={
+              isRTL ? 'row-reverse' : 'row'
+            }>{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
             height="8"
@@ -223,7 +241,9 @@ export function LocationSettings(props: IStackProps) {
             keyboardType="number-pad"
             onEndEditing={e => onLongChangeText(e.nativeEvent.text)}
           />
-          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
+          <FormControl.ErrorMessage
+            flexDirection={isRTL ? 'row-reverse' : 'row'}
+            leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Longitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
