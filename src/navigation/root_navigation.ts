@@ -29,15 +29,16 @@ export async function onReady() {
   }
 }
 
-export function navigate(
-  ...options: Parameters<typeof navigationRef.navigate>
-): ReturnType<typeof navigationRef.navigate> {
+type NavigateType = typeof navigationRef.navigate;
+
+export const navigate = ((...options: any) => {
   if (navigationRef.isReady()) {
+    navigationRef.navigate('Home');
     navigationRef.navigate(...options);
   } else {
     actionQueue.push([navigate, options]);
   }
-}
+}) as NavigateType;
 
 export function dispatch(
   ...options: Parameters<typeof navigationRef.dispatch>
@@ -51,7 +52,12 @@ export function dispatch(
 
 export function push(...options: Parameters<typeof StackActions.push>) {
   if (navigationRef.isReady()) {
-    navigationRef.dispatch(StackActions.push(...options));
+    if (
+      options.length &&
+      navigationRef.getCurrentRoute()?.name !== options[0]
+    ) {
+      navigationRef.dispatch(StackActions.push(...options));
+    }
   } else {
     actionQueue.push([push, options]);
   }

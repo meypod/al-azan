@@ -1,6 +1,6 @@
-import {useNavigation} from '@react-navigation/native';
 import {HStack, StatusBar, Button, Text} from 'native-base';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
+import {navigate} from '@/navigation/root_navigation';
 
 type AppBarProps = {
   dayName?: string;
@@ -9,10 +9,8 @@ type AppBarProps = {
 };
 
 export function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
-  const navigation = useNavigation();
-
   const settingsPressed = () => {
-    navigation.navigate('Settings');
+    navigate('Settings');
   };
 
   return (

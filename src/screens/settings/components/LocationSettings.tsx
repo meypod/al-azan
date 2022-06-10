@@ -144,8 +144,7 @@ export function LocationSettings(props: IStackProps) {
                 getOptionLabel={item => item.countryName}
                 getOptionKey={item => item.countryCode}
                 autoCompleteKeys={['countryCode', 'countryName']}
-                onChangeText={onChangeText}
-                height="8"></AutocompleteInput>
+                onChangeText={onChangeText}></AutocompleteInput>
             )}
             {isLoadingCountries && <Spinner />}
           </HStack>
@@ -179,8 +178,7 @@ export function LocationSettings(props: IStackProps) {
                   getOptionKey={item => item.geonameId.toString()}
                   getOptionLabel={item => item.name}
                   autoCompleteKeys={['name']}
-                  onChangeText={onCitiesChangeText}
-                  height="8"></AutocompleteInput>
+                  onChangeText={onCitiesChangeText}></AutocompleteInput>
               )}
               {isLoadingCities && <Spinner pl="1" />}
             </HStack>
@@ -214,7 +212,7 @@ export function LocationSettings(props: IStackProps) {
               isRTL ? 'row-reverse' : 'row'
             }>{t`Latitude`}</FormControl.Label>
           <Input
-            height="8"
+            py="0"
             placeholder={t`Latitude`}
             value={tempLat?.toString()}
             keyboardType="number-pad"
@@ -234,7 +232,6 @@ export function LocationSettings(props: IStackProps) {
             }>{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
-            height="8"
             placeholder={t`Longitude`}
             value={tempLong?.toString()}
             onChangeText={str => setTempLong(str)}
