@@ -51,7 +51,7 @@ export function CalculationSettings(props: IStackProps) {
   };
 
   return (
-    <VStack {...props}>
+    <VStack p="4" {...props}>
       <FormControl mb="3">
         <FormControl.Label flexDirection={isRTL ? 'row-reverse' : 'row'} m="0">
           {t`Calculation Method`}:

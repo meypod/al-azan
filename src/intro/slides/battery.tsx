@@ -1,4 +1,4 @@
-import {BatteryOptimizationSettings} from '@/screens/settings/components/BatteryOptimizationSettings';
+import {BatteryOptimizationSettings} from '@/screens/settings/subscreens/BatteryOptimizationSettings';
 
 export function BatteryOptimizationSlide() {
   return <BatteryOptimizationSettings pb="40" />;

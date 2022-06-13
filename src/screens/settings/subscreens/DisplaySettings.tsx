@@ -3,7 +3,7 @@ import {ThemeSettings} from '@/screens/settings/components/ThemeSettings';
 
 export function DisplaySettings(props: IStackProps) {
   return (
-    <VStack {...props}>
+    <VStack p="4" {...props}>
       <ThemeSettings></ThemeSettings>
     </VStack>
   );

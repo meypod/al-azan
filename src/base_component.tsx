@@ -35,7 +35,10 @@ const config = {
   suppressColorAccessibilityWarning: true,
 };
 
-export function BaseComponent(ChildComponent: React.FunctionComponent) {
+export function BaseComponent<T>(
+  ChildComponent: React.FunctionComponent<T>,
+  args: T,
+) {
   useEffect(() => {
     const unsubscribe = setupNotifeeForegroundHandler();
 
@@ -48,7 +51,7 @@ export function BaseComponent(ChildComponent: React.FunctionComponent) {
     <StrictMode>
       <I18nProvider i18n={i18n}>
         <NativeBaseProvider theme={extendedTheme} config={config}>
-          <ChildComponent />
+          <ChildComponent {...args} />
         </NativeBaseProvider>
       </I18nProvider>
     </StrictMode>

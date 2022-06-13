@@ -37,7 +37,7 @@ export function BatteryOptimizationSettings(props: IStackProps) {
   });
 
   return (
-    <VStack {...props}>
+    <VStack p="4" {...props}>
       <FormControl display="flex" pb="8">
         <FormControl.Label
           flexDirection={

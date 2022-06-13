@@ -20,11 +20,11 @@ import {RootStackParamList, routeTranslations} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import {Settings} from '@/screens/settings';
-import {BatteryOptimizationSettings} from '@/screens/settings/components/BatteryOptimizationSettings';
-import {CalculationSettings} from '@/screens/settings/components/CalculationSettings';
-import {DisplaySettings} from '@/screens/settings/components/DisplaySettings';
-import {LocationSettings} from '@/screens/settings/components/LocationSettings';
-import {NotificationSettings} from '@/screens/settings/components/NotificationSettings';
+import {BatteryOptimizationSettings} from '@/screens/settings/subscreens/BatteryOptimizationSettings';
+import {CalculationSettings} from '@/screens/settings/subscreens/CalculationSettings';
+import {DisplaySettings} from '@/screens/settings/subscreens/DisplaySettings';
+import {LocationSettings} from '@/screens/settings/subscreens/LocationSettings';
+import {NotificationSettings} from '@/screens/settings/subscreens/NotificationSettings';
 import {useStoreHelper as useSettingStore} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 

@@ -7,8 +7,7 @@ export function IntroItem({item}: {item: PropsWithChildren<{title: string}>}) {
   return (
     <ScrollView
       keyboardShouldPersistTaps="handled"
-      keyboardDismissMode="on-drag"
-      p="4">
+      keyboardDismissMode="on-drag">
       <Text py="3" textAlign="center" width="100%" fontSize="lg" mb="5">
         {item.title}
       </Text>

@@ -2,11 +2,12 @@ import {t} from '@lingui/macro';
 import {HStack, VStack, Text, IStackProps} from 'native-base';
 import {PrayersInOrder} from '@/adhan';
 import {isRTL} from '@/i18n';
-import {NotificationSetting} from '@/screens/settings/components/NotificationSetting';
+import {NotificationSetting} from '@/screens/settings/subscreens/NotificationSetting';
 
 export function NotificationSettings(props: IStackProps) {
   return (
     <VStack
+      p="4"
       alignItems="stretch"
       justifyContent="center"
       space="sm"

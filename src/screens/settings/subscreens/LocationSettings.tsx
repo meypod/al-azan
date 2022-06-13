@@ -150,7 +150,7 @@ export function LocationSettings(props: IStackProps) {
   };
 
   return (
-    <VStack {...props}>
+    <VStack p="4" {...props}>
       <HStack display="flex" flexGrow={0}>
         <FormControl
           display="flex"
