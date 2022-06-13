@@ -1,5 +1,5 @@
 import {CalculationSettings} from '@/screens/settings/components/CalculationSettings';
 
 export function CalculationSlide() {
-  return <CalculationSettings />;
+  return <CalculationSettings pb="40" />;
 }
