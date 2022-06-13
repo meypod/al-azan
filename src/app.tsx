@@ -20,6 +20,7 @@ import {RootStackParamList, routeTranslations} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import {Settings} from '@/screens/settings';
+import {AdhanSettings} from '@/screens/settings/subscreens/AdhanSettings';
 import {BatteryOptimizationSettings} from '@/screens/settings/subscreens/BatteryOptimizationSettings';
 import {CalculationSettings} from '@/screens/settings/subscreens/CalculationSettings';
 import {DisplaySettings} from '@/screens/settings/subscreens/DisplaySettings';
@@ -92,6 +93,7 @@ export function App() {
             name="NotificationSettings"
             component={NotificationSettings}
           />
+          <Stack.Screen name="AdhanSettings" component={AdhanSettings} />
           <Stack.Screen
             name="CalculationSettings"
             component={CalculationSettings}

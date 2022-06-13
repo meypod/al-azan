@@ -6,7 +6,8 @@ import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
 import {CalculateIcon} from '@/assets/icons/calculate';
 import {ExploreIcon} from '@/assets/icons/explore';
-import {NotificationsIcon} from '@/assets/icons/notifications';
+import {NotificationsActiveIcon} from '@/assets/icons/notifications_active';
+import {VolumeUpIcon} from '@/assets/icons/volume_up';
 import {isRTL} from '@/i18n';
 import {push} from '@/navigation/root_navigation';
 import {routeTranslations, RootStackParamList} from '@/navigation/types';
@@ -29,7 +30,11 @@ const settingsScreenList: ScreenListItem[] = [
   },
   {
     name: 'NotificationSettings',
-    icon: NotificationsIcon,
+    icon: NotificationsActiveIcon,
+  },
+  {
+    name: 'AdhanSettings',
+    icon: VolumeUpIcon,
   },
   {
     name: 'CalculationSettings',
