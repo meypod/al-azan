@@ -6,7 +6,7 @@ import {ADHAN_FILE_LOCATION} from '@/constants/settings';
 import {getSettings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 
-const defaultAdhanSound = require('@/assets/sounds/adhan.mp3');
+const defaultAdhanSound = require('@/assets/sounds/masjid_an_nabawi.mp3');
 
 // TODO: add adhan file option to alarm options
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
