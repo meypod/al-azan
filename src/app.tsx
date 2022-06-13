@@ -20,6 +20,11 @@ import {RootStackParamList, routeTranslations} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import {Settings} from '@/screens/settings';
+import {BatteryOptimizationSettings} from '@/screens/settings/components/BatteryOptimizationSettings';
+import {CalculationSettings} from '@/screens/settings/components/CalculationSettings';
+import {DisplaySettings} from '@/screens/settings/components/DisplaySettings';
+import {LocationSettings} from '@/screens/settings/components/LocationSettings';
+import {NotificationSettings} from '@/screens/settings/components/NotificationSettings';
 import {useStoreHelper as useSettingStore} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
@@ -81,6 +86,20 @@ export function App() {
         </Stack.Group>
         <Stack.Group>
           <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen name="DisplaySettings" component={DisplaySettings} />
+          <Stack.Screen name="LocationSettings" component={LocationSettings} />
+          <Stack.Screen
+            name="NotificationSettings"
+            component={NotificationSettings}
+          />
+          <Stack.Screen
+            name="CalculationSettings"
+            component={CalculationSettings}
+          />
+          <Stack.Screen
+            name="BatteryOptimizationSettings"
+            component={BatteryOptimizationSettings}
+          />
         </Stack.Group>
         <Stack.Group
           screenOptions={{presentation: 'modal', headerShown: false}}>

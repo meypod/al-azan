@@ -3,7 +3,7 @@ import {produce} from 'immer';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import {PrayersInOrder} from '@/adhan';
-import {getAdhanSettingKey} from '@/constants/settings';
+import {getAdhanSettingKey, APP_INTRO_DONE} from '@/constants/settings';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
@@ -17,6 +17,7 @@ const invalidKeys = ['setSetting', 'removeSetting'];
 export const useStore = create<SettingsStore>()(
   persist(
     set => ({
+      [APP_INTRO_DONE]: true,
       setSetting: (key: string) => (val: unknown) =>
         set(
           produce<SettingsStore>(draft => {
