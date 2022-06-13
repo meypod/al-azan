@@ -68,7 +68,7 @@ export function Intro() {
 
   return (
     <Box flex="1" safeArea>
-      <StatusBar translucent backgroundColor="transparent" />
+      <StatusBar />
       <AppIntroSlider<Item>
         keyboardDismissMode="on-drag"
         keyboardShouldPersistTaps="handled"
