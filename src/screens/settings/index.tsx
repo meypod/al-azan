@@ -2,7 +2,7 @@ import {i18n} from '@lingui/core';
 import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {useEffect} from 'react';
 
-import {BatteryCharging} from '@/assets/icons/battery_charging';
+import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
 import {CalculateIcon} from '@/assets/icons/calculate';
 import {ExploreIcon} from '@/assets/icons/explore';
@@ -37,7 +37,7 @@ const settingsScreenList: ScreenListItem[] = [
   },
   {
     name: 'BatteryOptimizationSettings',
-    icon: BatteryCharging,
+    icon: BatteryChargingIcon,
   },
 ];
 

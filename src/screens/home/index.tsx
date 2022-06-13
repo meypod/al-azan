@@ -1,14 +1,9 @@
-import {
-  ArrowBackIcon,
-  ArrowForwardIcon,
-  Box,
-  Button,
-  Flex,
-  HStack,
-} from 'native-base';
+import {Box, Button, Flex, HStack} from 'native-base';
 import {useEffect, useState} from 'react';
 import {styles} from './styles';
 import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
+import {ArrowBackIcon} from '@/assets/icons/arrow_back';
+import {ArrowForwardIcon} from '@/assets/icons/arrow_forward';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {UpdateIcon} from '@/assets/icons/update';
 import {AppBar} from '@/components/AppBar';
@@ -59,15 +54,15 @@ export function Home() {
       />
       <HStack justifyContent="space-between" alignItems="center" w="100%">
         <Button variant="ghost" onPress={() => decreaseCurrentDateByOne()}>
-          <Flex direction="row">
-            <ArrowBackIcon size="lg" />
-            <RestoreIcon size="lg" />
+          <Flex direction="row" alignItems="center">
+            <ArrowBackIcon size="2xl" />
+            <RestoreIcon size="xl" />
           </Flex>
         </Button>
         <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
-          <Flex direction="row">
-            <UpdateIcon size="lg" />
-            <ArrowForwardIcon size="lg" />
+          <Flex direction="row" alignItems="center">
+            <UpdateIcon size="xl" />
+            <ArrowForwardIcon size="2xl" />
           </Flex>
         </Button>
       </HStack>
