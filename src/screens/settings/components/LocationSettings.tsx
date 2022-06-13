@@ -145,7 +145,7 @@ export function LocationSettings(props: IStackProps) {
         }
       })
       .catch(() => {
-        ToastAndroid.show(t`Cannot get clipboard content`, ToastAndroid.SHORT);
+        ToastAndroid.show(t`Error getting clipboard data`, ToastAndroid.SHORT);
       });
   };
 

@@ -80,9 +80,9 @@ export function BatteryOptimizationSettings(props: IStackProps) {
               powerManagerInfo.manufacturer?.toLowerCase() === 'samsung' && (
                 <Text
                   py="3"
-                  fontSize="xs">{t`Samsung devices have their own custom Power Manager called 'Device Care'.
+                  fontSize="xs">{t`Samsung devices have their own custom Power Manager called "Device Care".
           After pressing the button below, You will be navigated to the Battery menu of Device Care.
-          In the Battery menu tap 'App power management', and then tap 'Apps that won't be put to sleep',
+          In the Battery menu tap "App power management", and then tap "Apps that won't be put to sleep",
           and add this app to the list.`}</Text>
               )}
           </FormControl.HelperText>
