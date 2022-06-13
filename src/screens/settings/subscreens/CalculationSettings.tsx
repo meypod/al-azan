@@ -59,8 +59,7 @@ export function CalculationSettings(props: IStackProps) {
         <Select
           selectedValue={calculationMethodKey}
           accessibilityLabel={t`Choose Calculation Method`}
-          onValueChange={calculationMethodKeyChanged}
-          flex="1">
+          onValueChange={calculationMethodKeyChanged}>
           {Object.keys(CalculationMethods).map(key => (
             <Select.Item
               label={i18n._((CalculationMethods as any)[key].label)}
