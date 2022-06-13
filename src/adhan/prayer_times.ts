@@ -54,11 +54,28 @@ export type PrayerTimesOptions = {
   coordinates: Coordinates;
 };
 
+export function isMinimumSettingsAvailable(settings: Settings | undefined) {
+  if (!settings) {
+    return false;
+  }
+  const lat = settings.get<number>(LOCATION_LAT);
+  const long = settings.get<number>(LOCATION_LONG);
+  const calcMethodKey = settings.get<string>(CALCULATION_METHOD_KEY);
+
+  if (![lat, long, calcMethodKey].every(Boolean)) return false;
+
+  if (isNaN(lat) || isNaN(long)) {
+    return false;
+  }
+
+  return true;
+}
+
 async function getPrayerTimesOptionsFromSettings() {
   const settings = await getSettings();
-  if (!settings) {
-    return;
-  }
+
+  if (!isMinimumSettingsAvailable(settings)) return;
+
   const lat = settings.get<number>(LOCATION_LAT);
   const long = settings.get<number>(LOCATION_LONG);
   const calcMethodKey = settings.get<string>(CALCULATION_METHOD_KEY);
@@ -66,12 +83,6 @@ async function getPrayerTimesOptionsFromSettings() {
   const asrCalcSetting = settings.get<string>(ASR_CALCULATION);
   const shafaqCalcSetting = settings.get<string>(SHAFAQ);
   const polarCicleResolutionSetting = settings.get<string>(POLAR_RESOLUTION);
-
-  if (![lat, long, calcMethodKey].every(Boolean)) return;
-
-  if (isNaN(lat) || isNaN(long)) {
-    return;
-  }
 
   const prayerTimeOptions: PrayerTimesOptions = {
     calculationParameters: CalculationMethods[calcMethodKey].get(),

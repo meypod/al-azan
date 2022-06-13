@@ -9,6 +9,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useColorMode} from 'native-base';
 import {useEffect, useRef} from 'react';
 import {AppState} from 'react-native';
+import {APP_INTRO_DONE} from '@/constants/settings';
+import {Intro} from '@/intro';
 import {
   getCurrentRoute,
   navigationRef,
@@ -18,6 +20,7 @@ import {RootStackParamList, routeTranslations} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import {Settings} from '@/screens/settings';
+import {useStoreHelper as useSettingStore} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -36,6 +39,7 @@ const TranslatedHeaderTitle = (...props: any[]) => {
 };
 
 export function App() {
+  const [appIntroDone] = useSettingStore<boolean>(APP_INTRO_DONE);
   const {colorMode} = useColorMode();
 
   const isDarkMode = colorMode === 'dark';
@@ -58,6 +62,10 @@ export function App() {
       subscription.remove();
     };
   }, []);
+
+  if (!appIntroDone) {
+    return <Intro></Intro>;
+  }
 
   return (
     <NavigationContainer

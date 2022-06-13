@@ -15,7 +15,7 @@ export function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
 
   return (
     <>
-      <StatusBar />
+      <StatusBar translucent backgroundColor="transparent" />
       <HStack
         px="3"
         justifyContent="space-between"

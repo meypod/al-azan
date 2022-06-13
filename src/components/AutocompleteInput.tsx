@@ -69,7 +69,7 @@ export const AutocompleteInput = <T extends unknown>(
   );
 
   const onListItemPressed = useCallback(
-    item => {
+    (item: T) => {
       onItemSelected && onItemSelected(item);
       setHideResults(true);
       setShowResults(false);

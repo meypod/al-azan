@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import Clipboard from '@react-native-clipboard/clipboard';
 import {debounce} from 'lodash';
 import {
   HStack,
@@ -14,6 +15,7 @@ import {
   WarningOutlineIcon,
 } from 'native-base';
 import {useCallback, useLayoutEffect, useState} from 'react';
+import {ToastAndroid} from 'react-native';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {
   LOCATION_CITY,
@@ -35,6 +37,8 @@ import {useAction} from '@/utils/hooks/use_action';
 function isValidCoords(num: number) {
   return num >= -180 && num <= 180;
 }
+
+const clipboardCoordsRegex = /([-\d.]+)\s*,\s*([-\d.]+)/;
 
 export function LocationSettings(props: IStackProps) {
   const [lat, setLat] = useStoreHelper<number | undefined>(LOCATION_LAT);
@@ -107,6 +111,7 @@ export function LocationSettings(props: IStackProps) {
       setLat(undefined);
       setTempLat('-');
     }
+    clearCountryAndCity();
   };
   const onLongChangeText = (str: string) => {
     let parsedValue = parseFloat(str);
@@ -117,6 +122,31 @@ export function LocationSettings(props: IStackProps) {
       setLong(undefined);
       setTempLong('-');
     }
+    clearCountryAndCity();
+  };
+
+  const clearCountryAndCity = () => {
+    setSelectedCountry(undefined);
+    setSelectedCity(undefined);
+  };
+
+  const onPasteButtonPressed = () => {
+    Clipboard.getString()
+      .then(str => {
+        const match = str.match(clipboardCoordsRegex);
+        if (match && match.length === 3) {
+          onLatChangeText(match[1]);
+          onLongChangeText(match[2]);
+        } else {
+          ToastAndroid.show(
+            t`Clipboard data does not contain coordinates`,
+            ToastAndroid.SHORT,
+          );
+        }
+      })
+      .catch(() => {
+        ToastAndroid.show(t`Cannot get clipboard content`, ToastAndroid.SHORT);
+      });
   };
 
   return (
@@ -124,7 +154,7 @@ export function LocationSettings(props: IStackProps) {
       <HStack display="flex" flexGrow={0}>
         <FormControl
           display="flex"
-          width={selectedCountry ? '1/3' : '100%'}
+          width={selectedCountry ? undefined : '100%'}
           isInvalid={!!getCountryError}>
           <FormControl.Label
             flexDirection={
@@ -157,7 +187,8 @@ export function LocationSettings(props: IStackProps) {
 
         {selectedCountry && (
           <FormControl
-            width={selectedCity ? undefined : '2/3'}
+            ml="3%"
+            width={selectedCity ? undefined : '66%'}
             flexGrow={1}
             isInvalid={!!searchCitiesError}>
             <FormControl.Label
@@ -195,10 +226,7 @@ export function LocationSettings(props: IStackProps) {
               height={8}
               width={8}
               variant="ghost"
-              onPress={() => {
-                setSelectedCountry(undefined);
-                setSelectedCity(undefined);
-              }}>
+              onPress={clearCountryAndCity}>
               <CloseIcon />
             </Button>
           )}
@@ -243,6 +271,17 @@ export function LocationSettings(props: IStackProps) {
             leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Longitude is invalid`}
           </FormControl.ErrorMessage>
+        </FormControl>
+      </HStack>
+      <HStack>
+        <FormControl alignItems="center" justifyContent="center">
+          <FormControl.Label>
+            {t`You can also paste coords from clipboard`}
+          </FormControl.Label>
+          <Button
+            onPress={onPasteButtonPressed}
+            textAlign="center"
+            width="1/3">{t`paste`}</Button>
         </FormControl>
       </HStack>
     </VStack>

@@ -2,6 +2,7 @@ import {Prayer} from '@/adhan';
 
 export const ADHAN_NOTIFICATION_SUFFIX = '_notify';
 export const ADHAN_SOUND_SUFFIX = '_sound';
+export const ADHAN_FILE_LOCATION = 'adhan_file_location';
 export const LOCATION_LAT = 'location_lat';
 export const LOCATION_LONG = 'location_long';
 export const LOCATION_COUNTRY = 'location_country';
@@ -11,6 +12,7 @@ export const HIGH_LATITUDE_RULE = 'calc_high_latitude_rule';
 export const ASR_CALCULATION = 'calc_asr_calculation';
 export const SHAFAQ = 'calc_shafaq';
 export const POLAR_RESOLUTION = 'calc_polar_resolution';
+export const APP_INTRO_DONE = 'app_intro_done';
 
 export function getAdhanSettingKey(
   prayer: Prayer,
