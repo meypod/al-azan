@@ -38,7 +38,7 @@ export function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
         </HStack>
 
         <Button marginRight="-3" variant="ghost" onPress={settingsPressed}>
-          <SettingsSharpIcon size="lg" />
+          <SettingsSharpIcon size="2xl" />
         </Button>
       </HStack>
     </>
