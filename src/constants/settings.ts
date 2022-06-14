@@ -2,7 +2,8 @@ import {Prayer} from '@/adhan';
 
 export const ADHAN_NOTIFICATION_SUFFIX = '_notify';
 export const ADHAN_SOUND_SUFFIX = '_sound';
-export const ADHAN_FILE_LOCATION = 'adhan_file_location';
+export const SAVED_ADHAN_AUDIO_ENTRIES = 'saved_adhan_audio_entries';
+export const SELECTED_ADHAN_ENTRY = 'selected_adhan_entry';
 export const LOCATION_LAT = 'location_lat';
 export const LOCATION_LONG = 'location_long';
 export const LOCATION_COUNTRY = 'location_country';
