@@ -1,4 +1,8 @@
-import {PREFERRED_LOCALE} from '@/utils/locale';
+import {settings} from '@/store/settings';
+
+let PREFERRED_LOCALE = settings.getState().SELECTED_LANGUAGE;
+
+settings.subscribe(state => (PREFERRED_LOCALE = state.SELECTED_LANGUAGE));
 
 const oneDayInMs = 86400 * 1000;
 
