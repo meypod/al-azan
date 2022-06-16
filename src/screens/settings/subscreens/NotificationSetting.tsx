@@ -2,19 +2,18 @@ import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {HStack, Text, Checkbox, Stack} from 'native-base';
 import {Prayer, prayerTranslations} from '@/adhan';
-import {getAdhanSettingKey} from '@/constants/settings';
 import {isRTL} from '@/i18n';
-import {useStoreHelper} from '@/store/settings';
+import {getAdhanSettingKey, useSettingsHelper} from '@/store/settings';
 
 type NotificationSettingProps = {
   prayer: Prayer;
 };
 
 export function NotificationSetting({prayer}: NotificationSettingProps) {
-  const [notify, setNotify] = useStoreHelper<boolean>(
+  const [notify, setNotify] = useSettingsHelper(
     getAdhanSettingKey(prayer, 'notify'),
   );
-  const [sound, setSound] = useStoreHelper<boolean>(
+  const [sound, setSound] = useSettingsHelper(
     getAdhanSettingKey(prayer, 'sound'),
   );
 

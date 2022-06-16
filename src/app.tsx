@@ -9,7 +9,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useColorMode} from 'native-base';
 import {useEffect, useRef} from 'react';
 import {AppState} from 'react-native';
-import {APP_INTRO_DONE} from '@/constants/settings';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
@@ -26,7 +25,7 @@ import {CalculationSettings} from '@/screens/settings/subscreens/CalculationSett
 import {DisplaySettings} from '@/screens/settings/subscreens/DisplaySettings';
 import {LocationSettings} from '@/screens/settings/subscreens/LocationSettings';
 import {NotificationSettings} from '@/screens/settings/subscreens/NotificationSettings';
-import {useStoreHelper as useSettingStore} from '@/store/settings';
+import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -45,7 +44,7 @@ const TranslatedHeaderTitle = (...props: any[]) => {
 };
 
 export function App() {
-  const [appIntroDone] = useSettingStore<boolean>(APP_INTRO_DONE);
+  const [appIntroDone] = useSettingsHelper('APP_INTRO_DONE');
   const {colorMode} = useColorMode();
 
   const isDarkMode = colorMode === 'dark';

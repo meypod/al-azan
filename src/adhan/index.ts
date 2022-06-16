@@ -1,11 +1,11 @@
-export * from './prayer';
-export * from './prayer_times';
-export * from './calculation_methods';
+export {Prayer, prayerTranslations, PrayersInOrder} from './prayer';
+
+export type {PrayerTimesOptions} from './prayer_times';
+
 export {
-  CalculationParameters,
-  Coordinates,
-  HighLatitudeRule,
-  PolarCircleResolution,
-  Madhab,
-  Shafaq,
-} from 'adhan';
+  PrayerTimesExtended,
+  getPrayerTimes,
+  isMinimumSettingsAvailable,
+} from './prayer_times';
+
+export {CalculationMethods} from './calculation_methods';

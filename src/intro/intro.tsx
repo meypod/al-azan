@@ -3,14 +3,13 @@ import {Modal, Box, StatusBar, Button} from 'native-base';
 import {useState} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
-import {APP_INTRO_DONE} from '@/constants/settings';
 import {IntroItem} from '@/intro/intro_item';
 import {BatteryOptimizationSlide} from '@/intro/slides/battery';
 import {CalculationSlide} from '@/intro/slides/calculation';
 import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
-import {getSettings, useStoreHelper as useSettingStore} from '@/store/settings';
+import {useSettingsHelper} from '@/store/settings';
 
 const data = [
   {
@@ -44,13 +43,12 @@ function _keyExtractor(item: Item) {
 export default Intro;
 
 export function Intro() {
-  const [, setAppIntroDone] = useSettingStore<boolean>(APP_INTRO_DONE);
+  const [, setAppIntroDone] = useSettingsHelper('APP_INTRO_DONE');
 
   const [configAlertIsOpen, setConfigAlertIsOpen] = useState(false);
 
   const onDonePressed = async () => {
-    const settings = await getSettings();
-    if (isMinimumSettingsAvailable(settings)) {
+    if (isMinimumSettingsAvailable()) {
       setAppIntroDone(true);
     } else {
       setConfigAlertIsOpen(true);

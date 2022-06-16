@@ -6,6 +6,7 @@ import {
 } from '@/constants/notification';
 import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
+import {waitTillHydration} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {SetPreAlarmTaskOptions} from '@/tasks/set_pre_alarm';
@@ -15,7 +16,8 @@ export async function cancelAdhanNotif() {
   await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
   await notifee.stopForegroundService();
   replace('Home');
-  await setNextAdhan();
+  await waitTillHydration();
+  setNextAdhan();
 }
 
 export async function isAdhanPlaying() {
@@ -66,7 +68,8 @@ export async function cancelAdhanNotifOnDismissed(
       const options = JSON.parse(
         notification.data?.options as string,
       ) as SetPreAlarmTaskOptions;
-      await setNextAdhan(new Date(new Date(options.date).valueOf() + 10000));
+      await waitTillHydration();
+      setNextAdhan(new Date(new Date(options.date).valueOf() + 10000));
     }
   }
 }

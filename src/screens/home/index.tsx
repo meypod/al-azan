@@ -9,7 +9,7 @@ import {UpdateIcon} from '@/assets/icons/update';
 import {AppBar} from '@/components/AppBar';
 import {PrayerTimesBox} from '@/components/PrayerTimesBox';
 import {useStore} from '@/store/home';
-import {useStore as useSettingStore} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 import {getDay, getDayName, getMonthName} from '@/utils/date';
 import useInterval from '@/utils/hooks/use_interval';
 
@@ -29,7 +29,7 @@ export function Home() {
     PrayerTimesExtended | undefined
   >(undefined);
 
-  const settingsState = useSettingStore(state => state);
+  const settingsState = useSettings(state => state);
 
   const todayName = getDayName(currentDate);
   const monthName = getMonthName(currentDate);
@@ -39,7 +39,7 @@ export function Home() {
   }, 60 * 1000);
 
   useEffect(() => {
-    getPrayerTimes(currentDate).then(setPrayerTimes);
+    setPrayerTimes(getPrayerTimes(currentDate));
   }, [currentDate, settingsState]);
 
   return (

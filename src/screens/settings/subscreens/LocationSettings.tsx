@@ -17,14 +17,8 @@ import {
 import {useCallback, useLayoutEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
-import {
-  LOCATION_CITY,
-  LOCATION_COUNTRY,
-  LOCATION_LAT,
-  LOCATION_LONG,
-} from '@/constants/settings';
 import {isRTL} from '@/i18n';
-import {useStoreHelper} from '@/store/settings';
+import {useSettingsHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
 import {
   CountryInfo,
@@ -41,22 +35,19 @@ function isValidCoords(num: number) {
 const clipboardCoordsRegex = /([-\d.]+)\s*,\s*([-\d.]+)/;
 
 export function LocationSettings(props: IStackProps) {
-  const [lat, setLat] = useStoreHelper<number | undefined>(LOCATION_LAT);
-  const [long, setLong] = useStoreHelper<number | undefined>(LOCATION_LONG);
+  const [lat, setLat] = useSettingsHelper('LOCATION_LAT');
+  const [long, setLong] = useSettingsHelper('LOCATION_LONG');
   const [tempLat, setTempLat] = useState<string>('-');
   const [tempLong, setTempLong] = useState<string>('-');
-  const [selectedCountry, setSelectedCountry] = useStoreHelper<
-    CountryInfo | undefined
-  >(LOCATION_COUNTRY);
+  const [selectedCountry, setSelectedCountry] =
+    useSettingsHelper('LOCATION_COUNTRY');
 
   useLayoutEffect(() => {
     setTempLat(lat?.toString() || '-');
     setTempLong(long?.toString() || '-');
   }, [lat, long]);
 
-  const [selectedCity, setSelectedCity] = useStoreHelper<
-    SearchResult | undefined
-  >(LOCATION_CITY);
+  const [selectedCity, setSelectedCity] = useSettingsHelper('LOCATION_CITY');
 
   const {
     pending: isLoadingCountries,

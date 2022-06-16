@@ -5,26 +5,20 @@ import {ToastAndroid} from 'react-native';
 import {Event, State, useTrackPlayerEvents} from 'react-native-track-player';
 import {AdhanEntry} from '@/assets/adhan_entries';
 
-import {
-  SAVED_ADHAN_AUDIO_ENTRIES,
-  SELECTED_ADHAN_ENTRY,
-} from '@/constants/settings';
 import {AdhanListItem} from '@/screens/settings/components/AdhanListItem';
 import {play, stop} from '@/services/play_sound';
-import {useStoreHelper as useSettingStore} from '@/store/settings';
+import {useSettingsHelper} from '@/store/settings';
 
 export function AdhanSettings(props: IStackProps) {
   const [playerState, setPlayerState] = useState<State | null>(null);
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
     AdhanEntry | undefined
   >();
-  const [selectedAdhanEntry, setSelectedAdhanEntry] = useSettingStore<
-    AdhanEntry | undefined
-  >(SELECTED_ADHAN_ENTRY);
-
-  const [savedAdhanEntries] = useSettingStore<AdhanEntry[] | undefined>(
-    SAVED_ADHAN_AUDIO_ENTRIES,
+  const [selectedAdhanEntry, setSelectedAdhanEntry] = useSettingsHelper(
+    'SELECTED_ADHAN_ENTRY',
   );
+
+  const [savedAdhanEntries] = useSettingsHelper('SAVED_ADHAN_AUDIO_ENTRIES');
 
   useTrackPlayerEvents([Event.PlaybackState, Event.PlaybackError], event => {
     if (event.type === Event.PlaybackError) {

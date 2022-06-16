@@ -10,27 +10,17 @@ import {
 } from 'adhan';
 import {CalculationMethods} from './calculation_methods';
 import {Prayer, PrayersInOrder} from './prayer';
-import {
-  ASR_CALCULATION,
-  CALCULATION_METHOD_KEY,
-  getAdhanSettingKey,
-  HIGH_LATITUDE_RULE,
-  LOCATION_LAT,
-  LOCATION_LONG,
-  POLAR_RESOLUTION,
-  SHAFAQ,
-} from '@/constants/settings';
-import {getSettings, Settings} from '@/store/settings';
+import {getAdhanSettingKey, settings} from '@/store/settings';
 
 export class PrayerTimesExtended extends PrayerTimes {
   motn!: Date;
 
   // @ts-ignore
-  nextPrayer(settings?: Settings) {
+  nextPrayer(useSettings?: boolean) {
     let prayerTime: PrayerTime | undefined;
 
     for (let prayer of PrayersInOrder) {
-      if (this.date <= this[prayer] && shouldNotifyPrayer(prayer, settings)) {
+      if (this.date <= this[prayer] && shouldNotifyPrayer(prayer, true)) {
         prayerTime = {
           date: this[prayer],
           prayer,
@@ -39,10 +29,10 @@ export class PrayerTimesExtended extends PrayerTimes {
       }
     }
 
-    if (prayerTime && settings) {
-      prayerTime.playSound = settings.get<boolean>(
-        getAdhanSettingKey(prayerTime.prayer, 'sound'),
-      );
+    if (prayerTime && useSettings) {
+      prayerTime.playSound = settings.getState()[
+        getAdhanSettingKey(prayerTime.prayer, 'sound')
+      ] as boolean;
     }
 
     return prayerTime;
@@ -54,13 +44,11 @@ export type PrayerTimesOptions = {
   coordinates: Coordinates;
 };
 
-export function isMinimumSettingsAvailable(settings: Settings | undefined) {
-  if (!settings) {
-    return false;
-  }
-  const lat = settings.get<number>(LOCATION_LAT);
-  const long = settings.get<number>(LOCATION_LONG);
-  const calcMethodKey = settings.get<string>(CALCULATION_METHOD_KEY);
+export function isMinimumSettingsAvailable() {
+  const state = settings.getState();
+  const lat = state['LOCATION_LAT']!;
+  const long = state['LOCATION_LONG']!;
+  const calcMethodKey = state['CALCULATION_METHOD_KEY'];
 
   if (![lat, long, calcMethodKey].every(Boolean)) return false;
 
@@ -71,21 +59,20 @@ export function isMinimumSettingsAvailable(settings: Settings | undefined) {
   return true;
 }
 
-async function getPrayerTimesOptionsFromSettings() {
-  const settings = await getSettings();
+function getPrayerTimesOptionsFromSettings() {
+  if (!isMinimumSettingsAvailable()) return;
+  const state = settings.getState();
 
-  if (!isMinimumSettingsAvailable(settings)) return;
-
-  const lat = settings.get<number>(LOCATION_LAT);
-  const long = settings.get<number>(LOCATION_LONG);
-  const calcMethodKey = settings.get<string>(CALCULATION_METHOD_KEY);
-  const highLatRuleSetting = settings.get<string>(HIGH_LATITUDE_RULE);
-  const asrCalcSetting = settings.get<string>(ASR_CALCULATION);
-  const shafaqCalcSetting = settings.get<string>(SHAFAQ);
-  const polarCicleResolutionSetting = settings.get<string>(POLAR_RESOLUTION);
+  const lat = state['LOCATION_LAT']!;
+  const long = state['LOCATION_LONG']!;
+  const calcMethodKey = state['CALCULATION_METHOD_KEY'];
+  const highLatRuleSetting = state['HIGH_LATITUDE_RULE'];
+  const asrCalcSetting = state['ASR_CALCULATION'];
+  const shafaqCalcSetting = state['SHAFAQ'];
+  const polarCicleResolutionSetting = state['POLAR_RESOLUTION'];
 
   const prayerTimeOptions: PrayerTimesOptions = {
-    calculationParameters: CalculationMethods[calcMethodKey].get(),
+    calculationParameters: CalculationMethods[calcMethodKey!].get(),
     coordinates: new Coordinates(lat, long),
   };
 
@@ -149,8 +136,8 @@ async function getPrayerTimesOptionsFromSettings() {
   return prayerTimeOptions;
 }
 
-export async function getPrayerTimes(date: Date) {
-  const options = await getPrayerTimesOptionsFromSettings();
+export function getPrayerTimes(date: Date) {
+  const options = getPrayerTimesOptionsFromSettings();
   if (!options) return;
 
   const prayerTimes = new PrayerTimesExtended(
@@ -173,10 +160,10 @@ type PrayerTime = {
   playSound?: boolean;
 };
 
-function shouldNotifyPrayer(prayer: Prayer, settings?: Settings) {
-  if (settings === undefined) {
-    return true;
+function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
+  if (useSettings) {
+    return settings.getState()[getAdhanSettingKey(prayer, 'notify')];
   } else {
-    return settings.get<boolean>(getAdhanSettingKey(prayer, 'notify'));
+    return true;
   }
 }

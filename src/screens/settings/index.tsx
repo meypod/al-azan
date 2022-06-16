@@ -11,7 +11,7 @@ import {VolumeUpIcon} from '@/assets/icons/volume_up';
 import {isRTL} from '@/i18n';
 import {push} from '@/navigation/root_navigation';
 import {routeTranslations, RootStackParamList} from '@/navigation/types';
-import {useStore as useSettingStore} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
 type ScreenListItem = {
@@ -66,7 +66,7 @@ function renderItem({item}: {item: ScreenListItem}) {
 }
 
 export function Settings() {
-  const settingsState = useSettingStore(state => state);
+  const settingsState = useSettings(state => state);
   useEffect(() => {
     setNextAdhan();
   }, [settingsState]);

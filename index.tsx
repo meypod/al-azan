@@ -4,10 +4,9 @@ import {AppRegistry} from 'react-native';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {APP_KEY} from '@/constants/app';
-import {SELECTED_LANGUAGE} from '@/constants/settings';
 import {loadLocale} from '@/i18n';
 import {setupNotifeeHandlers} from '@/notifee';
-import {setupDefaultSettings} from '@/store/settings';
+import {settings, waitTillHydration} from '@/store/settings';
 
 ChunkManager.configure({
   resolveRemoteChunk: async chunkid => {
@@ -21,13 +20,14 @@ setupNotifeeHandlers();
 
 AppRegistry.registerRunnable(APP_KEY, async initialProps => {
   try {
-    const settings = await setupDefaultSettings();
+    await waitTillHydration();
+    const state = settings.getState();
     try {
-      await loadLocale(settings.get(SELECTED_LANGUAGE));
+      await loadLocale(state['SELECTED_LANGUAGE']);
     } catch {
       console.warn(
         'could not find any matching file for locale: ' +
-          settings.get(SELECTED_LANGUAGE),
+          state['SELECTED_LANGUAGE'],
       );
       i18n.activate('en');
     }

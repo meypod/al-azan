@@ -5,30 +5,24 @@ import {VStack, IStackProps, Select, FormControl, Accordion} from 'native-base';
 
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
-import {
-  ASR_CALCULATION,
-  CALCULATION_METHOD_KEY,
-  HIGH_LATITUDE_RULE,
-  POLAR_RESOLUTION,
-  SHAFAQ,
-} from '@/constants/settings';
 import {isRTL} from '@/i18n';
-import {useStoreHelper} from '@/store/settings';
+import {useSettingsHelper} from '@/store/settings';
 
 export function CalculationSettings(props: IStackProps) {
-  const [calculationMethodKey, setCalculationMethodKey] =
-    useStoreHelper<string>(CALCULATION_METHOD_KEY);
+  const [calculationMethodKey, setCalculationMethodKey] = useSettingsHelper(
+    'CALCULATION_METHOD_KEY',
+  );
 
   const [highLatitudeRuleSetting, setHighLatitudeRuleSetting] =
-    useStoreHelper<string>(HIGH_LATITUDE_RULE);
+    useSettingsHelper('HIGH_LATITUDE_RULE');
 
   const [asrCalculationSetting, setAsrCalculationSetting] =
-    useStoreHelper<string>(ASR_CALCULATION);
+    useSettingsHelper('ASR_CALCULATION');
 
   const [polarResolutionSetting, setPolarResolutionSetting] =
-    useStoreHelper<string>(POLAR_RESOLUTION);
+    useSettingsHelper('POLAR_RESOLUTION');
 
-  const [shafaqSetting, setShafaqSetting] = useStoreHelper<string>(SHAFAQ);
+  const [shafaqSetting, setShafaqSetting] = useSettingsHelper('SHAFAQ');
 
   const calculationMethodKeyChanged = (itemValue: string) => {
     setCalculationMethodKey(itemValue);
@@ -114,7 +108,7 @@ export function CalculationSettings(props: IStackProps) {
                 onValueChange={asrCalculationSettingChanged}
                 flex="1">
                 <Select.Item label={t`Shafi (Default)`} value={Madhab.Shafi} />
-                <Select.Item label="{t`Hanafi`}" value={Madhab.Hanafi} />
+                <Select.Item label={t`Hanafi`} value={Madhab.Hanafi} />
               </Select>
             </FormControl>
             <FormControl mb="3">
