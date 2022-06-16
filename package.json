@@ -6,6 +6,7 @@
     "android": "react-native run-android --no-packager",
     "ios": "react-native run-ios",
     "start": "react-native webpack-start",
+    "log": "react-native log-android",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
@@ -15,7 +16,7 @@
   "dependencies": {
     "@lingui/react": "^3.13.3",
     "@notifee/react-native": "^5.1.0",
-    "@react-native-async-storage/async-storage": "^1.17.3",
+    "@react-native-async-storage/async-storage": "^1.17.6",
     "@react-native-clipboard/clipboard": "^1.10.0",
     "@react-native-masked-view/masked-view": "^0.2.6",
     "@react-navigation/native": "^6.0.8",
@@ -78,6 +79,10 @@
     "terser-webpack-plugin": "^5.3.1",
     "typescript": "^4.7.2",
     "webpack": "^5.72.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   },
   "resolutions": {
     "@types/react": "^18"
