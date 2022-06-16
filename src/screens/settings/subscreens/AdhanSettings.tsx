@@ -1,13 +1,25 @@
 import {t} from '@lingui/macro';
-import {IStackProps, FlatList, Box} from 'native-base';
+import {
+  IStackProps,
+  FlatList,
+  Box,
+  Button,
+  Modal,
+  FormControl,
+  Input,
+  WarningOutlineIcon,
+  Text,
+} from 'native-base';
 import {useState} from 'react';
 import {ToastAndroid} from 'react-native';
+import {pickSingle} from 'react-native-document-picker';
 import {Event, State, useTrackPlayerEvents} from 'react-native-track-player';
-import {AdhanEntry} from '@/assets/adhan_entries';
 
+import {AdhanEntry} from '@/assets/adhan_entries';
+import {isRTL} from '@/i18n';
 import {AdhanListItem} from '@/screens/settings/components/AdhanListItem';
 import {play, stop} from '@/services/play_sound';
-import {useSettingsHelper} from '@/store/settings';
+import {settings, useSettingsHelper} from '@/store/settings';
 
 export function AdhanSettings(props: IStackProps) {
   const [playerState, setPlayerState] = useState<State | null>(null);
@@ -19,6 +31,9 @@ export function AdhanSettings(props: IStackProps) {
   );
 
   const [savedAdhanEntries] = useSettingsHelper('SAVED_ADHAN_AUDIO_ENTRIES');
+
+  const [selectedFilePath, setSelectedFilePath] = useState<string>();
+  const [newAdhanName, setNewAdhanName] = useState<string>();
 
   useTrackPlayerEvents([Event.PlaybackState, Event.PlaybackError], event => {
     if (event.type === Event.PlaybackError) {
@@ -57,6 +72,19 @@ export function AdhanSettings(props: IStackProps) {
     }
   };
 
+  const onAddCustomAdhanPressed = () => {
+    pickSingle({copyTo: 'documentDirectory', type: 'audio/mpeg'})
+      .then(val => {
+        if (val.copyError) {
+          console.error(val.copyError);
+          ToastAndroid.show(val.copyError, ToastAndroid.LONG);
+        } else {
+          setSelectedFilePath(val.fileCopyUri!);
+        }
+      })
+      .catch(() => {});
+  };
+
   const renderItem = ({item}: {item: AdhanEntry}) => {
     return (
       <AdhanListItem
@@ -71,13 +99,68 @@ export function AdhanSettings(props: IStackProps) {
     );
   };
 
+  const onNewAdhanCancel = () => {
+    setSelectedFilePath(undefined);
+    setNewAdhanName(undefined);
+  };
+
+  const onNewAdhanAdd = () => {
+    if (!newAdhanName) return;
+    settings.getState().saveAdhanEntry({
+      id: 'adhan_' + Date.now().toString(),
+      canDelete: true,
+      label: newAdhanName,
+      filepath: selectedFilePath,
+    });
+    onNewAdhanCancel();
+  };
+
   return (
-    <Box safeArea py="4" {...props}>
+    <Box flex={1} safeArea py="4" {...props}>
       <FlatList
+        flex={1}
         data={savedAdhanEntries}
         renderItem={renderItem}
         extraData={[playerState]}
       />
+      <Button
+        onPress={onAddCustomAdhanPressed}
+        m="1">{t`Add Custom Adhan`}</Button>
+
+      <Modal size="full" isOpen={!!selectedFilePath} onClose={onNewAdhanCancel}>
+        <Modal.Content borderRadius={0}>
+          <Modal.CloseButton />
+          <Modal.Header>{t`Add Custom Adhan`}</Modal.Header>
+          <Modal.Body>
+            <FormControl isInvalid={!newAdhanName}>
+              <FormControl.Label
+                flexDirection={
+                  isRTL ? 'row-reverse' : 'row'
+                }>{t`Name`}</FormControl.Label>
+              <Input
+                textAlign={isRTL ? 'right' : 'left'}
+                placeholder={t`Name`}
+                onChangeText={str => setNewAdhanName(str)}
+              />
+              <FormControl.ErrorMessage
+                flexDirection={isRTL ? 'row-reverse' : 'row'}
+                leftIcon={<WarningOutlineIcon color="yellow.300" />}>
+                <Text color="yellow.400">
+                  {t`Selecting a name is required`}
+                </Text>
+              </FormControl.ErrorMessage>
+            </FormControl>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button mx="2" colorScheme="coolGray" onPress={onNewAdhanCancel}>
+              {t`Cancel`}
+            </Button>
+            <Button colorScheme="coolGray" onPress={onNewAdhanAdd}>
+              {t`Add`}
+            </Button>
+          </Modal.Footer>
+        </Modal.Content>
+      </Modal>
     </Box>
   );
 }

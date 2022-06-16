@@ -33,6 +33,7 @@
     "react-native-app-intro-slider": "^4.0.4",
     "react-native-blob-util": "^0.15.0",
     "react-native-codegen": "^0.69.1",
+    "react-native-document-picker": "^8.1.1",
     "react-native-fs": "^2.20.0",
     "react-native-gradle-plugin": "^0.0.7",
     "react-native-safe-area-context": "^4.2.5",

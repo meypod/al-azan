@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {Button, HStack, VStack, Text, Progress, Pressable} from 'native-base';
 import {useState} from 'react';
-import {ToastAndroid} from 'react-native';
+import {Alert, ToastAndroid} from 'react-native';
 import ReactNativeBlobUtil, {
   FetchBlobResponse,
   StatefulPromise,
@@ -11,6 +11,7 @@ import {State} from 'react-native-track-player';
 import {AdhanEntry} from '@/assets/adhan_entries';
 import {CheckIcon} from '@/assets/icons/check';
 import {CloseIcon} from '@/assets/icons/close';
+import {DeleteIcon} from '@/assets/icons/delete';
 import {DownloadIcon} from '@/assets/icons/download';
 import {PlayIcon} from '@/assets/icons/play';
 import {StopIcon} from '@/assets/icons/stop';
@@ -76,6 +77,24 @@ export function AdhanListItem({
       });
   };
 
+  const onDeletePressed = () => {
+    Alert.alert(
+      t`Delete`,
+      t`Are you sure you want to delete "${item.label}" ?`,
+      [
+        {
+          text: t`No`,
+          style: 'cancel',
+        },
+        {
+          text: 'Yes',
+          onPress: () => settings.getState().deleteAdhanEntry(item),
+          style: 'destructive',
+        },
+      ],
+    );
+  };
+
   return (
     <Pressable onPress={onPress}>
       {({isPressed}) => (
@@ -87,8 +106,8 @@ export function AdhanListItem({
               ? 'coolGray.300:alpha.10'
               : undefined
           }>
-          <HStack p="1" alignItems="center" justifyContent="space-between">
-            <HStack alignItems="center">
+          <HStack p="1">
+            <HStack flex={1} alignItems="center">
               <CheckIcon
                 mx="2"
                 size="xl"
@@ -96,10 +115,17 @@ export function AdhanListItem({
                   item.id === selected_item_id ? 'green.500' : 'transparent'
                 }
               />
-              <Text>{item.label}</Text>
+              <Text flex={1} flexGrow={1} noOfLines={1}>
+                {item.label}
+              </Text>
             </HStack>
 
-            <HStack alignItems="center">
+            <HStack flexShrink={0} flexGrow={0} alignItems="center">
+              {item?.canDelete && (
+                <Button onPress={onDeletePressed} p="2" variant="ghost">
+                  <DeleteIcon color="red.300" size="xl" />
+                </Button>
+              )}
               {item?.filepath && (
                 <Button
                   onPress={() => playAdhanEntry(item)}

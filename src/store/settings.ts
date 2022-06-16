@@ -64,6 +64,7 @@ type SettingsStore = {
 
   // helpers
   saveAdhanEntry: (entry: AdhanEntry) => void;
+  deleteAdhanEntry: (entry: AdhanEntry) => void;
   setSetting: <T extends keyof SettingsStore>(
     key: T,
     val: SettingsStore[T],
@@ -111,6 +112,25 @@ export const settings = createVanilla<SettingsStore>()(
           }),
         ),
 
+      deleteAdhanEntry: entry =>
+        set(
+          produce<SettingsStore>(draft => {
+            let fIndex = draft.SAVED_ADHAN_AUDIO_ENTRIES.findIndex(
+              e => e.id === entry.id,
+            );
+            if (fIndex !== -1) {
+              draft.SAVED_ADHAN_AUDIO_ENTRIES.splice(fIndex, 1);
+            }
+            if (
+              draft.SELECTED_ADHAN_ENTRY &&
+              draft.SELECTED_ADHAN_ENTRY.id === entry.id
+            ) {
+              draft.SELECTED_ADHAN_ENTRY = draft.SAVED_ADHAN_AUDIO_ENTRIES[0];
+            }
+          }),
+        ),
+
+      // general
       setSetting: <T extends keyof SettingsStore>(
         key: T,
         val: SettingsStore[T],
@@ -181,8 +201,6 @@ export function useSettingsHelper<T extends keyof SettingsStore>(key: T) {
     (val: SettingsStore[T]) => void,
   ];
 }
-
-export function saveAdhanEntry() {}
 
 export function hasAtLeastOneNotificationSetting() {
   for (let prayer of PrayersInOrder) {
