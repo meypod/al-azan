@@ -17,5 +17,15 @@ function getPreferredLocale() {
   if (!locale) {
     locale = 'en-US';
   }
-  return locale.replace(/_/g, '-');
+  locale = locale.replace(/_/g, '-');
+  if (locale.startsWith('en-')) {
+    locale = 'en';
+  }
+  if (locale.startsWith('ar-')) {
+    locale = 'ar';
+  }
+  if (locale.startsWith('fa-')) {
+    locale = 'fa';
+  }
+  return locale;
 }

@@ -80,8 +80,11 @@ export function Intro() {
         renderItem={IntroItem}
         data={data}
       />
-      <Modal isOpen={configAlertIsOpen} onClose={onConfigAlertClose}>
-        <Modal.Content>
+      <Modal
+        size="full"
+        isOpen={configAlertIsOpen}
+        onClose={onConfigAlertClose}>
+        <Modal.Content borderRadius={0}>
           <Modal.CloseButton />
           <Modal.Header>{t`Attention`}</Modal.Header>
           <Modal.Body>
