@@ -3,7 +3,16 @@ import {produce} from 'immer';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import {PrayersInOrder} from '@/adhan';
-import {getAdhanSettingKey} from '@/constants/settings';
+import {INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
+import {
+  APP_INITIAL_CONFIG_DONE,
+  APP_INTRO_DONE,
+  getAdhanSettingKey,
+  SAVED_ADHAN_AUDIO_ENTRIES,
+  SELECTED_ADHAN_ENTRY,
+  SELECTED_LANGUAGE,
+} from '@/constants/settings';
+import {PREFERRED_LOCALE} from '@/utils/locale';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
@@ -92,4 +101,27 @@ export async function hasAtLeastOneNotificationSetting(settings: Settings) {
     }
   }
   return false;
+}
+
+export async function setupDefaultSettings() {
+  const settings = await getSettings();
+
+  if (!settings.get<boolean>(APP_INITIAL_CONFIG_DONE)) {
+    // prevent doing setup again
+    settings.set(APP_INITIAL_CONFIG_DONE, true);
+
+    // setup app intro
+    settings.set(APP_INTRO_DONE, false);
+
+    // setup adhan entries
+    settings.set(SAVED_ADHAN_AUDIO_ENTRIES, INITIAL_ADHAN_AUDIO_ENTRIES);
+    settings.set(SELECTED_ADHAN_ENTRY, INITIAL_ADHAN_AUDIO_ENTRIES[0]);
+
+    // setup language
+    settings.set(SELECTED_LANGUAGE, PREFERRED_LOCALE);
+
+    await setSettings(settings);
+  }
+
+  return settings;
 }

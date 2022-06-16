@@ -48,18 +48,19 @@ const settingsScreenList: ScreenListItem[] = [
 
 function renderItem({item}: {item: ScreenListItem}) {
   return (
-    <Pressable mb="3" onPress={() => push(item.name)}>
-      <HStack
-        py="3"
-        backgroundColor="coolGray.300:alpha.20"
-        borderColor="coolGray.300:alpha.40"
-        borderWidth={1}
-        borderRadius={6}
-        flexDir={isRTL ? 'row-reverse' : 'row'}
-        alignItems="center">
-        <item.icon size="4xl" mx="2"></item.icon>
-        <Text>{i18n._(routeTranslations[item.name])}</Text>
-      </HStack>
+    <Pressable onPress={() => push(item.name)}>
+      {({isPressed}) => {
+        return (
+          <HStack
+            backgroundColor={isPressed ? 'coolGray.300:alpha.20' : undefined}
+            py="3"
+            flexDir={isRTL ? 'row-reverse' : 'row'}
+            alignItems="center">
+            <item.icon size="4xl" mx="2"></item.icon>
+            <Text>{i18n._(routeTranslations[item.name])}</Text>
+          </HStack>
+        );
+      }}
     </Pressable>
   );
 }
@@ -71,7 +72,7 @@ export function Settings() {
   }, [settingsState]);
 
   return (
-    <Box safeArea p="3">
+    <Box safeArea py="3">
       <FlatList data={settingsScreenList} renderItem={renderItem}></FlatList>
     </Box>
   );

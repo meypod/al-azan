@@ -14,6 +14,8 @@ export const ASR_CALCULATION = 'calc_asr_calculation';
 export const SHAFAQ = 'calc_shafaq';
 export const POLAR_RESOLUTION = 'calc_polar_resolution';
 export const APP_INTRO_DONE = 'app_intro_done';
+export const APP_INITIAL_CONFIG_DONE = 'app_initial_config_done';
+export const SELECTED_LANGUAGE = 'selected_language';
 
 export function getAdhanSettingKey(
   prayer: Prayer,
