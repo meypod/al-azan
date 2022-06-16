@@ -1,6 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
 import {produce} from 'immer';
+// eslint-disable-next-line
+import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
@@ -120,6 +122,11 @@ export const settings = createVanilla<SettingsStore>()(
             );
             if (fIndex !== -1) {
               draft.SAVED_ADHAN_AUDIO_ENTRIES.splice(fIndex, 1);
+              if (typeof entry.filepath === 'string') {
+                ReactNativeBlobUtil.fs.unlink(entry.filepath).catch(err => {
+                  console.error(err);
+                });
+              }
             }
             if (
               draft.SELECTED_ADHAN_ENTRY &&
