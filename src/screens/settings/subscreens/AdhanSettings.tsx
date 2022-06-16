@@ -79,6 +79,7 @@ export function AdhanSettings(props: IStackProps) {
           console.error(val.copyError);
           ToastAndroid.show(val.copyError, ToastAndroid.LONG);
         } else {
+          setNewAdhanName(val.name);
           setSelectedFilePath(val.fileCopyUri!);
         }
       })
@@ -138,6 +139,7 @@ export function AdhanSettings(props: IStackProps) {
                   isRTL ? 'row-reverse' : 'row'
                 }>{t`Name`}</FormControl.Label>
               <Input
+                value={newAdhanName}
                 textAlign={isRTL ? 'right' : 'left'}
                 placeholder={t`Name`}
                 onChangeText={str => setNewAdhanName(str)}
