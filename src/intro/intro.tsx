@@ -79,6 +79,9 @@ export function Intro() {
         onDone={() => onDonePressed()}
         renderItem={IntroItem}
         data={data}
+        contentContainerStyle={{
+          marginBottom: 60,
+        }}
       />
       <Modal
         size="full"
