@@ -1,6 +1,5 @@
 import {i18n} from '@lingui/core';
 import {en, ar, fa} from 'make-plural/plurals';
-import {I18nManager} from 'react-native';
 import {isRtlLang} from 'rtl-detect';
 
 import {messages as enMessages} from '../locales/en/messages.mjs';
@@ -16,15 +15,15 @@ export let isRTL = false;
 
 const localeFallbacks = [
   {
-    startsWith: 'en',
+    base: 'en',
     fallback: 'en',
   },
   {
-    startsWith: 'fa',
+    base: 'fa',
     fallback: 'fa',
   },
   {
-    startsWith: 'ar',
+    base: 'ar',
     fallback: 'ar',
   },
 ];
@@ -32,7 +31,7 @@ const localeFallbacks = [
 export async function loadLocale(targetLocale: string) {
   let locale;
   for (const lf of localeFallbacks) {
-    if (targetLocale.startsWith(lf.startsWith)) {
+    if (targetLocale.startsWith(lf.base)) {
       locale = lf.fallback;
       break;
     }
@@ -49,7 +48,6 @@ export async function loadLocale(targetLocale: string) {
     if (messages) {
       i18n.load(locale, messages);
       isRTL = isRtlLang(locale)!;
-      I18nManager.forceRTL(isRTL);
       i18n.activate(locale);
     } else {
       throw new Error('import failed');

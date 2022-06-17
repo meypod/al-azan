@@ -1,7 +1,8 @@
 import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useEffect} from 'react';
-import {loadLocale} from '@/i18n';
+import {I18nManager} from 'react-native';
+import {isRTL, loadLocale} from '@/i18n';
 import {settings, useSettingsHelper} from '@/store/settings';
 import {restart} from '@/utils/restart';
 
@@ -38,10 +39,11 @@ export function LanguageSettings(props: IStackProps) {
   useEffect(() => {
     const unsub = settings.subscribe((state, prevState) => {
       if (state.SELECTED_LOCALE !== prevState.SELECTED_LOCALE) {
-        loadLocale(lang)
+        loadLocale(state.SELECTED_LOCALE)
           .then(() => {
-            settings.setState({RESTART_PENDING: true});
-            restart();
+            I18nManager.forceRTL(isRTL);
+            // allow some time for forceRTL to work
+            setTimeout(restart, 100);
           })
           .catch(() => {});
       }

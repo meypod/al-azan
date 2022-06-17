@@ -22,7 +22,6 @@ type SettingsStore = {
   LOCATION_CITY: SearchResult | undefined;
   SCHEDULED_ALARM_TIMESTAMP?: number;
   LAST_APP_FOCUS_TIMESTAMP?: number;
-  RESTART_PENDING?: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;

@@ -22,7 +22,7 @@ public class RestartModule extends ReactContextBaseJavaModule {
     return "RestartModule";
   }
 
-  @ReactMethod(isBlockingSynchronousMethod = true)
+  @ReactMethod
   public void restart() {
     // Systems at 29/Q and later don't allow relaunch, but System.exit(0) on
     // all supported systems will relaunch ... but by killing the process, then
@@ -39,4 +39,3 @@ public class RestartModule extends ReactContextBaseJavaModule {
 
   }
 }
-

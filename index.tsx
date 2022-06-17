@@ -8,7 +8,6 @@ import {loadLocale} from '@/i18n';
 import {setupNotifeeHandlers} from '@/notifee';
 import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
 import {settings, waitTillHydration} from '@/store/settings';
-import {restart} from '@/utils/restart';
 
 ChunkManager.configure({
   resolveRemoteChunk: async chunkid => {
@@ -24,10 +23,6 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
   try {
     await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
     const state = settings.getState();
-    if (state.RESTART_PENDING) {
-      settings.setState({RESTART_PENDING: false});
-      return restart();
-    }
     try {
       await loadLocale(state['SELECTED_LOCALE']);
     } catch {
