@@ -40,10 +40,10 @@ export function BatteryOptimizationSettings(props: IStackProps) {
       <FormControl display="flex" pb="8">
         <FormControl.Label>{t`Battery Optimization`}</FormControl.Label>
         <FormControl.HelperText>
-          <Text fontSize="xs">
+          <Text textAlign="justify" fontSize="xs">
             {t`Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered.`}
           </Text>
-          <Text fontSize="xs">
+          <Text textAlign="justify" fontSize="xs">
             {t`If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below.`}
           </Text>
           <HStack alignSelf="center">
@@ -64,14 +64,15 @@ export function BatteryOptimizationSettings(props: IStackProps) {
         <FormControl display="flex">
           <FormControl.Label>{t`Power Manager`}</FormControl.Label>
           <FormControl.HelperText>
-            <Text>{t`Some devices need extra settings inside their Power Manager 
+            <Text textAlign="justify">{t`Some devices need extra settings inside their Power Manager 
           to prevent the app from getting killed in the background.
           In that case disable any power saving option for the app.`}</Text>
-            <Text>{t`You can access your device Power Manager using the button below.`}</Text>
+            <Text textAlign="justify">{t`You can access your device Power Manager using the button below.`}</Text>
 
             {powerManagerInfo?.activity &&
               powerManagerInfo.manufacturer?.toLowerCase() === 'samsung' && (
                 <Text
+                  textAlign="justify"
                   py="3"
                   fontSize="xs">{t`Samsung devices have their own custom Power Manager called "Device Care".
           After pressing the button below, You will be navigated to the Battery menu of Device Care.

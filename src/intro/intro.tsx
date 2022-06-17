@@ -13,23 +13,23 @@ import {useSettingsHelper} from '@/store/settings';
 
 const data = [
   {
-    title: t`Welcome`,
+    title: () => t`Welcome`,
     children: <WelcomeSlide />,
   },
   {
-    title: t`Location`,
+    title: () => t`Location`,
     children: <LocationSlide />,
   },
   {
-    title: t`Calculation`,
+    title: () => t`Calculation`,
     children: <CalculationSlide />,
   },
   {
-    title: t`Notification & Sound`,
+    title: () => t`Notification & Sound`,
     children: <NotificationAndSoundSlide />,
   },
   {
-    title: t`Battery Optimization`,
+    title: () => t`Battery Optimization`,
     children: <BatteryOptimizationSlide />,
   },
 ];
@@ -37,7 +37,7 @@ const data = [
 type Item = typeof data[0];
 
 function _keyExtractor(item: Item) {
-  return item.title;
+  return item.title();
 }
 
 export default Intro;
