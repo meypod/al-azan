@@ -6,7 +6,6 @@ import {
   Input,
   IStackProps,
   VStack,
-  Box,
   Spinner,
   Text,
   Button,
@@ -210,17 +209,19 @@ export function LocationSettings(props: IStackProps) {
             </FormControl.ErrorMessage>
           </FormControl>
         )}
-        <Box pb="2" justifyContent="flex-end">
-          {(selectedCountry || selectedCity) && (
+
+        {(selectedCountry || selectedCity) && (
+          <FormControl flex={1} flexShrink={0}>
+            <FormControl.Label> </FormControl.Label>
             <Button
-              height={8}
-              width={8}
+              mb="2"
+              flex={1}
               variant="ghost"
               onPress={clearCountryAndCity}>
               <CloseIcon />
             </Button>
-          )}
-        </Box>
+          </FormControl>
+        )}
       </HStack>
 
       <HStack>
