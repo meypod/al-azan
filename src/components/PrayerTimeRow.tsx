@@ -1,7 +1,6 @@
 import {Flex, Spacer, Text, useTheme, useColorMode, HStack} from 'native-base';
 import {memo} from 'react';
 import {MutedIcon} from '@/assets/icons/muted';
-import {isRTL} from '@/i18n';
 import {getTime24} from '@/utils/date';
 
 type TimeRowProps = {
@@ -18,7 +17,7 @@ function PrayerTimeRow({date, title, active, isActiveDismissed}: TimeRowProps) {
 
   return (
     <Flex
-      direction={isRTL ? 'row-reverse' : 'row'}
+      direction="row"
       width="100%"
       py="2"
       align="center"

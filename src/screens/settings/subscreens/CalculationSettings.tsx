@@ -5,7 +5,6 @@ import {VStack, IStackProps, Select, FormControl, Accordion} from 'native-base';
 
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
-import {isRTL} from '@/i18n';
 import {useCalcSettingsHelper} from '@/store/calculation_settings';
 
 export function CalculationSettings(props: IStackProps) {
@@ -47,9 +46,7 @@ export function CalculationSettings(props: IStackProps) {
   return (
     <VStack p="4" {...props}>
       <FormControl mb="3">
-        <FormControl.Label flexDirection={isRTL ? 'row-reverse' : 'row'} m="0">
-          {t`Calculation Method`}:
-        </FormControl.Label>
+        <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
         <Select
           selectedValue={calculationMethodKey}
           accessibilityLabel={t`Choose Calculation Method`}
@@ -71,11 +68,7 @@ export function CalculationSettings(props: IStackProps) {
           </Accordion.Summary>
           <Accordion.Details>
             <FormControl mb="3">
-              <FormControl.Label
-                flexDirection={isRTL ? 'row-reverse' : 'row'}
-                m="0">
-                {t`High Latitude`}:
-              </FormControl.Label>
+              <FormControl.Label m="0">{t`High Latitude`}:</FormControl.Label>
               <Select
                 accessibilityLabel={t`Choose High Latitude Setting`}
                 selectedValue={highLatitudeRuleSetting || 'none'}
@@ -97,11 +90,7 @@ export function CalculationSettings(props: IStackProps) {
               </Select>
             </FormControl>
             <FormControl mb="3">
-              <FormControl.Label
-                flexDirection={isRTL ? 'row-reverse' : 'row'}
-                m="0">
-                {t`Asr Calculation`}:
-              </FormControl.Label>
+              <FormControl.Label m="0">{t`Asr Calculation`}:</FormControl.Label>
               <Select
                 accessibilityLabel={t`Choose Asr Calculation Madhab`}
                 selectedValue={asrCalculationSetting || Madhab.Shafi}
@@ -112,9 +101,7 @@ export function CalculationSettings(props: IStackProps) {
               </Select>
             </FormControl>
             <FormControl mb="3">
-              <FormControl.Label
-                flexDirection={isRTL ? 'row-reverse' : 'row'}
-                m="0">
+              <FormControl.Label m="0">
                 {t`Polar Resolution`}:
               </FormControl.Label>
               <Select
@@ -139,11 +126,7 @@ export function CalculationSettings(props: IStackProps) {
               </Select>
             </FormControl>
             <FormControl mb="3">
-              <FormControl.Label
-                flexDirection={isRTL ? 'row-reverse' : 'row'}
-                m="0">
-                {t`Shafaq`}:
-              </FormControl.Label>
+              <FormControl.Label m="0">{t`Shafaq`}:</FormControl.Label>
               <FormControl.HelperText my="0">
                 {t`Shafaq is used by the MoonsightingCommittee method to 
               determine what type of twilight to use in order to

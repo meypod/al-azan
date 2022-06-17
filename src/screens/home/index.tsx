@@ -1,3 +1,4 @@
+import {t} from '@lingui/macro';
 import {Box, Button, Flex, HStack, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
@@ -7,6 +8,7 @@ import {RestoreIcon} from '@/assets/icons/restore';
 import {UpdateIcon} from '@/assets/icons/update';
 import {AppBar} from '@/components/AppBar';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
+import {isRTL} from '@/i18n';
 import {useCalcSettings} from '@/store/calculation_settings';
 import {useStore} from '@/store/home';
 import {useSettingsHelper} from '@/store/settings';
@@ -58,17 +60,21 @@ export function Home() {
         monthName={monthName}
         dd={getDay(currentDate)}
       />
-      <HStack justifyContent="space-between" alignItems="center" w="100%">
+      <HStack
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+        direction={isRTL ? 'row-reverse' : 'row'}>
         <Button variant="ghost" onPress={() => decreaseCurrentDateByOne()}>
-          <Flex direction="row" alignItems="center">
-            <ArrowBackIcon size="2xl" />
+          <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
+            <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
             <RestoreIcon size="xl" />
           </Flex>
         </Button>
         <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
-          <Flex direction="row" alignItems="center">
+          <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
             <UpdateIcon size="xl" />
-            <ArrowForwardIcon size="2xl" />
+            <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
           </Flex>
         </Button>
       </HStack>

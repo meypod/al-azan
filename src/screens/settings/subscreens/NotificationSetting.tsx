@@ -2,7 +2,6 @@ import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {HStack, Text, Checkbox, Stack} from 'native-base';
 import {Prayer, prayerTranslations} from '@/adhan';
-import {isRTL} from '@/i18n';
 import {
   getAdhanSettingKey,
   useCalcSettingsHelper,
@@ -37,9 +36,7 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
   const prayerName = i18n._(prayerTranslations[prayer.toLowerCase()]);
 
   return (
-    <HStack
-      direction={isRTL ? 'row-reverse' : 'row'}
-      justifyContent="space-between">
+    <HStack justifyContent="space-between">
       <Text width="1/3">{prayerName}</Text>
 
       <Stack width="1/3" justifyContent="center" alignItems="center">

@@ -1,8 +1,9 @@
 import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useEffect} from 'react';
-import {isRTL, loadLocale} from '@/i18n';
-import {useSettingsHelper} from '@/store/settings';
+import RNRestart from 'react-native-restart';
+import {loadLocale} from '@/i18n';
+import {settings, useSettingsHelper} from '@/store/settings';
 
 type LanguageEntry = {
   label: string;
@@ -35,15 +36,24 @@ export function LanguageSettings(props: IStackProps) {
   }
 
   useEffect(() => {
-    loadLocale(lang).catch(() => {});
-  }, [lang]);
+    const unsub = settings.subscribe((state, prevState) => {
+      if (state.SELECTED_LOCALE !== prevState.SELECTED_LOCALE) {
+        loadLocale(lang)
+          .then(() => {
+            settings.setState({RESTART_PENDING: true});
+            RNRestart.Restart();
+          })
+          .catch(() => {});
+      }
+    });
+
+    return unsub;
+  });
 
   return (
     <HStack {...props}>
       <FormControl fontSize="md">
-        <FormControl.Label flexDirection={isRTL ? 'row-reverse' : 'row'}>
-          {t`Language`}:
-        </FormControl.Label>
+        <FormControl.Label>{t`Language`}:</FormControl.Label>
         <Select
           selectedValue={lang}
           accessibilityLabel={t`Choose Language`}

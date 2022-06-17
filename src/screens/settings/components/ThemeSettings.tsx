@@ -7,7 +7,6 @@ import {
   IStackProps,
   Text,
 } from 'native-base';
-import {isRTL} from '@/i18n';
 
 export function ThemeSettings(props: IStackProps) {
   const {colorMode, toggleColorMode} = useColorMode();
@@ -21,10 +20,8 @@ export function ThemeSettings(props: IStackProps) {
   return (
     <HStack {...props}>
       <FormControl fontSize="md">
-        <FormControl.Label flexDirection={isRTL ? 'row-reverse' : 'row'}>
-          {t`Theme Color`}:
-        </FormControl.Label>
-        <HStack flexDirection={isRTL ? 'row-reverse' : 'row'}>
+        <FormControl.Label>{t`Theme Color`}:</FormControl.Label>
+        <HStack>
           <Radio.Group
             name="colorMode"
             defaultValue={colorMode || 'light'}

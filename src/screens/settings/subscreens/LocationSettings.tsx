@@ -17,7 +17,6 @@ import {
 import {useCallback, useLayoutEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
-import {isRTL} from '@/i18n';
 import {useCalcSettingsHelper} from '@/store/calculation_settings';
 import {useSettingsHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
@@ -148,10 +147,7 @@ export function LocationSettings(props: IStackProps) {
           display="flex"
           width={selectedCountry ? undefined : '100%'}
           isInvalid={!!getCountryError}>
-          <FormControl.Label
-            flexDirection={
-              isRTL ? 'row-reverse' : 'row'
-            }>{t`Country`}</FormControl.Label>
+          <FormControl.Label>{t`Country`}</FormControl.Label>
           <HStack alignItems="center" justifyContent="space-between" mb="2">
             {selectedCountry ? (
               <Text borderBottomWidth="1" borderColor="coolGray.500">
@@ -170,9 +166,7 @@ export function LocationSettings(props: IStackProps) {
             )}
             {isLoadingCountries && <Spinner />}
           </HStack>
-          <FormControl.ErrorMessage
-            flexDirection={isRTL ? 'row-reverse' : 'row'}
-            leftIcon={<WarningOutlineIcon size="xs" />}>
+          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Error in loading countries`}
           </FormControl.ErrorMessage>
         </FormControl>
@@ -183,10 +177,7 @@ export function LocationSettings(props: IStackProps) {
             width={selectedCity ? undefined : '66%'}
             flexGrow={1}
             isInvalid={!!searchCitiesError}>
-            <FormControl.Label
-              flexDirection={
-                isRTL ? 'row-reverse' : 'row'
-              }>{t`City/Area`}</FormControl.Label>
+            <FormControl.Label>{t`City/Area`}</FormControl.Label>
             <HStack alignItems="center" justifyContent="space-between" mb="2">
               {selectedCity ? (
                 <Text borderBottomWidth="1" borderColor="coolGray.500">
@@ -206,7 +197,6 @@ export function LocationSettings(props: IStackProps) {
               {isLoadingCities && <Spinner pl="1" />}
             </HStack>
             <FormControl.ErrorMessage
-              flexDirection={isRTL ? 'row-reverse' : 'row'}
               leftIcon={<WarningOutlineIcon size="xs" />}>
               {t`Error in loading search results`}
             </FormControl.ErrorMessage>
@@ -227,10 +217,7 @@ export function LocationSettings(props: IStackProps) {
 
       <HStack>
         <FormControl width="1/2" pr="1">
-          <FormControl.Label
-            flexDirection={
-              isRTL ? 'row-reverse' : 'row'
-            }>{t`Latitude`}</FormControl.Label>
+          <FormControl.Label>{t`Latitude`}</FormControl.Label>
           <Input
             py="0"
             placeholder={t`Latitude`}
@@ -239,17 +226,12 @@ export function LocationSettings(props: IStackProps) {
             onChangeText={str => setTempLat(str)}
             onEndEditing={e => onLatChangeText(e.nativeEvent.text)}
           />
-          <FormControl.ErrorMessage
-            flexDirection={isRTL ? 'row-reverse' : 'row'}
-            leftIcon={<WarningOutlineIcon size="xs" />}>
+          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Latitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
         <FormControl width="1/2" pl="1">
-          <FormControl.Label
-            flexDirection={
-              isRTL ? 'row-reverse' : 'row'
-            }>{t`Longitude`}</FormControl.Label>
+          <FormControl.Label>{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
             placeholder={t`Longitude`}
@@ -258,9 +240,7 @@ export function LocationSettings(props: IStackProps) {
             keyboardType="number-pad"
             onEndEditing={e => onLongChangeText(e.nativeEvent.text)}
           />
-          <FormControl.ErrorMessage
-            flexDirection={isRTL ? 'row-reverse' : 'row'}
-            leftIcon={<WarningOutlineIcon size="xs" />}>
+          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Longitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>

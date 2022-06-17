@@ -1,5 +1,6 @@
 import {i18n} from '@lingui/core';
 import {en, ar, fa} from 'make-plural/plurals';
+import {I18nManager} from 'react-native';
 import {isRtlLang} from 'rtl-detect';
 
 import {messages as enMessages} from '../locales/en/messages.mjs';
@@ -48,6 +49,7 @@ export async function loadLocale(targetLocale: string) {
     if (messages) {
       i18n.load(locale, messages);
       isRTL = isRtlLang(locale)!;
+      I18nManager.forceRTL(isRTL);
       i18n.activate(locale);
     } else {
       throw new Error('import failed');

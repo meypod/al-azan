@@ -1,6 +1,7 @@
 import {ChunkManager} from '@callstack/repack/dist/client/api/ChunkManager';
 import {i18n} from '@lingui/core';
 import {AppRegistry} from 'react-native';
+import RNRestart from 'react-native-restart';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {APP_KEY} from '@/constants/app';
@@ -23,6 +24,10 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
   try {
     await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
     const state = settings.getState();
+    if (state.RESTART_PENDING) {
+      settings.setState({RESTART_PENDING: false});
+      RNRestart.Restart();
+    }
     try {
       await loadLocale(state['SELECTED_LOCALE']);
     } catch {

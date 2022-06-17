@@ -8,7 +8,6 @@ import {CalculateIcon} from '@/assets/icons/calculate';
 import {ExploreIcon} from '@/assets/icons/explore';
 import {NotificationsActiveIcon} from '@/assets/icons/notifications_active';
 import {VolumeUpIcon} from '@/assets/icons/volume_up';
-import {isRTL} from '@/i18n';
 import {push} from '@/navigation/root_navigation';
 import {routeTranslations, RootStackParamList} from '@/navigation/types';
 import {useCalcSettings} from '@/store/calculation_settings';
@@ -54,7 +53,6 @@ function renderItem({item}: {item: ScreenListItem}) {
           <HStack
             backgroundColor={isPressed ? 'coolGray.300:alpha.20' : undefined}
             py="3"
-            flexDir={isRTL ? 'row-reverse' : 'row'}
             alignItems="center">
             <item.icon size="4xl" mx="2"></item.icon>
             <Text>{i18n._(routeTranslations[item.name])}</Text>

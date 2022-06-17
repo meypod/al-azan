@@ -22,8 +22,9 @@ type SettingsStore = {
   LOCATION_CITY: SearchResult | undefined;
   SCHEDULED_ALARM_TIMESTAMP?: number;
   LAST_APP_FOCUS_TIMESTAMP?: number;
+  RESTART_PENDING?: boolean;
 
-  // helpers
+  // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
   setSetting: <T extends keyof SettingsStore>(

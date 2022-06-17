@@ -1,7 +1,6 @@
 import {t} from '@lingui/macro';
 import {HStack, VStack, Text, IStackProps} from 'native-base';
 import {PrayersInOrder} from '@/adhan';
-import {isRTL} from '@/i18n';
 import {NotificationSetting} from '@/screens/settings/subscreens/NotificationSetting';
 
 export function NotificationSettings(props: IStackProps) {
@@ -13,9 +12,7 @@ export function NotificationSettings(props: IStackProps) {
       space="sm"
       mb="3"
       {...props}>
-      <HStack
-        direction={isRTL ? 'row-reverse' : 'row'}
-        justifyContent="space-between">
+      <HStack justifyContent="space-between">
         <Text width="1/3">{t`Adhan`}</Text>
         <Text width="1/3" textAlign="center">
           {t`Notification`}

@@ -16,7 +16,6 @@ import {pickSingle} from 'react-native-document-picker';
 import {Event, State, useTrackPlayerEvents} from 'react-native-track-player';
 
 import {AdhanEntry} from '@/assets/adhan_entries';
-import {isRTL} from '@/i18n';
 import {AdhanListItem} from '@/screens/settings/components/AdhanListItem';
 import {play, stop} from '@/services/play_sound';
 import {settings, useSettingsHelper} from '@/store/settings';
@@ -134,18 +133,13 @@ export function AdhanSettings(props: IStackProps) {
           <Modal.Header>{t`Add Custom Adhan`}</Modal.Header>
           <Modal.Body>
             <FormControl isInvalid={!newAdhanName}>
-              <FormControl.Label
-                flexDirection={
-                  isRTL ? 'row-reverse' : 'row'
-                }>{t`Name`}</FormControl.Label>
+              <FormControl.Label>{t`Name`}</FormControl.Label>
               <Input
                 value={newAdhanName}
-                textAlign={isRTL ? 'right' : 'left'}
                 placeholder={t`Name`}
                 onChangeText={str => setNewAdhanName(str)}
               />
               <FormControl.ErrorMessage
-                flexDirection={isRTL ? 'row-reverse' : 'row'}
                 leftIcon={<WarningOutlineIcon color="yellow.300" />}>
                 <Text color="yellow.400">
                   {t`Selecting a name is required`}
