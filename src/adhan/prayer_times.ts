@@ -20,7 +20,10 @@ export class PrayerTimesExtended extends PrayerTimes {
     let prayerTime: PrayerTime | undefined;
 
     for (let prayer of PrayersInOrder) {
-      if (this.date <= this[prayer] && shouldNotifyPrayer(prayer, true)) {
+      if (
+        this.date <= this[prayer] &&
+        shouldNotifyPrayer(prayer, useSettings)
+      ) {
         prayerTime = {
           date: this[prayer],
           prayer,
