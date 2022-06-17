@@ -1,22 +1,22 @@
 import {i18n} from '@lingui/core';
 import {Box} from 'native-base';
-import {useEffect, useState} from 'react';
+import {memo, useEffect, useState} from 'react';
 import {PrayersInOrder, PrayerTimesExtended, prayerTranslations} from '@/adhan';
-import {PrayerTimeRow} from '@/components/PrayerTimeRow';
+import PrayerTimeRow from '@/components/PrayerTimeRow';
 import {useSettingsHelper} from '@/store/settings';
 
 type PrayerTimesBoxProps = {
   prayerTimes?: PrayerTimesExtended;
 };
 
-export function PrayerTimesBox({prayerTimes}: PrayerTimesBoxProps) {
+function PrayerTimesBox({prayerTimes}: PrayerTimesBoxProps) {
   const todayDateString = new Date().toDateString();
   const prayerTimesDateString = prayerTimes?.date?.toDateString();
   const nextPrayer = prayerTimes?.nextPrayer();
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
   const [nextPrayerIsDismissed, setNextPrayerIsDismissed] = useState(false);
-  const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_DATE_VALUE');
+  const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
 
   useEffect(() => {
     if (!scheduledValueOf || !nextPrayerDateValueOf) return;
@@ -44,3 +44,5 @@ export function PrayerTimesBox({prayerTimes}: PrayerTimesBoxProps) {
     </Box>
   );
 }
+
+export default memo(PrayerTimesBox);

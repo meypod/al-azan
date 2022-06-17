@@ -1,4 +1,5 @@
 import {Flex, Spacer, Text, useTheme, useColorMode, HStack} from 'native-base';
+import {memo} from 'react';
 import {MutedIcon} from '@/assets/icons/muted';
 import {isRTL} from '@/i18n';
 import {getTime24} from '@/utils/date';
@@ -10,12 +11,7 @@ type TimeRowProps = {
   isActiveDismissed?: boolean;
 };
 
-export function PrayerTimeRow({
-  date,
-  title,
-  active,
-  isActiveDismissed,
-}: TimeRowProps) {
+function PrayerTimeRow({date, title, active, isActiveDismissed}: TimeRowProps) {
   const {colors} = useTheme();
   const {colorMode} = useColorMode();
   const isDarkMode = colorMode === 'dark';
@@ -42,3 +38,5 @@ export function PrayerTimeRow({
     </Flex>
   );
 }
+
+export default memo(PrayerTimeRow);

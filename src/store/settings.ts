@@ -20,7 +20,8 @@ type SettingsStore = {
   SELECTED_ADHAN_ENTRY: AdhanEntry;
   LOCATION_COUNTRY: CountryInfo | undefined;
   LOCATION_CITY: SearchResult | undefined;
-  SCHEDULED_ALARM_DATE_VALUE?: number;
+  SCHEDULED_ALARM_TIMESTAMP?: number;
+  LAST_APP_FOCUS_TIMESTAMP?: number;
 
   // helpers
   saveAdhanEntry: (entry: AdhanEntry) => void;

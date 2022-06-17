@@ -66,7 +66,7 @@ export function App() {
     return () => {
       subscription.remove();
     };
-  }, []);
+  });
 
   if (!appIntroDone) {
     return <Intro></Intro>;

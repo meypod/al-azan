@@ -103,7 +103,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       trigger,
     );
     settings.setState({
-      SCHEDULED_ALARM_DATE_VALUE: options.date.getTime().valueOf(),
+      SCHEDULED_ALARM_TIMESTAMP: options.date.getTime().valueOf(),
     });
   } finally {
     settingAlarm = false;
