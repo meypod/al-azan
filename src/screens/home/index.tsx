@@ -2,8 +2,6 @@ import {t} from '@lingui/macro';
 import {Box, Button, Flex, HStack, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
-import {ArrowBackIcon} from '@/assets/icons/arrow_back';
-import {ArrowForwardIcon} from '@/assets/icons/arrow_forward';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {UpdateIcon} from '@/assets/icons/update';
 import {AppBar} from '@/components/AppBar';
