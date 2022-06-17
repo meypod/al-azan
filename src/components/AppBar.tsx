@@ -34,7 +34,7 @@ export function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
           alignItems="center"
           justifyContent="center"
           position="absolute">
-          <Text>{dayName}</Text>
+          <Text fontWeight="bold">{dayName}</Text>
         </HStack>
 
         <Button marginRight="-3" variant="ghost" onPress={settingsPressed}>
