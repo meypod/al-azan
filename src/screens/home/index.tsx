@@ -1,6 +1,5 @@
-import {Box, Button, Flex, HStack} from 'native-base';
+import {Box, Button, Flex, HStack, Text} from 'native-base';
 import {useEffect, useState} from 'react';
-import {styles} from './styles';
 import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
 import {ArrowBackIcon} from '@/assets/icons/arrow_back';
 import {ArrowForwardIcon} from '@/assets/icons/arrow_forward';
@@ -10,7 +9,7 @@ import {AppBar} from '@/components/AppBar';
 import {PrayerTimesBox} from '@/components/PrayerTimesBox';
 import {useStore} from '@/store/home';
 import {useSettings} from '@/store/settings';
-import {getDay, getDayName, getMonthName} from '@/utils/date';
+import {getArabicDate, getDay, getDayName, getMonthName} from '@/utils/date';
 import useInterval from '@/utils/hooks/use_interval';
 
 export function Home() {
@@ -45,7 +44,8 @@ export function Home() {
   return (
     <Box
       safeArea
-      style={[styles.hCenter]}
+      flex={1}
+      alignItems="center"
       onTouchStart={() => updateCurrentDate()}>
       <AppBar
         dayName={todayName}
@@ -67,6 +67,7 @@ export function Home() {
         </Button>
       </HStack>
       <PrayerTimesBox prayerTimes={prayerTimes} />
+      <Text>{getArabicDate(currentDate)}</Text>
     </Box>
   );
 }

@@ -30,7 +30,7 @@ export function getAdhanSettingKey(
 
 type SettingsStore = {
   // other
-  SELECTED_LANGUAGE: string;
+  SELECTED_LOCALE: string;
   APP_INITIAL_CONFIG_DONE: boolean;
   APP_INTRO_DONE: boolean;
   SAVED_ADHAN_AUDIO_ENTRIES: AdhanEntry[];
@@ -84,7 +84,7 @@ const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 export const settings = createVanilla<SettingsStore>()(
   persist(
     set => ({
-      SELECTED_LANGUAGE: PREFERRED_LOCALE,
+      SELECTED_LOCALE: PREFERRED_LOCALE,
       APP_INITIAL_CONFIG_DONE: false,
       APP_INTRO_DONE: false,
       SAVED_ADHAN_AUDIO_ENTRIES: INITIAL_ADHAN_AUDIO_ENTRIES,

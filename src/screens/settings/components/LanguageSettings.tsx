@@ -24,7 +24,7 @@ const languageEntries: LanguageEntry[] = [
   },
 ];
 
-const userLang = settings.getState().SELECTED_LANGUAGE;
+const userLang = settings.getState().SELECTED_LOCALE;
 
 if (!['en', 'fa', 'ar'].includes(userLang)) {
   languageEntries.push({
@@ -34,7 +34,7 @@ if (!['en', 'fa', 'ar'].includes(userLang)) {
 }
 
 export function LanguageSettings(props: IStackProps) {
-  const [lang, setLang] = useSettingsHelper('SELECTED_LANGUAGE');
+  const [lang, setLang] = useSettingsHelper('SELECTED_LOCALE');
 
   useEffect(() => {
     loadLocale(lang).catch(() => {});

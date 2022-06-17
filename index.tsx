@@ -23,11 +23,11 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
     await waitTillHydration();
     const state = settings.getState();
     try {
-      await loadLocale(state['SELECTED_LANGUAGE']);
+      await loadLocale(state['SELECTED_LOCALE']);
     } catch {
       console.warn(
         'could not find any matching file for locale: ' +
-          state['SELECTED_LANGUAGE'],
+          state['SELECTED_LOCALE'],
       );
       i18n.activate('en');
     }

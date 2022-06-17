@@ -4,7 +4,7 @@ export const DEFAULT_LOCALE = 'en';
 
 export const PREFERRED_LOCALE = getPreferredLocale();
 
-function getPreferredLocale() {
+function getPreferredLocale(): string {
   let locale;
   if (Platform.OS === 'ios') {
     locale =
