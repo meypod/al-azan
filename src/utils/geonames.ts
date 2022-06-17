@@ -35,9 +35,14 @@ export type CountryInfo = {
   countryName: string;
 };
 
-export async function getCountries(): Promise<CountryInfo[]> {
+export async function getCountries(options: {
+  locale?: string;
+}): Promise<CountryInfo[]> {
   const url = new URL('/countryInfo', baseURL);
   const searchParams = getBaseSearchParams();
+  if (options.locale) {
+    searchParams.set('lang', options.locale);
+  }
   const request = new Request(`${url}?${searchParams}`);
   const resp = (await fetch(request).then(r => r.json())) as GeonamesResponse<
     Array<CountryInfo>
@@ -54,17 +59,21 @@ export type SearchResult = {
   geonameId: number;
 };
 
-export async function search(
-  countryCode: string,
-  term: string,
-  abortControllerSignal?: AbortSignal,
-) {
+export async function search(options: {
+  countryCode: string;
+  term: string;
+  locale?: string;
+  abortControllerSignal: AbortSignal;
+}) {
   const url = new URL('/search', baseURL);
   const searchParams = getBaseSearchParams();
-  searchParams.set('country', countryCode);
-  searchParams.set('name', term);
+  searchParams.set('country', options.countryCode);
+  searchParams.set('name', options.term);
+  if (options.locale) {
+    searchParams.set('lang', options.locale);
+  }
   const request = new Request(`${url}?${searchParams}`, {
-    signal: abortControllerSignal,
+    signal: options.abortControllerSignal,
   });
   const resp = (await fetch(request).then(r => r.json())) as GeonamesResponse<
     Array<SearchResult>

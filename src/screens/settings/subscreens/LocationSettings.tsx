@@ -41,6 +41,7 @@ export function LocationSettings(props: IStackProps) {
   const [tempLong, setTempLong] = useState<string>('-');
   const [selectedCountry, setSelectedCountry] =
     useSettingsHelper('LOCATION_COUNTRY');
+  const [locale] = useSettingsHelper('SELECTED_LOCALE');
 
   useLayoutEffect(() => {
     setTempLat(lat?.toString() || '-');
@@ -54,7 +55,9 @@ export function LocationSettings(props: IStackProps) {
     result: countries,
     runAction: getCountriesAction,
     error: getCountryError,
-  } = useAction(() => getCached('countries', getCountries));
+  } = useAction(() =>
+    getCached('countries-' + locale, () => getCountries({locale})),
+  );
 
   const {
     pending: isLoadingCities,
@@ -62,7 +65,12 @@ export function LocationSettings(props: IStackProps) {
     runAction: searchCitiesAction,
     error: searchCitiesError,
   } = useAction((term: string, signal: AbortSignal) =>
-    search(selectedCountry?.countryCode!, term, signal),
+    search({
+      countryCode: selectedCountry?.countryCode!,
+      term,
+      abortControllerSignal: signal,
+      locale,
+    }),
   );
 
   const onCountrySelected = useCallback(
@@ -142,7 +150,7 @@ export function LocationSettings(props: IStackProps) {
 
   return (
     <VStack p="4" {...props}>
-      <HStack display="flex" flexGrow={0}>
+      <HStack display="flex" flexGrow={0} mb="3">
         <FormControl
           display="flex"
           width={selectedCountry ? undefined : '100%'}
@@ -216,10 +224,12 @@ export function LocationSettings(props: IStackProps) {
       </HStack>
 
       <HStack>
-        <FormControl width="1/2" pr="1">
-          <FormControl.Label>{t`Latitude`}</FormControl.Label>
+        <FormControl width="1/2" pr="1" mb="1">
+          <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
           <Input
             py="0"
+            fontSize="lg"
+            textAlign="center"
             placeholder={t`Latitude`}
             value={tempLat?.toString()}
             keyboardType="number-pad"
@@ -231,9 +241,11 @@ export function LocationSettings(props: IStackProps) {
           </FormControl.ErrorMessage>
         </FormControl>
         <FormControl width="1/2" pl="1">
-          <FormControl.Label>{t`Longitude`}</FormControl.Label>
+          <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
+            fontSize="lg"
+            textAlign="center"
             placeholder={t`Longitude`}
             value={tempLong?.toString()}
             onChangeText={str => setTempLong(str)}
@@ -248,7 +260,9 @@ export function LocationSettings(props: IStackProps) {
       <HStack>
         <FormControl alignItems="center" justifyContent="center">
           <FormControl.Label>
-            {t`You can also paste coords from clipboard`}
+            <Text fontSize="xs" textAlign="justify">
+              {t`You can also paste coords from clipboard`}
+            </Text>
           </FormControl.Label>
           <Button
             onPress={onPasteButtonPressed}
