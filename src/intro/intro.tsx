@@ -9,6 +9,7 @@ import {CalculationSlide} from '@/intro/slides/calculation';
 import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
+import {StepLabel} from '@/intro/step_label';
 import {useSettingsHelper} from '@/store/settings';
 
 const data = [
@@ -71,9 +72,16 @@ export function Intro() {
         keyboardDismissMode="on-drag"
         keyboardShouldPersistTaps="handled"
         keyExtractor={_keyExtractor}
-        nextLabel={t`Next`}
-        doneLabel={t`Done`}
-        skipLabel={t`Skip`}
+        dotStyle={{borderColor: 'gray', borderWidth: 1}}
+        dotClickEnabled={false}
+        activeDotStyle={{
+          borderColor: '#22d3ee',
+          borderWidth: 1,
+          backgroundColor: '#22d3ee',
+        }}
+        renderNextButton={() => <StepLabel label={t`Next`} />}
+        renderDoneButton={() => <StepLabel label={t`Done`} />}
+        renderSkipButton={() => <StepLabel label={t`Skip`} />}
         showSkipButton={true}
         onSkip={() => setConfigAlertIsOpen(true)}
         onDone={() => onDonePressed()}
