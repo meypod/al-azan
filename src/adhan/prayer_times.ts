@@ -10,7 +10,7 @@ import {
 } from 'adhan';
 import {CalculationMethods} from './calculation_methods';
 import {Prayer, PrayersInOrder} from './prayer';
-import {getAdhanSettingKey, settings} from '@/store/settings';
+import {getAdhanSettingKey, calcSettings} from '@/store/calculation_settings';
 
 export class PrayerTimesExtended extends PrayerTimes {
   motn!: Date;
@@ -33,7 +33,7 @@ export class PrayerTimesExtended extends PrayerTimes {
     }
 
     if (prayerTime && useSettings) {
-      prayerTime.playSound = settings.getState()[
+      prayerTime.playSound = calcSettings.getState()[
         getAdhanSettingKey(prayerTime.prayer, 'sound')
       ] as boolean;
     }
@@ -48,7 +48,7 @@ export type PrayerTimesOptions = {
 };
 
 export function isMinimumSettingsAvailable() {
-  const state = settings.getState();
+  const state = calcSettings.getState();
   const lat = state['LOCATION_LAT']!;
   const long = state['LOCATION_LONG']!;
   const calcMethodKey = state['CALCULATION_METHOD_KEY'];
@@ -64,7 +64,7 @@ export function isMinimumSettingsAvailable() {
 
 function getPrayerTimesOptionsFromSettings() {
   if (!isMinimumSettingsAvailable()) return;
-  const state = settings.getState();
+  const state = calcSettings.getState();
 
   const lat = state['LOCATION_LAT']!;
   const long = state['LOCATION_LONG']!;
@@ -165,7 +165,7 @@ type PrayerTime = {
 
 function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
   if (useSettings) {
-    return settings.getState()[getAdhanSettingKey(prayer, 'notify')];
+    return calcSettings.getState()[getAdhanSettingKey(prayer, 'notify')];
   } else {
     return true;
   }

@@ -13,6 +13,7 @@ import {
   ADHAN_CHANNEL_NAME,
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
+import {settings} from '@/store/settings';
 
 export type SetAlarmTaskOptions = {
   /** When the adhan is  */
@@ -101,6 +102,9 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       },
       trigger,
     );
+    settings.setState({
+      SCHEDULED_ALARM_DATE_VALUE: options.date.getTime().valueOf(),
+    });
   } finally {
     settingAlarm = false;
   }

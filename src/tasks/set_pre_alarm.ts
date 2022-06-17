@@ -37,10 +37,17 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
       visibility: AndroidVisibility.PUBLIC,
     });
 
+    // fire the pre adhan 1 hour remaining to adhan
+    let triggerTs = options.date.getTime() - 3600 * 1000;
+    // if it goes to the past, make it 10 seconds in the future
+    if (triggerTs <= Date.now()) {
+      triggerTs = Date.now() + 10000;
+    }
+
     const trigger: TimestampTrigger = {
       type: TriggerType.TIMESTAMP,
-      // fire the pre adhan 1 hour remaining to adhan
-      timestamp: options.date.getTime() - 3600 * 1000,
+
+      timestamp: triggerTs,
       alarmManager: {
         allowWhileIdle: true,
       },

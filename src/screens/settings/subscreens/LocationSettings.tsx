@@ -18,6 +18,7 @@ import {useCallback, useLayoutEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {isRTL} from '@/i18n';
+import {useCalcSettingsHelper} from '@/store/calculation_settings';
 import {useSettingsHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
 import {
@@ -35,8 +36,8 @@ function isValidCoords(num: number) {
 const clipboardCoordsRegex = /([-\d.]+)\s*,\s*([-\d.]+)/;
 
 export function LocationSettings(props: IStackProps) {
-  const [lat, setLat] = useSettingsHelper('LOCATION_LAT');
-  const [long, setLong] = useSettingsHelper('LOCATION_LONG');
+  const [lat, setLat] = useCalcSettingsHelper('LOCATION_LAT');
+  const [long, setLong] = useCalcSettingsHelper('LOCATION_LONG');
   const [tempLat, setTempLat] = useState<string>('-');
   const [tempLong, setTempLong] = useState<string>('-');
   const [selectedCountry, setSelectedCountry] =

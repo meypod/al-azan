@@ -7,8 +7,9 @@ import {RestoreIcon} from '@/assets/icons/restore';
 import {UpdateIcon} from '@/assets/icons/update';
 import {AppBar} from '@/components/AppBar';
 import {PrayerTimesBox} from '@/components/PrayerTimesBox';
+import {useCalcSettings} from '@/store/calculation_settings';
 import {useStore} from '@/store/home';
-import {useSettings} from '@/store/settings';
+import {useSettingsHelper} from '@/store/settings';
 import {getArabicDate, getDay, getDayName, getMonthName} from '@/utils/date';
 import useInterval from '@/utils/hooks/use_interval';
 
@@ -28,7 +29,8 @@ export function Home() {
     PrayerTimesExtended | undefined
   >(undefined);
 
-  const settingsState = useSettings(state => state);
+  const calcSettingsState = useCalcSettings(state => state);
+  const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_DATE_VALUE');
 
   const todayName = getDayName(currentDate);
   const monthName = getMonthName(currentDate);
@@ -39,7 +41,7 @@ export function Home() {
 
   useEffect(() => {
     setPrayerTimes(getPrayerTimes(currentDate));
-  }, [currentDate, settingsState]);
+  }, [currentDate, calcSettingsState, scheduledValueOf]);
 
   return (
     <Box

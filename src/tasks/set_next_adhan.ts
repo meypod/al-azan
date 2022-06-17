@@ -2,7 +2,7 @@ import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
 import {getPrayerTimes, prayerTranslations} from '@/adhan';
-import {hasAtLeastOneNotificationSetting} from '@/store/settings';
+import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {getNextDayBeginning, getTime24} from '@/utils/date';

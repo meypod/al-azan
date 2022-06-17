@@ -6,6 +6,7 @@ import {BaseComponent} from '@/base_component';
 import {APP_KEY} from '@/constants/app';
 import {loadLocale} from '@/i18n';
 import {setupNotifeeHandlers} from '@/notifee';
+import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
 import {settings, waitTillHydration} from '@/store/settings';
 
 ChunkManager.configure({
@@ -20,7 +21,7 @@ setupNotifeeHandlers();
 
 AppRegistry.registerRunnable(APP_KEY, async initialProps => {
   try {
-    await waitTillHydration();
+    await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
     const state = settings.getState();
     try {
       await loadLocale(state['SELECTED_LOCALE']);

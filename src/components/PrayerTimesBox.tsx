@@ -3,7 +3,7 @@ import {Box} from 'native-base';
 import {useEffect, useState} from 'react';
 import {PrayersInOrder, PrayerTimesExtended, prayerTranslations} from '@/adhan';
 import {PrayerTimeRow} from '@/components/PrayerTimeRow';
-import {getSecheduledAdhanNotificationOptions} from '@/notifee';
+import {useSettingsHelper} from '@/store/settings';
 
 type PrayerTimesBoxProps = {
   prayerTimes?: PrayerTimesExtended;
@@ -13,16 +13,19 @@ export function PrayerTimesBox({prayerTimes}: PrayerTimesBoxProps) {
   const todayDateString = new Date().toDateString();
   const prayerTimesDateString = prayerTimes?.date?.toDateString();
   const nextPrayer = prayerTimes?.nextPrayer();
+  const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
   const [nextPrayerIsDismissed, setNextPrayerIsDismissed] = useState(false);
+  const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_DATE_VALUE');
 
   useEffect(() => {
-    getSecheduledAdhanNotificationOptions().then(options => {
-      if ((options?.date.valueOf() || 0) > (nextPrayer?.date.valueOf() || 0)) {
-        setNextPrayerIsDismissed(true);
-      }
-    });
-  });
+    if (!scheduledValueOf || !nextPrayerDateValueOf) return;
+    if (scheduledValueOf > nextPrayerDateValueOf) {
+      setNextPrayerIsDismissed(true);
+    } else {
+      setNextPrayerIsDismissed(false);
+    }
+  }, [nextPrayerDateValueOf, scheduledValueOf]);
 
   return (
     <Box display="flex" flexDirection="column" padding="3">

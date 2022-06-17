@@ -6,23 +6,23 @@ import {VStack, IStackProps, Select, FormControl, Accordion} from 'native-base';
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
 import {isRTL} from '@/i18n';
-import {useSettingsHelper} from '@/store/settings';
+import {useCalcSettingsHelper} from '@/store/calculation_settings';
 
 export function CalculationSettings(props: IStackProps) {
-  const [calculationMethodKey, setCalculationMethodKey] = useSettingsHelper(
+  const [calculationMethodKey, setCalculationMethodKey] = useCalcSettingsHelper(
     'CALCULATION_METHOD_KEY',
   );
 
   const [highLatitudeRuleSetting, setHighLatitudeRuleSetting] =
-    useSettingsHelper('HIGH_LATITUDE_RULE');
+    useCalcSettingsHelper('HIGH_LATITUDE_RULE');
 
   const [asrCalculationSetting, setAsrCalculationSetting] =
-    useSettingsHelper('ASR_CALCULATION');
+    useCalcSettingsHelper('ASR_CALCULATION');
 
   const [polarResolutionSetting, setPolarResolutionSetting] =
-    useSettingsHelper('POLAR_RESOLUTION');
+    useCalcSettingsHelper('POLAR_RESOLUTION');
 
-  const [shafaqSetting, setShafaqSetting] = useSettingsHelper('SHAFAQ');
+  const [shafaqSetting, setShafaqSetting] = useCalcSettingsHelper('SHAFAQ');
 
   const calculationMethodKeyChanged = (itemValue: string) => {
     setCalculationMethodKey(itemValue);

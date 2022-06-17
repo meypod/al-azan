@@ -3,17 +3,20 @@ import {t} from '@lingui/macro';
 import {HStack, Text, Checkbox, Stack} from 'native-base';
 import {Prayer, prayerTranslations} from '@/adhan';
 import {isRTL} from '@/i18n';
-import {getAdhanSettingKey, useSettingsHelper} from '@/store/settings';
+import {
+  getAdhanSettingKey,
+  useCalcSettingsHelper,
+} from '@/store/calculation_settings';
 
 type NotificationSettingProps = {
   prayer: Prayer;
 };
 
 export function NotificationSetting({prayer}: NotificationSettingProps) {
-  const [notify, setNotify] = useSettingsHelper(
+  const [notify, setNotify] = useCalcSettingsHelper(
     getAdhanSettingKey(prayer, 'notify'),
   );
-  const [sound, setSound] = useSettingsHelper(
+  const [sound, setSound] = useCalcSettingsHelper(
     getAdhanSettingKey(prayer, 'sound'),
   );
 
