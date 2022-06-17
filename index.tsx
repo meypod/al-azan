@@ -26,7 +26,7 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
     const state = settings.getState();
     if (state.RESTART_PENDING) {
       settings.setState({RESTART_PENDING: false});
-      RNRestart.Restart();
+      return RNRestart.Restart();
     }
     try {
       await loadLocale(state['SELECTED_LOCALE']);
