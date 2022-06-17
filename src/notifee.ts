@@ -101,6 +101,7 @@ export function setupNotifeeHandlers() {
 
   notifee.registerForegroundService(notification => {
     if (notification.id === ADHAN_NOTIFICATION_ID) {
+      notifee.cancelNotification(PRE_ADHAN_NOTIFICATION_ID);
       const options = JSON.parse(
         notification.data?.options as string,
       ) as SetAlarmTaskOptions;
