@@ -1,7 +1,6 @@
 import {ChunkManager} from '@callstack/repack/dist/client/api/ChunkManager';
 import {i18n} from '@lingui/core';
 import {AppRegistry} from 'react-native';
-import RNRestart from 'react-native-restart';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {APP_KEY} from '@/constants/app';
@@ -9,6 +8,7 @@ import {loadLocale} from '@/i18n';
 import {setupNotifeeHandlers} from '@/notifee';
 import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
 import {settings, waitTillHydration} from '@/store/settings';
+import {restart} from '@/utils/restart';
 
 ChunkManager.configure({
   resolveRemoteChunk: async chunkid => {
@@ -26,7 +26,7 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
     const state = settings.getState();
     if (state.RESTART_PENDING) {
       settings.setState({RESTART_PENDING: false});
-      return RNRestart.Restart();
+      return restart();
     }
     try {
       await loadLocale(state['SELECTED_LOCALE']);

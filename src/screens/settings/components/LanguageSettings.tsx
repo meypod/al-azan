@@ -1,9 +1,9 @@
 import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useEffect} from 'react';
-import RNRestart from 'react-native-restart';
 import {loadLocale} from '@/i18n';
 import {settings, useSettingsHelper} from '@/store/settings';
+import {restart} from '@/utils/restart';
 
 type LanguageEntry = {
   label: string;
@@ -41,7 +41,7 @@ export function LanguageSettings(props: IStackProps) {
         loadLocale(lang)
           .then(() => {
             settings.setState({RESTART_PENDING: true});
-            RNRestart.Restart();
+            restart();
           })
           .catch(() => {});
       }
