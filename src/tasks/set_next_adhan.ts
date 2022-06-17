@@ -37,12 +37,13 @@ export function setNextAdhan(fromDate?: Date) {
       const translatedPrayerName = i18n._(
         prayerTranslations[prayer.toLowerCase()],
       );
+      const time24Format = getTime24(date);
       ToastAndroid.show(
         t({
-          message: `Next: ${translatedPrayerName} at ${getTime24(date)}`,
+          message: `Next: ${translatedPrayerName} at ${time24Format}`,
           comment:
             'this message is shown inside the toast that says when the next notification/sound will be shown/played',
-        }),
+        }) + (date.getDay() !== new Date().getDay() ? ' ' + t`Tomorrow` : ''),
         ToastAndroid.SHORT,
       );
     });
