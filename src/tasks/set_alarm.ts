@@ -1,4 +1,5 @@
 import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import notifee, {
   TimestampTrigger,
   TriggerType,
@@ -89,7 +90,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
           asForegroundService: options.playSound,
           actions: [
             {
-              title: 'Dismiss',
+              title: t`Dismiss`,
               pressAction: {
                 id: 'dismiss',
               },

@@ -1,4 +1,5 @@
 import {i18n} from '@lingui/core';
+import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
 import {useLayoutEffect, useState} from 'react';
@@ -60,20 +61,20 @@ export function FullscreenAlarm({route}: ScreenProps) {
         fontSize="sm"
         borderBottomWidth={1}
         borderBottomColor="coolGray.300">
-        Adhan
+        {t`Adhan`}
       </Text>
       <Box margin="2">
         <Text textAlign="center" fontSize="6xl" marginBottom={3}>
           {i18n._(prayerTranslations[adhanOptions.prayer.toLowerCase()])}
         </Text>
         <Text fontSize="4xl" textAlign="center">
-          At {getTime24(adhanOptions.date)}
+          {getTime24(adhanOptions.date)}
         </Text>
       </Box>
       <Spacer />
       <Button height="100" onPress={onDismissPress} margin="2">
         <Text fontSize="3xl" adjustsFontSizeToFit>
-          Dismiss
+          {t`Dismiss`}
         </Text>
       </Button>
     </Box>
