@@ -12,6 +12,20 @@ import {CalculationMethods} from './calculation_methods';
 import {Prayer, PrayersInOrder} from './prayer';
 import {getAdhanSettingKey, calcSettings} from '@/store/calculation_settings';
 
+type PrayerTime = {
+  date: Date;
+  prayer: Prayer;
+  playSound?: boolean;
+};
+
+function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
+  if (useSettings) {
+    return calcSettings.getState()[getAdhanSettingKey(prayer, 'notify')];
+  } else {
+    return true;
+  }
+}
+
 export class PrayerTimesExtended extends PrayerTimes {
   motn!: Date;
 
@@ -155,18 +169,4 @@ export function getPrayerTimes(date: Date) {
   prayerTimes.motn = middleOfTheNightTime;
 
   return prayerTimes;
-}
-
-type PrayerTime = {
-  date: Date;
-  prayer: Prayer;
-  playSound?: boolean;
-};
-
-function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
-  if (useSettings) {
-    return calcSettings.getState()[getAdhanSettingKey(prayer, 'notify')];
-  } else {
-    return true;
-  }
 }
