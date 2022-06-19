@@ -44,7 +44,7 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
           value="notify"
           isChecked={!!notify}
           onChange={setNotifyProxy}
-          accessibilityLabel={t`{prayerName} notification will be shown`}
+          accessibilityLabel={t`${prayerName} notification will be shown`}
         />
       </Stack>
       <Stack width="1/6" justifyContent="center" alignItems="center">
@@ -52,7 +52,7 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
           value="sound"
           isChecked={!!sound}
           onChange={setSoundProxy}
-          accessibilityLabel={t`{prayerName} sound will be played`}
+          accessibilityLabel={t`${prayerName} sound will be played`}
         />
       </Stack>
     </HStack>
