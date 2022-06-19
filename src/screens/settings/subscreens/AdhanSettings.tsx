@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import {useNavigation} from '@react-navigation/native';
 import {
   IStackProps,
   FlatList,
@@ -10,7 +11,7 @@ import {
   WarningOutlineIcon,
   Text,
 } from 'native-base';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import {pickSingle} from 'react-native-document-picker';
 import {Event, State, useTrackPlayerEvents} from 'react-native-track-player';
@@ -44,6 +45,15 @@ export function AdhanSettings(props: IStackProps) {
     if (event.type === Event.PlaybackState) {
       setPlayerState(event.state);
     }
+  });
+
+  const navigation = useNavigation();
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('beforeRemove', () => {
+      stop();
+    });
+
+    return unsubscribe;
   });
 
   const playAdhanEntry = async (item: AdhanEntry) => {
