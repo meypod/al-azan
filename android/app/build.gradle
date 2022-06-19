@@ -82,6 +82,7 @@ project.ext.react = [
     entryFile: 'index.tsx',
     hermesCommand: "../../node_modules/hermes-engine/win64-bin/hermesc.exe",
     bundleCommand: "webpack-bundle",
+    bundleInDebug: false
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
