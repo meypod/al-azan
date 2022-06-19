@@ -4,8 +4,8 @@ import {debounce} from 'lodash';
 import {
   HStack,
   Input,
-  IStackProps,
-  VStack,
+  ScrollView,
+  IScrollViewProps,
   Spinner,
   Text,
   Button,
@@ -33,7 +33,7 @@ function isValidCoords(num: number) {
 
 const clipboardCoordsRegex = /([-\d.]+)\s*,\s*([-\d.]+)/;
 
-export function LocationSettings(props: IStackProps) {
+export function LocationSettings(props: IScrollViewProps) {
   const [lat, setLat] = useCalcSettingsHelper('LOCATION_LAT');
   const [long, setLong] = useCalcSettingsHelper('LOCATION_LONG');
   const [tempLat, setTempLat] = useState<string>('-');
@@ -148,7 +148,7 @@ export function LocationSettings(props: IStackProps) {
   };
 
   return (
-    <VStack p="4" {...props}>
+    <ScrollView p="4" {...props}>
       <HStack display="flex" flexGrow={0} mb="3">
         <FormControl
           display="flex"
@@ -271,6 +271,6 @@ export function LocationSettings(props: IStackProps) {
             width="1/3">{t`paste`}</Button>
         </FormControl>
       </HStack>
-    </VStack>
+    </ScrollView>
   );
 }

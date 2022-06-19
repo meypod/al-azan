@@ -1,17 +1,11 @@
 import {t} from '@lingui/macro';
-import {HStack, VStack, Text, IStackProps} from 'native-base';
+import {HStack, ScrollView, Text, IScrollViewProps} from 'native-base';
 import {PrayersInOrder} from '@/adhan';
-import {NotificationSetting} from '@/screens/settings/subscreens/NotificationSetting';
+import {NotificationSetting} from '@/screens/settings_notifications/NotificationSetting';
 
-export function NotificationSettings(props: IStackProps) {
+export function NotificationSettings(props: IScrollViewProps) {
   return (
-    <VStack
-      p="4"
-      alignItems="stretch"
-      justifyContent="center"
-      space="sm"
-      mb="3"
-      {...props}>
+    <ScrollView p="4" mb="3" {...props}>
       <HStack justifyContent="space-between">
         <Text width="1/3">{t`Adhan`}</Text>
         <Text width="1/3" textAlign="center">
@@ -24,6 +18,6 @@ export function NotificationSettings(props: IStackProps) {
       {PrayersInOrder.map(p => (
         <NotificationSetting key={p.toString()} prayer={p} />
       ))}
-    </VStack>
+    </ScrollView>
   );
 }

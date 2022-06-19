@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {Box, Text} from 'native-base';
-import {LanguageSettings} from '@/screens/settings/components/LanguageSettings';
+import {LanguageSettings} from '@/screens/settings_display/LanguageSettings';
 
 export function WelcomeSlide() {
   return (

@@ -1,13 +1,19 @@
 import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {PolarCircleResolution, HighLatitudeRule, Madhab, Shafaq} from 'adhan';
-import {VStack, IStackProps, Select, FormControl, Accordion} from 'native-base';
+import {
+  Select,
+  FormControl,
+  Accordion,
+  ScrollView,
+  IScrollViewProps,
+} from 'native-base';
 
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
 import {useCalcSettingsHelper} from '@/store/calculation_settings';
 
-export function CalculationSettings(props: IStackProps) {
+export function CalculationSettings(props: IScrollViewProps) {
   const [calculationMethodKey, setCalculationMethodKey] = useCalcSettingsHelper(
     'CALCULATION_METHOD_KEY',
   );
@@ -44,7 +50,7 @@ export function CalculationSettings(props: IStackProps) {
   };
 
   return (
-    <VStack p="4" {...props}>
+    <ScrollView p="4" {...props}>
       <FormControl mb="3">
         <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
         <Select
@@ -149,6 +155,6 @@ export function CalculationSettings(props: IStackProps) {
           </Accordion.Details>
         </Accordion.Item>
       </Accordion>
-    </VStack>
+    </ScrollView>
   );
 }

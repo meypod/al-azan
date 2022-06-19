@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Box, Button, Flex, HStack, Text} from 'native-base';
+import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
@@ -49,36 +49,41 @@ export function Home() {
   }, [currentDate, calcSettingsState]);
 
   return (
-    <Box
-      safeArea
-      flex={1}
-      alignItems="center"
-      onTouchStart={() => updateCurrentDate()}>
-      <AppBar
-        dayName={todayName}
-        monthName={monthName}
-        dd={getDay(currentDate)}
-      />
-      <HStack
-        justifyContent="space-between"
+    <ScrollView>
+      <Box
+        safeArea
+        flex={1}
         alignItems="center"
-        w="100%"
-        direction={isRTL ? 'row-reverse' : 'row'}>
-        <Button variant="ghost" onPress={() => decreaseCurrentDateByOne()}>
-          <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
-            <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
-            <RestoreIcon size="xl" />
-          </Flex>
-        </Button>
-        <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
-          <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
-            <UpdateIcon size="xl" />
-            <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
-          </Flex>
-        </Button>
-      </HStack>
-      <PrayerTimesBox prayerTimes={prayerTimes} hiddenPrayers={hiddenPrayers} />
-      <Text>{getArabicDate(currentDate)}</Text>
-    </Box>
+        onTouchStart={() => updateCurrentDate()}>
+        <AppBar
+          dayName={todayName}
+          monthName={monthName}
+          dd={getDay(currentDate)}
+        />
+        <HStack
+          justifyContent="space-between"
+          alignItems="center"
+          w="100%"
+          direction={isRTL ? 'row-reverse' : 'row'}>
+          <Button variant="ghost" onPress={() => decreaseCurrentDateByOne()}>
+            <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
+              <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
+              <RestoreIcon size="xl" />
+            </Flex>
+          </Button>
+          <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
+            <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
+              <UpdateIcon size="xl" />
+              <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
+            </Flex>
+          </Button>
+        </HStack>
+        <PrayerTimesBox
+          prayerTimes={prayerTimes}
+          hiddenPrayers={hiddenPrayers}
+        />
+        <Text>{getArabicDate(currentDate)}</Text>
+      </Box>
+    </ScrollView>
   );
 }

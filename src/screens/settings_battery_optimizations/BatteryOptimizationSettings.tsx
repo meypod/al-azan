@@ -2,16 +2,16 @@ import {t} from '@lingui/macro';
 import notifee from '@notifee/react-native';
 import {
   FormControl,
-  IStackProps,
   Text,
-  VStack,
   HStack,
   Button,
+  ScrollView,
+  IScrollViewProps,
 } from 'native-base';
 import {useEffect, useState} from 'react';
 import useInterval from '@/utils/hooks/use_interval';
 
-export function BatteryOptimizationSettings(props: IStackProps) {
+export function BatteryOptimizationSettings(props: IScrollViewProps) {
   const [batteryOptimizationStatus, setBatteryOptimizationStatus] =
     useState<Boolean>(false);
   const [powerManagerInfo, setPowerManagerInfo] = useState<
@@ -36,7 +36,7 @@ export function BatteryOptimizationSettings(props: IStackProps) {
   });
 
   return (
-    <VStack p="4" {...props}>
+    <ScrollView p="4" {...props}>
       <FormControl display="flex" pb="8">
         <FormControl.Label>{t`Battery Optimization`}</FormControl.Label>
         <FormControl.HelperText>
@@ -87,6 +87,6 @@ export function BatteryOptimizationSettings(props: IStackProps) {
             }>{t`Open Power Manager Settings`}</Button>
         </FormControl>
       )}
-    </VStack>
+    </ScrollView>
   );
 }
