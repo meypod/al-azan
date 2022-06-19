@@ -1,5 +1,4 @@
 import {t} from '@lingui/macro';
-import {Image} from 'react-native';
 
 const RemoteBaseURI = 'https://github.com/meypod/audio_files/raw/main/adhan/';
 
@@ -14,9 +13,7 @@ export type AdhanEntry = {
 export const INITIAL_ADHAN_AUDIO_ENTRIES: AdhanEntry[] = [
   {
     id: 'masjid_an_nabawi',
-    filepath: Image.resolveAssetSource(
-      require('@/assets/sounds/masjid_an_nabawi.mp3'),
-    ).uri,
+    filepath: require('@/assets/sounds/masjid_an_nabawi.mp3'),
     label: t`Masjid An Nabawi`,
   },
   {
