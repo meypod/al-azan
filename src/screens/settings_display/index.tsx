@@ -1,7 +1,7 @@
 import {ScrollView, IScrollViewProps} from 'native-base';
-import {HidePrayerSettings} from '@/screens/settings_display/HidePrayerSettings';
-import {LanguageSettings} from '@/screens/settings_display/LanguageSettings';
-import {ThemeSettings} from '@/screens/settings_display/ThemeSettings';
+import {HidePrayerSettings} from '@/screens/settings_display/hide_prayer_settings';
+import {LanguageSettings} from '@/screens/settings_display/language_settings';
+import {ThemeSettings} from '@/screens/settings_display/theme_settings';
 
 export function DisplaySettings(props: IScrollViewProps) {
   return (

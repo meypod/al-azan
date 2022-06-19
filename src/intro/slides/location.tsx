@@ -1,4 +1,4 @@
-import {LocationSettings} from '@/screens/settings_location/LocationSettings';
+import {LocationSettings} from '@/screens/settings_location';
 
 export function LocationSlide() {
   return <LocationSettings />;

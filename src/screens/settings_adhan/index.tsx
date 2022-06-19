@@ -17,7 +17,7 @@ import {pickSingle} from 'react-native-document-picker';
 import {Event, State, useTrackPlayerEvents} from 'react-native-track-player';
 
 import {AdhanEntry} from '@/assets/adhan_entries';
-import {AdhanListItem} from '@/screens/settings_adhan/AdhanListItem';
+import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
 import {play, stop} from '@/services/play_sound';
 import {settings, useSettingsHelper} from '@/store/settings';
 

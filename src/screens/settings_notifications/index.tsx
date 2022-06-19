@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {HStack, ScrollView, Text, IScrollViewProps} from 'native-base';
 import {PrayersInOrder} from '@/adhan';
-import {NotificationSetting} from '@/screens/settings_notifications/NotificationSetting';
+import {NotificationSetting} from '@/screens/settings_notifications/notification_setting';
 
 export function NotificationSettings(props: IScrollViewProps) {
   return (

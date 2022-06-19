@@ -18,13 +18,13 @@ import {
 import {RootStackParamList, routeTranslations} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
-import {Settings} from '@/screens/settings/Settings';
-import {AdhanSettings} from '@/screens/settings_adhan/AdhanSettings';
-import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations/BatteryOptimizationSettings';
-import {CalculationSettings} from '@/screens/settings_calculation/CalculationSettings';
-import {DisplaySettings} from '@/screens/settings_display/DisplaySettings';
-import {LocationSettings} from '@/screens/settings_location/LocationSettings';
-import {NotificationSettings} from '@/screens/settings_notifications/NotificationSettings';
+import {Settings} from '@/screens/settings';
+import {AdhanSettings} from '@/screens/settings_adhan';
+import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
+import {CalculationSettings} from '@/screens/settings_calculation';
+import {DisplaySettings} from '@/screens/settings_display';
+import {LocationSettings} from '@/screens/settings_location';
+import {NotificationSettings} from '@/screens/settings_notifications';
 import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
