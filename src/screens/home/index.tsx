@@ -31,6 +31,7 @@ export function Home() {
 
   const calcSettingsState = useCalcSettings(state => state);
   const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
+  const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
 
   const todayName = getDayName(currentDate);
   const monthName = getMonthName(currentDate);
@@ -76,7 +77,7 @@ export function Home() {
           </Flex>
         </Button>
       </HStack>
-      <PrayerTimesBox prayerTimes={prayerTimes} />
+      <PrayerTimesBox prayerTimes={prayerTimes} hiddenPrayers={hiddenPrayers} />
       <Text>{getArabicDate(currentDate)}</Text>
     </Box>
   );

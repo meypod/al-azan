@@ -3,6 +3,7 @@ import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
 import {getPrayerTimes, prayerTranslations} from '@/adhan';
 import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
+import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {getNextDayBeginning, getTime24} from '@/utils/date';
@@ -21,6 +22,10 @@ export function setNextAdhan(fromDate?: Date) {
   if (!nextPrayer) return;
 
   const {date, prayer, playSound} = nextPrayer!;
+
+  const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
+
+  if (dismissedAlarmTS && dismissedAlarmTS >= date.valueOf()) return;
 
   return setPreAlarmTask({
     date,

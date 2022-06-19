@@ -6,10 +6,9 @@ import {
 } from '@/constants/notification';
 import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
-import {waitTillHydration} from '@/store/settings';
+import {settings, waitTillHydration} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {SetPreAlarmTaskOptions} from '@/tasks/set_pre_alarm';
 
 export async function cancelAdhanNotif() {
   await stopAdhan();
@@ -63,13 +62,16 @@ export async function cancelAdhanNotifOnDismissed(
     }
   } else if (notification?.id === PRE_ADHAN_NOTIFICATION_ID) {
     if (pressAction?.id === 'dismiss') {
-      // cancel upcoming notification
-      await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
-      const options = JSON.parse(
-        notification.data?.options as string,
-      ) as SetPreAlarmTaskOptions;
       await waitTillHydration();
-      setNextAdhan(new Date(new Date(options.date).valueOf() + 10000));
+      const options = await getSecheduledAdhanNotificationOptions();
+      if (options) {
+        // save date of upcoming adhan to prevent setting alarm/prealarm before it
+        settings.setState({DISMISSED_ALARM_TIMESTAMP: options.date.valueOf()});
+        // cancel upcoming notification
+        await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
+        // re-set the adhan notification alarm
+        setNextAdhan(new Date(new Date(options.date).valueOf() + 10000));
+      }
     }
   }
 }

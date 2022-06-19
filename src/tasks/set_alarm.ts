@@ -36,7 +36,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
 
   try {
     if (options.date === undefined) {
-      return;
+      throw new Error('No date given for main alarm task');
     }
     if (options.showNotification === undefined) {
       options.showNotification = true;

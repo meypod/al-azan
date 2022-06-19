@@ -5,6 +5,7 @@ import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
+import {Prayer} from '@/adhan';
 import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
@@ -22,6 +23,8 @@ type SettingsStore = {
   LOCATION_CITY: SearchResult | undefined;
   SCHEDULED_ALARM_TIMESTAMP?: number;
   LAST_APP_FOCUS_TIMESTAMP?: number;
+  HIDDEN_PRAYERS: Array<Prayer>;
+  DISMISSED_ALARM_TIMESTAMP?: number;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -50,6 +53,7 @@ export const settings = createVanilla<SettingsStore>()(
       SELECTED_ADHAN_ENTRY: INITIAL_ADHAN_AUDIO_ENTRIES[0],
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
+      HIDDEN_PRAYERS: [],
 
       // adhan entry helper
       saveAdhanEntry: entry =>

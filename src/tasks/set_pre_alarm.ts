@@ -12,6 +12,7 @@ import {
   PRE_ADHAN_CHANNEL_NAME,
   PRE_ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
+import {calcSettings, getAdhanSettingKey} from '@/store/calculation_settings';
 import {getDayName, getTime24} from '@/utils/date';
 
 export type SetPreAlarmTaskOptions = {
@@ -27,8 +28,10 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
   settingAlarm = true;
 
   try {
-    if (options.date === undefined) {
+    if (!calcSettings.getState()[getAdhanSettingKey(options.prayer, 'sound')])
       return;
+    if (options.date === undefined) {
+      throw new Error('No date given for pre alarm task');
     }
 
     const channelId = await notifee.createChannel({
