@@ -50,7 +50,11 @@ export function CalculationSettings(props: IScrollViewProps) {
   };
 
   return (
-    <ScrollView p="4" {...props}>
+    <ScrollView
+      p="4"
+      keyboardShouldPersistTaps="handled"
+      keyboardDismissMode="on-drag"
+      {...props}>
       <FormControl mb="3">
         <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
         <Select

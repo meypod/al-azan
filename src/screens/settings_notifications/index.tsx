@@ -5,7 +5,12 @@ import {NotificationSetting} from '@/screens/settings_notifications/notification
 
 export function NotificationSettings(props: IScrollViewProps) {
   return (
-    <ScrollView p="4" mb="3" {...props}>
+    <ScrollView
+      p="4"
+      mb="3"
+      keyboardShouldPersistTaps="handled"
+      keyboardDismissMode="on-drag"
+      {...props}>
       <HStack justifyContent="space-between">
         <Text width="1/3">{t`Adhan`}</Text>
         <Text width="1/3" textAlign="center">

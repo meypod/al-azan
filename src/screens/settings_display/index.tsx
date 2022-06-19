@@ -5,7 +5,11 @@ import {ThemeSettings} from '@/screens/settings_display/theme_settings';
 
 export function DisplaySettings(props: IScrollViewProps) {
   return (
-    <ScrollView p="4" {...props}>
+    <ScrollView
+      keyboardShouldPersistTaps="handled"
+      keyboardDismissMode="on-drag"
+      p="4"
+      {...props}>
       <ThemeSettings mb="4" />
       <LanguageSettings mb="6" />
       <HidePrayerSettings />

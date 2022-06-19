@@ -148,7 +148,11 @@ export function LocationSettings(props: IScrollViewProps) {
   };
 
   return (
-    <ScrollView p="4" {...props}>
+    <ScrollView
+      p="4"
+      keyboardShouldPersistTaps="handled"
+      keyboardDismissMode="on-drag"
+      {...props}>
       <HStack display="flex" flexGrow={0} mb="3">
         <FormControl
           display="flex"
