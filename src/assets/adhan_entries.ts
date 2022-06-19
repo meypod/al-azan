@@ -10,10 +10,12 @@ export type AdhanEntry = {
   canDelete?: boolean;
 };
 
+export const defautlAdhanAssetId = require('@/assets/sounds/masjid_an_nabawi.mp3');
+
 export const INITIAL_ADHAN_AUDIO_ENTRIES: AdhanEntry[] = [
   {
     id: 'masjid_an_nabawi',
-    filepath: require('@/assets/sounds/masjid_an_nabawi.mp3'),
+    filepath: defautlAdhanAssetId,
     label: t`Masjid An Nabawi`,
   },
   {
