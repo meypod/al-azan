@@ -66,7 +66,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     await notifee.createTriggerNotification(
       {
         id: ADHAN_NOTIFICATION_ID,
-        title: 'Adhan',
+        title: t`Adhan`,
         body: i18n._(prayerTranslations[options.prayer.toLowerCase()]),
         android: {
           channelId,
