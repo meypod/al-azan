@@ -25,6 +25,7 @@ type SettingsStore = {
   LAST_APP_FOCUS_TIMESTAMP?: number;
   HIDDEN_PRAYERS: Array<Prayer>;
   DISMISSED_ALARM_TIMESTAMP?: number;
+  ADHAN_VOLUME: number;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -54,6 +55,7 @@ export const settings = createVanilla<SettingsStore>()(
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [],
+      ADHAN_VOLUME: 70,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

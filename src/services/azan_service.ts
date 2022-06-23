@@ -7,7 +7,9 @@ export async function playAdhan() {
     settings.getState()['SELECTED_ADHAN_ENTRY']?.filepath ||
     defautlAdhanAssetId;
 
-  return await play(adhanFilePath);
+  const volume = settings.getState().ADHAN_VOLUME;
+
+  return await play(adhanFilePath, volume);
 }
 
 export async function stopAdhan() {

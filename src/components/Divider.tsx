@@ -15,7 +15,12 @@ function Divider({label, ...boxProps}: {label?: string} & IBoxProps) {
         borderBottomWidth={1}
         borderBottomColor="coolGray.300:alpha.20"></Flex>
       {label && (
-        <Text color="coolGray.400" adjustsFontSizeToFit noOfLines={1} mx="2">
+        <Text
+          color="coolGray.400"
+          adjustsFontSizeToFit
+          noOfLines={1}
+          flexShrink={0}
+          mx="2">
           {label}
         </Text>
       )}

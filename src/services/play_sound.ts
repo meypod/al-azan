@@ -4,10 +4,12 @@ import TrackPlayer, {Event, RepeatMode} from 'react-native-track-player';
 import {isCallActive} from '@/utils/call_state';
 
 /** @returns {boolean} - true if played successfully, false otherwise */
-export async function play(url: string | number) {
+export async function play(url: string | number, volume?: number) {
   if (await isCallActive()) {
     return Promise.resolve(false);
   }
+
+  const adhanVolume = volume || (await SystemSetting.getVolume());
 
   const volumeListener = SystemSetting.addVolumeListener(data => {
     TrackPlayer.setVolume(data.value);
@@ -29,7 +31,7 @@ export async function play(url: string | number) {
       await TrackPlayer.stop();
     },
   );
-  await TrackPlayer.setVolume(await SystemSetting.getVolume());
+  await TrackPlayer.setVolume(adhanVolume);
   await TrackPlayer.setRepeatMode(RepeatMode.Off);
 
   const playbackFinishedDefer = defer<boolean>();
@@ -51,8 +53,9 @@ export async function play(url: string | number) {
   });
 
   await TrackPlayer.play();
+  const playbackResult = await playbackFinishedDefer;
 
-  return await playbackFinishedDefer;
+  return playbackResult;
 }
 
 export async function stop() {
