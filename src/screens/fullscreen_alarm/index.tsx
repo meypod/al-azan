@@ -59,15 +59,26 @@ export function FullscreenAlarm({route}: ScreenProps) {
       <Text
         textAlign="center"
         fontSize="sm"
+        adjustsFontSizeToFit
+        noOfLines={1}
         borderBottomWidth={1}
         borderBottomColor="coolGray.300">
         {t`Adhan`}
       </Text>
       <Box margin="2">
-        <Text textAlign="center" fontSize="6xl" marginBottom={3}>
+        <Text
+          adjustsFontSizeToFit
+          noOfLines={1}
+          textAlign="center"
+          fontSize="6xl"
+          marginBottom={3}>
           {i18n._(prayerTranslations[adhanOptions.prayer.toLowerCase()])}
         </Text>
-        <Text fontSize="4xl" textAlign="center">
+        <Text
+          adjustsFontSizeToFit
+          noOfLines={1}
+          fontSize="4xl"
+          textAlign="center">
           {getTime24(adhanOptions.date)}
         </Text>
       </Box>
