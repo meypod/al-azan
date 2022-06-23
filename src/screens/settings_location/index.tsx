@@ -12,10 +12,13 @@ import {
   CloseIcon,
   FormControl,
   WarningOutlineIcon,
+  Spacer,
 } from 'native-base';
 import {useCallback, useLayoutEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
+import LocationProvider from 'react-native-get-location';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
+import Divider from '@/components/Divider';
 import {useCalcSettingsHelper} from '@/store/calculation_settings';
 import {useSettingsHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
@@ -38,6 +41,7 @@ export function LocationSettings(props: IScrollViewProps) {
   const [long, setLong] = useCalcSettingsHelper('LOCATION_LONG');
   const [tempLat, setTempLat] = useState<string>('-');
   const [tempLong, setTempLong] = useState<string>('-');
+  const [gettingLocation, setGettingLocation] = useState<boolean>(false);
   const [selectedCountry, setSelectedCountry] =
     useSettingsHelper('LOCATION_COUNTRY');
   const [locale] = useSettingsHelper('SELECTED_LOCALE');
@@ -147,13 +151,59 @@ export function LocationSettings(props: IScrollViewProps) {
       });
   };
 
+  const clearCoordinates = () => {
+    setLat(undefined);
+    setLong(undefined);
+  };
+
+  const getCoordinatesFromLocationProvider = () => {
+    setGettingLocation(true);
+    LocationProvider.getCurrentPosition({
+      enableHighAccuracy: true,
+      timeout: 15000,
+    })
+      .then(location => {
+        setLat(location.latitude);
+        setLong(location.longitude);
+        ToastAndroid.show(t`Coordinates updated`, ToastAndroid.SHORT);
+      })
+      .catch(() => {
+        ToastAndroid.show(
+          t`Error while getting coordinates`,
+          ToastAndroid.SHORT,
+        );
+      })
+      .finally(() => setGettingLocation(false));
+  };
+
   return (
     <ScrollView
       p="4"
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="on-drag"
       {...props}>
-      <HStack display="flex" flexGrow={0} mb="3">
+      <Text textAlign="justify">{t`To calculate Adhan, We need your location. You can use the "Find My Location" button, or use the country and city/area search, or enter your coordinates manually.`}</Text>
+
+      <Divider label={t`Using GPS`} mb="3" mt="2" />
+
+      <Button
+        onPress={getCoordinatesFromLocationProvider}
+        disabled={gettingLocation}>
+        <HStack alignItems="center">
+          <Text adjustsFontSizeToFit>{t`Find My Location`}</Text>
+          {gettingLocation && (
+            <Spinner
+              mx="2"
+              accessibilityLabel={t`Getting coordinates`}
+              color="lime.200"
+            />
+          )}
+        </HStack>
+      </Button>
+
+      <Divider label={t`Using Search`} mt="4" />
+
+      <HStack display="flex" flexGrow={0}>
         <FormControl
           display="flex"
           width={selectedCountry ? undefined : '100%'}
@@ -228,6 +278,8 @@ export function LocationSettings(props: IScrollViewProps) {
         )}
       </HStack>
 
+      <Divider label={t`Using Coordinates`} mb="2" mt="4" />
+
       <HStack>
         <FormControl width="1/2" pr="1" mb="1">
           <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
@@ -269,10 +321,17 @@ export function LocationSettings(props: IScrollViewProps) {
               {t`You can also paste coords from clipboard`}
             </Text>
           </FormControl.Label>
-          <Button
-            onPress={onPasteButtonPressed}
-            textAlign="center"
-            width="1/3">{t`paste`}</Button>
+          <HStack alignItems="center">
+            <Button
+              onPress={onPasteButtonPressed}
+              textAlign="center"
+              width="1/3">{t`Paste`}</Button>
+            <Spacer />
+            <Button
+              onPress={clearCoordinates}
+              textAlign="center"
+              width="1/3">{t`Clear`}</Button>
+          </HStack>
         </FormControl>
       </HStack>
     </ScrollView>
