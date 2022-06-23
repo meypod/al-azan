@@ -1,8 +1,14 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
 import TrackPlayer, {Event, RepeatMode} from 'react-native-track-player';
+import {isCallActive} from '@/utils/call_state';
 
+/** @returns {boolean} - true if played successfully, false otherwise */
 export async function play(url: string | number) {
+  if (await isCallActive()) {
+    return Promise.resolve(false);
+  }
+
   const volumeListener = SystemSetting.addVolumeListener(data => {
     TrackPlayer.setVolume(data.value);
   });
@@ -26,27 +32,27 @@ export async function play(url: string | number) {
   await TrackPlayer.setVolume(await SystemSetting.getVolume());
   await TrackPlayer.setRepeatMode(RepeatMode.Off);
 
-  const playbackFinishedDefer = defer<void>();
+  const playbackFinishedDefer = defer<boolean>();
 
-  const onFinally = () => {
+  const onFinally = (errored: boolean) => {
     interruptSub.remove();
     volumeListener.remove();
-    playbackFinishedDefer.resolve();
+    playbackFinishedDefer.resolve(errored);
   };
 
   const endSub = TrackPlayer.addEventListener(Event.PlaybackQueueEnded, () => {
     endSub.remove();
-    onFinally();
+    onFinally(false);
   });
   const errorSub = TrackPlayer.addEventListener(Event.PlaybackError, err => {
     errorSub.remove();
-    onFinally();
+    onFinally(true);
     console.error('TrackPlayer Error: ', err);
   });
 
   await TrackPlayer.play();
 
-  await playbackFinishedDefer;
+  return await playbackFinishedDefer;
 }
 
 export async function stop() {
