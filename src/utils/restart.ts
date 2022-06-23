@@ -14,10 +14,6 @@ const RestartModule = (
 ) as RestartModuleInterface;
 
 interface RestartModuleInterface {
-  /**
-   *
-   * @param rtl restart with rtl or ltr (true or false)
-   */
   restart(): void;
 }
 
