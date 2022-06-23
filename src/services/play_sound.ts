@@ -4,12 +4,12 @@ import TrackPlayer, {Event, RepeatMode} from 'react-native-track-player';
 import {isCallActive} from '@/utils/call_state';
 
 /** @returns {boolean} - true if played successfully, false otherwise */
-export async function play(url: string | number, volume?: number) {
+export async function play(url: string | number) {
   if (await isCallActive()) {
     return Promise.resolve(false);
   }
 
-  const adhanVolume = volume || (await SystemSetting.getVolume());
+  const adhanVolume = await SystemSetting.getVolume();
 
   const volumeListener = SystemSetting.addVolumeListener(data => {
     TrackPlayer.setVolume(data.value);
