@@ -12,11 +12,11 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
    * The default value for {@link CalculationParameters#method} when initializing a
    * {@link CalculationParameters} object. Sets a Fajr angle of 0 and an Isha angle of 0.
    */
-  Other: {
-    label: t`Other`,
-    info: 'Sets a Fajr angle of 0 and an Isha angle of 0.' as const,
-    get: CalculationMethod.Other,
-  },
+  // Other: {
+  //   label: t`Other`,
+  //   info: 'Sets a Fajr angle of 0 and an Isha angle of 0.' as const,
+  //   get: CalculationMethod.Other,
+  // },
 
   MoonsightingCommittee: {
     label: t`Moonsighting Committee`,
