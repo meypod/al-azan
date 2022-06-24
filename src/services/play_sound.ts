@@ -1,7 +1,7 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
 import TrackPlayer, {Event, RepeatMode} from 'react-native-track-player';
-import {isCallActive} from '@/utils/call_state';
+import {isCallActive} from '@/modules/call_state';
 
 /** @returns {boolean} - true if played successfully, false otherwise */
 export async function play(url: string | number) {
