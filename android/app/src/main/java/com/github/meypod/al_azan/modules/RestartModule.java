@@ -1,4 +1,4 @@
-package com.github.meypod.al_azan;
+package com.github.meypod.al_azan.modules;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 

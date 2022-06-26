@@ -12,5 +12,5 @@ export async function playAdhan() {
 
 export async function stopAdhan() {
   await stop();
-  destroy();
+  await destroy();
 }

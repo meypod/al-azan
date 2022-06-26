@@ -1,4 +1,4 @@
-package com.github.meypod.al_azan;
+package com.github.meypod.al_azan.modules;
 
 import androidx.annotation.NonNull;
 import com.facebook.react.ReactPackage;

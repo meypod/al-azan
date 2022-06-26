@@ -34,5 +34,6 @@
         </intent-filter>
       </activity>
 
+      <service android:exported="false" android:name="com.github.meypod.al_azan.modules.MediaPlayerService" />
     </application>
 </manifest>

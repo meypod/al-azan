@@ -7,7 +7,6 @@ import ReactNativeBlobUtil, {
   StatefulPromise,
   // eslint-disable-next-line
 } from 'react-native-blob-util';
-import {State} from 'react-native-track-player';
 import {AdhanEntry} from '@/assets/adhan_entries';
 import {CheckIcon} from '@/assets/icons/check';
 import {CloseIcon} from '@/assets/icons/close';
@@ -15,13 +14,14 @@ import {DeleteIcon} from '@/assets/icons/delete';
 import {DownloadIcon} from '@/assets/icons/download';
 import {PlayIcon} from '@/assets/icons/play';
 import {StopIcon} from '@/assets/icons/stop';
+import {PlaybackState} from '@/modules/media_player';
 import {settings} from '@/store/settings';
 
 export type AdhanListItemProps = {
   item: AdhanEntry;
   selected_item_id?: string;
   playing_item_id?: string;
-  playerState: State | null;
+  playerState: PlaybackState | null;
   playAdhanEntry: (entry: AdhanEntry) => void;
   onPress: () => void;
 };
@@ -132,7 +132,7 @@ export function AdhanListItem({
                   p="2"
                   variant="ghost">
                   {item.id === playing_item_id &&
-                  playerState === State.Playing ? (
+                  playerState === PlaybackState.started ? (
                     <StopIcon size="xl" />
                   ) : (
                     <PlayIcon size="xl" />

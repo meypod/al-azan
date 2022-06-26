@@ -14,15 +14,21 @@ import {
 import {useEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import {pickSingle} from 'react-native-document-picker';
-import {Event, State, useTrackPlayerEvents} from 'react-native-track-player';
 
 import {AdhanEntry} from '@/assets/adhan_entries';
+import MediaPlayer, {
+  PlaybackState,
+  usePlaybackState,
+} from '@/modules/media_player';
 import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
-import {play, stop} from '@/services/play_sound';
+import {play, stop, destroy} from '@/services/play_sound';
 import {settings, useSettingsHelper} from '@/store/settings';
 
+MediaPlayer.eventEmitter.addListener('log', d => {
+  console.warn('log: ', d);
+});
+
 export function AdhanSettings(props: IStackProps) {
-  const [playerState, setPlayerState] = useState<State | null>(null);
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
     AdhanEntry | undefined
   >();
@@ -34,23 +40,24 @@ export function AdhanSettings(props: IStackProps) {
 
   const [selectedFilePath, setSelectedFilePath] = useState<string>();
   const [newAdhanName, setNewAdhanName] = useState<string>();
+  const playerState = usePlaybackState();
 
-  useTrackPlayerEvents([Event.PlaybackState, Event.PlaybackError], event => {
-    if (event.type === Event.PlaybackError) {
+  useEffect(() => {
+    const sub = MediaPlayer.addEventListener('error', () => {
       ToastAndroid.show(
         t`An error occured while playing the current track`,
         ToastAndroid.SHORT,
       );
-    }
-    if (event.type === Event.PlaybackState) {
-      setPlayerState(event.state);
-    }
+    });
+    return () => {
+      sub.remove();
+    };
   });
 
   const navigation = useNavigation();
   useEffect(() => {
     const unsubscribe = navigation.addListener('beforeRemove', () => {
-      stop();
+      destroy();
     });
 
     return unsubscribe;
@@ -58,7 +65,10 @@ export function AdhanSettings(props: IStackProps) {
 
   const playAdhanEntry = async (item: AdhanEntry) => {
     try {
-      if (playingAdhanEntry?.id === item.id && playerState === State.Playing) {
+      if (
+        playingAdhanEntry?.id === item.id &&
+        playerState === PlaybackState.started
+      ) {
         await stop();
       } else {
         setPlayingAdhanEntry(item);
