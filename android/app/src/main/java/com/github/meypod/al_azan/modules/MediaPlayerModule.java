@@ -61,6 +61,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
 
     if (playerSetupPromise != null) {
       playerSetupPromise.resolve(null);
+      playerSetupPromise = null;
     }
     isServiceBound = true;
   }
