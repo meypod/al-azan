@@ -83,10 +83,12 @@ export function FullscreenAlarm({route}: ScreenProps) {
         </Text>
       </Box>
       <Spacer />
-      <Button height="100" onPress={onDismissPress} margin="2">
-        <Text fontSize="3xl" adjustsFontSizeToFit>
-          {t`Dismiss`}
-        </Text>
+      <Button
+        height="100"
+        onPress={onDismissPress}
+        margin="2"
+        _text={{adjustsFontSizeToFit: true, fontSize: '3xl'}}>
+        {t`Dismiss`}
       </Button>
     </Box>
   );
