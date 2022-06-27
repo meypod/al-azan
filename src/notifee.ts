@@ -61,7 +61,7 @@ export async function cancelAdhanNotifOnDismissed(
       await cancelAdhanNotif();
     }
   } else if (notification?.id === PRE_ADHAN_NOTIFICATION_ID) {
-    if (pressAction?.id === 'dismiss' && type !== EventType.DISMISSED) {
+    if (pressAction?.id === 'cancel_adhan' && type !== EventType.DISMISSED) {
       await waitTillHydration();
       const options = await getSecheduledAdhanNotificationOptions();
       if (options) {
