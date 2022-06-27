@@ -25,7 +25,7 @@ export function setNextAdhan(fromDate?: Date) {
 
   const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
 
-  if (dismissedAlarmTS && dismissedAlarmTS >= date.valueOf()) return;
+  if (dismissedAlarmTS >= date.valueOf()) return;
 
   return setPreAlarmTask({
     date,
