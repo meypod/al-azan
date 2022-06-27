@@ -8,6 +8,7 @@ type AppState = {
   increaseCurrentDateByOne: () => void;
   decreaseCurrentDateByOne: () => void;
   updateCurrentDate: () => void;
+  resetCurrentDate: () => void;
 };
 
 export const useStore = create<AppState>()(set => ({
@@ -38,6 +39,12 @@ export const useStore = create<AppState>()(set => ({
         newDate.setHours(now.getHours());
         newDate.setMinutes(now.getMinutes());
         draft.date = newDate;
+      }),
+    ),
+  resetCurrentDate: () =>
+    set(
+      produce(draft => {
+        draft.date = new Date();
       }),
     ),
 }));

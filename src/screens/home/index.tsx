@@ -19,15 +19,19 @@ export function Home() {
     increaseCurrentDateByOne,
     decreaseCurrentDateByOne,
     updateCurrentDate,
+    resetCurrentDate,
   ] = useStore(state => [
     state.date,
     state.increaseCurrentDateByOne,
     state.decreaseCurrentDateByOne,
     state.updateCurrentDate,
+    state.resetCurrentDate,
   ]);
   const [prayerTimes, setPrayerTimes] = useState<
     PrayerTimesExtended | undefined
   >(undefined);
+
+  const [isToday, setIsToday] = useState<boolean>();
 
   const calcSettingsState = useCalcSettings(state => state);
   const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
@@ -46,6 +50,7 @@ export function Home() {
 
   useEffect(() => {
     setPrayerTimes(getPrayerTimes(currentDate));
+    setIsToday(currentDate.toDateString() === new Date().toDateString());
   }, [currentDate, calcSettingsState]);
 
   return (
@@ -71,6 +76,14 @@ export function Home() {
               <RestoreIcon size="xl" />
             </Flex>
           </Button>
+          {!isToday && (
+            <Button onPress={resetCurrentDate} variant="ghost">
+              <Text
+                mx="1"
+                fontSize="xs"
+                textDecorationLine="underline">{t`Show Today`}</Text>
+            </Button>
+          )}
           <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
             <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
               <UpdateIcon size="xl" />
