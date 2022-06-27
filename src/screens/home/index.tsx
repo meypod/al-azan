@@ -66,6 +66,7 @@ export function Home() {
           dd={getDay(currentDate)}
         />
         <HStack
+          mt="2"
           justifyContent="space-between"
           alignItems="center"
           w="100%"
@@ -77,11 +78,12 @@ export function Home() {
             </Flex>
           </Button>
           {!isToday && (
-            <Button onPress={resetCurrentDate} variant="ghost">
-              <Text
-                mx="1"
-                fontSize="xs"
-                textDecorationLine="underline">{t`Show Today`}</Text>
+            <Button
+              onPress={resetCurrentDate}
+              variant="outline"
+              py="2"
+              _text={{adjustsFontSizeToFit: true, fontSize: 'xs'}}>
+              {t`Show Today`}
             </Button>
           )}
           <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
