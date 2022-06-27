@@ -82,7 +82,13 @@ export function Home() {
               onPress={resetCurrentDate}
               variant="outline"
               py="2"
-              _text={{adjustsFontSizeToFit: true, fontSize: 'xs'}}>
+              px="1"
+              flexShrink={1}
+              _text={{
+                adjustsFontSizeToFit: true,
+                fontSize: 'xs',
+                noOfLines: 1,
+              }}>
               {t`Show Today`}
             </Button>
           )}
