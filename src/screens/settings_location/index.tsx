@@ -179,7 +179,7 @@ export function LocationSettings(props: IScrollViewProps) {
   return (
     <ScrollView
       p="4"
-      pb="40"
+      _contentContainerStyle={{paddingBottom: 40}}
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="on-drag"
       {...props}>
