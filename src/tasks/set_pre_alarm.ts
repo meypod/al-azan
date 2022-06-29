@@ -56,40 +56,43 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
       },
     };
 
-    await notifee.createTriggerNotification(
-      {
-        id: PRE_ADHAN_NOTIFICATION_ID,
-        title: t({
-          message: 'Upcoming alarm',
-          comment: 'notification title',
-        }),
-        body:
-          i18n._(prayerTranslations[options.prayer.toLowerCase()]) +
-          ', ' +
-          getDayName(options.date, 'short') +
-          ' ' +
-          getTime24(options.date),
-        android: {
-          channelId,
-          category: AndroidCategory.ALARM,
-          pressAction: {
-            id: 'default',
-          },
-          actions: [
-            {
-              title: t`Cancel Adhan`,
-              pressAction: {
-                id: 'cancel_adhan',
-              },
+    await notifee
+      .createTriggerNotification(
+        {
+          id: PRE_ADHAN_NOTIFICATION_ID,
+          title: t({
+            message: 'Upcoming alarm',
+            comment: 'notification title',
+          }),
+          body:
+            i18n._(prayerTranslations[options.prayer.toLowerCase()]) +
+            ', ' +
+            getDayName(options.date, 'short') +
+            ' ' +
+            getTime24(options.date),
+          android: {
+            smallIcon: 'ic_stat_name',
+            channelId,
+            category: AndroidCategory.ALARM,
+            pressAction: {
+              id: 'default',
             },
-          ],
+            actions: [
+              {
+                title: t`Cancel Adhan`,
+                pressAction: {
+                  id: 'cancel_adhan',
+                },
+              },
+            ],
+          },
+          data: {
+            options: JSON.stringify(options),
+          },
         },
-        data: {
-          options: JSON.stringify(options),
-        },
-      },
-      trigger,
-    );
+        trigger,
+      )
+      .catch(console.error);
   } finally {
     settingAlarm = false;
   }

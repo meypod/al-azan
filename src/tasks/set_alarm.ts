@@ -63,46 +63,49 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       },
     };
 
-    await notifee.createTriggerNotification(
-      {
-        id: ADHAN_NOTIFICATION_ID,
-        title: t`Adhan`,
-        body: i18n._(prayerTranslations[options.prayer.toLowerCase()]),
-        android: {
-          channelId,
-          category: AndroidCategory.ALARM,
-          importance: AndroidImportance.HIGH,
-          autoCancel: false,
-          fullScreenAction:
-            options.playSound && options.fullScreen
-              ? {
-                  id: 'default',
-                  launchActivityFlags: [
-                    AndroidLaunchActivityFlag.NO_HISTORY,
-                    AndroidLaunchActivityFlag.SINGLE_TOP,
-                    AndroidLaunchActivityFlag.EXCLUDE_FROM_RECENTS,
-                  ],
-                }
-              : undefined,
-          pressAction: {
-            id: 'default',
-          },
-          asForegroundService: options.playSound,
-          actions: [
-            {
-              title: t`Dismiss`,
-              pressAction: {
-                id: 'dismiss',
-              },
+    await notifee
+      .createTriggerNotification(
+        {
+          id: ADHAN_NOTIFICATION_ID,
+          title: t`Adhan`,
+          body: i18n._(prayerTranslations[options.prayer.toLowerCase()]),
+          android: {
+            smallIcon: 'ic_stat_name',
+            channelId,
+            category: AndroidCategory.ALARM,
+            importance: AndroidImportance.HIGH,
+            autoCancel: false,
+            fullScreenAction:
+              options.playSound && options.fullScreen
+                ? {
+                    id: 'default',
+                    launchActivityFlags: [
+                      AndroidLaunchActivityFlag.NO_HISTORY,
+                      AndroidLaunchActivityFlag.SINGLE_TOP,
+                      AndroidLaunchActivityFlag.EXCLUDE_FROM_RECENTS,
+                    ],
+                  }
+                : undefined,
+            pressAction: {
+              id: 'default',
             },
-          ],
+            asForegroundService: options.playSound,
+            actions: [
+              {
+                title: t`Dismiss`,
+                pressAction: {
+                  id: 'dismiss',
+                },
+              },
+            ],
+          },
+          data: {
+            options: JSON.stringify(options),
+          },
         },
-        data: {
-          options: JSON.stringify(options),
-        },
-      },
-      trigger,
-    );
+        trigger,
+      )
+      .catch(console.error);
     settings.setState({
       SCHEDULED_ALARM_TIMESTAMP: options.date.getTime().valueOf(),
     });
