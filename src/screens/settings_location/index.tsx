@@ -154,6 +154,7 @@ export function LocationSettings(props: IScrollViewProps) {
   const clearCoordinates = () => {
     setLat(undefined);
     setLong(undefined);
+    clearCountryAndCity();
   };
 
   const getCoordinatesFromLocationProvider = () => {
@@ -165,6 +166,7 @@ export function LocationSettings(props: IScrollViewProps) {
       .then(location => {
         setLat(location.latitude);
         setLong(location.longitude);
+        clearCountryAndCity();
         ToastAndroid.show(t`Coordinates updated`, ToastAndroid.SHORT);
       })
       .catch(() => {
