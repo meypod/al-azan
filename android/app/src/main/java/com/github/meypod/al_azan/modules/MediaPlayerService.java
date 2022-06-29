@@ -173,6 +173,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     );
     player.setOnErrorListener(this);
     player.setOnPreparedListener(this);
+    player.setOnCompletionListener(this);
   }
 
 
@@ -221,6 +222,8 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     audioManager.abandonAudioFocus(this);
     ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
         .emit("completed", null);
+    ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+        .emit("state", STATE_STOPPED);
   }
 
   class MusicBinder extends Binder {
