@@ -87,7 +87,10 @@ export function FullscreenAlarm({route}: ScreenProps) {
         height="100"
         onPress={onDismissPress}
         margin="2"
-        _text={{adjustsFontSizeToFit: true, fontSize: '3xl'}}>
+        _text={{
+          allowFontScaling: false,
+          fontSize: '3xl',
+        }}>
         {t`Dismiss`}
       </Button>
     </Box>
