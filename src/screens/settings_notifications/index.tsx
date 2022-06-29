@@ -12,7 +12,7 @@ export function NotificationSettings(props: IScrollViewProps) {
       keyboardDismissMode="on-drag"
       {...props}>
       <HStack justifyContent="space-between">
-        <Text width="1/3">{t`Adhan`}</Text>
+        <Text width="1/3">{t`Time`}</Text>
         <Text width="1/3" textAlign="center">
           {t`Notification`}
         </Text>

@@ -54,13 +54,13 @@ export function HidePrayerSettings(props: IStackProps) {
       <FormControl.Label>{t`Hide Prayer Times`}:</FormControl.Label>
       <Text textAlign="justify">{t`You can hide any prayer times you don't want to see in the main screen here:`}</Text>
       <HStack>
-        <Text width="1/2" textAlign="left">{t`Prayer Time`}</Text>
+        <Text width="1/2" textAlign="left">{t`Time`}</Text>
         <Text width="1/2" textAlign="center">{t`Hidden?`}</Text>
       </HStack>
       <Checkbox.Group
         onChange={setHiddenPrayersProxy}
         value={hiddenPrayer}
-        accessibilityLabel="prayer hidden status">
+        accessibilityLabel={t`is prayer time hidden?`}>
         {PrayersInOrder.map(p => (
           <HidePrayerSetting key={p.toString()} prayer={p} />
         ))}

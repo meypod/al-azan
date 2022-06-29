@@ -13,6 +13,8 @@ export enum Prayer {
   Motn = 'motn',
 }
 
+export const NonPrayer = [Prayer.Sunrise, Prayer.Sunset, Prayer.Motn];
+
 export const PrayersInOrder = [
   Prayer.Fajr,
   Prayer.Sunrise,
