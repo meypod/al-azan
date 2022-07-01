@@ -193,7 +193,9 @@ export function LocationSettings(props: IScrollViewProps) {
         onPress={getCoordinatesFromLocationProvider}
         disabled={gettingLocation}>
         <HStack alignItems="center">
-          <Text adjustsFontSizeToFit>{t`Find My Location`}</Text>
+          <Text
+            adjustsFontSizeToFit
+            _light={{color: 'white'}}>{t`Find My Location`}</Text>
           {gettingLocation && (
             <Spinner
               mx="2"
