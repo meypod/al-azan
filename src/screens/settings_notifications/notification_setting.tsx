@@ -1,6 +1,7 @@
 import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {HStack, Text, Checkbox, Stack, Box} from 'native-base';
+import {IHStackProps} from 'native-base/lib/typescript/components/primitives/Stack/HStack';
 import {Prayer, prayerTranslations, NonPrayer} from '@/adhan';
 import {
   getAdhanSettingKey,
@@ -11,7 +12,10 @@ type NotificationSettingProps = {
   prayer: Prayer;
 };
 
-export function NotificationSetting({prayer}: NotificationSettingProps) {
+export function NotificationSetting({
+  prayer,
+  ...hStackProps
+}: NotificationSettingProps & IHStackProps) {
   const [notify, setNotify] = useCalcSettingsHelper(
     getAdhanSettingKey(prayer, 'notify'),
   );
@@ -36,7 +40,7 @@ export function NotificationSetting({prayer}: NotificationSettingProps) {
   const prayerName = i18n._(prayerTranslations[prayer.toLowerCase()]);
 
   return (
-    <HStack justifyContent="space-between">
+    <HStack justifyContent="space-between" {...hStackProps}>
       <Text width="1/3">{prayerName}</Text>
 
       <Stack width="1/3" justifyContent="center" alignItems="center">

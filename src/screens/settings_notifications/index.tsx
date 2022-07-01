@@ -20,8 +20,12 @@ export function NotificationSettings(props: IScrollViewProps) {
           {t`Sound`}
         </Text>
       </HStack>
-      {PrayersInOrder.map(p => (
-        <NotificationSetting key={p.toString()} prayer={p} />
+      {PrayersInOrder.map((p, i) => (
+        <NotificationSetting
+          key={p.toString()}
+          prayer={p}
+          backgroundColor={i % 2 === 0 ? 'coolGray.300:alpha.30' : undefined}
+        />
       ))}
     </ScrollView>
   );
