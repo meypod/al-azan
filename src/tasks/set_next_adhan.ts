@@ -9,9 +9,9 @@ import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {getNextDayBeginning, getTime24} from '@/utils/date';
 
 export function setNextAdhan(fromDate?: Date) {
-  const notificaationSettingsIsValid = hasAtLeastOneNotificationSetting();
+  const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
 
-  if (!notificaationSettingsIsValid) return;
+  if (!notificationSettingsIsValid) return;
 
   let targetDate = fromDate || new Date();
   let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
