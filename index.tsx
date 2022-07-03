@@ -8,6 +8,8 @@ import {loadLocale} from '@/i18n';
 import {setupNotifeeHandlers} from '@/notifee';
 import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
 import {settings, waitTillHydration} from '@/store/settings';
+import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {updateWidget} from '@/tasks/update_widget';
 
 ChunkManager.configure({
   resolveRemoteChunk: async chunkid => {
@@ -25,6 +27,8 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
     const state = settings.getState();
     try {
       await loadLocale(state['SELECTED_LOCALE']);
+      setNextAdhan();
+      updateWidget();
     } catch {
       console.warn(
         'could not find any matching file for locale: ' +

@@ -8,10 +8,12 @@ import {CalculateIcon} from '@/assets/icons/calculate';
 import {ExploreIcon} from '@/assets/icons/explore';
 import {NotificationsActiveIcon} from '@/assets/icons/notifications_active';
 import {VolumeUpIcon} from '@/assets/icons/volume_up';
+import {WidgetIcon} from '@/assets/icons/widget';
 import {push} from '@/navigation/root_navigation';
 import {routeTranslations, RootStackParamList} from '@/navigation/types';
 import {useCalcSettings} from '@/store/calculation_settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {updateWidget} from '@/tasks/update_widget';
 
 type ScreenListItem = {
   name: keyof RootStackParamList;
@@ -43,6 +45,10 @@ const settingsScreenList: ScreenListItem[] = [
     name: 'BatteryOptimizationSettings',
     icon: BatteryChargingIcon,
   },
+  {
+    name: 'WidgetSettings',
+    icon: WidgetIcon,
+  },
 ];
 
 function renderItem({item}: {item: ScreenListItem}) {
@@ -67,6 +73,7 @@ export function Settings() {
   const settingsState = useCalcSettings(state => state);
   useEffect(() => {
     setNextAdhan();
+    updateWidget();
   }, [settingsState]);
 
   return (

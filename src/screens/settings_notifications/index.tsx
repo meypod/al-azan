@@ -24,7 +24,7 @@ export function NotificationSettings(props: IScrollViewProps) {
         <NotificationSetting
           key={p.toString()}
           prayer={p}
-          backgroundColor={i % 2 === 0 ? 'coolGray.300:alpha.30' : undefined}
+          backgroundColor={i % 2 === 0 ? 'coolGray.300:alpha.10' : undefined}
         />
       ))}
     </ScrollView>

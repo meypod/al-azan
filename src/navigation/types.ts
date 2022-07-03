@@ -11,6 +11,7 @@ export type RootStackParamList = {
   AdhanSettings: undefined;
   CalculationSettings: undefined;
   BatteryOptimizationSettings: undefined;
+  WidgetSettings: undefined;
 };
 
 declare global {
@@ -61,6 +62,11 @@ export const routeTranslations = {
   BatteryOptimizationSettings: defineMessage({
     id: 'battery_optimization_settings',
     message: 'Battery Optimization',
+    comment: 'screen title',
+  }),
+  WidgetSettings: defineMessage({
+    id: 'widget_settings',
+    message: 'Widget Settings',
     comment: 'screen title',
   }),
 } as Record<string, MessageDescriptor>;

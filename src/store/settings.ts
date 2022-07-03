@@ -24,6 +24,8 @@ type SettingsStore = {
   SCHEDULED_ALARM_TIMESTAMP?: number;
   LAST_APP_FOCUS_TIMESTAMP?: number;
   HIDDEN_PRAYERS: Array<Prayer>;
+  HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
+  SHOW_WIDGET: boolean;
   DISMISSED_ALARM_TIMESTAMP: number;
   ADHAN_VOLUME: number;
 
@@ -55,6 +57,8 @@ export const settings = createVanilla<SettingsStore>()(
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [],
+      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Motn],
+      SHOW_WIDGET: false,
       ADHAN_VOLUME: 70,
       DISMISSED_ALARM_TIMESTAMP: 0,
 

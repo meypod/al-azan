@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center_horizontal"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/hijri_date_v"
+      style="@style/TextAppearance.Compat.Notification.Line2"
+      android:textSize="14sp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="start"
+      android:maxLines="1" />
+
+    <TextView
+      android:id="@+id/day_v"
+      style="@style/TextAppearance.Compat.Notification.Line2"
+      android:textSize="13sp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:maxLines="1" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:baselineAligned="false"
+    android:layoutDirection="rtl"
+
+    android:orientation="horizontal">
+
+    <LinearLayout
+      android:id="@+id/prayer1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/prayer1_name"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+      <TextView
+        android:id="@+id/prayer1_time"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/prayer2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="3dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/prayer2_name"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+      <TextView
+        android:id="@+id/prayer2_time"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/prayer3"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="3dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/prayer3_name"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+      <TextView
+        android:id="@+id/prayer3_time"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/prayer4"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="3dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/prayer4_name"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+      <TextView
+        android:id="@+id/prayer4_time"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/prayer5"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="3dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/prayer5_name"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+      <TextView
+        android:id="@+id/prayer5_time"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/prayer6"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="3dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/prayer6_name"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+      <TextView
+        android:id="@+id/prayer6_time"
+        style="@style/TextAppearance.Compat.Notification"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+</LinearLayout>

@@ -25,8 +25,10 @@ import {CalculationSettings} from '@/screens/settings_calculation';
 import {DisplaySettings} from '@/screens/settings_display';
 import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
+import {WidgetSettings} from '@/screens/settings_widget';
 import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {updateWidget} from '@/tasks/update_widget';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -58,6 +60,7 @@ export function App() {
         nextAppState === 'active'
       ) {
         setNextAdhan();
+        updateWidget();
       }
 
       appState.current = nextAppState;
@@ -101,6 +104,7 @@ export function App() {
             name="BatteryOptimizationSettings"
             component={BatteryOptimizationSettings}
           />
+          <Stack.Screen name="WidgetSettings" component={WidgetSettings} />
         </Stack.Group>
         <Stack.Group
           screenOptions={{presentation: 'modal', headerShown: false}}>

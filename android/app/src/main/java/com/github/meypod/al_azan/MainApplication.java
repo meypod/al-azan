@@ -2,6 +2,7 @@ package com.github.meypod.al_azan;
 
 import android.app.Application;
 import android.content.Context;
+import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -10,10 +11,10 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.github.meypod.al_azan.modules.CallStateModulePackage;
 import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
+import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.RestartModulePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -26,7 +27,6 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
@@ -34,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
           packages.add(new CallStateModulePackage());
           packages.add(new MediaPlayerModulePackage());
           packages.add(new ReactNativeBlobUtilPackage());
+          packages.add(new NotificationWidgetModulePackage());
           return packages;
         }
 
