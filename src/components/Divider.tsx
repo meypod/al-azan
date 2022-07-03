@@ -20,7 +20,7 @@ function Divider({label, ...boxProps}: {label?: string} & IBoxProps) {
           adjustsFontSizeToFit
           noOfLines={1}
           flexShrink={0}
-          minimumFontScale={0.5}
+          minimumFontScale={1}
           mx="2">
           {label}
         </Text>
