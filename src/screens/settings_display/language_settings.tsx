@@ -43,7 +43,7 @@ export function LanguageSettings(props: IStackProps) {
           .then(() => {
             I18nManager.forceRTL(isRTL);
             // allow some time for forceRTL to work
-            setTimeout(restart, 100);
+            setTimeout(restart, 200);
           })
           .catch(() => {});
       }
