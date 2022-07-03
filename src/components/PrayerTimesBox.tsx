@@ -1,13 +1,8 @@
-import {i18n} from '@lingui/core';
 import {difference} from 'lodash';
 import {Box} from 'native-base';
 import {memo, useEffect, useState} from 'react';
-import {
-  Prayer,
-  PrayersInOrder,
-  PrayerTimesExtended,
-  prayerTranslations,
-} from '@/adhan';
+import {Prayer, PrayersInOrder, PrayerTimesExtended} from '@/adhan';
+import {getActivePrayer} from '@/adhan/utils';
 import PrayerTimeRow from '@/components/PrayerTimeRow';
 import {
   getAdhanSettingKey,
@@ -21,8 +16,6 @@ type PrayerTimesBoxProps = {
 };
 
 function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
-  const todayDateString = new Date().toDateString();
-  const prayerTimesDateString = prayerTimes?.date?.toDateString();
   const nextPrayer = prayerTimes?.nextPrayer();
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
@@ -31,16 +24,7 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
   const calcSettings = useCalcSettings(state => state);
 
   const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers || []);
-  let activePrayer: Prayer | undefined;
-
-  if (todayDateString === prayerTimesDateString && prayerTimes) {
-    for (let prayer of visiblePrayerTimes) {
-      if (prayerTimes[prayer] && prayerTimes[prayer].valueOf() > Date.now()) {
-        activePrayer = prayer;
-        break;
-      }
-    }
-  }
+  const activePrayer = getActivePrayer(prayerTimes, visiblePrayerTimes);
 
   useEffect(() => {
     if (!activePrayer || !prayerTimes) return;
@@ -70,7 +54,7 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
           date={prayerTimes && prayerTimes[prayer]}
           active={activePrayer === prayer}
           isActiveDismissed={nextPrayerSoundIsMuted}
-          title={i18n._(prayerTranslations[prayer.toLowerCase()])}
+          prayer={prayer}
         />
       ))}
     </Box>
