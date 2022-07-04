@@ -7,7 +7,7 @@ const NotificationWidgetModule = (
         {},
         {
           get() {
-            throw new Error('error while linking restart module');
+            throw new Error('error while linking notification widget module');
           },
         },
       )
