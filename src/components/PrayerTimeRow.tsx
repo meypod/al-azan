@@ -30,7 +30,7 @@ function PrayerTimeRow({
       borderColor={active ? 'yellow.300' : 'coolGray.400'}
       borderRadius="md"
       borderWidth="2"
-      borderStyle={NonPrayer.includes(prayer) ? 'dashed' : 'solid'}
+      borderStyle={NonPrayer.includes(prayer) ? 'dotted' : 'solid'}
       marginBottom="3"
       bg={active && !isDarkMode ? 'yellow.100' : null}
       padding="4">
