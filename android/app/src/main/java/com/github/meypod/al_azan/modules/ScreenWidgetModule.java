@@ -59,9 +59,11 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
       }
     }
 
-    RemoteViews notificationLayout = createNotifBigView(getReactApplicationContext(), hijriDate,
+    RemoteViews widgetLayout = createNotifBigView(getReactApplicationContext(), hijriDate,
         dayAndMonth, names, times,
         activeIndex);
+    
+    widgetLayout.setInt(R.id.notif_widget_big_layout, "setBackgroundResource", R.color.bg_compat);
 
     // request widget update when user touches widget
     int flag = PendingIntent.FLAG_UPDATE_CURRENT;
@@ -74,13 +76,13 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
     PendingIntent launchIntent =
         PendingIntent.getActivity(getReactApplicationContext(), 0,
             intent, flag);
-    notificationLayout.setOnClickPendingIntent(R.id.notif_widget_big_layout, launchIntent);
+    widgetLayout.setOnClickPendingIntent(R.id.notif_widget_big_layout, launchIntent);
 
     AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getReactApplicationContext());
     ComponentName screenWidget = new ComponentName(getReactApplicationContext(),
         PrayerTimesWidget.class);
     int[] widgetIds = appWidgetManager.getAppWidgetIds(screenWidget);
-    appWidgetManager.updateAppWidget(widgetIds, notificationLayout);
+    appWidgetManager.updateAppWidget(widgetIds, widgetLayout);
 
     promise.resolve(null);
   }

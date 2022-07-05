@@ -3,4 +3,5 @@
   <color name="active_prayer">#fde047</color>
   <color name="text_shadow">#FFFFFF</color>
   <color name="secondary_text_color">#ffffffff</color>
+  <color name="bg_compat">#DE474747</color>
 </resources>
