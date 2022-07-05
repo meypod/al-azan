@@ -18,6 +18,7 @@ import {
 } from '@/modules/notification_widget';
 import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
+import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
 import {settings, waitTillHydration} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
@@ -28,7 +29,6 @@ export async function cancelAdhanNotif() {
   await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
   await notifee.stopForegroundService();
   replace('Home');
-  await waitTillHydration();
   setNextAdhan();
   updateWidgets();
 }
@@ -76,7 +76,6 @@ export async function cancelAdhanNotifOnDismissed(
     }
   } else if (notification?.id === PRE_ADHAN_NOTIFICATION_ID) {
     if (pressAction?.id === 'cancel_adhan' && type !== EventType.DISMISSED) {
-      await waitTillHydration();
       const options = await getSecheduledAdhanNotificationOptions();
       if (options) {
         // save date of upcoming adhan to prevent setting alarm/prealarm before it
@@ -111,11 +110,13 @@ export function openFullscreenAlarmIfNeeded(
 
 export function setupNotifeeHandlers() {
   notifee.onBackgroundEvent(async ({type, detail}) => {
+    await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
     openFullscreenAlarmIfNeeded(type, detail);
     await cancelAdhanNotifOnDismissed(type, detail);
   });
 
-  notifee.registerForegroundService(notification => {
+  notifee.registerForegroundService(async notification => {
+    await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
     if (notification.id === ADHAN_NOTIFICATION_ID) {
       notifee.cancelNotification(PRE_ADHAN_NOTIFICATION_ID);
       const options = JSON.parse(
