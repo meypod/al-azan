@@ -5,6 +5,7 @@ import notifee, {
   AndroidVisibility,
 } from '@notifee/react-native';
 import {BackHandler} from 'react-native';
+import {bootstrap} from '@/bootstrap';
 import {
   ADHAN_NOTIFICATION_ID,
   PRE_ADHAN_NOTIFICATION_ID,
@@ -18,8 +19,7 @@ import {
 } from '@/modules/notification_widget';
 import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
-import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
-import {settings, waitTillHydration} from '@/store/settings';
+import {settings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
@@ -108,7 +108,7 @@ export function openFullscreenAlarmIfNeeded(
 
 export function setupNotifeeHandlers() {
   notifee.onBackgroundEvent(async ({type, detail}) => {
-    await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
+    await bootstrap();
     if (
       type === EventType.DELIVERED &&
       detail.notification?.id === ADHAN_NOTIFICATION_ID
@@ -121,7 +121,7 @@ export function setupNotifeeHandlers() {
   });
 
   notifee.registerForegroundService(async notification => {
-    await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
+    await bootstrap();
     if (notification.id === ADHAN_NOTIFICATION_ID) {
       notifee.cancelNotification(PRE_ADHAN_NOTIFICATION_ID);
       const options = JSON.parse(
