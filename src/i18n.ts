@@ -13,6 +13,8 @@ i18n.load('en', enMessages);
 
 export let isRTL = false;
 
+const loadStatuses: Record<string, boolean> = {};
+
 const localeFallbacks = [
   {
     base: 'en',
@@ -29,7 +31,9 @@ const localeFallbacks = [
 ];
 
 export async function loadLocale(targetLocale: string) {
+  if (loadStatuses[targetLocale]) return;
   let locale;
+
   for (const lf of localeFallbacks) {
     if (targetLocale.startsWith(lf.base)) {
       locale = lf.fallback;
@@ -49,6 +53,7 @@ export async function loadLocale(targetLocale: string) {
       i18n.load(locale, messages);
       isRTL = isRtlLang(locale)!;
       i18n.activate(locale);
+      loadStatuses[targetLocale] = true;
     } else {
       throw new Error('import failed');
     }
