@@ -1,8 +1,8 @@
 import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
-import {HStack, Text, Checkbox, Stack, Box} from 'native-base';
+import {HStack, Text, Checkbox, Stack} from 'native-base';
 import {IHStackProps} from 'native-base/lib/typescript/components/primitives/Stack/HStack';
-import {Prayer, prayerTranslations, NonPrayer} from '@/adhan';
+import {Prayer, prayerTranslations} from '@/adhan';
 import {
   getAdhanSettingKey,
   useCalcSettingsHelper,
@@ -52,18 +52,14 @@ export function NotificationSetting({
         />
       </Stack>
 
-      {NonPrayer.includes(prayer) ? (
-        <Box width="1/6"></Box>
-      ) : (
-        <Stack width="1/6" justifyContent="center" alignItems="center">
-          <Checkbox
-            value="sound"
-            isChecked={!!sound}
-            onChange={setSoundProxy}
-            accessibilityLabel={t`${prayerName} sound will be played`}
-          />
-        </Stack>
-      )}
+      <Stack width="1/6" justifyContent="center" alignItems="center">
+        <Checkbox
+          value="sound"
+          isChecked={!!sound}
+          onChange={setSoundProxy}
+          accessibilityLabel={t`${prayerName} sound will be played`}
+        />
+      </Stack>
     </HStack>
   );
 }
