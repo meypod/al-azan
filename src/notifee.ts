@@ -25,12 +25,10 @@ import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
 
 export async function cancelAdhanNotif() {
-  await stopAdhan();
+  await stopAdhan().catch(console.error);
+  replace('Home');
   await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
   await notifee.stopForegroundService();
-  replace('Home');
-  setNextAdhan();
-  updateWidgets();
 }
 
 export async function isAdhanPlaying() {
@@ -111,6 +109,13 @@ export function openFullscreenAlarmIfNeeded(
 export function setupNotifeeHandlers() {
   notifee.onBackgroundEvent(async ({type, detail}) => {
     await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
+    if (
+      type === EventType.DELIVERED &&
+      detail.notification?.id === ADHAN_NOTIFICATION_ID
+    ) {
+      setNextAdhan();
+      updateWidgets();
+    }
     openFullscreenAlarmIfNeeded(type, detail);
     await cancelAdhanNotifOnDismissed(type, detail);
   });
@@ -124,14 +129,8 @@ export function setupNotifeeHandlers() {
       ) as SetAlarmTaskOptions;
       if (options.playSound) {
         return playAdhan()
-          .then(playedSuccessfully => {
-            if (playedSuccessfully) {
-              cancelAdhanNotif();
-            }
-          })
-          .then(() => {
-            BackHandler.exitApp();
-          });
+          .then(() => cancelAdhanNotif())
+          .then(() => BackHandler.exitApp());
       }
     }
     return Promise.resolve();
