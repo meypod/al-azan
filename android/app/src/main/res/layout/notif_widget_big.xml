@@ -12,7 +12,7 @@
 
     <TextView
       android:id="@+id/hijri_date_v"
-      style="@style/TextAppearance.Compat.Notification.Line2"
+      android:textColor="@color/secondary_text_color"
       android:textSize="14sp"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
 
     <TextView
       android:id="@+id/day_v"
-      style="@style/TextAppearance.Compat.Notification.Line2"
+      android:textColor="@color/secondary_text_color"
       android:textSize="13sp"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
