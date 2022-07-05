@@ -1,14 +1,10 @@
-import {i18n} from '@lingui/core';
 import notifee, {
   EventType,
   EventDetail,
   AndroidImportance,
   AndroidVisibility,
 } from '@notifee/react-native';
-import {difference} from 'lodash';
 import {BackHandler} from 'react-native';
-import {getPrayerTimes, PrayersInOrder, prayerTranslations} from '@/adhan';
-import {getActivePrayer} from '@/adhan/utils';
 import {
   ADHAN_NOTIFICATION_ID,
   PRE_ADHAN_NOTIFICATION_ID,
@@ -25,8 +21,7 @@ import {playAdhan, stopAdhan} from '@/services/azan_service';
 import {settings, waitTillHydration} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {updateWidget} from '@/tasks/update_widget';
-import {getArabicDate, getDay, getMonthName, getTime24} from '@/utils/date';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 export async function cancelAdhanNotif() {
   await stopAdhan();
@@ -35,7 +30,7 @@ export async function cancelAdhanNotif() {
   replace('Home');
   await waitTillHydration();
   setNextAdhan();
-  updateWidget();
+  updateWidgets();
 }
 
 export async function isAdhanPlaying() {
@@ -154,7 +149,11 @@ export type updateWidgetOptions = Pick<
   'dayAndMonth' | 'hijriDate' | 'prayers'
 >;
 
-export async function updatePermanentNotifWidget() {
+export async function updatePermanentNotifWidget({
+  dayAndMonth,
+  hijriDate,
+  prayers,
+}: updateWidgetOptions) {
   const channelId = await notifee.createChannel({
     id: WIDGET_CHANNEL_ID,
     name: WIDGET_CHANNEL_NAME,
@@ -162,35 +161,13 @@ export async function updatePermanentNotifWidget() {
     visibility: AndroidVisibility.PUBLIC,
   });
 
-  const now = new Date();
-
-  const prayerTimes = getPrayerTimes(now);
-  if (!prayerTimes)
-    throw new Error(
-      'notification widget: prayer times for given date is undefined',
-    );
-  const hiddenPrayers = settings.getState().HIDDEN_WIDGET_PRAYERS;
-
-  const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers);
-
-  const activePrayer = getActivePrayer(prayerTimes, visiblePrayerTimes);
-
-  const prayers = visiblePrayerTimes.map(
-    p =>
-      [
-        i18n._(prayerTranslations[p.toLowerCase()]),
-        getTime24(prayerTimes[p]),
-        p === activePrayer,
-      ] as [prayerName: string, prayerTime: string, isActive: Boolean],
-  );
-
-  updateNotification({
-    dayAndMonth: getMonthName(new Date(now)) + ', ' + getDay(new Date()),
-    hijriDate: getArabicDate(new Date(now)),
+  return updateNotification({
+    dayAndMonth,
+    hijriDate,
     prayers,
     channelId,
     notificationId: WIDGET_NOTIFICATION_ID,
-  }).catch(console.error);
+  });
 }
 
 export function cancelPermanentNotifWidget() {

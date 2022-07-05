@@ -44,11 +44,12 @@ export function setNextAdhan(fromDate?: Date) {
       );
       const time24Format = getTime24(date);
       ToastAndroid.show(
-        t({
-          message: `Next: ${translatedPrayerName}, ${time24Format}`,
-          comment:
-            'this message is shown inside the toast that says when the next notification/sound will be shown/played',
-        }) + (date.getDay() !== new Date().getDay() ? ' ' + t`Tomorrow` : ''),
+        t`Next` +
+          ': ' +
+          translatedPrayerName +
+          ', ' +
+          time24Format +
+          (date.getDay() !== new Date().getDay() ? ' ' + t`Tomorrow` : ''),
         ToastAndroid.SHORT,
       );
     });

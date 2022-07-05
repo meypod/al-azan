@@ -28,7 +28,7 @@ import {NotificationSettings} from '@/screens/settings_notifications';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {updateWidget} from '@/tasks/update_widget';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -60,7 +60,7 @@ export function App() {
         nextAppState === 'active'
       ) {
         setNextAdhan();
-        updateWidget();
+        updateWidgets();
       }
 
       appState.current = nextAppState;

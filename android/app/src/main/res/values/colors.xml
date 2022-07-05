@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <color name="active_prayer">#fef9c3</color>
+  <color name="text_shadow">#7F000000</color>
+  <color name="secondary_text_color">#de000000</color>
 </resources>

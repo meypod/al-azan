@@ -5,11 +5,12 @@ import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {APP_KEY} from '@/constants/app';
 import {loadLocale} from '@/i18n';
+import WidgetMod from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
 import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
 import {settings, waitTillHydration} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {updateWidget} from '@/tasks/update_widget';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 ChunkManager.configure({
   resolveRemoteChunk: async chunkid => {
@@ -21,6 +22,11 @@ ChunkManager.configure({
 
 setupNotifeeHandlers();
 
+WidgetMod.onUpdateScreenWidgetRequested(async () => {
+  await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
+  await updateWidgets();
+});
+
 AppRegistry.registerRunnable(APP_KEY, async initialProps => {
   try {
     await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
@@ -28,7 +34,7 @@ AppRegistry.registerRunnable(APP_KEY, async initialProps => {
     try {
       await loadLocale(state['SELECTED_LOCALE']);
       setNextAdhan();
-      updateWidget();
+      updateWidgets();
     } catch {
       console.warn(
         'could not find any matching file for locale: ' +

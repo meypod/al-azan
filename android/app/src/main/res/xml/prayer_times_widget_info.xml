@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+  android:initialKeyguardLayout="@layout/notif_widget_small"
+  android:initialLayout="@layout/notif_widget_small"
+  android:minHeight="20dp"
+  android:minWidth="250dp"
+  android:resizeMode="horizontal"
+  android:updatePeriodMillis="0"
+  android:widgetCategory="home_screen|keyguard" />

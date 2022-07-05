@@ -3,7 +3,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="horizontal"
-  android:gravity="center_horizontal"
+  android:gravity="center"
   android:layoutDirection="rtl"
   android:baselineAligned="false">
 
@@ -16,21 +16,11 @@
 
     <TextView
       android:id="@+id/prayer1_name"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
     <TextView
       android:id="@+id/prayer1_time"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
   </LinearLayout>
 
@@ -44,21 +34,11 @@
 
     <TextView
       android:id="@+id/prayer2_name"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
     <TextView
       android:id="@+id/prayer2_time"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
   </LinearLayout>
 
@@ -72,21 +52,11 @@
 
     <TextView
       android:id="@+id/prayer3_name"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
     <TextView
       android:id="@+id/prayer3_time"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
   </LinearLayout>
 
@@ -100,21 +70,11 @@
 
     <TextView
       android:id="@+id/prayer4_name"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
     <TextView
       android:id="@+id/prayer4_time"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
   </LinearLayout>
 
@@ -128,21 +88,11 @@
 
     <TextView
       android:id="@+id/prayer5_name"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
     <TextView
       android:id="@+id/prayer5_time"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
   </LinearLayout>
 
@@ -156,21 +106,11 @@
 
     <TextView
       android:id="@+id/prayer6_name"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
     <TextView
       android:id="@+id/prayer6_time"
-      style="@style/TextAppearance.Compat.Notification"
-      android:textSize="12sp"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:maxLines="1"
-      android:textAlignment="center" />
+      style="@style/NotifWidgetPrayer" />
 
   </LinearLayout>
 

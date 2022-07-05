@@ -1,8 +1,10 @@
 package com.github.meypod.al_azan.modules;
 
 import android.app.Notification;
+import android.content.Context;
 import android.view.View;
 import android.widget.RemoteViews;
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -17,11 +19,12 @@ import com.github.meypod.al_azan.R;
 
 public class NotificationWidgetModule extends ReactContextBaseJavaModule {
 
+
   NotificationWidgetModule(ReactApplicationContext context) {
     super(context);
   }
 
-  private final int[] prayersViewId = {
+  private static final int[] prayersViewId = {
       R.id.prayer1,
       R.id.prayer2,
       R.id.prayer3,
@@ -30,7 +33,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
       R.id.prayer6,
   };
 
-  private final int[] prayersViewNameId = {
+  private static final int[] prayersViewNameId = {
       R.id.prayer1_name,
       R.id.prayer2_name,
       R.id.prayer3_name,
@@ -39,7 +42,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
       R.id.prayer6_name,
   };
 
-  private final int[] prayersViewTimeId = {
+  private static final int[] prayersViewTimeId = {
       R.id.prayer1_time,
       R.id.prayer2_time,
       R.id.prayer3_time,
@@ -54,10 +57,15 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
     return "NotificationWidgetModule";
   }
 
-  private RemoteViews createNotifView(String[] names, String[] times, int activeIndex) {
-    // TODO activeIndex style prayer index view as yellow
-    RemoteViews view = new RemoteViews(getReactApplicationContext().getPackageName(),
+  public static RemoteViews createNotifView(Context context, String[] names, String[] times,
+      int activeIndex) {
+    RemoteViews view = new RemoteViews(context.getPackageName(),
         R.layout.notif_widget_small);
+
+    if (names == null || times == null) {
+      names = new String[]{"-", "-", "-", "-", "-", "-"};
+      times = new String[]{"--:--", "--:--", "--:--", "--:--", "--:--", "--:--"};
+    }
 
     for (int i = 0; i < names.length; i++) {
       view.setTextViewText(prayersViewNameId[i], names[i]);
@@ -65,11 +73,11 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
     }
 
     if (activeIndex != -1) {
-      int color = ResourcesCompat.getColor(getReactApplicationContext().getResources(),
+      int activeColor = ResourcesCompat.getColor(context.getResources(),
           R.color.active_prayer,
           null);
-      view.setTextColor(prayersViewNameId[activeIndex], color);
-      view.setTextColor(prayersViewTimeId[activeIndex], color);
+      view.setTextColor(prayersViewNameId[activeIndex], activeColor);
+      view.setTextColor(prayersViewTimeId[activeIndex], activeColor);
     }
 
     for (int i = names.length; i < prayersViewId.length; i++) {
@@ -78,25 +86,38 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
     return view;
   }
 
-  private RemoteViews createNotifBigView(String hijriDate, String dayAndMonth, String[] names,
+  public static RemoteViews createNotifBigView(Context context, String hijriDate,
+      String dayAndMonth, String[] names,
       String[] times, int activeIndex) {
-    RemoteViews bigView = new RemoteViews(getReactApplicationContext().getPackageName(),
+    RemoteViews bigView = new RemoteViews(context.getPackageName(),
         R.layout.notif_widget_big);
+
+    if (names == null || times == null) {
+      names = new String[]{"-", "-", "-", "-", "-", "-"};
+      times = new String[]{"--:--", "--:--", "--:--", "--:--", "--:--", "--:--"};
+    }
 
     bigView.setTextViewText(R.id.hijri_date_v, hijriDate);
     bigView.setTextViewText(R.id.day_v, dayAndMonth);
 
+    // resetting color is needed for widget because of partial updates
+    @ColorInt int color = ResourcesCompat.getColor(context.getResources(),
+        R.color.secondary_text_color,
+        null);
+
     for (int i = 0; i < names.length; i++) {
       bigView.setTextViewText(prayersViewNameId[i], names[i]);
       bigView.setTextViewText(prayersViewTimeId[i], times[i]);
+      bigView.setTextColor(prayersViewNameId[i], color);
+      bigView.setTextColor(prayersViewTimeId[i], color);
     }
 
     if (activeIndex != -1) {
-      int color = ResourcesCompat.getColor(getReactApplicationContext().getResources(),
+      int activeColor = ResourcesCompat.getColor(context.getResources(),
           R.color.active_prayer,
           null);
-      bigView.setTextColor(prayersViewNameId[activeIndex], color);
-      bigView.setTextColor(prayersViewTimeId[activeIndex], color);
+      bigView.setTextColor(prayersViewNameId[activeIndex], activeColor);
+      bigView.setTextColor(prayersViewTimeId[activeIndex], activeColor);
     }
 
     for (int i = names.length; i < prayersViewId.length; i++) {
@@ -137,8 +158,10 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
       }
     }
 
-    RemoteViews notificationLayout = createNotifView(names, times, activeIndex);
-    RemoteViews notificationLayoutExpanded = createNotifBigView(hijriDate, dayAndMonth, names,
+    RemoteViews notificationLayout = createNotifView(getReactApplicationContext(), names, times,
+        activeIndex);
+    RemoteViews notificationLayoutExpanded = createNotifBigView(getReactApplicationContext(),
+        hijriDate, dayAndMonth, names,
         times,
         activeIndex);
 

@@ -13,6 +13,7 @@ import com.github.meypod.al_azan.modules.CallStateModulePackage;
 import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.RestartModulePackage;
+import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
           packages.add(new MediaPlayerModulePackage());
           packages.add(new ReactNativeBlobUtilPackage());
           packages.add(new NotificationWidgetModulePackage());
+          packages.add(new ScreenWidgetModulePackage());
           return packages;
         }
 

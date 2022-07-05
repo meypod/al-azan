@@ -10,14 +10,14 @@ import {
 import {useEffect} from 'react';
 import {HideWidgetPrayerSettings} from '@/screens/settings_widget/hide_widget_prayer_settings';
 import {useSettingsHelper} from '@/store/settings';
-import {updateWidget} from '@/tasks/update_widget';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 export function WidgetSettings(props: IScrollViewProps) {
   const [showWidget, setShowWidget] = useSettingsHelper('SHOW_WIDGET');
   const [hiddenPrayers] = useSettingsHelper('HIDDEN_WIDGET_PRAYERS');
 
   useEffect(() => {
-    updateWidget();
+    updateWidgets();
   }, [showWidget, hiddenPrayers]);
 
   return (
