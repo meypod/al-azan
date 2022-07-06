@@ -8,24 +8,29 @@ import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {getNextDayBeginning, getTime24} from '@/utils/date';
 
-export function setNextAdhan(fromDate?: Date) {
+type SetNextAdhanOptions = {
+  fromDate?: Date;
+  noToast?: boolean;
+};
+
+export function setNextAdhan(options?: SetNextAdhanOptions) {
   const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
 
-  if (!notificationSettingsIsValid) return;
+  if (!notificationSettingsIsValid) return Promise.reject();
 
-  let targetDate = fromDate || new Date();
+  let targetDate = options?.fromDate || new Date();
   let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
   if (!nextPrayer) {
     targetDate = getNextDayBeginning(targetDate);
     nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
   }
-  if (!nextPrayer) return;
+  if (!nextPrayer) return Promise.reject();
 
   const {date, prayer, playSound} = nextPrayer!;
 
   const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
 
-  if (dismissedAlarmTS >= date.valueOf()) return;
+  if (dismissedAlarmTS >= date.valueOf()) return Promise.reject();
 
   return setPreAlarmTask({
     date,
@@ -39,18 +44,20 @@ export function setNextAdhan(fromDate?: Date) {
       }),
     )
     .then(() => {
-      const translatedPrayerName = i18n._(
-        prayerTranslations[prayer.toLowerCase()],
-      );
-      const time24Format = getTime24(date);
-      ToastAndroid.show(
-        t`Next` +
-          ': ' +
-          translatedPrayerName +
-          ', ' +
-          time24Format +
-          (date.getDay() !== new Date().getDay() ? ' ' + t`Tomorrow` : ''),
-        ToastAndroid.SHORT,
-      );
+      if (!options?.noToast) {
+        const translatedPrayerName = i18n._(
+          prayerTranslations[prayer.toLowerCase()],
+        );
+        const time24Format = getTime24(date);
+        ToastAndroid.show(
+          t`Next` +
+            ': ' +
+            translatedPrayerName +
+            ', ' +
+            time24Format +
+            (date.getDay() !== new Date().getDay() ? ' ' + t`Tomorrow` : ''),
+          ToastAndroid.SHORT,
+        );
+      }
     });
 }
