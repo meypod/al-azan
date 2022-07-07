@@ -12,6 +12,18 @@ import {PREFERRED_LOCALE} from '@/utils/locale';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
+export type WeekDay = 'sat' | 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri';
+
+export type Reminder = {
+  id: string;
+  label?: string;
+  enabled: boolean;
+  prayer: Prayer;
+  /** in milliseconds. negative to set before, positive to set after */
+  duration: number;
+  durationModifier: number;
+};
+
 type SettingsStore = {
   // other
   SELECTED_LOCALE: string;
@@ -28,10 +40,13 @@ type SettingsStore = {
   SHOW_WIDGET: boolean;
   DISMISSED_ALARM_TIMESTAMP: number;
   ADHAN_VOLUME: number;
+  REMINDERS: Array<Reminder>;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
+  saveReminder: (reminder: Reminder) => void;
+  deleteReminder: (reminder: Reminder) => void;
   setSetting: <T extends keyof SettingsStore>(
     key: T,
     val: SettingsStore[T],
@@ -61,6 +76,7 @@ export const settings = createVanilla<SettingsStore>()(
       SHOW_WIDGET: false,
       ADHAN_VOLUME: 70,
       DISMISSED_ALARM_TIMESTAMP: 0,
+      REMINDERS: [],
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -96,6 +112,28 @@ export const settings = createVanilla<SettingsStore>()(
               draft.SELECTED_ADHAN_ENTRY.id === entry.id
             ) {
               draft.SELECTED_ADHAN_ENTRY = draft.SAVED_ADHAN_AUDIO_ENTRIES[0];
+            }
+          }),
+        ),
+
+      saveReminder: reminder =>
+        set(
+          produce<SettingsStore>(draft => {
+            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
+            if (fIndex !== -1) {
+              draft.REMINDERS.splice(fIndex, 1, reminder);
+            } else {
+              draft.REMINDERS.push(reminder);
+            }
+          }),
+        ),
+
+      deleteReminder: reminder =>
+        set(
+          produce<SettingsStore>(draft => {
+            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
+            if (fIndex !== -1) {
+              draft.REMINDERS.splice(fIndex, 1);
             }
           }),
         ),
