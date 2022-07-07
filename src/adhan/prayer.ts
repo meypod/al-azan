@@ -62,6 +62,6 @@ const prayerTranslations = {
   }),
 } as Record<string, MessageDescriptor>;
 
-export function translatePrayer(prayer: Prayer) {
+export function translatePrayer(prayer: Prayer | String) {
   return i18n._(prayerTranslations[prayer.toLowerCase()]);
 }
