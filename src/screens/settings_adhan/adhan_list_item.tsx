@@ -123,7 +123,7 @@ export function AdhanListItem({
             <HStack flexShrink={0} flexGrow={0} alignItems="center">
               {item?.canDelete && (
                 <Button onPress={onDeletePressed} p="2" variant="ghost">
-                  <DeleteIcon color="red.300" size="xl" />
+                  <DeleteIcon color="red.400" size="xl" />
                 </Button>
               )}
               {item?.filepath && (
