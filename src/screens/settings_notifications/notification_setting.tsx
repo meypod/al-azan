@@ -45,6 +45,7 @@ export function NotificationSetting({
       <Stack width="1/3" justifyContent="center" alignItems="center">
         <Checkbox
           value="notify"
+          size="md"
           isChecked={!!notify}
           onChange={setNotifyProxy}
           accessibilityLabel={t`${prayerName} notification will be shown`}
@@ -54,6 +55,7 @@ export function NotificationSetting({
       <Stack width="1/6" justifyContent="center" alignItems="center">
         <Checkbox
           value="sound"
+          size="md"
           isChecked={!!sound}
           onChange={setSoundProxy}
           accessibilityLabel={t`${prayerName} sound will be played`}

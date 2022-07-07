@@ -43,6 +43,7 @@ export function WidgetSettings(props: IScrollViewProps) {
             }}>
             <Checkbox
               value="enabled"
+              size="md"
               accessibilityLabel={t`should notification widget be shown?`}
             />
           </Checkbox.Group>

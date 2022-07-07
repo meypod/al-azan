@@ -12,7 +12,7 @@ export function NotificationSettings(props: IScrollViewProps) {
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="on-drag"
       {...props}>
-      <HStack justifyContent="space-between">
+      <HStack p="2" justifyContent="space-between">
         <Text width="1/3">{t`Time`}</Text>
         <Text width="1/3" textAlign="center">
           {t`Notification`}
@@ -23,9 +23,10 @@ export function NotificationSettings(props: IScrollViewProps) {
       </HStack>
       {PrayersInOrder.map((p, i) => (
         <NotificationSetting
+          p="2"
           key={p.toString()}
           prayer={p}
-          backgroundColor={i % 2 === 0 ? 'coolGray.300:alpha.10' : undefined}
+          backgroundColor={i % 2 === 0 ? 'coolGray.400:alpha.20' : undefined}
         />
       ))}
     </ScrollView>

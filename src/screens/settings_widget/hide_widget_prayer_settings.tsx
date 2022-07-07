@@ -13,14 +13,18 @@ import {ToastAndroid} from 'react-native';
 import {Prayer, PrayersInOrder, translatePrayer} from '@/adhan';
 import {useSettingsHelper} from '@/store/settings';
 
-function HideWidgetPrayerSetting({prayer}: {prayer: Prayer}) {
+function HideWidgetPrayerSetting({
+  prayer,
+  ...props
+}: {prayer: Prayer} & IStackProps) {
   const prayerName = translatePrayer(prayer);
   return (
-    <HStack justifyContent="space-between">
+    <HStack {...props} justifyContent="space-between">
       <Text width="1/2">{prayerName}</Text>
 
       <Stack width="1/2" justifyContent="center" alignItems="center">
         <Checkbox
+          size="md"
           value={prayer}
           accessibilityLabel={t`should ${prayerName} be hidden?`}
         />
@@ -54,7 +58,7 @@ export function HideWidgetPrayerSettings(props: IStackProps) {
       {...props}>
       <FormControl.Label>{t`Hide Prayer Times`}:</FormControl.Label>
       <Text textAlign="justify">{t`You can hide any prayer times you don't want to see in the widget here:`}</Text>
-      <HStack>
+      <HStack p="2">
         <Text width="1/2" textAlign="left">{t`Time`}</Text>
         <Text width="1/2" textAlign="center">{t`Hidden?`}</Text>
       </HStack>
@@ -62,8 +66,13 @@ export function HideWidgetPrayerSettings(props: IStackProps) {
         onChange={setHiddenPrayersProxy}
         value={hiddenWidgetPrayer}
         accessibilityLabel={t`is prayer time hidden?`}>
-        {PrayersInOrder.map(p => (
-          <HideWidgetPrayerSetting key={p.toString()} prayer={p} />
+        {PrayersInOrder.map((p, i) => (
+          <HideWidgetPrayerSetting
+            p="2"
+            backgroundColor={i % 2 === 0 ? 'coolGray.400:alpha.20' : undefined}
+            key={p.toString()}
+            prayer={p}
+          />
         ))}
       </Checkbox.Group>
     </VStack>
