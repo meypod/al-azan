@@ -1,4 +1,4 @@
-import {MessageDescriptor} from '@lingui/core';
+import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
 export enum Prayer {
@@ -27,7 +27,7 @@ export const PrayersInOrder = [
   Prayer.Motn,
 ];
 
-export const prayerTranslations = {
+const prayerTranslations = {
   fajr: defineMessage({
     id: 'fajr.prayer',
     message: 'Fajr',
@@ -61,3 +61,7 @@ export const prayerTranslations = {
     message: 'Middle Of The Night',
   }),
 } as Record<string, MessageDescriptor>;
+
+export function translatePrayer(prayer: Prayer) {
+  return i18n._(prayerTranslations[prayer.toLowerCase()]);
+}

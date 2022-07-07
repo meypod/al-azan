@@ -1,4 +1,3 @@
-import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import notifee, {
   TimestampTrigger,
@@ -6,7 +5,7 @@ import notifee, {
   AndroidCategory,
   AndroidVisibility,
 } from '@notifee/react-native';
-import {Prayer, prayerTranslations} from '@/adhan';
+import {Prayer, translatePrayer} from '@/adhan';
 import {
   PRE_ADHAN_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_NAME,
@@ -64,7 +63,7 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
           comment: 'notification title',
         }),
         body:
-          i18n._(prayerTranslations[options.prayer.toLowerCase()]) +
+          translatePrayer(options.prayer) +
           ', ' +
           getDayName(options.date, 'short') +
           ' ' +

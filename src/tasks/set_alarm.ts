@@ -1,4 +1,3 @@
-import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import notifee, {
   TimestampTrigger,
@@ -8,7 +7,7 @@ import notifee, {
   AndroidVisibility,
   AndroidLaunchActivityFlag,
 } from '@notifee/react-native';
-import {Prayer, prayerTranslations} from '@/adhan';
+import {Prayer, translatePrayer} from '@/adhan';
 import {
   ADHAN_CHANNEL_ID,
   ADHAN_CHANNEL_NAME,
@@ -66,7 +65,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     await notifee.createTriggerNotification(
       {
         id: ADHAN_NOTIFICATION_ID,
-        title: i18n._(prayerTranslations[options.prayer.toLowerCase()]),
+        title: translatePrayer(options.prayer),
         android: {
           smallIcon: 'ic_stat_name',
           channelId,

@@ -1,4 +1,3 @@
-import {i18n} from '@lingui/core';
 import HeaderTitle from '@react-navigation/elements/src/Header/HeaderTitle';
 import {
   NavigationContainer,
@@ -15,7 +14,7 @@ import {
   navigationRef,
   onReady,
 } from '@/navigation/root_navigation';
-import {RootStackParamList, routeTranslations} from '@/navigation/types';
+import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import {Settings} from '@/screens/settings';
@@ -25,6 +24,7 @@ import {CalculationSettings} from '@/screens/settings_calculation';
 import {DisplaySettings} from '@/screens/settings_display';
 import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
+import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
@@ -35,11 +35,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const TranslatedHeaderTitle = (...props: any[]) => {
   const routeName = getCurrentRoute().name;
   if (routeName) {
-    return (
-      <HeaderTitle {...props}>
-        {i18n._(routeTranslations[routeName])}
-      </HeaderTitle>
-    );
+    return <HeaderTitle {...props}>{translateRoute(routeName)}</HeaderTitle>;
   } else {
     return <></>;
   }
@@ -105,6 +101,10 @@ export function App() {
             component={BatteryOptimizationSettings}
           />
           <Stack.Screen name="WidgetSettings" component={WidgetSettings} />
+          <Stack.Screen
+            name="RemindersSettings"
+            component={RemindersSettings}
+          />
         </Stack.Group>
         <Stack.Group
           screenOptions={{presentation: 'modal', headerShown: false}}>

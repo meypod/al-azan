@@ -1,4 +1,4 @@
-export {Prayer, prayerTranslations, PrayersInOrder, NonPrayer} from './prayer';
+export {Prayer, translatePrayer, PrayersInOrder, NonPrayer} from './prayer';
 
 export type {PrayerTimesOptions} from './prayer_times';
 

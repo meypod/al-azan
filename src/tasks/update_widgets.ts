@@ -1,6 +1,5 @@
-import {i18n} from '@lingui/core';
 import difference from 'lodash/difference';
-import {getPrayerTimes, PrayersInOrder, prayerTranslations} from '@/adhan';
+import {getPrayerTimes, PrayersInOrder, translatePrayer} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
 import WidgetMod from '@/modules/screen_widget';
 import {
@@ -26,7 +25,7 @@ export async function updateWidgets() {
   const prayers = visiblePrayerTimes.map(
     p =>
       [
-        i18n._(prayerTranslations[p.toLowerCase()]),
+        translatePrayer(p),
         prayerTimes ? getTime24(prayerTimes[p]) : '--:--',
         p === activePrayer,
       ] as [prayerName: string, prayerTime: string, isActive: Boolean],

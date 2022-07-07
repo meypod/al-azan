@@ -1,7 +1,6 @@
-import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
-import {getPrayerTimes, prayerTranslations} from '@/adhan';
+import {getPrayerTimes, translatePrayer} from '@/adhan';
 import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
@@ -45,9 +44,7 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
     )
     .then(() => {
       if (!options?.noToast) {
-        const translatedPrayerName = i18n._(
-          prayerTranslations[prayer.toLowerCase()],
-        );
+        const translatedPrayerName = translatePrayer(prayer);
         const time24Format = getTime24(date);
         ToastAndroid.show(
           t`Next` +

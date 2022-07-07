@@ -1,4 +1,3 @@
-import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 // import {difference} from 'lodash';
 import {
@@ -11,11 +10,11 @@ import {
   FormControl,
 } from 'native-base';
 import {ToastAndroid} from 'react-native';
-import {Prayer, PrayersInOrder, prayerTranslations} from '@/adhan';
+import {Prayer, PrayersInOrder, translatePrayer} from '@/adhan';
 import {useSettingsHelper} from '@/store/settings';
 
 function HideWidgetPrayerSetting({prayer}: {prayer: Prayer}) {
-  const prayerName = i18n._(prayerTranslations[prayer.toLowerCase()]);
+  const prayerName = translatePrayer(prayer);
   return (
     <HStack justifyContent="space-between">
       <Text width="1/2">{prayerName}</Text>

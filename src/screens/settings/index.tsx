@@ -1,7 +1,7 @@
-import {i18n} from '@lingui/core';
 import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {useEffect} from 'react';
 
+import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
 import {CalculateIcon} from '@/assets/icons/calculate';
@@ -10,7 +10,7 @@ import {NotificationsActiveIcon} from '@/assets/icons/notifications_active';
 import {VolumeUpIcon} from '@/assets/icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/widget';
 import {push} from '@/navigation/root_navigation';
-import {routeTranslations, RootStackParamList} from '@/navigation/types';
+import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {useCalcSettings} from '@/store/calculation_settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
@@ -49,6 +49,10 @@ const settingsScreenList: ScreenListItem[] = [
     name: 'WidgetSettings',
     icon: WidgetIcon,
   },
+  {
+    name: 'RemindersSettings',
+    icon: AlarmIcon,
+  },
 ];
 
 function renderItem({item}: {item: ScreenListItem}) {
@@ -61,7 +65,7 @@ function renderItem({item}: {item: ScreenListItem}) {
             py="3"
             alignItems="center">
             <item.icon size="4xl" mx="2"></item.icon>
-            <Text>{i18n._(routeTranslations[item.name])}</Text>
+            <Text>{translateRoute(item.name)}</Text>
           </HStack>
         );
       }}

@@ -1,7 +1,6 @@
-import {i18n} from '@lingui/core';
 import {Flex, Spacer, Text, useColorMode, HStack} from 'native-base';
 import {memo} from 'react';
-import {NonPrayer, Prayer, prayerTranslations} from '@/adhan';
+import {NonPrayer, Prayer, translatePrayer} from '@/adhan';
 import {MutedIcon} from '@/assets/icons/muted';
 import {getTime24} from '@/utils/date';
 
@@ -35,7 +34,7 @@ function PrayerTimeRow({
       bg={active && !isDarkMode ? 'yellow.100' : null}
       padding="4">
       <HStack alignItems="center">
-        <Text>{i18n._(prayerTranslations[prayer.toLowerCase()])}</Text>
+        <Text>{translatePrayer(prayer)}</Text>
         {active && isActiveDismissed && <MutedIcon mx="1"></MutedIcon>}
       </HStack>
 

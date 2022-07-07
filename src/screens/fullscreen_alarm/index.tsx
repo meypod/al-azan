@@ -1,10 +1,9 @@
-import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
 import {useLayoutEffect, useState} from 'react';
 import {BackHandler} from 'react-native';
-import {Prayer, prayerTranslations} from '@/adhan';
+import {Prayer, translatePrayer} from '@/adhan';
 import {replace} from '@/navigation/root_navigation';
 import {RootStackParamList} from '@/navigation/types';
 import {cancelAdhanNotif, isAdhanPlaying} from '@/notifee';
@@ -72,7 +71,7 @@ export function FullscreenAlarm({route}: ScreenProps) {
           textAlign="center"
           fontSize="6xl"
           marginBottom={3}>
-          {i18n._(prayerTranslations[adhanOptions.prayer.toLowerCase()])}
+          {translatePrayer(adhanOptions.prayer)}
         </Text>
         <Text
           adjustsFontSizeToFit

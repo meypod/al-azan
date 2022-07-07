@@ -1,4 +1,4 @@
-import {MessageDescriptor} from '@lingui/core';
+import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
 export type RootStackParamList = {
@@ -12,6 +12,7 @@ export type RootStackParamList = {
   CalculationSettings: undefined;
   BatteryOptimizationSettings: undefined;
   WidgetSettings: undefined;
+  RemindersSettings: undefined;
 };
 
 declare global {
@@ -20,7 +21,7 @@ declare global {
   }
 }
 
-export const routeTranslations = {
+const routeTranslations = {
   Home: defineMessage({
     id: 'home',
     message: 'Home',
@@ -69,4 +70,13 @@ export const routeTranslations = {
     message: 'Widget Settings',
     comment: 'screen title',
   }),
+  RemindersSettings: defineMessage({
+    id: 'reminders_settings',
+    message: 'Reminders',
+    comment: 'screen title',
+  }),
 } as Record<string, MessageDescriptor>;
+
+export function translateRoute(name: string) {
+  return i18n._(routeTranslations[name]);
+}
