@@ -44,7 +44,7 @@ export function getTime24(date: Date) {
 
 export function getArabicDate(date: Date) {
   const calendar =
-    PREFERRED_LOCALE === 'ar-SA' ? 'islamic-umalqura' : 'islamic';
+    PREFERRED_LOCALE === 'ar-SA' ? 'islamic-umalqura' : 'islamic-civil';
   return new Intl.DateTimeFormat(`ar-u-ca-${calendar}-nu-arab`, {
     day: '2-digit',
     month: 'long',
