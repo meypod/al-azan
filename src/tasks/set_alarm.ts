@@ -71,7 +71,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
           channelId,
           category: AndroidCategory.ALARM,
           importance: AndroidImportance.HIGH,
-          autoCancel: false,
+          autoCancel: !options.playSound,
           fullScreenAction:
             options.playSound && options.fullScreen
               ? {
