@@ -15,7 +15,7 @@ type SetNextAdhanOptions = {
 export function setNextAdhan(options?: SetNextAdhanOptions) {
   const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
 
-  if (!notificationSettingsIsValid) return Promise.reject();
+  if (!notificationSettingsIsValid) return Promise.resolve();
 
   let targetDate = options?.fromDate || new Date();
   let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
@@ -23,13 +23,13 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
     targetDate = getNextDayBeginning(targetDate);
     nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
   }
-  if (!nextPrayer) return Promise.reject();
+  if (!nextPrayer) return Promise.resolve();
 
   const {date, prayer, playSound} = nextPrayer!;
 
   const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
 
-  if (dismissedAlarmTS >= date.valueOf()) return Promise.reject();
+  if (dismissedAlarmTS >= date.valueOf()) return Promise.resolve();
 
   return setPreAlarmTask({
     date,
