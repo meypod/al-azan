@@ -1,5 +1,10 @@
 package com.github.meypod.al_azan.modules;
 
+import static com.github.meypod.al_azan.utils.Utils.getLaunchPendingIntent;
+import static com.github.meypod.al_azan.utils.Utils.prayersViewId;
+import static com.github.meypod.al_azan.utils.Utils.prayersViewNameId;
+import static com.github.meypod.al_azan.utils.Utils.prayersViewTimeId;
+
 import android.app.Notification;
 import android.content.Context;
 import android.view.View;
@@ -23,33 +28,6 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
   NotificationWidgetModule(ReactApplicationContext context) {
     super(context);
   }
-
-  private static final int[] prayersViewId = {
-      R.id.prayer1,
-      R.id.prayer2,
-      R.id.prayer3,
-      R.id.prayer4,
-      R.id.prayer5,
-      R.id.prayer6,
-  };
-
-  private static final int[] prayersViewNameId = {
-      R.id.prayer1_name,
-      R.id.prayer2_name,
-      R.id.prayer3_name,
-      R.id.prayer4_name,
-      R.id.prayer5_name,
-      R.id.prayer6_name,
-  };
-
-  private static final int[] prayersViewTimeId = {
-      R.id.prayer1_time,
-      R.id.prayer2_time,
-      R.id.prayer3_time,
-      R.id.prayer4_time,
-      R.id.prayer5_time,
-      R.id.prayer6_time,
-  };
 
   @NonNull
   @Override
@@ -177,7 +155,8 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
         .setOngoing(true)
         .setAutoCancel(false)
         .setShowWhen(false)
-        .build();// TODO add setContentIntent
+        .setContentIntent(getLaunchPendingIntent(getReactApplicationContext()))
+        .build();
 
     NotificationManagerCompat
         .from(getReactApplicationContext())

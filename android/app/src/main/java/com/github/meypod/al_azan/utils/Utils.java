@@ -2,17 +2,50 @@
 
 package com.github.meypod.al_azan.utils;
 
+import android.app.PendingIntent;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.net.Uri;
+import android.os.Build.VERSION;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper;
+import com.github.meypod.al_azan.R;
 
 public class Utils {
 
   public static final String RAW_RESOURCE_PREFIX = "rawresource:///";
+
+
+  public static final int[] prayersViewId = {
+      R.id.prayer1,
+      R.id.prayer2,
+      R.id.prayer3,
+      R.id.prayer4,
+      R.id.prayer5,
+      R.id.prayer6,
+  };
+
+  public static final int[] prayersViewNameId = {
+      R.id.prayer1_name,
+      R.id.prayer2_name,
+      R.id.prayer3_name,
+      R.id.prayer4_name,
+      R.id.prayer5_name,
+      R.id.prayer6_name,
+  };
+
+  public static final int[] prayersViewTimeId = {
+      R.id.prayer1_time,
+      R.id.prayer2_time,
+      R.id.prayer3_time,
+      R.id.prayer4_time,
+      R.id.prayer5_time,
+      R.id.prayer6_time,
+  };
 
   public static int getIdFromRawResourceUri(Uri uri) {
     String id = uri.getLastPathSegment();
@@ -21,6 +54,18 @@ public class Utils {
     } catch (Exception ignored) {
       return 0;
     }
+  }
+
+  public static PendingIntent getLaunchPendingIntent(Context context) {
+    final PackageManager pm = context.getPackageManager();
+    final Intent intent = pm.getLaunchIntentForPackage(context.getPackageName());
+
+    int flag = PendingIntent.FLAG_UPDATE_CURRENT;
+    if (VERSION.SDK_INT >= 23) {
+      flag = flag | PendingIntent.FLAG_IMMUTABLE;
+    }
+
+    return PendingIntent.getActivity(context, 0, intent, flag);
   }
 
 

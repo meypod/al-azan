@@ -1,27 +1,3 @@
 <resources>
 
-  <!-- Base application theme. -->
-  <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-    <!-- Customize your theme here. -->
-    <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
-  </style>
-
-  <style name="NotifWidgetPrayer">
-    <item name="android:textColor">@color/secondary_text_color</item>
-    <item name="android:textSize">12sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
-
-  <style name="NotifWidgetBigPrayer">
-    <item name="android:textColor">@color/secondary_text_color</item>
-    <item name="android:textSize">13sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
-
 </resources>

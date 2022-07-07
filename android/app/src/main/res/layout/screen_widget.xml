@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/screen_widget_layout"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:gravity="center"
+  android:background="@color/bg_compat"
+  android:paddingTop="2sp"
+  android:paddingBottom="2sp"
   android:orientation="vertical">
 
   <LinearLayout
@@ -17,7 +22,10 @@
       android:layout_height="wrap_content"
       android:layout_weight="1"
       android:gravity="center"
-      android:maxLines="1" />
+      android:maxLines="1"
+      tools:ignore="HardcodedText"
+      android:text="-" />
+
 
     <TextView
       android:id="@+id/day_v"
@@ -27,7 +35,9 @@
       android:layout_height="wrap_content"
       android:layout_weight="1"
       android:gravity="center"
-      android:maxLines="1" />
+      android:maxLines="1"
+      tools:ignore="HardcodedText"
+      android:text="-" />
 
   </LinearLayout>
 
@@ -49,11 +59,15 @@
 
       <TextView
         android:id="@+id/prayer1_name"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
       <TextView
         android:id="@+id/prayer1_time"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
     </LinearLayout>
 
@@ -67,11 +81,15 @@
 
       <TextView
         android:id="@+id/prayer2_name"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
       <TextView
         android:id="@+id/prayer2_time"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
     </LinearLayout>
 
@@ -85,11 +103,15 @@
 
       <TextView
         android:id="@+id/prayer3_name"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
       <TextView
         android:id="@+id/prayer3_time"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
     </LinearLayout>
 
@@ -103,11 +125,15 @@
 
       <TextView
         android:id="@+id/prayer4_name"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
       <TextView
         android:id="@+id/prayer4_time"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
     </LinearLayout>
 
@@ -121,11 +147,15 @@
 
       <TextView
         android:id="@+id/prayer5_name"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
       <TextView
         android:id="@+id/prayer5_time"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
     </LinearLayout>
 
@@ -139,11 +169,15 @@
 
       <TextView
         android:id="@+id/prayer6_name"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
       <TextView
         android:id="@+id/prayer6_time"
-        style="@style/NotifWidgetBigPrayer" />
+        style="@style/ScreenWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
     </LinearLayout>
 
