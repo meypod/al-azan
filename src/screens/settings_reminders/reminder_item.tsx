@@ -1,21 +1,31 @@
 import {t} from '@lingui/macro';
-import {Box, Pressable, Text, Spacer, HStack, Flex, Button} from 'native-base';
+import {
+  Box,
+  Pressable,
+  Text,
+  Spacer,
+  HStack,
+  Flex,
+  Button,
+  Switch,
+} from 'native-base';
 import {translatePrayer} from '@/adhan';
 import {DeleteIcon} from '@/assets/icons/delete';
 import {EditIcon} from '@/assets/icons/edit';
-import {Reminder, settings} from '@/store/settings';
+import {Reminder} from '@/store/settings';
 
 export type ReminderItemProps = {
-  item: Reminder;
+  onEditPressed?: (reminderState: Reminder) => void;
+  onToggle?: (reminderState: Reminder) => void;
+  onDelete?: (reminderState: Reminder) => void;
 };
 
 export function ReminderItem(
-  onEdit: (reminderState: Reminder) => void,
-  {item}: ReminderItemProps,
+  options: ReminderItemProps,
+  {item}: {item: Reminder},
 ) {
-  const onDelete = () => {
-    settings.getState().deleteReminder(item);
-  };
+  const onDelete =
+    (() => options.onDelete && options.onDelete(item)) || (() => {});
 
   const durationInMinutes = (item.duration / (60 * 1000)).toString();
   const prayer = translatePrayer(item.prayer);
@@ -56,7 +66,11 @@ export function ReminderItem(
               <Spacer />
             )}
             <HStack>
-              <Button onPress={() => onEdit(item)} variant="ghost">
+              <Button
+                onPress={() =>
+                  options.onEditPressed && options.onEditPressed(item)
+                }
+                variant="ghost">
                 <EditIcon
                   color="coolGray.300"
                   size="xl"
@@ -69,11 +83,19 @@ export function ReminderItem(
             </HStack>
           </HStack>
           <HStack>
-            <Text p="3">
+            <Text p="3" flex={1}>
               {item.durationModifier === -1
                 ? t`${durationInMinutes} min before ${prayer}`
                 : t`${durationInMinutes} min after ${prayer}`}
             </Text>
+            <Switch
+              isChecked={item.enabled}
+              onValueChange={state => {
+                const newReminderState = {...item, enabled: state};
+                options.onToggle && options.onToggle(newReminderState);
+              }}
+              size="lg"
+            />
           </HStack>
         </Box>
       )}

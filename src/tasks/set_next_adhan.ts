@@ -5,6 +5,7 @@ import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
+import {setReminders} from '@/tasks/set_reminder';
 import {getNextDayBeginning, getTime24} from '@/utils/date';
 
 type SetNextAdhanOptions = {
@@ -42,6 +43,15 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
         playSound,
       }),
     )
+    .then(() => {
+      return setReminders({
+        noToast: true,
+        date,
+        reminders: settings
+          .getState()
+          .REMINDERS.filter(r => r.prayer === prayer),
+      });
+    })
     .then(() => {
       if (!options?.noToast) {
         const translatedPrayerName = translatePrayer(prayer);

@@ -1,31 +1,21 @@
 import {t} from '@lingui/macro';
+import {uniqueId} from 'lodash';
 import {IStackProps, FlatList, Box, Button} from 'native-base';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 import {EditReminderModal} from '@/screens/settings_reminders/edit_reminder_modal';
 import {ReminderItem} from '@/screens/settings_reminders/reminder_item';
 import {Reminder, settings, useSettingsHelper} from '@/store/settings';
-import {setNextAdhan} from '@/tasks/set_next_adhan';
-
-let isSettingAdhan = false;
+import {setReminders} from '@/tasks/set_reminder';
 
 export function RemindersSettings(props: IStackProps) {
   const [reminderEntries] = useSettingsHelper('REMINDERS');
   const [creatingReminder, setCreatingReminder] =
     useState<Partial<Reminder> | null>(null);
 
-  useEffect(() => {
-    if (isSettingAdhan) return;
-    isSettingAdhan = true;
-    setNextAdhan({noToast: true}).finally(() => (isSettingAdhan = false));
-  }, [reminderEntries]);
-
   const onAddReminderPressed = () => {
-    // reset new reminder modal
+    // reset and show new reminder modal
     setCreatingReminder({});
-  };
-  const saveReminder = (createdReminder: Reminder) => {
-    settings.getState().saveReminder(createdReminder);
   };
 
   const cancelReminderCreation = () => {
@@ -33,19 +23,34 @@ export function RemindersSettings(props: IStackProps) {
     setCreatingReminder(null);
   };
 
+  const onReminderChange = (newReminderState: Reminder) => {
+    settings.getState().saveReminder(newReminderState);
+    setReminders({reminders: [newReminderState]});
+  };
+
+  const onReminderDelete = (newReminderState: Reminder) => {
+    settings.getState().deleteReminder(newReminderState);
+    setReminders({reminders: [{...newReminderState, enabled: false}]});
+  };
+
   return (
     <Box flex={1} safeArea py="3" {...props}>
       <FlatList
         flex={1}
         data={reminderEntries}
-        renderItem={ReminderItem.bind(undefined, setCreatingReminder)}
+        key={uniqueId('dada')}
+        renderItem={ReminderItem.bind(undefined, {
+          onEditPressed: setCreatingReminder,
+          onToggle: onReminderChange,
+          onDelete: onReminderDelete,
+        })}
       />
       <Button onPress={onAddReminderPressed} m="1">{t`Add Reminder`}</Button>
 
       <EditReminderModal
         reminderState={creatingReminder}
         onCancel={cancelReminderCreation}
-        onConfirm={editedState => saveReminder(editedState)}
+        onConfirm={editedState => onReminderChange(editedState)}
       />
     </Box>
   );

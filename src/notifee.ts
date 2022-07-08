@@ -81,7 +81,9 @@ export async function cancelAdhanNotifOnDismissed(
         // cancel upcoming notification
         await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
         // re-set the adhan notification alarm
-        setNextAdhan(new Date(new Date(options.date).valueOf() + 10000));
+        setNextAdhan({
+          fromDate: new Date(new Date(options.date).valueOf() + 10000),
+        });
       }
     }
   }

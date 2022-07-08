@@ -9,3 +9,6 @@ export const PRE_ADHAN_NOTIFICATION_ID = 'pre-adhan-trigger-notification';
 export const WIDGET_CHANNEL_ID = 'widget-channel';
 export const WIDGET_CHANNEL_NAME = 'Widget';
 export const WIDGET_NOTIFICATION_ID = 'widget-notification';
+
+export const REMINDER_CHANNEL_ID = 'reminder-channel';
+export const REMINDER_CHANNEL_NAME = 'Reminder';
