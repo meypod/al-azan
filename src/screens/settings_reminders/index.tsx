@@ -43,7 +43,10 @@ export function RemindersSettings(props: IStackProps) {
           onDelete: onReminderDelete,
         })}
       />
-      <Button onPress={onAddReminderPressed} m="1">{t`Add Reminder`}</Button>
+      <Button
+        onPress={onAddReminderPressed}
+        mx="2"
+        mt="2">{t`Add Reminder`}</Button>
 
       <EditReminderModal
         reminderState={creatingReminder}
