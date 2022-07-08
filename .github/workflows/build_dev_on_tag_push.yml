@@ -54,9 +54,8 @@ jobs:
 
     - name: build
       run: |
-        npx react-native webpack-bundle --platform android --dev false --entry-file index.tsx --bundle-output build/android/index.android.bundle --assets-dest build/android;
         cd android;
-        ./gradlew --no-daemon assembleRelease -x bundleReleaseJsAndAssets;
+        ./gradlew build -x lint -x test -x bundleDebugJsAndAssets -x copyDebugBundledJs -x assembleAndroidTest -x compileDebugSources;
     
     - name: Release
       uses: softprops/action-gh-release@v1
