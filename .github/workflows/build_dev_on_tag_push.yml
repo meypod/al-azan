@@ -26,7 +26,7 @@ jobs:
       run: |
         sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
         yarn sync_and_purge;
-      with:
+      env:
         TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
 
     - name: build
