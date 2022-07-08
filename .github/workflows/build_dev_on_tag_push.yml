@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: cimg/android:2022.06-node
+      image: cimg/android:2022.06.1
       options: --user root
     
     steps:
@@ -26,6 +26,15 @@ jobs:
         distribution: 'temurin'
         java-version: '11'
         cache: 'gradle'
+
+    - name: Setup node
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'yarn'
+    
+    - name: install packages
+      run: yarn install
 
     - name: sync purge and compile lingui.js locales
       run: |

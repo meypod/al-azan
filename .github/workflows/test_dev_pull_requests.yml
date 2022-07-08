@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: 
-      image: cimg/android:2022.06-node
+      image: cimg/android:2022.06.1
       options: --user root
     
     steps:
@@ -26,12 +26,14 @@ jobs:
         java-version: '11'
         cache: 'gradle'
 
-    - name: sync purge and compile lingui.js locales
-      run: |
-        sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
-        yarn sync_and_purge;
+    - name: Setup node
+    - uses: actions/setup-node@v3
       with:
-        TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
+        node-version: 16
+        cache: 'yarn'
+    
+    - name: install packages
+      run: yarn install
 
     - name: test build
       run: |
