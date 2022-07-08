@@ -15,7 +15,7 @@ jobs:
     steps:
 
     - name: Checkout repository
-      uses: actions/checkout@v3.0.2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
         ref: dev
@@ -24,7 +24,9 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '11'
-        cache: 'gradle'
+
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
 
     - name: Setup node
       uses: actions/setup-node@v3
