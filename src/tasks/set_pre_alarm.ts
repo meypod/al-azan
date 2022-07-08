@@ -55,6 +55,11 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
       },
     };
 
+    // to replace the notification settings
+    await notifee
+      .cancelTriggerNotification(PRE_ADHAN_NOTIFICATION_ID)
+      .catch(console.error);
+
     await notifee.createTriggerNotification(
       {
         id: PRE_ADHAN_NOTIFICATION_ID,

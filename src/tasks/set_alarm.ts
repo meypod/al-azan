@@ -62,6 +62,11 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       },
     };
 
+    // to replace the notification settings
+    await notifee
+      .cancelTriggerNotification(ADHAN_NOTIFICATION_ID)
+      .catch(console.error);
+
     await notifee.createTriggerNotification(
       {
         id: ADHAN_NOTIFICATION_ID,
