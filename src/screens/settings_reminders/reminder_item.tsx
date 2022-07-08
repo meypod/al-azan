@@ -40,12 +40,16 @@ export function ReminderItem(
           _dark={{
             bgColor: isPressed
               ? 'coolGray.300:alpha.20'
-              : 'coolGray.300:alpha.10',
+              : item.enabled
+              ? 'coolGray.400:alpha.20'
+              : 'coolGray.400:alpha.10',
           }}
           _light={{
             bgColor: isPressed
               ? 'coolGray.800:alpha.20'
-              : 'coolGray.800:alpha.10',
+              : item.enabled
+              ? 'coolGray.700:alpha.20'
+              : 'coolGray.700:alpha.10',
           }}>
           <HStack>
             {item.label ? (
