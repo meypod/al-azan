@@ -31,12 +31,19 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
+    
+    - name: Install yarn
+      run: npm install -g yarn
+
+    - name: Load Cache
+      uses: actions/setup-node@v3
+      with:
         cache: 'yarn'
     
-    - name: install packages
+    - name: Install packages
       run: yarn install
 
-    - name: sync purge and compile lingui.js locales
+    - name: Sync purge and compile lingui.js locales
       run: |
         sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
         yarn sync_and_purge;

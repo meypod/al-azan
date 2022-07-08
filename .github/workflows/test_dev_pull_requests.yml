@@ -30,12 +30,19 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
+    
+    - name: Install yarn
+      run: npm install -g yarn
+
+    - name: Load Cache
+      uses: actions/setup-node@v3
+      with:
         cache: 'yarn'
     
-    - name: install packages
+    - name: Install packages
       run: yarn install
 
-    - name: test build
+    - name: Test build
       run: |
         npx react-native webpack-bundle --platform android --dev false --entry-file index.tsx --bundle-output build/android/index.android.bundle --assets-dest build/android;
         cd android;
