@@ -23,7 +23,7 @@ export function WidgetSettings(props: IScrollViewProps) {
   return (
     <ScrollView
       p="4"
-      _contentContainerStyle={{paddingBottom: 30}}
+      _contentContainerStyle={{paddingBottom: 20}}
       mb="3"
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="on-drag"

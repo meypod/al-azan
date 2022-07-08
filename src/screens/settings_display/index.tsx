@@ -9,7 +9,7 @@ export function DisplaySettings(props: IScrollViewProps) {
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="on-drag"
       p="4"
-      _contentContainerStyle={{paddingBottom: 30}}
+      _contentContainerStyle={{paddingBottom: 40}}
       {...props}>
       <ThemeSettings mb="4" />
       <LanguageSettings mb="6" />

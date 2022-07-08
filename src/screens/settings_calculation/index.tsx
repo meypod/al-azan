@@ -53,7 +53,7 @@ export function CalculationSettings(props: IScrollViewProps) {
   return (
     <ScrollView
       p="4"
-      _contentContainerStyle={{paddingBottom: 30}}
+      _contentContainerStyle={{paddingBottom: 20}}
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="on-drag"
       {...props}>
