@@ -1,0 +1,46 @@
+name: build dev
+
+on:
+  push:
+    tags:
+    - 'v[0-9]+.[0-9]+.[0-9]+-rc\d+'
+    branches:
+    - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: cimg/android:2022.04.1-node
+    
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+        cache: 'gradle'
+
+    - name: sync purge and compile lingui.js locales
+      run: |
+        sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
+        yarn sync_and_purge;
+      with:
+        TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
+
+    - name: build
+      run: |
+        npx react-native webpack-bundle --platform android --dev false --entry-file index.tsx --bundle-output build/android/index.android.bundle --assets-dest build/android;
+        cd android;
+        ./gradlew --no-daemon assembleRelease -x bundleReleaseJsAndAssets;
+    
+    - name: Release
+        uses: softprops/action-gh-release@v1
+        prerelease: true
+        generate_release_notes: true
+        fail_on_unmatched_files: true
+        with:
+          files: android/app/build/outputs/apk/release/app-release.apk
