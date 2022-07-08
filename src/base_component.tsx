@@ -1,9 +1,10 @@
 import {i18n} from '@lingui/core';
 import {I18nProvider} from '@lingui/react';
-import {extendTheme, NativeBaseProvider} from 'native-base';
+import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
-import {PixelRatio} from 'react-native';
+import {PixelRatio, useColorScheme} from 'react-native';
 import {setupNotifeeForegroundHandler} from '@/notifee';
+import {useSettingsHelper} from '@/store/settings';
 import {colors} from '@/theme/colors';
 
 const pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
@@ -47,10 +48,31 @@ export function BaseComponent<T>(
     };
   }, []);
 
+  const systemColorScheme = useColorScheme();
+
+  const [themeColor, setThemeColor] = useSettingsHelper('THEME_COLOR');
+
+  const colorCodeManager = {
+    async get() {
+      if (themeColor === 'default') {
+        return systemColorScheme;
+      } else {
+        return themeColor;
+      }
+    },
+    async set(value: ColorMode | 'default') {
+      console.log(JSON.stringify(value));
+      setThemeColor(value);
+    },
+  };
+
   return (
     <StrictMode>
       <I18nProvider i18n={i18n}>
-        <NativeBaseProvider theme={extendedTheme} config={config}>
+        <NativeBaseProvider
+          theme={extendedTheme}
+          config={config}
+          colorModeManager={colorCodeManager}>
           <ChildComponent {...args} />
         </NativeBaseProvider>
       </I18nProvider>

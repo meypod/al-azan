@@ -7,14 +7,15 @@ import {
   IStackProps,
   Text,
 } from 'native-base';
+import {useSettingsHelper} from '@/store/settings';
 
 export function ThemeSettings(props: IStackProps) {
-  const {colorMode, toggleColorMode} = useColorMode();
+  const {setColorMode} = useColorMode();
 
-  const changeColor = (newColorMode: string) => {
-    if (newColorMode !== colorMode) {
-      toggleColorMode();
-    }
+  const [themeColor] = useSettingsHelper('THEME_COLOR');
+
+  const changeColor = (colorString: string) => {
+    setColorMode(colorString);
   };
 
   return (
@@ -24,7 +25,7 @@ export function ThemeSettings(props: IStackProps) {
         <HStack>
           <Radio.Group
             name="colorMode"
-            defaultValue={colorMode || 'light'}
+            defaultValue={themeColor as string}
             accessibilityLabel={t`Theme Color`}
             onChange={changeColor}>
             <HStack mb="3">
@@ -35,6 +36,9 @@ export function ThemeSettings(props: IStackProps) {
                 <Text fontSize="sm">{t`Dark`}</Text>
               </Radio>
             </HStack>
+            <Radio value="default">
+              <Text fontSize="sm">{t`System Default`}</Text>
+            </Radio>
           </Radio.Group>
         </HStack>
       </FormControl>

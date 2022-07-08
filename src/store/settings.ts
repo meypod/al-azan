@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {produce} from 'immer';
+import {ColorMode} from 'native-base';
 // eslint-disable-next-line
 import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
@@ -25,6 +26,8 @@ export type Reminder = {
 };
 
 type SettingsStore = {
+  // theme
+  THEME_COLOR?: ColorMode | 'default';
   // other
   SELECTED_LOCALE: string;
   APP_INITIAL_CONFIG_DONE: boolean;
@@ -64,6 +67,7 @@ const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 export const settings = createVanilla<SettingsStore>()(
   persist(
     set => ({
+      THEME_COLOR: undefined,
       SELECTED_LOCALE: PREFERRED_LOCALE,
       APP_INITIAL_CONFIG_DONE: false,
       APP_INTRO_DONE: false,
