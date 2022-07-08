@@ -1,5 +1,4 @@
 import {t} from '@lingui/macro';
-import {uniqueId} from 'lodash';
 import {IStackProps, FlatList, Box, Button} from 'native-base';
 import {useState} from 'react';
 
@@ -38,7 +37,6 @@ export function RemindersSettings(props: IStackProps) {
       <FlatList
         flex={1}
         data={reminderEntries}
-        key={uniqueId('dada')}
         renderItem={ReminderItem.bind(undefined, {
           onEditPressed: setCreatingReminder,
           onToggle: onReminderChange,
