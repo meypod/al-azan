@@ -67,7 +67,7 @@ const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 export const settings = createVanilla<SettingsStore>()(
   persist(
     set => ({
-      THEME_COLOR: undefined,
+      THEME_COLOR: 'default',
       SELECTED_LOCALE: PREFERRED_LOCALE,
       APP_INITIAL_CONFIG_DONE: false,
       APP_INTRO_DONE: false,
