@@ -29,4 +29,7 @@ jobs:
         TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
 
     - name: test build
-      run: ./android/gradlew --no-daemon build -x lint
+      run: |
+        npx react-native webpack-bundle --platform android --dev false --entry-file index.tsx --bundle-output build/android/index.android.bundle --assets-dest build/android;
+        cd android;
+        ./gradlew --no-daemon assembleRelease -x bundleReleaseJsAndAssets;
