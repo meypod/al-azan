@@ -10,10 +10,10 @@ export enum Prayer {
   Maghrib = 'maghrib',
   Isha = 'isha',
   /** middle of the night */
-  Motn = 'motn',
+  Midnight = 'midnight',
 }
 
-export const NonPrayer = [Prayer.Sunrise, Prayer.Sunset, Prayer.Motn];
+export const NonPrayer = [Prayer.Sunrise, Prayer.Sunset, Prayer.Midnight];
 
 export const PrayersInOrder = [
   Prayer.Fajr,
@@ -24,7 +24,7 @@ export const PrayersInOrder = [
   Prayer.Maghrib,
   Prayer.Isha,
   /** middle of the night */
-  Prayer.Motn,
+  Prayer.Midnight,
 ];
 
 const prayerTranslations = {
@@ -56,9 +56,9 @@ const prayerTranslations = {
     id: 'isha.prayer',
     message: 'Isha',
   }),
-  motn: defineMessage({
-    id: 'sunnah.motn',
-    message: 'Middle Of The Night',
+  midnight: defineMessage({
+    id: 'sunnah.midnight',
+    message: 'Midnight',
   }),
 } as Record<string, MessageDescriptor>;
 

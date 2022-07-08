@@ -43,7 +43,7 @@ type CalcSettingsStore = {
   SUNSET_NOTIFY?: boolean;
   MAGHRIB_NOTIFY?: boolean;
   ISHA_NOTIFY?: boolean;
-  MOTN_NOTIFY?: boolean;
+  MIDNIGHT_NOTIFY?: boolean;
   // prayer sound settings
   FAJR_SOUND?: boolean;
   SUNRISE_SOUND?: boolean;
@@ -52,7 +52,7 @@ type CalcSettingsStore = {
   SUNSET_SOUND?: boolean;
   MAGHRIB_SOUND?: boolean;
   ISHA_SOUND?: boolean;
-  MOTN_SOUND?: boolean;
+  MIDNIGHT_SOUND?: boolean;
 
   setSetting: <T extends keyof CalcSettingsStore>(
     key: T,

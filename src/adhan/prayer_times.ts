@@ -27,7 +27,7 @@ function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
 }
 
 export class PrayerTimesExtended extends PrayerTimes {
-  motn!: Date;
+  midnight!: Date;
 
   // @ts-ignore
   nextPrayer(useSettings?: boolean) {
@@ -166,7 +166,7 @@ export function getPrayerTimes(date: Date) {
   const middleOfTheNightTime = new SunnahTimes(
     prayerTimes as any as PrayerTimes,
   ).middleOfTheNight;
-  prayerTimes.motn = middleOfTheNightTime;
+  prayerTimes.midnight = middleOfTheNightTime;
 
   return prayerTimes;
 }

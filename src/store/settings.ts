@@ -76,7 +76,7 @@ export const settings = createVanilla<SettingsStore>()(
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [],
-      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Motn],
+      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight],
       SHOW_WIDGET: false,
       ADHAN_VOLUME: 70,
       DISMISSED_ALARM_TIMESTAMP: 0,

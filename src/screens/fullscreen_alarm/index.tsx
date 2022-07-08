@@ -18,7 +18,7 @@ type ScreenProps = NativeStackScreenProps<
 export function FullscreenAlarm({route}: ScreenProps) {
   const [adhanOptions, setAdhanOptions] = useState<SetAlarmTaskOptions>({
     date: new Date(),
-    prayer: Prayer.Motn,
+    prayer: Prayer.Midnight,
   });
 
   useLayoutEffect(() => {
