@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: cimg/android:2022.04.1-node
+    container: cimg/android:2022.06-node
     
     steps:
 
