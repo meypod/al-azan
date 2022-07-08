@@ -37,8 +37,8 @@ jobs:
     
     - name: Release
       uses: softprops/action-gh-release@v1
-      prerelease: true
-      generate_release_notes: true
-      fail_on_unmatched_files: true
       with:
+        prerelease: true
+        generate_release_notes: true
+        fail_on_unmatched_files: true
         files: android/app/build/outputs/apk/release/app-release.apk
