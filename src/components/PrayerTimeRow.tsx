@@ -1,4 +1,4 @@
-import {Flex, Spacer, Text, useColorMode, HStack} from 'native-base';
+import {Flex, Spacer, Text, HStack} from 'native-base';
 import {memo} from 'react';
 import {NonPrayer, Prayer, translatePrayer} from '@/adhan';
 import {MutedIcon} from '@/assets/icons/muted';
@@ -17,9 +17,6 @@ function PrayerTimeRow({
   active,
   isActiveDismissed,
 }: TimeRowProps) {
-  const {colorMode} = useColorMode();
-  const isDarkMode = colorMode === 'dark';
-
   return (
     <Flex
       direction="row"
@@ -31,7 +28,9 @@ function PrayerTimeRow({
       borderWidth="2"
       borderStyle={NonPrayer.includes(prayer) ? 'dotted' : 'solid'}
       marginBottom="3"
-      bg={active && !isDarkMode ? 'yellow.100' : null}
+      _light={{
+        bg: active ? 'yellow.100' : null,
+      }}
       padding="4">
       <HStack alignItems="center">
         <Text>{translatePrayer(prayer)}</Text>
