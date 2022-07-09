@@ -7,6 +7,7 @@ import {
   IStackProps,
   Text,
 } from 'native-base';
+import {useCallback} from 'react';
 import {useSettingsHelper} from '@/store/settings';
 
 export function ThemeSettings(props: IStackProps) {
@@ -14,9 +15,12 @@ export function ThemeSettings(props: IStackProps) {
 
   const [themeColor] = useSettingsHelper('THEME_COLOR');
 
-  const changeColor = (colorString: string) => {
-    setColorMode(colorString);
-  };
+  const changeColor = useCallback(
+    (colorString: string) => {
+      setColorMode(colorString);
+    },
+    [setColorMode],
+  );
 
   return (
     <HStack {...props}>
