@@ -1,7 +1,7 @@
 import {difference} from 'lodash';
 import {Box} from 'native-base';
 import {memo, useEffect, useState} from 'react';
-import {Prayer, PrayersInOrder, PrayerTimesExtended} from '@/adhan';
+import {Prayer, PrayersInOrder, PrayerTime, PrayerTimesExtended} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
 import PrayerTimeRow from '@/components/PrayerTimeRow';
 import {
@@ -16,15 +16,28 @@ type PrayerTimesBoxProps = {
 };
 
 function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
-  const nextPrayer = prayerTimes?.nextPrayer();
+  const [nextPrayer, setNextPrayer] = useState<PrayerTime | undefined>();
+
+  useEffect(() => {
+    setNextPrayer(prayerTimes?.nextPrayer());
+  }, [prayerTimes]);
+
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
   const [nextPrayerSoundIsMuted, setNextPrayerSoundIsMuted] = useState(false);
   const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
   const calcSettings = useCalcSettings(state => state);
 
-  const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers || []);
-  const activePrayer = getActivePrayer(prayerTimes, visiblePrayerTimes);
+  const [visiblePrayerTimes, setVisiblePrayerTimes] = useState(PrayersInOrder);
+  const [activePrayer, setActivePrayer] = useState<Prayer | undefined>();
+
+  useEffect(() => {
+    setVisiblePrayerTimes(difference(PrayersInOrder, hiddenPrayers || []));
+  }, [hiddenPrayers, prayerTimes]);
+
+  useEffect(() => {
+    setActivePrayer(getActivePrayer(prayerTimes, visiblePrayerTimes));
+  }, [prayerTimes, visiblePrayerTimes]);
 
   useEffect(() => {
     if (!activePrayer || !prayerTimes) return;

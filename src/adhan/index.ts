@@ -1,6 +1,6 @@
 export {Prayer, translatePrayer, PrayersInOrder, NonPrayer} from './prayer';
 
-export type {PrayerTimesOptions} from './prayer_times';
+export type {PrayerTimesOptions, PrayerTime} from './prayer_times';
 
 export {
   PrayerTimesExtended,

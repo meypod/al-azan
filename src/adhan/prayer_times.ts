@@ -12,7 +12,7 @@ import {CalculationMethods} from './calculation_methods';
 import {Prayer, PrayersInOrder} from './prayer';
 import {getAdhanSettingKey, calcSettings} from '@/store/calculation_settings';
 
-type PrayerTime = {
+export type PrayerTime = {
   date: Date;
   prayer: Prayer;
   playSound?: boolean;
