@@ -31,7 +31,7 @@ export function NotificationSetting({
 
   const setNotifyProxy = (s: boolean) => {
     if (!s) {
-      setSound(s);
+      setSound(false);
     }
     setNotify(s);
   };
