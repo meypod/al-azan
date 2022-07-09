@@ -1,7 +1,7 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {storage} from './mmkv';
 
 export async function get<T>(key: string): Promise<T | null> {
-  const data = JSON.parse((await AsyncStorage.getItem(key)) || 'null') as T;
+  const data = JSON.parse(storage.getString(key) || 'null') as T;
   return data;
 }
 
@@ -9,5 +9,5 @@ export async function set<T>(
   key: string,
   data: Record<string, T>,
 ): Promise<void> {
-  await AsyncStorage.setItem(key, JSON.stringify(data || null));
+  storage.set(key, JSON.stringify(data || null));
 }

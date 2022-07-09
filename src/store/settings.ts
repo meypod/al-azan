@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 // eslint-disable-next-line
@@ -6,6 +5,7 @@ import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
+import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
@@ -58,8 +58,6 @@ type SettingsStore = {
     key: T,
   ) => (val: SettingsStore[T]) => void;
   removeSetting: (key: keyof SettingsStore) => () => void;
-  _hasHydrated: boolean;
-  setHasHydrated: (state: boolean) => void;
 };
 
 const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
@@ -169,41 +167,17 @@ export const settings = createVanilla<SettingsStore>()(
             delete draft[key];
           }),
         ),
-      _hasHydrated: false,
-      setHasHydrated: state => {
-        set({
-          _hasHydrated: state,
-        });
-      },
     }),
     {
       name: SETTINGS_STORAGE_KEY,
-      getStorage: () => AsyncStorage,
+      getStorage: () => zustandStorage,
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      onRehydrateStorage: () => (state, err) => {
-        if (state && !err) {
-          state.setHasHydrated(true);
-        }
-      },
     },
   ),
 );
-
-export function waitTillHydration() {
-  if (settings.getState()._hasHydrated) {
-    return Promise.resolve();
-  }
-
-  return new Promise<void>(resolve => {
-    const unsubFinishHydration = settings.persist.onFinishHydration(() => {
-      resolve();
-      unsubFinishHydration();
-    });
-  });
-}
 
 export const useSettings = create(settings);
 

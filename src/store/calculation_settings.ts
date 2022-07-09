@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
 import {produce} from 'immer';
 // eslint-disable-next-line
@@ -6,6 +5,7 @@ import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
+import {zustandStorage} from './mmkv';
 import {Prayer, PrayersInOrder} from '@/adhan';
 
 const CALC_SETTINGS_STORAGE_KEY = 'CALC_SETTINGS_STORAGE';
@@ -62,8 +62,6 @@ type CalcSettingsStore = {
     key: T,
   ) => (val: CalcSettingsStore[T]) => void;
   removeSetting: (key: keyof CalcSettingsStore) => () => void;
-  _hasHydrated: boolean;
-  setHasHydrated: (state: boolean) => void;
 };
 
 const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
@@ -106,41 +104,17 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
             delete draft[key];
           }),
         ),
-      _hasHydrated: false,
-      setHasHydrated: state => {
-        set({
-          _hasHydrated: state,
-        });
-      },
     }),
     {
       name: CALC_SETTINGS_STORAGE_KEY,
-      getStorage: () => AsyncStorage,
+      getStorage: () => zustandStorage,
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      onRehydrateStorage: () => (state, err) => {
-        if (state && !err) {
-          state.setHasHydrated(true);
-        }
-      },
     },
   ),
 );
-
-export function waitTillHydration() {
-  if (calcSettings.getState()._hasHydrated) {
-    return Promise.resolve();
-  }
-
-  return new Promise<void>(resolve => {
-    const unsubFinishHydration = calcSettings.persist.onFinishHydration(() => {
-      resolve();
-      unsubFinishHydration();
-    });
-  });
-}
 
 export const useCalcSettings = create(calcSettings);
 

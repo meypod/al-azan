@@ -1,10 +1,8 @@
 import {i18n} from '@lingui/core';
 import {loadLocale} from '@/i18n';
-import {waitTillHydration as waitTillCalcSettingHydration} from '@/store/calculation_settings';
-import {settings, waitTillHydration} from '@/store/settings';
+import {settings} from '@/store/settings';
 
 export async function bootstrap() {
-  await Promise.all([waitTillHydration(), waitTillCalcSettingHydration()]);
   const state = settings.getState();
   try {
     await loadLocale(state['SELECTED_LOCALE']);
