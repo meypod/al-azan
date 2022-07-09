@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {UpdateIcon} from '@/assets/icons/update';
-import {AppBar} from '@/components/AppBar';
+import AppBar from '@/components/AppBar';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
 import {isRTL} from '@/i18n';
 import {useCalcSettings} from '@/store/calculation_settings';

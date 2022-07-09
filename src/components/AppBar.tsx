@@ -1,4 +1,5 @@
 import {HStack, StatusBar, Button, Text} from 'native-base';
+import {memo} from 'react';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {navigate} from '@/navigation/root_navigation';
 
@@ -8,7 +9,7 @@ type AppBarProps = {
   monthName?: string;
 };
 
-export function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
+function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
   const settingsPressed = () => {
     navigate('Settings');
   };
@@ -44,3 +45,5 @@ export function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
     </>
   );
 }
+
+export default memo(AppBar);
