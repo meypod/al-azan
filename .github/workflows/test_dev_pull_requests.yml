@@ -47,4 +47,4 @@ jobs:
     - name: Test build
       run: |
         cd android;
-        ./gradlew build -PnoDebug;
+        ./gradlew --no-daemon build -PnoDebug;

@@ -55,7 +55,7 @@ jobs:
     - name: build
       run: |
         cd android;
-        ./gradlew build -PnoDebug;
+        ./gradlew --no-daemon build -PnoDebug;
     
     - name: Release
       uses: softprops/action-gh-release@v1
