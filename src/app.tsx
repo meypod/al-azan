@@ -15,7 +15,7 @@ import {
   onReady,
 } from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
-import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
+import FullscreenAlarm from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import {Settings} from '@/screens/settings';
 import {AdhanSettings} from '@/screens/settings_adhan';

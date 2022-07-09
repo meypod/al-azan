@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
-import {useLayoutEffect, useState} from 'react';
+import {memo, useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {BackHandler} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
 import {replace} from '@/navigation/root_navigation';
@@ -15,11 +15,19 @@ type ScreenProps = NativeStackScreenProps<
   'FullscreenAlarm'
 >;
 
-export function FullscreenAlarm({route}: ScreenProps) {
+function FullscreenAlarm({route}: ScreenProps) {
   const [adhanOptions, setAdhanOptions] = useState<SetAlarmTaskOptions>({
     date: new Date(),
     prayer: Prayer.Midnight,
   });
+
+  const [time24, setTime24] = useState('');
+  const [prayerTranslation, setPrayerTranslation] = useState('');
+
+  useEffect(() => {
+    setPrayerTranslation(translatePrayer(adhanOptions.prayer));
+    setTime24(getTime24(adhanOptions.date));
+  }, [adhanOptions]);
 
   useLayoutEffect(() => {
     isAdhanPlaying()
@@ -37,7 +45,7 @@ export function FullscreenAlarm({route}: ScreenProps) {
       .catch(() => replace('Home'));
   }, [route.params.options]);
 
-  const onDismissPress = async () => {
+  const onDismissPress = useCallback(async () => {
     const isPlaying = await isAdhanPlaying();
     if (isPlaying) {
       await cancelAdhanNotif();
@@ -45,7 +53,7 @@ export function FullscreenAlarm({route}: ScreenProps) {
     } else {
       replace('Home');
     }
-  };
+  }, []);
 
   return (
     <Box
@@ -71,14 +79,14 @@ export function FullscreenAlarm({route}: ScreenProps) {
           textAlign="center"
           fontSize="6xl"
           marginBottom={3}>
-          {translatePrayer(adhanOptions.prayer)}
+          {prayerTranslation}
         </Text>
         <Text
           adjustsFontSizeToFit
           noOfLines={1}
           fontSize="4xl"
           textAlign="center">
-          {getTime24(adhanOptions.date)}
+          {time24}
         </Text>
       </Box>
       <Spacer />
@@ -95,3 +103,5 @@ export function FullscreenAlarm({route}: ScreenProps) {
     </Box>
   );
 }
+
+export default memo(FullscreenAlarm);
