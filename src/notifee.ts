@@ -27,7 +27,7 @@ import {updateWidgets} from '@/tasks/update_widgets';
 export async function cancelAdhanNotif() {
   await stopAdhan().catch(console.error);
   replace('Home');
-  await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
+  await notifee.cancelDisplayedNotification(ADHAN_NOTIFICATION_ID);
   await notifee.stopForegroundService();
 }
 
@@ -46,7 +46,7 @@ export async function getSecheduledAdhanNotificationOptions() {
       notifs =>
         notifs.filter(n => n.notification.id === ADHAN_NOTIFICATION_ID)[0],
     )
-    .catch(() => {});
+    .catch(console.error);
   if (!scheduledNotif) return;
 
   const options = JSON.parse(
@@ -72,19 +72,20 @@ export async function cancelAdhanNotifOnDismissed(
     if (type === EventType.DISMISSED || pressAction?.id === 'dismiss') {
       await cancelAdhanNotif();
     }
-  } else if (notification?.id === PRE_ADHAN_NOTIFICATION_ID) {
-    if (pressAction?.id === 'cancel_adhan' && type !== EventType.DISMISSED) {
-      const options = await getSecheduledAdhanNotificationOptions();
-      if (options) {
-        // save date of upcoming adhan to prevent setting alarm/prealarm before it
-        settings.setState({DISMISSED_ALARM_TIMESTAMP: options.date.valueOf()});
-        // cancel upcoming notification
-        await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
-        // re-set the adhan notification alarm
-        setNextAdhan({
-          fromDate: new Date(new Date(options.date).valueOf() + 10000),
-        });
-      }
+  } else if (
+    notification?.id === PRE_ADHAN_NOTIFICATION_ID &&
+    pressAction?.id === 'cancel_adhan'
+  ) {
+    const options = await getSecheduledAdhanNotificationOptions();
+    if (options) {
+      // save date of upcoming adhan to prevent setting alarm/prealarm before it
+      settings.setState({DISMISSED_ALARM_TIMESTAMP: options.date.valueOf()});
+      // cancel upcoming notification
+      await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
+      // re-set the adhan notification alarm
+      setNextAdhan({
+        fromDate: new Date(new Date(options.date).valueOf() + 10000),
+      });
     }
   }
 }
