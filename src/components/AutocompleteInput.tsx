@@ -5,7 +5,6 @@ import {
   View,
   IInputProps,
   ScrollView,
-  useColorModeValue,
   Text,
 } from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';
@@ -41,8 +40,6 @@ export const AutocompleteInput = <T extends unknown>(
   const [hideResults, setHideResults] = useState<boolean>(false);
 
   const flatlistRef = useRef();
-
-  const bgColor = useColorModeValue('light.200', 'light.900');
 
   const {results, setSearchTerm} = useFuse(data, {
     keys: autoCompleteKeys,
@@ -115,7 +112,12 @@ export const AutocompleteInput = <T extends unknown>(
         {!hideResults && showResults && (
           <FlatListWrapper
             keyboardShouldPersistTaps="handled"
-            bgColor={bgColor}
+            _dark={{
+              bgColor: 'light.900',
+            }}
+            _light={{
+              bgColor: 'light.200',
+            }}
             horizontal={true}
             contentContainerStyle={{flexGrow: 1}}
             position="absolute"
