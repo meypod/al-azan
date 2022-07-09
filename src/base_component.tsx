@@ -61,7 +61,6 @@ export function BaseComponent<T>(
       }
     },
     async set(value: ColorMode | 'default') {
-      console.log(JSON.stringify(value));
       setThemeColor(value);
     },
   };
