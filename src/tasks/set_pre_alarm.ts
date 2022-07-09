@@ -48,7 +48,6 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
 
     const trigger: TimestampTrigger = {
       type: TriggerType.TIMESTAMP,
-
       timestamp: triggerTs,
       alarmManager: {
         allowWhileIdle: true,
