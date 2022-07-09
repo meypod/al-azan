@@ -258,6 +258,27 @@ android {
 
         }
     }
+
+    // use with "gradlew build -PnoDebug"
+    gradle.taskGraph.whenReady { graph ->
+        if (project.hasProperty("noDebug")) {
+            def tasks = graph.getAllTasks()
+
+            println("Skipping debug and test tasks")
+            
+            tasks.each {task ->
+                def name = task.getName() 
+
+                if (name.contains("ReleaseDebug")) {}
+                else if (name.contains("strip")) {}
+                else if (name.contains("debug")) task.setEnabled(false)
+                else if (name.contains("Debug")) task.setEnabled(false)
+                else if (name.contains("lint")) task.setEnabled(false)
+                else if (name.contains("Test")) task.setEnabled(false)
+                else if (name.contains("test")) task.setEnabled(false)
+            }
+        }
+    }
 }
 
 dependencies {

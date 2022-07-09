@@ -55,7 +55,7 @@ jobs:
     - name: build
       run: |
         cd android;
-        ./gradlew build -x lint -x test -x bundleDebugJsAndAssets -x copyDebugBundledJs -x assembleAndroidTest -x compileDebugSources;
+        ./gradlew build -PnoDebug;
     
     - name: Release
       uses: softprops/action-gh-release@v1

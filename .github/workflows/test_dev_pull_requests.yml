@@ -47,4 +47,4 @@ jobs:
     - name: Test build
       run: |
         cd android;
-        ./gradlew build -x lint -x test -x bundleDebugJsAndAssets -x copyDebugBundledJs -x assembleAndroidTest -x compileDebugSources;
+        ./gradlew build -PnoDebug;
