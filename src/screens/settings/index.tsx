@@ -1,5 +1,5 @@
 import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
-import {useEffect} from 'react';
+import {memo, useEffect} from 'react';
 
 import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
@@ -73,7 +73,7 @@ function renderItem({item}: {item: ScreenListItem}) {
   );
 }
 
-export function Settings() {
+function Settings() {
   const settingsState = useCalcSettings(state => state);
   useEffect(() => {
     setNextAdhan();
@@ -86,3 +86,5 @@ export function Settings() {
     </Box>
   );
 }
+
+export default memo(Settings);

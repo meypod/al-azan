@@ -17,7 +17,7 @@ import {
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
-import {Settings} from '@/screens/settings';
+import Settings from '@/screens/settings';
 import {AdhanSettings} from '@/screens/settings_adhan';
 import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
 import {CalculationSettings} from '@/screens/settings_calculation';
