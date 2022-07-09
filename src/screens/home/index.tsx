@@ -37,8 +37,21 @@ export function Home() {
   const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
   const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
 
-  const todayName = getDayName(currentDate);
-  const monthName = getMonthName(currentDate);
+  const [today, setToday] = useState<{
+    monthName: string;
+    todayName: string;
+    dd: string;
+    arabicDate: string;
+  }>({monthName: '', todayName: '', dd: '', arabicDate: ''});
+
+  useEffect(() => {
+    setToday({
+      todayName: getDayName(currentDate),
+      monthName: getMonthName(currentDate),
+      dd: getDay(currentDate),
+      arabicDate: getArabicDate(currentDate),
+    });
+  }, [currentDate]);
 
   useInterval(() => {
     updateCurrentDate();
@@ -59,11 +72,11 @@ export function Home() {
         safeArea
         flex={1}
         alignItems="center"
-        onTouchStart={() => updateCurrentDate()}>
+        onTouchStart={updateCurrentDate}>
         <AppBar
-          dayName={todayName}
-          monthName={monthName}
-          dd={getDay(currentDate)}
+          dayName={today.todayName}
+          monthName={today.monthName}
+          dd={today.dd}
         />
         <HStack
           mt="2"
@@ -71,7 +84,7 @@ export function Home() {
           alignItems="center"
           w="100%"
           direction={isRTL ? 'row-reverse' : 'row'}>
-          <Button variant="ghost" onPress={() => decreaseCurrentDateByOne()}>
+          <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
             <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
               <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
               <RestoreIcon size="xl" />
@@ -92,7 +105,7 @@ export function Home() {
               {t`Show Today`}
             </Button>
           )}
-          <Button variant="ghost" onPress={() => increaseCurrentDateByOne()}>
+          <Button variant="ghost" onPress={increaseCurrentDateByOne}>
             <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
               <UpdateIcon size="xl" />
               <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
@@ -103,7 +116,7 @@ export function Home() {
           prayerTimes={prayerTimes}
           hiddenPrayers={hiddenPrayers}
         />
-        <Text>{getArabicDate(currentDate)}</Text>
+        <Text>{today.arabicDate}</Text>
       </Box>
     </ScrollView>
   );
