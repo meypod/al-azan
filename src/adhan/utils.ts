@@ -1,12 +1,20 @@
 import {Prayer, PrayerTimesExtended} from '@/adhan';
+import {getNextDayBeginning} from '@/utils/date';
 
 export function getActivePrayer(
   prayerTimes: PrayerTimesExtended | undefined,
   prayersList: Prayer[],
 ) {
-  let activePrayer: Prayer | undefined;
+  if (!prayerTimes?.date) return;
 
-  if (new Date().toDateString() === prayerTimes?.date?.toDateString()) {
+  let activePrayer: Prayer | undefined;
+  const nextDayBeginning = getNextDayBeginning(prayerTimes.date);
+
+  if (
+    [prayerTimes.date.toDateString(), nextDayBeginning.toDateString()].includes(
+      new Date().toDateString(),
+    )
+  ) {
     for (let prayer of prayersList) {
       if (prayerTimes[prayer] && prayerTimes[prayer].valueOf() > Date.now()) {
         activePrayer = prayer;
