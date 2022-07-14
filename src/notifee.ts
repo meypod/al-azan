@@ -22,7 +22,7 @@ import {playAdhan, stopAdhan} from '@/services/azan_service';
 import {settings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {updateWidgets} from '@/tasks/update_widgets';
+import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 
 export async function cancelAdhanNotif() {
   await stopAdhan().catch(console.error);
@@ -86,6 +86,7 @@ export async function cancelAdhanNotifOnDismissed(
       setNextAdhan({
         fromDate: new Date(new Date(options.date).valueOf() + 10000),
       });
+      setUpdateWidgetsAlarms();
     }
   }
 }
@@ -117,7 +118,7 @@ export function setupNotifeeHandlers() {
       detail.notification?.id === ADHAN_NOTIFICATION_ID
     ) {
       setNextAdhan();
-      updateWidgets();
+      setUpdateWidgetsAlarms();
     }
     openFullscreenAlarmIfNeeded(type, detail);
     await cancelAdhanNotifOnDismissed(type, detail);

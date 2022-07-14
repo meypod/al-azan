@@ -28,7 +28,7 @@ import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {updateWidgets} from '@/tasks/update_widgets';
+import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -56,7 +56,7 @@ export function App() {
         nextAppState === 'active'
       ) {
         setNextAdhan();
-        updateWidgets();
+        setUpdateWidgetsAlarms();
       }
 
       appState.current = nextAppState;

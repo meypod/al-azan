@@ -44,6 +44,8 @@ type SettingsStore = {
   DISMISSED_ALARM_TIMESTAMP: number;
   ADHAN_VOLUME: number;
   REMINDERS: Array<Reminder>;
+  // widget update
+  LAST_ALARM_DATE_VALUEOF: number;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -79,6 +81,7 @@ export const settings = createVanilla<SettingsStore>()(
       ADHAN_VOLUME: 70,
       DISMISSED_ALARM_TIMESTAMP: 0,
       REMINDERS: [],
+      LAST_ALARM_DATE_VALUEOF: 0,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

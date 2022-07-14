@@ -8,6 +8,7 @@ import {APP_KEY} from '@/constants/app';
 import WidgetMod from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
 ChunkManager.configure({
@@ -22,12 +23,14 @@ setupNotifeeHandlers();
 
 WidgetMod.onUpdateScreenWidgetRequested(async () => {
   await bootstrap();
+  setUpdateWidgetsAlarms();
   await updateWidgets();
 });
 
 AppRegistry.registerRunnable(APP_KEY, async initialProps => {
   await bootstrap();
   setNextAdhan();
+  setUpdateWidgetsAlarms();
   updateWidgets();
   AppRegistry.registerComponent(APP_KEY, () => BaseComponent.bind(this, App));
   AppRegistry.runApplication(APP_KEY, initialProps);
