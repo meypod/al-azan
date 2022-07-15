@@ -23,6 +23,7 @@ import {settings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 export async function cancelAdhanNotif() {
   await stopAdhan().catch(console.error);
@@ -118,6 +119,7 @@ export function setupNotifeeHandlers() {
       detail.notification?.id === ADHAN_NOTIFICATION_ID
     ) {
       setNextAdhan();
+      updateWidgets();
       setUpdateWidgetsAlarms();
     }
     openFullscreenAlarmIfNeeded(type, detail);

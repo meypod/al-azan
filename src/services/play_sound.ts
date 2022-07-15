@@ -1,14 +1,9 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
-import {isCallActive} from '@/modules/call_state';
 import MediaPlayer from '@/modules/media_player';
 
 /** @returns {boolean} - true if played successfully, false otherwise */
 export async function play(uri: string | number) {
-  if (await isCallActive()) {
-    return Promise.resolve(false);
-  }
-
   const volumeListener = SystemSetting.addVolumeListener(data => {
     MediaPlayer.setVolume(data.value);
   });

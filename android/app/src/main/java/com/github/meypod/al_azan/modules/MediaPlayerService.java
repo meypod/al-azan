@@ -3,6 +3,7 @@ package com.github.meypod.al_azan.modules;
 import static com.github.meypod.al_azan.modules.MediaPlayerModule.ctx;
 import static com.github.meypod.al_azan.utils.Utils.getIdFromRawResourceUri;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
@@ -12,8 +13,12 @@ import android.media.AudioManager.OnAudioFocusChangeListener;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Binder;
+import android.os.Build.VERSION;
+import android.os.Build.VERSION_CODES;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
 import androidx.annotation.MainThread;
 import androidx.annotation.Nullable;
 import com.facebook.react.HeadlessJsTaskService;
@@ -33,9 +38,13 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   private MediaPlayer player;
   private boolean wasPlaying = false;
+  private boolean isStarted = false;
   private boolean isPaused = false;
   private Promise setDataSourcePromise = null;
-
+  private TelephonyManager telephonyManager;
+  private TelephonyStateListener telephonyStateListener;
+  private PhoneStateListener phoneStateListener;
+  private int currentState = TelephonyManager.CALL_STATE_IDLE;
 
   @Nullable
   @Override
@@ -50,14 +59,11 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   @Override
   public void onAudioFocusChange(int focusChange) {
-    if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+    if (focusChange > 0) {
       if (wasPlaying) {
-        start();
+        start(true);
       }
     } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-      if (isPlaying()) {
-        wasPlaying = true;
-      }
       pause();
     }
   }
@@ -74,10 +80,14 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   public void pause() {
     try {
       player.pause();
+    } catch (Exception ignored) {
+    } finally {
+      if (isStarted) {
+        wasPlaying = true;
+      }
       isPaused = true;
       ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
           .emit("state", STATE_PAUSED);
-    } catch (Exception ignored) {
     }
   }
 
@@ -94,14 +104,30 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   }
 
   @MainThread
-  public void start() {
+  public void start(boolean skipCheck) {
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+    if (!skipCheck) {
+      if (currentState != TelephonyManager.CALL_STATE_IDLE) {
+        pause();
+        return;
+      }
+    }
     try {
-      audioManager.requestAudioFocus(this, AudioManager.STREAM_ALARM, AudioManager.AUDIOFOCUS_GAIN);
-      player.start();
-      isPaused = false;
-      ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-          .emit("state", STATE_STARTED);
+      int access = skipCheck ? AudioManager.AUDIOFOCUS_REQUEST_GRANTED
+          : audioManager.requestAudioFocus(this, AudioManager.STREAM_ALARM,
+              AudioManager.AUDIOFOCUS_GAIN);
+      if (access == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+        player.start();
+        isStarted = true;
+        isPaused = false;
+        wasPlaying = false;
+        ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+            .emit("state", STATE_STARTED);
+      } else {
+        isStarted = true;
+        wasPlaying = true;
+        isPaused = true;
+      }
     } catch (Exception ignored) {
       audioManager.abandonAudioFocus(this);
     }
@@ -159,10 +185,11 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
-
   @MainThread
   public void setupPlayer() {
     releasePlayer();
+    setupCallStateListener();
+
     player = new MediaPlayer();
     player.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
     player.setAudioAttributes(
@@ -176,7 +203,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     player.setOnCompletionListener(this);
   }
 
-
   @Nullable
   @Override
   public IBinder onBind(Intent intent) {
@@ -185,6 +211,10 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   @Override
   public boolean onError(MediaPlayer mp, int what, int extra) {
+    isStarted = false;
+    isPaused = false;
+    wasPlaying = false;
+
     String error = "";
     switch (extra) {
       case MediaPlayer.MEDIA_ERROR_IO:
@@ -218,6 +248,9 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   @Override
   public void onCompletion(MediaPlayer mp) {
+    isStarted = false;
+    isPaused = false;
+    wasPlaying = false;
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     audioManager.abandonAudioFocus(this);
     ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
@@ -231,9 +264,68 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     MediaPlayerService service = MediaPlayerService.this;
   }
 
+
+  private void setupCallStateListener() {
+    if (telephonyManager == null) {
+      telephonyManager = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
+      if (VERSION.SDK_INT >= VERSION_CODES.S) {
+        telephonyStateListener = new TelephonyStateListener(
+            newState -> {
+              currentState = newState;
+              if (newState == TelephonyManager.CALL_STATE_IDLE && wasPlaying) {
+                start(false);
+              } else if (
+                  newState == TelephonyManager.CALL_STATE_RINGING ||
+                      newState == TelephonyManager.CALL_STATE_OFFHOOK
+              ) {
+                if (isStarted && !isPaused) {
+                  pause();
+                }
+              }
+            });
+        telephonyManager.registerTelephonyCallback(
+            ctx.getMainExecutor(),
+            telephonyStateListener
+        );
+      } else {
+        phoneStateListener = new PhoneStateListener() {
+          @Override
+          public void onCallStateChanged(int newState, String _unused_incomingNumber) {
+            currentState = newState;
+            if (newState == TelephonyManager.CALL_STATE_IDLE && wasPlaying) {
+              start(false);
+            } else if (
+                newState == TelephonyManager.CALL_STATE_RINGING ||
+                    newState == TelephonyManager.CALL_STATE_OFFHOOK
+            ) {
+              if (isStarted && !isPaused) {
+                pause();
+              }
+            }
+          }
+        };
+        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
+      }
+    }
+  }
+
+  private void destroyCallStateListener() {
+    if (telephonyManager != null) {
+      if (VERSION.SDK_INT >= VERSION_CODES.S) {
+        telephonyManager.unregisterTelephonyCallback(telephonyStateListener);
+        telephonyStateListener = null;
+      } else {
+        telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE);
+        phoneStateListener = null;
+      }
+      telephonyManager = null;
+    }
+  }
+
   @MainThread
   public void destroy() {
     releasePlayer();
+    destroyCallStateListener();
     stopForeground(true);
     stopSelf();
   }

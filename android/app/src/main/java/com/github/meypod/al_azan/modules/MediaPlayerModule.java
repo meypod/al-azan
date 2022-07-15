@@ -101,7 +101,6 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     }
   }
 
-
   @ReactMethod
   public void setupPlayer(Promise promise) {
     if (isServiceBound) {
@@ -173,7 +172,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   @ReactMethod
   public void start(Promise promise) {
     if (mediaPlayerService != null) {
-      mediaPlayerService.start();
+      mediaPlayerService.start(false);
     }
     promise.resolve(null);
   }

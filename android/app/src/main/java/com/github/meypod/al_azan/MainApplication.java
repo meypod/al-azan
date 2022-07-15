@@ -9,7 +9,6 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.github.meypod.al_azan.modules.CallStateModulePackage;
 import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.RestartModulePackage;
@@ -32,7 +31,6 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           packages.add(new RestartModulePackage());
-          packages.add(new CallStateModulePackage());
           packages.add(new MediaPlayerModulePackage());
           packages.add(new ReactNativeBlobUtilPackage());
           packages.add(new NotificationWidgetModulePackage());
