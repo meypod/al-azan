@@ -8049,10 +8049,10 @@ react-is@^16.13.0, react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-alarm-module@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-alarm-module/-/react-native-alarm-module-2.1.1.tgz#d0aa3a3b98e7701a99a215d8533ae13dd4d918c1"
-  integrity sha512-XKS3Lnree8viB8kt+QFpOZenoO+kLOLaW01RfirDrsUPJZWeFnprNKcQYwcqQ8rd3RTPk+qjdd5v41De+OmrWQ==
+react-native-alarm-module@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-alarm-module/-/react-native-alarm-module-3.0.0.tgz#b48f8720aca876af245130fff317cde1fb068e96"
+  integrity sha512-mTp/f7cD4IT+0vpkordcdOTkB1wvmoG/t0jz93UF9PNaJl69KAa265MJhvypdzUf7TmhlB2aT1DBerfH0dSfpA==
 
 react-native-app-intro-slider@^4.0.4:
   version "4.0.4"

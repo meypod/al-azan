@@ -18,7 +18,7 @@ export function setUpdateWidgetsAlarms() {
 
   // day change update
   setAlarm({
-    isoDateTime: getNextDayBeginning(targetDate).toISOString(),
+    timestamp: getNextDayBeginning(targetDate).valueOf(),
     taskName: 'update_screen_widget_task', // reuse the task name for widget module update request
     allowedInForeground: true,
     type: 'setAndAllowWhileIdle',
@@ -28,7 +28,7 @@ export function setUpdateWidgetsAlarms() {
 
   for (const prayer of PrayersInOrder) {
     setAlarm({
-      isoDateTime: prayerTimes[prayer].toISOString(),
+      timestamp: prayerTimes[prayer].valueOf(),
       taskName: 'update_screen_widget_task',
       allowedInForeground: true,
       type: 'setAndAllowWhileIdle',
