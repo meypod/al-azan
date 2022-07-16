@@ -1,14 +1,11 @@
 package com.github.meypod.al_azan;
 
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import com.facebook.react.modules.i18nmanager.I18nUtil;
-
-// Import the NotifeeApiModule
 import io.invertase.notifee.NotifeeApiModule;
-
-import android.os.Bundle;
 
 public class MainActivity extends ReactActivity {
 
@@ -26,9 +23,9 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return  NotifeeApiModule.getMainComponent("AdhanProject");
+    return NotifeeApiModule.getMainComponent("AdhanProject");
   }
-  
+
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
    * you can specify the renderer you wish to use - the new renderer (Fabric) or the old renderer
@@ -40,9 +37,11 @@ public class MainActivity extends ReactActivity {
   }
 
   public static class MainActivityDelegate extends ReactActivityDelegate {
+
     public MainActivityDelegate(ReactActivity activity, String mainComponentName) {
       super(activity, mainComponentName);
     }
+
     @Override
     protected ReactRootView createRootView() {
       ReactRootView reactRootView = new ReactRootView(getContext());
@@ -50,6 +49,7 @@ public class MainActivity extends ReactActivity {
       reactRootView.setIsFabric(BuildConfig.IS_NEW_ARCHITECTURE_ENABLED);
       return reactRootView;
     }
+
     @Override
     protected boolean isConcurrentRootEnabled() {
       // If you opted-in for the New Architecture, we enable Concurrent Root (i.e. React 18).
