@@ -16,16 +16,23 @@ type ScreenProps = NativeStackScreenProps<
 >;
 
 function FullscreenAlarm({route}: ScreenProps) {
-  const [adhanOptions, setAdhanOptions] = useState<SetAlarmTaskOptions>({
+  const [adhanOptions, setAdhanOptions] = useState<{
+    date: Date;
+    prayer?: Prayer;
+  }>({
     date: new Date(),
-    prayer: Prayer.Midnight,
+    prayer: undefined,
   });
 
   const [time24, setTime24] = useState('');
   const [prayerTranslation, setPrayerTranslation] = useState('');
 
   useEffect(() => {
-    setPrayerTranslation(translatePrayer(adhanOptions.prayer));
+    if (adhanOptions.prayer) {
+      setPrayerTranslation(translatePrayer(adhanOptions.prayer));
+    } else {
+      setPrayerTranslation('');
+    }
     setTime24(getTime24(adhanOptions.date));
   }, [adhanOptions]);
 
