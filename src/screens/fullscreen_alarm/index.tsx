@@ -47,7 +47,7 @@ function FullscreenAlarm({route}: ScreenProps) {
         replace('Home');
       }
     });
-  }, [route.params.options]);
+  }, [route]);
 
   const onDismissPress = useCallback(async () => {
     const isPlaying = await isAdhanPlaying();
