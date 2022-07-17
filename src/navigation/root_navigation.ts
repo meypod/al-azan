@@ -9,6 +9,13 @@ export const navigationRef = createNavigationContainerRef<RootStackParamList>();
 type Action = [Function, unknown[]];
 const actionQueue: Action[] = [];
 
+function pushToQueue(action: Action) {
+  if (actionQueue.length >= 3) {
+    actionQueue.shift();
+  }
+  actionQueue.push(action);
+}
+
 function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -36,7 +43,7 @@ export const navigate = ((...options: any) => {
     navigationRef.navigate('Home');
     navigationRef.navigate(...options);
   } else {
-    actionQueue.push([navigate, options]);
+    pushToQueue([navigate, options]);
   }
 }) as NavigateType;
 
@@ -46,7 +53,7 @@ export function dispatch(
   if (navigationRef.isReady()) {
     navigationRef.dispatch(...options);
   } else {
-    actionQueue.push([dispatch, options]);
+    pushToQueue([dispatch, options]);
   }
 }
 
@@ -59,7 +66,7 @@ export function push(...options: Parameters<typeof StackActions.push>) {
       navigationRef.dispatch(StackActions.push(...options));
     }
   } else {
-    actionQueue.push([push, options]);
+    pushToQueue([push, options]);
   }
 }
 
@@ -67,7 +74,7 @@ export function replace(...options: Parameters<typeof StackActions.push>) {
   if (navigationRef.isReady()) {
     navigationRef.dispatch(StackActions.replace(...options));
   } else {
-    actionQueue.push([replace, options]);
+    pushToQueue([replace, options]);
   }
 }
 
@@ -75,6 +82,6 @@ export function popToTop() {
   if (navigationRef.isReady()) {
     navigationRef.dispatch(StackActions.popToTop());
   } else {
-    actionQueue.push([popToTop, []]);
+    pushToQueue([popToTop, []]);
   }
 }
