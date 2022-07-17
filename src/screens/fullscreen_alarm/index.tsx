@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
-import {memo, useCallback, useEffect, useLayoutEffect, useState} from 'react';
+import {memo, useCallback, useEffect, useState} from 'react';
 import {BackHandler} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
 import {replace} from '@/navigation/root_navigation';
@@ -29,20 +29,17 @@ function FullscreenAlarm({route}: ScreenProps) {
     setTime24(getTime24(adhanOptions.date));
   }, [adhanOptions]);
 
-  useLayoutEffect(() => {
-    isAdhanPlaying()
-      .then(isPlaying => {
-        if (isPlaying) {
-          const parsedAdhanOptions = JSON.parse(
-            route.params.options,
-          ) as SetAlarmTaskOptions;
-          parsedAdhanOptions.date = new Date(parsedAdhanOptions.date);
-          setAdhanOptions(parsedAdhanOptions);
-        } else {
-          throw new Error('Not playing adhan anymore');
-        }
-      })
-      .catch(() => replace('Home'));
+  useEffect(() => {
+    const parsedAdhanOptions = JSON.parse(
+      route.params.options,
+    ) as SetAlarmTaskOptions;
+    parsedAdhanOptions.date = new Date(parsedAdhanOptions.date);
+    setAdhanOptions(parsedAdhanOptions);
+    isAdhanPlaying().then(isPlaying => {
+      if (!isPlaying) {
+        replace('Home');
+      }
+    });
   }, [route.params.options]);
 
   const onDismissPress = useCallback(async () => {
