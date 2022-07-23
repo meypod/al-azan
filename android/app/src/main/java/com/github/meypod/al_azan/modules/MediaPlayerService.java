@@ -59,12 +59,17 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   @Override
   public void onAudioFocusChange(int focusChange) {
+    ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+        .emit("audio_focus_change", focusChange);
     if (focusChange > 0) {
       if (wasPlaying) {
         start(true);
       }
     } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-      pause();
+      if (currentState == TelephonyManager.CALL_STATE_IDLE) {
+        stop();
+        onCompletion(player);
+      }
     }
   }
 
@@ -270,19 +275,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
       telephonyManager = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
       if (VERSION.SDK_INT >= VERSION_CODES.S) {
         telephonyStateListener = new TelephonyStateListener(
-            newState -> {
-              currentState = newState;
-              if (newState == TelephonyManager.CALL_STATE_IDLE && wasPlaying) {
-                start(false);
-              } else if (
-                  newState == TelephonyManager.CALL_STATE_RINGING ||
-                      newState == TelephonyManager.CALL_STATE_OFFHOOK
-              ) {
-                if (isStarted && !isPaused) {
-                  pause();
-                }
-              }
-            });
+            this::onNewCallState);
         telephonyManager.registerTelephonyCallback(
             ctx.getMainExecutor(),
             telephonyStateListener
@@ -291,23 +284,28 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
         phoneStateListener = new PhoneStateListener() {
           @Override
           public void onCallStateChanged(int newState, String _unused_incomingNumber) {
-            currentState = newState;
-            if (newState == TelephonyManager.CALL_STATE_IDLE && wasPlaying) {
-              start(false);
-            } else if (
-                newState == TelephonyManager.CALL_STATE_RINGING ||
-                    newState == TelephonyManager.CALL_STATE_OFFHOOK
-            ) {
-              if (isStarted && !isPaused) {
-                pause();
-              }
-            }
+            onNewCallState(newState);
           }
         };
         telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
       }
     }
   }
+
+  private void onNewCallState(int newState) {
+    currentState = newState;
+    if (newState == TelephonyManager.CALL_STATE_IDLE && wasPlaying) {
+      start(false);
+    } else if (
+        newState == TelephonyManager.CALL_STATE_RINGING ||
+            newState == TelephonyManager.CALL_STATE_OFFHOOK
+    ) {
+      if (isStarted && !isPaused) {
+        pause();
+      }
+    }
+  }
+
 
   private void destroyCallStateListener() {
     if (telephonyManager != null) {

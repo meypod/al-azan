@@ -34,7 +34,7 @@ interface MediaPlayerModuleInterface {
 }
 
 type EventListener = (
-  eventType: 'error' | 'completed' | 'state',
+  eventType: 'error' | 'completed' | 'state' | 'audio_focus_change',
   listener: (event: any) => void,
 ) => ReturnType<typeof eventEmitter.addListener>;
 

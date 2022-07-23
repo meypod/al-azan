@@ -24,10 +24,6 @@ import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
 import {play, stop, destroy} from '@/services/play_sound';
 import {settings, useSettingsHelper} from '@/store/settings';
 
-MediaPlayer.eventEmitter.addListener('log', d => {
-  console.warn('log: ', d);
-});
-
 export function AdhanSettings(props: IStackProps) {
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
     AdhanEntry | undefined
