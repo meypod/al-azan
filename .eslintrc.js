@@ -12,6 +12,7 @@ module.exports = {
   ],
   env: {
     commonjs: true,
+    node: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {

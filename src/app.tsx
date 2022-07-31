@@ -18,6 +18,7 @@ import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
 import Settings from '@/screens/settings';
+import {AboutSettings} from '@/screens/settings_about';
 import {AdhanSettings} from '@/screens/settings_adhan';
 import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
 import {CalculationSettings} from '@/screens/settings_calculation';
@@ -107,6 +108,7 @@ export function App() {
             name="RemindersSettings"
             component={RemindersSettings}
           />
+          <Stack.Screen name="AboutSettings" component={AboutSettings} />
         </Stack.Group>
         <Stack.Group
           screenOptions={{presentation: 'modal', headerShown: false}}>

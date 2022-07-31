@@ -13,6 +13,7 @@ export type RootStackParamList = {
   BatteryOptimizationSettings: undefined;
   WidgetSettings: undefined;
   RemindersSettings: undefined;
+  AboutSettings: undefined;
 };
 
 declare global {
@@ -73,6 +74,11 @@ const routeTranslations = {
   RemindersSettings: defineMessage({
     id: 'reminders_settings',
     message: 'Reminders',
+    comment: 'screen title',
+  }),
+  AboutSettings: defineMessage({
+    id: 'about_settings',
+    message: 'About',
     comment: 'screen title',
   }),
 } as Record<string, MessageDescriptor>;

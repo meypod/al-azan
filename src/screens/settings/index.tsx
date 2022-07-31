@@ -6,6 +6,7 @@ import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
 import {CalculateIcon} from '@/assets/icons/calculate';
 import {ExploreIcon} from '@/assets/icons/explore';
+import {InfoIcon} from '@/assets/icons/info';
 import {NotificationsActiveIcon} from '@/assets/icons/notifications_active';
 import {VolumeUpIcon} from '@/assets/icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/widget';
@@ -52,6 +53,10 @@ const settingsScreenList: ScreenListItem[] = [
   {
     name: 'RemindersSettings',
     icon: AlarmIcon,
+  },
+  {
+    name: 'AboutSettings',
+    icon: InfoIcon,
   },
 ];
 
