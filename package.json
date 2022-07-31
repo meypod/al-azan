@@ -12,7 +12,7 @@
     "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "sync": "lingui extract --overwrite && lingui compile",
     "sync_and_purge": "lingui extract --overwrite --clean && lingui compile",
-    "np": "np --no-publish",
+    "np": "np --no-publish --no-tests",
     "postversion": "react-native-version"
   },
   "dependencies": {
