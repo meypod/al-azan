@@ -2,7 +2,7 @@
 
 ## releasing
 
-to release any type (pre-release/release), run `yarn np`. easy.
+to release any type (pre-release/release), run `yarn np <version>`. easy.
 
 ## Generating key (once)
 
