@@ -75,7 +75,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "jest": "^28.1.0",
     "metro-react-native-babel-preset": "^0.71.0",
     "mkdirp": "^1.0.4",
     "np": "^7.6.2",
