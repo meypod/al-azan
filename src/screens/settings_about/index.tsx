@@ -26,7 +26,7 @@ export function AboutSettings(props: IScrollViewProps) {
       </FormControl>
       <FormControl mb="3">
         <FormControl.Label m="0">{t`Credits`}:</FormControl.Label>
-        <Text>{t`All credits for Adhan voices goes to their respective owners.
+        <Text>{t`All copyrights for adhan voices belong to their respective owners.
          Special thanks to translation.io (lingui.js) for their wonderful services.
          Thanks to all open source community members who made all these wonderful libraries that made making this app possible.`}</Text>
       </FormControl>
