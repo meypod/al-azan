@@ -31,7 +31,7 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
   },
 
   Egyptian: {
-    label: t`Egyptian General Authority of Survey`,
+    label: t`Egyptian General Survey Authority`,
     info: 'Uses Fajr angle of 19.5 and an Isha angle of 17.5' as const,
     get: CalculationMethod.Egyptian,
   },
