@@ -54,7 +54,7 @@ jobs:
 
     - name: build
       run: |
-        cd android && gradlew --no-daemon build -PnoDebug;
+        cd android && ./gradlew --no-daemon build -PnoDebug;
 
     - name: Sign App Bundle
       id: sign_app
