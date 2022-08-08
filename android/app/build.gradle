@@ -142,8 +142,8 @@ android {
         applicationId "com.github.meypod.al_azan"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "v1.0.0-rc22"
+        versionCode 3
+        versionName "v1.0.0-rc23"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
