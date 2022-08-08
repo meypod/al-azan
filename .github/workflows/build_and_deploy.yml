@@ -65,6 +65,9 @@ jobs:
         alias: ${{ secrets.ANDROID_ALIAS }}
         keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      env: 
+        # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
+        BUILD_TOOLS_VERSION: "30.0.3" 
     
     - name: Release
       uses: softprops/action-gh-release@v1
