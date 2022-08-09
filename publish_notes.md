@@ -2,7 +2,7 @@
 
 ## releasing
 
-to release any type (pre-release/release), run `yarn np <version>`. don't prefix version with `v` letter.
+to release any type (pre-release/release), run `yarn np <version>`. don't prefix version with `v` letter, np automatically prefixes github tags with `v` letter.
 
 ## Generating key (once)
 

@@ -23,7 +23,7 @@ export function AboutSettings(props: IScrollViewProps) {
       <FormControl mb="3">
         <FormControl.Label m="0">{t`Home`}:</FormControl.Label>
         <Text dataDetectorType={'link'}>
-          {pkg.repository.web + '/releases/tag/' + pkg.version}
+          {pkg.repository.web + '/releases/tag/v' + pkg.version}
         </Text>
       </FormControl>
       <FormControl mb="3">
