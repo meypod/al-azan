@@ -47,7 +47,7 @@ export class PrayerTimesExtended extends PrayerTimes {
     }
 
     if (prayerTime && useSettings) {
-      prayerTime.playSound = calcSettings.getState()[
+      prayerTime.playSound = !!calcSettings.getState()[
         getAdhanSettingKey(prayerTime.prayer, 'sound')
       ] as boolean;
     }
