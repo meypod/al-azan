@@ -1,0 +1,801 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2022-06-13 20:56+0430\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
+msgid "10 min"
+msgstr "10 min"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
+msgid "15 min"
+msgstr "15 min"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+msgid "30 min"
+msgstr "30 min"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:117
+msgid "5 min"
+msgstr "5 min"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
+msgid "60 min"
+msgstr "60 min"
+
+#: src/assets/adhan_entries.ts:23
+msgid "Abdul-Basit Abdus-Samad"
+msgstr "Abdul-Basit Abdus-Samad"
+
+#: src/screens/settings_calculation/index.tsx:159
+msgid "Abyad"
+msgstr "Abyad"
+
+#: src/screens/settings_adhan/index.tsx:171
+msgid "Add"
+msgstr "Add"
+
+#: src/screens/settings_adhan/index.tsx:144
+#: src/screens/settings_adhan/index.tsx:149
+msgid "Add Custom Adhan"
+msgstr "Add Custom Adhan"
+
+#: src/screens/settings_reminders/index.tsx:49
+msgid "Add Reminder"
+msgstr "Add Reminder"
+
+#: src/screens/fullscreen_alarm/index.tsx:77
+msgid "Adhan"
+msgstr "Adhan"
+
+#: src/screens/settings_adhan/index.tsx:84
+msgid "Adhan audio file is not downloaded yet"
+msgstr "Adhan audio file is not downloaded yet"
+
+#: src/screens/settings_calculation/index.tsx:79
+msgid "Advanced Calculation Settings"
+msgstr "Advanced Calculation Settings"
+
+#: src/screens/settings_calculation/index.tsx:158
+msgid "Ahmer"
+msgstr "Ahmer"
+
+#: src/screens/settings_adhan/index.tsx:44
+msgid "An error occured while playing the current track"
+msgstr "An error occured while playing the current track"
+
+#: src/screens/settings_display/language_settings.tsx:27
+msgid "Arabic"
+msgstr "Arabic"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:83
+msgid "Are you sure you want to delete \"{0}\" ?"
+msgstr "Are you sure you want to delete \"{0}\" ?"
+
+#: src/screens/settings_calculation/index.tsx:106
+msgid "Asr Calculation"
+msgstr "Asr Calculation"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:39
+msgid "At least one prayer time must be shown"
+msgstr "At least one prayer time must be shown"
+
+#: src/intro/intro.tsx:100
+msgid "Attention"
+msgstr "Attention"
+
+#: src/intro/intro.tsx:33
+#: src/screens/settings_battery_optimizations/index.tsx:46
+msgid "Battery Optimization"
+msgstr "Battery Optimization"
+
+#: src/screens/settings_calculation/index.tsx:60
+msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
+msgstr "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
+
+#: src/intro/intro.tsx:25
+msgid "Calculation"
+msgstr "Calculation"
+
+#: src/screens/settings_calculation/index.tsx:62
+msgid "Calculation Method"
+msgstr "Calculation Method"
+
+#: src/screens/settings_adhan/index.tsx:168
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/tasks/set_pre_alarm.ts:84
+msgid "Cancel Adhan"
+msgstr "Cancel Adhan"
+
+#: src/screens/settings_calculation/index.tsx:108
+msgid "Choose Asr Calculation Madhab"
+msgstr "Choose Asr Calculation Madhab"
+
+#: src/screens/settings_calculation/index.tsx:65
+msgid "Choose Calculation Method"
+msgstr "Choose Calculation Method"
+
+#: src/screens/settings_calculation/index.tsx:86
+msgid "Choose High Latitude Setting"
+msgstr "Choose High Latitude Setting"
+
+#: src/screens/settings_display/language_settings.tsx:61
+msgid "Choose Language"
+msgstr "Choose Language"
+
+#: src/screens/settings_calculation/index.tsx:121
+msgid "Choose Polar Resolution"
+msgstr "Choose Polar Resolution"
+
+#: src/screens/settings_calculation/index.tsx:150
+msgid "Choose Shafaq method"
+msgstr "Choose Shafaq method"
+
+#: src/screens/settings_location/index.tsx:246
+msgid "City/Area"
+msgstr "City/Area"
+
+#: src/screens/settings_location/index.tsx:338
+msgid "Clear"
+msgstr "Clear"
+
+#: src/screens/settings_location/index.tsx:144
+msgid "Clipboard data does not contain coordinates"
+msgstr "Clipboard data does not contain coordinates"
+
+#: src/screens/settings_calculation/index.tsx:132
+msgid "Closest City"
+msgstr "Closest City"
+
+#: src/screens/settings_calculation/index.tsx:136
+msgid "Closest Date"
+msgstr "Closest Date"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:192
+msgid "Confirm"
+msgstr "Confirm"
+
+#: src/screens/settings_location/index.tsx:170
+msgid "Coordinates updated"
+msgstr "Coordinates updated"
+
+#: src/screens/settings_location/index.tsx:216
+msgid "Country"
+msgstr "Country"
+
+#: src/screens/settings_display/theme_settings.tsx:40
+msgid "Dark"
+msgstr "Dark"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:82
+msgid "Delete"
+msgstr "Delete"
+
+#: src/screens/settings_battery_optimizations/index.tsx:49
+msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
+msgstr "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
+
+#: src/screens/settings_battery_optimizations/index.tsx:57
+msgid "Disabled"
+msgstr "Disabled"
+
+#: src/screens/fullscreen_alarm/index.tsx:105
+#: src/tasks/set_alarm.ts:92
+msgid "Dismiss"
+msgstr "Dismiss"
+
+#: src/adhan/calculation_methods.ts:94
+msgid "Diyanet İşleri Başkanlığı, Turkey"
+msgstr "Diyanet İşleri Başkanlığı, Turkey"
+
+#: src/intro/intro.tsx:83
+msgid "Done"
+msgstr "Done"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:84
+msgid "Edit Reminder"
+msgstr "Edit Reminder"
+
+#: src/adhan/calculation_methods.ts:34
+msgid "Egyptian General Survey Authority"
+msgstr "Egyptian General Survey Authority"
+
+#: src/screens/settings_battery_optimizations/index.tsx:57
+msgid "Enabled"
+msgstr "Enabled"
+
+#: src/screens/settings_display/language_settings.tsx:19
+msgid "English"
+msgstr "English"
+
+#: src/screens/settings_location/index.tsx:150
+msgid "Error getting clipboard data"
+msgstr "Error getting clipboard data"
+
+#: src/screens/settings_location/index.tsx:236
+msgid "Error in loading countries"
+msgstr "Error in loading countries"
+
+#: src/screens/settings_location/index.tsx:267
+msgid "Error in loading search results"
+msgstr "Error in loading search results"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:69
+msgid "Error while downloading audio"
+msgstr "Error while downloading audio"
+
+#: src/screens/settings_location/index.tsx:174
+msgid "Error while getting coordinates"
+msgstr "Error while getting coordinates"
+
+#. short week day, friday
+#: src/components/week_day_selector.tsx:30
+msgid "FRI"
+msgstr "FRI"
+
+#: src/screens/settings_location/index.tsx:198
+msgid "Find My Location"
+msgstr "Find My Location"
+
+#: src/screens/settings_calculation/index.tsx:155
+msgid "General (default)"
+msgstr "General (default)"
+
+#: src/screens/settings_location/index.tsx:202
+msgid "Getting coordinates"
+msgstr "Getting coordinates"
+
+#: src/intro/intro.tsx:106
+msgid "Got it"
+msgstr "Got it"
+
+#: src/adhan/calculation_methods.ts:58
+msgid "Gulf region"
+msgstr "Gulf region"
+
+#: src/screens/settings_calculation/index.tsx:113
+msgid "Hanafi"
+msgstr "Hanafi"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:58
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
+msgid "Hidden?"
+msgstr "Hidden?"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:54
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
+msgid "Hide Prayer Times"
+msgstr "Hide Prayer Times"
+
+#: src/screens/settings_calculation/index.tsx:84
+msgid "High Latitude"
+msgstr "High Latitude"
+
+#: src/screens/settings_about/index.tsx:24
+msgid "Home"
+msgstr "Home"
+
+#: src/screens/settings_battery_optimizations/index.tsx:52
+msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
+msgstr "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
+
+#: src/adhan/calculation_methods.ts:70
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:92
+msgid "Label"
+msgstr "Label"
+
+#: src/screens/settings_display/language_settings.tsx:58
+msgid "Language"
+msgstr "Language"
+
+#: src/screens/settings_location/index.tsx:290
+#: src/screens/settings_location/index.tsx:295
+msgid "Latitude"
+msgstr "Latitude"
+
+#: src/screens/settings_location/index.tsx:302
+msgid "Latitude is invalid"
+msgstr "Latitude is invalid"
+
+#: src/screens/settings_about/index.tsx:30
+msgid "License"
+msgstr "License"
+
+#: src/screens/settings_display/theme_settings.tsx:37
+msgid "Light"
+msgstr "Light"
+
+#: src/intro/intro.tsx:21
+msgid "Location"
+msgstr "Location"
+
+#: src/screens/settings_location/index.tsx:306
+#: src/screens/settings_location/index.tsx:311
+msgid "Longitude"
+msgstr "Longitude"
+
+#: src/screens/settings_location/index.tsx:318
+msgid "Longitude is invalid"
+msgstr "Longitude is invalid"
+
+#. short week day, monday
+#: src/components/week_day_selector.tsx:14
+msgid "MON"
+msgstr "MON"
+
+#: src/assets/adhan_entries.ts:19
+msgid "Masjid An Nabawi"
+msgstr "Masjid An Nabawi"
+
+#: src/screens/settings_calculation/index.tsx:92
+msgid "Middle of the Night"
+msgstr "Middle of the Night"
+
+#: src/assets/adhan_entries.ts:33
+msgid "Moazen Zade"
+msgstr "Moazen Zade"
+
+#: src/adhan/calculation_methods.ts:22
+msgid "Moonsighting Committee"
+msgstr "Moonsighting Committee"
+
+#: src/adhan/calculation_methods.ts:28
+msgid "Muslim World League"
+msgstr "Muslim World League"
+
+#: src/screens/settings_adhan/index.tsx:152
+#: src/screens/settings_adhan/index.tsx:155
+msgid "Name"
+msgstr "Name"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:84
+msgid "New Reminder"
+msgstr "New Reminder"
+
+#: src/intro/intro.tsx:82
+#: src/tasks/set_next_adhan.ts:60
+msgid "Next"
+msgstr "Next"
+
+#: src/screens/home/index.tsx:111
+msgid "Next Day"
+msgstr "Next Day"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:86
+msgid "No"
+msgstr "No"
+
+#: src/screens/settings_calculation/index.tsx:90
+msgid "None (Automatic)"
+msgstr "None (Automatic)"
+
+#: src/screens/settings_notifications/index.tsx:18
+msgid "Notification"
+msgstr "Notification"
+
+#: src/intro/intro.tsx:29
+msgid "Notification & Sound"
+msgstr "Notification & Sound"
+
+#: src/screens/settings_calculation/index.tsx:96
+msgid "One-Seventh of the Night"
+msgstr "One-Seventh of the Night"
+
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:44
+msgid "Only six items can be shown at the same time"
+msgstr "Only six items can be shown at the same time"
+
+#: src/screens/settings_battery_optimizations/index.tsx:65
+msgid "Open Battery Optimization Settings"
+msgstr "Open Battery Optimization Settings"
+
+#: src/screens/settings_battery_optimizations/index.tsx:92
+msgid "Open Power Manager Settings"
+msgstr "Open Power Manager Settings"
+
+#: src/screens/settings_location/index.tsx:333
+msgid "Paste"
+msgstr "Paste"
+
+#: src/screens/settings_display/language_settings.tsx:23
+msgid "Persian"
+msgstr "Persian"
+
+#: src/screens/settings_calculation/index.tsx:118
+msgid "Polar Resolution"
+msgstr "Polar Resolution"
+
+#: src/screens/settings_battery_optimizations/index.tsx:70
+msgid "Power Manager"
+msgstr "Power Manager"
+
+#: src/screens/home/index.tsx:89
+msgid "Prev Day"
+msgstr "Prev Day"
+
+#: src/adhan/calculation_methods.ts:76
+msgid "Qatar"
+msgstr "Qatar"
+
+#: src/assets/adhan_entries.ts:28
+msgid "Ragheb Mustafa Ghalwash"
+msgstr "Ragheb Mustafa Ghalwash"
+
+#: src/adhan/calculation_methods.ts:52
+msgid "Referred to as the ISNA method"
+msgstr "Referred to as the ISNA method"
+
+#: src/tasks/set_reminder.ts:69
+#: src/tasks/set_reminder.ts:87
+msgid "Reminder"
+msgstr "Reminder"
+
+#: src/components/week_day_selector.tsx:60
+msgid "Repeat"
+msgstr "Repeat"
+
+#: src/intro/intro.tsx:102
+msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
+msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
+
+#. short week day, saturday
+#: src/components/week_day_selector.tsx:34
+msgid "SAT"
+msgstr "SAT"
+
+#. short week day, sunday
+#: src/components/week_day_selector.tsx:10
+msgid "SUN"
+msgstr "SUN"
+
+#: src/screens/settings_battery_optimizations/index.tsx:82
+msgid ""
+"Samsung devices have their own custom Power Manager called \"Device Care\".\n"
+"After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
+"In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
+"and add this app to the list."
+msgstr ""
+"Samsung devices have their own custom Power Manager called \"Device Care\".\n"
+"After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
+"In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
+"and add this app to the list."
+
+#: src/screens/settings_adhan/index.tsx:161
+msgid "Selecting a name is required"
+msgstr "Selecting a name is required"
+
+#: src/screens/settings_calculation/index.tsx:142
+msgid "Shafaq"
+msgstr "Shafaq"
+
+#: src/screens/settings_calculation/index.tsx:144
+msgid ""
+"Shafaq is used by the MoonsightingCommittee method to \n"
+"determine what type of twilight to use in order to\n"
+"determine the time for Isha"
+msgstr ""
+"Shafaq is used by the MoonsightingCommittee method to \n"
+"determine what type of twilight to use in order to\n"
+"determine the time for Isha"
+
+#: src/screens/settings_calculation/index.tsx:112
+msgid "Shafi (Default)"
+msgstr "Shafi (Default)"
+
+#: src/adhan/calculation_methods.ts:106
+msgid "Shia Ithna Ashari, Leva Institute, Qum"
+msgstr "Shia Ithna Ashari, Leva Institute, Qum"
+
+#: src/adhan/calculation_methods.ts:112
+msgid "Shia, Institute of Geophysics, University of Tehran"
+msgstr "Shia, Institute of Geophysics, University of Tehran"
+
+#: src/screens/home/index.tsx:105
+msgid "Show Today"
+msgstr "Show Today"
+
+#: src/screens/settings_widget/index.tsx:32
+msgid "Show notification widget?"
+msgstr "Show notification widget?"
+
+#: src/adhan/calculation_methods.ts:82
+msgid "Singapore"
+msgstr "Singapore"
+
+#: src/intro/intro.tsx:84
+msgid "Skip"
+msgstr "Skip"
+
+#: src/screens/settings_battery_optimizations/index.tsx:72
+msgid ""
+"Some devices need extra settings inside their Power Manager \n"
+"to prevent the app from getting killed in the background.\n"
+"In that case disable any power saving option for the app."
+msgstr ""
+"Some devices need extra settings inside their Power Manager \n"
+"to prevent the app from getting killed in the background.\n"
+"In that case disable any power saving option for the app."
+
+#: src/screens/settings_notifications/index.tsx:21
+msgid "Sound"
+msgstr "Sound"
+
+#: src/adhan/calculation_methods.ts:100
+msgid "Spiritual Administration of Muslims of Russia"
+msgstr "Spiritual Administration of Muslims of Russia"
+
+#: src/screens/settings_battery_optimizations/index.tsx:55
+msgid "Status"
+msgstr "Status"
+
+#: src/screens/settings_display/theme_settings.tsx:44
+msgid "System Default"
+msgstr "System Default"
+
+#. short week day, thursday
+#: src/components/week_day_selector.tsx:26
+msgid "THU"
+msgstr "THU"
+
+#. short week day, tuesday
+#: src/components/week_day_selector.tsx:18
+msgid "TUE"
+msgstr "TUE"
+
+#: src/intro/slides/welcome.tsx:9
+msgid ""
+"Thanks for choosing this app! There are things you need to do before you\n"
+"can start using this app."
+msgstr ""
+"Thanks for choosing this app! There are things you need to do before you\n"
+"can start using this app."
+
+#: src/adhan/calculation_methods.ts:64
+msgid "The Gulf Region (Dubai)"
+msgstr "The Gulf Region (Dubai)"
+
+#: src/screens/settings_display/theme_settings.tsx:28
+#: src/screens/settings_display/theme_settings.tsx:33
+msgid "Theme Color"
+msgstr "Theme Color"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:57
+#: src/screens/settings_notifications/index.tsx:16
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:102
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
+msgid "Time"
+msgstr "Time"
+
+#: src/screens/settings_location/index.tsx:188
+msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
+msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
+
+#: src/tasks/set_next_adhan.ts:65
+#: src/tasks/set_reminder.ts:91
+msgid "Tomorrow"
+msgstr "Tomorrow"
+
+#: src/screens/settings_calculation/index.tsx:100
+msgid "Twilight Angle"
+msgstr "Twilight Angle"
+
+#: src/adhan/calculation_methods.ts:46
+msgid "Umm al-Qura University, Makkah"
+msgstr "Umm al-Qura University, Makkah"
+
+#: src/adhan/calculation_methods.ts:88
+msgid "Union Organization Islamic de France"
+msgstr "Union Organization Islamic de France"
+
+#: src/adhan/calculation_methods.ts:40
+msgid "University of Islamic Sciences, Karachi"
+msgstr "University of Islamic Sciences, Karachi"
+
+#: src/screens/settings_calculation/index.tsx:128
+msgid "Unresolved (default)"
+msgstr "Unresolved (default)"
+
+#: src/screens/settings_display/language_settings.tsx:34
+msgid "Unsupported"
+msgstr "Unsupported"
+
+#. notification title
+#: src/tasks/set_pre_alarm.ts:65
+msgid "Upcoming alarm"
+msgstr "Upcoming alarm"
+
+#: src/screens/settings_location/index.tsx:286
+msgid "Using Coordinates"
+msgstr "Using Coordinates"
+
+#: src/screens/settings_location/index.tsx:190
+msgid "Using GPS"
+msgstr "Using GPS"
+
+#: src/screens/settings_location/index.tsx:209
+msgid "Using Search"
+msgstr "Using Search"
+
+#: src/screens/settings_about/index.tsx:20
+msgid "Version"
+msgstr "Version"
+
+#. short week day, wednesday
+#: src/components/week_day_selector.tsx:22
+msgid "WED"
+msgstr "WED"
+
+#: src/intro/slides/welcome.tsx:14
+msgid "We'll help you do them quickly."
+msgstr "We'll help you do them quickly."
+
+#: src/intro/intro.tsx:17
+msgid "Welcome"
+msgstr "Welcome"
+
+#: src/screens/settings_battery_optimizations/index.tsx:75
+msgid "You can access your device Power Manager using the button below."
+msgstr "You can access your device Power Manager using the button below."
+
+#: src/screens/settings_location/index.tsx:326
+msgid "You can also paste coords from clipboard"
+msgstr "You can also paste coords from clipboard"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:55
+msgid "You can hide prayer times you don't want to see in the main screen here:"
+msgstr "You can hide prayer times you don't want to see in the main screen here:"
+
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
+msgid "You can hide prayer times you don't want to see in the widget here:"
+msgstr "You can hide prayer times you don't want to see in the widget here:"
+
+#: src/screens/settings_about/index.tsx:36
+msgid "about.credits"
+msgstr ""
+"All copyrights for adhan voices belong to their respective owners.\n"
+"Special thanks to translation.io (lingui.js) for their wonderful services.\n"
+"Thanks to all open source community members who made all these wonderful libraries that made making this app possible."
+
+#. screen title
+#: src/navigation/types.ts:79
+msgid "about_settings"
+msgstr "About"
+
+#. screen title
+#: src/navigation/types.ts:54
+msgid "adhan_settings"
+msgstr "Adhan"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+msgid "after"
+msgstr "after"
+
+#: src/adhan/prayer.ts:43
+msgid "asr.prayer"
+msgstr "Asr"
+
+#. screen title
+#: src/navigation/types.ts:64
+msgid "battery_optimization_settings"
+msgstr "Battery Optimization"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:152
+msgid "before"
+msgstr "before"
+
+#. screen title
+#: src/navigation/types.ts:59
+msgid "calculation_settings"
+msgstr "Calculation"
+
+#: src/adhan/prayer.ts:39
+msgid "dhuhr.prayer"
+msgstr "Dhuhr"
+
+#. screen title
+#: src/navigation/types.ts:39
+msgid "display_settings"
+msgstr "Display"
+
+#: src/adhan/prayer.ts:31
+msgid "fajr.prayer"
+msgstr "Fajr"
+
+#. screen title
+#: src/navigation/types.ts:34
+msgid "fullscreen_alarm"
+msgstr "Playing Adhan"
+
+#: src/navigation/types.ts:26
+msgid "home"
+msgstr "Home"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:63
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
+msgid "is prayer time hidden?"
+msgstr "is prayer time hidden?"
+
+#: src/adhan/prayer.ts:55
+msgid "isha.prayer"
+msgstr "Isha"
+
+#. screen title
+#: src/navigation/types.ts:44
+msgid "location_settings"
+msgstr "Location"
+
+#: src/adhan/prayer.ts:51
+msgid "maghrib.prayer"
+msgstr "Maghrib"
+
+#. screen title
+#: src/navigation/types.ts:49
+msgid "notification_settings"
+msgstr "Notification & Sound"
+
+#. screen title
+#: src/navigation/types.ts:74
+msgid "reminders_settings"
+msgstr "Reminders"
+
+#: src/navigation/types.ts:30
+msgid "settings"
+msgstr "Settings"
+
+#: src/screens/settings_widget/index.tsx:47
+msgid "should notification widget be shown?"
+msgstr "should notification widget be shown?"
+
+#: src/screens/settings_display/hide_prayer_settings.tsx:26
+#: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
+msgid "should {prayerName} be hidden?"
+msgstr "should {prayerName} be hidden?"
+
+#: src/adhan/prayer.ts:59
+msgid "sunnah.midnight"
+msgstr "Midnight"
+
+#: src/adhan/prayer.ts:35
+msgid "sunrise"
+msgstr "Sunrise"
+
+#: src/adhan/prayer.ts:47
+msgid "sunset"
+msgstr "Sunset"
+
+#. screen title
+#: src/navigation/types.ts:69
+msgid "widget_settings"
+msgstr "Widget Settings"
+
+#: src/screens/settings_reminders/reminder_item.tsx:93
+msgid "{durationInMinutes} min after {prayer}"
+msgstr "{durationInMinutes} min after {prayer}"
+
+#: src/screens/settings_reminders/reminder_item.tsx:92
+msgid "{durationInMinutes} min before {prayer}"
+msgstr "{durationInMinutes} min before {prayer}"
+
+#: src/screens/settings_notifications/notification_setting.tsx:51
+msgid "{prayerName} notification will be shown"
+msgstr "{prayerName} notification will be shown"
+
+#: src/screens/settings_notifications/notification_setting.tsx:61
+msgid "{prayerName} sound will be played"
+msgstr "{prayerName} sound will be played"
