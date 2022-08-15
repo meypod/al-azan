@@ -4,6 +4,8 @@
 
 to release any type (pre-release/release), run `yarn np <version>`. don't prefix version with `v` letter, np automatically prefixes github tags with `v` letter.
 
+after each release don't forget to add fastlane metadata changelogs for current version code.
+
 ## Generating key (once)
 
 ```
