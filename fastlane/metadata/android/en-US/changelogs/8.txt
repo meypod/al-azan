@@ -1,0 +1,1 @@
+fixed an issue where Adhan still played when only notification was intended.

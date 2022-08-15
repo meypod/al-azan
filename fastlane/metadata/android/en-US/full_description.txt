@@ -1,0 +1,29 @@
+Privacy-first ad-free open-source Adhan app built using react-native.
+
+App features:
+
+* Ad-Free
+
+* Doesn't use any kind of trackers
+
+* Open-source
+
+* Set custom Adhan audio
+
+* Many options for Adhan calculation
+
+* Light/Dark theme
+
+* Hide times you don't need
+
+* Set reminders before or after a prayer time
+
+* Homescreen and notification Widgets
+
+* Is localized in English, Persian and Arabic
+
+Open source repository:
+https://github.com/meypod/al-azan/
+
+Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo:
+https://github.com/meypod/al-azan/issues
