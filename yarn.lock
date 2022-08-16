@@ -1554,10 +1554,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@notifee/react-native@^5.4.1":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@notifee/react-native/-/react-native-5.4.1.tgz#1d0a2b77a1dfd9730367599371aae93c3463ca89"
-  integrity sha512-2ET24EEWMf9et9akuGGr7tr+ycyixADW/Ck/KpaVZpjY1xGf8MTwjNDoIPVSAeGiEOw/YZt+KX9YC3LO8ZwSWg==
+"@notifee/react-native@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@notifee/react-native/-/react-native-5.6.0.tgz#a34998c98ad93482e4452b4d2cfb405b4f5f59ce"
+  integrity sha512-MBV863fQx5qFDXKQ+3i9EkVeFAGVERmOOpk4gADx17WpZJSLNhVCnXRA1CEP0bJ4B39G6Z2SiadRl19E5GeWiQ==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.4.3":
   version "0.4.3"
