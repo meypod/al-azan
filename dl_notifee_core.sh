@@ -39,7 +39,7 @@ function git_sparse_checkout {
     else
         pushd ${dir}/${prj}
         git fetch --depth=1 origin ${tag}
-        git reset --hard origin/${tag}
+        git reset --hard ${tag}
         popd
     fi
 }
@@ -48,9 +48,12 @@ function download_needed_files {
   url=https://github.com/invertase/notifee.git
   dir=$(pwd)/node_modules/@notifee/
   prj=core
-  tag=main
+  local tag="${1:-main}"
   git_sparse_checkout $url $dir $prj $tag \
       "android/*";
 } 
 
-download_needed_files;
+notifee_version=`npm list --depth=0 @notifee/react-native | grep -Po "(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"`;
+notifee_git_tag="@notifee/react-native@$notifee_version";
+
+download_needed_files $notifee_git_tag
