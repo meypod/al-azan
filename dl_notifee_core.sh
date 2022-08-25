@@ -33,12 +33,12 @@ function git_sparse_checkout {
             echo "${path}" >> .git/info/sparse-checkout
         done
         git remote add origin ${url}
-        git fetch --depth=1 origin ${tag}
+        git fetch --depth=1 origin refs/tags/${tag}:refs/tags/${tag}
         git checkout ${tag}
         popd
     else
         pushd ${dir}/${prj}
-        git fetch --depth=1 origin ${tag}
+        git fetch --depth=1 origin refs/tags/${tag}:refs/tags/${tag}
         git reset --hard ${tag}
         popd
     fi
