@@ -3,6 +3,12 @@ name: build dev
 on:
   release:
     types: [published]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,6 +18,10 @@ jobs:
       options: --user root
     
     steps:
+    - name: install git
+      run: |
+        sudo apt-get -y install git;
+
     - name: Checkout repository
       uses: actions/checkout@v3
 
@@ -42,7 +52,13 @@ jobs:
     - name: Install packages
       run: yarn install --frozen-lockfile  # install project deps with --frozen-lockfile to make sure we will have the same packages version ( very recommended  on running yarn install on ci)
 
+    - name: clone notifee_core
+      run: |
+        chmod +x ./dl_notifee_core.sh;
+        ./dl_notifee_core.sh;
+
     - name: Sync purge and compile lingui.js locales
+      if: ${{ github.event_name == 'release'}}
       run: |
         sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
         yarn sync_and_purge;
@@ -57,6 +73,7 @@ jobs:
         cd android && ./gradlew --no-daemon build -PnoDebug;
 
     - name: Sign App Bundle
+      if: ${{ github.event_name == 'release'}}
       id: sign_app
       uses: r0adkll/sign-android-release@v1
       with:
@@ -70,6 +87,7 @@ jobs:
         BUILD_TOOLS_VERSION: "30.0.3" 
     
     - name: Release
+      if: ${{ github.event_name == 'release'}}
       uses: softprops/action-gh-release@v1
       with:
         prerelease: true

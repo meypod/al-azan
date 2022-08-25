@@ -20,10 +20,16 @@ yarn start
 
 ```
 
-for creating a release build:
+for creating a release build locally to debug:
 
 ```bash
-cd android && ./gradlew build -PnoDebug
+cd android && ./gradlew build -PnoDebug -PsignDebug
+```
+
+to uninstall app while keeping data:
+
+```bash
+adb shell cmd package uninstall -k com.github.meypod.al_azan
 ```
 
 ## Translations

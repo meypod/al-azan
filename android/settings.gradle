@@ -12,3 +12,6 @@ if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true")
 
 include ':react-native-blob-util'
 project(':react-native-blob-util').projectDir = file('../node_modules/react-native-blob-util/android')
+
+include(":notifee_core")
+project(":notifee_core").projectDir = file('../node_modules/@notifee/core/android')
