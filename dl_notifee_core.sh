@@ -45,15 +45,17 @@ function git_sparse_checkout {
 }
 
 function download_needed_files {
-  url=https://github.com/invertase/notifee.git
+  local url="${1:-https://github.com/invertase/notifee.git}"
   dir=$(pwd)/node_modules/@notifee/
   prj=core
-  local tag="${1:-main}"
+  local tag="${2:-main}"
   git_sparse_checkout $url $dir $prj $tag \
       "android/*";
 } 
 
+repo_url="https://github.com/meypod/notifee.git";
 notifee_version=`npm list --depth=0 @notifee/react-native | grep -Po "(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"`;
-notifee_git_tag="@notifee/react-native@$notifee_version";
+# notifee_git_tag="@notifee/react-native@$notifee_version";
+notifee_git_tag="migrate_to_guava";
 
-download_needed_files $notifee_git_tag
+download_needed_files $repo_url $notifee_git_tag
