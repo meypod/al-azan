@@ -54,8 +54,8 @@ function download_needed_files {
 } 
 
 repo_url="https://github.com/meypod/notifee.git";
-notifee_version=`npm list --depth=0 @notifee/react-native | grep -Po "(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"`;
+# notifee_version=`npm list --depth=0 @notifee/react-native | grep -Po "(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"`;
 # notifee_git_tag="@notifee/react-native@$notifee_version";
-notifee_git_tag="migrate_to_guava";
+notifee_git_tag="5.6.0-guava";
 
 download_needed_files $repo_url $notifee_git_tag
