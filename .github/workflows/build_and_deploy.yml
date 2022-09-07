@@ -60,8 +60,7 @@ jobs:
 
     - name: patch notifee rn package
       run: |
-        sed -E -i 's/^.*(fabric|com\.(crashlytics|google\.(firebase|android.gms))).*$//g'
-        ./node_modules/@notifee/react-native/android/build.gradle
+        sed -E -i 's/^.*(fabric|com\.(crashlytics|google\.(firebase|android.gms))).*$//g' ./node_modules/@notifee/react-native/android/build.gradle
 
     - name: Sync purge and compile lingui.js locales
       if: ${{ github.event_name == 'release'}}
