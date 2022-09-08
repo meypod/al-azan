@@ -1,0 +1,1 @@
+Usage of guava lib in notifee core to allow release on f-droid
