@@ -2,6 +2,12 @@
 
 an open-source adhan - prayer times application built using react-native.
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.github.meypod.al_azan/)
+
+or get the APK from [the Releases section](https://github.com/meypod/al-azan/releases/latest).
+
 ## How to run this project
 
 It's important to note that this project uses [re-pack](https://github.com/callstack/repack)(webpack) to bundle the files, to be able to provide chunking and lazy imports. So running it is a little bit different.
