@@ -582,6 +582,10 @@ msgstr "Theme Color"
 msgid "Time"
 msgstr "Time"
 
+#: src/screens/settings_display/time_format_settings.tsx:31
+msgid "Time format"
+msgstr "Time format"
+
 #: src/screens/settings_location/index.tsx:188
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
@@ -619,6 +623,10 @@ msgstr "Unsupported"
 #: src/tasks/set_pre_alarm.ts:65
 msgid "Upcoming alarm"
 msgstr "Upcoming alarm"
+
+#: src/screens/settings_display/time_format_settings.tsx:33
+msgid "Use 24-Hour format"
+msgstr "Use 24-Hour format"
 
 #: src/screens/settings_location/index.tsx:286
 msgid "Using Coordinates"

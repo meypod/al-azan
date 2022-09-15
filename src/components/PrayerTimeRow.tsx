@@ -2,7 +2,7 @@ import {Flex, Spacer, Text, HStack} from 'native-base';
 import {memo} from 'react';
 import {NonPrayer, Prayer, translatePrayer} from '@/adhan';
 import {MutedIcon} from '@/assets/icons/muted';
-import {getTime24} from '@/utils/date';
+import {getTime} from '@/utils/date';
 
 type TimeRowProps = {
   date?: Date;
@@ -38,7 +38,7 @@ function PrayerTimeRow({
       </HStack>
 
       <Spacer />
-      {<Text>{date ? getTime24(date) : '--:--'}</Text>}
+      {<Text>{date ? getTime(date) : '--:--'}</Text>}
     </Flex>
   );
 }

@@ -28,6 +28,8 @@ export type Reminder = {
 type SettingsStore = {
   // theme
   THEME_COLOR?: ColorMode | 'default';
+  // display
+  IS_24_HOUR_FORMAT: boolean;
   // other
   SELECTED_LOCALE: string;
   APP_INITIAL_CONFIG_DONE: boolean;
@@ -82,6 +84,7 @@ export const settings = createVanilla<SettingsStore>()(
       DISMISSED_ALARM_TIMESTAMP: 0,
       REMINDERS: [],
       LAST_ALARM_DATE_VALUEOF: 0,
+      IS_24_HOUR_FORMAT: true,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -178,6 +181,16 @@ export const settings = createVanilla<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
+      version: 1,
+      migrate: (persistedState, version) => {
+        switch (version) {
+          case 0:
+            // added the IS_24_HOUR_FORMAT field in version 1
+            (persistedState as SettingsStore).IS_24_HOUR_FORMAT = true;
+            break;
+        }
+        return persistedState as SettingsStore;
+      },
     },
   ),
 );

@@ -8,7 +8,7 @@ import {replace} from '@/navigation/root_navigation';
 import {RootStackParamList} from '@/navigation/types';
 import {cancelAdhanNotif, isAdhanPlaying} from '@/notifee';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
-import {getTime24} from '@/utils/date';
+import {getTime} from '@/utils/date';
 
 type ScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -33,7 +33,7 @@ function FullscreenAlarm({route}: ScreenProps) {
     } else {
       setPrayerTranslation('');
     }
-    setTime24(getTime24(adhanOptions.date));
+    setTime24(getTime(adhanOptions.date));
   }, [adhanOptions]);
 
   useEffect(() => {

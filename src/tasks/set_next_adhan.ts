@@ -6,7 +6,7 @@ import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {setReminders} from '@/tasks/set_reminder';
-import {getNextDayBeginning, getTime24} from '@/utils/date';
+import {getNextDayBeginning, getTime} from '@/utils/date';
 
 type SetNextAdhanOptions = {
   fromDate?: Date;
@@ -55,7 +55,7 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
     .then(() => {
       if (!options?.noToast) {
         const translatedPrayerName = translatePrayer(prayer);
-        const time24Format = getTime24(date);
+        const time24Format = getTime(date);
         ToastAndroid.show(
           t`Next` +
             ': ' +

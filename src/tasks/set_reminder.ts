@@ -14,7 +14,7 @@ import {
 } from '@/constants/notification';
 import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
 import {Reminder} from '@/store/settings';
-import {getNextDayBeginning, getTime24} from '@/utils/date';
+import {getNextDayBeginning, getTime} from '@/utils/date';
 
 type SetReminderOptions = {
   date?: Date;
@@ -81,7 +81,7 @@ export async function setReminders(options: SetReminderOptions) {
       .catch(console.error);
 
     if (!options?.noToast) {
-      const time24Format = getTime24(new Date(timestamp));
+      const time24Format = getTime(new Date(timestamp));
 
       ToastAndroid.show(
         t`Reminder` +

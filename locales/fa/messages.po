@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-08-16 01:23+0430\n"
+"POT-Creation-Date: 2022-09-15 23:03+0430\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -564,6 +564,10 @@ msgstr "رنگ پوسته"
 msgid "Time"
 msgstr "وقت"
 
+#: src/screens/settings_display/time_format_settings.tsx:31
+msgid "Time format"
+msgstr "قالب زمان"
+
 #: src/screens/settings_location/index.tsx:188
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "برای محاسبه اذان، به موقعیت مکانی شما نیاز داریم. می‌توانید از دکمه «پیدا کردن مکان من» استفاده کنید یا از جستجوی کشور و شهر/منطقه استفاده کنید یا مختصات خود را به صورت دستی وارد کنید."
@@ -601,6 +605,10 @@ msgstr "پشتیبانی نشده"
 #: src/tasks/set_pre_alarm.ts:65
 msgid "Upcoming alarm"
 msgstr "هشدار بعدی"
+
+#: src/screens/settings_display/time_format_settings.tsx:33
+msgid "Use 24-Hour format"
+msgstr "استفاده از قالب 24 ساعته"
 
 #: src/screens/settings_location/index.tsx:286
 msgid "Using Coordinates"

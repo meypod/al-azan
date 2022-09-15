@@ -7,7 +7,7 @@ import {
   updatePermanentNotifWidget,
 } from '@/notifee';
 import {settings} from '@/store/settings';
-import {getArabicDate, getDay, getMonthName, getTime24} from '@/utils/date';
+import {getArabicDate, getDay, getMonthName, getTime} from '@/utils/date';
 
 export async function updateWidgets() {
   const now = new Date();
@@ -26,7 +26,7 @@ export async function updateWidgets() {
     p =>
       [
         translatePrayer(p),
-        prayerTimes ? getTime24(prayerTimes[p]) : '--:--',
+        prayerTimes ? getTime(prayerTimes[p]) : '--:--',
         p === activePrayer,
       ] as [prayerName: string, prayerTime: string, isActive: Boolean],
   );

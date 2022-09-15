@@ -12,7 +12,7 @@ import {
   PRE_ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {calcSettings, getAdhanSettingKey} from '@/store/calculation_settings';
-import {getDayName, getTime24} from '@/utils/date';
+import {getDayName, getTime} from '@/utils/date';
 
 export type SetPreAlarmTaskOptions = {
   /** When the adhan is  */
@@ -71,7 +71,7 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
           ', ' +
           getDayName(options.date, 'short') +
           ' ' +
-          getTime24(options.date),
+          getTime(options.date),
         android: {
           smallIcon: 'ic_stat_name',
           channelId,

@@ -2,8 +2,12 @@ import {settings} from '@/store/settings';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
 let SELECTED_LOCALE = settings.getState().SELECTED_LOCALE;
+let IS_24_HOUR_FORMAT = settings.getState().IS_24_HOUR_FORMAT;
 
-settings.subscribe(state => (SELECTED_LOCALE = state.SELECTED_LOCALE));
+settings.subscribe(state => {
+  SELECTED_LOCALE = state.SELECTED_LOCALE;
+  IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
+});
 
 const oneDayInMs = 86400 * 1000;
 
@@ -34,12 +38,20 @@ export function getDay(date: Date) {
   );
 }
 
-export function getTime24(date: Date) {
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
-    hour12: false,
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(date);
+export function getTime(date: Date) {
+  if (IS_24_HOUR_FORMAT) {
+    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+    }).format(date);
+  } else {
+    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      hour12: true,
+      hour: 'numeric',
+      minute: 'numeric',
+    }).format(date);
+  }
 }
 
 export function getArabicDate(date: Date) {
