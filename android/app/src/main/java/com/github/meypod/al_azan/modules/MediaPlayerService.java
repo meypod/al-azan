@@ -19,8 +19,9 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
-import androidx.annotation.MainThread;
+
 import androidx.annotation.Nullable;
+
 import com.facebook.react.HeadlessJsTaskService;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
@@ -68,12 +69,10 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
       if (currentState == TelephonyManager.CALL_STATE_IDLE) {
         stop();
-        onCompletion(player);
       }
     }
   }
 
-  @MainThread
   public boolean isPlaying() {
     if (player != null) {
       return player.isPlaying();
@@ -81,7 +80,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     return false;
   }
 
-  @MainThread
   public void pause() {
     try {
       player.pause();
@@ -96,19 +94,18 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
-  @MainThread
   public void stop() {
     try {
       player.stop();
+    } catch (Exception ignored) {
+    } finally {
+      onCompletion(player);
       ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
           .emit("state", STATE_STOPPED);
-    } catch (Exception ignored) {
-      AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
-      audioManager.abandonAudioFocus(this);
     }
   }
 
-  @MainThread
+
   public void start(boolean skipCheck) {
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     if (!skipCheck) {
@@ -138,7 +135,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
-  @MainThread
+
   public String getState() {
     if (isPaused) {
       return "paused";
@@ -150,7 +147,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   }
 
 
-  @MainThread
   public void setVolume(float volume) {
     try {
       player.setVolume(volume, volume);
@@ -158,7 +154,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
-  @MainThread
+
   public void setDataSource(Uri uri, Promise promise) {
     if (setDataSourcePromise != null) {
       promise.reject("ERROR", "A setDataSource Call is already pending");
@@ -174,7 +170,8 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
           if (afd == null) {
             throw new Exception("file is compressed");
           }
-          player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+          player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(),
+              afd.getLength());
           afd.close();
         } catch (Resources.NotFoundException e) {
           throw new Exception("resource with id " + id + " not found");
@@ -190,7 +187,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
-  @MainThread
   public void setupPlayer() {
     releasePlayer();
     setupCallStateListener();
@@ -320,7 +316,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
-  @MainThread
   public void destroy() {
     releasePlayer();
     destroyCallStateListener();
@@ -328,7 +323,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     stopSelf();
   }
 
-  @MainThread
   public void releasePlayer() {
     if (player != null) {
       player.stop();

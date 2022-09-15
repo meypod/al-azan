@@ -8,7 +8,11 @@ export async function play(uri: string | number) {
     MediaPlayer.setVolume(data.value);
   });
 
-  await MediaPlayer.setupPlayer().catch(() => {});
+  try {
+    await MediaPlayer.setupPlayer();
+  } catch (e) {
+    console.error(e);
+  }
 
   const playbackFinishedDefer = defer<boolean>();
 
@@ -23,8 +27,8 @@ export async function play(uri: string | number) {
   });
   const errorSub = MediaPlayer.addEventListener('error', err => {
     errorSub.remove();
-    onFinally(true);
     console.error('MediaPlayer Error: ', err);
+    onFinally(true);
   });
 
   await MediaPlayer.setDataSource({uri});

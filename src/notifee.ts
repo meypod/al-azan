@@ -133,6 +133,7 @@ export function setupNotifeeHandlers() {
       const options = JSON.parse(
         notification.data?.options as string,
       ) as SetAlarmTaskOptions;
+
       if (options.playSound) {
         return playAdhan()
           .then(() => cancelAdhanNotif())
