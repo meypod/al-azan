@@ -1,6 +1,7 @@
 import {ScrollView, IScrollViewProps} from 'native-base';
 import {HidePrayerSettings} from '@/screens/settings_display/hide_prayer_settings';
 import {LanguageSettings} from '@/screens/settings_display/language_settings';
+import {NumberFormatSettings} from '@/screens/settings_display/number_format_settings';
 import {ThemeSettings} from '@/screens/settings_display/theme_settings';
 import {TimeFormatSettings} from '@/screens/settings_display/time_format_settings';
 
@@ -15,6 +16,7 @@ export function DisplaySettings(props: IScrollViewProps) {
       <ThemeSettings mb="4" />
       <LanguageSettings mb="6" />
       <TimeFormatSettings mb="6" />
+      <NumberFormatSettings mb="6" />
       <HidePrayerSettings />
     </ScrollView>
   );

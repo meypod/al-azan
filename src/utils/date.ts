@@ -1,12 +1,21 @@
-import {settings} from '@/store/settings';
+import {settings, SettingsStore} from '@/store/settings';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
-let SELECTED_LOCALE = settings.getState().SELECTED_LOCALE;
+function getDeterminedLocale(state: SettingsStore) {
+  let numberingSystem = state.NUMBERING_SYSTEM
+    ? '-u-nu-' + state.NUMBERING_SYSTEM
+    : '';
+  return state.SELECTED_LOCALE + numberingSystem;
+}
+
 let IS_24_HOUR_FORMAT = settings.getState().IS_24_HOUR_FORMAT;
+let NUMBERING_SYSTEM = settings.getState().NUMBERING_SYSTEM;
+let SELECTED_LOCALE = getDeterminedLocale(settings.getState());
 
 settings.subscribe(state => {
-  SELECTED_LOCALE = state.SELECTED_LOCALE;
   IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
+  NUMBERING_SYSTEM = state.NUMBERING_SYSTEM;
+  SELECTED_LOCALE = getDeterminedLocale(state);
 });
 
 const oneDayInMs = 86400 * 1000;
@@ -29,13 +38,15 @@ export function getDayName(date: Date, length: 'long' | 'short' = 'long') {
 }
 
 export function getMonthName(date: Date) {
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {month: 'long'}).format(date);
+  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    month: 'long',
+  }).format(date);
 }
 
 export function getDay(date: Date) {
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {day: '2-digit'}).format(
-    date,
-  );
+  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    day: '2-digit',
+  }).format(date);
 }
 
 export function getTime(date: Date) {
@@ -57,7 +68,11 @@ export function getTime(date: Date) {
 export function getArabicDate(date: Date) {
   const calendar =
     PREFERRED_LOCALE === 'ar-SA' ? 'islamic-umalqura' : 'islamic-civil';
-  return new Intl.DateTimeFormat(`ar-u-ca-${calendar}-nu-arab`, {
+  let numbering = '-nu-arab';
+  if (NUMBERING_SYSTEM) {
+    numbering = `-nu-${NUMBERING_SYSTEM}`;
+  }
+  return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
     day: '2-digit',
     month: 'long',
     year: 'numeric',

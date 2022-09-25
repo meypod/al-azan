@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-09-15 23:03+0430\n"
+"POT-Creation-Date: 2022-09-25 11:27+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,8 +69,13 @@ msgid "An error occured while playing the current track"
 msgstr "هنگام پخش صوت فعلی خطایی روی داد"
 
 #: src/screens/settings_display/language_settings.tsx:27
+#: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic"
 msgstr "عربی"
+
+#: src/screens/settings_display/number_format_settings.tsx:32
+msgid "Arabic/Persian"
+msgstr "عربی/فارسی"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Are you sure you want to delete \"{0}\" ?"
@@ -138,6 +143,10 @@ msgstr "نحوه محاسبه مناطق قطبی را انتخاب کنید"
 msgid "Choose Shafaq method"
 msgstr "روش \"شفق\" را انتخاب کنید"
 
+#: src/screens/settings_display/number_format_settings.tsx:25
+msgid "Choose numbering system"
+msgstr "سیستم شماره گذاری را انتخاب کنید"
+
 #: src/screens/settings_location/index.tsx:246
 msgid "City/Area"
 msgstr "شهر/ناحیه"
@@ -173,6 +182,10 @@ msgstr "کشور"
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "تاریک"
+
+#: src/screens/settings_display/number_format_settings.tsx:29
+msgid "Default"
+msgstr "پیش فرض"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:82
 msgid "Delete"
@@ -298,6 +311,10 @@ msgstr "برچسب"
 msgid "Language"
 msgstr "زبان"
 
+#: src/screens/settings_display/number_format_settings.tsx:30
+msgid "Latin"
+msgstr "لاتین"
+
 #: src/screens/settings_location/index.tsx:290
 #: src/screens/settings_location/index.tsx:295
 msgid "Latitude"
@@ -367,7 +384,7 @@ msgstr "یادآوری جدید"
 msgid "Next"
 msgstr "بعدی"
 
-#: src/screens/home/index.tsx:111
+#: src/screens/home/index.tsx:112
 msgid "Next Day"
 msgstr "روز بعد"
 
@@ -386,6 +403,10 @@ msgstr "اعلان"
 #: src/intro/intro.tsx:29
 msgid "Notification & Sound"
 msgstr "اعلان و صدا"
+
+#: src/screens/settings_display/number_format_settings.tsx:20
+msgid "Numbering system"
+msgstr "سیستم شماره گذاری"
 
 #: src/screens/settings_calculation/index.tsx:96
 msgid "One-Seventh of the Night"
@@ -419,7 +440,7 @@ msgstr "محاسبه مناطق قطبی"
 msgid "Power Manager"
 msgstr "مدیریت انرژی"
 
-#: src/screens/home/index.tsx:89
+#: src/screens/home/index.tsx:90
 msgid "Prev Day"
 msgstr "روز قبل"
 
@@ -493,7 +514,7 @@ msgstr "شیعه اثنا عشری، مؤسسه لوا، قم"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "شیعه، موسسه ژئوفیزیک دانشگاه تهران"
 
-#: src/screens/home/index.tsx:105
+#: src/screens/home/index.tsx:106
 msgid "Show Today"
 msgstr "نمایش امروز"
 
@@ -564,7 +585,7 @@ msgstr "رنگ پوسته"
 msgid "Time"
 msgstr "وقت"
 
-#: src/screens/settings_display/time_format_settings.tsx:31
+#: src/screens/settings_display/time_format_settings.tsx:11
 msgid "Time format"
 msgstr "قالب زمان"
 
@@ -606,7 +627,7 @@ msgstr "پشتیبانی نشده"
 msgid "Upcoming alarm"
 msgstr "هشدار بعدی"
 
-#: src/screens/settings_display/time_format_settings.tsx:33
+#: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
 msgstr "استفاده از قالب 24 ساعته"
 
@@ -706,6 +727,10 @@ msgstr "نمایش"
 #: src/adhan/prayer.ts:31
 msgid "fajr.prayer"
 msgstr "فجر"
+
+#: src/screens/settings_display/number_format_settings.tsx:22
+msgid "forces all numbers to be in the selected system"
+msgstr "همه اعداد را مجبور می کند که در سیستم انتخاب شده باشند"
 
 #. screen title
 #: src/navigation/types.ts:34

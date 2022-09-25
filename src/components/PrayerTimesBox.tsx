@@ -18,6 +18,7 @@ type PrayerTimesBoxProps = {
 function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
   const [nextPrayer, setNextPrayer] = useState<PrayerTime | undefined>();
   const [is24Hour] = useSettingsHelper('IS_24_HOUR_FORMAT');
+  const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
 
   useEffect(() => {
     setNextPrayer(prayerTimes?.nextPrayer());
@@ -65,7 +66,7 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
       display="flex"
       flexDirection="column"
       padding="3"
-      key={is24Hour.toString()}>
+      key={is24Hour.toString() + numberingSystem}>
       {visiblePrayerTimes.map(prayer => (
         <PrayerTimeRow
           key={prayer}

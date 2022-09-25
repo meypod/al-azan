@@ -36,6 +36,7 @@ export function Home() {
   const calcSettingsState = useCalcSettings(state => state);
   const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
   const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
+  const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
 
   const [today, setToday] = useState<{
     monthName: string;
@@ -51,7 +52,7 @@ export function Home() {
       dd: getDay(currentDate),
       arabicDate: getArabicDate(currentDate),
     });
-  }, [currentDate]);
+  }, [currentDate, numberingSystem]);
 
   useInterval(() => {
     updateCurrentDate();

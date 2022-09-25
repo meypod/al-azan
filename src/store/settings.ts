@@ -25,11 +25,12 @@ export type Reminder = {
   durationModifier: number;
 };
 
-type SettingsStore = {
+export type SettingsStore = {
   // theme
   THEME_COLOR?: ColorMode | 'default';
   // display
   IS_24_HOUR_FORMAT: boolean;
+  NUMBERING_SYSTEM: string;
   // other
   SELECTED_LOCALE: string;
   APP_INITIAL_CONFIG_DONE: boolean;
@@ -85,6 +86,7 @@ export const settings = createVanilla<SettingsStore>()(
       REMINDERS: [],
       LAST_ALARM_DATE_VALUEOF: 0,
       IS_24_HOUR_FORMAT: true,
+      NUMBERING_SYSTEM: '',
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -181,14 +183,20 @@ export const settings = createVanilla<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 1,
+      version: 2,
       migrate: (persistedState, version) => {
+        /* eslint-disable no-fallthrough */
+        // fall through cases is exactly the use case for migration.
         switch (version) {
           case 0:
             // added the IS_24_HOUR_FORMAT field in version 1
             (persistedState as SettingsStore).IS_24_HOUR_FORMAT = true;
+          case 1:
+            // added NUMBERING_SYSTEM field in v2
+            (persistedState as SettingsStore).NUMBERING_SYSTEM = '';
             break;
         }
+        /* eslint-enable no-fallthrough */
         return persistedState as SettingsStore;
       },
     },

@@ -75,8 +75,13 @@ msgid "An error occured while playing the current track"
 msgstr "An error occured while playing the current track"
 
 #: src/screens/settings_display/language_settings.tsx:27
+#: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic"
 msgstr "Arabic"
+
+#: src/screens/settings_display/number_format_settings.tsx:32
+msgid "Arabic/Persian"
+msgstr "Arabic/Persian"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Are you sure you want to delete \"{0}\" ?"
@@ -144,6 +149,10 @@ msgstr "Choose Polar Resolution"
 msgid "Choose Shafaq method"
 msgstr "Choose Shafaq method"
 
+#: src/screens/settings_display/number_format_settings.tsx:25
+msgid "Choose numbering system"
+msgstr "Choose numbering system"
+
 #: src/screens/settings_location/index.tsx:246
 msgid "City/Area"
 msgstr "City/Area"
@@ -179,6 +188,10 @@ msgstr "Country"
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "Dark"
+
+#: src/screens/settings_display/number_format_settings.tsx:29
+msgid "Default"
+msgstr "Default"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:82
 msgid "Delete"
@@ -304,6 +317,10 @@ msgstr "Label"
 msgid "Language"
 msgstr "Language"
 
+#: src/screens/settings_display/number_format_settings.tsx:30
+msgid "Latin"
+msgstr "Latin"
+
 #: src/screens/settings_location/index.tsx:290
 #: src/screens/settings_location/index.tsx:295
 msgid "Latitude"
@@ -373,7 +390,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:111
+#: src/screens/home/index.tsx:112
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -392,6 +409,10 @@ msgstr "Notification"
 #: src/intro/intro.tsx:29
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
+
+#: src/screens/settings_display/number_format_settings.tsx:20
+msgid "Numbering system"
+msgstr "Numbering system"
 
 #: src/screens/settings_calculation/index.tsx:96
 msgid "One-Seventh of the Night"
@@ -425,7 +446,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:89
+#: src/screens/home/index.tsx:90
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -506,7 +527,7 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/home/index.tsx:105
+#: src/screens/home/index.tsx:106
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -582,7 +603,7 @@ msgstr "Theme Color"
 msgid "Time"
 msgstr "Time"
 
-#: src/screens/settings_display/time_format_settings.tsx:31
+#: src/screens/settings_display/time_format_settings.tsx:11
 msgid "Time format"
 msgstr "Time format"
 
@@ -624,7 +645,7 @@ msgstr "Unsupported"
 msgid "Upcoming alarm"
 msgstr "Upcoming alarm"
 
-#: src/screens/settings_display/time_format_settings.tsx:33
+#: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
 msgstr "Use 24-Hour format"
 
@@ -724,6 +745,10 @@ msgstr "Display"
 #: src/adhan/prayer.ts:31
 msgid "fajr.prayer"
 msgstr "Fajr"
+
+#: src/screens/settings_display/number_format_settings.tsx:22
+msgid "forces all numbers to be in the selected system"
+msgstr "forces all numbers to be in the selected system"
 
 #. screen title
 #: src/navigation/types.ts:34
