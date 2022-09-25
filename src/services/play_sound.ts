@@ -23,6 +23,7 @@ export async function play(uri: string | number) {
 
   const endSub = MediaPlayer.addEventListener('completed', () => {
     endSub.remove();
+    console.log('MediaPlayer completed');
     onFinally(false);
   });
   const errorSub = MediaPlayer.addEventListener('error', err => {
