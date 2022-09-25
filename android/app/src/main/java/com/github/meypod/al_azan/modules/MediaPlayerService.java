@@ -330,11 +330,4 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
       player = null;
     }
   }
-
-
-  @Override
-  public void onDestroy() {
-    destroy();
-    super.onDestroy();
-  }
 }

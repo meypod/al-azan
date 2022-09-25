@@ -48,10 +48,6 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     if (!isServiceBound) {
       return;
     }
-
-    if (mediaPlayerService != null) {
-      mediaPlayerService.destroy();
-    }
     unbindFromService();
   }
 
@@ -70,10 +66,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
 
   @Override
   public void onServiceDisconnected(ComponentName name) {
-    if (mediaPlayerService != null) {
-      mediaPlayerService.destroy();
-    }
-    isServiceBound = false;
+    unbindFromService();
   }
 
   @Override
@@ -96,11 +89,15 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   }
 
   private void unbindFromService() {
+    if (mediaPlayerService != null) {
+      mediaPlayerService.destroy();
+      mediaPlayerService = null;
+    }
     if (isServiceBound) {
       ctx.unbindService(this);
-      isServiceBound = false;
-      binder = null;
     }
+    isServiceBound = false;
+    binder = null;
   }
 
   @ReactMethod
@@ -122,9 +119,6 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
 
   @ReactMethod
   public void destroy(Promise promise) {
-    if (mediaPlayerService != null) {
-      mediaPlayerService.destroy();
-    }
     unbindFromService();
     promise.resolve(null);
   }
