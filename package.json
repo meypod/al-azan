@@ -53,7 +53,7 @@
     "@babel/core": "^7.12.9",
     "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@babel/runtime": "^7.12.5",
-    "@callstack/repack": "^2.5.2",
+    "@callstack/repack": "^3.0.0",
     "@lingui/cli": "^3.13.3",
     "@lingui/macro": "^3.13.3",
     "@testing-library/react-hooks": "^8.0.0",
@@ -85,7 +85,7 @@
     "react-test-renderer": "18.0.0",
     "terser-webpack-plugin": "^5.3.1",
     "typescript": "^4.7.2",
-    "webpack": "^5.72.1"
+    "webpack": "^5.74.0"
   },
   "peerDependencies": {
     "react": "*",
