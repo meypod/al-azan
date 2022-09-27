@@ -29,7 +29,7 @@ yarn start
 for creating a release build locally to debug:
 
 ```bash
-cd android && ./gradlew build -PnoDebug -PsignDebug
+cd android && ./gradlew build -PnoDebug
 ```
 
 to uninstall app while keeping data:
@@ -40,7 +40,13 @@ adb shell cmd package uninstall -k com.github.meypod.al_azan
 
 ## Translations
 
-All translations are synced with [translation.io](https://translation.io/) with source code as single source of translation keys. it is only synced during CI build or when `lingui.config.js` file is configured and `yarn sync_and_purge` command is run.
+All translations are synced with [translation.io](https://translation.io/) with source code as single source of translation keys. it is synced during CI build for releases or when `lingui.config.js` file is configured and `yarn sync_and_purge` command is run.
+
+### Translators
+
+#### Turkish
+
+- [@Serince](https://github.com/Serince)
 
 ## Thanks to
 

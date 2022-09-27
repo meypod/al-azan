@@ -20,7 +20,7 @@ App features:
 
 * Homescreen and notification Widgets
 
-* Is localized in English, Persian and Arabic
+* Is localized in English, Persian, Arabic, Turkish
 
 Open source repository:
 https://github.com/meypod/al-azan/

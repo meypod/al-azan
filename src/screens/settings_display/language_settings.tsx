@@ -27,9 +27,13 @@ export function LanguageSettings(props: IStackProps) {
       label: t`Arabic`,
       value: 'ar',
     },
+    {
+      label: t`Turkish`,
+      value: 'tr',
+    },
   ];
 
-  if (!['en', 'fa', 'ar'].includes(lang)) {
+  if (!['en', 'fa', 'ar', 'tr'].includes(lang)) {
     languageEntries.push({
       label: lang + ' (' + t`Unsupported` + ')',
       value: lang,
