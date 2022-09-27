@@ -135,6 +135,29 @@ module.exports = env => {
         }),
       ],
       chunkIds: 'named',
+      splitChunks: {
+        cacheGroups: {
+          locales: {
+            chunks: 'all',
+            enforce: true,
+            reuseExistingChunk: false,
+            test(module) {
+              if (module.resource) {
+                if (/[\\/]locales[\\/]/.test(module.resource)) {
+                  const filename = module.resource.match(
+                    /[\\/]locales[\\/](.*?)([\\/]|$)/,
+                  )[1];
+                  if (filename !== 'en') {
+                    return true;
+                  }
+                }
+              }
+              return false;
+            },
+            name: 'locales', // create file per language when +30 language ?
+          },
+        },
+      },
     },
     module: {
       /**
@@ -233,6 +256,10 @@ module.exports = env => {
         extraChunks: [
           {
             include: /^.+\.local$/,
+            type: 'local',
+          },
+          {
+            include: /^locales/,
             type: 'local',
           },
           {

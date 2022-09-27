@@ -1,0 +1,2 @@
+- (v1.1.0) Add option to force all numbers to be Arabic or Latin
+- (v1.1.1) fix locales not loading on v1.1.0

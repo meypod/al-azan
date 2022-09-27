@@ -45,7 +45,9 @@ export function LanguageSettings(props: IStackProps) {
             // allow some time for forceRTL to work
             setTimeout(restart, 200);
           })
-          .catch(() => {});
+          .catch(err => {
+            console.error(err);
+          });
       }
     });
 

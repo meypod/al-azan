@@ -20,16 +20,10 @@ ScriptManager.shared.addResolver(async scriptId => {
     };
   }
 
-  // In production, get chunks matching the regex from filesystem.
-  if (/^.+\.local$/.test(scriptId)) {
-    return {
-      url: Script.getFileSystemURL(scriptId),
-    };
-  } else {
-    return {
-      url: Script.getRemoteURL(`https://my-domain.dev/${scriptId}`),
-    };
-  }
+  // get all chunks from file system, since we don't have any remote chunks
+  return {
+    url: Script.getFileSystemURL(scriptId),
+  };
 });
 
 setupNotifeeHandlers();

@@ -19,6 +19,7 @@ module.exports = {
     ],
   ],
   presets: ['module:metro-react-native-babel-preset'],
+  comments: true,
   env: {
     production: {
       plugins: ['transform-remove-console'],
