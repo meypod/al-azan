@@ -13,7 +13,6 @@ import android.os.IBinder;
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -21,8 +20,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.github.meypod.al_azan.utils.Utils;
 
-public class MediaPlayerModule extends ReactContextBaseJavaModule implements ServiceConnection,
-    LifecycleEventListener {
+public class MediaPlayerModule extends ReactContextBaseJavaModule implements ServiceConnection {
 
   public static ReactApplicationContext ctx;
   private Promise playerSetupPromise;
@@ -34,7 +32,6 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   MediaPlayerModule(ReactApplicationContext context) {
     super(context);
     ctx = context;
-    context.addLifecycleEventListener(this);
   }
 
   @NonNull
@@ -70,26 +67,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     if (mediaPlayerService != null) {
       mediaPlayerService.destroy();
     }
-    isServiceBound = false;
-  }
-
-  @Override
-  public void onHostResume() {
-  }
-
-  @Override
-  public void onHostPause() {
-  }
-
-  /**
-   * Called when host activity receives destroy event (e.g. Activity#onDestroy. Only called for the
-   * last React activity to be destroyed.
-   */
-  @Override
-  public void onHostDestroy() {
-    if (mediaPlayerService != null) {
-      mediaPlayerService.destroy();
-    }
+    unbindFromService();
   }
 
   private void unbindFromService() {
