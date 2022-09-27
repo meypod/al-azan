@@ -1,1 +1,1 @@
-- add Turkish language (thanks to @Serince)
+- add Turkish language (thanks to Serdar Turgut İnce (@Serince))
