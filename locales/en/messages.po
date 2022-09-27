@@ -137,7 +137,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:61
+#: src/screens/settings_display/language_settings.tsx:67
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -313,7 +313,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:58
+#: src/screens/settings_display/language_settings.tsx:64
 msgid "Language"
 msgstr "Language"
 
@@ -616,6 +616,10 @@ msgstr "To calculate Adhan, We need your location. You can use the \"Find My Loc
 msgid "Tomorrow"
 msgstr "Tomorrow"
 
+#: src/screens/settings_display/language_settings.tsx:31
+msgid "Turkish"
+msgstr "Turkish"
+
 #: src/screens/settings_calculation/index.tsx:100
 msgid "Twilight Angle"
 msgstr "Twilight Angle"
@@ -636,7 +640,7 @@ msgstr "University of Islamic Sciences, Karachi"
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
-#: src/screens/settings_display/language_settings.tsx:34
+#: src/screens/settings_display/language_settings.tsx:38
 msgid "Unsupported"
 msgstr "Unsupported"
 

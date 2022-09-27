@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-09-27 09:42+0330\n"
+"POT-Creation-Date: 2022-09-27 15:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -131,7 +131,7 @@ msgstr "روش محاسبه را انتخاب کنید"
 msgid "Choose High Latitude Setting"
 msgstr "تنظیمات عرض جغرافیایی بالا را انتخاب کنید"
 
-#: src/screens/settings_display/language_settings.tsx:61
+#: src/screens/settings_display/language_settings.tsx:67
 msgid "Choose Language"
 msgstr "انتخاب زبان"
 
@@ -307,7 +307,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "برچسب"
 
-#: src/screens/settings_display/language_settings.tsx:58
+#: src/screens/settings_display/language_settings.tsx:64
 msgid "Language"
 msgstr "زبان"
 
@@ -598,6 +598,10 @@ msgstr "برای محاسبه اذان، به موقعیت مکانی شما ن�
 msgid "Tomorrow"
 msgstr "فردا"
 
+#: src/screens/settings_display/language_settings.tsx:31
+msgid "Turkish"
+msgstr "ترکی"
+
 #: src/screens/settings_calculation/index.tsx:100
 msgid "Twilight Angle"
 msgstr "زاویه گرگ و میش"
@@ -618,7 +622,7 @@ msgstr "دانشگاه علوم اسلامی کراچی"
 msgid "Unresolved (default)"
 msgstr "حل نشده (پیش فرض)"
 
-#: src/screens/settings_display/language_settings.tsx:34
+#: src/screens/settings_display/language_settings.tsx:38
 msgid "Unsupported"
 msgstr "پشتیبانی نشده"
 
