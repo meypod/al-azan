@@ -1,7 +1,6 @@
 import {t} from '@lingui/macro';
 import {useNavigation} from '@react-navigation/native';
 import {
-  IStackProps,
   FlatList,
   Box,
   Button,
@@ -10,6 +9,7 @@ import {
   Input,
   WarningOutlineIcon,
   Text,
+  IBoxProps,
 } from 'native-base';
 import {useEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
@@ -24,7 +24,7 @@ import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
 import {play, stop, destroy} from '@/services/play_sound';
 import {settings, useSettingsHelper} from '@/store/settings';
 
-export function AdhanSettings(props: IStackProps) {
+export function AdhanSettings(props: IBoxProps) {
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
     AdhanEntry | undefined
   >();
