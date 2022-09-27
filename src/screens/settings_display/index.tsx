@@ -15,9 +15,9 @@ export function DisplaySettings(props: IScrollViewProps) {
       {...props}>
       <ThemeSettings mb="4" />
       <LanguageSettings mb="6" />
+      <HidePrayerSettings />
       <TimeFormatSettings mb="6" />
       <NumberFormatSettings mb="6" />
-      <HidePrayerSettings />
     </ScrollView>
   );
 }
