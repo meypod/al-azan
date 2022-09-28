@@ -4,11 +4,13 @@ package com.github.meypod.al_azan.modules;
 import static com.github.meypod.al_azan.utils.Utils.RAW_RESOURCE_PREFIX;
 
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -67,12 +69,17 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     if (mediaPlayerService != null) {
       mediaPlayerService.destroy();
     }
-    unbindFromService();
+    isServiceBound = false;
+    binder = null;
   }
 
   private void unbindFromService() {
     if (isServiceBound) {
-      ctx.unbindService(this);
+      try {
+        ctx.unbindService(this);
+      } catch (Exception e) {
+        Log.d("MediaPlayerModule", "Tried to unbind service while it wasn't binded");
+      }
     }
     isServiceBound = false;
     binder = null;
@@ -91,8 +98,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     playerSetupPromise = promise;
 
     Intent mediaPlayerServiceIntent = new Intent(ctx, MediaPlayerService.class);
-    ctx.startService(mediaPlayerServiceIntent);
-    ctx.bindService(mediaPlayerServiceIntent, this, 0);
+    ctx.bindService(mediaPlayerServiceIntent, this, Context.BIND_AUTO_CREATE);
   }
 
   @ReactMethod
