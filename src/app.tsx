@@ -6,8 +6,6 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useColorMode} from 'native-base';
-import {useEffect, useRef} from 'react';
-import {AppState} from 'react-native';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
@@ -28,9 +26,6 @@ import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {useSettingsHelper} from '@/store/settings';
-import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
-import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -48,27 +43,6 @@ export function App() {
   const {colorMode} = useColorMode();
 
   const isDarkMode = colorMode === 'dark';
-
-  const appState = useRef(AppState.currentState);
-
-  useEffect(() => {
-    const subscription = AppState.addEventListener('change', nextAppState => {
-      if (
-        appState.current.match(/inactive|background/) &&
-        nextAppState === 'active'
-      ) {
-        setNextAdhan();
-        updateWidgets();
-        setUpdateWidgetsAlarms();
-      }
-
-      appState.current = nextAppState;
-    });
-
-    return () => {
-      subscription.remove();
-    };
-  });
 
   if (!appIntroDone) {
     return <Intro></Intro>;
