@@ -145,7 +145,11 @@ android {
         versionCode 19
         versionName "1.2.2"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
-        signingConfig signingConfigs.debug
+        if (!project.hasProperty("noSign")) { 
+            signingConfig signingConfigs.debug
+            println("debug signing the builds by default")
+        }
+       
 
         if (isNewArchitectureEnabled()) {
             // We configure the NDK build only if you decide to opt-in for the New Architecture.
@@ -238,9 +242,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            
-            // Later we remove the sign in ci to sign with release keystore
-            signingConfig signingConfigs.debug
+
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

@@ -75,11 +75,7 @@ jobs:
 
     - name: build
       run: |
-        cd android && ./gradlew --no-daemon build -PnoDebug;
-
-    - name: remove debug certificates
-      run: |
-        zip -d ./android/app/build/outputs/apk/release/app-release.apk "META-INF/*"
+        cd android && ./gradlew --no-daemon build -PnoDebug -PnoSign;
 
     - name: Sign App Bundle
       if: ${{ github.event_name == 'release'}}
