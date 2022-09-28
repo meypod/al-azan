@@ -1,0 +1,1 @@
+- fix app crashing under some condition
