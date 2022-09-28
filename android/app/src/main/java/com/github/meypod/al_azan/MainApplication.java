@@ -2,7 +2,7 @@ package com.github.meypod.al_azan;
 
 import android.app.Application;
 import android.content.Context;
-import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -13,6 +13,7 @@ import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.RestartModulePackage;
 import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -32,7 +33,6 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           packages.add(new RestartModulePackage());
           packages.add(new MediaPlayerModulePackage());
-          packages.add(new ReactNativeBlobUtilPackage());
           packages.add(new NotificationWidgetModulePackage());
           packages.add(new ScreenWidgetModulePackage());
           return packages;
