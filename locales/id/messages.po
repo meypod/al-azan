@@ -5,479 +5,479 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: tr\n"
+"Language: id\n"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "10 min"
-msgstr "10 dk."
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:125
 msgid "15 min"
-msgstr "15 dk."
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:129
 msgid "30 min"
-msgstr "30 dk."
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:117
 msgid "5 min"
-msgstr "15 dk."
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:133
 msgid "60 min"
-msgstr "60 dk."
+msgstr ""
 
 #: src/assets/adhan_entries.ts:23
 msgid "Abdul-Basit Abdus-Samad"
-msgstr "Abdul-Basit Abdus-Samad"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:159
 msgid "Abyad"
-msgstr "Abyad"
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:171
 msgid "Add"
-msgstr "Ekle"
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:144
 #: src/screens/settings_adhan/index.tsx:149
 msgid "Add Custom Adhan"
-msgstr "Ezan sesini kişiselleştir"
+msgstr ""
 
 #: src/screens/settings_reminders/index.tsx:49
 msgid "Add Reminder"
-msgstr "Hatırlatıcı Ekle"
+msgstr ""
 
 #: src/screens/fullscreen_alarm/index.tsx:77
 msgid "Adhan"
-msgstr "Ezan"
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:84
 msgid "Adhan audio file is not downloaded yet"
-msgstr "Ezan sesleri henüz indirilmedi"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:79
 msgid "Advanced Calculation Settings"
-msgstr "Gelişmiş Hesaplama Ayarları"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:158
 msgid "Ahmer"
-msgstr "Ahmer"
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:44
 msgid "An error occured while playing the current track"
-msgstr "Geçerli ses çalınırken bir hata oluştu"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:27
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic"
-msgstr "Arapça"
+msgstr ""
 
 #: src/screens/settings_display/number_format_settings.tsx:32
 msgid "Arabic/Persian"
-msgstr "Arapça/Farsça"
+msgstr ""
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Are you sure you want to delete \"{0}\" ?"
-msgstr "\"{0}\" dosyasını silmek istediğinizden emin misiniz?"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:106
 msgid "Asr Calculation"
-msgstr "İkindi hesabı"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:39
 msgid "At least one prayer time must be shown"
-msgstr "En az bir namaz vakti gösterilmelidir"
+msgstr ""
 
 #: src/intro/intro.tsx:100
 msgid "Attention"
-msgstr "Dikkat"
+msgstr ""
 
 #: src/intro/intro.tsx:33
 #: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Battery Optimization"
-msgstr "Pil iyileştirmesi"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:60
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
-msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı sonuçlar verir. Doğru yöntemi araştırmak ve kullanmak sizin sorumluluğunuzdadır."
+msgstr ""
 
 #: src/intro/intro.tsx:25
 msgid "Calculation"
-msgstr "Hesap"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:62
 msgid "Calculation Method"
-msgstr "Hesaplama yöntemi"
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:168
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:193
 msgid "Cancel"
-msgstr "İptal"
+msgstr ""
 
 #: src/tasks/set_pre_alarm.ts:84
 msgid "Cancel Adhan"
-msgstr "Ezan'ı İptal Et"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:108
 msgid "Choose Asr Calculation Madhab"
-msgstr "İkindi Hesaplama Mezhebini Seçin"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:65
 msgid "Choose Calculation Method"
-msgstr "Hesaplama Yöntemini Seçin"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:86
 msgid "Choose High Latitude Setting"
-msgstr "Yüksek Enlem Ayarını Seçin"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:67
 msgid "Choose Language"
-msgstr "Dil seçiniz"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:121
 msgid "Choose Polar Resolution"
-msgstr "Kutuplar için çözüm"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:150
 msgid "Choose Shafaq method"
-msgstr "Şafak hesaplama methodu"
+msgstr ""
 
 #: src/screens/settings_display/number_format_settings.tsx:25
 msgid "Choose numbering system"
-msgstr "Numaralandırma sistemini seçin"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:246
 msgid "City/Area"
-msgstr "Şehir/Bölge"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:338
 msgid "Clear"
-msgstr "Temizle"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:144
 msgid "Clipboard data does not contain coordinates"
-msgstr "Kopyalanan veriler koordinat içermiyor"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:132
 msgid "Closest City"
-msgstr "En yakın şehir"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:136
 msgid "Closest Date"
-msgstr "En yakın tarih"
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:192
 msgid "Confirm"
-msgstr "Onayla"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:170
 msgid "Coordinates updated"
-msgstr "Koordinatlar güncellendi"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:216
 msgid "Country"
-msgstr "Ülke"
+msgstr ""
 
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
-msgstr "Koyu"
+msgstr ""
 
 #: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Default"
-msgstr "Varsayılan"
+msgstr ""
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:82
 msgid "Delete"
-msgstr "Sil"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
-msgstr "Cihazınıza ve android sürümünüze bağlı olarak, bazen cihazınız pilden tasarruf etmek için uygulamayı arka planda kalpatabilir. Bu durum, alarmların/bildirimlerin iletilmesini engelleyebilir."
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:57
 msgid "Disabled"
-msgstr "Devre dışı bırakıldı"
+msgstr ""
 
 #: src/screens/fullscreen_alarm/index.tsx:105
 #: src/tasks/set_alarm.ts:92
 msgid "Dismiss"
-msgstr "Reddet"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:94
 msgid "Diyanet İşleri Başkanlığı, Turkey"
-msgstr "Diyanet İşleri Başkanlığı, Türkiye"
+msgstr ""
 
 #: src/intro/intro.tsx:83
 msgid "Done"
-msgstr "Tamamlandı"
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:84
 msgid "Edit Reminder"
-msgstr "Hatırlatıcıyı Düzenle"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:34
 msgid "Egyptian General Survey Authority"
-msgstr "Mısır Genel Araştırma Kurumu"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:57
 msgid "Enabled"
-msgstr "Etkinleştir"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:19
 msgid "English"
-msgstr "İngilizce"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:150
 msgid "Error getting clipboard data"
-msgstr "Kopyalanan veriler alınırken hata oluştu"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:236
 msgid "Error in loading countries"
-msgstr "Ülkeler yüklenirken hata oluştu"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:267
 msgid "Error in loading search results"
-msgstr "Arama sonuçları yüklenirken hata oluştu"
+msgstr ""
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:69
 msgid "Error while downloading audio"
-msgstr "Sesler indirilirken hata"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:174
 msgid "Error while getting coordinates"
-msgstr "Koordinatlar alınırken hata oluştu"
+msgstr ""
 
 #. short week day, friday
 #: src/components/week_day_selector.tsx:30
 msgid "FRI"
-msgstr "CUMA"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
-msgstr "Konumumu Bul"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:155
 msgid "General (default)"
-msgstr "Genel (varsayılan)"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:202
 msgid "Getting coordinates"
-msgstr "Koordinatları alma"
+msgstr ""
 
 #: src/intro/intro.tsx:106
 msgid "Got it"
-msgstr "Anlaşıldı"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
-msgstr "Körfez bölgesi"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:113
 msgid "Hanafi"
-msgstr "Hanefi"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:58
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
-msgstr "Gizlenmiş?"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:54
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
 msgid "Hide Prayer Times"
-msgstr "Namaz Vakitlerini Gizle"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:84
 msgid "High Latitude"
-msgstr "Yüksek Enlem"
+msgstr ""
 
 #: src/screens/settings_about/index.tsx:24
 msgid "Home"
-msgstr "Anasayfa"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
-msgstr "Uygulamanın güvenilir bir şekilde çalışabileceğinden emin olmak istiyorsanız, bu uygulama için güç optimizasyonunu devre dışı bırakmanız gerekir. Aşağıdaki düğmeyi kullanarak ilgili ayarları açabilirsiniz."
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:70
 msgid "Kuwait"
-msgstr "Kuveyt"
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:92
 msgid "Label"
-msgstr "Etiket"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:64
 msgid "Language"
-msgstr "Dil"
+msgstr ""
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Latin"
-msgstr "Latin"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:290
 #: src/screens/settings_location/index.tsx:295
 msgid "Latitude"
-msgstr "Enlem"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:302
 msgid "Latitude is invalid"
-msgstr "Enlem geçersiz"
+msgstr ""
 
 #: src/screens/settings_about/index.tsx:30
 msgid "License"
-msgstr "Lisans"
+msgstr ""
 
 #: src/screens/settings_display/theme_settings.tsx:37
 msgid "Light"
-msgstr "Aydınlık"
+msgstr ""
 
 #: src/intro/intro.tsx:21
 msgid "Location"
-msgstr "Konum"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:306
 #: src/screens/settings_location/index.tsx:311
 msgid "Longitude"
-msgstr "Boylam"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:318
 msgid "Longitude is invalid"
-msgstr "Boylam geçersiz"
+msgstr ""
 
 #. short week day, monday
 #: src/components/week_day_selector.tsx:14
 msgid "MON"
-msgstr "Pts."
+msgstr ""
 
 #: src/assets/adhan_entries.ts:19
 msgid "Masjid An Nabawi"
-msgstr "Mescid-i Nebevî"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:92
 msgid "Middle of the Night"
-msgstr "Gece yarısı"
+msgstr ""
 
 #: src/assets/adhan_entries.ts:33
 msgid "Moazen Zade"
-msgstr "Moazen Zade"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:22
 msgid "Moonsighting Committee"
-msgstr "Moonsighting Committee"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:28
 msgid "Muslim World League"
-msgstr "Muslim World League"
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:152
 #: src/screens/settings_adhan/index.tsx:155
 msgid "Name"
-msgstr "Ad"
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:84
 msgid "New Reminder"
-msgstr "Yeni Hatırlatıcı"
+msgstr ""
 
 #: src/intro/intro.tsx:82
 #: src/tasks/set_next_adhan.ts:60
 msgid "Next"
-msgstr "Sonraki"
+msgstr ""
 
 #: src/screens/home/index.tsx:112
 msgid "Next Day"
-msgstr "Ertesi gün"
+msgstr ""
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:86
 msgid "No"
-msgstr "No"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:90
 msgid "None (Automatic)"
-msgstr "Yok (Otomatik)"
+msgstr ""
 
 #: src/screens/settings_notifications/index.tsx:18
 msgid "Notification"
-msgstr "Bildirim"
+msgstr ""
 
 #: src/intro/intro.tsx:29
 msgid "Notification & Sound"
-msgstr "Bildirim & Ses"
+msgstr ""
 
 #: src/screens/settings_display/number_format_settings.tsx:20
 msgid "Numbering system"
-msgstr "Numaralandırma sistemi"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:96
 msgid "One-Seventh of the Night"
-msgstr "Gecenin Yedide Biri"
+msgstr ""
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:44
 msgid "Only six items can be shown at the same time"
-msgstr "Aynı anda yalnızca altı öğe gösterilebilir"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:65
 msgid "Open Battery Optimization Settings"
-msgstr "Pil Optimizasyon Ayarlarını Açın"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:92
 msgid "Open Power Manager Settings"
-msgstr "Güç Yönetimi Ayarlarını Açın"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:333
 msgid "Paste"
-msgstr "Yapıştır"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:23
 msgid "Persian"
-msgstr "Farsça"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:118
 msgid "Polar Resolution"
-msgstr "Kutuplar için hesaplama yöntemi"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:70
 msgid "Power Manager"
-msgstr "Güç Yöneticisi"
+msgstr ""
 
 #: src/screens/home/index.tsx:90
 msgid "Prev Day"
-msgstr "Önceki Gün"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
-msgstr "Katar"
+msgstr ""
 
 #: src/assets/adhan_entries.ts:28
 msgid "Ragheb Mustafa Ghalwash"
-msgstr "Ragheb Mustafa Ghalwash"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
-msgstr "ISNA yöntemi"
+msgstr ""
 
 #: src/tasks/set_reminder.ts:69
 #: src/tasks/set_reminder.ts:87
 msgid "Reminder"
-msgstr "Hatırlatıcı"
+msgstr ""
 
 #: src/components/week_day_selector.tsx:60
 msgid "Repeat"
-msgstr "Tekrarla"
+msgstr ""
 
 #: src/intro/intro.tsx:102
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
-msgstr "Gerekli ayarlar eksik. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
+msgstr ""
 
 #. short week day, saturday
 #: src/components/week_day_selector.tsx:34
 msgid "SAT"
-msgstr "Cmts"
+msgstr ""
 
 #. short week day, sunday
 #: src/components/week_day_selector.tsx:10
 msgid "SUN"
-msgstr "Paz."
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:82
 msgid ""
@@ -485,333 +485,333 @@ msgid ""
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
 "In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
 "and add this app to the list."
-msgstr "Samsung cihazlarının \"Aygıt Bakımı\" adı verilen kendi özel Güç Yöneticisi vardır. Aşağıdaki düğmeye bastıktan sonra, Cihaz Bakımının Pil menüsüne yönlendirileceksiniz. Pil menüsünde \"Uygulama güç yönetimi\"ne ve ardından \"Uykuya alınmayacak uygulamalar\"a dokunun ve bu uygulamayı listeye ekleyin."
+msgstr ""
 
 #: src/screens/settings_adhan/index.tsx:161
 msgid "Selecting a name is required"
-msgstr "Bir ad seçmek gereklidir"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:142
 msgid "Shafaq"
-msgstr "Şafak"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:144
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
-msgstr "Şafak tipi seçimi, sabah namazının zamanını belirlemek için MoonsightingCommittee'nin hesap yönteminde kullanılır."
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:112
 msgid "Shafi (Default)"
-msgstr "Şafi (Varsayılan)"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:106
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
-msgstr "Şii Ithna Ashari, Leva Enstitüsü, Kum"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:112
 msgid "Shia, Institute of Geophysics, University of Tehran"
-msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
+msgstr ""
 
 #: src/screens/home/index.tsx:106
 msgid "Show Today"
-msgstr "Bugünü Göster"
+msgstr ""
 
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
-msgstr "Bildirim widget'ı gösterilsin mi?"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
-msgstr "Singapur"
+msgstr ""
 
 #: src/intro/intro.tsx:84
 msgid "Skip"
-msgstr "Atla"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
 "In that case disable any power saving option for the app."
-msgstr "Bazı cihazların, uygulamanın arka planda öldürülmesini önlemek için Güç Yöneticilerinde ek ayarlara ihtiyacı vardır. Bu durumda, uygulama için herhangi bir güç tasarrufu seçeneğini devre dışı bırakın."
+msgstr ""
 
 #: src/screens/settings_notifications/index.tsx:21
 msgid "Sound"
-msgstr "Ses"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:100
 msgid "Spiritual Administration of Muslims of Russia"
-msgstr "Rusya Müslümanlarının Ruhani Yönetimi"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:55
 msgid "Status"
-msgstr "Durum"
+msgstr ""
 
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
-msgstr "Sistem varsayılanı"
+msgstr ""
 
 #. short week day, thursday
 #: src/components/week_day_selector.tsx:26
 msgid "THU"
-msgstr "Per."
+msgstr ""
 
 #. short week day, tuesday
 #: src/components/week_day_selector.tsx:18
 msgid "TUE"
-msgstr "Salı"
+msgstr ""
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
 "can start using this app."
-msgstr "Bu uygulamayı seçtiğiniz için teşekkürler! Bu uygulamayı kullanmaya başlamadan önce yapmanız gereken bazı şeyler var."
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:64
 msgid "The Gulf Region (Dubai)"
-msgstr "Körfez Bölgesi (Dubai)"
+msgstr ""
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
 msgid "Theme Color"
-msgstr "Tema Rengi"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
 #: src/screens/settings_notifications/index.tsx:16
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:102
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
-msgstr "Zaman"
+msgstr ""
 
 #: src/screens/settings_display/time_format_settings.tsx:11
 msgid "Time format"
-msgstr "Zaman formatı"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:188
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
-msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
+msgstr ""
 
 #: src/tasks/set_next_adhan.ts:65
 #: src/tasks/set_reminder.ts:91
 msgid "Tomorrow"
-msgstr "Yarın"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:31
 msgid "Turkish"
-msgstr "Türkçe"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:100
 msgid "Twilight Angle"
-msgstr "Güneş ufuk açısı"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:46
 msgid "Umm al-Qura University, Makkah"
-msgstr "Umm al-Qura Üniversitesi, Mekke "
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:88
 msgid "Union Organization Islamic de France"
-msgstr "Fransa İslam organizasyon birliği"
+msgstr ""
 
 #: src/adhan/calculation_methods.ts:40
 msgid "University of Islamic Sciences, Karachi"
-msgstr "İslami İlimler Üniversitesi, Karaçi"
+msgstr ""
 
 #: src/screens/settings_calculation/index.tsx:128
 msgid "Unresolved (default)"
-msgstr "Çözümlenmemiş (varsayılan)"
+msgstr ""
 
 #: src/screens/settings_display/language_settings.tsx:38
 msgid "Unsupported"
-msgstr "Desteklenmiyor"
+msgstr ""
 
 #. notification title
 #: src/tasks/set_pre_alarm.ts:65
 msgid "Upcoming alarm"
-msgstr "Yaklaşan alarm"
+msgstr ""
 
 #: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
-msgstr "24 Saat biçimini kullan"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:286
 msgid "Using Coordinates"
-msgstr "Koordinatları Kullan"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:190
 msgid "Using GPS"
-msgstr "GPS kullan"
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:209
 msgid "Using Search"
-msgstr "Aramayı Kullan"
+msgstr ""
 
 #: src/screens/settings_about/index.tsx:20
 msgid "Version"
-msgstr "Sürüm"
+msgstr ""
 
 #. short week day, wednesday
 #: src/components/week_day_selector.tsx:22
 msgid "WED"
-msgstr "Çar."
+msgstr ""
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
-msgstr "Bunları hızlı bir şekilde yapmanıza yardımcı olacağız."
+msgstr ""
 
 #: src/intro/intro.tsx:17
 msgid "Welcome"
-msgstr "Hoş geldiniz"
+msgstr ""
 
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
-msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
+msgstr ""
 
 #: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
-msgstr "Ayrıca panodan kodları yapıştırabilirsiniz"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:55
 msgid "You can hide prayer times you don't want to see in the main screen here:"
-msgstr "Ana ekranda görmek istemediğiniz namaz vakitlerini buradan gizleyebilirsiniz:"
+msgstr ""
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
-msgstr "Widget'ta görmek istemediğiniz namaz vakitlerini buradan gizleyebilirsiniz:"
+msgstr ""
 
 #: src/screens/settings_about/index.tsx:36
 msgid "about.credits"
-msgstr "Ezan seslerinin tüm telif hakları sahiplerine aittir. Harika hizmetleri için translate.io'ya (lingui.js) özel teşekkürler. Bu uygulamayı mümkün kılan ve tüm bu harika kütüphaneleri oluşturan tüm açık kaynak topluluk üyelerine teşekkürler."
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:79
 msgid "about_settings"
-msgstr "Hakkında"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:54
 msgid "adhan_settings"
-msgstr "Ezan"
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "after"
-msgstr "sonra"
+msgstr ""
 
 #: src/adhan/prayer.ts:43
 msgid "asr.prayer"
-msgstr "İkindi"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:64
 msgid "battery_optimization_settings"
-msgstr "Pil iyileştirmesi"
+msgstr ""
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:152
 msgid "before"
-msgstr "önce"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:59
 msgid "calculation_settings"
-msgstr "Hesaplama"
+msgstr ""
 
 #: src/adhan/prayer.ts:39
 msgid "dhuhr.prayer"
-msgstr "Öğle"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:39
 msgid "display_settings"
-msgstr "Görüntüle"
+msgstr ""
 
 #: src/adhan/prayer.ts:31
 msgid "fajr.prayer"
-msgstr "Sabah"
+msgstr ""
 
 #: src/screens/settings_display/number_format_settings.tsx:22
 msgid "forces all numbers to be in the selected system"
-msgstr "tüm sayıları seçilen sistemde olmaya zorlar"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:34
 msgid "fullscreen_alarm"
-msgstr "Ezanı dinle"
+msgstr ""
 
 #: src/navigation/types.ts:26
 msgid "home"
-msgstr "Anasayfa"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:63
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
 msgid "is prayer time hidden?"
-msgstr "namaz vakti gizli mi"
+msgstr ""
 
 #: src/adhan/prayer.ts:55
 msgid "isha.prayer"
-msgstr "Yatsı"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:44
 msgid "location_settings"
-msgstr "Konum"
+msgstr ""
 
 #: src/adhan/prayer.ts:51
 msgid "maghrib.prayer"
-msgstr "Akşam"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:49
 msgid "notification_settings"
-msgstr "Bildirim & Ses"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:74
 msgid "reminders_settings"
-msgstr "Hatırlatıcılar"
+msgstr ""
 
 #: src/navigation/types.ts:30
 msgid "settings"
-msgstr "Ayarlar"
+msgstr ""
 
 #: src/screens/settings_widget/index.tsx:47
 msgid "should notification widget be shown?"
-msgstr "bildirim widget'ı gösterilmeli mi?"
+msgstr ""
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:26
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
-msgstr "{prayerName} gizlenmeli mi?"
+msgstr ""
 
 #: src/adhan/prayer.ts:59
 msgid "sunnah.midnight"
-msgstr "Gece yarısı"
+msgstr ""
 
 #: src/adhan/prayer.ts:35
 msgid "sunrise"
-msgstr "Gün doğumu"
+msgstr ""
 
 #: src/adhan/prayer.ts:47
 msgid "sunset"
-msgstr "Gün batımı"
+msgstr ""
 
 #. screen title
 #: src/navigation/types.ts:69
 msgid "widget_settings"
-msgstr "Widget Ayarları"
+msgstr ""
 
 #: src/screens/settings_reminders/reminder_item.tsx:93
 msgid "{durationInMinutes} min after {prayer}"
-msgstr "{durationInMinutes} dakika sonra {prayer}"
+msgstr ""
 
 #: src/screens/settings_reminders/reminder_item.tsx:92
 msgid "{durationInMinutes} min before {prayer}"
-msgstr "{durationInMinutes} dakika önce {prayer}"
+msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:51
 msgid "{prayerName} notification will be shown"
-msgstr "{prayerName} bildirimi gösterilecek"
+msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:61
 msgid "{prayerName} sound will be played"
-msgstr "{prayerName} sesi çalınacak"
+msgstr ""

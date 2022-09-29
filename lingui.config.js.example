@@ -1,3 +1,5 @@
+// language codes: https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/language_plural_rules.html
+
 module.exports = {
   catalogs: [
     {
@@ -6,7 +8,7 @@ module.exports = {
       exclude: ['**/node_modules/**'],
     },
   ],
-  locales: ['en', 'fa', 'ar', 'tr'],
+  locales: ['en', 'fa', 'ar', 'tr', 'id'],
   sourceLocale: 'en',
   format: 'po',
   fallbackLocales: {
