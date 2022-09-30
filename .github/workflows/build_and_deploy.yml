@@ -62,11 +62,11 @@ jobs:
       run: |
         sed -E -i 's/^.*(fabric|com\.(crashlytics|google\.(firebase|android.gms))).*$//g' ./node_modules/@notifee/react-native/android/build.gradle
 
-    - name: Sync purge and compile lingui.js locales
+    - name: Sync and compile lingui.js locales
       if: ${{ github.event_name == 'release'}}
       run: |
         sed "s/<TRANSLATION_IO_APIKEY>/$TRANSLATION_IO_APIKEY/" lingui.config.js.example > lingui.config.js;
-        yarn sync_and_purge;
+        yarn sync;
       env:
         TRANSLATION_IO_APIKEY: ${{ secrets.TRANSLATION_IO_APIKEY }}
 
