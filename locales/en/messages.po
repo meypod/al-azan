@@ -74,7 +74,6 @@ msgstr "Ahmer"
 msgid "An error occured while playing the current track"
 msgstr "An error occured while playing the current track"
 
-#: src/screens/settings_display/language_settings.tsx:27
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic"
 msgstr "Arabic"
@@ -137,7 +136,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:67
+#: src/screens/settings_display/language_settings.tsx:71
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -230,10 +229,6 @@ msgstr "Egyptian General Survey Authority"
 msgid "Enabled"
 msgstr "Enabled"
 
-#: src/screens/settings_display/language_settings.tsx:19
-msgid "English"
-msgstr "English"
-
 #: src/screens/settings_location/index.tsx:150
 msgid "Error getting clipboard data"
 msgstr "Error getting clipboard data"
@@ -313,7 +308,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:64
+#: src/screens/settings_display/language_settings.tsx:68
 msgid "Language"
 msgstr "Language"
 
@@ -433,10 +428,6 @@ msgstr "Open Power Manager Settings"
 #: src/screens/settings_location/index.tsx:333
 msgid "Paste"
 msgstr "Paste"
-
-#: src/screens/settings_display/language_settings.tsx:23
-msgid "Persian"
-msgstr "Persian"
 
 #: src/screens/settings_calculation/index.tsx:118
 msgid "Polar Resolution"
@@ -616,10 +607,6 @@ msgstr "To calculate Adhan, We need your location. You can use the \"Find My Loc
 msgid "Tomorrow"
 msgstr "Tomorrow"
 
-#: src/screens/settings_display/language_settings.tsx:31
-msgid "Turkish"
-msgstr "Turkish"
-
 #: src/screens/settings_calculation/index.tsx:100
 msgid "Twilight Angle"
 msgstr "Twilight Angle"
@@ -640,7 +627,7 @@ msgstr "University of Islamic Sciences, Karachi"
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
-#: src/screens/settings_display/language_settings.tsx:38
+#: src/screens/settings_display/language_settings.tsx:42
 msgid "Unsupported"
 msgstr "Unsupported"
 

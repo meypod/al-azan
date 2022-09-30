@@ -16,23 +16,23 @@ export function LanguageSettings(props: IStackProps) {
 
   const languageEntries: LanguageEntry[] = [
     {
-      label: t`English`,
+      label: `English`,
       value: 'en',
     },
     {
-      label: t`Persian`,
+      label: `فارسی`,
       value: 'fa',
     },
     {
-      label: t`Arabic`,
+      label: `العربیة`,
       value: 'ar',
     },
     {
-      label: t`Turkish`,
+      label: `Türkçe`,
       value: 'tr',
     },
     {
-      label: t`Indonesian`,
+      label: `Indonesia`,
       value: 'id',
     },
   ];

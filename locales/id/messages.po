@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-09-30 09:18+0330\n"
+"POT-Creation-Date: 2022-09-30 09:40+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,7 +70,6 @@ msgstr "Ahmer"
 msgid "An error occured while playing the current track"
 msgstr "Eror saat memutar track audio"
 
-#: src/screens/settings_display/language_settings.tsx:27
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic"
 msgstr "Arab"
@@ -133,7 +132,7 @@ msgstr "Pilih Metode Perhitungan"
 msgid "Choose High Latitude Setting"
 msgstr "Pilih Pengaturan Lintang Tinggi"
 
-#: src/screens/settings_display/language_settings.tsx:67
+#: src/screens/settings_display/language_settings.tsx:71
 msgid "Choose Language"
 msgstr "Pilih Bahasa"
 
@@ -226,10 +225,6 @@ msgstr "Otoritas Umum Mesir"
 msgid "Enabled"
 msgstr "Aktif"
 
-#: src/screens/settings_display/language_settings.tsx:19
-msgid "English"
-msgstr "English"
-
 #: src/screens/settings_location/index.tsx:150
 msgid "Error getting clipboard data"
 msgstr "Tidak mendapatkan data clipboard"
@@ -309,7 +304,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Judul"
 
-#: src/screens/settings_display/language_settings.tsx:64
+#: src/screens/settings_display/language_settings.tsx:68
 msgid "Language"
 msgstr "Bahasa"
 
@@ -429,10 +424,6 @@ msgstr "Buka Pengaturan Power Manager"
 #: src/screens/settings_location/index.tsx:333
 msgid "Paste"
 msgstr "Tempel"
-
-#: src/screens/settings_display/language_settings.tsx:23
-msgid "Persian"
-msgstr "Persia"
 
 #: src/screens/settings_calculation/index.tsx:118
 msgid "Polar Resolution"
@@ -604,10 +595,6 @@ msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan
 msgid "Tomorrow"
 msgstr "Besok"
 
-#: src/screens/settings_display/language_settings.tsx:31
-msgid "Turkish"
-msgstr "Turkish"
-
 #: src/screens/settings_calculation/index.tsx:100
 msgid "Twilight Angle"
 msgstr "Sudut Senja"
@@ -628,7 +615,7 @@ msgstr "Universitas Ilmu Islam, Karachi"
 msgid "Unresolved (default)"
 msgstr "Tidak ada (default)"
 
-#: src/screens/settings_display/language_settings.tsx:38
+#: src/screens/settings_display/language_settings.tsx:42
 msgid "Unsupported"
 msgstr "Tidak didukung"
 
