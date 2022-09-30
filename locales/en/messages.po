@@ -300,6 +300,10 @@ msgstr "Home"
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 
+#: src/adhan/calculation_methods.ts:118
+msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
+msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
+
 #: src/adhan/calculation_methods.ts:70
 msgid "Kuwait"
 msgstr "Kuwait"

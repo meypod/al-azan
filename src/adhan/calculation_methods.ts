@@ -113,4 +113,10 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
     info: 'Uses Fajr angle of 17.7, Maghrib angle of 4.5 and Isha angle of 14',
     get: CalculationMethod.Tehran,
   },
+
+  Kemenag: {
+    label: t`Kementrian Agama Republik Indonesia (KEMENAG)`,
+    info: 'Uses Fajr angle of 20.0 and Isha angle of 18',
+    get: () => new CalculationParameters('Other', 20.0, 18.0),
+  },
 };
