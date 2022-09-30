@@ -48,6 +48,10 @@ All translations are synced with [translation.io](https://translation.io/) with 
 
 - [@Serince](https://github.com/Serince)
 
+#### Indonesian
+
+- [@muava12](https://github.com/muava12)
+
 ## Thanks to
 
 react-native community members.
