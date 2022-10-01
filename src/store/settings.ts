@@ -21,6 +21,7 @@ export type Reminder = {
   prayer: Prayer;
   /** in milliseconds. negative to set before, positive to set after */
   duration: number;
+  /** has a value of `-1` or `+1` */
   durationModifier: number;
 };
 
