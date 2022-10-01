@@ -1,7 +1,5 @@
 import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
 import {produce} from 'immer';
-// eslint-disable-next-line
-import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';

@@ -1,6 +1,5 @@
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
-// eslint-disable-next-line
 import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
