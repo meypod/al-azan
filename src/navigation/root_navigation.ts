@@ -10,7 +10,7 @@ type Action = [Function, unknown[]];
 const actionQueue: Action[] = [];
 
 function pushToQueue(action: Action) {
-  if (actionQueue.length >= 3) {
+  if (actionQueue.length >= 1) {
     actionQueue.shift();
   }
   actionQueue.push(action);
