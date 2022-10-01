@@ -22,7 +22,7 @@ module.exports = {
   comments: true,
   env: {
     production: {
-      plugins: ['transform-remove-console'],
+      plugins: [['transform-remove-console', {exclude: ['error', 'warn']}]],
     },
   },
 };
