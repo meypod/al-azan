@@ -29,6 +29,7 @@ export function RemindersSettings(props: IBoxProps) {
 
   const onReminderDelete = (newReminderState: Reminder) => {
     settings.getState().deleteReminder(newReminderState);
+    // clears the reminder trigger:
     setReminders({reminders: [{...newReminderState, enabled: false}]});
   };
 
