@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {IStackProps, FlatList, Box, Button} from 'native-base';
+import {FlatList, Box, Button, IBoxProps} from 'native-base';
 import {useState} from 'react';
 
 import {EditReminderModal} from '@/screens/settings_reminders/edit_reminder_modal';
@@ -7,7 +7,7 @@ import {ReminderItem} from '@/screens/settings_reminders/reminder_item';
 import {Reminder, settings, useSettingsHelper} from '@/store/settings';
 import {setReminders} from '@/tasks/set_reminder';
 
-export function RemindersSettings(props: IStackProps) {
+export function RemindersSettings(props: IBoxProps) {
   const [reminderEntries] = useSettingsHelper('REMINDERS');
   const [creatingReminder, setCreatingReminder] =
     useState<Partial<Reminder> | null>(null);
