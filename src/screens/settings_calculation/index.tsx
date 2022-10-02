@@ -12,12 +12,20 @@ import {
 
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
+import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
 import {useCalcSettingsHelper} from '@/store/calculation_settings';
 
 export function CalculationSettings(props: IScrollViewProps) {
   const [calculationMethodKey, setCalculationMethodKey] = useCalcSettingsHelper(
     'CALCULATION_METHOD_KEY',
   );
+
+  const [, setFajrAdjustment] = useCalcSettingsHelper('FAJR_ADJUSTMENT');
+  const [, setSunriseAdjustment] = useCalcSettingsHelper('SUNRISE_ADJUSTMENT');
+  const [, setDhuhrAdjustment] = useCalcSettingsHelper('DHUHR_ADJUSTMENT');
+  const [, setAsrAdjustment] = useCalcSettingsHelper('ASR_ADJUSTMENT');
+  const [, setMaghribAdjustment] = useCalcSettingsHelper('MAGHRIB_ADJUSTMENT');
+  const [, setIshaAdjustment] = useCalcSettingsHelper('ISHA_ADJUSTMENT');
 
   const [highLatitudeRuleSetting, setHighLatitudeRuleSetting] =
     useCalcSettingsHelper('HIGH_LATITUDE_RULE');
@@ -32,6 +40,12 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   const calculationMethodKeyChanged = (itemValue: string) => {
     setCalculationMethodKey(itemValue);
+    setFajrAdjustment(0);
+    setSunriseAdjustment(0);
+    setDhuhrAdjustment(0);
+    setAsrAdjustment(0);
+    setMaghribAdjustment(0);
+    setIshaAdjustment(0);
   };
 
   const highLatitudeSettingChanged = (itemValue: string) => {
@@ -73,6 +87,17 @@ export function CalculationSettings(props: IScrollViewProps) {
           ))}
         </Select>
       </FormControl>
+      <Accordion mb="3" borderRadius={0}>
+        <Accordion.Item>
+          <Accordion.Summary>
+            {t`Adjustments`}
+            <MenuIcon></MenuIcon>
+          </Accordion.Summary>
+          <Accordion.Details>
+            <AdjustmentSettings />
+          </Accordion.Details>
+        </Accordion.Item>
+      </Accordion>
       <Accordion mb="5" borderRadius={0}>
         <Accordion.Item>
           <Accordion.Summary>

@@ -80,17 +80,26 @@ function getPrayerTimesOptionsFromSettings() {
   if (!isMinimumSettingsAvailable()) return;
   const state = calcSettings.getState();
 
-  const lat = state['LOCATION_LAT']!;
-  const long = state['LOCATION_LONG']!;
-  const calcMethodKey = state['CALCULATION_METHOD_KEY'];
-  const highLatRuleSetting = state['HIGH_LATITUDE_RULE'];
-  const asrCalcSetting = state['ASR_CALCULATION'];
-  const shafaqCalcSetting = state['SHAFAQ'];
-  const polarCicleResolutionSetting = state['POLAR_RESOLUTION'];
+  const lat = state.LOCATION_LAT!;
+  const long = state.LOCATION_LONG!;
+  const calcMethodKey = state.CALCULATION_METHOD_KEY;
+  const highLatRuleSetting = state.HIGH_LATITUDE_RULE;
+  const asrCalcSetting = state.ASR_CALCULATION;
+  const shafaqCalcSetting = state.SHAFAQ;
+  const polarCicleResolutionSetting = state.POLAR_RESOLUTION;
 
   const prayerTimeOptions: PrayerTimesOptions = {
     calculationParameters: CalculationMethods[calcMethodKey!].get(),
     coordinates: new Coordinates(lat, long),
+  };
+
+  prayerTimeOptions.calculationParameters.adjustments = {
+    asr: state.ASR_ADJUSTMENT,
+    dhuhr: state.DHUHR_ADJUSTMENT,
+    fajr: state.FAJR_ADJUSTMENT,
+    isha: state.ISHA_ADJUSTMENT,
+    maghrib: state.MAGHRIB_ADJUSTMENT,
+    sunrise: state.SUNRISE_ADJUSTMENT,
   };
 
   switch (highLatRuleSetting) {

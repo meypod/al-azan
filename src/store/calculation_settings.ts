@@ -1,5 +1,6 @@
 import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
 import {produce} from 'immer';
+import {useCallback} from 'react';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
@@ -10,12 +11,16 @@ const CALC_SETTINGS_STORAGE_KEY = 'CALC_SETTINGS_STORAGE';
 
 export const ADHAN_NOTIFICATION_SUFFIX = '_NOTIFY';
 export const ADHAN_SOUND_SUFFIX = '_SOUND';
+export const ADHAN_ADJUSTMENT_SUFFIX = '_ADJUSTMENT';
 
 export function getAdhanSettingKey(
   prayer: Prayer,
-  k: 'sound' | 'notify',
+  k: 'sound' | 'notify' | 'adjustment',
 ): keyof CalcSettingsStore {
-  if (k === 'notify') {
+  if (k === 'adjustment') {
+    return (prayer.toUpperCase() +
+      ADHAN_ADJUSTMENT_SUFFIX) as keyof CalcSettingsStore;
+  } else if (k === 'notify') {
     return (prayer.toUpperCase() +
       ADHAN_NOTIFICATION_SUFFIX) as keyof CalcSettingsStore;
   } else {
@@ -52,6 +57,16 @@ type CalcSettingsStore = {
   ISHA_SOUND?: boolean;
   MIDNIGHT_SOUND?: boolean;
 
+  // prayer adjustment settings
+  FAJR_ADJUSTMENT: number;
+  SUNRISE_ADJUSTMENT: number;
+  DHUHR_ADJUSTMENT: number;
+  ASR_ADJUSTMENT: number;
+  SUNSET_ADJUSTMENT: number;
+  MAGHRIB_ADJUSTMENT: number;
+  ISHA_ADJUSTMENT: number;
+  MIDNIGHT_ADJUSTMENT: number;
+
   setSetting: <T extends keyof CalcSettingsStore>(
     key: T,
     val: CalcSettingsStore[T],
@@ -74,6 +89,15 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
       ASR_CALCULATION: Madhab.Shafi,
       SHAFAQ: Shafaq.General,
       POLAR_RESOLUTION: PolarCircleResolution.Unresolved,
+
+      FAJR_ADJUSTMENT: 0,
+      SUNRISE_ADJUSTMENT: 0,
+      DHUHR_ADJUSTMENT: 0,
+      ASR_ADJUSTMENT: 0,
+      SUNSET_ADJUSTMENT: 0,
+      MAGHRIB_ADJUSTMENT: 0,
+      ISHA_ADJUSTMENT: 0,
+      MIDNIGHT_ADJUSTMENT: 0,
 
       // general
       setSetting: <T extends keyof CalcSettingsStore>(
@@ -110,6 +134,26 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
+      version: 1,
+      migrate: (persistedState, version) => {
+        /* eslint-disable no-fallthrough */
+        // fall through cases is exactly the use case for migration.
+        switch (version) {
+          case 0:
+            // added method adjustments field in version 1
+            (persistedState as CalcSettingsStore).FAJR_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).SUNRISE_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).DHUHR_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).ASR_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).SUNSET_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).MAGHRIB_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).ISHA_ADJUSTMENT = 0;
+            (persistedState as CalcSettingsStore).MIDNIGHT_ADJUSTMENT = 0;
+            break;
+        }
+        /* eslint-enable no-fallthrough */
+        return persistedState as CalcSettingsStore;
+      },
     },
   ),
 );
@@ -119,7 +163,11 @@ export const useCalcSettings = create(calcSettings);
 export function useCalcSettingsHelper<T extends keyof CalcSettingsStore>(
   key: T,
 ) {
-  return useCalcSettings(state => [state[key], state.setSettingCurry(key)]) as [
+  const state = useCalcSettings(s => s[key]);
+  const setterCurry = useCalcSettings(s => s.setSettingCurry);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const setCallback = useCallback(setterCurry(key), [key]);
+  return [state, setCallback] as [
     CalcSettingsStore[T],
     (val: CalcSettingsStore[T]) => void,
   ];

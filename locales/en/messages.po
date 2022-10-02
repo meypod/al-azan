@@ -37,7 +37,7 @@ msgstr "60 min"
 msgid "Abdul-Basit Abdus-Samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
-#: src/screens/settings_calculation/index.tsx:159
+#: src/screens/settings_calculation/index.tsx:184
 msgid "Abyad"
 msgstr "Abyad"
 
@@ -50,7 +50,7 @@ msgstr "Add"
 msgid "Add Custom Adhan"
 msgstr "Add Custom Adhan"
 
-#: src/screens/settings_reminders/index.tsx:49
+#: src/screens/settings_reminders/index.tsx:50
 msgid "Add Reminder"
 msgstr "Add Reminder"
 
@@ -62,11 +62,15 @@ msgstr "Adhan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Adhan audio file is not downloaded yet"
 
-#: src/screens/settings_calculation/index.tsx:79
+#: src/screens/settings_calculation/index.tsx:93
+msgid "Adjustments"
+msgstr "Adjustments"
+
+#: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
 msgstr "Advanced Calculation Settings"
 
-#: src/screens/settings_calculation/index.tsx:158
+#: src/screens/settings_calculation/index.tsx:183
 msgid "Ahmer"
 msgstr "Ahmer"
 
@@ -86,7 +90,7 @@ msgstr "Arabic/Persian"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
 
-#: src/screens/settings_calculation/index.tsx:106
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Asr Calculation"
 msgstr "Asr Calculation"
 
@@ -103,7 +107,7 @@ msgstr "Attention"
 msgid "Battery Optimization"
 msgstr "Battery Optimization"
 
-#: src/screens/settings_calculation/index.tsx:60
+#: src/screens/settings_calculation/index.tsx:74
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 
@@ -111,7 +115,7 @@ msgstr "Calculating Adhan has many different methods. Each method provides diffe
 msgid "Calculation"
 msgstr "Calculation"
 
-#: src/screens/settings_calculation/index.tsx:62
+#: src/screens/settings_calculation/index.tsx:76
 msgid "Calculation Method"
 msgstr "Calculation Method"
 
@@ -124,15 +128,15 @@ msgstr "Cancel"
 msgid "Cancel Adhan"
 msgstr "Cancel Adhan"
 
-#: src/screens/settings_calculation/index.tsx:108
+#: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
 msgstr "Choose Asr Calculation Madhab"
 
-#: src/screens/settings_calculation/index.tsx:65
+#: src/screens/settings_calculation/index.tsx:79
 msgid "Choose Calculation Method"
 msgstr "Choose Calculation Method"
 
-#: src/screens/settings_calculation/index.tsx:86
+#: src/screens/settings_calculation/index.tsx:111
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
@@ -140,11 +144,11 @@ msgstr "Choose High Latitude Setting"
 msgid "Choose Language"
 msgstr "Choose Language"
 
-#: src/screens/settings_calculation/index.tsx:121
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Choose Polar Resolution"
 msgstr "Choose Polar Resolution"
 
-#: src/screens/settings_calculation/index.tsx:150
+#: src/screens/settings_calculation/index.tsx:175
 msgid "Choose Shafaq method"
 msgstr "Choose Shafaq method"
 
@@ -164,11 +168,11 @@ msgstr "Clear"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
 
-#: src/screens/settings_calculation/index.tsx:132
+#: src/screens/settings_calculation/index.tsx:157
 msgid "Closest City"
 msgstr "Closest City"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:161
 msgid "Closest Date"
 msgstr "Closest Date"
 
@@ -258,7 +262,7 @@ msgstr "FRI"
 msgid "Find My Location"
 msgstr "Find My Location"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation/index.tsx:180
 msgid "General (default)"
 msgstr "General (default)"
 
@@ -274,7 +278,7 @@ msgstr "Got it"
 msgid "Gulf region"
 msgstr "Gulf region"
 
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:138
 msgid "Hanafi"
 msgstr "Hanafi"
 
@@ -288,7 +292,7 @@ msgstr "Hidden?"
 msgid "Hide Prayer Times"
 msgstr "Hide Prayer Times"
 
-#: src/screens/settings_calculation/index.tsx:84
+#: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "High Latitude"
 
@@ -359,7 +363,7 @@ msgstr "MON"
 msgid "Masjid An Nabawi"
 msgstr "Masjid An Nabawi"
 
-#: src/screens/settings_calculation/index.tsx:92
+#: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Middle of the Night"
 
@@ -397,7 +401,7 @@ msgstr "Next Day"
 msgid "No"
 msgstr "No"
 
-#: src/screens/settings_calculation/index.tsx:90
+#: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
@@ -413,7 +417,7 @@ msgstr "Notification & Sound"
 msgid "Numbering system"
 msgstr "Numbering system"
 
-#: src/screens/settings_calculation/index.tsx:96
+#: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
 msgstr "One-Seventh of the Night"
 
@@ -433,7 +437,7 @@ msgstr "Open Power Manager Settings"
 msgid "Paste"
 msgstr "Paste"
 
-#: src/screens/settings_calculation/index.tsx:118
+#: src/screens/settings_calculation/index.tsx:143
 msgid "Polar Resolution"
 msgstr "Polar Resolution"
 
@@ -496,11 +500,11 @@ msgstr ""
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
-#: src/screens/settings_calculation/index.tsx:142
+#: src/screens/settings_calculation/index.tsx:167
 msgid "Shafaq"
 msgstr "Shafaq"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:169
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
@@ -510,7 +514,7 @@ msgstr ""
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:137
 msgid "Shafi (Default)"
 msgstr "Shafi (Default)"
 
@@ -611,7 +615,7 @@ msgstr "To calculate Adhan, We need your location. You can use the \"Find My Loc
 msgid "Tomorrow"
 msgstr "Tomorrow"
 
-#: src/screens/settings_calculation/index.tsx:100
+#: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
 msgstr "Twilight Angle"
 
@@ -627,7 +631,7 @@ msgstr "Union Organization Islamic de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "University of Islamic Sciences, Karachi"
 
-#: src/screens/settings_calculation/index.tsx:128
+#: src/screens/settings_calculation/index.tsx:153
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
@@ -705,6 +709,11 @@ msgstr "About"
 #: src/navigation/types.ts:54
 msgid "adhan_settings"
 msgstr "Adhan"
+
+#. shown under adjustment accordion in calculation settings
+#: src/screens/settings_calculation/adjustment_settings.tsx:16
+msgid "adjustment.hint"
+msgstr "Number of minutes that will be added to the calculated times"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "after"

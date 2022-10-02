@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-09-30 10:18+0330\n"
+"POT-Creation-Date: 2022-10-02 21:40+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Abdul-Basit Abdus-Samad\n"
 ""
 
-#: src/screens/settings_calculation/index.tsx:159
+#: src/screens/settings_calculation/index.tsx:184
 msgid "Abyad"
 msgstr "Abyad"
 
@@ -46,7 +46,7 @@ msgstr "Tambah"
 msgid "Add Custom Adhan"
 msgstr "Tambah Suara Adzan Kustom"
 
-#: src/screens/settings_reminders/index.tsx:49
+#: src/screens/settings_reminders/index.tsx:50
 msgid "Add Reminder"
 msgstr "Buat Pengingat"
 
@@ -58,11 +58,15 @@ msgstr "Adzan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Berkas audio adzan belum diunduh"
 
-#: src/screens/settings_calculation/index.tsx:79
-msgid "Advanced Calculation Settings"
-msgstr "Pengaturan Perhitungan Lanjutan"
+#: src/screens/settings_calculation/index.tsx:93
+msgid "Adjustments"
+msgstr "Penyesuaian"
 
-#: src/screens/settings_calculation/index.tsx:158
+#: src/screens/settings_calculation/index.tsx:104
+msgid "Advanced Calculation Settings"
+msgstr "Pengaturan Lanjutan"
+
+#: src/screens/settings_calculation/index.tsx:183
 msgid "Ahmer"
 msgstr "Ahmer"
 
@@ -82,7 +86,7 @@ msgstr "Arab/Persia"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
 
-#: src/screens/settings_calculation/index.tsx:106
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Asr Calculation"
 msgstr "Perhitungan Waktu Ashar"
 
@@ -99,7 +103,7 @@ msgstr "Perhatian"
 msgid "Battery Optimization"
 msgstr "Optimasi Baterai"
 
-#: src/screens/settings_calculation/index.tsx:60
+#: src/screens/settings_calculation/index.tsx:74
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Perhitungan Adzan memiliki banyak metode yang berbeda. Setiap metode menghasilkan waktu azan yang berbeda. Pilih motode perhitungan yang sesuai."
 
@@ -107,7 +111,7 @@ msgstr "Perhitungan Adzan memiliki banyak metode yang berbeda. Setiap metode men
 msgid "Calculation"
 msgstr "Perhitungan"
 
-#: src/screens/settings_calculation/index.tsx:62
+#: src/screens/settings_calculation/index.tsx:76
 msgid "Calculation Method"
 msgstr "Metode Perhitungan"
 
@@ -120,15 +124,15 @@ msgstr "Batal"
 msgid "Cancel Adhan"
 msgstr "Lewati Adzan"
 
-#: src/screens/settings_calculation/index.tsx:108
+#: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
 msgstr "Pilih Madzhab Perhitungan Waktu Ashar"
 
-#: src/screens/settings_calculation/index.tsx:65
+#: src/screens/settings_calculation/index.tsx:79
 msgid "Choose Calculation Method"
 msgstr "Pilih Metode Perhitungan"
 
-#: src/screens/settings_calculation/index.tsx:86
+#: src/screens/settings_calculation/index.tsx:111
 msgid "Choose High Latitude Setting"
 msgstr "Pilih Pengaturan Lintang Tinggi"
 
@@ -136,11 +140,11 @@ msgstr "Pilih Pengaturan Lintang Tinggi"
 msgid "Choose Language"
 msgstr "Pilih Bahasa"
 
-#: src/screens/settings_calculation/index.tsx:121
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Choose Polar Resolution"
 msgstr "Pilih Resolusi Kutub"
 
-#: src/screens/settings_calculation/index.tsx:150
+#: src/screens/settings_calculation/index.tsx:175
 msgid "Choose Shafaq method"
 msgstr "Pilih metode Shafaq"
 
@@ -160,17 +164,17 @@ msgstr "Bersihkan"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
-#: src/screens/settings_calculation/index.tsx:132
+#: src/screens/settings_calculation/index.tsx:157
 msgid "Closest City"
 msgstr "Kota terdekat"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:161
 msgid "Closest Date"
 msgstr "Tanggal terdekat"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:192
 msgid "Confirm"
-msgstr "Mengonfirmasi"
+msgstr "Selesai"
 
 #: src/screens/settings_location/index.tsx:170
 msgid "Coordinates updated"
@@ -194,7 +198,7 @@ msgstr "Hapus"
 
 #: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
-msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang perangkat Anda mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
+msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa perangkat mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
 
 #: src/screens/settings_battery_optimizations/index.tsx:57
 msgid "Disabled"
@@ -254,9 +258,9 @@ msgstr "JUM"
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation/index.tsx:180
 msgid "General (default)"
-msgstr "Umum (bawaan)"
+msgstr "Umum (default)"
 
 #: src/screens/settings_location/index.tsx:202
 msgid "Getting coordinates"
@@ -270,7 +274,7 @@ msgstr "Mengerti"
 msgid "Gulf region"
 msgstr "Wilayah Gulf"
 
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:138
 msgid "Hanafi"
 msgstr "Hanafi"
 
@@ -284,7 +288,7 @@ msgstr "Sembunyikan?"
 msgid "Hide Prayer Times"
 msgstr "Sembunyikan Waktu Sholat"
 
-#: src/screens/settings_calculation/index.tsx:84
+#: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "Lintang Tinggi"
 
@@ -319,7 +323,7 @@ msgstr "Latin"
 #: src/screens/settings_location/index.tsx:290
 #: src/screens/settings_location/index.tsx:295
 msgid "Latitude"
-msgstr "Latitude"
+msgstr "Latitud"
 
 #: src/screens/settings_location/index.tsx:302
 msgid "Latitude is invalid"
@@ -355,7 +359,7 @@ msgstr "SEN"
 msgid "Masjid An Nabawi"
 msgstr "Masjid Nabawi"
 
-#: src/screens/settings_calculation/index.tsx:92
+#: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Pertengahan malam"
 
@@ -387,13 +391,13 @@ msgstr "Lanjut"
 
 #: src/screens/home/index.tsx:112
 msgid "Next Day"
-msgstr "Hari berikutnya"
+msgstr "Hari Brkut"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:86
 msgid "No"
 msgstr "Tidak"
 
-#: src/screens/settings_calculation/index.tsx:90
+#: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "Tidak ada (Otomatis)"
 
@@ -409,7 +413,7 @@ msgstr "Notifikasi & Suara"
 msgid "Numbering system"
 msgstr "Sistem penomoran"
 
-#: src/screens/settings_calculation/index.tsx:96
+#: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
 msgstr "Sepertujuh Malam"
 
@@ -419,17 +423,17 @@ msgstr "Hanya enam item yang dapat ditampilkan secara bersamaan"
 
 #: src/screens/settings_battery_optimizations/index.tsx:65
 msgid "Open Battery Optimization Settings"
-msgstr "Buka Pengaturan Pengoptimalan Baterai"
+msgstr "Buka Pengaturan"
 
 #: src/screens/settings_battery_optimizations/index.tsx:92
 msgid "Open Power Manager Settings"
-msgstr "Buka Pengaturan Power Manager"
+msgstr "Buka Pengaturan"
 
 #: src/screens/settings_location/index.tsx:333
 msgid "Paste"
 msgstr "Tempel"
 
-#: src/screens/settings_calculation/index.tsx:118
+#: src/screens/settings_calculation/index.tsx:143
 msgid "Polar Resolution"
 msgstr "Resolusi Kutub"
 
@@ -439,7 +443,7 @@ msgstr "Pengelola Daya"
 
 #: src/screens/home/index.tsx:90
 msgid "Prev Day"
-msgstr "Hari Sebelumnya"
+msgstr "Hari Sblum"
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
@@ -490,20 +494,20 @@ msgstr "Perangkat Samsung memiliki Power Manajer kustom mereka sendiri yang dise
 msgid "Selecting a name is required"
 msgstr "Nama wajib diisi"
 
-#: src/screens/settings_calculation/index.tsx:142
+#: src/screens/settings_calculation/index.tsx:167
 msgid "Shafaq"
 msgstr "Shafaq"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:169
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "Shafaq digunakan metode Komite Moonsighting untuk menentukan jenis senja yang digunakan untuk menentukan waktu Isya'"
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:137
 msgid "Shafi (Default)"
-msgstr "Syafi'i (Default)"
+msgstr "Syafi'i (default)"
 
 #: src/adhan/calculation_methods.ts:106
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
@@ -568,7 +572,7 @@ msgstr "SEL"
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
 "can start using this app."
-msgstr "Terima kasih telah memilih aplikasi ini! Lakukan pengaturan awal sebelum mulai menggunakan aplikasi ini."
+msgstr "Terima kasih telah memilih Al-Azan! Lakukan pengaturan awal sebelum mulai menggunakan aplikasi ini."
 
 #: src/adhan/calculation_methods.ts:64
 msgid "The Gulf Region (Dubai)"
@@ -599,7 +603,7 @@ msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan
 msgid "Tomorrow"
 msgstr "Besok"
 
-#: src/screens/settings_calculation/index.tsx:100
+#: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
 msgstr "Sudut Senja"
 
@@ -615,7 +619,7 @@ msgstr "Serikat Organisasi Islam Perancis (UOIF)"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Universitas Ilmu Islam, Karachi"
 
-#: src/screens/settings_calculation/index.tsx:128
+#: src/screens/settings_calculation/index.tsx:153
 msgid "Unresolved (default)"
 msgstr "Tidak ada (default)"
 
@@ -655,11 +659,11 @@ msgstr "KAM"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
-msgstr "Tenang, hanya membutuhkan waktu singkat saja."
+msgstr "Pengaturan hanya butuh beberapa langkah saja."
 
 #: src/intro/intro.tsx:17
 msgid "Welcome"
-msgstr "Selamat datang"
+msgstr "Selamat Datang!"
 
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
@@ -690,6 +694,11 @@ msgstr "Tentang"
 #: src/navigation/types.ts:54
 msgid "adhan_settings"
 msgstr "Adzan"
+
+#. shown under adjustment accordion in calculation settings
+#: src/screens/settings_calculation/adjustment_settings.tsx:16
+msgid "adjustment.hint"
+msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "after"
@@ -728,7 +737,7 @@ msgstr "Subuh"
 
 #: src/screens/settings_display/number_format_settings.tsx:22
 msgid "forces all numbers to be in the selected system"
-msgstr "jadika semua nomor menyesuaika sistem yang dipilih"
+msgstr "Set semua nomor menyesuaikan sistem"
 
 #. screen title
 #: src/navigation/types.ts:34
@@ -790,7 +799,7 @@ msgstr "Terbit"
 
 #: src/adhan/prayer.ts:47
 msgid "sunset"
-msgstr "Matahari terbenam"
+msgstr "Terbenam"
 
 #. screen title
 #: src/navigation/types.ts:69

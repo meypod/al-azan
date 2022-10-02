@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-09-30 10:18+0330\n"
+"POT-Creation-Date: 2022-10-02 21:40+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +31,7 @@ msgstr "60 دقيقة"
 msgid "Abdul-Basit Abdus-Samad"
 msgstr "عبد الباسط عبد الصمد"
 
-#: src/screens/settings_calculation/index.tsx:159
+#: src/screens/settings_calculation/index.tsx:184
 msgid "Abyad"
 msgstr "أبيض"
 
@@ -44,7 +44,7 @@ msgstr "إضافة"
 msgid "Add Custom Adhan"
 msgstr "إضافة أذان مخصص"
 
-#: src/screens/settings_reminders/index.tsx:49
+#: src/screens/settings_reminders/index.tsx:50
 msgid "Add Reminder"
 msgstr "إضافة تذكير"
 
@@ -56,11 +56,15 @@ msgstr "أذان"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "لم يتم تنزيل ملف صوت الأذان بعد"
 
-#: src/screens/settings_calculation/index.tsx:79
+#: src/screens/settings_calculation/index.tsx:93
+msgid "Adjustments"
+msgstr "التعديلات"
+
+#: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
 msgstr "إعدادات الحساب المتقدمة"
 
-#: src/screens/settings_calculation/index.tsx:158
+#: src/screens/settings_calculation/index.tsx:183
 msgid "Ahmer"
 msgstr "أحمر"
 
@@ -80,7 +84,7 @@ msgstr "عربي / فارسي"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "هل أنت متأكد من أنك تريد حذف \"{0}\"؟"
 
-#: src/screens/settings_calculation/index.tsx:106
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Asr Calculation"
 msgstr "حساب العصر"
 
@@ -97,7 +101,7 @@ msgstr "انتباه"
 msgid "Battery Optimization"
 msgstr "تحسين البطارية"
 
-#: src/screens/settings_calculation/index.tsx:60
+#: src/screens/settings_calculation/index.tsx:74
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "حساب الأذان له طرق عديدة ومختلفة. تقدم كل طريقة نتائج مختلفة. تقع على عاتقك مسؤولية البحث عن الطريقة الصحيحة واستخدامها."
 
@@ -105,7 +109,7 @@ msgstr "حساب الأذان له طرق عديدة ومختلفة. تقدم ك
 msgid "Calculation"
 msgstr "حساب"
 
-#: src/screens/settings_calculation/index.tsx:62
+#: src/screens/settings_calculation/index.tsx:76
 msgid "Calculation Method"
 msgstr "طريقة حساب"
 
@@ -118,15 +122,15 @@ msgstr "ألغ"
 msgid "Cancel Adhan"
 msgstr "إلغاء الأذان"
 
-#: src/screens/settings_calculation/index.tsx:108
+#: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
 msgstr "اختر مذهب الحساب العصر"
 
-#: src/screens/settings_calculation/index.tsx:65
+#: src/screens/settings_calculation/index.tsx:79
 msgid "Choose Calculation Method"
 msgstr "اختر طريقة الحساب"
 
-#: src/screens/settings_calculation/index.tsx:86
+#: src/screens/settings_calculation/index.tsx:111
 msgid "Choose High Latitude Setting"
 msgstr "اختر إعدادات خطوط العرض العالية"
 
@@ -134,11 +138,11 @@ msgstr "اختر إعدادات خطوط العرض العالية"
 msgid "Choose Language"
 msgstr "اختر اللغة"
 
-#: src/screens/settings_calculation/index.tsx:121
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Choose Polar Resolution"
 msgstr "اختر حساب المناطق القطبية"
 
-#: src/screens/settings_calculation/index.tsx:150
+#: src/screens/settings_calculation/index.tsx:175
 msgid "Choose Shafaq method"
 msgstr "اختر طريقة شفق"
 
@@ -158,11 +162,11 @@ msgstr "امسح"
 msgid "Clipboard data does not contain coordinates"
 msgstr "لا تحتوي بيانات الحافظة على إحداثيات"
 
-#: src/screens/settings_calculation/index.tsx:132
+#: src/screens/settings_calculation/index.tsx:157
 msgid "Closest City"
 msgstr "أقرب مدينة"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:161
 msgid "Closest Date"
 msgstr "أقرب تاريخ"
 
@@ -252,7 +256,7 @@ msgstr "جمع"
 msgid "Find My Location"
 msgstr "البحث عن موقعي"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation/index.tsx:180
 msgid "General (default)"
 msgstr "عام (افتراضي)"
 
@@ -268,7 +272,7 @@ msgstr "فهمت"
 msgid "Gulf region"
 msgstr "منطقة الخليج"
 
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:138
 msgid "Hanafi"
 msgstr "حنفي"
 
@@ -282,7 +286,7 @@ msgstr "مختفي؟"
 msgid "Hide Prayer Times"
 msgstr "إخفاء أوقات الصلاة"
 
-#: src/screens/settings_calculation/index.tsx:84
+#: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "خط العرض العالي"
 
@@ -353,7 +357,7 @@ msgstr "إثن"
 msgid "Masjid An Nabawi"
 msgstr "المسجد النبوي"
 
-#: src/screens/settings_calculation/index.tsx:92
+#: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "منتصف الليل"
 
@@ -391,7 +395,7 @@ msgstr "اليوم التالي"
 msgid "No"
 msgstr "لا"
 
-#: src/screens/settings_calculation/index.tsx:90
+#: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "لا شيء (تلقائي)"
 
@@ -407,7 +411,7 @@ msgstr "الإشعار و الصوت"
 msgid "Numbering system"
 msgstr "نظام الترقيم"
 
-#: src/screens/settings_calculation/index.tsx:96
+#: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
@@ -427,7 +431,7 @@ msgstr "افتح إعدادات مدير الطاقة"
 msgid "Paste"
 msgstr "لصق"
 
-#: src/screens/settings_calculation/index.tsx:118
+#: src/screens/settings_calculation/index.tsx:143
 msgid "Polar Resolution"
 msgstr "حساب المناطق القطبية"
 
@@ -486,18 +490,18 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Selecting a name is required"
 msgstr "اختيار الاسم مطلوب"
 
-#: src/screens/settings_calculation/index.tsx:142
+#: src/screens/settings_calculation/index.tsx:167
 msgid "Shafaq"
 msgstr "شفق"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:169
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "يُستخدم شفق بواسطة طريقة \"لجنة رؤية الهلال\" لتحديد نوع الشفق الذي يجب استخدامه لتحديد وقت العشاء."
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:137
 msgid "Shafi (Default)"
 msgstr "شافعي (افتراضي)"
 
@@ -593,7 +597,7 @@ msgstr "لحساب الأذان، نحتاج إلى موقعك. يمكنك اس�
 msgid "Tomorrow"
 msgstr "الغد"
 
-#: src/screens/settings_calculation/index.tsx:100
+#: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
 msgstr "زاوية الشفق"
 
@@ -609,7 +613,7 @@ msgstr "منظمة الاتحاد الإسلامية الفرنسية"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "جامعة العلوم الإسلامية بكراتشي"
 
-#: src/screens/settings_calculation/index.tsx:128
+#: src/screens/settings_calculation/index.tsx:153
 msgid "Unresolved (default)"
 msgstr "لم يتم حلها (افتراضي)"
 
@@ -689,6 +693,11 @@ msgstr "عن التطبيق"
 #: src/navigation/types.ts:54
 msgid "adhan_settings"
 msgstr "أذان"
+
+#. shown under adjustment accordion in calculation settings
+#: src/screens/settings_calculation/adjustment_settings.tsx:16
+msgid "adjustment.hint"
+msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوقات المحسوبة"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "after"
