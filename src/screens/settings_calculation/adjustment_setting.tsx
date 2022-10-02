@@ -52,7 +52,12 @@ export function AdjustmentSetting({
 
   return (
     <VStack {...hStackProps}>
-      <Text textAlign={'center'} adjustsFontSizeToFit={true} numberOfLines={1}>
+      <Text
+        textAlign={'center'}
+        numberOfLines={1}
+        maxFontSizeMultiplier={1}
+        minimumFontScale={1}
+        fontSize={'xs'}>
         {prayerName}
       </Text>
 
