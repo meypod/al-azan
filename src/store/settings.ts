@@ -1,5 +1,6 @@
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
+import {useCallback} from 'react';
 import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
@@ -206,7 +207,11 @@ export const settings = createVanilla<SettingsStore>()(
 export const useSettings = create(settings);
 
 export function useSettingsHelper<T extends keyof SettingsStore>(key: T) {
-  return useSettings(state => [state[key], state.setSettingCurry(key)]) as [
+  const state = useSettings(s => s[key]);
+  const setterCurry = useSettings(s => s.setSettingCurry);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const setCallback = useCallback(setterCurry(key), [key]);
+  return [state, setCallback] as [
     SettingsStore[T],
     (val: SettingsStore[T]) => void,
   ];
