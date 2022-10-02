@@ -11,6 +11,8 @@ import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
 import {StepLabel} from '@/intro/step_label';
 import {useSettingsHelper} from '@/store/settings';
+import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 const data = [
   {
@@ -51,6 +53,8 @@ export function Intro() {
   const onDonePressed = async () => {
     if (isMinimumSettingsAvailable()) {
       setAppIntroDone(true);
+      setNextAdhan();
+      updateWidgets();
     } else {
       setConfigAlertIsOpen(true);
     }
@@ -63,6 +67,8 @@ export function Intro() {
   const onConfigAlertOk = () => {
     setConfigAlertIsOpen(false);
     setAppIntroDone(true);
+    setNextAdhan();
+    updateWidgets();
   };
 
   return (
