@@ -1,28 +1,43 @@
-module.exports = {
-  plugins: [
-    ['macros'],
-    [
-      '@babel/plugin-transform-react-jsx',
-      {
-        runtime: 'automatic',
-      },
-    ],
-    [
-      'module-resolver',
-      {
-        root: ['./'],
-        extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
-        alias: {
-          '@': './src',
+module.exports = function (api) {
+  api.cache(true);
+  const config = {
+    plugins: [
+      ['macros'],
+      [
+        '@babel/plugin-transform-react-jsx',
+        {
+          runtime: 'automatic',
         },
-      },
+      ],
+      [
+        'module-resolver',
+        {
+          root: ['./'],
+          extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
+          alias: {
+            '@': './src',
+          },
+        },
+      ],
     ],
-  ],
-  presets: ['module:metro-react-native-babel-preset'],
-  comments: true,
-  env: {
-    production: {
-      plugins: [['transform-remove-console', {exclude: ['error', 'warn']}]],
+    presets: ['module:metro-react-native-babel-preset'],
+    comments: true,
+    env: {
+      production: {
+        plugins: [],
+      },
     },
-  },
+  };
+
+  if (
+    process.env.NODE_ENV === 'production' ||
+    process.env.BABEL_ENV === 'production'
+  ) {
+    config.plugins.push([
+      'transform-remove-console',
+      {exclude: ['error', 'warn']},
+    ]);
+  }
+
+  return config;
 };
