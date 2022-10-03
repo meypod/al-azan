@@ -9,11 +9,13 @@ import android.app.Notification;
 import android.content.Context;
 import android.view.View;
 import android.widget.RemoteViews;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.res.ResourcesCompat;
+
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -145,7 +147,8 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
 
     Notification customNotification = new NotificationCompat.Builder(
         getReactApplicationContext(), channelId) // channel is created with another module in js
-        .setPriority(NotificationCompat.PRIORITY_DEFAULT) // For N and below
+        .setPriority(NotificationCompat.PRIORITY_MAX) // For N and below
+        .setSortKey("-1")
         .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
         .setSmallIcon(R.drawable.ic_stat_name)
         .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
