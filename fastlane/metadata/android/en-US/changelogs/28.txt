@@ -1,0 +1,1 @@
+- fix reminders not working for non prayer times

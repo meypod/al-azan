@@ -47,9 +47,7 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
       return setReminders({
         noToast: true,
         date,
-        reminders: settings
-          .getState()
-          .REMINDERS.filter(r => r.prayer === prayer),
+        reminders: settings.getState().REMINDERS,
       });
     })
     .then(() => {
