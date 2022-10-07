@@ -10,15 +10,18 @@ export function setUpdateWidgetsAlarms() {
 
   // when the last alarm goes off, it gets past this if
   // because till the last alarm, this condition always returns
+  // so that we dont end up setting many alarms
   if (targetDate.valueOf() < lastAlarmDateValueOf) return;
 
   let prayerTimes = getPrayerTimes(targetDate);
 
   if (!prayerTimes) return; // cant get prayer times to set alarms
 
+  const begginingOfNextDay = getNextDayBeginning(targetDate).valueOf();
+  lastAlarmDateValueOf = begginingOfNextDay;
   // day change update
   setAlarm({
-    timestamp: getNextDayBeginning(targetDate).valueOf(),
+    timestamp: begginingOfNextDay,
     taskName: 'update_screen_widget_task', // reuse the task name for widget module update request
     allowedInForeground: true,
     type: 'setAndAllowWhileIdle',
@@ -35,7 +38,9 @@ export function setUpdateWidgetsAlarms() {
       wakeup: false,
       keepAwake: false,
     });
-    lastAlarmDateValueOf = prayerTimes[prayer].valueOf();
+    if (prayerTimes[prayer].valueOf() > lastAlarmDateValueOf) {
+      lastAlarmDateValueOf = prayerTimes[prayer].valueOf();
+    }
   }
 
   settings.setState({LAST_ALARM_DATE_VALUEOF: lastAlarmDateValueOf});
