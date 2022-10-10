@@ -45,6 +45,8 @@ export function EditReminderModal({
         duration: reminderState?.duration || defaultDuration,
         durationModifier: reminderState?.durationModifier || -1,
         prayer: reminderState?.prayer || Prayer.Fajr,
+        modified: Date.now(),
+        whenIsFired: undefined,
       });
     } else {
       setDraftReminderState(null);

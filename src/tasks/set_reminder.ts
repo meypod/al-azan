@@ -13,7 +13,7 @@ import {
   REMINDER_CHANNEL_NAME,
 } from '@/constants/notification';
 import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
-import {Reminder} from '@/store/settings';
+import {Reminder, settings} from '@/store/settings';
 import {getNextDayBeginning, getTime} from '@/utils/date';
 
 type SetReminderOptions = {
@@ -21,6 +21,25 @@ type SetReminderOptions = {
   noToast?: boolean;
   reminders: Array<Reminder>;
 };
+
+function needSchedulePredicate(reminder: Reminder) {
+  if (reminder.whenIsFired) {
+    if (Date.now() <= reminder.whenIsFired) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function needToCancelPredicate(reminder: Reminder) {
+  if (!reminder.enabled) return true;
+  if (!reminder.whenScheduled) return false;
+  if (!reminder.modified) return false;
+  if (reminder.whenScheduled <= reminder.modified) {
+    return true;
+  }
+  return false;
+}
 
 export async function setReminders(options: SetReminderOptions) {
   const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
@@ -43,16 +62,22 @@ export async function setReminders(options: SetReminderOptions) {
   });
 
   await notifee
-    .cancelTriggerNotifications(options.reminders.map(r => r.id))
+    .cancelTriggerNotifications(
+      options.reminders.filter(needToCancelPredicate).map(r => r.id),
+    )
     .catch(console.error);
 
-  for (const reminder of options.reminders.filter(r => r.enabled)) {
+  for (const reminder of options.reminders
+    .filter(r => r.enabled)
+    .filter(needSchedulePredicate)) {
     let pTime = prayerTimes[reminder.prayer].getTime();
     if (pTime < Date.now()) {
       pTime = tomorrowPrayerTimes[reminder.prayer].getTime();
     }
 
     const timestamp = pTime + reminder.duration * reminder.durationModifier;
+
+    if (timestamp < Date.now()) continue;
 
     const trigger: TimestampTrigger = {
       type: TriggerType.TIMESTAMP,
@@ -78,6 +103,13 @@ export async function setReminders(options: SetReminderOptions) {
         },
         trigger,
       )
+      .then(() => {
+        settings.getState().saveReminder({
+          ...reminder,
+          whenScheduled: Date.now(),
+          whenIsFired: timestamp,
+        });
+      })
       .catch(console.error);
 
     if (!options?.noToast) {

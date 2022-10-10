@@ -24,6 +24,12 @@ export type Reminder = {
   duration: number;
   /** has a value of `-1` or `+1` */
   durationModifier: number;
+  /** when is this reminder scheduled to be fired. can be undefined if not scheduled yet. or an outdated timestamp. */
+  whenIsFired?: number;
+  /** timestamp of when it was scheduled. */
+  whenScheduled?: number;
+  /** timestamp of when it was modified. */
+  modified?: number;
 };
 
 export type SettingsStore = {
