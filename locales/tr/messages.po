@@ -1,29 +1,29 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-10-02 21:40+0330\n"
+"POT-Creation-Date: 2022-10-22 00:29+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: tr\n"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 msgid "10 min"
 msgstr "10 dk."
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:127
 msgid "15 min"
 msgstr "15 dk."
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
 msgid "30 min"
 msgstr "30 dk."
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:117
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:119
 msgid "5 min"
 msgstr "15 dk."
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:135
 msgid "60 min"
 msgstr "60 dk."
 
@@ -92,11 +92,11 @@ msgstr "İkindi hesabı"
 msgid "At least one prayer time must be shown"
 msgstr "En az bir namaz vakti gösterilmelidir"
 
-#: src/intro/intro.tsx:100
+#: src/intro/intro.tsx:106
 msgid "Attention"
 msgstr "Dikkat"
 
-#: src/intro/intro.tsx:33
+#: src/intro/intro.tsx:35
 #: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Battery Optimization"
 msgstr "Pil iyileştirmesi"
@@ -105,7 +105,7 @@ msgstr "Pil iyileştirmesi"
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı sonuçlar verir. Doğru yöntemi araştırmak ve kullanmak sizin sorumluluğunuzdadır."
 
-#: src/intro/intro.tsx:25
+#: src/intro/intro.tsx:27
 msgid "Calculation"
 msgstr "Hesap"
 
@@ -113,8 +113,12 @@ msgstr "Hesap"
 msgid "Calculation Method"
 msgstr "Hesaplama yöntemi"
 
+#: src/screens/settings_display/calendar_settings.tsx:21
+msgid "Calendar"
+msgstr "Takvim"
+
 #: src/screens/settings_adhan/index.tsx:168
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "Cancel"
 msgstr "İptal"
 
@@ -146,6 +150,10 @@ msgstr "Kutuplar için çözüm"
 msgid "Choose Shafaq method"
 msgstr "Şafak hesaplama methodu"
 
+#: src/screens/settings_display/calendar_settings.tsx:26
+msgid "Choose calendar type"
+msgstr "Takvim türünü seçin"
+
 #: src/screens/settings_display/number_format_settings.tsx:25
 msgid "Choose numbering system"
 msgstr "Numaralandırma sistemini seçin"
@@ -170,7 +178,7 @@ msgstr "En yakın şehir"
 msgid "Closest Date"
 msgstr "En yakın tarih"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:192
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "Confirm"
 msgstr "Onayla"
 
@@ -186,6 +194,7 @@ msgstr "Ülke"
 msgid "Dark"
 msgstr "Koyu"
 
+#: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Default"
 msgstr "Varsayılan"
@@ -211,11 +220,11 @@ msgstr "Reddet"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkiye"
 
-#: src/intro/intro.tsx:83
+#: src/intro/intro.tsx:89
 msgid "Done"
 msgstr "Tamamlandı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:84
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:86
 msgid "Edit Reminder"
 msgstr "Hatırlatıcıyı Düzenle"
 
@@ -264,7 +273,7 @@ msgstr "Genel (varsayılan)"
 msgid "Getting coordinates"
 msgstr "Koordinatları alma"
 
-#: src/intro/intro.tsx:106
+#: src/intro/intro.tsx:112
 msgid "Got it"
 msgstr "Anlaşıldı"
 
@@ -298,6 +307,26 @@ msgstr "Anasayfa"
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Uygulamanın güvenilir bir şekilde çalışabileceğinden emin olmak istiyorsanız, bu uygulama için güç optimizasyonunu devre dışı bırakmanız gerekir. Aşağıdaki düğmeyi kullanarak ilgili ayarları açabilirsiniz."
 
+#: src/screens/settings_display/calendar_settings.tsx:31
+msgid "Islamic"
+msgstr "İslami"
+
+#: src/screens/settings_display/calendar_settings.tsx:39
+msgid "Islamic (Saudi Arabia sighting)"
+msgstr "İslami (Suudi Arabistan'da görüldü)"
+
+#: src/screens/settings_display/calendar_settings.tsx:33
+msgid "Islamic (Umm al-Qura)"
+msgstr "İslami (Umm al-Qura)"
+
+#: src/screens/settings_display/calendar_settings.tsx:37
+msgid "Islamic (civil)"
+msgstr "İslami (sivil)"
+
+#: src/screens/settings_display/calendar_settings.tsx:36
+msgid "Islamic (tabular)"
+msgstr "İslami (tabular)"
+
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Endonezya Diyanet İşleri Bakanlığı (KEMENAG)"
@@ -306,7 +335,7 @@ msgstr "Endonezya Diyanet İşleri Bakanlığı (KEMENAG)"
 msgid "Kuwait"
 msgstr "Kuveyt"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:92
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:94
 msgid "Label"
 msgstr "Etiket"
 
@@ -335,7 +364,7 @@ msgstr "Lisans"
 msgid "Light"
 msgstr "Aydınlık"
 
-#: src/intro/intro.tsx:21
+#: src/intro/intro.tsx:23
 msgid "Location"
 msgstr "Konum"
 
@@ -378,16 +407,16 @@ msgstr "Muslim World League"
 msgid "Name"
 msgstr "Ad"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:84
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:86
 msgid "New Reminder"
 msgstr "Yeni Hatırlatıcı"
 
-#: src/intro/intro.tsx:82
-#: src/tasks/set_next_adhan.ts:60
+#: src/intro/intro.tsx:88
+#: src/tasks/set_next_adhan.ts:58
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:112
+#: src/screens/home/index.tsx:113
 msgid "Next Day"
 msgstr "Ertesi gün"
 
@@ -403,7 +432,7 @@ msgstr "Yok (Otomatik)"
 msgid "Notification"
 msgstr "Bildirim"
 
-#: src/intro/intro.tsx:29
+#: src/intro/intro.tsx:31
 msgid "Notification & Sound"
 msgstr "Bildirim & Ses"
 
@@ -439,7 +468,7 @@ msgstr "Kutuplar için hesaplama yöntemi"
 msgid "Power Manager"
 msgstr "Güç Yöneticisi"
 
-#: src/screens/home/index.tsx:90
+#: src/screens/home/index.tsx:91
 msgid "Prev Day"
 msgstr "Önceki Gün"
 
@@ -455,8 +484,8 @@ msgstr "Ragheb Mustafa Ghalwash"
 msgid "Referred to as the ISNA method"
 msgstr "ISNA yöntemi"
 
-#: src/tasks/set_reminder.ts:69
-#: src/tasks/set_reminder.ts:87
+#: src/tasks/set_reminder.ts:94
+#: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "Hatırlatıcı"
 
@@ -464,7 +493,7 @@ msgstr "Hatırlatıcı"
 msgid "Repeat"
 msgstr "Tekrarla"
 
-#: src/intro/intro.tsx:102
+#: src/intro/intro.tsx:108
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar eksik. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
 
@@ -513,7 +542,7 @@ msgstr "Şii Ithna Ashari, Leva Enstitüsü, Kum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 
-#: src/screens/home/index.tsx:106
+#: src/screens/home/index.tsx:107
 msgid "Show Today"
 msgstr "Bugünü Göster"
 
@@ -525,7 +554,7 @@ msgstr "Bildirim widget'ı gösterilsin mi?"
 msgid "Singapore"
 msgstr "Singapur"
 
-#: src/intro/intro.tsx:84
+#: src/intro/intro.tsx:90
 msgid "Skip"
 msgstr "Atla"
 
@@ -572,6 +601,10 @@ msgstr "Bu uygulamayı seçtiğiniz için teşekkürler! Bu uygulamayı kullanma
 msgid "The Gulf Region (Dubai)"
 msgstr "Körfez Bölgesi (Dubai)"
 
+#: src/screens/settings_display/calendar_settings.tsx:23
+msgid "The type of calendar shown in main screen and widgets"
+msgstr "Ana ekranda ve widget'larda gösterilen takvim türü"
+
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
 msgid "Theme Color"
@@ -579,7 +612,7 @@ msgstr "Tema Rengi"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
 #: src/screens/settings_notifications/index.tsx:16
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:102
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:104
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Zaman"
@@ -592,8 +625,8 @@ msgstr "Zaman formatı"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
-#: src/tasks/set_next_adhan.ts:65
-#: src/tasks/set_reminder.ts:91
+#: src/tasks/set_next_adhan.ts:63
+#: src/tasks/set_reminder.ts:123
 msgid "Tomorrow"
 msgstr "Yarın"
 
@@ -655,7 +688,7 @@ msgstr "Çar."
 msgid "We'll help you do them quickly."
 msgstr "Bunları hızlı bir şekilde yapmanıza yardımcı olacağız."
 
-#: src/intro/intro.tsx:17
+#: src/intro/intro.tsx:19
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 
@@ -694,7 +727,7 @@ msgstr "Ezan"
 msgid "adjustment.hint"
 msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
 msgid "after"
 msgstr "sonra"
 
@@ -707,7 +740,7 @@ msgstr "İkindi"
 msgid "battery_optimization_settings"
 msgstr "Pil iyileştirmesi"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:152
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
 msgid "before"
 msgstr "önce"
 

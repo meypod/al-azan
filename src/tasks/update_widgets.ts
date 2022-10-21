@@ -31,8 +31,8 @@ export async function updateWidgets() {
       ] as [prayerName: string, prayerTime: string, isActive: Boolean],
   );
 
-  const dayAndMonth = getMonthName(new Date(now)) + ', ' + getDay(new Date());
-  const hijriDate = getArabicDate(new Date(now));
+  const dayAndMonth = getMonthName(now) + ', ' + getDay(now);
+  const hijriDate = getArabicDate(now);
 
   if (settings.getState().SHOW_WIDGET) {
     updatePermanentNotifWidget({

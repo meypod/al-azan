@@ -37,6 +37,7 @@ export function Home() {
   const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
   const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
   const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
+  const [arabicCalendar] = useSettingsHelper('SELECTED_ARABIC_CALENDAR');
 
   const [today, setToday] = useState<{
     monthName: string;
@@ -117,7 +118,7 @@ export function Home() {
           prayerTimes={prayerTimes}
           hiddenPrayers={hiddenPrayers}
         />
-        <Text>{today.arabicDate}</Text>
+        <Text key={arabicCalendar}>{today.arabicDate}</Text>
       </Box>
     </ScrollView>
   );

@@ -11,11 +11,13 @@ function getDeterminedLocale(state: SettingsStore) {
 let IS_24_HOUR_FORMAT = settings.getState().IS_24_HOUR_FORMAT;
 let NUMBERING_SYSTEM = settings.getState().NUMBERING_SYSTEM;
 let SELECTED_LOCALE = getDeterminedLocale(settings.getState());
+let SELECTED_ARABIC_CALENDAR = settings.getState().SELECTED_ARABIC_CALENDAR;
 
 settings.subscribe(state => {
   IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
   NUMBERING_SYSTEM = state.NUMBERING_SYSTEM;
   SELECTED_LOCALE = getDeterminedLocale(state);
+  SELECTED_ARABIC_CALENDAR = state.SELECTED_ARABIC_CALENDAR;
 });
 
 const oneDayInMs = 86400 * 1000;
@@ -66,8 +68,15 @@ export function getTime(date: Date) {
 }
 
 export function getArabicDate(date: Date) {
-  const calendar =
-    PREFERRED_LOCALE === 'ar-SA' ? 'islamic-umalqura' : 'islamic-civil';
+  let calendar;
+
+  if (SELECTED_ARABIC_CALENDAR) {
+    calendar = SELECTED_ARABIC_CALENDAR;
+  } else {
+    calendar =
+      PREFERRED_LOCALE === 'ar-SA' ? 'islamic-umalqura' : 'islamic-civil';
+  }
+
   let numbering = '-nu-arab';
   if (NUMBERING_SYSTEM) {
     numbering = `-nu-${NUMBERING_SYSTEM}`;
