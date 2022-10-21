@@ -1,0 +1,1 @@
+- added arabic calendar settings inside display settings
