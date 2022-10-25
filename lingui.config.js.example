@@ -8,7 +8,7 @@ module.exports = {
       exclude: ['**/node_modules/**'],
     },
   ],
-  locales: ['en', 'fa', 'ar', 'tr', 'id'],
+  locales: ['en', 'fa', 'ar', 'tr', 'id', 'fr'],
   sourceLocale: 'en',
   format: 'po',
   fallbackLocales: {
