@@ -135,7 +135,7 @@ export function setupNotifeeHandlers() {
       ) as SetAlarmTaskOptions;
 
       if (options.playSound) {
-        return playAdhan()
+        return playAdhan(options.prayer)
           .then(() => cancelAdhanNotif())
           .then(() => BackHandler.exitApp());
       }

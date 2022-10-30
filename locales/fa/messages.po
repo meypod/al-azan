@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-10-30 09:55+0330\n"
+"POT-Creation-Date: 2022-10-30 14:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,12 +35,12 @@ msgstr "عبد الباسط عبد الصمد"
 msgid "Abyad"
 msgstr "سفید"
 
-#: src/screens/settings_adhan/index.tsx:171
+#: src/screens/settings_adhan/index.tsx:183
 msgid "Add"
 msgstr "اضافه کردن"
 
-#: src/screens/settings_adhan/index.tsx:144
-#: src/screens/settings_adhan/index.tsx:149
+#: src/screens/settings_adhan/index.tsx:156
+#: src/screens/settings_adhan/index.tsx:161
 msgid "Add Custom Adhan"
 msgstr "اضافه کردن اذان دلخواه"
 
@@ -52,7 +52,7 @@ msgstr " اضافه کردن یادآوری"
 msgid "Adhan"
 msgstr "اذان"
 
-#: src/screens/settings_adhan/index.tsx:84
+#: src/screens/settings_adhan/index.tsx:94
 msgid "Adhan audio file is not downloaded yet"
 msgstr "فایل صوتی اذان هنوز دانلود نشده است"
 
@@ -68,7 +68,7 @@ msgstr "تنظیمات پیشرفته محاسبه"
 msgid "Ahmer"
 msgstr "قرمز"
 
-#: src/screens/settings_adhan/index.tsx:44
+#: src/screens/settings_adhan/index.tsx:55
 msgid "An error occured while playing the current track"
 msgstr "هنگام پخش صوت فعلی خطایی روی داد"
 
@@ -80,7 +80,7 @@ msgstr "عربی"
 msgid "Arabic/Persian"
 msgstr "عربی/فارسی"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "آیا مطمئن هستید که می خواهید \"{0}\" را حذف کنید؟"
 
@@ -117,7 +117,7 @@ msgstr "نحوه محاسبه"
 msgid "Calendar"
 msgstr "تقویم"
 
-#: src/screens/settings_adhan/index.tsx:168
+#: src/screens/settings_adhan/index.tsx:180
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "Cancel"
 msgstr "لغو"
@@ -138,7 +138,7 @@ msgstr "روش محاسبه را انتخاب کنید"
 msgid "Choose High Latitude Setting"
 msgstr "تنظیمات عرض جغرافیایی بالا را انتخاب کنید"
 
-#: src/screens/settings_display/language_settings.tsx:71
+#: src/screens/settings_display/language_settings.tsx:75
 msgid "Choose Language"
 msgstr "انتخاب زبان"
 
@@ -199,13 +199,17 @@ msgstr "تاریک"
 msgid "Default"
 msgstr "پیش فرض"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:82
+#: src/screens/settings_adhan/adhan_list_item.tsx:97
 msgid "Delete"
 msgstr "حذف"
 
 #: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "بسته به دستگاه و نسخه اندروید شما، گاهی اوقات ممکن است دستگاه شما برای صرفه جویی در باتری، برنامه را در پس‌زمینه ببندد. این می تواند از ارسال هشدارها/اعلان ها جلوگیری کند."
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
+msgid "Deselect as Fajr Adhan"
+msgstr "لغو انتخاب به عنوان اذان فجر"
 
 #: src/screens/settings_battery_optimizations/index.tsx:57
 msgid "Disabled"
@@ -248,7 +252,7 @@ msgstr "خطا در بارگیری کشورها"
 msgid "Error in loading search results"
 msgstr "خطا در بارگیری نتایج جستجو"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:69
+#: src/screens/settings_adhan/adhan_list_item.tsx:82
 msgid "Error while downloading audio"
 msgstr "خطا هنگام دانلود صوت"
 
@@ -339,7 +343,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "برچسب"
 
-#: src/screens/settings_display/language_settings.tsx:68
+#: src/screens/settings_display/language_settings.tsx:72
 msgid "Language"
 msgstr "زبان"
 
@@ -402,8 +406,8 @@ msgstr "کمیته رویت هلال ماه"
 msgid "Muslim World League"
 msgstr "لیگ جهانی مسلمانان"
 
-#: src/screens/settings_adhan/index.tsx:152
-#: src/screens/settings_adhan/index.tsx:155
+#: src/screens/settings_adhan/index.tsx:164
+#: src/screens/settings_adhan/index.tsx:167
 msgid "Name"
 msgstr "نام"
 
@@ -420,7 +424,7 @@ msgstr "بعدی"
 msgid "Next Day"
 msgstr "روز بعد"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:86
+#: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "No"
 msgstr "خیر"
 
@@ -515,7 +519,11 @@ msgid ""
 "and add this app to the list."
 msgstr "دستگاه های سامسونگ دارای «مدیریت انرژی» (Power Manager) سفارشی خود به نام «مراقبت از دستگاه» (Device Care) هستند. پس از فشار دادن دکمه زیر، به منوی  مراقبت از باتری دستگاه خود هدایت خواهید شد. در منوی باتری روی گزینه «مدیریت انرژی برنامه» (App power management) و سپس «برنامه‌هایی که به حالت خواب نمی‌روند» (Apps that won't be put to sleep) بزنید و این برنامه را به لیست اضافه کنید."
 
-#: src/screens/settings_adhan/index.tsx:161
+#: src/screens/settings_adhan/adhan_list_item.tsx:187
+msgid "Select as Fajr Adhan"
+msgstr "به عنوان اذان فجر انتخاب کنید"
+
+#: src/screens/settings_adhan/index.tsx:173
 msgid "Selecting a name is required"
 msgstr "انتخاب نام الزامی است"
 
@@ -541,6 +549,10 @@ msgstr "شیعه اثنا عشری، مؤسسه لوا، قم"
 #: src/adhan/calculation_methods.ts:112
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "شیعه، موسسه ژئوفیزیک دانشگاه تهران"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:177
+msgid "Show Adhan Options"
+msgstr "نمایش گزینه های اذان"
 
 #: src/screens/home/index.tsx:107
 msgid "Show Today"
@@ -650,7 +662,7 @@ msgstr "دانشگاه علوم اسلامی کراچی"
 msgid "Unresolved (default)"
 msgstr "حل نشده (پیش فرض)"
 
-#: src/screens/settings_display/language_settings.tsx:42
+#: src/screens/settings_display/language_settings.tsx:46
 msgid "Unsupported"
 msgstr "پشتیبانی نشده"
 

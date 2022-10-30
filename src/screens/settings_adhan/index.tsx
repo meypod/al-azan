@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {useNavigation} from '@react-navigation/native';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {
   FlatList,
   Box,
@@ -20,16 +20,27 @@ import MediaPlayer, {
   PlaybackState,
   usePlaybackState,
 } from '@/modules/media_player';
+import {RootStackParamList} from '@/navigation/types';
 import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
 import {play, stop, destroy} from '@/services/play_sound';
 import {settings, useSettingsHelper} from '@/store/settings';
 
-export function AdhanSettings(props: IBoxProps) {
+type AdhanSettingsProps = NativeStackScreenProps<
+  RootStackParamList,
+  'AdhanSettings'
+>;
+
+export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
+  const {navigation} = props;
+
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
     AdhanEntry | undefined
   >();
   const [selectedAdhanEntry, setSelectedAdhanEntry] = useSettingsHelper(
     'SELECTED_ADHAN_ENTRY',
+  );
+  const [selectedFajrAdhanEntry, setSelectedFajrAdhanEntry] = useSettingsHelper(
+    'SELECTED_FAJR_ADHAN_ENTRY',
   );
 
   const [savedAdhanEntries] = useSettingsHelper('SAVED_ADHAN_AUDIO_ENTRIES');
@@ -50,7 +61,6 @@ export function AdhanSettings(props: IBoxProps) {
     };
   });
 
-  const navigation = useNavigation();
   useEffect(() => {
     const unsubscribe = navigation.addListener('beforeRemove', () => {
       destroy();
@@ -104,12 +114,14 @@ export function AdhanSettings(props: IBoxProps) {
   const renderItem = ({item}: {item: AdhanEntry}) => {
     return (
       <AdhanListItem
-        onPress={() => onAdhanItemPressed(item)}
+        onAdhanSelected={onAdhanItemPressed}
+        onFajrAdhanSelected={setSelectedFajrAdhanEntry}
         key={item.id}
         item={item}
         playAdhanEntry={playAdhanEntry}
         playerState={playerState}
         selected_item_id={selectedAdhanEntry?.id}
+        selected_fajr_item_id={selectedFajrAdhanEntry?.id}
         playing_item_id={playingAdhanEntry?.id}
       />
     );

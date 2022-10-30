@@ -45,6 +45,7 @@ export type SettingsStore = {
   APP_INTRO_DONE: boolean;
   SAVED_ADHAN_AUDIO_ENTRIES: AdhanEntry[];
   SELECTED_ADHAN_ENTRY: AdhanEntry;
+  SELECTED_FAJR_ADHAN_ENTRY: AdhanEntry | undefined;
   LOCATION_COUNTRY: CountryInfo | undefined;
   LOCATION_CITY: SearchResult | undefined;
   SCHEDULED_ALARM_TIMESTAMP?: number;
@@ -85,6 +86,7 @@ export const settings = createVanilla<SettingsStore>()(
       APP_INTRO_DONE: false,
       SAVED_ADHAN_AUDIO_ENTRIES: INITIAL_ADHAN_AUDIO_ENTRIES,
       SELECTED_ADHAN_ENTRY: INITIAL_ADHAN_AUDIO_ENTRIES[0],
+      SELECTED_FAJR_ADHAN_ENTRY: undefined,
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [],
@@ -131,6 +133,12 @@ export const settings = createVanilla<SettingsStore>()(
               draft.SELECTED_ADHAN_ENTRY.id === entry.id
             ) {
               draft.SELECTED_ADHAN_ENTRY = draft.SAVED_ADHAN_AUDIO_ENTRIES[0];
+            }
+            if (
+              draft.SELECTED_FAJR_ADHAN_ENTRY &&
+              draft.SELECTED_FAJR_ADHAN_ENTRY.id === entry.id
+            ) {
+              draft.SELECTED_FAJR_ADHAN_ENTRY = undefined;
             }
           }),
         ),

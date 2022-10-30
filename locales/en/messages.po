@@ -41,12 +41,12 @@ msgstr "Abdul-Basit Abdus-Samad"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/screens/settings_adhan/index.tsx:171
+#: src/screens/settings_adhan/index.tsx:183
 msgid "Add"
 msgstr "Add"
 
-#: src/screens/settings_adhan/index.tsx:144
-#: src/screens/settings_adhan/index.tsx:149
+#: src/screens/settings_adhan/index.tsx:156
+#: src/screens/settings_adhan/index.tsx:161
 msgid "Add Custom Adhan"
 msgstr "Add Custom Adhan"
 
@@ -58,7 +58,7 @@ msgstr "Add Reminder"
 msgid "Adhan"
 msgstr "Adhan"
 
-#: src/screens/settings_adhan/index.tsx:84
+#: src/screens/settings_adhan/index.tsx:94
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Adhan audio file is not downloaded yet"
 
@@ -74,7 +74,7 @@ msgstr "Advanced Calculation Settings"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/screens/settings_adhan/index.tsx:44
+#: src/screens/settings_adhan/index.tsx:55
 msgid "An error occured while playing the current track"
 msgstr "An error occured while playing the current track"
 
@@ -86,7 +86,7 @@ msgstr "Arabic"
 msgid "Arabic/Persian"
 msgstr "Arabic/Persian"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
 
@@ -123,7 +123,7 @@ msgstr "Calculation Method"
 msgid "Calendar"
 msgstr "Calendar"
 
-#: src/screens/settings_adhan/index.tsx:168
+#: src/screens/settings_adhan/index.tsx:180
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "Cancel"
 msgstr "Cancel"
@@ -144,7 +144,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:71
+#: src/screens/settings_display/language_settings.tsx:75
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -205,13 +205,17 @@ msgstr "Dark"
 msgid "Default"
 msgstr "Default"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:82
+#: src/screens/settings_adhan/adhan_list_item.tsx:97
 msgid "Delete"
 msgstr "Delete"
 
 #: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
+msgid "Deselect as Fajr Adhan"
+msgstr "Deselect as Fajr Adhan"
 
 #: src/screens/settings_battery_optimizations/index.tsx:57
 msgid "Disabled"
@@ -254,7 +258,7 @@ msgstr "Error in loading countries"
 msgid "Error in loading search results"
 msgstr "Error in loading search results"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:69
+#: src/screens/settings_adhan/adhan_list_item.tsx:82
 msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
@@ -345,7 +349,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:68
+#: src/screens/settings_display/language_settings.tsx:72
 msgid "Language"
 msgstr "Language"
 
@@ -408,8 +412,8 @@ msgstr "Moonsighting Committee"
 msgid "Muslim World League"
 msgstr "Muslim World League"
 
-#: src/screens/settings_adhan/index.tsx:152
-#: src/screens/settings_adhan/index.tsx:155
+#: src/screens/settings_adhan/index.tsx:164
+#: src/screens/settings_adhan/index.tsx:167
 msgid "Name"
 msgstr "Name"
 
@@ -426,7 +430,7 @@ msgstr "Next"
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:86
+#: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "No"
 msgstr "No"
 
@@ -525,7 +529,11 @@ msgstr ""
 "In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
 "and add this app to the list."
 
-#: src/screens/settings_adhan/index.tsx:161
+#: src/screens/settings_adhan/adhan_list_item.tsx:187
+msgid "Select as Fajr Adhan"
+msgstr "Select as Fajr Adhan"
+
+#: src/screens/settings_adhan/index.tsx:173
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
@@ -554,6 +562,10 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 #: src/adhan/calculation_methods.ts:112
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:177
+msgid "Show Adhan Options"
+msgstr "Show Adhan Options"
 
 #: src/screens/home/index.tsx:107
 msgid "Show Today"
@@ -668,7 +680,7 @@ msgstr "University of Islamic Sciences, Karachi"
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
-#: src/screens/settings_display/language_settings.tsx:42
+#: src/screens/settings_display/language_settings.tsx:46
 msgid "Unsupported"
 msgstr "Unsupported"
 
