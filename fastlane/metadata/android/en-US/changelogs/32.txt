@@ -1,0 +1,2 @@
+- added French language
+- you can now set different Adhan for Fajr

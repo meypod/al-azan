@@ -52,6 +52,10 @@ All translations are synced with [translation.io](https://translation.io/) with 
 
 - [@muava12](https://github.com/muava12)
 
+#### French
+
+- Unknown user (will be updated once their github user is known)
+
 ## Thanks to
 
 react-native community members.
