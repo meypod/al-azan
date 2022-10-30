@@ -188,7 +188,7 @@ export function AdhanListItem({
                   </Menu.Item>
                   {item?.canDelete && (
                     <Menu.Item onPress={onDeletePressed}>
-                      <Text color="red.400">Delete</Text>
+                      <Text color="red.400">{t`Delete`}</Text>
                     </Menu.Item>
                   )}
                 </Menu>

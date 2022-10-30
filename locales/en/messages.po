@@ -206,6 +206,7 @@ msgid "Default"
 msgstr "Default"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:97
+#: src/screens/settings_adhan/adhan_list_item.tsx:191
 msgid "Delete"
 msgstr "Delete"
 
