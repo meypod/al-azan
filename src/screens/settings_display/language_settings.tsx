@@ -35,9 +35,13 @@ export function LanguageSettings(props: IStackProps) {
       label: `Indonesia`,
       value: 'id',
     },
+    {
+      label: `Français`,
+      value: 'fr',
+    },
   ];
 
-  if (!['en', 'fa', 'ar', 'tr', 'id'].includes(lang)) {
+  if (!['en', 'fa', 'ar', 'tr', 'id', 'fr'].includes(lang)) {
     languageEntries.push({
       label: lang + ' (' + t`Unsupported` + ')',
       value: lang,
