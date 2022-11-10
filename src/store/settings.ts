@@ -13,7 +13,14 @@ import {PREFERRED_LOCALE} from '@/utils/locale';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
-export type WeekDay = 'sat' | 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri';
+export type WeekDay =
+  | 'saturday'
+  | 'sunday'
+  | 'monday'
+  | 'tuesday'
+  | 'wednesday'
+  | 'thursday'
+  | 'friday';
 
 export type Reminder = {
   id: string;

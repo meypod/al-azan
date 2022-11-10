@@ -7,33 +7,26 @@ import {WeekDayButton} from '@/components/week_day_button';
 import {WeekDay} from '@/store/settings';
 
 export const WeekDaysShortInOrder = {
-  sun: defineMessage({
-    message: 'SUN',
-    comment: 'short week day, sunday',
+  sunday: defineMessage({
+    message: 'Sunday',
   }),
-  mon: defineMessage({
-    message: 'MON',
-    comment: 'short week day, monday',
+  monday: defineMessage({
+    message: 'Monday',
   }),
-  tue: defineMessage({
-    message: 'TUE',
-    comment: 'short week day, tuesday',
+  tuesday: defineMessage({
+    message: 'Tuesday',
   }),
-  wed: defineMessage({
-    message: 'WED',
-    comment: 'short week day, wednesday',
+  wednesday: defineMessage({
+    message: 'Wednesday',
   }),
-  thu: defineMessage({
-    message: 'THU',
-    comment: 'short week day, thursday',
+  thursday: defineMessage({
+    message: 'Thursday',
   }),
-  fri: defineMessage({
-    message: 'FRI',
-    comment: 'short week day, friday',
+  friday: defineMessage({
+    message: 'Friday',
   }),
-  sat: defineMessage({
-    message: 'SAT',
-    comment: 'short week day, saturday',
+  saturday: defineMessage({
+    message: 'Saturday',
   }),
 } as Record<string, MessageDescriptor>;
 
