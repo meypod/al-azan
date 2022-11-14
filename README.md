@@ -44,6 +44,8 @@ All translations are synced with [translation.io](https://translation.io/) with 
 
 ### Translators
 
+Translation to other languages has been done by these awesome people:
+
 #### Turkish
 
 - [@Serince](https://github.com/Serince)
@@ -54,7 +56,15 @@ All translations are synced with [translation.io](https://translation.io/) with 
 
 #### French
 
-- Unknown user (will be updated once their github user is known)
+- Contributor has chosen to stay anonymous
+
+#### Urdu
+
+- [Asjad Ahmad](https://twitter.com/Estcaliphate)
+
+### Hindi
+
+- Contributor has chosen to stay anonymous
 
 ## Thanks to
 
