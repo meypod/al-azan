@@ -1,1 +1,2 @@
-- added Urdu and Hindi languages
+- added Urdu language
+- added Hindi language
