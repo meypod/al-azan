@@ -1,2 +1,1 @@
-- added Urdu language
-- added Hindi language
+- new languages: Urdu, Hindi
