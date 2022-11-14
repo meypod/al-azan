@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-10-30 15:01+0330\n"
+"POT-Creation-Date: 2022-11-14 14:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -261,14 +261,13 @@ msgstr "خطا هنگام دانلود صوت"
 msgid "Error while getting coordinates"
 msgstr "خطا هنگام گرفتن مختصات"
 
-#. short week day, friday
-#: src/components/week_day_selector.tsx:30
-msgid "FRI"
-msgstr "ج"
-
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "پیدا کردن مکان من"
+
+#: src/components/week_day_selector.tsx:25
+msgid "Friday"
+msgstr "جمعه"
 
 #: src/screens/settings_calculation/index.tsx:180
 msgid "General (default)"
@@ -382,11 +381,6 @@ msgstr "طول جغرافیایی"
 msgid "Longitude is invalid"
 msgstr "طول جغرافیایی نامعتبر است"
 
-#. short week day, monday
-#: src/components/week_day_selector.tsx:14
-msgid "MON"
-msgstr "د"
-
 #: src/assets/adhan_entries.ts:19
 msgid "Masjid An Nabawi"
 msgstr "مسجد النبی"
@@ -398,6 +392,10 @@ msgstr "نیمه شب شرعی"
 #: src/assets/adhan_entries.ts:33
 msgid "Moazen Zade"
 msgstr "موذن زاده"
+
+#: src/components/week_day_selector.tsx:13
+msgid "Monday"
+msgstr "دوشنبه"
 
 #: src/adhan/calculation_methods.ts:22
 msgid "Moonsighting Committee"
@@ -494,23 +492,13 @@ msgstr "معروف به روش ایسنا"
 msgid "Reminder"
 msgstr "یادآوری"
 
-#: src/components/week_day_selector.tsx:60
+#: src/components/week_day_selector.tsx:53
 msgid "Repeat"
 msgstr "تکرار"
 
 #: src/intro/intro.tsx:108
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "تنظیمات مورد نیاز ناقص هستند. برای اینکه برنامه اوقات شرعی را نشان دهد، بعداً باید آن را از صفحه تنظیمات تنظیم کنید."
-
-#. short week day, saturday
-#: src/components/week_day_selector.tsx:34
-msgid "SAT"
-msgstr "ش"
-
-#. short week day, sunday
-#: src/components/week_day_selector.tsx:10
-msgid "SUN"
-msgstr "ی"
 
 #: src/screens/settings_battery_optimizations/index.tsx:82
 msgid ""
@@ -519,6 +507,10 @@ msgid ""
 "In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
 "and add this app to the list."
 msgstr "دستگاه های سامسونگ دارای «مدیریت انرژی» (Power Manager) سفارشی خود به نام «مراقبت از دستگاه» (Device Care) هستند. پس از فشار دادن دکمه زیر، به منوی  مراقبت از باتری دستگاه خود هدایت خواهید شد. در منوی باتری روی گزینه «مدیریت انرژی برنامه» (App power management) و سپس «برنامه‌هایی که به حالت خواب نمی‌روند» (Apps that won't be put to sleep) بزنید و این برنامه را به لیست اضافه کنید."
+
+#: src/components/week_day_selector.tsx:28
+msgid "Saturday"
+msgstr "شنبه"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
@@ -590,19 +582,13 @@ msgstr "اداره معنوی مسلمانان روسیه"
 msgid "Status"
 msgstr "وضعیت"
 
+#: src/components/week_day_selector.tsx:10
+msgid "Sunday"
+msgstr "یکشنبه"
+
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
 msgstr "پیش فرض سیستم"
-
-#. short week day, thursday
-#: src/components/week_day_selector.tsx:26
-msgid "THU"
-msgstr "پ"
-
-#. short week day, tuesday
-#: src/components/week_day_selector.tsx:18
-msgid "TUE"
-msgstr "س"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
@@ -623,6 +609,10 @@ msgstr "نوع تقویم نشان داده شده در صفحه اصلی و و�
 msgid "Theme Color"
 msgstr "رنگ پوسته"
 
+#: src/components/week_day_selector.tsx:22
+msgid "Thursday"
+msgstr "پنج شنبه"
+
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
 #: src/screens/settings_notifications/index.tsx:16
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:104
@@ -642,6 +632,10 @@ msgstr "برای محاسبه اذان، به موقعیت مکانی شما ن�
 #: src/tasks/set_reminder.ts:123
 msgid "Tomorrow"
 msgstr "فردا"
+
+#: src/components/week_day_selector.tsx:16
+msgid "Tuesday"
+msgstr "سه شنبه"
 
 #: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
@@ -692,14 +686,13 @@ msgstr "با استفاده از جستجو"
 msgid "Version"
 msgstr "نسخه"
 
-#. short week day, wednesday
-#: src/components/week_day_selector.tsx:22
-msgid "WED"
-msgstr "چ"
-
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "ما به شما کمک می کنیم تا آنها را سریع انجام دهید."
+
+#: src/components/week_day_selector.tsx:19
+msgid "Wednesday"
+msgstr "چهار شنبه"
 
 #: src/intro/intro.tsx:19
 msgid "Welcome"

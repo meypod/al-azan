@@ -267,14 +267,13 @@ msgstr "Error while downloading audio"
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
 
-#. short week day, friday
-#: src/components/week_day_selector.tsx:30
-msgid "FRI"
-msgstr "FRI"
-
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "Find My Location"
+
+#: src/components/week_day_selector.tsx:25
+msgid "Friday"
+msgstr "Friday"
 
 #: src/screens/settings_calculation/index.tsx:180
 msgid "General (default)"
@@ -388,11 +387,6 @@ msgstr "Longitude"
 msgid "Longitude is invalid"
 msgstr "Longitude is invalid"
 
-#. short week day, monday
-#: src/components/week_day_selector.tsx:14
-msgid "MON"
-msgstr "MON"
-
 #: src/assets/adhan_entries.ts:19
 msgid "Masjid An Nabawi"
 msgstr "Masjid An Nabawi"
@@ -404,6 +398,10 @@ msgstr "Middle of the Night"
 #: src/assets/adhan_entries.ts:33
 msgid "Moazen Zade"
 msgstr "Moazen Zade"
+
+#: src/components/week_day_selector.tsx:13
+msgid "Monday"
+msgstr "Monday"
 
 #: src/adhan/calculation_methods.ts:22
 msgid "Moonsighting Committee"
@@ -500,23 +498,13 @@ msgstr "Referred to as the ISNA method"
 msgid "Reminder"
 msgstr "Reminder"
 
-#: src/components/week_day_selector.tsx:60
+#: src/components/week_day_selector.tsx:53
 msgid "Repeat"
 msgstr "Repeat"
 
 #: src/intro/intro.tsx:108
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
-
-#. short week day, saturday
-#: src/components/week_day_selector.tsx:34
-msgid "SAT"
-msgstr "SAT"
-
-#. short week day, sunday
-#: src/components/week_day_selector.tsx:10
-msgid "SUN"
-msgstr "SUN"
 
 #: src/screens/settings_battery_optimizations/index.tsx:82
 msgid ""
@@ -529,6 +517,10 @@ msgstr ""
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
 "In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
 "and add this app to the list."
+
+#: src/components/week_day_selector.tsx:28
+msgid "Saturday"
+msgstr "Saturday"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
@@ -606,19 +598,13 @@ msgstr "Spiritual Administration of Muslims of Russia"
 msgid "Status"
 msgstr "Status"
 
+#: src/components/week_day_selector.tsx:10
+msgid "Sunday"
+msgstr "Sunday"
+
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
 msgstr "System Default"
-
-#. short week day, thursday
-#: src/components/week_day_selector.tsx:26
-msgid "THU"
-msgstr "THU"
-
-#. short week day, tuesday
-#: src/components/week_day_selector.tsx:18
-msgid "TUE"
-msgstr "TUE"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
@@ -641,6 +627,10 @@ msgstr "The type of calendar shown in main screen and widgets"
 msgid "Theme Color"
 msgstr "Theme Color"
 
+#: src/components/week_day_selector.tsx:22
+msgid "Thursday"
+msgstr "Thursday"
+
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
 #: src/screens/settings_notifications/index.tsx:16
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:104
@@ -660,6 +650,10 @@ msgstr "To calculate Adhan, We need your location. You can use the \"Find My Loc
 #: src/tasks/set_reminder.ts:123
 msgid "Tomorrow"
 msgstr "Tomorrow"
+
+#: src/components/week_day_selector.tsx:16
+msgid "Tuesday"
+msgstr "Tuesday"
 
 #: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
@@ -710,14 +704,13 @@ msgstr "Using Search"
 msgid "Version"
 msgstr "Version"
 
-#. short week day, wednesday
-#: src/components/week_day_selector.tsx:22
-msgid "WED"
-msgstr "WED"
-
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "We'll help you do them quickly."
+
+#: src/components/week_day_selector.tsx:19
+msgid "Wednesday"
+msgstr "Wednesday"
 
 #: src/intro/intro.tsx:19
 msgid "Welcome"
