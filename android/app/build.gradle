@@ -95,7 +95,7 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
-def enableSeparateBuildPerCPUArchitecture = false
+def enableSeparateBuildPerCPUArchitecture = true
 
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
@@ -223,7 +223,7 @@ android {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
-            universalApk false  // If true, also generate a universal APK
+            universalApk true  // If true, also generate a universal APK
             include (*reactNativeArchitectures())
         }
     }
@@ -246,27 +246,6 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
-
-        applicationVariants.all{
-            // this method is use to rename your release apk only
-            variant ->
-                variant.outputs.each{
-                    // on below line we are setting a name to our apk
-                    output->
-                        // on below line we are specifying our app name.
-                        project.ext { appName = 'al-azan' }
-                        // on below line we are adding the formatted date to our apk file name.
-                        def formattedDate = new Date().format('yyyy-MM-dd-HH-mm-ss')
-                        // on below line we are creating a new name for our apk.
-                        def newName = output.outputFile.name
-                        // on below line we are replacing our previous name with our app name.
-                        newName = newName.replace("app-", "$project.ext.appName-")
-                        // on below line we are replacing -release with our formatted date.
-                        newName = newName.replace("-release", "-release-" + formattedDate)
-                        // at last we are setting our apk name to it.
-                        output.outputFileName  = newName
-                }
-        }
     }
 
     // applicationVariants are e.g. debug, release
@@ -277,11 +256,16 @@ android {
             // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
             def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
             def abi = output.getFilter(OutputFile.ABI)
+            output.versionCodeOverride = defaultConfig.versionCode * 1000
             if (abi != null) {  // null for the universal-debug, universal-release variants
-                output.versionCodeOverride =
-                        defaultConfig.versionCode * 1000 + versionCodes.get(abi)
+                output.versionCodeOverride += versionCodes.get(abi)
             }
-
+            
+            def builtType = variant.buildType.name
+            def versionName = variant.versionName 
+            def flavor = variant.flavorName
+            def architecture = output.getFilter(com.android.build.OutputFile.ABI) ?: "universal"
+            output.outputFileName = "al-azan-${flavor}-${builtType}-${versionName}-${output.versionCodeOverride}-${architecture}.apk"
         }
     }
 
