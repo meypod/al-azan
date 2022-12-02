@@ -1,5 +1,5 @@
 import {Button} from 'native-base';
-import {useState} from 'react';
+import {useCallback, useState} from 'react';
 
 type WeekDayButtonProps = {
   isActive?: boolean;
@@ -10,19 +10,19 @@ type WeekDayButtonProps = {
 export function WeekDayButton(props: WeekDayButtonProps) {
   const [isActive, setIsActive] = useState(!!props.isActive);
 
-  const setIsActiveProxy = (isAct: boolean) => {
-    setIsActive(isAct);
-    typeof props.onChanged === 'function' && props.onChanged(isAct);
-  };
+  const setIsActiveProxy = useCallback(
+    (isAct: boolean) => {
+      setIsActive(isAct);
+      typeof props.onChanged === 'function' && props.onChanged(isAct);
+    },
+    [setIsActive, props],
+  );
 
   return (
     <Button
-      mx="2"
-      mt="2"
-      height={'12'}
-      width={'12'}
-      padding="0"
-      borderRadius={'full'}
+      mr="2"
+      mb="2"
+      padding="1"
       variant="outline"
       _text={{noOfLines: 1, fontSize: 'xs', allowFontScaling: false}}
       _light={{
