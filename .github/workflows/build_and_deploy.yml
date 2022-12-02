@@ -94,7 +94,7 @@ jobs:
     - uses: jungwinter/split@v2
       id: signed_files
       with:
-        msg: ${{ steps.sign_app.outputs.signedReleaseFiles }}
+        msg: ${{ steps.sign_app.signedReleaseFiles }}
         separator: ':'
     
     - name: Release
