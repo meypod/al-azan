@@ -14,6 +14,7 @@ import {
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {settings} from '@/store/settings';
+import {getTime} from '@/utils/date';
 
 export type SetAlarmTaskOptions = {
   /** When the adhan is  */
@@ -66,6 +67,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     {
       id: ADHAN_NOTIFICATION_ID,
       title: translatePrayer(options.prayer),
+      body: getTime(options.date),
       android: {
         smallIcon: 'ic_stat_name',
         channelId,
