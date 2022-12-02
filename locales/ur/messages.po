@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-11-14 14:49+0330\n"
+"POT-Creation-Date: 2022-12-02 19:57+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "حساب کتاب کا طریقہ منتخب کریں۔"
 msgid "Choose High Latitude Setting"
 msgstr "اعلی عرض بلد کی ترتیب کا انتخاب کریں۔"
 
-#: src/screens/settings_display/language_settings.tsx:75
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Choose Language"
 msgstr "زبان کا انتخاب کریں۔"
 
@@ -343,7 +343,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "لیبل"
 
-#: src/screens/settings_display/language_settings.tsx:72
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Language"
 msgstr "زبان"
 
@@ -491,10 +491,6 @@ msgstr "ISNA طریقہ کے طور پر کہا جاتا ہے۔"
 #: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "یاد دہانی"
-
-#: src/components/week_day_selector.tsx:53
-msgid "Repeat"
-msgstr "دہرائیں۔"
 
 #: src/intro/intro.tsx:108
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
@@ -657,7 +653,7 @@ msgstr "جامعہ اسلامیہ، کراچی"
 msgid "Unresolved (default)"
 msgstr "غیر حل شدہ (پہلے سے طے شدہ)"
 
-#: src/screens/settings_display/language_settings.tsx:46
+#: src/screens/settings_display/language_settings.tsx:54
 msgid "Unsupported"
 msgstr "غیر تعاون یافتہ"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-11-14 14:49+0330\n"
+"POT-Creation-Date: 2022-12-02 19:57+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "गणना विधि चुनें"
 msgid "Choose High Latitude Setting"
 msgstr "उच्च अक्षांश सेटिंग चुनें"
 
-#: src/screens/settings_display/language_settings.tsx:75
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Choose Language"
 msgstr "भाषा चुनें"
 
@@ -343,7 +343,7 @@ msgstr "कुवैट"
 msgid "Label"
 msgstr "लेबल"
 
-#: src/screens/settings_display/language_settings.tsx:72
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Language"
 msgstr "भाषा"
 
@@ -491,10 +491,6 @@ msgstr "ISNA पद्धति के रूप में संदर्भि
 #: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "अनुस्मारक"
-
-#: src/components/week_day_selector.tsx:53
-msgid "Repeat"
-msgstr "दोहराना"
 
 #: src/intro/intro.tsx:108
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
@@ -657,7 +653,7 @@ msgstr "इस्लामी विज्ञान विश्वविद्�
 msgid "Unresolved (default)"
 msgstr "अनसुलझा (डिफ़ॉल्ट)"
 
-#: src/screens/settings_display/language_settings.tsx:46
+#: src/screens/settings_display/language_settings.tsx:54
 msgid "Unsupported"
 msgstr "असमर्थित"
 

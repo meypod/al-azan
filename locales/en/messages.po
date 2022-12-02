@@ -144,7 +144,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:75
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -349,7 +349,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:72
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Language"
 msgstr "Language"
 
@@ -497,10 +497,6 @@ msgstr "Referred to as the ISNA method"
 #: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "Reminder"
-
-#: src/components/week_day_selector.tsx:53
-msgid "Repeat"
-msgstr "Repeat"
 
 #: src/intro/intro.tsx:108
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
@@ -675,7 +671,7 @@ msgstr "University of Islamic Sciences, Karachi"
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
-#: src/screens/settings_display/language_settings.tsx:46
+#: src/screens/settings_display/language_settings.tsx:54
 msgid "Unsupported"
 msgstr "Unsupported"
 
