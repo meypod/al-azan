@@ -90,13 +90,7 @@ jobs:
       env: 
         # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
         BUILD_TOOLS_VERSION: "30.0.3" 
-      
-    - uses: jungwinter/split@v2
-      id: signed_files
-      with:
-        msg: ${{ steps.sign_app.signedReleaseFiles }}
-        separator: ':'
-    
+       
     - name: Release
       if: ${{ github.event_name == 'release'}}
       uses: softprops/action-gh-release@v1
@@ -104,4 +98,9 @@ jobs:
         prerelease: true
         generate_release_notes: true
         fail_on_unmatched_files: true
-        files: ${{ steps.signed_files.outputs }}
+        files: |
+          ${{ steps.sign_app.outputs.signedReleaseFile0 }}
+          ${{ steps.sign_app.outputs.signedReleaseFile1 }}
+          ${{ steps.sign_app.outputs.signedReleaseFile2 }}
+          ${{ steps.sign_app.outputs.signedReleaseFile3 }}
+          ${{ steps.sign_app.outputs.signedReleaseFile4 }}
