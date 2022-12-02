@@ -98,4 +98,5 @@ jobs:
         prerelease: true
         generate_release_notes: true
         fail_on_unmatched_files: true
-        files: android/app/build/outputs/apk/release/*.apk
+        files: android/app/build/outputs/apk/release/*signed.apk
+
