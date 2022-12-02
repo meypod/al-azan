@@ -98,9 +98,4 @@ jobs:
         prerelease: true
         generate_release_notes: true
         fail_on_unmatched_files: true
-        files: |
-          ${{ steps.sign_app.outputs.signedReleaseFile0 }}
-          ${{ steps.sign_app.outputs.signedReleaseFile1 }}
-          ${{ steps.sign_app.outputs.signedReleaseFile2 }}
-          ${{ steps.sign_app.outputs.signedReleaseFile3 }}
-          ${{ steps.sign_app.outputs.signedReleaseFile4 }}
+        files: android/app/build/outputs/apk/release/*.apk
