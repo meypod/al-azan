@@ -97,6 +97,9 @@ apply from: "../../node_modules/react-native/react.gradle"
  */
 def enableSeparateBuildPerCPUArchitecture = true
 
+/** should we build a universal apk as well ? */
+def buildUniversalApk = project.getProperties().get("buildUniversalApk", false) == "true";
+
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
@@ -223,7 +226,7 @@ android {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
-            universalApk true  // If true, also generate a universal APK
+            universalApk buildUniversalApk  // If true, also generate a universal APK
             include (*reactNativeArchitectures())
         }
     }
