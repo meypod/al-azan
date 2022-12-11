@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-02 19:57+0330\n"
+"POT-Creation-Date: 2022-12-11 04:54+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "حساب کتاب کا طریقہ منتخب کریں۔"
 msgid "Choose High Latitude Setting"
 msgstr "اعلی عرض بلد کی ترتیب کا انتخاب کریں۔"
 
-#: src/screens/settings_display/language_settings.tsx:83
+#: src/screens/settings_display/language_settings.tsx:87
 msgid "Choose Language"
 msgstr "زبان کا انتخاب کریں۔"
 
@@ -217,7 +217,7 @@ msgid "Disabled"
 msgstr "غیر فعال"
 
 #: src/screens/fullscreen_alarm/index.tsx:105
-#: src/tasks/set_alarm.ts:92
+#: src/tasks/set_alarm.ts:94
 msgid "Dismiss"
 msgstr "برطرف کرنا"
 
@@ -343,7 +343,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "لیبل"
 
-#: src/screens/settings_display/language_settings.tsx:80
+#: src/screens/settings_display/language_settings.tsx:84
 msgid "Language"
 msgstr "زبان"
 
@@ -653,7 +653,7 @@ msgstr "جامعہ اسلامیہ، کراچی"
 msgid "Unresolved (default)"
 msgstr "غیر حل شدہ (پہلے سے طے شدہ)"
 
-#: src/screens/settings_display/language_settings.tsx:54
+#: src/screens/settings_display/language_settings.tsx:58
 msgid "Unsupported"
 msgstr "غیر تعاون یافتہ"
 

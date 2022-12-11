@@ -47,9 +47,13 @@ export function LanguageSettings(props: IStackProps) {
       label: `हिन्दी`,
       value: 'hi',
     },
+    {
+      label: `Deutsch`,
+      value: 'de',
+    },
   ];
 
-  if (!['en', 'fa', 'ar', 'tr', 'id', 'fr', 'ur', 'hi'].includes(lang)) {
+  if (!['en', 'fa', 'ar', 'tr', 'id', 'fr', 'ur', 'hi', 'de'].includes(lang)) {
     languageEntries.push({
       label: lang + ' (' + t`Unsupported` + ')',
       value: lang,

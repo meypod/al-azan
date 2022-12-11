@@ -144,7 +144,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:83
+#: src/screens/settings_display/language_settings.tsx:87
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -223,7 +223,7 @@ msgid "Disabled"
 msgstr "Disabled"
 
 #: src/screens/fullscreen_alarm/index.tsx:105
-#: src/tasks/set_alarm.ts:92
+#: src/tasks/set_alarm.ts:94
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -349,7 +349,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:80
+#: src/screens/settings_display/language_settings.tsx:84
 msgid "Language"
 msgstr "Language"
 
@@ -671,7 +671,7 @@ msgstr "University of Islamic Sciences, Karachi"
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
-#: src/screens/settings_display/language_settings.tsx:54
+#: src/screens/settings_display/language_settings.tsx:58
 msgid "Unsupported"
 msgstr "Unsupported"
 
