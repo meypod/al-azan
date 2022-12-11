@@ -62,7 +62,8 @@ export function getTime(date: Date) {
     return new Intl.DateTimeFormat(SELECTED_LOCALE, {
       hour12: true,
       hour: 'numeric',
-      minute: 'numeric',
+      minute: '2-digit',
+      dayPeriod: 'short',
     }).format(date);
   }
 }
