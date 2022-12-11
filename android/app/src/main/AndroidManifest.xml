@@ -16,7 +16,6 @@
       android:label="@string/app_name"
       android:launchMode="singleTask"
       android:name=".MainActivity"
-      android:screenOrientation="portrait"
       android:showWhenLocked="true"
       android:turnScreenOn="true"
       android:windowSoftInputMode="adjustResize">
