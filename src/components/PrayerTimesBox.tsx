@@ -65,7 +65,8 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
     <Box
       display="flex"
       flexDirection="column"
-      padding="3"
+      px="3"
+      py="2"
       key={is24Hour.toString() + numberingSystem}>
       {visiblePrayerTimes.map(prayer => (
         <PrayerTimeRow

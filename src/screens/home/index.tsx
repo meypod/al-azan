@@ -118,7 +118,9 @@ export function Home() {
           prayerTimes={prayerTimes}
           hiddenPrayers={hiddenPrayers}
         />
-        <Text key={arabicCalendar}>{today.arabicDate}</Text>
+        <Text key={arabicCalendar} mb="3">
+          {today.arabicDate}
+        </Text>
       </Box>
     </ScrollView>
   );
