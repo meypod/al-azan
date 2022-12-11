@@ -66,6 +66,10 @@ Translation to other languages has been done by these awesome people:
 
 - Contributor has chosen to stay anonymous
 
+### German
+
+- [@b3r4t](https://github.com/b3r4t)
+
 ## Thanks to
 
 react-native community members.
