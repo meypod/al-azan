@@ -64,8 +64,8 @@ jobs:
 
     - name: Compile lingui.js locales
       run: |
-        sed "s/<TRANSLATION_IO_APIKEY>//" lingui.config.js.example > lingui.config.js
-        npx lingui compile
+        sed "s/<TRANSLATION_IO_APIKEY>//" lingui.config.js.example > lingui.config.js;
+        yarn lingui compile;
 
     - name: Make Gradlew Executable
       run: cd android && chmod +x ./gradlew
