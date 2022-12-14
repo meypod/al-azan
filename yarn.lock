@@ -975,10 +975,10 @@
     source-map "^0.7.3"
     ws "^8.7.0"
 
-"@callstack/repack@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@callstack/repack/-/repack-3.0.0.tgz#a8664b47429787864ee87117ac6805bab9e04eb7"
-  integrity sha512-9zNu6AXcbsrNfmaAH80pobCRSbrJwdvDYXLwkn/JLc9FXyv3gMeYgB/YzzLotSvzqGaQKTZKphDYFhLEfdeTKg==
+"@callstack/repack@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@callstack/repack/-/repack-3.0.1.tgz#2b4e2faa407f8fcbdc0ccbd5ecc3cc426ca00ebf"
+  integrity sha512-5VAElO9h6kRvWIXaVpiB412mQgQTmoHyYOCqGCyPkSkT6M8TCBXehC9k4T0S6b6Cv7zSpH5jzgi4sVfqX6PpBg==
   dependencies:
     "@callstack/repack-dev-server" "^1.0.0"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.7"
