@@ -32,6 +32,17 @@ or get the APK from [the Releases section](https://github.com/meypod/al-azan/rel
 
 * Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
 
+## Screenshots
+
+<table style="width:100%">
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1-main-light.png"/></th>
+    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2-main-dark.png"/></th>
+    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6-homescreen-widget-light.png"/></th>
+    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/7-notification-widget-light.png"/></th>
+  </tr>
+</table>
+
 ## How to run this project
 
 It's important to note that this project uses [re-pack](https://github.com/callstack/repack)(webpack) to bundle the files, to be able to provide chunking and lazy imports. So running it is a little bit different.
