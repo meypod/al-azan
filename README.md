@@ -8,6 +8,30 @@ an open-source Adhan (أذان) - prayer times application built using react-nat
 
 or get the APK from [the Releases section](https://github.com/meypod/al-azan/releases/latest).
 
+## Features
+
+* Ad-Free
+
+* Doesn't use any kind of trackers
+
+* Open-source
+
+* Set custom Adhan audio
+
+* Select different Adhan audio for Fajr prayer
+
+* Many options for Adhan (أذان) calculation
+
+* Light/Dark theme
+
+* Hide times you don't need
+
+* Set reminders before or after a prayer time
+
+* Homescreen and notification Widgets
+
+* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
+
 ## How to run this project
 
 It's important to note that this project uses [re-pack](https://github.com/callstack/repack)(webpack) to bundle the files, to be able to provide chunking and lazy imports. So running it is a little bit different.
@@ -62,11 +86,11 @@ Translation to other languages has been done by these awesome people:
 
 - [Asjad Ahmad](https://twitter.com/Estcaliphate)
 
-### Hindi
+#### Hindi
 
 - Contributor has chosen to stay anonymous
 
-### German
+#### German
 
 - [@b3r4t](https://github.com/b3r4t)
 
