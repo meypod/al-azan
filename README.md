@@ -1,6 +1,6 @@
 # Al-Azan
 
-an open-source adhan - prayer times application built using react-native.
+an open-source Adhan (أذان) - prayer times application built using react-native.
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"

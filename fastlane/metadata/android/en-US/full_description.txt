@@ -1,4 +1,4 @@
-Privacy-first ad-free open-source Adhan app built using react-native.
+Privacy-first ad-free open-source muslim Adhan (islamic prayer times) app
 
 App features:
 
@@ -10,7 +10,9 @@ App features:
 
 * Set custom Adhan audio
 
-* Many options for Adhan calculation
+* Select different Adhan audio for Fajr prayer
+
+* Many options for Adhan (أذان) calculation
 
 * Light/Dark theme
 

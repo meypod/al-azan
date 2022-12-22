@@ -1,1 +1,1 @@
-Privacy-first ad-free open-source Adhan app built using react-native.
+Privacy-first ad-free open-source muslim Adhan (islamic prayer times) app
