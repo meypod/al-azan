@@ -12,7 +12,7 @@ import {
 import {translatePrayer} from '@/adhan';
 import {DeleteIcon} from '@/assets/icons/delete';
 import {EditIcon} from '@/assets/icons/edit';
-import {Reminder} from '@/store/settings';
+import {Reminder} from '@/store/alarm_settings';
 
 export type ReminderItemProps = {
   onEditPressed?: (reminderState: Reminder) => void;
