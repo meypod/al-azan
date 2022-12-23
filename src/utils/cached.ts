@@ -1,4 +1,4 @@
-import {get, set} from '@/store/simple';
+import { getItem, setItem } from '@/store/simple';
 
 type GeneralFunction = (...args: any) => any;
 
@@ -9,11 +9,11 @@ export async function getCached<T extends GeneralFunction>(
   key: string,
   fn: T,
 ): Promise<Awaited<ReturnType<T>>> {
-  let result = await get<ReturnType<T>>(key);
+  let result = await getItem<ReturnType<T>>(key);
   if (result) {
     return result;
   }
   const fnResult = await fn();
-  await set(key, fnResult);
+  await setItem(key, fnResult);
   return fnResult;
 }
