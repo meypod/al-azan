@@ -172,10 +172,8 @@ export function getPrayerTimes(date: Date) {
     options.calculationParameters,
   );
 
-  const middleOfTheNightTime = new SunnahTimes(
-    prayerTimes as any as PrayerTimes,
-  ).middleOfTheNight;
-  prayerTimes.midnight = middleOfTheNightTime;
+  const sunnahTimes = new SunnahTimes(prayerTimes as any as PrayerTimes);
+  prayerTimes.midnight = sunnahTimes.middleOfTheNight;
 
   return prayerTimes;
 }
