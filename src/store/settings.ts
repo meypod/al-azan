@@ -5,6 +5,7 @@ import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
+import {alarmSettings} from './alarm_settings';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
@@ -12,32 +13,6 @@ import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
-
-export type WeekDay =
-  | 'saturday'
-  | 'sunday'
-  | 'monday'
-  | 'tuesday'
-  | 'wednesday'
-  | 'thursday'
-  | 'friday';
-
-export type Reminder = {
-  id: string;
-  label?: string;
-  enabled: boolean;
-  prayer: Prayer;
-  /** in milliseconds. negative to set before, positive to set after */
-  duration: number;
-  /** has a value of `-1` or `+1` */
-  durationModifier: number;
-  /** when is this reminder scheduled to be fired. can be undefined if not scheduled yet. or an outdated timestamp. */
-  whenIsFired?: number;
-  /** timestamp of when it was scheduled. */
-  whenScheduled?: number;
-  /** timestamp of when it was modified. */
-  modified?: number;
-};
 
 export type SettingsStore = {
   // theme
@@ -60,19 +35,13 @@ export type SettingsStore = {
   HIDDEN_PRAYERS: Array<Prayer>;
   HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
   SHOW_WIDGET: boolean;
-  DISMISSED_ALARM_TIMESTAMP: number;
   ADHAN_VOLUME: number;
-  REMINDERS: Array<Reminder>;
-  // widget update
-  LAST_ALARM_DATE_VALUEOF: number;
   // to detect settings change
   CALC_SETTINGS_HASH: string;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
-  saveReminder: (reminder: Reminder) => void;
-  deleteReminder: (reminder: Reminder) => void;
   setSetting: <T extends keyof SettingsStore>(
     key: T,
     val: SettingsStore[T],
@@ -102,9 +71,6 @@ export const settings = createVanilla<SettingsStore>()(
       HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight],
       SHOW_WIDGET: false,
       ADHAN_VOLUME: 70,
-      DISMISSED_ALARM_TIMESTAMP: 0,
-      REMINDERS: [],
-      LAST_ALARM_DATE_VALUEOF: 0,
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
       CALC_SETTINGS_HASH: '',
@@ -153,28 +119,6 @@ export const settings = createVanilla<SettingsStore>()(
           }),
         ),
 
-      saveReminder: reminder =>
-        set(
-          produce<SettingsStore>(draft => {
-            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
-            if (fIndex !== -1) {
-              draft.REMINDERS.splice(fIndex, 1, reminder);
-            } else {
-              draft.REMINDERS.push(reminder);
-            }
-          }),
-        ),
-
-      deleteReminder: reminder =>
-        set(
-          produce<SettingsStore>(draft => {
-            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
-            if (fIndex !== -1) {
-              draft.REMINDERS.splice(fIndex, 1);
-            }
-          }),
-        ),
-
       // general
       setSetting: <T extends keyof SettingsStore>(
         key: T,
@@ -210,7 +154,7 @@ export const settings = createVanilla<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 2,
+      version: 3,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -221,6 +165,20 @@ export const settings = createVanilla<SettingsStore>()(
           case 1:
             // added NUMBERING_SYSTEM field in v2
             (persistedState as SettingsStore).NUMBERING_SYSTEM = '';
+          case 2:
+            // moved reminders to alarm settings store
+            alarmSettings.setState({
+              REMINDERS: (persistedState as any)['REMINDERS'],
+              DISMISSED_ALARM_TIMESTAMP: (persistedState as any)[
+                'DISMISSED_ALARM_TIMESTAMP'
+              ],
+              LAST_ALARM_DATE_VALUEOF: (persistedState as any)[
+                'LAST_ALARM_DATE_VALUEOF'
+              ],
+            });
+            delete (persistedState as any)['REMINDERS'];
+            delete (persistedState as any)['DISMISSED_ALARM_TIMESTAMP'];
+            delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
             break;
         }
         /* eslint-enable no-fallthrough */

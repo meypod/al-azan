@@ -1,8 +1,10 @@
 import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
 import {getPrayerTimes, translatePrayer} from '@/adhan';
-import {hasAtLeastOneNotificationSetting} from '@/store/alarm_settings';
-import {settings} from '@/store/settings';
+import {
+  alarmSettings,
+  hasAtLeastOneNotificationSetting,
+} from '@/store/alarm_settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {setReminders} from '@/tasks/set_reminder';
@@ -28,7 +30,7 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
 
   const {date, prayer, playSound} = nextPrayer!;
 
-  const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
+  const dismissedAlarmTS = alarmSettings.getState().DISMISSED_ALARM_TIMESTAMP;
 
   if (dismissedAlarmTS >= date.valueOf()) return Promise.resolve();
 
@@ -47,7 +49,7 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
       return setReminders({
         noToast: true,
         date,
-        reminders: settings.getState().REMINDERS,
+        reminders: alarmSettings.getState().REMINDERS,
       });
     })
     .then(() => {

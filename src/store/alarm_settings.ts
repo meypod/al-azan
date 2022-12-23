@@ -28,7 +28,37 @@ export function getAdhanSettingKey(
   }
 }
 
+export type WeekDay =
+  | 'saturday'
+  | 'sunday'
+  | 'monday'
+  | 'tuesday'
+  | 'wednesday'
+  | 'thursday'
+  | 'friday';
+
+export type Reminder = {
+  id: string;
+  label?: string;
+  enabled: boolean;
+  prayer: Prayer;
+  /** in milliseconds. negative to set before, positive to set after */
+  duration: number;
+  /** has a value of `-1` or `+1` */
+  durationModifier: number;
+  /** when is this reminder scheduled to be fired. can be undefined if not scheduled yet. or an outdated timestamp. */
+  whenIsFired?: number;
+  /** timestamp of when it was scheduled. */
+  whenScheduled?: number;
+  /** timestamp of when it was modified. */
+  modified?: number;
+};
+
 export type AlarmSettingsStore = {
+  DISMISSED_ALARM_TIMESTAMP: number;
+  REMINDERS: Array<Reminder>;
+  // widget update
+  LAST_ALARM_DATE_VALUEOF: number;
   //prayer notification settings
   FAJR_NOTIFY?: boolean;
   SUNRISE_NOTIFY?: boolean;
@@ -48,6 +78,8 @@ export type AlarmSettingsStore = {
   ISHA_SOUND?: boolean;
   MIDNIGHT_SOUND?: boolean;
 
+  saveReminder: (reminder: Reminder) => void;
+  deleteReminder: (reminder: Reminder) => void;
   setSetting: <T extends keyof AlarmSettingsStore>(
     key: T,
     val: AlarmSettingsStore[T],
@@ -63,6 +95,31 @@ const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 export const alarmSettings = createVanilla<AlarmSettingsStore>()(
   persist(
     set => ({
+      REMINDERS: [],
+      DISMISSED_ALARM_TIMESTAMP: 0,
+      LAST_ALARM_DATE_VALUEOF: 0,
+
+      saveReminder: reminder =>
+        set(
+          produce<AlarmSettingsStore>(draft => {
+            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
+            if (fIndex !== -1) {
+              draft.REMINDERS.splice(fIndex, 1, reminder);
+            } else {
+              draft.REMINDERS.push(reminder);
+            }
+          }),
+        ),
+
+      deleteReminder: reminder =>
+        set(
+          produce<AlarmSettingsStore>(draft => {
+            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
+            if (fIndex !== -1) {
+              draft.REMINDERS.splice(fIndex, 1);
+            }
+          }),
+        ),
       // general
       setSetting: <T extends keyof AlarmSettingsStore>(
         key: T,

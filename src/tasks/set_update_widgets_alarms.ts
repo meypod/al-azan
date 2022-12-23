@@ -1,12 +1,12 @@
 import {setAlarm} from 'react-native-alarm-module';
 import {getPrayerTimes, PrayersInOrder} from '@/adhan';
-import {settings} from '@/store/settings';
+import {alarmSettings} from '@/store/alarm_settings';
 import {getNextDayBeginning} from '@/utils/date';
 
 export function setUpdateWidgetsAlarms() {
   let targetDate = new Date();
 
-  let lastAlarmDateValueOf = settings.getState().LAST_ALARM_DATE_VALUEOF;
+  let lastAlarmDateValueOf = alarmSettings.getState().LAST_ALARM_DATE_VALUEOF;
 
   // when the last alarm goes off, it gets past this if
   // because till the last alarm, this condition always returns
@@ -43,5 +43,5 @@ export function setUpdateWidgetsAlarms() {
     }
   }
 
-  settings.setState({LAST_ALARM_DATE_VALUEOF: lastAlarmDateValueOf});
+  alarmSettings.setState({LAST_ALARM_DATE_VALUEOF: lastAlarmDateValueOf});
 }

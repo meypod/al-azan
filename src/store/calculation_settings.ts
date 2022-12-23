@@ -131,6 +131,7 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
                     key as keyof CalcSettingsStore
                   ] as keyof AlarmSettingsStore,
                 });
+                delete (persistedState as any)[key];
               }
             }
             break;

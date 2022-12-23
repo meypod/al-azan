@@ -12,8 +12,11 @@ import {
   REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_NAME,
 } from '@/constants/notification';
-import {hasAtLeastOneNotificationSetting} from '@/store/alarm_settings';
-import {Reminder, settings} from '@/store/settings';
+import {
+  alarmSettings,
+  hasAtLeastOneNotificationSetting,
+  Reminder,
+} from '@/store/alarm_settings';
 import {getNextDayBeginning, getTime} from '@/utils/date';
 
 type SetReminderOptions = {
@@ -104,7 +107,7 @@ export async function setReminders(options: SetReminderOptions) {
         trigger,
       )
       .then(() => {
-        settings.getState().saveReminder({
+        alarmSettings.getState().saveReminder({
           ...reminder,
           whenScheduled: Date.now(),
           whenIsFired: timestamp,
