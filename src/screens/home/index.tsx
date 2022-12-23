@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {useEffect, useState} from 'react';
-import {getPrayerTimes, PrayerTimesExtended} from '@/adhan';
+import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {UpdateIcon} from '@/assets/icons/update';
 import AppBar from '@/components/AppBar';
@@ -27,9 +27,9 @@ export function Home() {
     state.updateCurrentDate,
     state.resetCurrentDate,
   ]);
-  const [prayerTimes, setPrayerTimes] = useState<
-    PrayerTimesExtended | undefined
-  >(undefined);
+  const [prayerTimes, setPrayerTimes] = useState<PrayerTimesHelper | undefined>(
+    undefined,
+  );
 
   const [isToday, setIsToday] = useState<boolean>();
 
@@ -117,6 +117,7 @@ export function Home() {
         <PrayerTimesBox
           prayerTimes={prayerTimes}
           hiddenPrayers={hiddenPrayers}
+          date={currentDate}
         />
         <Text key={arabicCalendar} mb="3">
           {today.arabicDate}

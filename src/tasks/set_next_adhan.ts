@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
 import {getPrayerTimes, translatePrayer} from '@/adhan';
-import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
+import {hasAtLeastOneNotificationSetting} from '@/store/alarm_settings';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';

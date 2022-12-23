@@ -12,7 +12,7 @@ import {
   REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_NAME,
 } from '@/constants/notification';
-import {hasAtLeastOneNotificationSetting} from '@/store/calculation_settings';
+import {hasAtLeastOneNotificationSetting} from '@/store/alarm_settings';
 import {Reminder, settings} from '@/store/settings';
 import {getNextDayBeginning, getTime} from '@/utils/date';
 

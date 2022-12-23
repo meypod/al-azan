@@ -4,8 +4,8 @@ import {IHStackProps} from 'native-base/lib/typescript/components/primitives/Sta
 import {Prayer, translatePrayer} from '@/adhan';
 import {
   getAdhanSettingKey,
-  useCalcSettingsHelper,
-} from '@/store/calculation_settings';
+  useAlarmSettingsHelper,
+} from '@/store/alarm_settings';
 
 type NotificationSettingProps = {
   prayer: Prayer;
@@ -15,10 +15,10 @@ export function NotificationSetting({
   prayer,
   ...hStackProps
 }: NotificationSettingProps & IHStackProps) {
-  const [notify, setNotify] = useCalcSettingsHelper(
+  const [notify, setNotify] = useAlarmSettingsHelper(
     getAdhanSettingKey(prayer, 'notify'),
   );
-  const [sound, setSound] = useCalcSettingsHelper(
+  const [sound, setSound] = useAlarmSettingsHelper(
     getAdhanSettingKey(prayer, 'sound'),
   );
 

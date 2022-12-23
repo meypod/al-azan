@@ -65,6 +65,8 @@ export type SettingsStore = {
   REMINDERS: Array<Reminder>;
   // widget update
   LAST_ALARM_DATE_VALUEOF: number;
+  // to detect settings change
+  CALC_SETTINGS_HASH: string;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -105,6 +107,7 @@ export const settings = createVanilla<SettingsStore>()(
       LAST_ALARM_DATE_VALUEOF: 0,
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
+      CALC_SETTINGS_HASH: '',
 
       // adhan entry helper
       saveAdhanEntry: entry =>

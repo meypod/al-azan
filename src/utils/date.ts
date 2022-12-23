@@ -22,15 +22,51 @@ settings.subscribe(state => {
 
 const oneDayInMs = 86400 * 1000;
 
-export function getNextDayBeginning(date: Date) {
-  const beginningOfToday = new Date(date.valueOf());
-  beginningOfToday.setHours(0, 0, 0, 0);
+export function getDayBeginning(date: Date) {
+  const beginningOfDay = new Date(date.valueOf());
+  beginningOfDay.setHours(0, 0, 0, 0);
 
-  return new Date(beginningOfToday.valueOf() + oneDayInMs);
+  return beginningOfDay;
+}
+
+export function getNextDayBeginning(date: Date) {
+  return new Date(getDayBeginning(date).valueOf() + oneDayInMs);
+}
+
+export function getMonthBeginning(date: Date) {
+  const beginningOfMonth = new Date(date.valueOf());
+  beginningOfMonth.setHours(0, 0, 0, 0);
+  beginningOfMonth.setDate(1);
+  return beginningOfMonth;
+}
+
+export function getNextMonthBeginning(date: Date) {
+  const beginningOfMonth = new Date(date.valueOf());
+  beginningOfMonth.setHours(0, 0, 0, 0);
+  beginningOfMonth.setDate(1);
+  if (beginningOfMonth.getMonth() === 11) {
+    beginningOfMonth.setFullYear(beginningOfMonth.getFullYear() + 1);
+    beginningOfMonth.setMonth(0);
+  } else {
+    beginningOfMonth.setMonth(beginningOfMonth.getMonth() + 1);
+  }
+  return beginningOfMonth;
 }
 
 export function addDays(date: Date, days: number) {
   return new Date(date.valueOf() + days * oneDayInMs);
+}
+
+export function addMonths(date: Date, months: number = 0) {
+  const newDate = new Date(date);
+  const dateMonth = date.getMonth();
+  const sum = months + dateMonth;
+  const years = Math.floor(sum / 12);
+  const newMonth = sum - years * 12;
+
+  newDate.setFullYear(newDate.getFullYear() + years);
+  newDate.setMonth(newMonth);
+  return newDate;
 }
 
 export function getDayName(date: Date, length: 'long' | 'short' = 'long') {

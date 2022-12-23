@@ -9,52 +9,14 @@ import {
   PolarCircleResolution,
 } from 'adhan';
 import {CalculationMethods} from './calculation_methods';
-import {Prayer, PrayersInOrder} from './prayer';
-import {getAdhanSettingKey, calcSettings} from '@/store/calculation_settings';
 
-export type PrayerTime = {
-  date: Date;
-  prayer: Prayer;
-  playSound?: boolean;
-};
-
-function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
-  if (useSettings) {
-    return calcSettings.getState()[getAdhanSettingKey(prayer, 'notify')];
-  } else {
-    return true;
-  }
-}
-
-export class PrayerTimesExtended extends PrayerTimes {
-  midnight!: Date;
-
-  // @ts-ignore
-  nextPrayer(useSettings?: boolean) {
-    let prayerTime: PrayerTime | undefined;
-
-    for (let prayer of PrayersInOrder) {
-      if (
-        this.date <= this[prayer] &&
-        shouldNotifyPrayer(prayer, useSettings)
-      ) {
-        prayerTime = {
-          date: this[prayer],
-          prayer,
-        };
-        break;
-      }
-    }
-
-    if (prayerTime && useSettings) {
-      prayerTime.playSound = !!calcSettings.getState()[
-        getAdhanSettingKey(prayerTime.prayer, 'sound')
-      ] as boolean;
-    }
-
-    return prayerTime;
-  }
-}
+import {PrayersInOrder, Prayer} from './prayer';
+import {
+  CachedPrayerTimes,
+  getCachedPrayerTimes,
+} from '@/store/adhan_calc_cache';
+import {alarmSettings, getAdhanSettingKey} from '@/store/alarm_settings';
+import {calcSettings} from '@/store/calculation_settings';
 
 export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
@@ -162,11 +124,11 @@ function getPrayerTimesOptionsFromSettings() {
   return prayerTimeOptions;
 }
 
-export function getPrayerTimes(date: Date) {
+export function calculatePrayerTimes(date: Date) {
   const options = getPrayerTimesOptionsFromSettings();
   if (!options) return;
 
-  const prayerTimes = new PrayerTimesExtended(
+  const prayerTimes: Partial<CachedPrayerTimes> = new PrayerTimes(
     options.coordinates,
     date,
     options.calculationParameters,
@@ -175,5 +137,79 @@ export function getPrayerTimes(date: Date) {
   const sunnahTimes = new SunnahTimes(prayerTimes as any as PrayerTimes);
   prayerTimes.midnight = sunnahTimes.middleOfTheNight;
 
-  return prayerTimes;
+  return prayerTimes as Required<CachedPrayerTimes>;
+}
+
+export type PrayerTime = {
+  date: Date;
+  prayer: Prayer;
+  playSound?: boolean;
+};
+
+function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
+  if (useSettings) {
+    return alarmSettings.getState()[getAdhanSettingKey(prayer, 'notify')];
+  } else {
+    return true;
+  }
+}
+
+/** do not use this class directly. use getPrayerTimes instead */
+export class PrayerTimesHelper {
+  date: Date;
+
+  fajr: Date;
+  sunrise: Date;
+  dhuhr: Date;
+  asr: Date;
+  sunset: Date;
+  maghrib: Date;
+  isha: Date;
+  midnight: Date;
+
+  constructor(date: Date) {
+    const cachedTimes = getCachedPrayerTimes(date);
+    this.date = cachedTimes.date;
+    this.fajr = cachedTimes.fajr;
+    this.sunrise = cachedTimes.sunrise;
+    this.dhuhr = cachedTimes.dhuhr;
+    this.asr = cachedTimes.asr;
+    this.sunset = cachedTimes.sunset;
+    this.maghrib = cachedTimes.maghrib;
+    this.isha = cachedTimes.isha;
+    this.midnight = cachedTimes.midnight;
+  }
+
+  // @ts-ignore
+  nextPrayer(useSettings?: boolean) {
+    let prayerTime: PrayerTime | undefined;
+
+    for (let prayer of PrayersInOrder) {
+      if (
+        this.date <= this[prayer] &&
+        shouldNotifyPrayer(prayer, useSettings)
+      ) {
+        prayerTime = {
+          date: this[prayer],
+          prayer,
+        };
+        break;
+      }
+    }
+
+    if (prayerTime && useSettings) {
+      prayerTime.playSound = !!alarmSettings.getState()[
+        getAdhanSettingKey(prayerTime.prayer, 'sound')
+      ] as boolean;
+    }
+
+    return prayerTime;
+  }
+}
+
+export function getPrayerTimes(date: Date) {
+  const options = getPrayerTimesOptionsFromSettings();
+  if (!options) return;
+
+  return new PrayerTimesHelper(date);
 }

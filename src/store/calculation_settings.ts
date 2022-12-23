@@ -4,8 +4,9 @@ import {useCallback} from 'react';
 import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
+import {alarmSettings, AlarmSettingsStore} from './alarm_settings';
 import {zustandStorage} from './mmkv';
-import {Prayer, PrayersInOrder} from '@/adhan';
+import {Prayer} from '@/adhan';
 
 const CALC_SETTINGS_STORAGE_KEY = 'CALC_SETTINGS_STORAGE';
 
@@ -13,23 +14,14 @@ export const ADHAN_NOTIFICATION_SUFFIX = '_NOTIFY';
 export const ADHAN_SOUND_SUFFIX = '_SOUND';
 export const ADHAN_ADJUSTMENT_SUFFIX = '_ADJUSTMENT';
 
-export function getAdhanSettingKey(
+export function getPrayerAdjustmentSettingKey(
   prayer: Prayer,
-  k: 'sound' | 'notify' | 'adjustment',
 ): keyof CalcSettingsStore {
-  if (k === 'adjustment') {
-    return (prayer.toUpperCase() +
-      ADHAN_ADJUSTMENT_SUFFIX) as keyof CalcSettingsStore;
-  } else if (k === 'notify') {
-    return (prayer.toUpperCase() +
-      ADHAN_NOTIFICATION_SUFFIX) as keyof CalcSettingsStore;
-  } else {
-    return (prayer.toUpperCase() +
-      ADHAN_SOUND_SUFFIX) as keyof CalcSettingsStore;
-  }
+  return (prayer.toUpperCase() +
+    ADHAN_ADJUSTMENT_SUFFIX) as keyof CalcSettingsStore;
 }
 
-type CalcSettingsStore = {
+export type CalcSettingsStore = {
   LOCATION_LAT: number | undefined;
   LOCATION_LONG: number | undefined;
   CALCULATION_METHOD_KEY: string | undefined;
@@ -37,25 +29,6 @@ type CalcSettingsStore = {
   ASR_CALCULATION: string;
   SHAFAQ: string;
   POLAR_RESOLUTION: string;
-
-  //prayer notification settings
-  FAJR_NOTIFY?: boolean;
-  SUNRISE_NOTIFY?: boolean;
-  DHUHR_NOTIFY?: boolean;
-  ASR_NOTIFY?: boolean;
-  SUNSET_NOTIFY?: boolean;
-  MAGHRIB_NOTIFY?: boolean;
-  ISHA_NOTIFY?: boolean;
-  MIDNIGHT_NOTIFY?: boolean;
-  // prayer sound settings
-  FAJR_SOUND?: boolean;
-  SUNRISE_SOUND?: boolean;
-  DHUHR_SOUND?: boolean;
-  ASR_SOUND?: boolean;
-  SUNSET_SOUND?: boolean;
-  MAGHRIB_SOUND?: boolean;
-  ISHA_SOUND?: boolean;
-  MIDNIGHT_SOUND?: boolean;
 
   // prayer adjustment settings
   FAJR_ADJUSTMENT: number;
@@ -134,7 +107,7 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 1,
+      version: 2,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -149,6 +122,18 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
             (persistedState as CalcSettingsStore).MAGHRIB_ADJUSTMENT = 0;
             (persistedState as CalcSettingsStore).ISHA_ADJUSTMENT = 0;
             (persistedState as CalcSettingsStore).MIDNIGHT_ADJUSTMENT = 0;
+            break;
+          case 1:
+            // moved all notification related keys to alarm settings
+            for (const key in persistedState as CalcSettingsStore) {
+              if (key.endsWith('_NOTIFY') || key.endsWith('_SOUND')) {
+                alarmSettings.setState({
+                  [key]: (persistedState as CalcSettingsStore)[
+                    key as keyof CalcSettingsStore
+                  ] as keyof AlarmSettingsStore,
+                });
+              }
+            }
             break;
         }
         /* eslint-enable no-fallthrough */
@@ -171,13 +156,4 @@ export function useCalcSettingsHelper<T extends keyof CalcSettingsStore>(
     CalcSettingsStore[T],
     (val: CalcSettingsStore[T]) => void,
   ];
-}
-
-export function hasAtLeastOneNotificationSetting() {
-  for (let prayer of PrayersInOrder) {
-    if (calcSettings.getState()[getAdhanSettingKey(prayer, 'notify')]) {
-      return true;
-    }
-  }
-  return false;
 }

@@ -1,8 +1,9 @@
-import {Prayer, PrayerTimesExtended} from '@/adhan';
+import {Prayer} from '@/adhan';
+import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {getNextDayBeginning} from '@/utils/date';
 
 export function getActivePrayer(
-  prayerTimes: PrayerTimesExtended | undefined,
+  prayerTimes: CachedPrayerTimes | undefined,
   prayersList: Prayer[],
 ) {
   if (!prayerTimes?.date) return;

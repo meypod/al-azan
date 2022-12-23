@@ -1,6 +1,8 @@
+import {t} from '@lingui/macro';
 import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {memo, useEffect} from 'react';
 
+import {ToastAndroid} from 'react-native';
 import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
@@ -12,9 +14,13 @@ import {VolumeUpIcon} from '@/assets/icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/widget';
 import {push} from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
+import {cacheMonth, clearCache} from '@/store/adhan_calc_cache';
+import {useAlarmSettings} from '@/store/alarm_settings';
 import {useCalcSettings} from '@/store/calculation_settings';
+import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
+import {sha256} from '@/utils/hash';
 
 type ScreenListItem = {
   name: keyof RootStackParamList;
@@ -80,10 +86,25 @@ function renderItem({item}: {item: ScreenListItem}) {
 
 function Settings() {
   const settingsState = useCalcSettings(state => state);
+  const alarmSettingsState = useAlarmSettings(state => state);
+  const [calcSettingsHash, setCalcSettingsHash] =
+    useSettingsHelper('CALC_SETTINGS_HASH');
+
+  useEffect(() => {
+    const stateHash = sha256(JSON.stringify(settingsState));
+    if (calcSettingsHash !== stateHash) {
+      ToastAndroid.show(t`Working, Please wait`, ToastAndroid.SHORT);
+      setCalcSettingsHash(stateHash);
+      setNextAdhan();
+      updateWidgets();
+      clearCache();
+      cacheMonth(new Date());
+    }
+  }, [settingsState, calcSettingsHash, setCalcSettingsHash]);
+
   useEffect(() => {
     setNextAdhan();
-    updateWidgets();
-  }, [settingsState]);
+  }, [alarmSettingsState]);
 
   return (
     <Box safeArea py="3">
