@@ -126,11 +126,14 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
             // moved all notification related keys to alarm settings
             for (const key in persistedState as CalcSettingsStore) {
               if (key.endsWith('_NOTIFY') || key.endsWith('_SOUND')) {
-                alarmSettings.setState({
-                  [key]: (persistedState as CalcSettingsStore)[
-                    key as keyof CalcSettingsStore
-                  ] as keyof AlarmSettingsStore,
-                });
+                alarmSettings.setState(
+                  {
+                    [key]: (persistedState as CalcSettingsStore)[
+                      key as keyof CalcSettingsStore
+                    ] as keyof AlarmSettingsStore,
+                  },
+                  true,
+                );
                 delete (persistedState as any)[key];
               }
             }
