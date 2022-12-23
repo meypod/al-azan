@@ -167,18 +167,15 @@ export const settings = createVanilla<SettingsStore>()(
             (persistedState as SettingsStore).NUMBERING_SYSTEM = '';
           case 2:
             // moved reminders to alarm settings store
-            alarmSettings.setState(
-              {
-                REMINDERS: (persistedState as any)['REMINDERS'],
-                DISMISSED_ALARM_TIMESTAMP: (persistedState as any)[
-                  'DISMISSED_ALARM_TIMESTAMP'
-                ],
-                LAST_ALARM_DATE_VALUEOF: (persistedState as any)[
-                  'LAST_ALARM_DATE_VALUEOF'
-                ],
-              },
-              true,
-            );
+            alarmSettings.setState({
+              REMINDERS: (persistedState as any)['REMINDERS'],
+              DISMISSED_ALARM_TIMESTAMP: (persistedState as any)[
+                'DISMISSED_ALARM_TIMESTAMP'
+              ],
+              LAST_ALARM_DATE_VALUEOF: (persistedState as any)[
+                'LAST_ALARM_DATE_VALUEOF'
+              ],
+            });
             delete (persistedState as any)['REMINDERS'];
             delete (persistedState as any)['DISMISSED_ALARM_TIMESTAMP'];
             delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
