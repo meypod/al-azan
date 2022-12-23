@@ -12,11 +12,3 @@ export function setItem<T>(key: string, data: Record<string, T>) {
 export function deleteItem(key: string) {
   storage.delete(key);
 }
-
-export function deleteItemStartingWith(key: string) {
-  for (const k of storage.getAllKeys()) {
-    if (k.startsWith(key)) {
-      storage.delete(k);
-    }
-  }
-}
