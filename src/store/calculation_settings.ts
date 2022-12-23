@@ -122,7 +122,6 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
             (persistedState as CalcSettingsStore).MAGHRIB_ADJUSTMENT = 0;
             (persistedState as CalcSettingsStore).ISHA_ADJUSTMENT = 0;
             (persistedState as CalcSettingsStore).MIDNIGHT_ADJUSTMENT = 0;
-            break;
           case 1:
             // moved all notification related keys to alarm settings
             for (const key in persistedState as CalcSettingsStore) {
