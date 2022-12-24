@@ -33,6 +33,8 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
 
   if (dismissedAlarmTS >= date.valueOf()) return;
 
+  const showNextPrayerInfo = alarmSettings.getState().SHOW_NEXT_PRAYER_TIME;
+
   return setPreAlarmTask({
     date,
     prayer,
@@ -42,6 +44,7 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
         date,
         prayer,
         playSound,
+        showNextPrayerInfo,
       }),
     )
     .then(() => {

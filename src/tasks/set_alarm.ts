@@ -7,7 +7,7 @@ import notifee, {
   AndroidVisibility,
   AndroidLaunchActivityFlag,
 } from '@notifee/react-native';
-import {Prayer, translatePrayer} from '@/adhan';
+import {getPrayerTimes, Prayer, translatePrayer} from '@/adhan';
 import {
   ADHAN_CHANNEL_ID,
   ADHAN_CHANNEL_NAME,
@@ -27,6 +27,8 @@ export type SetAlarmTaskOptions = {
   playSound?: boolean;
   /** Default: `true` */
   fullScreen?: boolean;
+  /** Default: `false` */
+  showNextPrayerInfo?: boolean;
 };
 
 export async function setAlarmTask(options: SetAlarmTaskOptions) {
@@ -58,6 +60,24 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     },
   };
 
+  let body;
+
+  if (options.showNextPrayerInfo) {
+    const next = getPrayerTimes(
+      new Date(options.date.valueOf() + 1000),
+    )?.nextPrayer({
+      checkNextDays: true,
+      useSettings: true,
+    });
+    if (next) {
+      body =
+        `${t`Next`}: ${translatePrayer(next.prayer)}, ${getTime(next.date)}` +
+        (next.date.toDateString() !== options.date.toDateString()
+          ? ' ' + t`Tomorrow`
+          : '');
+    }
+  }
+
   // to replace the notification settings
   await notifee
     .cancelTriggerNotification(ADHAN_NOTIFICATION_ID)
@@ -67,7 +87,8 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     {
       id: ADHAN_NOTIFICATION_ID,
       title: translatePrayer(options.prayer),
-      body: getTime(options.date),
+      subtitle: getTime(options.date),
+      body,
       android: {
         smallIcon: 'ic_stat_name',
         channelId,

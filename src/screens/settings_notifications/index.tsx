@@ -1,5 +1,6 @@
 import {t} from '@lingui/macro';
 import {HStack, ScrollView, Text, IScrollViewProps} from 'native-base';
+import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
 import {PrayersInOrder} from '@/adhan';
 import {NotificationSetting} from '@/screens/settings_notifications/notification_setting';
 
@@ -29,6 +30,8 @@ export function NotificationSettings(props: IScrollViewProps) {
           backgroundColor={i % 2 === 0 ? 'coolGray.400:alpha.20' : undefined}
         />
       ))}
+
+      <NotifyNextAdhanSetting mt="4" />
     </ScrollView>
   );
 }

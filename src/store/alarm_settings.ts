@@ -77,6 +77,8 @@ export type AlarmSettingsStore = {
   MAGHRIB_SOUND?: boolean;
   ISHA_SOUND?: boolean;
   MIDNIGHT_SOUND?: boolean;
+  // alarm notification
+  SHOW_NEXT_PRAYER_TIME: boolean;
 
   saveReminder: (reminder: Reminder) => void;
   deleteReminder: (reminder: Reminder) => void;
@@ -98,6 +100,7 @@ export const alarmSettings = createVanilla<AlarmSettingsStore>()(
       REMINDERS: [],
       DISMISSED_ALARM_TIMESTAMP: 0,
       LAST_ALARM_DATE_VALUEOF: 0,
+      SHOW_NEXT_PRAYER_TIME: false,
 
       saveReminder: reminder =>
         set(
