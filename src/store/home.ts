@@ -18,6 +18,7 @@ export const useStore = create<AppState>()(set => ({
   changeCurrentDate: (newDate: Date) =>
     set(
       produce(draft => {
+        newDate.setHours(0, 0, 0, 0);
         draft.date = newDate;
         draft.navigating = true;
       }),
@@ -51,9 +52,6 @@ export const useStore = create<AppState>()(set => ({
         let newDate = new Date(draft.date); // to update the current selected date
         if (!draft.navigating) {
           newDate = now;
-        } else {
-          newDate.setHours(now.getHours());
-          newDate.setMinutes(now.getMinutes());
         }
         draft.date = newDate;
       }),

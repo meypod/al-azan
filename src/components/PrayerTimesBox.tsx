@@ -36,7 +36,11 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
   }, [hiddenPrayers, prayerTimes]);
 
   useEffect(() => {
-    setActivePrayer(getActivePrayer(prayerTimes, visiblePrayerTimes));
+    if (prayerTimes) {
+      setActivePrayer(getActivePrayer(prayerTimes.date, visiblePrayerTimes));
+    } else {
+      setActivePrayer(undefined);
+    }
   }, [prayerTimes, visiblePrayerTimes]);
 
   useEffect(() => {

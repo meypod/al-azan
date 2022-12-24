@@ -1,34 +1,40 @@
-import {Prayer, PrayerTimesHelper} from '@/adhan';
-import {getNextDayBeginning} from '@/utils/date';
+import {Prayer, getPrayerTimes} from '@/adhan';
+import {addDays} from '@/utils/date';
 
-export function getActivePrayer(
-  prayerTimes: PrayerTimesHelper | undefined,
-  prayersList: Prayer[],
-) {
-  if (!prayerTimes?.date) return;
-
+export function getActivePrayer(date: Date, prayersList: Prayer[]) {
+  if (!date) return;
   let activePrayer: Prayer | undefined;
-  const nextDayBeginning = getNextDayBeginning(new Date());
+  const now = new Date();
+  const tomorrow = addDays(now, 1);
 
-  if (
-    [new Date().toDateString(), nextDayBeginning.toDateString()].includes(
-      prayerTimes.date.toDateString(),
-    )
-  ) {
+  const nowPrayers = getPrayerTimes(now);
+  const tomorrowPrayers = getPrayerTimes(tomorrow);
+  if (!nowPrayers || !tomorrowPrayers) return;
+
+  const isToday = date.toDateString() === now.toDateString();
+  const isTomorrow = date.toDateString() === tomorrow.toDateString();
+
+  if (isToday || isTomorrow) {
     for (let prayer of prayersList) {
-      if (prayerTimes[prayer] && prayerTimes[prayer].valueOf() > Date.now()) {
+      if (nowPrayers[prayer] && Date.now() < nowPrayers[prayer].valueOf()) {
         activePrayer = prayer;
         break;
       }
     }
-    if (
-      !activePrayer &&
-      Date.now() - prayerTimes[prayersList[prayersList.length - 1]].valueOf() <
-        12 * 60 * 60 * 1000
-    ) {
-      // edge case
-      // probabaly this is midnight before 00:00
+
+    if (!activePrayer) {
       activePrayer = prayersList[prayersList.length - 1];
+    }
+
+    if (isTomorrow) {
+      if (
+        Date.now() < tomorrowPrayers[prayersList[0]].valueOf() &&
+        activePrayer === prayersList[prayersList.length - 1]
+      ) {
+        activePrayer = prayersList[0];
+      } else {
+        activePrayer = undefined;
+      }
     }
   }
   return activePrayer;
