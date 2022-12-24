@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-24 13:34+0330\n"
+"POT-Creation-Date: 2022-12-24 14:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -309,7 +309,7 @@ msgstr "الرئيسية"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
-msgstr ""
+msgstr "في حالة التمكين، عند عرض إشعار، سيحتوي على معلومات خاصة بوقت الصلاة التالي"
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
@@ -554,7 +554,7 @@ msgstr "اعرض اليوم"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
 msgid "Show next in notification?"
-msgstr ""
+msgstr "إظهار التالي في الإشعار؟"
 
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
@@ -706,7 +706,7 @@ msgstr "مرحبا"
 
 #: src/screens/settings/index.tsx:96
 msgid "Working, Please wait"
-msgstr ""
+msgstr "مشغول، انتظر من فضلك"
 
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
@@ -843,7 +843,7 @@ msgstr "منتصف الليل"
 
 #: src/adhan/prayer.ts:67
 msgid "sunnah.tahajjud"
-msgstr ""
+msgstr "تهجد"
 
 #: src/adhan/prayer.ts:39
 msgid "sunrise"
