@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-11 04:54+0330\n"
+"POT-Creation-Date: 2022-12-24 13:34+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,7 +46,7 @@ msgstr "Tambah"
 msgid "Add Custom Adhan"
 msgstr "Tambah Suara Adzan Kustom"
 
-#: src/screens/settings_reminders/index.tsx:50
+#: src/screens/settings_reminders/index.tsx:54
 msgid "Add Reminder"
 msgstr "Buat Pengingat"
 
@@ -219,7 +219,7 @@ msgid "Disabled"
 msgstr "Tidak Aktif"
 
 #: src/screens/fullscreen_alarm/index.tsx:105
-#: src/tasks/set_alarm.ts:94
+#: src/tasks/set_alarm.ts:115
 msgid "Dismiss"
 msgstr "Hentikan"
 
@@ -308,6 +308,10 @@ msgstr "Lintang Tinggi"
 #: src/screens/settings_about/index.tsx:24
 msgid "Home"
 msgstr "Situs"
+
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
+msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
+msgstr "Jika diaktifkan, ketika notifikasi ditampilkan, maka akan berisi info untuk waktu shalat berikutnya"
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
@@ -417,7 +421,8 @@ msgid "New Reminder"
 msgstr "Buat Pengingat"
 
 #: src/intro/intro.tsx:88
-#: src/tasks/set_next_adhan.ts:58
+#: src/tasks/set_alarm.ts:74
+#: src/tasks/set_next_adhan.ts:62
 msgid "Next"
 msgstr "Lanjut"
 
@@ -433,7 +438,7 @@ msgstr "Tidak"
 msgid "None (Automatic)"
 msgstr "Tidak ada (Otomatis)"
 
-#: src/screens/settings_notifications/index.tsx:18
+#: src/screens/settings_notifications/index.tsx:19
 msgid "Notification"
 msgstr "Notifikasi"
 
@@ -491,8 +496,8 @@ msgstr ""
 msgid "Referred to as the ISNA method"
 msgstr "Mengacu pada metode ISNA"
 
-#: src/tasks/set_reminder.ts:94
-#: src/tasks/set_reminder.ts:119
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:122
 msgid "Reminder"
 msgstr "Pengingat"
 
@@ -553,6 +558,10 @@ msgstr "Tampilkan Pilihan Adzan"
 msgid "Show Today"
 msgstr "Hari Ini"
 
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
+msgid "Show next in notification?"
+msgstr "Tampilkan pemberitahuan berikutnya?"
+
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
 msgstr "Tampilkan widget notifikasi?"
@@ -572,7 +581,7 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "Beberapa perangkat memerlukan pengaturan tambahan pada Power Manager untuk mencegah aplikasi berhenti di latar belakang. Nonaktifkan opsi hemat daya untuk aplikasi ini."
 
-#: src/screens/settings_notifications/index.tsx:21
+#: src/screens/settings_notifications/index.tsx:22
 msgid "Sound"
 msgstr "Suara"
 
@@ -616,7 +625,7 @@ msgid "Thursday"
 msgstr "Kamis"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
-#: src/screens/settings_notifications/index.tsx:16
+#: src/screens/settings_notifications/index.tsx:17
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:104
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
@@ -630,8 +639,9 @@ msgstr "Format waktu"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
-#: src/tasks/set_next_adhan.ts:63
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_alarm.ts:76
+#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "Besok"
 
@@ -700,6 +710,10 @@ msgstr "Rabu"
 msgid "Welcome"
 msgstr "Selamat Datang!"
 
+#: src/screens/settings/index.tsx:96
+msgid "Working, Please wait"
+msgstr "Sedang bekerja, Mohon tunggu"
+
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
@@ -739,7 +753,7 @@ msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 msgid "after"
 msgstr "setelah"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:47
 msgid "asr.prayer"
 msgstr "Ashar"
 
@@ -757,7 +771,7 @@ msgstr "sebelum"
 msgid "calculation_settings"
 msgstr "Perhitungan"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:43
 msgid "dhuhr.prayer"
 msgstr "Dhuhur"
 
@@ -766,7 +780,7 @@ msgstr "Dhuhur"
 msgid "display_settings"
 msgstr "Tampilan"
 
-#: src/adhan/prayer.ts:31
+#: src/adhan/prayer.ts:35
 msgid "fajr.prayer"
 msgstr "Subuh"
 
@@ -788,7 +802,7 @@ msgstr "Situs"
 msgid "is prayer time hidden?"
 msgstr "apakah waktu sholat tersembunyi?"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:59
 msgid "isha.prayer"
 msgstr "Isya'"
 
@@ -797,7 +811,7 @@ msgstr "Isya'"
 msgid "location_settings"
 msgstr "Lokasi"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:55
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
@@ -824,15 +838,19 @@ msgstr "Apakah ingin menampilkan widget notifikasi?"
 msgid "should {prayerName} be hidden?"
 msgstr "Apakah {prayerName} disembunyikan?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:63
 msgid "sunnah.midnight"
 msgstr "Tengah malam"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:67
+msgid "sunnah.tahajjud"
+msgstr "Tahajjud"
+
+#: src/adhan/prayer.ts:39
 msgid "sunrise"
 msgstr "Terbit"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:51
 msgid "sunset"
 msgstr "Terbenam"
 

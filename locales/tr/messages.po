@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-11 04:54+0330\n"
+"POT-Creation-Date: 2022-12-24 13:34+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,7 +44,7 @@ msgstr "Ekle"
 msgid "Add Custom Adhan"
 msgstr "Ezan sesini kişiselleştir"
 
-#: src/screens/settings_reminders/index.tsx:50
+#: src/screens/settings_reminders/index.tsx:54
 msgid "Add Reminder"
 msgstr "Hatırlatıcı Ekle"
 
@@ -217,7 +217,7 @@ msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
 #: src/screens/fullscreen_alarm/index.tsx:105
-#: src/tasks/set_alarm.ts:94
+#: src/tasks/set_alarm.ts:115
 msgid "Dismiss"
 msgstr "Reddet"
 
@@ -306,6 +306,10 @@ msgstr "Yüksek Enlem"
 #: src/screens/settings_about/index.tsx:24
 msgid "Home"
 msgstr "Anasayfa"
+
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
+msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
+msgstr "Etkinleştirilirse, bir bildirim gösterildiğinde, bir sonraki namaz vakti için bilgi içerecektir"
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
@@ -415,7 +419,8 @@ msgid "New Reminder"
 msgstr "Yeni Hatırlatıcı"
 
 #: src/intro/intro.tsx:88
-#: src/tasks/set_next_adhan.ts:58
+#: src/tasks/set_alarm.ts:74
+#: src/tasks/set_next_adhan.ts:62
 msgid "Next"
 msgstr "Sonraki"
 
@@ -431,7 +436,7 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
 
-#: src/screens/settings_notifications/index.tsx:18
+#: src/screens/settings_notifications/index.tsx:19
 msgid "Notification"
 msgstr "Bildirim"
 
@@ -487,8 +492,8 @@ msgstr "Ragheb Mustafa Ghalwash"
 msgid "Referred to as the ISNA method"
 msgstr "ISNA yöntemi"
 
-#: src/tasks/set_reminder.ts:94
-#: src/tasks/set_reminder.ts:119
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:122
 msgid "Reminder"
 msgstr "Hatırlatıcı"
 
@@ -547,6 +552,10 @@ msgstr "Ezan Seçeneklerini Göster"
 msgid "Show Today"
 msgstr "Bugünü Göster"
 
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
+msgid "Show next in notification?"
+msgstr "Sıradaki bildirimi göster?"
+
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
 msgstr "Bildirim widget'ı gösterilsin mi?"
@@ -566,7 +575,7 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "Bazı cihazların, uygulamanın arka planda öldürülmesini önlemek için Güç Yöneticilerinde ek ayarlara ihtiyacı vardır. Bu durumda, uygulama için herhangi bir güç tasarrufu seçeneğini devre dışı bırakın."
 
-#: src/screens/settings_notifications/index.tsx:21
+#: src/screens/settings_notifications/index.tsx:22
 msgid "Sound"
 msgstr "Ses"
 
@@ -610,7 +619,7 @@ msgid "Thursday"
 msgstr "Perşembe"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
-#: src/screens/settings_notifications/index.tsx:16
+#: src/screens/settings_notifications/index.tsx:17
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:104
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
@@ -624,8 +633,9 @@ msgstr "Zaman formatı"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
-#: src/tasks/set_next_adhan.ts:63
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_alarm.ts:76
+#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "Yarın"
 
@@ -694,6 +704,10 @@ msgstr "Çarşamba"
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 
+#: src/screens/settings/index.tsx:96
+msgid "Working, Please wait"
+msgstr "Çalışıyor, Lütfen bekleyin"
+
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
@@ -733,7 +747,7 @@ msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 msgid "after"
 msgstr "sonra"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:47
 msgid "asr.prayer"
 msgstr "İkindi"
 
@@ -751,7 +765,7 @@ msgstr "önce"
 msgid "calculation_settings"
 msgstr "Hesaplama"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:43
 msgid "dhuhr.prayer"
 msgstr "Öğle"
 
@@ -760,7 +774,7 @@ msgstr "Öğle"
 msgid "display_settings"
 msgstr "Görüntüle"
 
-#: src/adhan/prayer.ts:31
+#: src/adhan/prayer.ts:35
 msgid "fajr.prayer"
 msgstr "Sabah"
 
@@ -782,7 +796,7 @@ msgstr "Anasayfa"
 msgid "is prayer time hidden?"
 msgstr "namaz vakti gizli mi?"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:59
 msgid "isha.prayer"
 msgstr "Yatsı"
 
@@ -791,7 +805,7 @@ msgstr "Yatsı"
 msgid "location_settings"
 msgstr "Konum"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:55
 msgid "maghrib.prayer"
 msgstr "Akşam"
 
@@ -818,15 +832,19 @@ msgstr "bildirim widget'ı gösterilmeli mi?"
 msgid "should {prayerName} be hidden?"
 msgstr "{prayerName} gizlenmeli mi?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:63
 msgid "sunnah.midnight"
 msgstr "Gece yarısı"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:67
+msgid "sunnah.tahajjud"
+msgstr "Teheccüd"
+
+#: src/adhan/prayer.ts:39
 msgid "sunrise"
 msgstr "Güneş"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:51
 msgid "sunset"
 msgstr "Gün batımı"
 

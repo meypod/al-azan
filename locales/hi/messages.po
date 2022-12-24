@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-11 04:54+0330\n"
+"POT-Creation-Date: 2022-12-24 13:34+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,7 +44,7 @@ msgstr "जोड़ें"
 msgid "Add Custom Adhan"
 msgstr "कस्टम अज़ान जोड़ें"
 
-#: src/screens/settings_reminders/index.tsx:50
+#: src/screens/settings_reminders/index.tsx:54
 msgid "Add Reminder"
 msgstr "अनुस्मारक जोड़ें"
 
@@ -217,7 +217,7 @@ msgid "Disabled"
 msgstr "अक्षम"
 
 #: src/screens/fullscreen_alarm/index.tsx:105
-#: src/tasks/set_alarm.ts:94
+#: src/tasks/set_alarm.ts:115
 msgid "Dismiss"
 msgstr "हटा दीजिए"
 
@@ -306,6 +306,10 @@ msgstr "उच्च अक्षांश"
 #: src/screens/settings_about/index.tsx:24
 msgid "Home"
 msgstr "घर"
+
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
+msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
+msgstr "यदि सक्षम है, जब एक सूचना दिखाई जाती है, तो इसमें अगली प्रार्थना के समय की जानकारी होगी"
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
@@ -415,7 +419,8 @@ msgid "New Reminder"
 msgstr "नया अनुस्मारक"
 
 #: src/intro/intro.tsx:88
-#: src/tasks/set_next_adhan.ts:58
+#: src/tasks/set_alarm.ts:74
+#: src/tasks/set_next_adhan.ts:62
 msgid "Next"
 msgstr "अगला"
 
@@ -431,7 +436,7 @@ msgstr "नहीं"
 msgid "None (Automatic)"
 msgstr "कोई नहीं (स्वचालित)"
 
-#: src/screens/settings_notifications/index.tsx:18
+#: src/screens/settings_notifications/index.tsx:19
 msgid "Notification"
 msgstr "अधिसूचना"
 
@@ -487,8 +492,8 @@ msgstr "राघेब मुस्तफा गलवाश"
 msgid "Referred to as the ISNA method"
 msgstr "ISNA पद्धति के रूप में संदर्भित"
 
-#: src/tasks/set_reminder.ts:94
-#: src/tasks/set_reminder.ts:119
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:122
 msgid "Reminder"
 msgstr "अनुस्मारक"
 
@@ -547,6 +552,10 @@ msgstr "अज़ान के विकल्प दिखाएं"
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
+msgid "Show next in notification?"
+msgstr "सूचना में अगला दिखाएं?"
+
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
 msgstr "अधिसूचना विजेट दिखाएं?"
@@ -566,7 +575,7 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "ऐप को बैकग्राउंड में बंद होने से बचाने के लिए कुछ डिवाइसों को अपने पावर मैनेजर के अंदर अतिरिक्त सेटिंग्स की आवश्यकता होती है। उस स्थिति में ऐप के लिए किसी भी बिजली बचत विकल्प को अक्षम करें।"
 
-#: src/screens/settings_notifications/index.tsx:21
+#: src/screens/settings_notifications/index.tsx:22
 msgid "Sound"
 msgstr "ध्वनि"
 
@@ -610,7 +619,7 @@ msgid "Thursday"
 msgstr "गुरुवार"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:57
-#: src/screens/settings_notifications/index.tsx:16
+#: src/screens/settings_notifications/index.tsx:17
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:104
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
@@ -624,8 +633,9 @@ msgstr "समय प्रारूप"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "अज़ान की गणना करने के लिए, हमें आप की लोकेशन की आवश्यकता है। आप \"मेरा स्थान खोजें\" बटन का उपयोग कर सकते हैं, या देश और शहर/क्षेत्र सर्च का उपयोग कर सकते हैं, या अपने निर्देशांक मैन्युअली दर्ज कर सकते हैं।"
 
-#: src/tasks/set_next_adhan.ts:63
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_alarm.ts:76
+#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "कल का दिन"
 
@@ -694,6 +704,10 @@ msgstr "बुधवार"
 msgid "Welcome"
 msgstr "स्वागत"
 
+#: src/screens/settings/index.tsx:96
+msgid "Working, Please wait"
+msgstr "काम कर रहा है, कृपया प्रतीक्षा करें"
+
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "आप नीचे दिए गए बटन का उपयोग करके अपने डिवाइस पावर मैनेजर तक पहुंच सकते हैं।"
@@ -733,7 +747,7 @@ msgstr "गणना किए गए समय में जोड़े जा
 msgid "after"
 msgstr "बाद में"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:47
 msgid "asr.prayer"
 msgstr "असर "
 
@@ -751,7 +765,7 @@ msgstr "इस से पहले"
 msgid "calculation_settings"
 msgstr "गणना"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:43
 msgid "dhuhr.prayer"
 msgstr "ज़ुहर "
 
@@ -760,7 +774,7 @@ msgstr "ज़ुहर "
 msgid "display_settings"
 msgstr "डिस्प्ले"
 
-#: src/adhan/prayer.ts:31
+#: src/adhan/prayer.ts:35
 msgid "fajr.prayer"
 msgstr "फज्र"
 
@@ -782,7 +796,7 @@ msgstr "घर"
 msgid "is prayer time hidden?"
 msgstr "क्या नमाज़ का वक्त छिपा हुआ है?"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:59
 msgid "isha.prayer"
 msgstr "इशां "
 
@@ -791,7 +805,7 @@ msgstr "इशां "
 msgid "location_settings"
 msgstr "स्थान"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:55
 msgid "maghrib.prayer"
 msgstr "मग़रिब"
 
@@ -818,15 +832,19 @@ msgstr "अधिसूचना विजेट दिखाया जाना
 msgid "should {prayerName} be hidden?"
 msgstr "क्या {prayerName} छुपाया जाना चाहिए?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:63
 msgid "sunnah.midnight"
 msgstr "मध्यरात्रि"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:67
+msgid "sunnah.tahajjud"
+msgstr "Tahajjud"
+
+#: src/adhan/prayer.ts:39
 msgid "sunrise"
 msgstr "सूर्योदय"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:51
 msgid "sunset"
 msgstr "सूर्यास्त"
 
