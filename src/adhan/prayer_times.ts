@@ -137,6 +137,7 @@ export function calculatePrayerTimes(date: Date) {
 
   const sunnahTimes = new SunnahTimes(prayerTimes as any as PrayerTimes);
   prayerTimes.midnight = sunnahTimes.middleOfTheNight;
+  prayerTimes.tahajjud = sunnahTimes.lastThirdOfTheNight;
 
   return prayerTimes as Required<CachedPrayerTimes>;
 }
@@ -175,6 +176,7 @@ export class PrayerTimesHelper {
   maghrib: Date;
   isha: Date;
   midnight: Date;
+  tahajjud: Date;
 
   constructor(date: Date) {
     const cachedTimes = getCachedPrayerTimes(date);
@@ -189,6 +191,7 @@ export class PrayerTimesHelper {
     this.maghrib = cachedTimes.maghrib;
     this.isha = cachedTimes.isha;
     this.midnight = cachedTimes.midnight;
+    this.tahajjud = cachedTimes.tahajjud;
   }
 
   nextPrayer(

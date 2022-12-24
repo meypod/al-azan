@@ -19,7 +19,7 @@ export async function updateWidgets() {
   const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers);
 
   const activePrayer = prayerTimes
-    ? getActivePrayer(prayerTimes, visiblePrayerTimes)
+    ? getActivePrayer(now, visiblePrayerTimes)
     : undefined;
 
   const prayers = visiblePrayerTimes.map(

@@ -10,16 +10,12 @@ const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
 
 export const ADHAN_NOTIFICATION_SUFFIX = '_NOTIFY';
 export const ADHAN_SOUND_SUFFIX = '_SOUND';
-export const ADHAN_ADJUSTMENT_SUFFIX = '_ADJUSTMENT';
 
 export function getAdhanSettingKey(
   prayer: Prayer,
-  k: 'sound' | 'notify' | 'adjustment',
+  k: 'sound' | 'notify',
 ): keyof AlarmSettingsStore {
-  if (k === 'adjustment') {
-    return (prayer.toUpperCase() +
-      ADHAN_ADJUSTMENT_SUFFIX) as keyof AlarmSettingsStore;
-  } else if (k === 'notify') {
+  if (k === 'notify') {
     return (prayer.toUpperCase() +
       ADHAN_NOTIFICATION_SUFFIX) as keyof AlarmSettingsStore;
   } else {
@@ -68,6 +64,7 @@ export type AlarmSettingsStore = {
   MAGHRIB_NOTIFY?: boolean;
   ISHA_NOTIFY?: boolean;
   MIDNIGHT_NOTIFY?: boolean;
+  TAHAJJUD_NOTIFY?: boolean;
   // prayer sound settings
   FAJR_SOUND?: boolean;
   SUNRISE_SOUND?: boolean;
@@ -77,6 +74,7 @@ export type AlarmSettingsStore = {
   MAGHRIB_SOUND?: boolean;
   ISHA_SOUND?: boolean;
   MIDNIGHT_SOUND?: boolean;
+  TAHAJJUD_SOUND?: boolean;
   // alarm notification
   SHOW_NEXT_PRAYER_TIME: boolean;
 

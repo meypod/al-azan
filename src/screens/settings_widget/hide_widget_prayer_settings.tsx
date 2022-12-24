@@ -39,7 +39,7 @@ export function HideWidgetPrayerSettings(props: IStackProps) {
   );
 
   const setHiddenPrayersProxy = (hiddenPrayers: Prayer[]) => {
-    if (hiddenPrayers.length < 2) {
+    if (hiddenPrayers.length < 3) {
       ToastAndroid.show(
         t`Only six items can be shown at the same time`,
         ToastAndroid.SHORT,

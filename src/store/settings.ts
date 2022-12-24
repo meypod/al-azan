@@ -67,8 +67,8 @@ export const settings = createVanilla<SettingsStore>()(
       SELECTED_FAJR_ADHAN_ENTRY: undefined,
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
-      HIDDEN_PRAYERS: [],
-      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight],
+      HIDDEN_PRAYERS: [Prayer.Tahajjud],
+      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight, Prayer.Tahajjud],
       SHOW_WIDGET: false,
       ADHAN_VOLUME: 70,
       IS_24_HOUR_FORMAT: true,
@@ -179,6 +179,12 @@ export const settings = createVanilla<SettingsStore>()(
             delete (persistedState as any)['REMINDERS'];
             delete (persistedState as any)['DISMISSED_ALARM_TIMESTAMP'];
             delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
+            (persistedState as SettingsStore).HIDDEN_PRAYERS.push(
+              Prayer.Tahajjud,
+            );
+            (persistedState as SettingsStore).HIDDEN_WIDGET_PRAYERS.push(
+              Prayer.Tahajjud,
+            );
             break;
         }
         /* eslint-enable no-fallthrough */
