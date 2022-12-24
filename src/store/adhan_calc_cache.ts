@@ -19,6 +19,7 @@ export type CachedPrayerTimes = Record<Prayer, Date> & {
 
 export function getCachedPrayerTimes(
   date: Date,
+  /** recurse option, don't use outside of this function */
   secondTime: boolean = false,
 ): CachedPrayerTimes {
   const prayerTime = storage.getString(getDayKey(date));

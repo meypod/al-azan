@@ -17,6 +17,7 @@ import {
 } from '@/store/adhan_calc_cache';
 import {alarmSettings, getAdhanSettingKey} from '@/store/alarm_settings';
 import {calcSettings} from '@/store/calculation_settings';
+import {addDays, getDayBeginning} from '@/utils/date';
 
 export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
@@ -154,6 +155,14 @@ function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
   }
 }
 
+type NextPrayerOptions = {
+  useSettings?: boolean;
+  /** check only the next day for prayers */
+  checkNextDay?: boolean;
+  /** check the next 6 days, so a full week is checked */
+  checkNextDays?: boolean;
+};
+
 /** do not use this class directly. use getPrayerTimes instead */
 export class PrayerTimesHelper {
   date: Date;
@@ -169,7 +178,9 @@ export class PrayerTimesHelper {
 
   constructor(date: Date) {
     const cachedTimes = getCachedPrayerTimes(date);
-    this.date = cachedTimes.date;
+    // we need the current date for calculating next prayer
+    // thus not using the cachedTimes date
+    this.date = date;
     this.fajr = cachedTimes.fajr;
     this.sunrise = cachedTimes.sunrise;
     this.dhuhr = cachedTimes.dhuhr;
@@ -180,8 +191,14 @@ export class PrayerTimesHelper {
     this.midnight = cachedTimes.midnight;
   }
 
-  // @ts-ignore
-  nextPrayer(useSettings?: boolean) {
+  nextPrayer(
+    options: NextPrayerOptions = {
+      useSettings: false,
+      checkNextDay: false,
+      checkNextDays: false,
+    },
+  ): PrayerTime | undefined {
+    const {useSettings, checkNextDay, checkNextDays} = options || {};
     let prayerTime: PrayerTime | undefined;
 
     for (let prayer of PrayersInOrder) {
@@ -201,6 +218,24 @@ export class PrayerTimesHelper {
       prayerTime.playSound = !!alarmSettings.getState()[
         getAdhanSettingKey(prayerTime.prayer, 'sound')
       ] as boolean;
+    }
+
+    if (!prayerTime && (checkNextDay || checkNextDays)) {
+      // from 1 because we checked our date
+      let limit = 2;
+      if (checkNextDays) {
+        limit = 7;
+      }
+      for (let i = 1; i < limit; i++) {
+        prayerTime = new PrayerTimesHelper(
+          getDayBeginning(addDays(this.date, i)),
+        ).nextPrayer({
+          useSettings,
+        });
+        if (prayerTime) {
+          break;
+        }
+      }
     }
 
     return prayerTime;

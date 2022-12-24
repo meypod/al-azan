@@ -8,7 +8,7 @@ import {
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {setReminders} from '@/tasks/set_reminder';
-import {getNextDayBeginning, getTime} from '@/utils/date';
+import {getTime} from '@/utils/date';
 
 type SetNextAdhanOptions = {
   fromDate?: Date;
@@ -18,21 +18,20 @@ type SetNextAdhanOptions = {
 export function setNextAdhan(options?: SetNextAdhanOptions) {
   const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
 
-  if (!notificationSettingsIsValid) return Promise.resolve();
+  if (!notificationSettingsIsValid) return;
 
   let targetDate = options?.fromDate || new Date();
-  let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
-  if (!nextPrayer) {
-    targetDate = getNextDayBeginning(targetDate);
-    nextPrayer = getPrayerTimes(targetDate)?.nextPrayer(true);
-  }
-  if (!nextPrayer) return Promise.resolve();
+  let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer({
+    useSettings: true,
+    checkNextDays: true,
+  });
+  if (!nextPrayer) return;
 
   const {date, prayer, playSound} = nextPrayer!;
 
   const dismissedAlarmTS = alarmSettings.getState().DISMISSED_ALARM_TIMESTAMP;
 
-  if (dismissedAlarmTS >= date.valueOf()) return Promise.resolve();
+  if (dismissedAlarmTS >= date.valueOf()) return;
 
   return setPreAlarmTask({
     date,
