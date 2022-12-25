@@ -1,0 +1,3 @@
+- Added Tahajjud time (Hidden by default, now available in notification settings)
+- Added option to display next prayer time when a notification appears
+- There's a change to settings internally, no problem should occur during the update, but if you decided to use an older version after updating, you will lose your reminders and notification settings
