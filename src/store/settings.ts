@@ -39,6 +39,8 @@ export type SettingsStore = {
   ADHAN_VOLUME: number;
   // to detect settings change
   CALC_SETTINGS_HASH: string;
+  /** timestamp of when the last alarm for updating widgets was */
+  LAST_WIDGET_UPDATE: number;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -76,6 +78,7 @@ export const settings = createVanilla<SettingsStore>()(
       NUMBERING_SYSTEM: '',
       CALC_SETTINGS_HASH: '',
       DISMISSED_ALARM_TIMESTAMP: 0,
+      LAST_WIDGET_UPDATE: 0,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -171,11 +174,11 @@ export const settings = createVanilla<SettingsStore>()(
             // moved reminders to alarm settings store
             alarmSettings.setState({
               REMINDERS: (persistedState as any)['REMINDERS'],
-              LAST_ALARM_DATE_VALUEOF: (persistedState as any)[
-                'LAST_ALARM_DATE_VALUEOF'
-              ],
             });
             delete (persistedState as any)['REMINDERS'];
+            (persistedState as SettingsStore)['LAST_WIDGET_UPDATE'] = (
+              persistedState as any
+            )['LAST_ALARM_DATE_VALUEOF'];
             delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
             (persistedState as SettingsStore).HIDDEN_PRAYERS.push(
               Prayer.Tahajjud,

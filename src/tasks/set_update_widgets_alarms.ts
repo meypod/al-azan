@@ -1,24 +1,24 @@
 import {setAlarm} from 'react-native-alarm-module';
 import {getPrayerTimes, PrayersInOrder} from '@/adhan';
-import {alarmSettings} from '@/store/alarm_settings';
+import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
 
 export function setUpdateWidgetsAlarms() {
   let targetDate = new Date();
 
-  let lastAlarmDateValueOf = alarmSettings.getState().LAST_ALARM_DATE_VALUEOF;
+  let lastWidgetUpdate = settings.getState().LAST_WIDGET_UPDATE;
 
   // when the last alarm goes off, it gets past this if
   // because till the last alarm, this condition always returns
   // so that we dont end up setting many alarms
-  if (targetDate.valueOf() < lastAlarmDateValueOf) return;
+  if (targetDate.valueOf() < lastWidgetUpdate) return;
 
   let prayerTimes = getPrayerTimes(targetDate);
 
   if (!prayerTimes) return; // cant get prayer times to set alarms
 
   const begginingOfNextDay = getNextDayBeginning(targetDate).valueOf();
-  lastAlarmDateValueOf = begginingOfNextDay;
+  lastWidgetUpdate = begginingOfNextDay;
   // day change update
   setAlarm({
     timestamp: begginingOfNextDay,
@@ -38,10 +38,10 @@ export function setUpdateWidgetsAlarms() {
       wakeup: false,
       keepAwake: false,
     });
-    if (prayerTimes[prayer].valueOf() > lastAlarmDateValueOf) {
-      lastAlarmDateValueOf = prayerTimes[prayer].valueOf();
+    if (prayerTimes[prayer].valueOf() > lastWidgetUpdate) {
+      lastWidgetUpdate = prayerTimes[prayer].valueOf();
     }
   }
 
-  alarmSettings.setState({LAST_ALARM_DATE_VALUEOF: lastAlarmDateValueOf});
+  settings.setState({LAST_WIDGET_UPDATE: lastWidgetUpdate});
 }
