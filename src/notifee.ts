@@ -3,6 +3,7 @@ import notifee, {
   EventDetail,
   AndroidImportance,
   AndroidVisibility,
+  Notification,
 } from '@notifee/react-native';
 import {BackHandler} from 'react-native';
 import {settings} from './store/settings';
@@ -40,18 +41,11 @@ export async function isAdhanPlaying() {
   );
 }
 
-export async function getSecheduledAdhanNotificationOptions() {
-  const scheduledNotif = await notifee
-    .getTriggerNotifications()
-    .then(
-      notifs =>
-        notifs.filter(n => n.notification.id === ADHAN_NOTIFICATION_ID)[0],
-    )
-    .catch(console.error);
-  if (!scheduledNotif) return;
+export function getAdhanOptions(notification: Notification | undefined) {
+  if (!notification) return;
 
   const options = JSON.parse(
-    scheduledNotif?.notification?.data?.options as string,
+    notification.data?.options as string,
   ) as SetAlarmTaskOptions;
 
   if (options) {
@@ -63,6 +57,17 @@ export async function getSecheduledAdhanNotificationOptions() {
   return options;
 }
 
+export async function getSecheduledAdhanOptions() {
+  const scheduledNotif = await notifee
+    .getTriggerNotifications()
+    .then(
+      notifs =>
+        notifs.filter(n => n.notification.id === ADHAN_NOTIFICATION_ID)[0],
+    )
+    .catch(console.error);
+  return getAdhanOptions(scheduledNotif?.notification);
+}
+
 export async function cancelAdhanNotifOnDismissed(
   type: EventType,
   detail: EventDetail,
@@ -71,13 +76,19 @@ export async function cancelAdhanNotifOnDismissed(
   const {notification, pressAction} = detail;
   if (notification?.id === ADHAN_NOTIFICATION_ID) {
     if (type === EventType.DISMISSED || pressAction?.id === 'dismiss') {
+      const options = getAdhanOptions(notification);
+      if (options?.date) {
+        settings.setState({
+          DISMISSED_ALARM_TIMESTAMP: options.date.valueOf(),
+        });
+      }
       await cancelAdhanNotif();
     }
   } else if (
     notification?.id === PRE_ADHAN_NOTIFICATION_ID &&
     pressAction?.id === 'cancel_adhan'
   ) {
-    const options = await getSecheduledAdhanNotificationOptions();
+    const options = await getSecheduledAdhanOptions();
     if (options) {
       // save date of upcoming adhan to prevent setting alarm/prealarm before it
       settings.setState({
