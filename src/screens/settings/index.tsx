@@ -1,8 +1,6 @@
-import {t} from '@lingui/macro';
 import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {memo, useEffect} from 'react';
 
-import {ToastAndroid} from 'react-native';
 import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
@@ -14,7 +12,7 @@ import {VolumeUpIcon} from '@/assets/icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/widget';
 import {push} from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
-import {cacheMonth, clearCache} from '@/store/adhan_calc_cache';
+import {clearCache} from '@/store/adhan_calc_cache';
 import {useAlarmSettings} from '@/store/alarm_settings';
 import {useCalcSettings} from '@/store/calculation_settings';
 import {settings, useSettingsHelper} from '@/store/settings';
@@ -85,28 +83,35 @@ function renderItem({item}: {item: ScreenListItem}) {
 }
 
 function Settings() {
-  const settingsState = useCalcSettings(state => state);
+  const calcSettingsState = useCalcSettings(state => state);
   const alarmSettingsState = useAlarmSettings(state => state);
   const [calcSettingsHash, setCalcSettingsHash] =
     useSettingsHelper('CALC_SETTINGS_HASH');
+  const [alarmSettingsHash, setAlarmSettingsHash] = useSettingsHelper(
+    'ALARM_SETTINGS_HASH',
+  );
 
   useEffect(() => {
-    const stateHash = sha256(JSON.stringify(settingsState));
+    const stateHash = sha256(JSON.stringify(calcSettingsState));
     if (calcSettingsHash !== stateHash) {
-      ToastAndroid.show(t`Working, Please wait`, ToastAndroid.SHORT);
       setCalcSettingsHash(stateHash);
       settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
-      setNextAdhan();
-      updateWidgets();
       clearCache();
-      cacheMonth(new Date());
     }
-  }, [settingsState, calcSettingsHash, setCalcSettingsHash]);
+  }, [calcSettingsState, calcSettingsHash, setCalcSettingsHash]);
 
   useEffect(() => {
-    settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
+    const stateHash = sha256(JSON.stringify(alarmSettingsState));
+    if (alarmSettingsHash !== stateHash) {
+      setAlarmSettingsHash(stateHash);
+      settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
+    }
+  }, [alarmSettingsState, alarmSettingsHash, setAlarmSettingsHash]);
+
+  useEffect(() => {
+    updateWidgets();
     setNextAdhan();
-  }, [alarmSettingsState]);
+  }, [calcSettingsHash, alarmSettingsHash]);
 
   return (
     <Box safeArea py="3">

@@ -39,6 +39,7 @@ export type SettingsStore = {
   ADHAN_VOLUME: number;
   // to detect settings change
   CALC_SETTINGS_HASH: string;
+  ALARM_SETTINGS_HASH: string;
   /** timestamp of when the alarm for updating widget is going to Or was fired */
   LAST_WIDGET_UPDATE: number;
 
@@ -77,6 +78,7 @@ export const settings = createVanilla<SettingsStore>()(
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
       CALC_SETTINGS_HASH: '',
+      ALARM_SETTINGS_HASH: '',
       DISMISSED_ALARM_TIMESTAMP: 0,
       LAST_WIDGET_UPDATE: 0,
 

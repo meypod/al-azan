@@ -12,7 +12,6 @@ import {setReminders} from '@/tasks/set_reminder';
 import {getTime} from '@/utils/date';
 
 type SetNextAdhanOptions = {
-  fromDate?: Date;
   noToast?: boolean;
 };
 
@@ -21,7 +20,14 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
 
   if (!notificationSettingsIsValid) return;
 
-  let targetDate = options?.fromDate || new Date();
+  const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
+
+  let targetDate = new Date(dismissedAlarmTS + 10000);
+
+  if (targetDate.valueOf() < Date.now()) {
+    targetDate = new Date();
+  }
+
   let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer({
     useSettings: true,
     checkNextDays: true,
@@ -29,8 +35,6 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
   if (!nextPrayer) return;
 
   const {date, prayer, playSound} = nextPrayer!;
-
-  const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
 
   if (dismissedAlarmTS >= date.valueOf()) return;
 
