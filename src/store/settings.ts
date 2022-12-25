@@ -182,12 +182,27 @@ export const settings = createVanilla<SettingsStore>()(
               persistedState as any
             )['LAST_ALARM_DATE_VALUEOF'];
             delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
-            (persistedState as SettingsStore).HIDDEN_PRAYERS.push(
-              Prayer.Tahajjud,
-            );
-            (persistedState as SettingsStore).HIDDEN_WIDGET_PRAYERS.push(
-              Prayer.Tahajjud,
-            );
+
+            // we check before pushing because some users may go back between versions,
+            // we don't want to make their settings bigger each time.
+            if (
+              !(persistedState as SettingsStore).HIDDEN_PRAYERS.includes(
+                Prayer.Tahajjud,
+              )
+            ) {
+              (persistedState as SettingsStore).HIDDEN_PRAYERS.push(
+                Prayer.Tahajjud,
+              );
+            }
+            if (
+              !(persistedState as SettingsStore).HIDDEN_WIDGET_PRAYERS.includes(
+                Prayer.Tahajjud,
+              )
+            ) {
+              (persistedState as SettingsStore).HIDDEN_WIDGET_PRAYERS.push(
+                Prayer.Tahajjud,
+              );
+            }
             break;
         }
         /* eslint-enable no-fallthrough */
