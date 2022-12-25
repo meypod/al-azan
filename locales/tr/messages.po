@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-24 14:05+0330\n"
+"POT-Creation-Date: 2022-12-25 17:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -420,7 +420,7 @@ msgstr "Yeni Hatırlatıcı"
 
 #: src/intro/intro.tsx:88
 #: src/tasks/set_alarm.ts:74
-#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:67
 msgid "Next"
 msgstr "Sonraki"
 
@@ -634,7 +634,7 @@ msgid "To calculate Adhan, We need your location. You can use the \"Find My Loca
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
 #: src/tasks/set_alarm.ts:76
-#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_next_adhan.ts:72
 #: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "Yarın"
@@ -704,10 +704,6 @@ msgstr "Çarşamba"
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 
-#: src/screens/settings/index.tsx:96
-msgid "Working, Please wait"
-msgstr "Çalışıyor, Lütfen bekleyin"
-
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
@@ -747,7 +743,7 @@ msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 msgid "after"
 msgstr "sonra"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "İkindi"
 
@@ -765,7 +761,7 @@ msgstr "önce"
 msgid "calculation_settings"
 msgstr "Hesaplama"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "Öğle"
 
@@ -774,7 +770,7 @@ msgstr "Öğle"
 msgid "display_settings"
 msgstr "Görüntüle"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "Sabah"
 
@@ -796,7 +792,7 @@ msgstr "Anasayfa"
 msgid "is prayer time hidden?"
 msgstr "namaz vakti gizli mi?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "Yatsı"
 
@@ -805,7 +801,7 @@ msgstr "Yatsı"
 msgid "location_settings"
 msgstr "Konum"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Akşam"
 
@@ -832,19 +828,19 @@ msgstr "bildirim widget'ı gösterilmeli mi?"
 msgid "should {prayerName} be hidden?"
 msgstr "{prayerName} gizlenmeli mi?"
 
-#: src/adhan/prayer.ts:63
+#: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
 msgstr "Gece yarısı"
 
-#: src/adhan/prayer.ts:67
+#: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
 msgstr "Teheccüd"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:44
 msgid "sunrise"
 msgstr "Güneş"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:56
 msgid "sunset"
 msgstr "Gün batımı"
 

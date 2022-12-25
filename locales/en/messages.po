@@ -426,7 +426,7 @@ msgstr "New Reminder"
 
 #: src/intro/intro.tsx:88
 #: src/tasks/set_alarm.ts:74
-#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:67
 msgid "Next"
 msgstr "Next"
 
@@ -652,7 +652,7 @@ msgid "To calculate Adhan, We need your location. You can use the \"Find My Loca
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
 #: src/tasks/set_alarm.ts:76
-#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_next_adhan.ts:72
 #: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "Tomorrow"
@@ -722,10 +722,6 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/screens/settings/index.tsx:96
-msgid "Working, Please wait"
-msgstr "Working, Please wait"
-
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
@@ -768,7 +764,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "Asr"
 
@@ -786,7 +782,7 @@ msgstr "before"
 msgid "calculation_settings"
 msgstr "Calculation"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
@@ -795,7 +791,7 @@ msgstr "Dhuhr"
 msgid "display_settings"
 msgstr "Display"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "Fajr"
 
@@ -817,7 +813,7 @@ msgstr "Home"
 msgid "is prayer time hidden?"
 msgstr "is prayer time hidden?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "Isha"
 
@@ -826,7 +822,7 @@ msgstr "Isha"
 msgid "location_settings"
 msgstr "Location"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
@@ -853,19 +849,19 @@ msgstr "should notification widget be shown?"
 msgid "should {prayerName} be hidden?"
 msgstr "should {prayerName} be hidden?"
 
-#: src/adhan/prayer.ts:63
+#: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
 msgstr "Midnight"
 
-#: src/adhan/prayer.ts:67
+#: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
 msgstr "Tahajjud"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:44
 msgid "sunrise"
 msgstr "Sunrise"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:56
 msgid "sunset"
 msgstr "Sunset"
 

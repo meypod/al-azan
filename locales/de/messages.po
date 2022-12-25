@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-24 14:05+0330\n"
+"POT-Creation-Date: 2022-12-25 17:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -420,7 +420,7 @@ msgstr "Neue Erinnerung"
 
 #: src/intro/intro.tsx:88
 #: src/tasks/set_alarm.ts:74
-#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:67
 msgid "Next"
 msgstr "Weiter"
 
@@ -639,7 +639,7 @@ msgid "To calculate Adhan, We need your location. You can use the \"Find My Loca
 msgstr "Um den Adhan zu berechnen, benötigen wir Ihren Standort. Sie können die Schaltfläche \"Meinen Standort finden\" verwenden, die Suche nach Land und Stadt/Gebiet nutzen oder Ihre Koordinaten manuell eingeben."
 
 #: src/tasks/set_alarm.ts:76
-#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_next_adhan.ts:72
 #: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "Morgen"
@@ -709,10 +709,6 @@ msgstr "Mittwoch"
 msgid "Welcome"
 msgstr "Willkommen"
 
-#: src/screens/settings/index.tsx:96
-msgid "Working, Please wait"
-msgstr "In Arbeit, Bitte warten"
-
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "Über die untere Schaltfläche können Sie auf die Energieverwaltung Ihres Geräts zugreifen."
@@ -755,7 +751,7 @@ msgstr "Anzahl der Minuten, die zu den berechneten Zeiten hinzugefügt werden"
 msgid "after"
 msgstr "nach"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "Asr"
 
@@ -773,7 +769,7 @@ msgstr "vor"
 msgid "calculation_settings"
 msgstr "Berechnung"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
@@ -782,13 +778,13 @@ msgstr "Dhuhr"
 msgid "display_settings"
 msgstr "Anzeige"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "Fajr"
 
 #: src/screens/settings_display/number_format_settings.tsx:22
 msgid "forces all numbers to be in the selected system"
-msgstr "erzwingt, dass alle Nummern im ausgewählten System sind"
+msgstr "Erzwingt, dass alle Nummern im ausgewählten System sind"
 
 #. screen title
 #: src/navigation/types.ts:34
@@ -804,7 +800,7 @@ msgstr "Startseite"
 msgid "is prayer time hidden?"
 msgstr "Ist die Gebetszeit versteckt?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "Isha"
 
@@ -813,7 +809,7 @@ msgstr "Isha"
 msgid "location_settings"
 msgstr "Standort"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
@@ -840,19 +836,19 @@ msgstr "Soll das Benachrichtigungs-Widget angezeigt werden?"
 msgid "should {prayerName} be hidden?"
 msgstr "Soll das {prayerName}-Gebet ausgeblendet werden?"
 
-#: src/adhan/prayer.ts:63
+#: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
 msgstr "Mitternacht"
 
-#: src/adhan/prayer.ts:67
+#: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
 msgstr "Tahajjud"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:44
 msgid "sunrise"
 msgstr "Sonnenaufgang"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:56
 msgid "sunset"
 msgstr "Sonnenuntergang"
 

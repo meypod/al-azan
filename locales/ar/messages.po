@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-24 14:05+0330\n"
+"POT-Creation-Date: 2022-12-25 17:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -420,7 +420,7 @@ msgstr "تذكير جديد"
 
 #: src/intro/intro.tsx:88
 #: src/tasks/set_alarm.ts:74
-#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:67
 msgid "Next"
 msgstr "التالي"
 
@@ -634,7 +634,7 @@ msgid "To calculate Adhan, We need your location. You can use the \"Find My Loca
 msgstr "لحساب الأذان، نحتاج إلى موقعك. يمكنك استخدام زر \"العثور على موقعي\"، أو استخدام البحث عن البلد والمدينة/ المنطقة، أو إدخال إحداثياتك يدويًا."
 
 #: src/tasks/set_alarm.ts:76
-#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_next_adhan.ts:72
 #: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "الغد"
@@ -704,10 +704,6 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
-#: src/screens/settings/index.tsx:96
-msgid "Working, Please wait"
-msgstr "مشغول، انتظر من فضلك"
-
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "يمكنك الوصول إلى \"مدير الطاقة\" (Power Manager) بجهازك باستخدام الزر أدناه."
@@ -752,7 +748,7 @@ msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوق
 msgid "after"
 msgstr "بعد"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "عصر"
 
@@ -770,7 +766,7 @@ msgstr "قبل"
 msgid "calculation_settings"
 msgstr "حساب"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "ظهر"
 
@@ -779,7 +775,7 @@ msgstr "ظهر"
 msgid "display_settings"
 msgstr "العرض"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "فجر"
 
@@ -801,7 +797,7 @@ msgstr "الرئيسية"
 msgid "is prayer time hidden?"
 msgstr "هل وقت الصلاة مخفي؟"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "عشاء"
 
@@ -810,7 +806,7 @@ msgstr "عشاء"
 msgid "location_settings"
 msgstr "موقع"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "مغرب"
 
@@ -837,19 +833,19 @@ msgstr "هل يجب عرض التطبيق المصغر في الإشعارات؟
 msgid "should {prayerName} be hidden?"
 msgstr "هل يجب إخفاء ال{prayerName}؟"
 
-#: src/adhan/prayer.ts:63
+#: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
 msgstr "منتصف الليل"
 
-#: src/adhan/prayer.ts:67
+#: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
 msgstr "تهجد"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:44
 msgid "sunrise"
 msgstr "شروق الشمس"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:56
 msgid "sunset"
 msgstr "غروب الشمس"
 

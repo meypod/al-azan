@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-24 14:05+0330\n"
+"POT-Creation-Date: 2022-12-25 17:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -420,7 +420,7 @@ msgstr "नया अनुस्मारक"
 
 #: src/intro/intro.tsx:88
 #: src/tasks/set_alarm.ts:74
-#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:67
 msgid "Next"
 msgstr "अगला"
 
@@ -634,7 +634,7 @@ msgid "To calculate Adhan, We need your location. You can use the \"Find My Loca
 msgstr "अज़ान की गणना करने के लिए, हमें आप की लोकेशन की आवश्यकता है। आप \"मेरा स्थान खोजें\" बटन का उपयोग कर सकते हैं, या देश और शहर/क्षेत्र सर्च का उपयोग कर सकते हैं, या अपने निर्देशांक मैन्युअली दर्ज कर सकते हैं।"
 
 #: src/tasks/set_alarm.ts:76
-#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_next_adhan.ts:72
 #: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "कल का दिन"
@@ -704,10 +704,6 @@ msgstr "बुधवार"
 msgid "Welcome"
 msgstr "स्वागत"
 
-#: src/screens/settings/index.tsx:96
-msgid "Working, Please wait"
-msgstr "काम कर रहा है, कृपया प्रतीक्षा करें"
-
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "आप नीचे दिए गए बटन का उपयोग करके अपने डिवाइस पावर मैनेजर तक पहुंच सकते हैं।"
@@ -747,7 +743,7 @@ msgstr "गणना किए गए समय में जोड़े जा
 msgid "after"
 msgstr "बाद में"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "असर "
 
@@ -765,7 +761,7 @@ msgstr "इस से पहले"
 msgid "calculation_settings"
 msgstr "गणना"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "ज़ुहर "
 
@@ -774,7 +770,7 @@ msgstr "ज़ुहर "
 msgid "display_settings"
 msgstr "डिस्प्ले"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "फज्र"
 
@@ -796,7 +792,7 @@ msgstr "घर"
 msgid "is prayer time hidden?"
 msgstr "क्या नमाज़ का वक्त छिपा हुआ है?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "इशां "
 
@@ -805,7 +801,7 @@ msgstr "इशां "
 msgid "location_settings"
 msgstr "स्थान"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "मग़रिब"
 
@@ -832,19 +828,19 @@ msgstr "अधिसूचना विजेट दिखाया जाना
 msgid "should {prayerName} be hidden?"
 msgstr "क्या {prayerName} छुपाया जाना चाहिए?"
 
-#: src/adhan/prayer.ts:63
+#: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
 msgstr "मध्यरात्रि"
 
-#: src/adhan/prayer.ts:67
+#: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
 msgstr "Tahajjud"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:44
 msgid "sunrise"
 msgstr "सूर्योदय"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:56
 msgid "sunset"
 msgstr "सूर्यास्त"
 

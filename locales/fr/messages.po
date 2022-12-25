@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-24 14:05+0330\n"
+"POT-Creation-Date: 2022-12-25 17:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,7 +54,7 @@ msgstr "Adhan"
 
 #: src/screens/settings_adhan/index.tsx:94
 msgid "Adhan audio file is not downloaded yet"
-msgstr "Le fichier audio Adhan n'est pas encore téléchargé"
+msgstr "Le fichier audio pour l'Adhan n'est pas encore téléchargé"
 
 #: src/screens/settings_calculation/index.tsx:93
 msgid "Adjustments"
@@ -124,7 +124,7 @@ msgstr "Annuler"
 
 #: src/tasks/set_pre_alarm.ts:84
 msgid "Cancel Adhan"
-msgstr "Annuler Adhan"
+msgstr "Annuler l'Adhan"
 
 #: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
@@ -292,7 +292,7 @@ msgstr "Hanafi"
 #: src/screens/settings_display/hide_prayer_settings.tsx:58
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
-msgstr "Caché ?"
+msgstr "Caché?"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:54
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
@@ -420,7 +420,7 @@ msgstr "Nouveau rappel"
 
 #: src/intro/intro.tsx:88
 #: src/tasks/set_alarm.ts:74
-#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:67
 msgid "Next"
 msgstr "Suivant"
 
@@ -646,7 +646,7 @@ msgid "To calculate Adhan, We need your location. You can use the \"Find My Loca
 msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez utiliser le bouton \"Trouver ma position\", ou utiliser la recherche par pays et ville/région, ou encore entrer vos coordonnées manuellement."
 
 #: src/tasks/set_alarm.ts:76
-#: src/tasks/set_next_adhan.ts:67
+#: src/tasks/set_next_adhan.ts:72
 #: src/tasks/set_reminder.ts:126
 msgid "Tomorrow"
 msgstr "Demain"
@@ -716,10 +716,6 @@ msgstr "Mercredi"
 msgid "Welcome"
 msgstr "Bienvenue sur"
 
-#: src/screens/settings/index.tsx:96
-msgid "Working, Please wait"
-msgstr "En cours, veuillez patienter"
-
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "Vous pouvez accéder au gestionnaire d'énergie de votre appareil en utilisant le bouton ci-dessous."
@@ -762,7 +758,7 @@ msgstr "Nombre de minutes qui seront ajoutées aux temps calculés"
 msgid "after"
 msgstr "après"
 
-#: src/adhan/prayer.ts:47
+#: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "Asr"
 
@@ -780,7 +776,7 @@ msgstr "avant"
 msgid "calculation_settings"
 msgstr "Calcul"
 
-#: src/adhan/prayer.ts:43
+#: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
@@ -789,7 +785,7 @@ msgstr "Dhuhr"
 msgid "display_settings"
 msgstr "Affichage"
 
-#: src/adhan/prayer.ts:35
+#: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "Fajr"
 
@@ -811,7 +807,7 @@ msgstr "Accueil"
 msgid "is prayer time hidden?"
 msgstr "Le temps de prière est-il caché ?"
 
-#: src/adhan/prayer.ts:59
+#: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "Isha"
 
@@ -820,7 +816,7 @@ msgstr "Isha"
 msgid "location_settings"
 msgstr "Localisation"
 
-#: src/adhan/prayer.ts:55
+#: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
@@ -847,19 +843,19 @@ msgstr "Le widget de notification doit-il être affiché ?"
 msgid "should {prayerName} be hidden?"
 msgstr "{prayerName} doit-il être caché ?"
 
-#: src/adhan/prayer.ts:63
+#: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
 msgstr "Minuit"
 
-#: src/adhan/prayer.ts:67
+#: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
 msgstr "Tahajjud"
 
-#: src/adhan/prayer.ts:39
+#: src/adhan/prayer.ts:44
 msgid "sunrise"
 msgstr "Lever du soleil"
 
-#: src/adhan/prayer.ts:51
+#: src/adhan/prayer.ts:56
 msgid "sunset"
 msgstr "Coucher de soleil"
 
