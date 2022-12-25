@@ -162,6 +162,8 @@ type NextPrayerOptions = {
   checkNextDay?: boolean;
   /** check the next 6 days, so a full week is checked */
   checkNextDays?: boolean;
+  /** if set, next prayer of only given prayers is returned */
+  prayers?: Array<Prayer>;
 };
 
 /** do not use this class directly. use getPrayerTimes instead */
@@ -201,10 +203,15 @@ export class PrayerTimesHelper {
       checkNextDays: false,
     },
   ): PrayerTime | undefined {
-    const {useSettings, checkNextDay, checkNextDays} = options || {};
+    const {
+      useSettings,
+      checkNextDay,
+      checkNextDays,
+      prayers = PrayersInOrder,
+    } = options || {};
     let prayerTime: PrayerTime | undefined;
 
-    for (let prayer of PrayersInOrder) {
+    for (let prayer of prayers) {
       if (
         this.date <= this[prayer] &&
         shouldNotifyPrayer(prayer, useSettings)

@@ -1,41 +1,44 @@
-import {Prayer, getPrayerTimes} from '@/adhan';
-import {addDays} from '@/utils/date';
+import {Prayer, getPrayerTimes, PrayerTime} from '@/adhan';
+import {addDays, getDayBeginning} from '@/utils/date';
 
-export function getActivePrayer(date: Date, prayersList: Prayer[]) {
-  if (!date) return;
-  let activePrayer: Prayer | undefined;
+export function getActivePrayer(
+  lookingAtDay: Date,
+  prayersList: Prayer[],
+): Prayer | undefined {
+  if (!lookingAtDay || !prayersList.length) return;
   const now = new Date();
   const tomorrow = addDays(now, 1);
+  const yesterday = addDays(now, -1);
 
-  const nowPrayers = getPrayerTimes(now);
-  const tomorrowPrayers = getPrayerTimes(tomorrow);
-  if (!nowPrayers || !tomorrowPrayers) return;
+  const activePrayer: PrayerTime | undefined = getPrayerTimes(now)?.nextPrayer({
+    prayers: prayersList,
+  });
 
-  const isToday = date.toDateString() === now.toDateString();
-  const isTomorrow = date.toDateString() === tomorrow.toDateString();
+  if (!activePrayer) return;
 
-  if (isToday || isTomorrow) {
-    for (let prayer of prayersList) {
-      if (nowPrayers[prayer] && Date.now() < nowPrayers[prayer].valueOf()) {
-        activePrayer = prayer;
-        break;
-      }
-    }
+  if (lookingAtDay.toDateString() === now.toDateString()) {
+    return activePrayer.prayer;
+  }
 
-    if (!activePrayer) {
-      activePrayer = prayersList[prayersList.length - 1];
-    }
+  if (
+    lookingAtDay.toDateString() === tomorrow.toDateString() &&
+    activePrayer.date.toDateString() === tomorrow.toDateString()
+  ) {
+    return prayersList[0];
+  }
 
-    if (isTomorrow) {
-      if (
-        Date.now() < tomorrowPrayers[prayersList[0]].valueOf() &&
-        activePrayer === prayersList[prayersList.length - 1]
-      ) {
-        activePrayer = prayersList[0];
-      } else {
-        activePrayer = undefined;
-      }
+  if (lookingAtDay.toDateString() === yesterday.toDateString()) {
+    const yesterdayPrayers = getPrayerTimes(
+      new Date(getDayBeginning(now).valueOf() - 1000),
+    );
+    if (
+      yesterdayPrayers &&
+      now.valueOf() <
+        yesterdayPrayers[prayersList[prayersList.length - 1]].valueOf()
+    ) {
+      return prayersList[prayersList.length - 1];
     }
   }
-  return activePrayer;
+
+  return;
 }
