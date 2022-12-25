@@ -39,7 +39,7 @@ export type SettingsStore = {
   ADHAN_VOLUME: number;
   // to detect settings change
   CALC_SETTINGS_HASH: string;
-  /** timestamp of when the last alarm for updating widgets was */
+  /** timestamp of when the alarm for updating widget is going to Or was fired */
   LAST_WIDGET_UPDATE: number;
 
   // helper functions
