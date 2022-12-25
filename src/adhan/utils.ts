@@ -12,11 +12,15 @@ export function getActivePrayer(
 
   const activePrayer: PrayerTime | undefined = getPrayerTimes(now)?.nextPrayer({
     prayers: prayersList,
+    checkNextDay: true,
   });
 
   if (!activePrayer) return;
 
-  if (lookingAtDay.toDateString() === now.toDateString()) {
+  if (
+    lookingAtDay.toDateString() === now.toDateString() &&
+    activePrayer.date.toDateString() === now.toDateString()
+  ) {
     return activePrayer.prayer;
   }
 
