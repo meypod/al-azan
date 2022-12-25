@@ -15,6 +15,7 @@ import {PREFERRED_LOCALE} from '@/utils/locale';
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
 export type SettingsStore = {
+  DISMISSED_ALARM_TIMESTAMP: number;
   // theme
   THEME_COLOR?: ColorMode | 'default';
   // display
@@ -74,6 +75,7 @@ export const settings = createVanilla<SettingsStore>()(
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
       CALC_SETTINGS_HASH: '',
+      DISMISSED_ALARM_TIMESTAMP: 0,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -169,15 +171,11 @@ export const settings = createVanilla<SettingsStore>()(
             // moved reminders to alarm settings store
             alarmSettings.setState({
               REMINDERS: (persistedState as any)['REMINDERS'],
-              DISMISSED_ALARM_TIMESTAMP: (persistedState as any)[
-                'DISMISSED_ALARM_TIMESTAMP'
-              ],
               LAST_ALARM_DATE_VALUEOF: (persistedState as any)[
                 'LAST_ALARM_DATE_VALUEOF'
               ],
             });
             delete (persistedState as any)['REMINDERS'];
-            delete (persistedState as any)['DISMISSED_ALARM_TIMESTAMP'];
             delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
             (persistedState as SettingsStore).HIDDEN_PRAYERS.push(
               Prayer.Tahajjud,

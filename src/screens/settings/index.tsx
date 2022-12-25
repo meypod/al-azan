@@ -17,7 +17,7 @@ import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {cacheMonth, clearCache} from '@/store/adhan_calc_cache';
 import {useAlarmSettings} from '@/store/alarm_settings';
 import {useCalcSettings} from '@/store/calculation_settings';
-import {useSettingsHelper} from '@/store/settings';
+import {settings, useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
 import {sha256} from '@/utils/hash';
@@ -95,6 +95,7 @@ function Settings() {
     if (calcSettingsHash !== stateHash) {
       ToastAndroid.show(t`Working, Please wait`, ToastAndroid.SHORT);
       setCalcSettingsHash(stateHash);
+      settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
       setNextAdhan();
       updateWidgets();
       clearCache();
@@ -103,6 +104,7 @@ function Settings() {
   }, [settingsState, calcSettingsHash, setCalcSettingsHash]);
 
   useEffect(() => {
+    settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
     setNextAdhan();
   }, [alarmSettingsState]);
 

@@ -51,7 +51,6 @@ export type Reminder = {
 };
 
 export type AlarmSettingsStore = {
-  DISMISSED_ALARM_TIMESTAMP: number;
   REMINDERS: Array<Reminder>;
   // widget update
   LAST_ALARM_DATE_VALUEOF: number;
@@ -96,7 +95,6 @@ export const alarmSettings = createVanilla<AlarmSettingsStore>()(
   persist(
     set => ({
       REMINDERS: [],
-      DISMISSED_ALARM_TIMESTAMP: 0,
       LAST_ALARM_DATE_VALUEOF: 0,
       SHOW_NEXT_PRAYER_TIME: false,
 

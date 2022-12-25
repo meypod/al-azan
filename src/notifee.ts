@@ -5,7 +5,7 @@ import notifee, {
   AndroidVisibility,
 } from '@notifee/react-native';
 import {BackHandler} from 'react-native';
-import {alarmSettings} from './store/alarm_settings';
+import {settings} from './store/settings';
 import {bootstrap} from '@/bootstrap';
 import {
   ADHAN_NOTIFICATION_ID,
@@ -80,7 +80,7 @@ export async function cancelAdhanNotifOnDismissed(
     const options = await getSecheduledAdhanNotificationOptions();
     if (options) {
       // save date of upcoming adhan to prevent setting alarm/prealarm before it
-      alarmSettings.setState({
+      settings.setState({
         DISMISSED_ALARM_TIMESTAMP: options.date.valueOf(),
       });
       // cancel upcoming notification
