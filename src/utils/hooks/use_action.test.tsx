@@ -29,13 +29,13 @@ describe('use_action', () => {
         result.current.runAction('d'),
       ]).then(() => {}),
     );
-    expect(result.current.isRunning).toBe(true);
+    expect(result.current.pending).toBe(true);
     expect(result.current.error).toBeFalsy();
     expect(result.current.result).toBe(undefined);
     setTimeout(jest.runAllTimers, 1);
     await theAct;
     expect(result.current.result).toBe('a'); // only first one get to set result
-    expect(result.current.isRunning).toBe(false);
+    expect(result.current.pending).toBe(false);
 
     expect(mock).toHaveBeenCalledTimes(1);
   });
@@ -61,13 +61,13 @@ describe('use_action', () => {
         result.current.runAction('d'),
       ]).then(() => {}),
     );
-    expect(result.current.isRunning).toBe(true);
+    expect(result.current.pending).toBe(true);
     expect(result.current.error).toBeFalsy();
     expect(result.current.result).toBe(undefined);
     setTimeout(jest.runAllTimers, 1);
     await theAct;
     expect(result.current.result).toBe('d'); // only first one get to set result
-    expect(result.current.isRunning).toBe(false);
+    expect(result.current.pending).toBe(false);
     expect(mock).toHaveBeenCalledTimes(4);
   });
 });
