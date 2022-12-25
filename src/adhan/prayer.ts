@@ -15,7 +15,12 @@ export enum Prayer {
   Tahajjud = 'tahajjud',
 }
 
-export const NonPrayer = [Prayer.Sunrise, Prayer.Sunset, Prayer.Midnight];
+export const NonPrayer = [
+  Prayer.Sunrise,
+  Prayer.Sunset,
+  Prayer.Midnight,
+  Prayer.Tahajjud,
+];
 
 export const PrayersInOrder = [
   Prayer.Fajr,
