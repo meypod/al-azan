@@ -13,6 +13,7 @@ module.exports = {
   env: {
     commonjs: true,
     node: true,
+    jest: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {

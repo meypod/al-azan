@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {Modal, Box, StatusBar, Button} from 'native-base';
-import {useState} from 'react';
+import {useCallback, useState} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
 import {IntroItem} from '@/intro/intro_item';
@@ -10,6 +10,7 @@ import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
 import {StepLabel} from '@/intro/step_label';
+import {calcSettings} from '@/store/calculation_settings';
 import {useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
@@ -50,26 +51,26 @@ export function Intro() {
 
   const [configAlertIsOpen, setConfigAlertIsOpen] = useState(false);
 
-  const onDonePressed = async () => {
-    if (isMinimumSettingsAvailable()) {
+  const onDonePressed = useCallback(async () => {
+    if (isMinimumSettingsAvailable(calcSettings.getState())) {
       setAppIntroDone(true);
       setNextAdhan();
       updateWidgets();
     } else {
       setConfigAlertIsOpen(true);
     }
-  };
+  }, [setAppIntroDone, setConfigAlertIsOpen]);
 
-  const onConfigAlertClose = () => {
+  const onConfigAlertClose = useCallback(() => {
     setConfigAlertIsOpen(false);
-  };
+  }, [setConfigAlertIsOpen]);
 
-  const onConfigAlertOk = () => {
+  const onConfigAlertOk = useCallback(() => {
     setConfigAlertIsOpen(false);
     setAppIntroDone(true);
     setNextAdhan();
     updateWidgets();
-  };
+  }, [setConfigAlertIsOpen, setAppIntroDone]);
 
   return (
     <Box flex="1" safeArea>

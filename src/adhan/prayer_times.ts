@@ -16,7 +16,7 @@ import {
   getCachedPrayerTimes,
 } from '@/store/adhan_calc_cache';
 import {alarmSettings, getAdhanSettingKey} from '@/store/alarm_settings';
-import {calcSettings} from '@/store/calculation_settings';
+import {calcSettings, CalcSettingsStore} from '@/store/calculation_settings';
 import {addDays, getDayBeginning} from '@/utils/date';
 
 export type PrayerTimesOptions = {
@@ -24,11 +24,12 @@ export type PrayerTimesOptions = {
   coordinates: Coordinates;
 };
 
-export function isMinimumSettingsAvailable() {
-  const state = calcSettings.getState();
-  const lat = state['LOCATION_LAT']!;
-  const long = state['LOCATION_LONG']!;
-  const calcMethodKey = state['CALCULATION_METHOD_KEY'];
+export function isMinimumSettingsAvailable(calcState?: CalcSettingsStore) {
+  if (!calcState) return false;
+
+  const lat = calcState['LOCATION_LAT']!;
+  const long = calcState['LOCATION_LONG']!;
+  const calcMethodKey = calcState['CALCULATION_METHOD_KEY'];
 
   if (![lat, long, calcMethodKey].every(Boolean)) return false;
 
@@ -40,8 +41,8 @@ export function isMinimumSettingsAvailable() {
 }
 
 function getPrayerTimesOptionsFromSettings() {
-  if (!isMinimumSettingsAvailable()) return;
   const state = calcSettings.getState();
+  if (!isMinimumSettingsAvailable(state)) return;
 
   const lat = state.LOCATION_LAT!;
   const long = state.LOCATION_LONG!;
