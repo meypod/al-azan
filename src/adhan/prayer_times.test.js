@@ -47,6 +47,8 @@ describe('prayer times minimum settings check works as expected', () => {
   });
 
   it('returns true when minimum settings is passed to it', () => {
+    /** 0 0 lat long coordinates is very unlikely to happen,
+     *  so no need to handle it, its in the middle of the ocean ;) */
     expect(
       isMinimumSettingsAvailable({
         LOCATION_LAT: 1,
