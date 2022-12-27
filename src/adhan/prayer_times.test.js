@@ -49,6 +49,7 @@ const tests = timezone =>
         });
       });
       it('returns the same prayer for any time inside the same date', () => {
+        // we dont include the timezone deliberately, to use the timezone defined in the beginning of test
         const date1 = new Date('Tue Dec 27 2022 00:00:00');
         const date2 = new Date('Tue Dec 27 2022 00:01:00');
         const date3 = new Date('Tue Dec 27 2022 12:00:00');
