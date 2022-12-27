@@ -36,7 +36,7 @@ const config = {
   suppressColorAccessibilityWarning: true,
 };
 
-export function BaseComponent<T>(
+export function BaseComponent<T extends JSX.IntrinsicAttributes>(
   ChildComponent: React.FunctionComponent<T>,
   args: T,
 ) {
