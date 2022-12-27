@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-25 17:49+0330\n"
+"POT-Creation-Date: 2022-12-27 16:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,11 +92,11 @@ msgstr "عصر کا حساب"
 msgid "At least one prayer time must be shown"
 msgstr "کم از کم ایک نماز کا وقت ضرور دکھایا جائے۔"
 
-#: src/intro/intro.tsx:106
+#: src/intro/intro.tsx:107
 msgid "Attention"
 msgstr "توجہ"
 
-#: src/intro/intro.tsx:35
+#: src/intro/intro.tsx:36
 #: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Battery Optimization"
 msgstr "بیٹری کی اصلاح"
@@ -105,7 +105,7 @@ msgstr "بیٹری کی اصلاح"
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "اذان کا حساب لگانے کے بہت سے طریقے ہیں۔ ہر طریقہ مختلف نتائج فراہم کرتا ہے۔ صحیح طریقہ تلاش کرنا اور استعمال کرنا آپ کی ذمہ داری ہے۔"
 
-#: src/intro/intro.tsx:27
+#: src/intro/intro.tsx:28
 msgid "Calculation"
 msgstr "حساب کتاب"
 
@@ -225,7 +225,7 @@ msgstr "برطرف کرنا"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı، ترکی"
 
-#: src/intro/intro.tsx:89
+#: src/intro/intro.tsx:90
 msgid "Done"
 msgstr "ہو گیا"
 
@@ -277,7 +277,7 @@ msgstr "عمومی (پہلے سے طے شدہ)"
 msgid "Getting coordinates"
 msgstr "کوآرڈینیٹ حاصل کرنا"
 
-#: src/intro/intro.tsx:112
+#: src/intro/intro.tsx:113
 msgid "Got it"
 msgstr "یہ مل گیا"
 
@@ -372,7 +372,7 @@ msgstr "لائسنس"
 msgid "Light"
 msgstr "روشنی"
 
-#: src/intro/intro.tsx:23
+#: src/intro/intro.tsx:24
 msgid "Location"
 msgstr "مقام"
 
@@ -418,7 +418,7 @@ msgstr "نام"
 msgid "New Reminder"
 msgstr "نئی یاد دہانی"
 
-#: src/intro/intro.tsx:88
+#: src/intro/intro.tsx:89
 #: src/tasks/set_alarm.ts:74
 #: src/tasks/set_next_adhan.ts:67
 msgid "Next"
@@ -440,7 +440,7 @@ msgstr "کوئی نہیں (خودکار)"
 msgid "Notification"
 msgstr "اطلاع"
 
-#: src/intro/intro.tsx:31
+#: src/intro/intro.tsx:32
 msgid "Notification & Sound"
 msgstr "اطلاع اور آواز"
 
@@ -497,7 +497,7 @@ msgstr "ISNA طریقہ کے طور پر کہا جاتا ہے۔"
 msgid "Reminder"
 msgstr "یاد دہانی"
 
-#: src/intro/intro.tsx:108
+#: src/intro/intro.tsx:109
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "مطلوبہ ترتیبات نامکمل ہیں۔ ایپ کو نماز کے اوقات دکھانے کے لیے، آپ کو اسے بعد میں سیٹنگز سے کنفیگر کرنا ہوگا۔"
 
@@ -564,7 +564,7 @@ msgstr "اطلاع ویجیٹ دکھائیں؟"
 msgid "Singapore"
 msgstr "سنگاپور"
 
-#: src/intro/intro.tsx:90
+#: src/intro/intro.tsx:91
 msgid "Skip"
 msgstr "آگے بڑھیں "
 
@@ -700,7 +700,7 @@ msgstr "ہم ان کو جلدی کرنے میں آپ کی مدد کریں گے۔
 msgid "Wednesday"
 msgstr "بدھ"
 
-#: src/intro/intro.tsx:19
+#: src/intro/intro.tsx:20
 msgid "Welcome"
 msgstr "خوش آمدید"
 
@@ -728,11 +728,6 @@ msgstr "اذان کی آوازوں کے تمام کاپی رائٹس ان کے �
 #: src/navigation/types.ts:79
 msgid "about_settings"
 msgstr "معلومات"
-
-#. screen title
-#: src/navigation/types.ts:54
-msgid "adhan_settings"
-msgstr "اذان"
 
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:16
@@ -804,6 +799,11 @@ msgstr "مقام"
 #: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "مغرب"
+
+#. screen title
+#: src/navigation/types.ts:54
+msgid "muezzin_settings"
+msgstr "مؤذن"
 
 #. screen title
 #: src/navigation/types.ts:49

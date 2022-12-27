@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-25 17:49+0330\n"
+"POT-Creation-Date: 2022-12-27 16:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,11 +92,11 @@ msgstr "Asr-Berechnung"
 msgid "At least one prayer time must be shown"
 msgstr "Mindestens eine Gebetszeit muss angezeigt werden"
 
-#: src/intro/intro.tsx:106
+#: src/intro/intro.tsx:107
 msgid "Attention"
 msgstr "Achtung"
 
-#: src/intro/intro.tsx:35
+#: src/intro/intro.tsx:36
 #: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Battery Optimization"
 msgstr "Akku-Optimierung"
@@ -105,7 +105,7 @@ msgstr "Akku-Optimierung"
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Für die Berechnung des Adhan gibt es viele verschiedene Methoden. Jede Methode liefert unterschiedliche Ergebnisse. Es liegt in Ihrer Verantwortung, die richtige Methode zu finden und auszuwählen."
 
-#: src/intro/intro.tsx:27
+#: src/intro/intro.tsx:28
 msgid "Calculation"
 msgstr "Berechnung"
 
@@ -225,7 +225,7 @@ msgstr "Ablehnen"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkei"
 
-#: src/intro/intro.tsx:89
+#: src/intro/intro.tsx:90
 msgid "Done"
 msgstr "Erledigt"
 
@@ -277,7 +277,7 @@ msgstr "Allgemein (Standard)"
 msgid "Getting coordinates"
 msgstr "Koordinaten ermitteln"
 
-#: src/intro/intro.tsx:112
+#: src/intro/intro.tsx:113
 msgid "Got it"
 msgstr "Verstanden"
 
@@ -372,7 +372,7 @@ msgstr "Lizenz"
 msgid "Light"
 msgstr "Hell"
 
-#: src/intro/intro.tsx:23
+#: src/intro/intro.tsx:24
 msgid "Location"
 msgstr "Standort"
 
@@ -418,7 +418,7 @@ msgstr "Name"
 msgid "New Reminder"
 msgstr "Neue Erinnerung"
 
-#: src/intro/intro.tsx:88
+#: src/intro/intro.tsx:89
 #: src/tasks/set_alarm.ts:74
 #: src/tasks/set_next_adhan.ts:67
 msgid "Next"
@@ -440,7 +440,7 @@ msgstr "Keine (automatisch)"
 msgid "Notification"
 msgstr "Benachrichtigung"
 
-#: src/intro/intro.tsx:31
+#: src/intro/intro.tsx:32
 msgid "Notification & Sound"
 msgstr "Benachrichtigung & Ton"
 
@@ -497,7 +497,7 @@ msgstr "ISNA-Methode"
 msgid "Reminder"
 msgstr "Erinnerung"
 
-#: src/intro/intro.tsx:108
+#: src/intro/intro.tsx:109
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Die erforderlichen Einstellungen sind unvollständig. Damit die App die Gebetszeiten anzeigen kann, müssen Sie diese später in den Einstellungen konfigurieren."
 
@@ -569,7 +569,7 @@ msgstr "Benachrichtigungs-Widget anzeigen?"
 msgid "Singapore"
 msgstr "Singapur"
 
-#: src/intro/intro.tsx:90
+#: src/intro/intro.tsx:91
 msgid "Skip"
 msgstr "Überspringen"
 
@@ -705,7 +705,7 @@ msgstr "Wir helfen Ihnen dabei, sie schnell zu erledigen."
 msgid "Wednesday"
 msgstr "Mittwoch"
 
-#: src/intro/intro.tsx:19
+#: src/intro/intro.tsx:20
 msgid "Welcome"
 msgstr "Willkommen"
 
@@ -736,11 +736,6 @@ msgstr ""
 #: src/navigation/types.ts:79
 msgid "about_settings"
 msgstr "Über"
-
-#. screen title
-#: src/navigation/types.ts:54
-msgid "adhan_settings"
-msgstr "Adhan"
 
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:16
@@ -812,6 +807,11 @@ msgstr "Standort"
 #: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Maghrib"
+
+#. screen title
+#: src/navigation/types.ts:54
+msgid "muezzin_settings"
+msgstr "Muezzin"
 
 #. screen title
 #: src/navigation/types.ts:49

@@ -98,11 +98,11 @@ msgstr "Asr Calculation"
 msgid "At least one prayer time must be shown"
 msgstr "At least one prayer time must be shown"
 
-#: src/intro/intro.tsx:106
+#: src/intro/intro.tsx:107
 msgid "Attention"
 msgstr "Attention"
 
-#: src/intro/intro.tsx:35
+#: src/intro/intro.tsx:36
 #: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Battery Optimization"
 msgstr "Battery Optimization"
@@ -111,7 +111,7 @@ msgstr "Battery Optimization"
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 
-#: src/intro/intro.tsx:27
+#: src/intro/intro.tsx:28
 msgid "Calculation"
 msgstr "Calculation"
 
@@ -231,7 +231,7 @@ msgstr "Dismiss"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
-#: src/intro/intro.tsx:89
+#: src/intro/intro.tsx:90
 msgid "Done"
 msgstr "Done"
 
@@ -283,7 +283,7 @@ msgstr "General (default)"
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
 
-#: src/intro/intro.tsx:112
+#: src/intro/intro.tsx:113
 msgid "Got it"
 msgstr "Got it"
 
@@ -378,7 +378,7 @@ msgstr "License"
 msgid "Light"
 msgstr "Light"
 
-#: src/intro/intro.tsx:23
+#: src/intro/intro.tsx:24
 msgid "Location"
 msgstr "Location"
 
@@ -424,7 +424,7 @@ msgstr "Name"
 msgid "New Reminder"
 msgstr "New Reminder"
 
-#: src/intro/intro.tsx:88
+#: src/intro/intro.tsx:89
 #: src/tasks/set_alarm.ts:74
 #: src/tasks/set_next_adhan.ts:67
 msgid "Next"
@@ -446,7 +446,7 @@ msgstr "None (Automatic)"
 msgid "Notification"
 msgstr "Notification"
 
-#: src/intro/intro.tsx:31
+#: src/intro/intro.tsx:32
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
 
@@ -503,7 +503,7 @@ msgstr "Referred to as the ISNA method"
 msgid "Reminder"
 msgstr "Reminder"
 
-#: src/intro/intro.tsx:108
+#: src/intro/intro.tsx:109
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 
@@ -577,7 +577,7 @@ msgstr "Show notification widget?"
 msgid "Singapore"
 msgstr "Singapore"
 
-#: src/intro/intro.tsx:90
+#: src/intro/intro.tsx:91
 msgid "Skip"
 msgstr "Skip"
 
@@ -718,7 +718,7 @@ msgstr "We'll help you do them quickly."
 msgid "Wednesday"
 msgstr "Wednesday"
 
-#: src/intro/intro.tsx:19
+#: src/intro/intro.tsx:20
 msgid "Welcome"
 msgstr "Welcome"
 
@@ -749,11 +749,6 @@ msgstr ""
 #: src/navigation/types.ts:79
 msgid "about_settings"
 msgstr "About"
-
-#. screen title
-#: src/navigation/types.ts:54
-msgid "adhan_settings"
-msgstr "Adhan"
 
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:16
@@ -825,6 +820,11 @@ msgstr "Location"
 #: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Maghrib"
+
+#. screen title
+#: src/navigation/types.ts:54
+msgid "muezzin_settings"
+msgstr "Muezzin"
 
 #. screen title
 #: src/navigation/types.ts:49

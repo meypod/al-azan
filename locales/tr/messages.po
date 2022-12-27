@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-25 17:49+0330\n"
+"POT-Creation-Date: 2022-12-27 16:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,11 +92,11 @@ msgstr "İkindi hesabı"
 msgid "At least one prayer time must be shown"
 msgstr "En az bir namaz vakti gösterilmelidir"
 
-#: src/intro/intro.tsx:106
+#: src/intro/intro.tsx:107
 msgid "Attention"
 msgstr "Dikkat"
 
-#: src/intro/intro.tsx:35
+#: src/intro/intro.tsx:36
 #: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Battery Optimization"
 msgstr "Pil iyileştirmesi"
@@ -105,7 +105,7 @@ msgstr "Pil iyileştirmesi"
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı sonuçlar verir. Doğru yöntemi araştırmak ve kullanmak sizin sorumluluğunuzdadır."
 
-#: src/intro/intro.tsx:27
+#: src/intro/intro.tsx:28
 msgid "Calculation"
 msgstr "Hesap"
 
@@ -225,7 +225,7 @@ msgstr "Reddet"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkiye"
 
-#: src/intro/intro.tsx:89
+#: src/intro/intro.tsx:90
 msgid "Done"
 msgstr "Tamamlandı"
 
@@ -277,7 +277,7 @@ msgstr "Genel (varsayılan)"
 msgid "Getting coordinates"
 msgstr "Koordinatları alma"
 
-#: src/intro/intro.tsx:112
+#: src/intro/intro.tsx:113
 msgid "Got it"
 msgstr "Anlaşıldı"
 
@@ -309,7 +309,7 @@ msgstr "Anasayfa"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
-msgstr "Etkinleştirilirse, bir bildirim gösterildiğinde, bir sonraki namaz vakti için bilgi içerecektir"
+msgstr "Etkinleştirilirse, bildirimlerde bir sonraki namaz vakti bilgileri gösterilecektir."
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
@@ -372,7 +372,7 @@ msgstr "Lisans"
 msgid "Light"
 msgstr "Aydınlık"
 
-#: src/intro/intro.tsx:23
+#: src/intro/intro.tsx:24
 msgid "Location"
 msgstr "Konum"
 
@@ -418,7 +418,7 @@ msgstr "Ad"
 msgid "New Reminder"
 msgstr "Yeni Hatırlatıcı"
 
-#: src/intro/intro.tsx:88
+#: src/intro/intro.tsx:89
 #: src/tasks/set_alarm.ts:74
 #: src/tasks/set_next_adhan.ts:67
 msgid "Next"
@@ -440,7 +440,7 @@ msgstr "Yok (Otomatik)"
 msgid "Notification"
 msgstr "Bildirim"
 
-#: src/intro/intro.tsx:31
+#: src/intro/intro.tsx:32
 msgid "Notification & Sound"
 msgstr "Bildirim & Ses"
 
@@ -497,7 +497,7 @@ msgstr "ISNA yöntemi"
 msgid "Reminder"
 msgstr "Hatırlatıcı"
 
-#: src/intro/intro.tsx:108
+#: src/intro/intro.tsx:109
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar eksik. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
 
@@ -564,7 +564,7 @@ msgstr "Bildirim widget'ı gösterilsin mi?"
 msgid "Singapore"
 msgstr "Singapur"
 
-#: src/intro/intro.tsx:90
+#: src/intro/intro.tsx:91
 msgid "Skip"
 msgstr "Atla"
 
@@ -700,7 +700,7 @@ msgstr "Bunları hızlı bir şekilde yapmanıza yardımcı olacağız."
 msgid "Wednesday"
 msgstr "Çarşamba"
 
-#: src/intro/intro.tsx:19
+#: src/intro/intro.tsx:20
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 
@@ -728,11 +728,6 @@ msgstr "Ezan seslerinin tüm telif hakları sahiplerine aittir. Harika hizmetler
 #: src/navigation/types.ts:79
 msgid "about_settings"
 msgstr "Hakkında"
-
-#. screen title
-#: src/navigation/types.ts:54
-msgid "adhan_settings"
-msgstr "Ezan"
 
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:16
@@ -804,6 +799,11 @@ msgstr "Konum"
 #: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
 msgstr "Akşam"
+
+#. screen title
+#: src/navigation/types.ts:54
+msgid "muezzin_settings"
+msgstr "Müezzin"
 
 #. screen title
 #: src/navigation/types.ts:49

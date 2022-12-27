@@ -52,8 +52,8 @@ const routeTranslations = {
     comment: 'screen title',
   }),
   AdhanSettings: defineMessage({
-    id: 'adhan_settings',
-    message: 'Adhan',
+    id: 'muezzin_settings',
+    message: 'Muezzin',
     comment: 'screen title',
   }),
   CalculationSettings: defineMessage({
