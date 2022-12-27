@@ -7,7 +7,6 @@ const config = {
   },
   forceExit: true,
   // testRunner: 'jasmine2',
-  globalSetup: '<rootDir>/jest.global-setup.js',
   // for aliases
   roots: ['<rootDir>'],
   modulePaths: ['.'],

@@ -1,17 +1,23 @@
 import {getPrayerTimes, isMinimumSettingsAvailable} from '@/adhan';
 import {calcSettings} from '@/store/calculation_settings';
 
+const timezone_mock = require('timezone-mock');
+
 const timezones = {
   UTC: 'UTC',
-  Afghanistan: 'Asia/Kabul',
+  Australia: 'Australia/Adelaide',
+  Brazil: 'Brazil/East',
 };
 
 function getTimezoneIdentity(tz) {
   if (tz === timezones.UTC) {
-    return 'Coordinated Universal Time';
+    return 'MockDate: GMT+0000';
   }
-  if (tz === timezones.Afghanistan) {
-    return 'Afghanistan Time';
+  if (tz === timezones.Australia) {
+    return ['MockDate: GMT+1030', 'MockDate: GMT+0930'];
+  }
+  if (tz === timezones.Brazil) {
+    return ['MockDate: GMT-0200', 'MockDate: GMT-0300'];
   }
 
   return 'time_zone_identity_not_found';
@@ -21,16 +27,23 @@ const tests = timezone =>
   describe('timezone is set to ' + timezone, () => {
     beforeAll(() => {
       // eslint-disable-next-line no-undef
-      changeTimezone(timezone);
+      timezone_mock.register(timezone);
     });
 
     afterAll(() => {
       // eslint-disable-next-line no-undef
-      changeTimezone('');
+      timezone_mock.unregister();
     });
 
     it('timezone change works', () => {
-      expect(new Date().toString()).toContain(getTimezoneIdentity(timezone));
+      const tzId = getTimezoneIdentity(timezone);
+      if (Array.isArray(tzId)) {
+        expect(
+          tzId.find(id => new Date().toString().includes(id)),
+        ).toBeTruthy();
+      } else {
+        expect(new Date().toString()).toContain(tzId);
+      }
     });
 
     describe('getPrayerTimes()', () => {
@@ -50,10 +63,10 @@ const tests = timezone =>
       });
       it('returns the same prayer for any time inside the same date', () => {
         // we dont include the timezone deliberately, to use the timezone defined in the beginning of test
-        const date1 = new Date('Tue Dec 27 2022 00:00:00');
-        const date2 = new Date('Tue Dec 27 2022 00:01:00');
-        const date3 = new Date('Tue Dec 27 2022 12:00:00');
-        const date4 = new Date('Tue Dec 27 2022 23:59:59');
+        const date1 = new Date('2022-12-27 00:00:00');
+        const date2 = new Date('2022-12-27 00:01:00');
+        const date3 = new Date('2022-12-27 12:00:00');
+        const date4 = new Date('2022-12-27 23:59:59');
         const pt1 = getPrayerTimes(date1);
         const pt2 = getPrayerTimes(date2);
         const pt3 = getPrayerTimes(date3);
@@ -66,7 +79,7 @@ const tests = timezone =>
         expect(pt1).toStrictEqual(pt3);
         expect(pt1).toStrictEqual(pt4);
 
-        const date5 = new Date('Tue Dec 28 2022 00:00:00');
+        const date5 = new Date('2022-12-28 00:00:00');
         const pt5 = getPrayerTimes(date5);
         delete pt5.date;
         expect(pt5).not.toStrictEqual(pt1);
