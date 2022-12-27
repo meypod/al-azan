@@ -1,0 +1,30 @@
+name: Test
+
+on: [workflow_call]
+
+jobs:
+  jest:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install yarn
+      run: npm install -g yarn
+    
+    - name: Load Cache
+      uses: actions/setup-node@v3
+      with:
+        cache: 'yarn'
+
+    - name: Install packages
+      run: yarn install --frozen-lockfile
+
+    - name: Run tests
+      run: yarn test
