@@ -13,7 +13,7 @@
     "sync": "lingui extract --overwrite && lingui compile",
     "sync_and_purge": "lingui extract --overwrite --clean && lingui compile",
     "lingui": "lingui",
-    "np": "np --no-publish --no-tests",
+    "np": "np --no-publish",
     "postversion": "react-native-version"
   },
   "dependencies": {
