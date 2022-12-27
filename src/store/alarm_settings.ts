@@ -24,15 +24,6 @@ export function getAdhanSettingKey(
   }
 }
 
-export type WeekDay =
-  | 'saturday'
-  | 'sunday'
-  | 'monday'
-  | 'tuesday'
-  | 'wednesday'
-  | 'thursday'
-  | 'friday';
-
 export type Reminder = {
   id: string;
   label?: string;

@@ -125,3 +125,32 @@ export function getArabicDate(date: Date) {
     weekday: 'long',
   }).format(date);
 }
+
+export type WeekDayName =
+  | 'sunday'
+  | 'monday'
+  | 'tuesday'
+  | 'wednesday'
+  | 'thursday'
+  | 'friday'
+  | 'saturday';
+
+export type WeekDayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
+export const WeekDays: Record<WeekDayName, WeekDayIndex> &
+  Record<WeekDayIndex, WeekDayName> = {
+  sunday: 0,
+  monday: 1,
+  tuesday: 2,
+  wednesday: 3,
+  thursday: 4,
+  friday: 5,
+  saturday: 6,
+  0: 'sunday',
+  1: 'monday',
+  2: 'tuesday',
+  3: 'wednesday',
+  4: 'thursday',
+  5: 'friday',
+  6: 'saturday',
+};

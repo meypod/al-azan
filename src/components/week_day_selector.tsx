@@ -1,12 +1,13 @@
 import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
+import keys from 'lodash/keys';
 import {Flex, FormControl, IFlexProps} from 'native-base';
 import {useCallback, useState} from 'react';
 import {WeekDayButton} from '@/components/week_day_button';
-import {WeekDay} from '@/store/settings';
+import {WeekDayIndex, WeekDayName, WeekDays} from '@/utils/date';
 
-export const WeekDaysShortInOrder = {
+export const WeekDaysInOrder = {
   sunday: defineMessage({
     message: 'Sunday',
   }),
@@ -32,22 +33,24 @@ export const WeekDaysShortInOrder = {
 
 export function WeekDaySelector(
   props: IFlexProps & {
-    onChanged?: (weekDays: Array<WeekDay>) => void;
+    onChanged?: (weekDays: Array<WeekDayIndex>) => void;
     label?: string;
   },
 ) {
-  const [selectedDays, setSelectedDays] = useState<Record<WeekDay, boolean>>(
-    {} as Record<WeekDay, boolean>,
-  );
+  const [selectedDays, setSelectedDays] = useState<
+    Partial<Record<WeekDayIndex, boolean>>
+  >({});
 
   const setSelectedDaysProxy = useCallback(
-    (obj: Record<WeekDay, boolean>) => {
+    (obj: typeof selectedDays) => {
       setSelectedDays(obj);
       if (typeof props.onChanged === 'function') {
         props.onChanged(
-          Object.keys(obj)
-            .map(k => (obj[k as WeekDay] ? (k as WeekDay) : undefined))
-            .filter(Boolean) as Array<WeekDay>,
+          keys(obj)
+            .map((k: string) =>
+              obj[k as unknown as WeekDayIndex] ? k : undefined,
+            )
+            .filter(Boolean) as unknown as Array<WeekDayIndex>,
         );
       }
     },
@@ -58,17 +61,17 @@ export function WeekDaySelector(
     <FormControl>
       {props.label && <FormControl.Label>{props.label}:</FormControl.Label>}
       <Flex direction="row" flexWrap="wrap" {...props}>
-        {Object.keys(WeekDaysShortInOrder).map(k => {
+        {keys(WeekDaysInOrder).map((dayName: string) => {
           return (
             <WeekDayButton
               onChanged={isActive => {
                 setSelectedDaysProxy({
                   ...selectedDays,
-                  [k as WeekDay]: isActive,
+                  [WeekDays[dayName as WeekDayName]]: isActive,
                 });
               }}
-              label={i18n._(WeekDaysShortInOrder[k])}
-              key={k}
+              label={i18n._(WeekDaysInOrder[dayName])}
+              key={dayName}
             />
           );
         })}
