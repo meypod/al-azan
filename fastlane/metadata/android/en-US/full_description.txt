@@ -8,11 +8,13 @@ App features:
 
 * Open-source
 
+* You can search for your location online Or use GPS offline
+
 * Set custom Adhan audio
 
-* Select different Adhan audio for Fajr prayer
+* Select different Adhan audio for Fajr namaz
 
-* Many options for Adhan (أذان) calculation
+* Many options for Adhan (اذان) calculation
 
 * Light/Dark theme
 
