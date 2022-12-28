@@ -30,7 +30,7 @@
     "immer": "^9.0.15",
     "lodash": "^4.17.21",
     "make-plural": "^7.1.0",
-    "native-base": "^3.4.15",
+    "native-base": "^3.4.25",
     "react": "18.0.0",
     "react-native": "0.69.7",
     "react-native-alarm-module": "^3.0.0",
