@@ -22,7 +22,7 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Set custom Adhan audio
 
-* Select different Adhan audio for Fajr prayer
+* Select different Adhan audio for Fajr namaz
 
 * Many options for Adhan (أذان) calculation
 

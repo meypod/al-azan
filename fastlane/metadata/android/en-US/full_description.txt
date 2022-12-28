@@ -12,7 +12,7 @@ App features:
 
 * Set custom Adhan audio
 
-* Select different Adhan audio for Fajr prayer
+* Select different Adhan audio for Fajr namaz
 
 * Many options for Adhan (أذان) calculation
 
