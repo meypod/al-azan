@@ -8,6 +8,8 @@ an open-source Adhan (أذان) - prayer times application built using react-nat
 
 or get the APK from [the Releases section](https://github.com/meypod/al-azan/releases/latest).
 
+Apks released on GitHub are per CPU architecture, if you don't know which one to download, simply download the file that has "universal" in It's name.
+
 ## Features
 
 * Ad-Free
@@ -15,6 +17,8 @@ or get the APK from [the Releases section](https://github.com/meypod/al-azan/rel
 * Doesn't use any kind of trackers
 
 * Open-source
+
+* You can search for your location online Or use GPS offline
 
 * Set custom Adhan audio
 
@@ -83,27 +87,27 @@ Translation to other languages has been done by these awesome people:
 
 #### Turkish
 
-- [@Serince](https://github.com/Serince)
+* [@Serince](https://github.com/Serince)
 
 #### Indonesian
 
-- [@muava12](https://github.com/muava12)
+* [@muava12](https://github.com/muava12)
 
 #### French
 
-- Contributor has chosen to stay anonymous
+* Contributor has chosen to stay anonymous
 
 #### Urdu
 
-- [Asjad Ahmad](https://twitter.com/Estcaliphate)
+* [Asjad Ahmad](https://twitter.com/Estcaliphate)
 
 #### Hindi
 
-- Contributor has chosen to stay anonymous
+* Contributor has chosen to stay anonymous
 
 #### German
 
-- [@b3r4t](https://github.com/b3r4t)
+* [@b3r4t](https://github.com/b3r4t)
 
 ## Thanks to
 
