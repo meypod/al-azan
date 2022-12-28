@@ -24,7 +24,7 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Select different Adhan audio for Fajr namaz
 
-* Many options for Adhan (أذان) calculation
+* Many options for Adhan (اذان) calculation
 
 * Light/Dark theme
 
