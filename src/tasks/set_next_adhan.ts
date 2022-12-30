@@ -10,7 +10,7 @@ import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {setReminders} from '@/tasks/set_reminder';
-import {getTime} from '@/utils/date';
+import {addDays, getDayName, getTime} from '@/utils/date';
 
 type SetNextAdhanOptions = {
   noToast?: boolean;
@@ -67,15 +67,17 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
       if (!options?.noToast) {
         const translatedPrayerName = translatePrayer(prayer);
         const time24Format = getTime(date);
-        ToastAndroid.show(
-          t`Next` +
-            ': ' +
-            translatedPrayerName +
-            ', ' +
-            time24Format +
-            (date.getDay() !== new Date().getDay() ? ' ' + t`Tomorrow` : ''),
-          ToastAndroid.SHORT,
-        );
+        let message =
+          t`Next` + ': ' + translatedPrayerName + ', ' + time24Format;
+
+        if (date.toDateString() !== new Date().toDateString()) {
+          if (date.toDateString() === addDays(new Date(), 1).toDateString()) {
+            message += ' ' + t`Tomorrow`;
+          } else {
+            message += ' ' + getDayName(date);
+          }
+        }
+        ToastAndroid.show(message, ToastAndroid.SHORT);
       }
     });
 }

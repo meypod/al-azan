@@ -14,7 +14,7 @@ import {
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {settings} from '@/store/settings';
-import {getTime} from '@/utils/date';
+import {addDays, getDayName, getTime} from '@/utils/date';
 
 export type SetAlarmTaskOptions = {
   /** When the adhan is  */
@@ -71,11 +71,18 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       useSettings: true,
     });
     if (next) {
-      body =
-        `${t`Next`}: ${translatePrayer(next.prayer)}, ${getTime(next.date)}` +
-        (next.date.toDateString() !== options.date.toDateString()
-          ? ' ' + t`Tomorrow`
-          : '');
+      body = `${t`Next`}: ${translatePrayer(next.prayer)}, ${getTime(
+        next.date,
+      )}`;
+      if (next.date.toDateString() !== options.date.toDateString()) {
+        if (
+          next.date.toDateString() === addDays(options.date, 1).toDateString()
+        ) {
+          body += ' ' + t`Tomorrow`;
+        } else {
+          body += ' ' + getDayName(options.date);
+        }
+      }
     }
   } else {
     body = subtitle;

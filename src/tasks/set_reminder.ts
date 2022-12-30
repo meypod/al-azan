@@ -17,7 +17,7 @@ import {
   hasAtLeastOneNotificationSetting,
   Reminder,
 } from '@/store/alarm_settings';
-import {getNextDayBeginning, getTime} from '@/utils/date';
+import {addDays, getDayName, getNextDayBeginning, getTime} from '@/utils/date';
 
 type SetReminderOptions = {
   date?: Date;
@@ -116,17 +116,17 @@ export async function setReminders(options: SetReminderOptions) {
       .catch(console.error);
 
     if (!options?.noToast) {
-      const time24Format = getTime(new Date(timestamp));
-
-      ToastAndroid.show(
-        t`Reminder` +
-          ': ' +
-          time24Format +
-          (new Date(timestamp).getDay() !== new Date().getDay()
-            ? ' ' + t`Tomorrow`
-            : ''),
-        ToastAndroid.SHORT,
-      );
+      const date = new Date(timestamp);
+      const time24Format = getTime(date);
+      let message = t`Reminder` + ': ' + time24Format;
+      if (date.toDateString() !== new Date().toDateString()) {
+        if (date.toDateString() === addDays(new Date(), 1).toDateString()) {
+          message += ' ' + t`Tomorrow`;
+        } else {
+          message += ' ' + getDayName(date);
+        }
+      }
+      ToastAndroid.show(message, ToastAndroid.SHORT);
     }
   }
 
