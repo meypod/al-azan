@@ -59,6 +59,7 @@
     "@lingui/macro": "^3.14.0",
     "@testing-library/react-hooks": "^8.0.0",
     "@types/jest": "^29.2.4",
+    "@types/lodash": "^4.14.191",
     "@types/react-native": "^0.67.7",
     "@types/react-test-renderer": "^17.0.1",
     "@types/rtl-detect": "^1.0.0",
