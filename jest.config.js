@@ -8,7 +8,6 @@ const config = {
   forceExit: true,
   // testRunner: 'jasmine2',
   // for aliases
-  roots: ['<rootDir>'],
   modulePaths: ['.'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',

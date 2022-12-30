@@ -7,7 +7,9 @@ const NotificationWidgetModule = (
         {},
         {
           get() {
-            throw new Error('error while linking notification widget module');
+            if (process?.env?.JEST_WORKER_ID === undefined) {
+              throw new Error('error while linking notification widget module');
+            }
           },
         },
       )

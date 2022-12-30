@@ -7,7 +7,9 @@ const RestartModule = (
         {},
         {
           get() {
-            throw new Error('error while linking restart module');
+            if (process?.env?.JEST_WORKER_ID === undefined) {
+              throw new Error('error while linking restart module');
+            }
           },
         },
       )

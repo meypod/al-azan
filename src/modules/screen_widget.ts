@@ -7,7 +7,9 @@ const ScreenWidgetModule = (
         {},
         {
           get() {
-            throw new Error('error while linking screen widget module');
+            if (process?.env?.JEST_WORKER_ID === undefined) {
+              throw new Error('error while linking screen widget module');
+            }
           },
         },
       )

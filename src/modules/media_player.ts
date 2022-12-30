@@ -8,7 +8,9 @@ const MediaPlayerModule = (
         {},
         {
           get() {
-            throw new Error('error while linking media player module');
+            if (process?.env?.JEST_WORKER_ID === undefined) {
+              throw new Error('error while linking media player module');
+            }
           },
         },
       )
