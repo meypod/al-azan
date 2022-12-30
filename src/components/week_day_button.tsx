@@ -1,9 +1,11 @@
 import {Button} from 'native-base';
 import {useCallback, useState} from 'react';
+import {WeekDayIndex} from '@/utils/date';
 
 type WeekDayButtonProps = {
+  dayIndex: WeekDayIndex;
   isActive?: boolean;
-  onChanged?: (isActive: boolean) => void;
+  onChanged?: (isActive: boolean, dayIndex: WeekDayIndex) => void;
   label: string;
 };
 
@@ -13,7 +15,8 @@ export function WeekDayButton(props: WeekDayButtonProps) {
   const setIsActiveProxy = useCallback(
     (isAct: boolean) => {
       setIsActive(isAct);
-      typeof props.onChanged === 'function' && props.onChanged(isAct);
+      typeof props.onChanged === 'function' &&
+        props.onChanged(isAct, props.dayIndex);
     },
     [setIsActive, props],
   );
@@ -26,7 +29,7 @@ export function WeekDayButton(props: WeekDayButtonProps) {
       variant="unstyled"
       _text={{noOfLines: 1, fontSize: 'xs'}}
       _light={{
-        backgroundColor: isActive ? 'primary.500:alpha.70' : 'black:alpha.5',
+        backgroundColor: isActive ? 'primary.500' : 'black:alpha.5',
         _text: {color: isActive ? 'white' : 'black:alpha.70'},
       }}
       _dark={{

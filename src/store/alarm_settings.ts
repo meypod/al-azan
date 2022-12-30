@@ -5,6 +5,7 @@ import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {Prayer, PrayersInOrder} from '@/adhan';
+import {WeekDayIndex} from '@/utils/date';
 
 const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
 
@@ -41,28 +42,33 @@ export type Reminder = {
   modified?: number;
 };
 
+export type PrayerAlarmSettings =
+  | boolean
+  | Partial<Record<WeekDayIndex, boolean>>
+  | undefined;
+
 export type AlarmSettingsStore = {
   REMINDERS: Array<Reminder>;
   //prayer notification settings
-  FAJR_NOTIFY?: boolean;
-  SUNRISE_NOTIFY?: boolean;
-  DHUHR_NOTIFY?: boolean;
-  ASR_NOTIFY?: boolean;
-  SUNSET_NOTIFY?: boolean;
-  MAGHRIB_NOTIFY?: boolean;
-  ISHA_NOTIFY?: boolean;
-  MIDNIGHT_NOTIFY?: boolean;
-  TAHAJJUD_NOTIFY?: boolean;
+  FAJR_NOTIFY?: PrayerAlarmSettings;
+  SUNRISE_NOTIFY?: PrayerAlarmSettings;
+  DHUHR_NOTIFY?: PrayerAlarmSettings;
+  ASR_NOTIFY?: PrayerAlarmSettings;
+  SUNSET_NOTIFY?: PrayerAlarmSettings;
+  MAGHRIB_NOTIFY?: PrayerAlarmSettings;
+  ISHA_NOTIFY?: PrayerAlarmSettings;
+  MIDNIGHT_NOTIFY?: PrayerAlarmSettings;
+  TAHAJJUD_NOTIFY?: PrayerAlarmSettings;
   // prayer sound settings
-  FAJR_SOUND?: boolean;
-  SUNRISE_SOUND?: boolean;
-  DHUHR_SOUND?: boolean;
-  ASR_SOUND?: boolean;
-  SUNSET_SOUND?: boolean;
-  MAGHRIB_SOUND?: boolean;
-  ISHA_SOUND?: boolean;
-  MIDNIGHT_SOUND?: boolean;
-  TAHAJJUD_SOUND?: boolean;
+  FAJR_SOUND?: PrayerAlarmSettings;
+  SUNRISE_SOUND?: PrayerAlarmSettings;
+  DHUHR_SOUND?: PrayerAlarmSettings;
+  ASR_SOUND?: PrayerAlarmSettings;
+  SUNSET_SOUND?: PrayerAlarmSettings;
+  MAGHRIB_SOUND?: PrayerAlarmSettings;
+  ISHA_SOUND?: PrayerAlarmSettings;
+  MIDNIGHT_SOUND?: PrayerAlarmSettings;
+  TAHAJJUD_SOUND?: PrayerAlarmSettings;
   // alarm notification
   SHOW_NEXT_PRAYER_TIME: boolean;
 

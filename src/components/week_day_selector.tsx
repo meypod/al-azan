@@ -31,30 +31,57 @@ export const WeekDaysInOrder = {
   }),
 } as Record<string, MessageDescriptor>;
 
+export type SelectorValue = Partial<Record<WeekDayIndex, boolean>> | boolean;
+
 export function WeekDaySelector(
   props: IFlexProps & {
-    onChanged?: (weekDays: Array<WeekDayIndex>) => void;
+    value?: SelectorValue;
+    onChanged?: (weekDays: SelectorValue) => void;
     label?: string;
   },
 ) {
-  const [selectedDays, setSelectedDays] = useState<
-    Partial<Record<WeekDayIndex, boolean>>
-  >({});
+  const [selectedDays, setSelectedDays] = useState<SelectorValue>(
+    props.value || false,
+  );
 
   const setSelectedDaysProxy = useCallback(
-    (obj: typeof selectedDays) => {
+    (obj: SelectorValue) => {
       setSelectedDays(obj);
       if (typeof props.onChanged === 'function') {
-        props.onChanged(
-          keys(obj)
-            .map((k: string) =>
-              obj[k as unknown as WeekDayIndex] ? k : undefined,
-            )
-            .filter(Boolean) as unknown as Array<WeekDayIndex>,
-        );
+        props.onChanged(obj);
       }
     },
     [setSelectedDays, props],
+  );
+
+  const dayChanged = useCallback(
+    (isActive: boolean, dayIndex: WeekDayIndex) => {
+      let values: SelectorValue = {
+        ...(typeof selectedDays === 'boolean'
+          ? selectedDays
+            ? {
+                0: true,
+                1: true,
+                2: true,
+                3: true,
+                4: true,
+                5: true,
+                6: true,
+              }
+            : {}
+          : selectedDays),
+        [dayIndex]: isActive,
+      };
+      if (!values[dayIndex]) delete values[dayIndex];
+      const keysLength = keys(values).length;
+      if (!keysLength) {
+        values = false;
+      } else if (keysLength === 7) {
+        values = true;
+      }
+      setSelectedDaysProxy(values);
+    },
+    [selectedDays, setSelectedDaysProxy],
   );
 
   return (
@@ -64,14 +91,15 @@ export function WeekDaySelector(
         {keys(WeekDaysInOrder).map((dayName: string) => {
           return (
             <WeekDayButton
-              onChanged={isActive => {
-                setSelectedDaysProxy({
-                  ...selectedDays,
-                  [WeekDays[dayName as WeekDayName]]: isActive,
-                });
-              }}
+              dayIndex={WeekDays[dayName as WeekDayName]}
+              onChanged={dayChanged}
               label={i18n._(WeekDaysInOrder[dayName])}
               key={dayName}
+              isActive={
+                typeof selectedDays === 'boolean'
+                  ? selectedDays
+                  : selectedDays[WeekDays[dayName as WeekDayName]]
+              }
             />
           );
         })}
