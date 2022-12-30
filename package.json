@@ -94,7 +94,8 @@
     "react-native": "*"
   },
   "resolutions": {
-    "@types/react": "^18"
+    "@types/react": "^18",
+    "@callstack/repack-debugger-app": "^1.0.1"
   },
   "repository": {
     "type": "git",

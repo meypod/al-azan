@@ -1091,10 +1091,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@callstack/repack-debugger-app@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@callstack/repack-debugger-app/-/repack-debugger-app-1.0.0.tgz#71a40a31247bd73f30d16433e49ed1f02abd7cc3"
-  integrity sha512-EdR0JLhdkikjZ7OyXtBnGKKZHximkVG0J0XodybZFwZRRafL7h8E0yCv4GjCGOswA9QnkqwZLexxBel+ma0mmg==
+"@callstack/repack-debugger-app@^1.0.0", "@callstack/repack-debugger-app@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@callstack/repack-debugger-app/-/repack-debugger-app-1.0.1.tgz#e9cf6a1541d053f3daa042d6fc4281b3be5e037a"
+  integrity sha512-eV+aXLD7ewvPRcV2nj0t3w44jMEqfY2BMcjyPmctLJYYCQDN75HGdbGjdBUSOAyIVgYLOxDkDmTNK2fNJLlMhw==
 
 "@callstack/repack-dev-server@^1.0.0":
   version "1.0.0"
