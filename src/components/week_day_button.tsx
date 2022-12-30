@@ -20,22 +20,18 @@ export function WeekDayButton(props: WeekDayButtonProps) {
 
   return (
     <Button
-      mr="2"
-      mb="2"
+      mr="1.5"
+      mb="1.5"
       padding="1"
-      variant="outline"
-      _text={{noOfLines: 1, fontSize: 'xs', allowFontScaling: false}}
+      variant="unstyled"
+      _text={{noOfLines: 1, fontSize: 'xs'}}
       _light={{
-        backgroundColor: isActive ? 'primary.600:alpha.70' : 'white:alpha.70',
-        borderColor: isActive
-          ? 'primary.600:alpha.70'
-          : 'coolGray.800:alpha.70',
+        backgroundColor: isActive ? 'primary.500:alpha.70' : 'black:alpha.5',
         _text: {color: isActive ? 'white' : 'black:alpha.70'},
       }}
       _dark={{
-        backgroundColor: isActive ? 'white:alpha.80' : 'black:alpha.15',
-        borderColor: 'white:alpha.80',
-        _text: {color: isActive ? 'black:alpha.80' : 'white:alpha.70'},
+        backgroundColor: isActive ? 'primary.800' : 'black',
+        _text: {color: 'white:alpha.90'},
       }}
       onPress={() => setIsActiveProxy(!isActive)}>
       {props.label}
