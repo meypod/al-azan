@@ -29,6 +29,8 @@ function Divider({
             color: 'coolGray.600',
           }}
           noOfLines={1}
+          allowFontScaling={true}
+          maxFontSizeMultiplier={1.5}
           flexShrink={0}
           mx="2">
           {label}
