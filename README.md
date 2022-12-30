@@ -24,6 +24,8 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Select different Adhan audio for Fajr namaz
 
+* In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)
+
 * Many options for Adhan (اذان) calculation
 
 * Light/Dark theme
