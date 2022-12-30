@@ -15,9 +15,13 @@ import {
   CachedPrayerTimes,
   getCachedPrayerTimes,
 } from '@/store/adhan_calc_cache';
-import {alarmSettings, getAdhanSettingKey} from '@/store/alarm_settings';
+import {
+  alarmSettings,
+  getAdhanSettingKey,
+  PrayerAlarmSettings,
+} from '@/store/alarm_settings';
 import {calcSettings, CalcSettingsStore} from '@/store/calculation_settings';
-import {addDays, getDayBeginning} from '@/utils/date';
+import {addDays, getDayBeginning, WeekDayIndex} from '@/utils/date';
 
 export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
@@ -149,9 +153,20 @@ export type PrayerTime = {
   playSound?: boolean;
 };
 
-function shouldNotifyPrayer(prayer: Prayer, useSettings?: boolean) {
+function shouldNotifyPrayer(prayer: Prayer, date: Date, useSettings?: boolean) {
   if (useSettings) {
-    return alarmSettings.getState()[getAdhanSettingKey(prayer, 'notify')];
+    const notifySetting = alarmSettings.getState()[
+      getAdhanSettingKey(prayer, 'notify')
+    ] as PrayerAlarmSettings;
+    if (
+      typeof notifySetting === 'boolean' ||
+      typeof notifySetting === 'undefined'
+    ) {
+      return !!notifySetting;
+    } else if (notifySetting[date.getDay() as WeekDayIndex]) {
+      return true;
+    }
+    return false;
   } else {
     return true;
   }
@@ -215,7 +230,7 @@ export class PrayerTimesHelper {
     for (let prayer of prayers) {
       if (
         this.date <= this[prayer] &&
-        shouldNotifyPrayer(prayer, useSettings)
+        shouldNotifyPrayer(prayer, this.date, useSettings)
       ) {
         prayerTime = {
           date: this[prayer],
@@ -226,16 +241,26 @@ export class PrayerTimesHelper {
     }
 
     if (prayerTime && useSettings) {
-      prayerTime.playSound = !!alarmSettings.getState()[
+      const soundSetting = alarmSettings.getState()[
         getAdhanSettingKey(prayerTime.prayer, 'sound')
-      ] as boolean;
+      ] as PrayerAlarmSettings;
+      if (typeof soundSetting === 'boolean') {
+        prayerTime.playSound = soundSetting;
+      } else if (
+        soundSetting &&
+        soundSetting[this.date.getDay() as WeekDayIndex]
+      ) {
+        prayerTime.playSound = true;
+      } else {
+        prayerTime.playSound = false;
+      }
     }
 
     if (!prayerTime && (checkNextDay || checkNextDays)) {
-      // from 1 because we checked our date
+      // n+1 for limit (n starts from 1)
       let limit = 2;
       if (checkNextDays) {
-        limit = 7;
+        limit = 8;
       }
       for (let i = 1; i < limit; i++) {
         prayerTime = new PrayerTimesHelper(

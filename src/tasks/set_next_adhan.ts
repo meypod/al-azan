@@ -1,5 +1,6 @@
 import {t} from '@lingui/macro';
 import {ToastAndroid} from 'react-native';
+import {cancelAlarmsAndReminders} from './cancel_alarms';
 import {getPrayerTimes, translatePrayer} from '@/adhan';
 import {
   alarmSettings,
@@ -18,7 +19,10 @@ type SetNextAdhanOptions = {
 export function setNextAdhan(options?: SetNextAdhanOptions) {
   const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
 
-  if (!notificationSettingsIsValid) return;
+  if (!notificationSettingsIsValid) {
+    void cancelAlarmsAndReminders();
+    return;
+  }
 
   const dismissedAlarmTS = settings.getState().DISMISSED_ALARM_TIMESTAMP;
 
