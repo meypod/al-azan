@@ -60,7 +60,8 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     },
   };
 
-  let body;
+  let body: string | undefined;
+  let subtitle: string | undefined = getTime(options.date);
 
   if (options.showNextPrayerInfo) {
     const next = getPrayerTimes(
@@ -76,6 +77,9 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
           ? ' ' + t`Tomorrow`
           : '');
     }
+  } else {
+    body = subtitle;
+    subtitle = undefined;
   }
 
   // to replace the notification settings
@@ -87,7 +91,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     {
       id: ADHAN_NOTIFICATION_ID,
       title: translatePrayer(options.prayer),
-      subtitle: getTime(options.date),
+      subtitle,
       body,
       android: {
         smallIcon: 'ic_stat_name',
