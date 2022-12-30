@@ -1,7 +1,11 @@
 import {Flex, Text, IBoxProps, Box} from 'native-base';
 import {memo} from 'react';
 
-function Divider({label, ...boxProps}: {label?: string} & IBoxProps) {
+function Divider({
+  label,
+  fontSize = 'sm',
+  ...boxProps
+}: {label?: string} & IBoxProps) {
   return (
     <Box
       {...boxProps}
@@ -13,14 +17,19 @@ function Divider({label, ...boxProps}: {label?: string} & IBoxProps) {
         flex={1}
         flexShrink={1}
         borderBottomWidth={1}
-        borderBottomColor="coolGray.300:alpha.20"></Flex>
+        borderBottomColor="coolGray.300:alpha.20"
+        _light={{
+          borderBottomColor: 'coolGray.600:alpha.20',
+        }}></Flex>
       {label && (
         <Text
+          fontSize={fontSize}
           color="coolGray.400"
-          adjustsFontSizeToFit
+          _light={{
+            color: 'coolGray.600',
+          }}
           noOfLines={1}
           flexShrink={0}
-          minimumFontScale={1}
           mx="2">
           {label}
         </Text>
@@ -29,7 +38,10 @@ function Divider({label, ...boxProps}: {label?: string} & IBoxProps) {
         flex={1}
         flexShrink={1}
         borderBottomWidth={1}
-        borderBottomColor="coolGray.300:alpha.20"></Flex>
+        borderBottomColor="coolGray.300:alpha.20"
+        _light={{
+          borderBottomColor: 'coolGray.600:alpha.20',
+        }}></Flex>
     </Box>
   );
 }
