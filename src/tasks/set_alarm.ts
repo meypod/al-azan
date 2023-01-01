@@ -17,12 +17,10 @@ import {settings} from '@/store/settings';
 import {addDays, getDayName, getTime} from '@/utils/date';
 
 export type SetAlarmTaskOptions = {
-  /** When the adhan is  */
+  /** When the alarm is going to be triggered */
   date: Date;
   /** which adhan it is ? */
   prayer: Prayer;
-  /** Default: `true` */
-  showNotification?: boolean;
   /** Default: `true` */
   playSound?: boolean;
   /** Default: `true` */
@@ -34,9 +32,6 @@ export type SetAlarmTaskOptions = {
 export async function setAlarmTask(options: SetAlarmTaskOptions) {
   if (options.date === undefined) {
     throw new Error('No date given for main alarm task');
-  }
-  if (options.showNotification === undefined) {
-    options.showNotification = true;
   }
   if (options.fullScreen === undefined) {
     options.fullScreen = true;
