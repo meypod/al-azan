@@ -3,7 +3,7 @@ import {
   ADHAN_NOTIFICATION_ID,
   PRE_ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
-import {alarmSettings} from '@/store/alarm_settings';
+import {reminderSettings} from '@/store/reminder';
 
 function cancelPreAdhanNotification() {
   return notifee
@@ -20,7 +20,7 @@ function cancelAdhanNotification() {
 function cancelReminders() {
   return notifee
     .cancelTriggerNotifications(
-      alarmSettings.getState().REMINDERS.map(r => r.id),
+      reminderSettings.getState().REMINDERS.map(r => r.id),
     )
     .catch(console.error);
 }

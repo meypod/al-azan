@@ -15,10 +15,13 @@ import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {clearCache} from '@/store/adhan_calc_cache';
 import {useAlarmSettings} from '@/store/alarm_settings';
 import {useCalcSettings} from '@/store/calculation_settings';
+import {useReminderSettings} from '@/store/reminder';
 import {settings, useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {setReminders} from '@/tasks/set_reminder';
 import {updateWidgets} from '@/tasks/update_widgets';
 import {sha256} from '@/utils/hash';
+import useNoInitialEffect from '@/utils/hooks/use_update_effect';
 
 type ScreenListItem = {
   name: keyof RootStackParamList;
@@ -85,17 +88,21 @@ function renderItem({item}: {item: ScreenListItem}) {
 function Settings() {
   const calcSettingsState = useCalcSettings(state => state);
   const alarmSettingsState = useAlarmSettings(state => state);
+  const reminderSettingsState = useReminderSettings(state => state);
   const [calcSettingsHash, setCalcSettingsHash] =
     useSettingsHelper('CALC_SETTINGS_HASH');
   const [alarmSettingsHash, setAlarmSettingsHash] = useSettingsHelper(
     'ALARM_SETTINGS_HASH',
+  );
+  const [reminderSettingsHash, setReminderSettingsHash] = useSettingsHelper(
+    'REMINDER_SETTINGS_HASH',
   );
 
   useEffect(() => {
     const stateHash = sha256(JSON.stringify(calcSettingsState));
     if (calcSettingsHash !== stateHash) {
       setCalcSettingsHash(stateHash);
-      settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
+      settings.setState({DISMISSED_ALARM_TIMESTAMPS: {}});
       clearCache();
     }
   }, [calcSettingsState, calcSettingsHash, setCalcSettingsHash]);
@@ -104,14 +111,25 @@ function Settings() {
     const stateHash = sha256(JSON.stringify(alarmSettingsState));
     if (alarmSettingsHash !== stateHash) {
       setAlarmSettingsHash(stateHash);
-      settings.setState({DISMISSED_ALARM_TIMESTAMP: 0});
+      settings.setState({DISMISSED_ALARM_TIMESTAMPS: {}});
     }
   }, [alarmSettingsState, alarmSettingsHash, setAlarmSettingsHash]);
+
+  useEffect(() => {
+    const stateHash = sha256(JSON.stringify(reminderSettingsState));
+    if (reminderSettingsHash !== stateHash) {
+      setReminderSettingsHash(stateHash);
+    }
+  }, [reminderSettingsHash, reminderSettingsState, setReminderSettingsHash]);
 
   useEffect(() => {
     updateWidgets();
     setNextAdhan();
   }, [calcSettingsHash, alarmSettingsHash]);
+
+  useNoInitialEffect(() => {
+    setReminders({noToast: true, force: true});
+  }, [calcSettingsHash]);
 
   return (
     <Box safeArea py="3">

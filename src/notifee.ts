@@ -7,10 +7,12 @@ import notifee, {
 } from '@notifee/react-native';
 import {BackHandler} from 'react-native';
 import {settings} from './store/settings';
+import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
+import {setReminders} from './tasks/set_reminder';
 import {bootstrap} from '@/bootstrap';
 import {
   ADHAN_NOTIFICATION_ID,
-  PRE_ADHAN_NOTIFICATION_ID,
+  REMINDER_CHANNEL_ID,
   WIDGET_CHANNEL_ID,
   WIDGET_CHANNEL_NAME,
   WIDGET_NOTIFICATION_ID,
@@ -26,22 +28,18 @@ import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
-export async function cancelAdhanNotif() {
-  await stopAdhan().catch(console.error);
+export async function cancelAlarmNotif(options?: SetAlarmTaskOptions) {
+  if (options?.playSound) {
+    await stopAdhan().catch(console.error);
+    await notifee.stopForegroundService();
+  }
   replace('Home');
-  await notifee.cancelDisplayedNotification(ADHAN_NOTIFICATION_ID);
-  await notifee.stopForegroundService();
+  if (options?.notifId) {
+    await notifee.cancelDisplayedNotification(options.notifId);
+  }
 }
 
-export async function isAdhanPlaying() {
-  return (
-    (await notifee.getDisplayedNotifications()).filter(
-      notif => notif.id === ADHAN_NOTIFICATION_ID,
-    ).length > 0
-  );
-}
-
-export function getAdhanOptions(notification: Notification | undefined) {
+export function getAlarmOptions(notification: Notification | undefined) {
   if (!notification) return;
 
   const options = JSON.parse(
@@ -57,48 +55,45 @@ export function getAdhanOptions(notification: Notification | undefined) {
   return options;
 }
 
-export async function getSecheduledAdhanOptions() {
+export async function getSecheduledAlarmOptions(targetAlarmNotifId: string) {
   const scheduledNotif = await notifee
     .getTriggerNotifications()
     .then(
-      notifs =>
-        notifs.filter(n => n.notification.id === ADHAN_NOTIFICATION_ID)[0],
+      notifs => notifs.filter(n => n.notification.id === targetAlarmNotifId)[0],
     )
     .catch(console.error);
-  return getAdhanOptions(scheduledNotif?.notification);
+  return getAlarmOptions(scheduledNotif?.notification);
 }
 
-export async function cancelAdhanNotifOnDismissed(
+export async function cancelNotifOnDismissed(
   type: EventType,
   detail: EventDetail,
 ) {
   if (type === EventType.TRIGGER_NOTIFICATION_CREATED) return;
   const {notification, pressAction} = detail;
-  if (notification?.id === ADHAN_NOTIFICATION_ID) {
-    if (type === EventType.DISMISSED || pressAction?.id === 'dismiss') {
-      const options = getAdhanOptions(notification);
-      if (options?.date) {
-        settings.setState({
-          DISMISSED_ALARM_TIMESTAMP: options.date.valueOf(),
-        });
-      }
-      await cancelAdhanNotif();
+  if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
+    const options = getAlarmOptions(notification);
+    if (options?.date) {
+      settings
+        .getState()
+        .saveTimestamp(options.notifId, options.date.valueOf());
     }
-  } else if (
-    notification?.id === PRE_ADHAN_NOTIFICATION_ID &&
-    pressAction?.id === 'cancel_adhan'
-  ) {
-    const options = await getSecheduledAdhanOptions();
+    await cancelAlarmNotif(options);
+  } else if (pressAction?.id === 'cancel_alarm') {
+    // we are pressing an action from pre-alarm notification
+    const preAlarmOptions = getAlarmOptions(
+      notification,
+    ) as SetPreAlarmTaskOptions;
+    const options = await getSecheduledAlarmOptions(
+      preAlarmOptions.targetAlarmNotifId,
+    );
     if (options) {
-      // save date of upcoming adhan to prevent setting alarm/prealarm before it
-      settings.setState({
-        DISMISSED_ALARM_TIMESTAMP: options.date.valueOf(),
-      });
-      // cancel upcoming notification
-      await notifee.cancelNotification(ADHAN_NOTIFICATION_ID);
-      // re-set the adhan notification alarm
-      setNextAdhan();
-      setUpdateWidgetsAlarms();
+      // save date of upcoming alarm to prevent setting alarm/prealarm before it
+      settings
+        .getState()
+        .saveTimestamp(options.notifId, options.date.valueOf());
+
+      await notifee.cancelNotification(options.notifId);
     }
   }
 }
@@ -107,49 +102,53 @@ export function openFullscreenAlarmIfNeeded(
   type: EventType,
   detail: EventDetail,
 ) {
+  const options = JSON.parse(
+    detail.notification?.data?.options as string,
+  ) as SetAlarmTaskOptions;
   if (
     (type === EventType.PRESS || type === EventType.DELIVERED) &&
-    detail.notification?.id === ADHAN_NOTIFICATION_ID
+    options.playSound
   ) {
-    const options = JSON.parse(
-      detail.notification.data?.options as string,
-    ) as SetAlarmTaskOptions;
-    if (options.playSound && options.fullScreen) {
-      replace('FullscreenAlarm', {
-        options: detail.notification.data?.options,
-      });
-    }
+    replace('FullscreenAlarm', {
+      options: detail.notification?.data?.options,
+    });
   }
 }
 
 export function setupNotifeeHandlers() {
   notifee.onBackgroundEvent(async ({type, detail}) => {
     await bootstrap();
-    if (
-      type === EventType.DELIVERED &&
-      detail.notification?.id === ADHAN_NOTIFICATION_ID
-    ) {
-      setNextAdhan();
-      updateWidgets();
-      setUpdateWidgetsAlarms();
+    if (type === EventType.DELIVERED) {
+      if (detail.notification?.id === ADHAN_NOTIFICATION_ID) {
+        setNextAdhan();
+        updateWidgets();
+        setUpdateWidgetsAlarms();
+      } else if (
+        detail.notification?.android?.channelId === REMINDER_CHANNEL_ID
+      ) {
+        await setReminders();
+      }
+    } else {
+      await cancelNotifOnDismissed(type, detail);
     }
     openFullscreenAlarmIfNeeded(type, detail);
-    await cancelAdhanNotifOnDismissed(type, detail);
   });
 
   notifee.registerForegroundService(async notification => {
     await bootstrap();
-    if (notification.id === ADHAN_NOTIFICATION_ID) {
-      notifee.cancelNotification(PRE_ADHAN_NOTIFICATION_ID);
-      const options = JSON.parse(
-        notification.data?.options as string,
-      ) as SetAlarmTaskOptions;
 
-      if (options.playSound) {
-        return playAdhan(options.prayer)
-          .then(() => cancelAdhanNotif())
-          .then(() => BackHandler.exitApp());
-      }
+    const options = JSON.parse(
+      notification.data?.options as string,
+    ) as SetAlarmTaskOptions;
+
+    await notifee
+      .cancelNotification('pre-' + notification.id)
+      .catch(console.error);
+
+    if (options.playSound) {
+      return playAdhan(options.prayer)
+        .then(() => cancelAlarmNotif(options))
+        .then(() => BackHandler.exitApp());
     }
     return Promise.resolve();
   });
@@ -158,7 +157,7 @@ export function setupNotifeeHandlers() {
 export function setupNotifeeForegroundHandler() {
   return notifee.onForegroundEvent(({type, detail}) => {
     openFullscreenAlarmIfNeeded(type, detail);
-    cancelAdhanNotifOnDismissed(type, detail);
+    cancelNotifOnDismissed(type, detail);
   });
 }
 

@@ -5,14 +5,14 @@ import {useState} from 'react';
 import {EditReminderModal} from '@/screens/settings_reminders/edit_reminder_modal';
 import {ReminderItem} from '@/screens/settings_reminders/reminder_item';
 import {
-  useAlarmSettingsHelper,
-  alarmSettings,
   Reminder,
-} from '@/store/alarm_settings';
+  reminderSettings,
+  useReminderSettingsHelper,
+} from '@/store/reminder';
 import {setReminders} from '@/tasks/set_reminder';
 
 export function RemindersSettings(props: IBoxProps) {
-  const [reminderEntries] = useAlarmSettingsHelper('REMINDERS');
+  const [reminderEntries] = useReminderSettingsHelper('REMINDERS');
   const [creatingReminder, setCreatingReminder] =
     useState<Partial<Reminder> | null>(null);
 
@@ -27,12 +27,12 @@ export function RemindersSettings(props: IBoxProps) {
   };
 
   const onReminderChange = (newReminderState: Reminder) => {
-    alarmSettings.getState().saveReminder(newReminderState);
-    setReminders({reminders: [newReminderState]});
+    reminderSettings.getState().saveReminder(newReminderState);
+    setReminders({reminders: [newReminderState], force: true});
   };
 
   const onReminderDelete = (newReminderState: Reminder) => {
-    alarmSettings.getState().deleteReminder(newReminderState);
+    reminderSettings.getState().deleteReminder(newReminderState);
     // clears the reminder trigger:
     setReminders({reminders: [{...newReminderState, enabled: false}]});
   };

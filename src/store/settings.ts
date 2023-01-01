@@ -9,13 +9,15 @@ import {alarmSettings} from './alarm_settings';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
+import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
 export type SettingsStore = {
-  DISMISSED_ALARM_TIMESTAMP: number;
+  /** an object that keeps track of dismissed alarms timestamp by their notification id */
+  DISMISSED_ALARM_TIMESTAMPS: Record<string, number | undefined>;
   // theme
   THEME_COLOR?: ColorMode | 'default';
   // display
@@ -31,7 +33,6 @@ export type SettingsStore = {
   SELECTED_FAJR_ADHAN_ENTRY: AdhanEntry | undefined;
   LOCATION_COUNTRY: CountryInfo | undefined;
   LOCATION_CITY: SearchResult | undefined;
-  SCHEDULED_ALARM_TIMESTAMP?: number;
   LAST_APP_FOCUS_TIMESTAMP?: number;
   HIDDEN_PRAYERS: Array<Prayer>;
   HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
@@ -40,12 +41,15 @@ export type SettingsStore = {
   // to detect settings change
   CALC_SETTINGS_HASH: string;
   ALARM_SETTINGS_HASH: string;
+  REMINDER_SETTINGS_HASH: string;
   /** timestamp of when the alarm for updating widget is going to Or was fired */
   LAST_WIDGET_UPDATE: number;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
+  saveTimestamp: (alarmId: string, timestamp: number) => void;
+  deleteTimestamp: (alarmId: string) => void;
   setSetting: <T extends keyof SettingsStore>(
     key: T,
     val: SettingsStore[T],
@@ -56,7 +60,15 @@ export type SettingsStore = {
   removeSetting: (key: keyof SettingsStore) => () => void;
 };
 
-const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
+const invalidKeys = [
+  'setSetting',
+  'setSettingCurry',
+  'removeSetting',
+  'saveAdhanEntry',
+  'deleteAdhanEntry',
+  'saveTimestamp',
+  'deleteTimestamp',
+];
 
 export const settings = createVanilla<SettingsStore>()(
   persist(
@@ -79,7 +91,8 @@ export const settings = createVanilla<SettingsStore>()(
       NUMBERING_SYSTEM: '',
       CALC_SETTINGS_HASH: '',
       ALARM_SETTINGS_HASH: '',
-      DISMISSED_ALARM_TIMESTAMP: 0,
+      REMINDER_SETTINGS_HASH: '',
+      DISMISSED_ALARM_TIMESTAMPS: {},
       LAST_WIDGET_UPDATE: 0,
 
       // adhan entry helper
@@ -126,6 +139,20 @@ export const settings = createVanilla<SettingsStore>()(
           }),
         ),
 
+      // for timestamps
+      saveTimestamp: (alarmId, timestamp) =>
+        set(
+          produce<SettingsStore>(draft => {
+            draft.DISMISSED_ALARM_TIMESTAMPS[alarmId] = timestamp;
+          }),
+        ),
+      deleteTimestamp: alarmId =>
+        set(
+          produce<SettingsStore>(draft => {
+            delete draft.DISMISSED_ALARM_TIMESTAMPS[alarmId];
+          }),
+        ),
+
       // general
       setSetting: <T extends keyof SettingsStore>(
         key: T,
@@ -161,7 +188,7 @@ export const settings = createVanilla<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 3,
+      version: 4,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -174,7 +201,7 @@ export const settings = createVanilla<SettingsStore>()(
             (persistedState as SettingsStore).NUMBERING_SYSTEM = '';
           case 2:
             // moved reminders to alarm settings store
-            alarmSettings.setState({
+            (alarmSettings as any).setState({
               REMINDERS: (persistedState as any)['REMINDERS'],
             });
             delete (persistedState as any)['REMINDERS'];
@@ -203,6 +230,13 @@ export const settings = createVanilla<SettingsStore>()(
                 Prayer.Tahajjud,
               );
             }
+          case 3:
+            (persistedState as SettingsStore).DISMISSED_ALARM_TIMESTAMPS = {
+              [ADHAN_NOTIFICATION_ID]: (persistedState as any)
+                .DISMISSED_ALARM_TIMESTAMP,
+            };
+            delete (persistedState as any).DISMISSED_ALARM_TIMESTAMP;
+            delete (persistedState as any).SCHEDULED_ALARM_TIMESTAMP;
             break;
         }
         /* eslint-enable no-fallthrough */

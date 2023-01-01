@@ -1,132 +1,97 @@
 import {t} from '@lingui/macro';
-import notifee, {
-  TimestampTrigger,
-  TriggerType,
-  AndroidImportance,
-  AndroidCategory,
-  AndroidVisibility,
-} from '@notifee/react-native';
-import {ToastAndroid} from 'react-native';
+import notifee from '@notifee/react-native';
+import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
+import {setPreAlarmTask} from './set_pre_alarm';
 import {getPrayerTimes} from '@/adhan';
 import {
+  PRE_REMINDER_CHANNEL_ID,
+  PRE_REMINDER_CHANNEL_NAME,
   REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_NAME,
 } from '@/constants/notification';
-import {
-  alarmSettings,
-  hasAtLeastOneNotificationSetting,
-  Reminder,
-} from '@/store/alarm_settings';
-import {addDays, getDayName, getNextDayBeginning, getTime} from '@/utils/date';
+import {reminderSettings, Reminder} from '@/store/reminder';
+import {settings} from '@/store/settings';
+import {getNextDayBeginning} from '@/utils/date';
+import {showUpcomingToast} from '@/utils/upcoming';
 
 type SetReminderOptions = {
-  date?: Date;
   noToast?: boolean;
-  reminders: Array<Reminder>;
+  reminders?: Array<Reminder>;
+  /** should the reminders be forced to reschedule */
+  force?: boolean;
 };
 
-function needSchedulePredicate(reminder: Reminder) {
-  if (reminder.whenIsFired) {
-    if (Date.now() <= reminder.whenIsFired) {
-      return false;
-    }
-  }
-  return true;
-}
+export async function setReminders(options?: SetReminderOptions) {
+  const {
+    reminders = reminderSettings.getState().REMINDERS,
+    noToast = false,
+    force = false,
+  } = options || {};
 
-function needToCancelPredicate(reminder: Reminder) {
-  if (!reminder.enabled) return true;
-  if (!reminder.whenScheduled) return false;
-  if (!reminder.modified) return false;
-  if (reminder.whenScheduled <= reminder.modified) {
-    return true;
-  }
-  return false;
-}
+  const date = new Date();
 
-export async function setReminders(options: SetReminderOptions) {
-  const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
-
-  if (!notificationSettingsIsValid) return;
-
-  if (!options?.reminders) return;
-
-  let targetDate = options?.date || new Date();
-  let prayerTimes = getPrayerTimes(targetDate);
-  let tomorrowPrayerTimes = getPrayerTimes(getNextDayBeginning(targetDate));
+  let prayerTimes = getPrayerTimes(date);
+  let tomorrowPrayerTimes = getPrayerTimes(getNextDayBeginning(date));
 
   if (!prayerTimes || !tomorrowPrayerTimes) return;
 
-  const channelId = await notifee.createChannel({
-    id: REMINDER_CHANNEL_ID,
-    name: REMINDER_CHANNEL_NAME,
-    importance: AndroidImportance.HIGH,
-    visibility: AndroidVisibility.PUBLIC,
-  });
+  {
+    // we dont need reminderIdsToCancel out of this scope, hence the extra {}
+    let reminderIdsToCancel: Array<string>;
+    if (force) {
+      reminderIdsToCancel = reminders.map(r => r.id);
+    } else {
+      reminderIdsToCancel = reminders.filter(r => !r.enabled).map(r => r.id);
+    }
+    await notifee
+      .cancelTriggerNotifications(reminderIdsToCancel)
+      .catch(console.error);
+  }
 
-  await notifee
-    .cancelTriggerNotifications(
-      options.reminders.filter(needToCancelPredicate).map(r => r.id),
-    )
-    .catch(console.error);
-
-  for (const reminder of options.reminders
-    .filter(r => r.enabled)
-    .filter(needSchedulePredicate)) {
+  for (const reminder of reminders.filter(r => r.enabled)) {
     let pTime = prayerTimes[reminder.prayer].getTime();
-    if (pTime < Date.now()) {
+    if (pTime + reminder.duration * reminder.durationModifier < Date.now()) {
       pTime = tomorrowPrayerTimes[reminder.prayer].getTime();
     }
 
-    const timestamp = pTime + reminder.duration * reminder.durationModifier;
+    const triggerDate = new Date(
+      pTime + reminder.duration * reminder.durationModifier,
+    );
 
-    if (timestamp < Date.now()) continue;
+    if (triggerDate.getTime() < Date.now()) continue;
 
-    const trigger: TimestampTrigger = {
-      type: TriggerType.TIMESTAMP,
-      timestamp,
-      alarmManager: {
-        allowWhileIdle: true,
-      },
+    const dismissedAlarmTS =
+      settings.getState().DISMISSED_ALARM_TIMESTAMPS[reminder.id] || 0;
+
+    if (!force && dismissedAlarmTS >= triggerDate.getTime()) continue;
+
+    const reminderOptions: SetAlarmTaskOptions = {
+      title: t`Reminder`,
+      body: reminder.label || '',
+      date: triggerDate,
+      prayer: reminder.prayer,
+      notifId: reminder.id,
+      notifChannelId: REMINDER_CHANNEL_ID,
+      notifChannelName: REMINDER_CHANNEL_NAME,
+      isReminder: true,
     };
 
-    await notifee
-      .createTriggerNotification(
-        {
-          id: reminder.id,
-          title: t`Reminder`,
-          body: reminder.label || '',
-          android: {
-            smallIcon: 'ic_stat_name',
-            channelId,
-            category: AndroidCategory.ALARM,
-            importance: AndroidImportance.HIGH,
-            autoCancel: false,
-          },
-        },
-        trigger,
-      )
-      .then(() => {
-        alarmSettings.getState().saveReminder({
-          ...reminder,
-          whenScheduled: Date.now(),
-          whenIsFired: timestamp,
-        });
-      })
+    await setPreAlarmTask({
+      ...reminderOptions,
+      notifId: 'pre-' + reminder.id,
+      notifChannelId: PRE_REMINDER_CHANNEL_ID,
+      notifChannelName: PRE_REMINDER_CHANNEL_NAME,
+      targetAlarmNotifId: reminder.id,
+    })
+      .then(() => setAlarmTask(reminderOptions))
       .catch(console.error);
 
-    if (!options?.noToast) {
-      const date = new Date(timestamp);
-      const time24Format = getTime(date);
-      let message = t`Reminder` + ': ' + time24Format;
-      if (date.toDateString() !== new Date().toDateString()) {
-        if (date.toDateString() === addDays(new Date(), 1).toDateString()) {
-          message += ' ' + t`Tomorrow`;
-        } else {
-          message += ' ' + getDayName(date);
-        }
-      }
-      ToastAndroid.show(message, ToastAndroid.SHORT);
+    if (!noToast) {
+      showUpcomingToast({
+        message:
+          t`Reminder` + ': ' + (reminder.label ? reminder.label + ', ' : ''),
+        date: triggerDate,
+      });
     }
   }
 

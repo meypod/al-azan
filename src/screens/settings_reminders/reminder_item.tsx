@@ -12,7 +12,7 @@ import {
 import {translatePrayer} from '@/adhan';
 import {DeleteIcon} from '@/assets/icons/delete';
 import {EditIcon} from '@/assets/icons/edit';
-import {Reminder} from '@/store/alarm_settings';
+import {Reminder} from '@/store/reminder';
 
 export type ReminderItemProps = {
   onEditPressed?: (reminderState: Reminder) => void;
@@ -29,6 +29,11 @@ export function ReminderItem(
 
   const durationInMinutes = (item.duration / (60 * 1000)).toString();
   const prayer = translatePrayer(item.prayer);
+
+  const onToggle = (state: boolean) => {
+    const newReminderState = {...item, enabled: state};
+    options.onToggle && options.onToggle(newReminderState);
+  };
 
   return (
     <Pressable>
@@ -92,14 +97,7 @@ export function ReminderItem(
                 ? t`${durationInMinutes} min before ${prayer}`
                 : t`${durationInMinutes} min after ${prayer}`}
             </Text>
-            <Switch
-              isChecked={item.enabled}
-              onValueChange={state => {
-                const newReminderState = {...item, enabled: state};
-                options.onToggle && options.onToggle(newReminderState);
-              }}
-              size="lg"
-            />
+            <Switch isChecked={item.enabled} onToggle={onToggle} size="lg" />
           </HStack>
         </Box>
       )}

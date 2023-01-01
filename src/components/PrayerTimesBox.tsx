@@ -4,7 +4,7 @@ import {memo, useEffect, useState} from 'react';
 import {Prayer, PrayersInOrder, PrayerTime, PrayerTimesHelper} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
 import PrayerTimeRow from '@/components/PrayerTimeRow';
-import {getAdhanSettingKey, useAlarmSettings} from '@/store/alarm_settings';
+import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
 import {useSettingsHelper} from '@/store/settings';
 
 type PrayerTimesBoxProps = {
@@ -25,8 +25,7 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
   const [nextPrayerSoundIsMuted, setNextPrayerSoundIsMuted] = useState(false);
-  const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
-  const alarmSettings = useAlarmSettings(state => state);
+  const [dismissedAlarms] = useSettingsHelper('DISMISSED_ALARM_TIMESTAMPS');
 
   const [visiblePrayerTimes, setVisiblePrayerTimes] = useState(PrayersInOrder);
   const [activePrayer, setActivePrayer] = useState<Prayer | undefined>();
@@ -45,23 +44,20 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
 
   useEffect(() => {
     if (!activePrayer || !prayerTimes) return;
-    if (!scheduledValueOf || !prayerTimes[activePrayer].valueOf()) return;
+    if (
+      !dismissedAlarms[ADHAN_NOTIFICATION_ID] ||
+      !prayerTimes[activePrayer].valueOf()
+    )
+      return;
     if (
       prayerTimes[activePrayer].valueOf() === nextPrayerDateValueOf &&
-      scheduledValueOf > nextPrayerDateValueOf &&
-      alarmSettings[getAdhanSettingKey(activePrayer, 'sound')]
+      dismissedAlarms[ADHAN_NOTIFICATION_ID] >= nextPrayerDateValueOf
     ) {
       setNextPrayerSoundIsMuted(true);
     } else {
       setNextPrayerSoundIsMuted(false);
     }
-  }, [
-    activePrayer,
-    alarmSettings,
-    nextPrayerDateValueOf,
-    prayerTimes,
-    scheduledValueOf,
-  ]);
+  }, [activePrayer, dismissedAlarms, nextPrayerDateValueOf, prayerTimes]);
 
   return (
     <Box

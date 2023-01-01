@@ -10,10 +10,13 @@ import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
 import {StepLabel} from '@/intro/step_label';
+import {alarmSettings} from '@/store/alarm_settings';
 import {calcSettings} from '@/store/calculation_settings';
-import {useSettingsHelper} from '@/store/settings';
+import {reminderSettings} from '@/store/reminder';
+import {settings, useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
+import {sha256} from '@/utils/hash';
 
 const data = [
   {
@@ -53,6 +56,15 @@ export function Intro() {
 
   const onDonePressed = useCallback(async () => {
     if (isMinimumSettingsAvailable(calcSettings.getState())) {
+      // update settings hash
+      settings.setState({
+        CALC_SETTINGS_HASH: sha256(JSON.stringify(calcSettings.getState())),
+        ALARM_SETTINGS_HASH: sha256(JSON.stringify(alarmSettings.getState())),
+        REMINDER_SETTINGS_HASH: sha256(
+          JSON.stringify(reminderSettings.getState()),
+        ),
+      });
+      // continue to home screen
       setAppIntroDone(true);
       setNextAdhan();
       updateWidgets();

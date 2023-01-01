@@ -3,6 +3,8 @@ import {defautlAdhanAssetId} from '@/assets/adhan_entries';
 import {destroy, play, stop} from '@/services/play_sound';
 import {settings} from '@/store/settings';
 
+let _isPlayingAdhan = false;
+
 export async function playAdhan(prayer: Prayer) {
   let adhanFilePath: string | number = defautlAdhanAssetId;
 
@@ -19,7 +21,12 @@ export async function playAdhan(prayer: Prayer) {
     }
   }
 
+  if (_isPlayingAdhan) {
+    await stop();
+  }
+  _isPlayingAdhan = true;
   await play(adhanFilePath);
+  _isPlayingAdhan = false;
 
   return destroy();
 }
@@ -27,4 +34,8 @@ export async function playAdhan(prayer: Prayer) {
 export async function stopAdhan() {
   await stop();
   await destroy();
+}
+
+export function isPlayingAdhan() {
+  return _isPlayingAdhan;
 }

@@ -3,10 +3,10 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
 import {memo, useCallback, useEffect, useState} from 'react';
 import {BackHandler} from 'react-native';
-import {Prayer, translatePrayer} from '@/adhan';
 import {replace} from '@/navigation/root_navigation';
 import {RootStackParamList} from '@/navigation/types';
-import {cancelAdhanNotif, isAdhanPlaying} from '@/notifee';
+import {cancelAlarmNotif} from '@/notifee';
+import {isPlayingAdhan} from '@/services/azan_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
 
@@ -16,48 +16,63 @@ type ScreenProps = NativeStackScreenProps<
 >;
 
 function FullscreenAlarm({route}: ScreenProps) {
-  const [adhanOptions, setAdhanOptions] = useState<{
+  const [fullscreenOptions, setFullscreenOptions] = useState<{
     date: Date;
-    prayer?: Prayer;
+    title: String;
+    subtitle: String;
+    body: String;
   }>({
     date: new Date(),
-    prayer: undefined,
+    title: '',
+    subtitle: '',
+    body: '',
   });
 
-  const [time24, setTime24] = useState('');
-  const [prayerTranslation, setPrayerTranslation] = useState('');
-
   useEffect(() => {
-    if (adhanOptions.prayer) {
-      setPrayerTranslation(translatePrayer(adhanOptions.prayer));
-    } else {
-      setPrayerTranslation('');
-    }
-    setTime24(getTime(adhanOptions.date));
-  }, [adhanOptions]);
-
-  useEffect(() => {
-    const parsedAdhanOptions = JSON.parse(
-      route.params.options,
+    const parsedAlarmOptions = JSON.parse(
+      route.params.options || 'false',
     ) as SetAlarmTaskOptions;
-    parsedAdhanOptions.date = new Date(parsedAdhanOptions.date);
-    setAdhanOptions(parsedAdhanOptions);
-    isAdhanPlaying().then(isPlaying => {
-      if (!isPlaying) {
-        replace('Home');
-      }
+    if (!parsedAlarmOptions) {
+      replace('Home');
+      return;
+    }
+    parsedAlarmOptions.date = new Date(parsedAlarmOptions.date);
+    let title = t`Adhan`;
+    let body = parsedAlarmOptions.body || '';
+    let subtitle = '';
+    if (parsedAlarmOptions.isReminder) {
+      title = t`Reminder`;
+    } else {
+      subtitle = parsedAlarmOptions.title;
+      body = getTime(parsedAlarmOptions.date);
+    }
+    setFullscreenOptions({
+      title,
+      body,
+      subtitle,
+      date: parsedAlarmOptions.date,
     });
+
+    if (!isPlayingAdhan()) {
+      replace('Home');
+    }
   }, [route]);
 
   const onDismissPress = useCallback(async () => {
-    const isPlaying = await isAdhanPlaying();
-    if (isPlaying) {
-      await cancelAdhanNotif();
+    const parsedAlarmOptions = JSON.parse(
+      route.params.options || 'false',
+    ) as SetAlarmTaskOptions;
+    if (!parsedAlarmOptions) {
+      replace('Home');
+      return;
+    }
+    if (isPlayingAdhan()) {
+      await cancelAlarmNotif(parsedAlarmOptions);
       BackHandler.exitApp();
     } else {
       replace('Home');
     }
-  }, []);
+  }, [route]);
 
   return (
     <Box
@@ -74,7 +89,7 @@ function FullscreenAlarm({route}: ScreenProps) {
         noOfLines={1}
         borderBottomWidth={1}
         borderBottomColor="coolGray.300">
-        {t`Adhan`}
+        {fullscreenOptions.title}
       </Text>
       <Box margin="2">
         <Text
@@ -83,14 +98,14 @@ function FullscreenAlarm({route}: ScreenProps) {
           textAlign="center"
           fontSize="6xl"
           marginBottom={3}>
-          {prayerTranslation}
+          {fullscreenOptions.subtitle}
         </Text>
         <Text
           adjustsFontSizeToFit
           noOfLines={1}
           fontSize="4xl"
           textAlign="center">
-          {time24}
+          {fullscreenOptions.body}
         </Text>
       </Box>
       <Spacer />

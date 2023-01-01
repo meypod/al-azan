@@ -14,7 +14,7 @@ import {useEffect, useState} from 'react';
 import {Modal} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/close';
-import {Reminder} from '@/store/alarm_settings';
+import {Reminder} from '@/store/reminder';
 
 const minute = 60 * 1000;
 const defaultDuration = 5 * minute;

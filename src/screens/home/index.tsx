@@ -34,7 +34,6 @@ export function Home() {
   const [isToday, setIsToday] = useState<boolean>();
 
   const calcSettingsState = useCalcSettings(state => state);
-  const [scheduledValueOf] = useSettingsHelper('SCHEDULED_ALARM_TIMESTAMP');
   const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
   const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
   const [arabicCalendar] = useSettingsHelper('SELECTED_ARABIC_CALENDAR');
@@ -58,10 +57,6 @@ export function Home() {
   useInterval(() => {
     updateCurrentDate();
   }, 60 * 1000);
-
-  useEffect(() => {
-    updateCurrentDate();
-  }, [scheduledValueOf, updateCurrentDate]);
 
   useEffect(() => {
     setPrayerTimes(getPrayerTimes(currentDate));

@@ -4,6 +4,7 @@ import create from 'zustand';
 import {persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
+import {reminderSettings} from './reminder';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {WeekDayIndex} from '@/utils/date';
 
@@ -25,30 +26,12 @@ export function getAdhanSettingKey(
   }
 }
 
-export type Reminder = {
-  id: string;
-  label?: string;
-  enabled: boolean;
-  prayer: Prayer;
-  /** in milliseconds. negative to set before, positive to set after */
-  duration: number;
-  /** has a value of `-1` or `+1` */
-  durationModifier: number;
-  /** when is this reminder scheduled to be fired. can be undefined if not scheduled yet. or an outdated timestamp. */
-  whenIsFired?: number;
-  /** timestamp of when it was scheduled. */
-  whenScheduled?: number;
-  /** timestamp of when it was modified. */
-  modified?: number;
-};
-
 export type PrayerAlarmSettings =
   | boolean
   | Partial<Record<WeekDayIndex, boolean>>
   | undefined;
 
 export type AlarmSettingsStore = {
-  REMINDERS: Array<Reminder>;
   //prayer notification settings
   FAJR_NOTIFY?: PrayerAlarmSettings;
   SUNRISE_NOTIFY?: PrayerAlarmSettings;
@@ -72,8 +55,6 @@ export type AlarmSettingsStore = {
   // alarm notification
   SHOW_NEXT_PRAYER_TIME: boolean;
 
-  saveReminder: (reminder: Reminder) => void;
-  deleteReminder: (reminder: Reminder) => void;
   setSetting: <T extends keyof AlarmSettingsStore>(
     key: T,
     val: AlarmSettingsStore[T],
@@ -89,30 +70,8 @@ const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 export const alarmSettings = createVanilla<AlarmSettingsStore>()(
   persist(
     set => ({
-      REMINDERS: [],
       SHOW_NEXT_PRAYER_TIME: false,
 
-      saveReminder: reminder =>
-        set(
-          produce<AlarmSettingsStore>(draft => {
-            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
-            if (fIndex !== -1) {
-              draft.REMINDERS.splice(fIndex, 1, reminder);
-            } else {
-              draft.REMINDERS.push(reminder);
-            }
-          }),
-        ),
-
-      deleteReminder: reminder =>
-        set(
-          produce<AlarmSettingsStore>(draft => {
-            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
-            if (fIndex !== -1) {
-              draft.REMINDERS.splice(fIndex, 1);
-            }
-          }),
-        ),
       // general
       setSetting: <T extends keyof AlarmSettingsStore>(
         key: T,
@@ -148,13 +107,18 @@ export const alarmSettings = createVanilla<AlarmSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 0,
+      version: 1,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
         switch (version) {
           case 0:
-            // this will be run when storage version is changed to 1
+            reminderSettings.setState({
+              REMINDERS: (persistedState as any)['REMINDERS'],
+            });
+            delete (persistedState as any)['REMINDERS'];
+          case 1:
+            // this will be run when storage version is changed to 2
             break;
         }
         /* eslint-enable no-fallthrough */

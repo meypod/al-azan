@@ -12,3 +12,5 @@ export const WIDGET_NOTIFICATION_ID = 'widget-notification';
 
 export const REMINDER_CHANNEL_ID = 'reminder-channel';
 export const REMINDER_CHANNEL_NAME = 'Reminder';
+export const PRE_REMINDER_CHANNEL_ID = 'pre-reminder-channel';
+export const PRE_REMINDER_CHANNEL_NAME = 'Upcoming reminder';

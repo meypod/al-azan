@@ -5,96 +5,72 @@ import notifee, {
   AndroidCategory,
   AndroidVisibility,
 } from '@notifee/react-native';
-import {Prayer, translatePrayer} from '@/adhan';
-import {
-  PRE_ADHAN_CHANNEL_ID,
-  PRE_ADHAN_CHANNEL_NAME,
-  PRE_ADHAN_NOTIFICATION_ID,
-} from '@/constants/notification';
-import {alarmSettings, getAdhanSettingKey} from '@/store/alarm_settings';
-import {getDayName, getTime} from '@/utils/date';
+import {SetAlarmTaskOptions} from './set_alarm';
+import {getTime} from '@/utils/date';
 
-export type SetPreAlarmTaskOptions = {
-  /** When the adhan is  */
-  date: Date;
-  /** which adhan it is ? */
-  prayer: Prayer;
+export type SetPreAlarmTaskOptions = SetAlarmTaskOptions & {
+  targetAlarmNotifId: string;
 };
 
-let settingAlarm = false;
 export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
-  if (settingAlarm) return;
-  settingAlarm = true;
+  const {date, title, playSound, notifChannelId, notifChannelName, notifId} =
+    options;
 
-  try {
-    if (!alarmSettings.getState()[getAdhanSettingKey(options.prayer, 'sound')])
-      return;
-    if (options.date === undefined) {
-      throw new Error('No date given for pre alarm task');
-    }
+  // to replace the notification settings
+  await notifee.cancelTriggerNotification(notifId).catch(console.error);
 
-    const channelId = await notifee.createChannel({
-      id: PRE_ADHAN_CHANNEL_ID,
-      name: PRE_ADHAN_CHANNEL_NAME,
-      visibility: AndroidVisibility.PUBLIC,
-    });
+  // We don't need a pre alarm for alarms that do not play sound.
+  if (!playSound) return;
 
-    // fire the pre adhan 1 hour remaining to adhan
-    let triggerTs = options.date.getTime() - 3600 * 1000;
-    // if it goes to the past, make it 10 seconds in the future
-    if (triggerTs <= Date.now()) {
-      triggerTs = Date.now() + 10000;
-    }
+  const channelId = await notifee.createChannel({
+    id: notifChannelId,
+    name: notifChannelName,
+    visibility: AndroidVisibility.PUBLIC,
+  });
 
-    const trigger: TimestampTrigger = {
-      type: TriggerType.TIMESTAMP,
-      timestamp: triggerTs,
-      alarmManager: {
-        allowWhileIdle: true,
-      },
-    };
-
-    // to replace the notification settings
-    await notifee
-      .cancelTriggerNotification(PRE_ADHAN_NOTIFICATION_ID)
-      .catch(console.error);
-
-    await notifee.createTriggerNotification(
-      {
-        id: PRE_ADHAN_NOTIFICATION_ID,
-        title: t({
-          message: 'Upcoming alarm',
-          comment: 'notification title',
-        }),
-        body:
-          translatePrayer(options.prayer) +
-          ', ' +
-          getDayName(options.date, 'short') +
-          ' ' +
-          getTime(options.date),
-        android: {
-          smallIcon: 'ic_stat_name',
-          channelId,
-          category: AndroidCategory.ALARM,
-          pressAction: {
-            id: 'default',
-          },
-          actions: [
-            {
-              title: t`Cancel Adhan`,
-              pressAction: {
-                id: 'cancel_adhan',
-              },
-            },
-          ],
-        },
-        data: {
-          options: JSON.stringify(options),
-        },
-      },
-      trigger,
-    );
-  } finally {
-    settingAlarm = false;
+  // fire the pre adhan 1 hour remaining to adhan
+  let triggerTs = date.getTime() - 3600 * 1000;
+  // if it goes to the past, make it 10 seconds in the future
+  if (triggerTs <= Date.now()) {
+    triggerTs = Date.now() + 10000;
   }
+
+  const trigger: TimestampTrigger = {
+    type: TriggerType.TIMESTAMP,
+    timestamp: triggerTs,
+    alarmManager: {
+      allowWhileIdle: true,
+    },
+  };
+
+  await notifee.createTriggerNotification(
+    {
+      id: notifId,
+      title: t({
+        message: 'Upcoming alarm',
+        comment: 'notification title',
+      }),
+      body: title + ', ' + getTime(date),
+      android: {
+        smallIcon: 'ic_stat_name',
+        channelId,
+        category: AndroidCategory.ALARM,
+        pressAction: {
+          id: 'default',
+        },
+        actions: [
+          {
+            title: t`Cancel`,
+            pressAction: {
+              id: 'cancel_alarm',
+            },
+          },
+        ],
+      },
+      data: {
+        options: JSON.stringify(options),
+      },
+    },
+    trigger,
+  );
 }
