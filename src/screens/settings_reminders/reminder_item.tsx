@@ -96,6 +96,7 @@ export function ReminderItem(
               {item.durationModifier === -1
                 ? t`${durationInMinutes} min before ${prayer}`
                 : t`${durationInMinutes} min after ${prayer}`}
+              {item.once ? ` (${t`Once`})` : null}
             </Text>
             <Switch isChecked={item.enabled} onToggle={onToggle} size="lg" />
           </HStack>

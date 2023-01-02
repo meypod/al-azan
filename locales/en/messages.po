@@ -452,6 +452,10 @@ msgstr "Notification & Sound"
 msgid "Numbering system"
 msgstr "Numbering system"
 
+#: src/screens/settings_reminders/reminder_item.tsx:99
+msgid "Once"
+msgstr "Once"
+
 #: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
 msgstr "One-Seventh of the Night"
