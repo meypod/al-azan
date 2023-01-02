@@ -12,7 +12,7 @@ import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
 import {setReminders} from './tasks/set_reminder';
 import {bootstrap} from '@/bootstrap';
 import {
-  ADHAN_NOTIFICATION_ID,
+  ADHAN_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
   WIDGET_CHANNEL_ID,
   WIDGET_CHANNEL_NAME,
@@ -33,8 +33,8 @@ export async function cancelAlarmNotif(options?: SetAlarmTaskOptions) {
   if (options?.playSound) {
     await stopAdhan().catch(console.error);
     await notifee.stopForegroundService();
+    replace('Home');
   }
-  replace('Home');
   if (options?.notifId) {
     await notifee.cancelDisplayedNotification(options.notifId);
   }
@@ -66,14 +66,20 @@ export async function getSecheduledAlarmOptions(targetAlarmNotifId: string) {
   return getAlarmOptions(scheduledNotif?.notification);
 }
 
-export async function cancelNotifOnDismissed(
-  type: EventType,
-  detail: EventDetail,
-) {
+export type NotifeeEvent = {
+  type: EventType;
+  detail: EventDetail;
+  options: SetAlarmTaskOptions | undefined;
+};
+export async function cancelNotifOnDismissed({
+  detail,
+  options,
+  type,
+}: NotifeeEvent) {
   if (type === EventType.TRIGGER_NOTIFICATION_CREATED) return;
-  const {notification, pressAction} = detail;
+  const {pressAction} = detail;
+
   if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
-    const options = getAlarmOptions(notification);
     if (options?.date) {
       settings
         .getState()
@@ -81,34 +87,32 @@ export async function cancelNotifOnDismissed(
     }
     await cancelAlarmNotif(options);
   } else if (pressAction?.id === 'cancel_alarm') {
-    // we are pressing an action from pre-alarm notification
-    const preAlarmOptions = getAlarmOptions(
-      notification,
-    ) as SetPreAlarmTaskOptions;
-    const options = await getSecheduledAlarmOptions(
-      preAlarmOptions.targetAlarmNotifId,
+    // 'cancel_alarm' only exists on a pre-alarm notification
+    const scheduledAlarmOptions = await getSecheduledAlarmOptions(
+      (options as SetPreAlarmTaskOptions).targetAlarmNotifId,
     );
-    if (options) {
+    if (scheduledAlarmOptions) {
       // save date of upcoming alarm to prevent setting alarm/prealarm before it
       settings
         .getState()
-        .saveTimestamp(options.notifId, options.date.valueOf());
+        .saveTimestamp(
+          scheduledAlarmOptions.notifId,
+          scheduledAlarmOptions.date.valueOf(),
+        );
 
-      await notifee.cancelNotification(options.notifId);
+      await notifee.cancelNotification(scheduledAlarmOptions.notifId);
     }
   }
 }
 
-export function openFullscreenAlarmIfNeeded(
-  type: EventType,
-  detail: EventDetail,
-) {
-  const options = JSON.parse(
-    detail.notification?.data?.options as string,
-  ) as SetAlarmTaskOptions;
+export function openFullscreenAlarmIfNeeded({
+  detail,
+  options,
+  type,
+}: NotifeeEvent) {
   if (
     (type === EventType.PRESS || type === EventType.DELIVERED) &&
-    options.playSound
+    options?.playSound
   ) {
     replace('FullscreenAlarm', {
       options: detail.notification?.data?.options,
@@ -116,55 +120,69 @@ export function openFullscreenAlarmIfNeeded(
   }
 }
 
-export function setupNotifeeHandlers() {
-  notifee.onBackgroundEvent(async ({type, detail}) => {
+async function handleNotification({
+  detail,
+  type,
+  bgEvent,
+}: Omit<NotifeeEvent, 'options'> & {bgEvent: boolean}) {
+  if (bgEvent) {
     await bootstrap();
+  }
+  const {notification} = detail;
+  const channelId = notification?.android?.channelId;
+
+  if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
+    const options = getAlarmOptions(notification);
+
     if (type === EventType.DELIVERED) {
-      if (detail.notification?.id === ADHAN_NOTIFICATION_ID) {
+      if (channelId === ADHAN_CHANNEL_ID) {
         setNextAdhan();
         updateWidgets();
         setUpdateWidgetsAlarms();
-      } else if (
-        detail.notification?.android?.channelId === REMINDER_CHANNEL_ID
-      ) {
-        if (detail.notification?.id) {
-          reminderSettings
-            .getState()
-            .disableReminder({id: detail.notification.id});
+      } else if (channelId === REMINDER_CHANNEL_ID) {
+        if (notification?.id) {
+          reminderSettings.getState().disableReminder({id: notification.id});
         }
 
         await setReminders();
       }
     } else {
-      await cancelNotifOnDismissed(type, detail);
+      await cancelNotifOnDismissed({type, detail, options});
     }
-    openFullscreenAlarmIfNeeded(type, detail);
-  });
+    openFullscreenAlarmIfNeeded({type, detail, options});
+  }
+}
+
+export function setupNotifeeForegroundHandler() {
+  return notifee.onForegroundEvent(({type, detail}) =>
+    handleNotification({type, detail, bgEvent: true}),
+  );
+}
+
+export function setupNotifeeHandlers() {
+  notifee.onBackgroundEvent(({type, detail}) =>
+    handleNotification({type, detail, bgEvent: true}),
+  );
 
   notifee.registerForegroundService(async notification => {
     await bootstrap();
 
-    const options = JSON.parse(
-      notification.data?.options as string,
-    ) as SetAlarmTaskOptions;
+    const channelId = notification?.android?.channelId;
+    if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
+      const options = getAlarmOptions(notification);
 
-    await notifee
-      .cancelNotification('pre-' + notification.id)
-      .catch(console.error);
+      await notifee
+        .cancelNotification('pre-' + notification.id)
+        .catch(console.error);
 
-    if (options.playSound) {
-      return playAdhan(options.prayer)
-        .then(() => cancelAlarmNotif(options))
-        .then(() => BackHandler.exitApp());
+      if (options?.playSound) {
+        return playAdhan(options.prayer)
+          .then(() => cancelAlarmNotif(options))
+          .then(() => BackHandler.exitApp());
+      }
     }
-    return Promise.resolve();
-  });
-}
 
-export function setupNotifeeForegroundHandler() {
-  return notifee.onForegroundEvent(({type, detail}) => {
-    openFullscreenAlarmIfNeeded(type, detail);
-    cancelNotifOnDismissed(type, detail);
+    return Promise.resolve();
   });
 }
 
