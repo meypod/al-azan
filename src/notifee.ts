@@ -6,6 +6,7 @@ import notifee, {
   Notification,
 } from '@notifee/react-native';
 import {BackHandler} from 'react-native';
+import {reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
 import {setReminders} from './tasks/set_reminder';
@@ -126,6 +127,12 @@ export function setupNotifeeHandlers() {
       } else if (
         detail.notification?.android?.channelId === REMINDER_CHANNEL_ID
       ) {
+        if (detail.notification?.id) {
+          reminderSettings
+            .getState()
+            .disableReminder({id: detail.notification.id});
+        }
+
         await setReminders();
       }
     } else {

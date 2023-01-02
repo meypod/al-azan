@@ -17,19 +17,18 @@ export type Reminder = {
   duration: number;
   /** has a value of `-1` or `+1` */
   durationModifier: number;
-  /** when is this reminder scheduled to be fired. can be undefined if not scheduled yet. or an outdated timestamp. */
-  whenIsFired?: number;
-  /** timestamp of when it was scheduled. */
-  whenScheduled?: number;
-  /** timestamp of when it was modified. */
-  modified?: number;
+  /** should reminder play adhan ? */
+  playSound?: boolean;
+  /** should reminder be set only once? */
+  once?: boolean;
 };
 
 export type ReminderStore = {
   REMINDERS: Array<Reminder>;
 
   saveReminder: (reminder: Reminder) => void;
-  deleteReminder: (reminder: Reminder) => void;
+  deleteReminder: (reminder: Pick<Reminder, 'id'>) => void;
+  disableReminder: (reminder: Pick<Reminder, 'id'>) => void;
   setSetting: <T extends keyof ReminderStore>(
     key: T,
     val: ReminderStore[T],
@@ -46,6 +45,7 @@ const invalidKeys = [
   'removeSetting',
   'saveReminder',
   'deleteReminder',
+  'disableReminder',
 ];
 
 export const reminderSettings = createVanilla<ReminderStore>()(
@@ -72,6 +72,18 @@ export const reminderSettings = createVanilla<ReminderStore>()(
             let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
             if (fIndex !== -1) {
               draft.REMINDERS.splice(fIndex, 1);
+            }
+          }),
+        ),
+
+      disableReminder: reminder =>
+        set(
+          produce<ReminderStore>(draft => {
+            let fIndex = draft.REMINDERS.findIndex(e => e.id === reminder.id);
+            if (fIndex !== -1) {
+              const [removedReminder] = draft.REMINDERS.splice(fIndex, 1);
+              removedReminder.enabled = false;
+              draft.REMINDERS.push(removedReminder);
             }
           }),
         ),

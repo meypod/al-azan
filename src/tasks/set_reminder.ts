@@ -74,6 +74,7 @@ export async function setReminders(options?: SetReminderOptions) {
       notifChannelId: REMINDER_CHANNEL_ID,
       notifChannelName: REMINDER_CHANNEL_NAME,
       isReminder: true,
+      playSound: !!reminder.playSound,
     };
 
     await setPreAlarmTask({

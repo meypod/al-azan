@@ -9,6 +9,7 @@ import {
   Select,
   FormControl,
   Input,
+  Switch,
 } from 'native-base';
 import {useEffect, useState} from 'react';
 import {Modal} from 'react-native';
@@ -45,8 +46,6 @@ export function EditReminderModal({
         duration: reminderState?.duration || defaultDuration,
         durationModifier: reminderState?.durationModifier || -1,
         prayer: reminderState?.prayer || Prayer.Fajr,
-        modified: Date.now(),
-        whenIsFired: undefined,
       });
     } else {
       setDraftReminderState(null);
@@ -177,6 +176,35 @@ export function EditReminderModal({
                   ))}
                 </Select>
               </VStack>
+            </FormControl>
+            <FormControl>
+              <FormControl.Label>{t`Options`}:</FormControl.Label>
+              <HStack mb="2" alignItems="center" justifyContent="space-between">
+                <Text>{t`Play adhan`}?</Text>
+                <Switch
+                  value={!!draftReminderState?.playSound}
+                  onToggle={(state: boolean) =>
+                    setDraftReminderState({
+                      ...draftReminderState,
+                      playSound: state,
+                    })
+                  }
+                  size="lg"
+                />
+              </HStack>
+              <HStack alignItems="center" justifyContent="space-between">
+                <Text>{t`Only once`}?</Text>
+                <Switch
+                  value={!!draftReminderState?.once}
+                  onToggle={(state: boolean) =>
+                    setDraftReminderState({
+                      ...draftReminderState,
+                      once: state,
+                    })
+                  }
+                  size="lg"
+                />
+              </HStack>
             </FormControl>
           </VStack>
           <HStack
