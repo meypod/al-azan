@@ -180,7 +180,12 @@ export function EditReminderModal({
             <FormControl>
               <FormControl.Label>{t`Options`}:</FormControl.Label>
               <HStack mb="2" alignItems="center" justifyContent="space-between">
-                <Text>{t`Play adhan`}?</Text>
+                <Text>
+                  {t({
+                    message: `Play adhan?`,
+                    comment: 'shown in add/edit reminder dialog',
+                  })}
+                </Text>
                 <Switch
                   value={!!draftReminderState?.playSound}
                   onToggle={(state: boolean) =>
@@ -193,7 +198,13 @@ export function EditReminderModal({
                 />
               </HStack>
               <HStack alignItems="center" justifyContent="space-between">
-                <Text>{t`Only once`}?</Text>
+                <Text>
+                  {t({
+                    message: `Only once?`,
+                    comment: 'shown in add/edit reminder dialog',
+                  })}
+                </Text>
+
                 <Switch
                   value={!!draftReminderState?.once}
                   onToggle={(state: boolean) =>
