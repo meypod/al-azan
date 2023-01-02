@@ -1,4 +1,4 @@
-- Added settings to play adhan only on certain days (like play dhuhr on sundays and not the other days)
+- Added settings to play adhan only on certain days (like play Dhuhr on Sundays and not the other days)
 - Fixed reminders (they should work more reliably now)
 - Allow reminders to play adhan
 - Added option to show/play reminder only once
