@@ -6,7 +6,7 @@ import notifee, {
   Notification,
 } from '@notifee/react-native';
 import {BackHandler} from 'react-native';
-import {reminderSettings} from './store/reminder';
+import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
 import {setReminders} from './tasks/set_reminder';
@@ -132,7 +132,7 @@ async function handleNotification({
   const channelId = notification?.android?.channelId;
 
   if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
-    const options = getAlarmOptions(notification);
+    const options = getAlarmOptions(notification)!;
 
     if (type === EventType.DELIVERED) {
       if (channelId === ADHAN_CHANNEL_ID) {
@@ -140,8 +140,8 @@ async function handleNotification({
         updateWidgets();
         setUpdateWidgetsAlarms();
       } else if (channelId === REMINDER_CHANNEL_ID) {
-        if (notification?.id) {
-          reminderSettings.getState().disableReminder({id: notification.id});
+        if ((options as Pick<Reminder, 'once'>).once) {
+          reminderSettings.getState().disableReminder({id: options.notifId});
         }
 
         await setReminders();

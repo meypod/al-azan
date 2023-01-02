@@ -65,7 +65,7 @@ export async function setReminders(options?: SetReminderOptions) {
 
     if (!force && dismissedAlarmTS >= triggerDate.getTime()) continue;
 
-    const reminderOptions: SetAlarmTaskOptions = {
+    const reminderOptions: SetAlarmTaskOptions & {once?: boolean} = {
       title: t`Reminder`,
       body: reminder.label || '',
       date: triggerDate,
@@ -75,6 +75,7 @@ export async function setReminders(options?: SetReminderOptions) {
       notifChannelName: REMINDER_CHANNEL_NAME,
       isReminder: true,
       playSound: !!reminder.playSound,
+      once: reminder.once,
     };
 
     await setPreAlarmTask({
