@@ -105,11 +105,7 @@ export async function cancelNotifOnDismissed({
   }
 }
 
-export function openFullscreenAlarmIfNeeded({
-  detail,
-  options,
-  type,
-}: NotifeeEvent) {
+function openFullscreenAlarmIfNeeded({detail, options, type}: NotifeeEvent) {
   if (
     (type === EventType.PRESS || type === EventType.DELIVERED) &&
     options?.playSound
@@ -118,6 +114,20 @@ export function openFullscreenAlarmIfNeeded({
       options: detail.notification?.data?.options,
     });
   }
+}
+
+export async function getFgSvcNotification() {
+  try {
+    const fgNotify = await notifee
+      .getDisplayedNotifications()
+      .then(list =>
+        list.find(n => n.notification.android?.asForegroundService),
+      );
+    return fgNotify;
+  } catch (e) {
+    console.error(e);
+  }
+  return;
 }
 
 async function handleNotification({
