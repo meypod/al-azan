@@ -135,6 +135,15 @@ async function handleNotification({
     const options = getAlarmOptions(notification)!;
 
     if (type === EventType.DELIVERED) {
+      if (options.playSound) {
+        // even though we could not check options.playSound and
+        // this would simply become a noop,
+        // we have to reduce the cpu usage as much as we can
+        // so we try not to hit third party code when not necessary
+        await notifee
+          .cancelNotification('pre-' + options.notifId)
+          .catch(console.error);
+      }
       if (channelId === ADHAN_CHANNEL_ID) {
         setNextAdhan();
         updateWidgets();
@@ -143,7 +152,6 @@ async function handleNotification({
         if ((options as Pick<Reminder, 'once'>).once) {
           reminderSettings.getState().disableReminder({id: options.notifId});
         }
-
         await setReminders();
       }
     } else {
@@ -170,10 +178,6 @@ export function setupNotifeeHandlers() {
     const channelId = notification?.android?.channelId;
     if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
       const options = getAlarmOptions(notification);
-
-      await notifee
-        .cancelNotification('pre-' + notification.id)
-        .catch(console.error);
 
       if (options?.playSound) {
         return playAdhan(options.prayer)
