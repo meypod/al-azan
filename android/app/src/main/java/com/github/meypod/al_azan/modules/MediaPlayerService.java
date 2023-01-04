@@ -310,8 +310,10 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private void destroyCallStateListener() {
     if (telephonyManager != null) {
       if (VERSION.SDK_INT >= VERSION_CODES.S) {
-        telephonyManager.unregisterTelephonyCallback(telephonyStateListener);
-        telephonyStateListener = null;
+        if (telephonyStateListener != null) {
+          telephonyManager.unregisterTelephonyCallback(telephonyStateListener);
+          telephonyStateListener = null;
+        }
       } else {
         telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE);
         phoneStateListener = null;
