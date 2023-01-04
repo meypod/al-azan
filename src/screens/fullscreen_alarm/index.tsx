@@ -42,6 +42,7 @@ function FullscreenAlarm({route}: ScreenProps) {
     let subtitle = '';
     if (parsedAlarmOptions.isReminder) {
       title = t`Reminder`;
+      subtitle = parsedAlarmOptions.subtitle || '';
     } else {
       subtitle = parsedAlarmOptions.title;
       body = getTime(parsedAlarmOptions.date);

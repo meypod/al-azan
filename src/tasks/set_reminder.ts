@@ -9,6 +9,7 @@ import {
   REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_NAME,
 } from '@/constants/notification';
+import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
 import {reminderSettings, Reminder} from '@/store/reminder';
 import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
@@ -68,6 +69,7 @@ export async function setReminders(options?: SetReminderOptions) {
     const reminderOptions: SetAlarmTaskOptions & {once?: boolean} = {
       title: t`Reminder`,
       body: reminder.label || '',
+      subtitle: getReminderSubtitle(reminder),
       date: triggerDate,
       prayer: reminder.prayer,
       notifId: reminder.id,

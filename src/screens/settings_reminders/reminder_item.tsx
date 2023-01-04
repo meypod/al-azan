@@ -20,15 +20,28 @@ export type ReminderItemProps = {
   onDelete?: (reminderState: Reminder) => void;
 };
 
+export function getReminderSubtitle(reminder: Reminder) {
+  const durationInMinutes = (reminder.duration / (60 * 1000)).toString();
+  const prayer = translatePrayer(reminder.prayer);
+
+  let subtitle =
+    reminder.durationModifier === -1
+      ? t`${durationInMinutes} min before ${prayer}`
+      : t`${durationInMinutes} min after ${prayer}`;
+
+  if (reminder.once) {
+    subtitle += ` (${t`Once`})`;
+  }
+
+  return subtitle;
+}
+
 export function ReminderItem(
   options: ReminderItemProps,
   {item}: {item: Reminder},
 ) {
   const onDelete =
     (() => options.onDelete && options.onDelete(item)) || (() => {});
-
-  const durationInMinutes = (item.duration / (60 * 1000)).toString();
-  const prayer = translatePrayer(item.prayer);
 
   const onToggle = (state: boolean) => {
     const newReminderState = {...item, enabled: state};
@@ -93,10 +106,7 @@ export function ReminderItem(
           </HStack>
           <HStack>
             <Text p="3" flex={1}>
-              {item.durationModifier === -1
-                ? t`${durationInMinutes} min before ${prayer}`
-                : t`${durationInMinutes} min after ${prayer}`}
-              {item.once ? ` (${t`Once`})` : null}
+              {getReminderSubtitle(item)}
             </Text>
             <Switch isChecked={item.enabled} onToggle={onToggle} size="lg" />
           </HStack>
