@@ -52,6 +52,8 @@
       android:exported="false"
       android:name=".modules.MediaPlayerService" />
     <service android:exported="false" android:name=".UniversalTaskService" />
+    <!-- for allowing app to start the foreground service -->
+    <service android:name="app.notifee.core.ForegroundService" android:foregroundServiceType="mediaPlayback" />
   </application>
   <uses-permission android:name="android.permission.WAKE_LOCK" />
   <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
@@ -64,7 +66,5 @@
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
   <uses-permission android:name="android.permission.INTERNET" />
-  <!-- for allowing app to start the foreground service -->
-  <service android:name="app.notifee.core.ForegroundService" android:foregroundServiceType="mediaPlayback" />
 
 </manifest>
