@@ -4,7 +4,7 @@ import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
 import {PixelRatio, useColorScheme} from 'react-native';
 import {replace} from './navigation/root_navigation';
-import {isPlayingAdhan} from './services/azan_service';
+import {isPlayingAdhan, stopAdhan} from './services/azan_service';
 import {getFgSvcNotification, setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettingsHelper} from '@/store/settings';
 import {colors} from '@/theme/colors';
@@ -53,9 +53,13 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
   useEffect(() => {
     if (isPlayingAdhan()) {
       getFgSvcNotification().then(dn => {
-        replace('FullscreenAlarm', {
-          options: dn?.notification?.data?.options,
-        });
+        if (dn?.notification?.data?.options) {
+          replace('FullscreenAlarm', {
+            options: dn.notification.data.options,
+          });
+        } else {
+          stopAdhan();
+        }
       });
     }
   }, []);
