@@ -3,8 +3,10 @@ package com.github.meypod.al_azan.modules;
 import static com.github.meypod.al_azan.modules.MediaPlayerModule.ctx;
 import static com.github.meypod.al_azan.utils.Utils.getIdFromRawResourceUri;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.media.AudioAttributes;
@@ -21,6 +23,7 @@ import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.facebook.react.HeadlessJsTaskService;
 import com.facebook.react.bridge.Arguments;
@@ -270,12 +273,13 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     if (telephonyManager == null) {
       telephonyManager = (TelephonyManager) ctx.getSystemService(Context.TELEPHONY_SERVICE);
       if (VERSION.SDK_INT >= VERSION_CODES.S) {
-        telephonyStateListener = new TelephonyStateListener(
-            this::onNewCallState);
-        telephonyManager.registerTelephonyCallback(
-            ctx.getMainExecutor(),
-            telephonyStateListener
-        );
+        if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
+          telephonyStateListener = new TelephonyStateListener(
+                  this::onNewCallState);
+          telephonyManager.registerTelephonyCallback(
+                  ctx.getMainExecutor(),
+                  telephonyStateListener);
+        }
       } else {
         phoneStateListener = new PhoneStateListener() {
           @Override
