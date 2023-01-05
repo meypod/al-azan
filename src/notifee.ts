@@ -164,7 +164,11 @@ async function handleNotification({
   if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
     const options = getAlarmOptions(notification)!;
 
-    if (type === EventType.DELIVERED || type === 8) {
+    if (
+      type === EventType.DELIVERED ||
+      type === EventType.UNKNOWN ||
+      type === 8
+    ) {
       if (type === 8 && notification) {
         await notifee
           .displayNotification({
