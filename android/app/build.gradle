@@ -292,6 +292,12 @@ android {
             }
         }
     }
+
+    bundle {
+        storeArchive {
+            enable = false
+        }
+    }
 }
 
 dependencies {

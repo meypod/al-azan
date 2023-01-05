@@ -1730,10 +1730,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@notifee/react-native@^5.6.0":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@notifee/react-native/-/react-native-5.6.0.tgz#a34998c98ad93482e4452b4d2cfb405b4f5f59ce"
-  integrity sha512-MBV863fQx5qFDXKQ+3i9EkVeFAGVERmOOpk4gADx17WpZJSLNhVCnXRA1CEP0bJ4B39G6Z2SiadRl19E5GeWiQ==
+"@notifee/react-native@^7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@notifee/react-native/-/react-native-7.3.0.tgz#5ded9c2c6d4dd93f65725fbdeab6071a71c13daf"
+  integrity sha512-bAZjmc08I+skS3gRCl/7KXE95N6sIiu3/8EnP9USMt2guWsvxTdoLceWl8uJ5ghP4S9VQiBJUWS29hAKhKHC/A==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.7":
   version "0.5.7"
