@@ -3,3 +3,4 @@
 - Allow reminders to play adhan
 - Added option to show/play reminder only once
 - There's a change to settings internally, no problem should occur during the update, but if you decided to use an older version after updating, you will lose your reminders.
+- App will now always open fullscreen alarm when Adhan is playing when you open the App 
