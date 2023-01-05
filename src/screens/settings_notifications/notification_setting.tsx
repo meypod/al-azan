@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
 import {HStack, Text, Button, VStack, Checkbox, Flex} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {ExpandCircleDownIcon} from '@/assets/icons/expand_circle_down';
 import Divider from '@/components/Divider';
@@ -16,6 +16,8 @@ import {WeekDayIndex} from '@/utils/date';
 
 type NotificationSettingProps = {
   prayer: Prayer;
+  onExpandChanged?: (isExpanded: boolean, prayer: Prayer) => void;
+  expanded?: boolean;
 };
 
 type getChangedValuesOptions = {
@@ -124,6 +126,8 @@ function getChangedValues(options: getChangedValuesOptions) {
 
 export function NotificationSetting({
   prayer,
+  onExpandChanged,
+  expanded,
   ...vStackProps
 }: NotificationSettingProps & IVStackProps) {
   const [notify, setNotify] = useAlarmSettingsHelper(
@@ -133,11 +137,16 @@ export function NotificationSetting({
     getAdhanSettingKey(prayer, 'sound') as 'FAJR_SOUND',
   );
 
-  const [expanded, setExpanded] = useState(false);
+  const [internalExpanded, setInternalExpanded] = useState(expanded);
 
   const toggleExpanded = useCallback(() => {
-    setExpanded(!expanded);
-  }, [expanded]);
+    onExpandChanged && onExpandChanged(!expanded, prayer);
+    setInternalExpanded(!expanded);
+  }, [expanded, onExpandChanged, prayer]);
+
+  useEffect(() => {
+    setInternalExpanded(expanded);
+  }, [expanded, setInternalExpanded]);
 
   const setSoundProxy = useCallback(
     (s: PrayerAlarmSettings) => {
@@ -184,7 +193,7 @@ export function NotificationSetting({
       borderRadius={4}
       mb="1"
       {...vStackProps}>
-      <HStack alignItems="center" py="1" px="2" mb={expanded ? -2 : 0}>
+      <HStack alignItems="center" py="1" px="2" mb={internalExpanded ? -2 : 0}>
         <Text width="1/4" flex={0} flexShrink={0}>
           {prayerName}
         </Text>
@@ -271,12 +280,14 @@ export function NotificationSetting({
           <Button onPress={toggleExpanded} variant="unstyled" size="sm" p="0">
             <ExpandCircleDownIcon
               size="2xl"
-              style={{transform: [{rotate: expanded ? '180deg' : '0deg'}]}}
+              style={{
+                transform: [{rotate: internalExpanded ? '180deg' : '0deg'}],
+              }}
             />
           </Button>
         </HStack>
       </HStack>
-      {expanded && (
+      {internalExpanded && (
         <VStack px="2" py="1">
           <VStack>
             <Divider fontSize="xs" label={t`Notification`} mb="1" />
