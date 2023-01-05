@@ -38,7 +38,7 @@ const TranslatedHeaderTitle = (...props: any[]) => {
   }
 };
 
-export function App() {
+export function App(): JSX.Element {
   const [appIntroDone] = useSettingsHelper('APP_INTRO_DONE');
   const {colorMode} = useColorMode();
 
