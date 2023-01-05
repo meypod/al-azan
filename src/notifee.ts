@@ -173,6 +173,8 @@ async function handleNotification({
               ...notification.android,
               actions: undefined,
               asForegroundService: false,
+              fullScreenAction: undefined,
+              importance: AndroidImportance.DEFAULT,
             },
           })
           .catch(console.error);
