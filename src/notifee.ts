@@ -29,12 +29,37 @@ import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
-export async function cancelAlarmNotif(options?: SetAlarmTaskOptions) {
-  if (options?.playSound) {
-    await stopAdhan().catch(console.error);
-    await notifee.stopForegroundService();
-    replace('Home');
+// TODO: remove when notifee has added FG_ALREADY_EXIST to their npm package
+declare module '@notifee/react-native' {
+  // eslint-disable-next-line @typescript-eslint/no-shadow
+  export enum EventType {
+    FG_ALREADY_EXIST = 8,
   }
+}
+
+export type NotifeeEvent = {
+  type: EventType;
+  detail: EventDetail;
+  options: SetAlarmTaskOptions | undefined;
+};
+
+export type CancelNotifOptions = {
+  notification: Notification | undefined;
+  options: SetAlarmTaskOptions | undefined;
+};
+
+export async function cancelAlarmNotif({
+  options,
+  notification,
+}: CancelNotifOptions) {
+  if (notification?.android?.asForegroundService) {
+    if (options?.playSound) {
+      await stopAdhan().catch(console.error);
+      await notifee.stopForegroundService();
+      replace('Home');
+    }
+  }
+
   if (options?.notifId) {
     await notifee.cancelDisplayedNotification(options.notifId);
   }
@@ -66,11 +91,6 @@ export async function getSecheduledAlarmOptions(targetAlarmNotifId: string) {
   return getAlarmOptions(scheduledNotif?.notification);
 }
 
-export type NotifeeEvent = {
-  type: EventType;
-  detail: EventDetail;
-  options: SetAlarmTaskOptions | undefined;
-};
 export async function cancelNotifOnDismissed({
   detail,
   options,
@@ -85,7 +105,7 @@ export async function cancelNotifOnDismissed({
         .getState()
         .saveTimestamp(options.notifId, options.date.valueOf());
     }
-    await cancelAlarmNotif(options);
+    await cancelAlarmNotif({notification: detail.notification, options});
   } else if (pressAction?.id === 'cancel_alarm') {
     // 'cancel_alarm' only exists on a pre-alarm notification
     const scheduledAlarmOptions = await getSecheduledAlarmOptions(
@@ -144,7 +164,19 @@ async function handleNotification({
   if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
     const options = getAlarmOptions(notification)!;
 
-    if (type === EventType.DELIVERED) {
+    if (type === EventType.DELIVERED || type === 8) {
+      if (type === 8 && notification) {
+        await notifee
+          .displayNotification({
+            ...notification,
+            android: {
+              ...notification.android,
+              actions: undefined,
+              asForegroundService: false,
+            },
+          })
+          .catch(console.error);
+      }
       if (options.playSound) {
         // even though we could not check options.playSound and
         // this would simply become a noop,
@@ -191,7 +223,7 @@ export function setupNotifeeHandlers() {
 
       if (options?.playSound) {
         return playAdhan(options.prayer)
-          .then(() => cancelAlarmNotif(options))
+          .then(() => cancelAlarmNotif({notification, options}))
           .then(() => BackHandler.exitApp());
       }
     }

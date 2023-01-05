@@ -68,7 +68,10 @@ function FullscreenAlarm({route}: ScreenProps) {
       return;
     }
     if (isPlayingAdhan()) {
-      await cancelAlarmNotif(parsedAlarmOptions);
+      await cancelAlarmNotif({
+        options: parsedAlarmOptions,
+        notification: {android: {asForegroundService: true}},
+      });
       BackHandler.exitApp();
     } else {
       replace('Home');
