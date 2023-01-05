@@ -169,7 +169,7 @@ async function handleNotification({
       type === EventType.UNKNOWN ||
       type === 8
     ) {
-      if (type === 8 && notification) {
+      if ((type === 8 || type === EventType.UNKNOWN) && notification) {
         await notifee
           .displayNotification({
             ...notification,
