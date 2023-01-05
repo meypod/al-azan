@@ -236,11 +236,11 @@ export function NotificationSetting({
                 onPress={toggleSound}
                 _light={{
                   backgroundColor: soundFullActive
-                    ? 'primary.500:alpha.70'
+                    ? 'emerald.500:alpha.70'
                     : 'black:alpha.5',
                 }}
                 _dark={{
-                  backgroundColor: soundFullActive ? 'primary.800' : 'black',
+                  backgroundColor: soundFullActive ? 'emerald.700' : 'black',
                 }}>
                 <HStack justifyContent="center" alignItems="center">
                   <Text
@@ -256,6 +256,7 @@ export function NotificationSetting({
                     p="0"
                     size="sm"
                     value="sound"
+                    colorScheme="emerald"
                     isDisabled={true}
                     isChecked={!!sound}
                     accessibilityLabel={t`${prayerName} sound will be played`}
@@ -291,6 +292,7 @@ export function NotificationSetting({
               value={sound}
               onChanged={setSoundProxy}
               key={JSON.stringify(sound)}
+              colorScheme="emerald"
             />
           </VStack>
         </VStack>

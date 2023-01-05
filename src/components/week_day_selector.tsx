@@ -38,6 +38,7 @@ export function WeekDaySelector(
     value?: SelectorValue;
     onChanged?: (weekDays: SelectorValue) => void;
     label?: string;
+    colorScheme?: string;
   },
 ) {
   const [selectedDays, setSelectedDays] = useState<SelectorValue>(
@@ -95,6 +96,7 @@ export function WeekDaySelector(
               onChanged={dayChanged}
               label={i18n._(WeekDaysInOrder[dayName])}
               key={dayName}
+              colorScheme={props.colorScheme}
               isActive={
                 typeof selectedDays === 'boolean'
                   ? selectedDays
