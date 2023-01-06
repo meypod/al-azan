@@ -134,6 +134,10 @@ export function EditReminderModal({
                       label={t`60 min`}
                       value={(60 * minute).toString()}
                     />
+                    <Select.Item
+                      label={t`90 min`}
+                      value={(90 * minute).toString()}
+                    />
                   </Select>
                   <Select
                     borderRadius={0}
