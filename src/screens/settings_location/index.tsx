@@ -286,7 +286,7 @@ export function LocationSettings(props: IScrollViewProps) {
       <Divider label={t`Using Coordinates`} mb="2" mt="4" />
 
       <HStack>
-        <FormControl width="1/2" pr="1" mb="1">
+        <FormControl flex={5} pr="1" mb="1">
           <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
           <Input
             py="0"
@@ -302,7 +302,7 @@ export function LocationSettings(props: IScrollViewProps) {
             {t`Latitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
-        <FormControl width="1/2" pl="1">
+        <FormControl flex={5} pl="1">
           <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
@@ -318,25 +318,26 @@ export function LocationSettings(props: IScrollViewProps) {
             {t`Longitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
+        <FormControl flex={2} pl="1">
+          <FormControl.Label>{''}</FormControl.Label>
+          <Button
+            size="sm"
+            onPress={clearCoordinates}
+            textAlign="center">{t`Clear`}</Button>
+        </FormControl>
       </HStack>
-      <HStack>
+      <HStack mt="5">
         <FormControl alignItems="center" justifyContent="center">
-          <FormControl.Label>
-            <Text fontSize="xs" textAlign="justify">
+          <FormControl.Label mb="3">
+            <Text fontSize="sm" textAlign="justify">
               {t`You can also paste coords from clipboard`}
             </Text>
           </FormControl.Label>
-          <HStack alignItems="center">
-            <Button
-              onPress={onPasteButtonPressed}
-              textAlign="center"
-              width="1/3">{t`Paste`}</Button>
-            <Spacer />
-            <Button
-              onPress={clearCoordinates}
-              textAlign="center"
-              width="1/3">{t`Clear`}</Button>
-          </HStack>
+          <Button
+            onPress={onPasteButtonPressed}
+            textAlign="center"
+            width="1/3">{t`Paste`}</Button>
+          <Spacer />
         </FormControl>
       </HStack>
     </ScrollView>
