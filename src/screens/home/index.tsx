@@ -98,7 +98,14 @@ export function Home() {
                 adjustsFontSizeToFit: true,
                 fontSize: 'xs',
                 noOfLines: 1,
-              }}>
+                _light: {
+                  color: 'primary.700',
+                },
+                _dark: {
+                  color: 'primary.300',
+                },
+              }}
+              borderColor="primary.500">
               {t`Show Today`}
             </Button>
           )}
