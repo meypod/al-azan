@@ -34,7 +34,7 @@ function isValidCoords(num: number) {
   return num >= -180 && num <= 180;
 }
 
-const clipboardCoordsRegex = /([-\d.]+)\s*,\s*([-\d.]+)/;
+const clipboardCoordsRegex = /\s*([-\d.]+)[\s°NS]*[,| ]{1}\s*([-\d.]+)[\s°EW]*/;
 
 export function LocationSettings(props: IScrollViewProps) {
   const [lat, setLat] = useCalcSettingsHelper('LOCATION_LAT');
