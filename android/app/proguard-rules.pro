@@ -68,3 +68,7 @@
 
 # system settings module
 -keep class com.ninty.system.setting.** { *; }
+
+# mmkv
+
+-keep class com.reactnativemmkv { *; }
