@@ -63,15 +63,10 @@ export function LanguageSettings(props: IStackProps) {
   useEffect(() => {
     const unsub = settings.subscribe((state, prevState) => {
       if (state.SELECTED_LOCALE !== prevState.SELECTED_LOCALE) {
-        loadLocale(state.SELECTED_LOCALE)
-          .then(() => {
-            I18nManager.forceRTL(isRTL);
-            // allow some time for forceRTL to work
-            setTimeout(restart, 200);
-          })
-          .catch(err => {
-            console.error(err);
-          });
+        loadLocale(state.SELECTED_LOCALE);
+        I18nManager.forceRTL(isRTL);
+        // allow some time for forceRTL to work
+        setTimeout(restart, 200);
       }
     });
 
