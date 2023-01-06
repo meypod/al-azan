@@ -33,6 +33,10 @@ msgstr "5 min"
 msgid "60 min"
 msgstr "60 min"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
+msgid "90 min"
+msgstr "90 min"
+
 #: src/assets/adhan_entries.ts:23
 msgid "Abdul-Basit Abdus-Samad"
 msgstr "Abdul-Basit Abdus-Samad"
@@ -124,7 +128,7 @@ msgid "Calendar"
 msgstr "Calendar"
 
 #: src/screens/settings_adhan/index.tsx:180
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:234
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
 #: src/tasks/set_pre_alarm.ts:63
 msgid "Cancel"
 msgstr "Cancel"
@@ -181,7 +185,7 @@ msgstr "Closest City"
 msgid "Closest Date"
 msgstr "Closest Date"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:233
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
 msgid "Confirm"
 msgstr "Confirm"
 
@@ -219,7 +223,7 @@ msgstr "Deselect as Fajr Adhan"
 msgid "Disabled"
 msgstr "Disabled"
 
-#: src/screens/fullscreen_alarm/index.tsx:120
+#: src/screens/fullscreen_alarm/index.tsx:124
 #: src/tasks/set_alarm.ts:98
 msgid "Dismiss"
 msgstr "Dismiss"
@@ -427,7 +431,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:114
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -439,8 +443,8 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:216
-#: src/screens/settings_notifications/notification_setting.tsx:281
+#: src/screens/settings_notifications/notification_setting.tsx:225
+#: src/screens/settings_notifications/notification_setting.tsx:293
 msgid "Notification"
 msgstr "Notification"
 
@@ -452,7 +456,7 @@ msgstr "Notification & Sound"
 msgid "Numbering system"
 msgstr "Numbering system"
 
-#: src/screens/settings_reminders/reminder_item.tsx:99
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "Once"
 msgstr "Once"
 
@@ -461,7 +465,7 @@ msgid "One-Seventh of the Night"
 msgstr "One-Seventh of the Night"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:206
 msgid "Only once?"
 msgstr "Only once?"
 
@@ -477,7 +481,7 @@ msgstr "Open Battery Optimization Settings"
 msgid "Open Power Manager Settings"
 msgstr "Open Power Manager Settings"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:181
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:185
 msgid "Options"
 msgstr "Options"
 
@@ -486,7 +490,7 @@ msgid "Paste"
 msgstr "Paste"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:184
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:188
 msgid "Play adhan?"
 msgstr "Play adhan?"
 
@@ -515,8 +519,8 @@ msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
 #: src/screens/fullscreen_alarm/index.tsx:44
-#: src/tasks/set_reminder.ts:69
-#: src/tasks/set_reminder.ts:93
+#: src/tasks/set_reminder.ts:70
+#: src/tasks/set_reminder.ts:96
 msgid "Reminder"
 msgstr "Reminder"
 
@@ -578,7 +582,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:102
+#: src/screens/home/index.tsx:108
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -608,8 +612,8 @@ msgstr ""
 "to prevent the app from getting killed in the background.\n"
 "In that case disable any power saving option for the app."
 
-#: src/screens/settings_notifications/notification_setting.tsx:253
-#: src/screens/settings_notifications/notification_setting.tsx:289
+#: src/screens/settings_notifications/notification_setting.tsx:262
+#: src/screens/settings_notifications/notification_setting.tsx:301
 msgid "Sound"
 msgstr "Sound"
 
@@ -770,7 +774,7 @@ msgstr "About"
 msgid "adjustment.hint"
 msgstr "Number of minutes that will be added to the calculated times"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "after"
 msgstr "after"
 
@@ -783,7 +787,7 @@ msgstr "Asr"
 msgid "battery_optimization_settings"
 msgstr "Battery Optimization"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "before"
 msgstr "before"
 
@@ -885,18 +889,18 @@ msgstr "Sunset"
 msgid "widget_settings"
 msgstr "Widget Settings"
 
-#: src/screens/settings_reminders/reminder_item.tsx:98
+#: src/screens/settings_reminders/reminder_item.tsx:30
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} min after {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:97
+#: src/screens/settings_reminders/reminder_item.tsx:29
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} min before {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:224
+#: src/screens/settings_notifications/notification_setting.tsx:233
 msgid "{prayerName} notification will be shown"
 msgstr "{prayerName} notification will be shown"
 
-#: src/screens/settings_notifications/notification_setting.tsx:261
+#: src/screens/settings_notifications/notification_setting.tsx:271
 msgid "{prayerName} sound will be played"
 msgstr "{prayerName} sound will be played"

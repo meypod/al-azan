@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-02 10:04+0330\n"
+"POT-Creation-Date: 2023-01-06 22:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,6 +26,10 @@ msgstr "5 دقائق"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "60 min"
 msgstr "60 دقيقة"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
+msgid "90 min"
+msgstr "90 دقيقة"
 
 #: src/assets/adhan_entries.ts:23
 msgid "Abdul-Basit Abdus-Samad"
@@ -118,7 +122,7 @@ msgid "Calendar"
 msgstr "التقويم"
 
 #: src/screens/settings_adhan/index.tsx:180
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:234
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
 #: src/tasks/set_pre_alarm.ts:63
 msgid "Cancel"
 msgstr "ألغ"
@@ -175,7 +179,7 @@ msgstr "أقرب مدينة"
 msgid "Closest Date"
 msgstr "أقرب تاريخ"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:233
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
 msgid "Confirm"
 msgstr "أكّد"
 
@@ -213,7 +217,7 @@ msgstr "إلغاء اختيار أذان الفجر"
 msgid "Disabled"
 msgstr "غير مفعّل"
 
-#: src/screens/fullscreen_alarm/index.tsx:120
+#: src/screens/fullscreen_alarm/index.tsx:124
 #: src/tasks/set_alarm.ts:98
 msgid "Dismiss"
 msgstr "تجاهل"
@@ -421,7 +425,7 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:114
 msgid "Next Day"
 msgstr "اليوم التالي"
 
@@ -433,8 +437,8 @@ msgstr "لا"
 msgid "None (Automatic)"
 msgstr "لا شيء (تلقائي)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:216
-#: src/screens/settings_notifications/notification_setting.tsx:281
+#: src/screens/settings_notifications/notification_setting.tsx:225
+#: src/screens/settings_notifications/notification_setting.tsx:293
 msgid "Notification"
 msgstr "إشعار"
 
@@ -446,7 +450,7 @@ msgstr "الإشعار و الصوت"
 msgid "Numbering system"
 msgstr "نظام الترقيم"
 
-#: src/screens/settings_reminders/reminder_item.tsx:99
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "Once"
 msgstr "مرة واحدة"
 
@@ -455,7 +459,7 @@ msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:206
 msgid "Only once?"
 msgstr "مرة واحدة فقط؟"
 
@@ -471,7 +475,7 @@ msgstr "افتح إعدادات تحسين البطارية"
 msgid "Open Power Manager Settings"
 msgstr "افتح إعدادات مدير الطاقة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:181
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:185
 msgid "Options"
 msgstr "خيارات"
 
@@ -480,7 +484,7 @@ msgid "Paste"
 msgstr "لصق"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:184
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:188
 msgid "Play adhan?"
 msgstr "تشغيل الأذان؟"
 
@@ -509,8 +513,8 @@ msgid "Referred to as the ISNA method"
 msgstr "يشار إليها باسم طريقة ISNA"
 
 #: src/screens/fullscreen_alarm/index.tsx:44
-#: src/tasks/set_reminder.ts:69
-#: src/tasks/set_reminder.ts:93
+#: src/tasks/set_reminder.ts:70
+#: src/tasks/set_reminder.ts:96
 msgid "Reminder"
 msgstr "تذكير"
 
@@ -565,7 +569,7 @@ msgstr "الشيعة ، معهد الجيوفيزياء ، جامعة طهران
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:102
+#: src/screens/home/index.tsx:108
 msgid "Show Today"
 msgstr "اعرض اليوم"
 
@@ -592,8 +596,8 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "تحتاج بعض الأجهزة إلى إعدادات إضافية داخل \"مدير الطاقة\" (Power Manager) لمنع التطبيق من الإغلاق في الخلفية. في هذه الحالة، قم بتعطيل أي خيار لتوفير الطاقة من أجل التطبيق."
 
-#: src/screens/settings_notifications/notification_setting.tsx:253
-#: src/screens/settings_notifications/notification_setting.tsx:289
+#: src/screens/settings_notifications/notification_setting.tsx:262
+#: src/screens/settings_notifications/notification_setting.tsx:301
 msgid "Sound"
 msgstr "صوت"
 
@@ -754,7 +758,7 @@ msgstr "عن التطبيق"
 msgid "adjustment.hint"
 msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوقات المحسوبة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "after"
 msgstr "بعد"
 
@@ -767,7 +771,7 @@ msgstr "عصر"
 msgid "battery_optimization_settings"
 msgstr "تحسين البطارية"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "before"
 msgstr "قبل"
 
@@ -869,18 +873,18 @@ msgstr "غروب الشمس"
 msgid "widget_settings"
 msgstr "إعدادات التطبيق المصغر"
 
-#: src/screens/settings_reminders/reminder_item.tsx:98
+#: src/screens/settings_reminders/reminder_item.tsx:30
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} دقيقة بعد ال{prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:97
+#: src/screens/settings_reminders/reminder_item.tsx:29
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} دقيقة قبل ال{prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:224
+#: src/screens/settings_notifications/notification_setting.tsx:233
 msgid "{prayerName} notification will be shown"
 msgstr "سيتم عرض إشعار ال{prayerName}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:261
+#: src/screens/settings_notifications/notification_setting.tsx:271
 msgid "{prayerName} sound will be played"
 msgstr "سيتم تشغيل صوت ال{prayerName}"

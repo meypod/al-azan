@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-02 10:04+0330\n"
+"POT-Creation-Date: 2023-01-06 22:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,6 +26,10 @@ msgstr "5 menit"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "60 min"
 msgstr "60 menit"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
+msgid "90 min"
+msgstr "90 menit"
 
 #: src/assets/adhan_entries.ts:23
 msgid "Abdul-Basit Abdus-Samad"
@@ -120,7 +124,7 @@ msgid "Calendar"
 msgstr "Kalender"
 
 #: src/screens/settings_adhan/index.tsx:180
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:234
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
 #: src/tasks/set_pre_alarm.ts:63
 msgid "Cancel"
 msgstr "Batal"
@@ -177,7 +181,7 @@ msgstr "Kota terdekat"
 msgid "Closest Date"
 msgstr "Tanggal terdekat"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:233
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
 msgid "Confirm"
 msgstr "Selesai"
 
@@ -215,7 +219,7 @@ msgstr "Batalkan pilihan sebagai Adzan Subuh"
 msgid "Disabled"
 msgstr "Tidak Aktif"
 
-#: src/screens/fullscreen_alarm/index.tsx:120
+#: src/screens/fullscreen_alarm/index.tsx:124
 #: src/tasks/set_alarm.ts:98
 msgid "Dismiss"
 msgstr "Hentikan"
@@ -423,7 +427,7 @@ msgstr "Buat Pengingat"
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:114
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -435,8 +439,8 @@ msgstr "Tidak"
 msgid "None (Automatic)"
 msgstr "Tidak ada (Otomatis)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:216
-#: src/screens/settings_notifications/notification_setting.tsx:281
+#: src/screens/settings_notifications/notification_setting.tsx:225
+#: src/screens/settings_notifications/notification_setting.tsx:293
 msgid "Notification"
 msgstr "Notifikasi"
 
@@ -448,7 +452,7 @@ msgstr "Notifikasi & Suara"
 msgid "Numbering system"
 msgstr "Sistem penomoran"
 
-#: src/screens/settings_reminders/reminder_item.tsx:99
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "Once"
 msgstr "Sekali"
 
@@ -457,7 +461,7 @@ msgid "One-Seventh of the Night"
 msgstr "Sepertujuh Malam"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:206
 msgid "Only once?"
 msgstr "Hanya sekali?"
 
@@ -473,7 +477,7 @@ msgstr "Buka Pengaturan"
 msgid "Open Power Manager Settings"
 msgstr "Buka Pengaturan"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:181
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:185
 msgid "Options"
 msgstr "Opsi"
 
@@ -482,7 +486,7 @@ msgid "Paste"
 msgstr "Tempel"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:184
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:188
 msgid "Play adhan?"
 msgstr "Bermain adzan?"
 
@@ -513,8 +517,8 @@ msgid "Referred to as the ISNA method"
 msgstr "Mengacu pada metode ISNA"
 
 #: src/screens/fullscreen_alarm/index.tsx:44
-#: src/tasks/set_reminder.ts:69
-#: src/tasks/set_reminder.ts:93
+#: src/tasks/set_reminder.ts:70
+#: src/tasks/set_reminder.ts:96
 msgid "Reminder"
 msgstr "Pengingat"
 
@@ -571,7 +575,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:102
+#: src/screens/home/index.tsx:108
 msgid "Show Today"
 msgstr "Hari Ini"
 
@@ -598,8 +602,8 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "Beberapa perangkat memerlukan pengaturan tambahan pada Power Manager untuk mencegah aplikasi berhenti di latar belakang. Nonaktifkan opsi hemat daya untuk aplikasi ini."
 
-#: src/screens/settings_notifications/notification_setting.tsx:253
-#: src/screens/settings_notifications/notification_setting.tsx:289
+#: src/screens/settings_notifications/notification_setting.tsx:262
+#: src/screens/settings_notifications/notification_setting.tsx:301
 msgid "Sound"
 msgstr "Suara"
 
@@ -755,7 +759,7 @@ msgstr "Tentang"
 msgid "adjustment.hint"
 msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "after"
 msgstr "setelah"
 
@@ -768,7 +772,7 @@ msgstr "Ashar"
 msgid "battery_optimization_settings"
 msgstr "Optimasi Baterai"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "before"
 msgstr "sebelum"
 
@@ -870,18 +874,18 @@ msgstr "Terbenam"
 msgid "widget_settings"
 msgstr "Pengaturan Widget"
 
-#: src/screens/settings_reminders/reminder_item.tsx:98
+#: src/screens/settings_reminders/reminder_item.tsx:30
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} menit setelah {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:97
+#: src/screens/settings_reminders/reminder_item.tsx:29
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} menit sebelum {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:224
+#: src/screens/settings_notifications/notification_setting.tsx:233
 msgid "{prayerName} notification will be shown"
 msgstr "Pemberitahuan waktu {prayerName} akan ditampilkan"
 
-#: src/screens/settings_notifications/notification_setting.tsx:261
+#: src/screens/settings_notifications/notification_setting.tsx:271
 msgid "{prayerName} sound will be played"
 msgstr "Suara adzan {prayerName} akan diputar"
