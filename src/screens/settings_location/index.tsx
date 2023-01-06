@@ -13,6 +13,7 @@ import {
   FormControl,
   WarningOutlineIcon,
   Spacer,
+  Flex,
 } from 'native-base';
 import {useCallback, useLayoutEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
@@ -318,13 +319,19 @@ export function LocationSettings(props: IScrollViewProps) {
             {t`Longitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
-        <FormControl flex={2} pl="1">
-          <FormControl.Label>{''}</FormControl.Label>
+
+        <Flex flex={2} pl="1" alignItems="center" justifyContent="center">
           <Button
+            width="100%"
+            px="1"
             size="sm"
             onPress={clearCoordinates}
+            _text={{
+              adjustsFontSizeToFit: true,
+              noOfLines: 1,
+            }}
             textAlign="center">{t`Clear`}</Button>
-        </FormControl>
+        </Flex>
       </HStack>
       <HStack mt="5">
         <FormControl alignItems="center" justifyContent="center">
