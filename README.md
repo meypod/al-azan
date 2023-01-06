@@ -51,8 +51,6 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 ## How to run this project
 
-It's important to note that this project uses [re-pack](https://github.com/callstack/repack)(webpack) to bundle the files, to be able to provide chunking and lazy imports. So running it is a little bit different.
-
 for development:
 
 ```bash
@@ -70,7 +68,7 @@ yarn start
 for creating a release build locally to debug:
 
 ```bash
-cd android && ./gradlew build -PnoDebug
+cd android && ./gradlew :app:assembleRelease
 ```
 
 to uninstall app while keeping data:

@@ -1,5 +1,3 @@
-import {ScriptManager, Script} from '@callstack/repack/client';
-
 import {AppRegistry} from 'react-native';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
@@ -12,31 +10,16 @@ import {setReminders} from '@/tasks/set_reminder';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
-ScriptManager.shared.addResolver(async scriptId => {
-  // In development, get all the chunks from dev server.
-  if (__DEV__) {
-    return {
-      url: Script.getDevServerURL(scriptId),
-      cache: false,
-    };
-  }
-
-  // get all chunks from file system, since we don't have any remote chunks
-  return {
-    url: Script.getFileSystemURL(scriptId),
-  };
-});
-
 setupNotifeeHandlers();
 
 WidgetMod.onUpdateScreenWidgetRequested(async () => {
-  await bootstrap();
+  bootstrap();
   setUpdateWidgetsAlarms();
   await updateWidgets();
 });
 
 AppRegistry.registerRunnable(APP_KEY, async initialProps => {
-  await bootstrap();
+  bootstrap();
   setNextAdhan();
   setReminders();
   setUpdateWidgetsAlarms();

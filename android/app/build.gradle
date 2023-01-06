@@ -78,10 +78,8 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing
     entryFile: 'index.tsx',
-    hermesCommand: "../../node_modules/hermes-engine/win64-bin/hermesc.exe",
-    bundleCommand: "webpack-bundle",
     bundleInDebug: false
 ]
 

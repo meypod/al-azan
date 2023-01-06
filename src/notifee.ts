@@ -156,7 +156,7 @@ async function handleNotification({
   bgEvent,
 }: Omit<NotifeeEvent, 'options'> & {bgEvent: boolean}) {
   if (bgEvent) {
-    await bootstrap();
+    bootstrap();
   }
   const {notification} = detail;
   const channelId = notification?.android?.channelId;
@@ -221,7 +221,7 @@ export function setupNotifeeHandlers() {
   );
 
   notifee.registerForegroundService(async notification => {
-    await bootstrap();
+    bootstrap();
 
     const channelId = notification?.android?.channelId;
     if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {

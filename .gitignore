@@ -30,10 +30,12 @@ build/
 local.properties
 *.iml
 *.hprof
+.cxx/
 
 # node.js
 #
 node_modules/
+node_modules_rn_71/
 npm-debug.log
 yarn-error.log
 

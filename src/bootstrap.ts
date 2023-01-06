@@ -4,11 +4,11 @@ import {settings} from '@/store/settings';
 
 let bootstraped = false;
 
-export async function bootstrap() {
+export function bootstrap() {
   if (bootstraped) return;
   const state = settings.getState();
   try {
-    await loadLocale(state['SELECTED_LOCALE']);
+    loadLocale(state['SELECTED_LOCALE']);
     bootstraped = true;
   } catch {
     console.warn(
