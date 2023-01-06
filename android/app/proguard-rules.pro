@@ -9,6 +9,11 @@
 
 # Add any project specific keep options here:
 
+# Disabling obfuscation is useful if you collect stack traces from production crashes
+# (unless you are using a system that supports de-obfuscate the stack traces).
+-dontobfuscate
+
+# React Native
 
 # Keep our interfaces so they can be used by other ProGuard rules.
 # See http://sourceforge.net/p/proguard/bugs/466/
@@ -51,9 +56,15 @@
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okio.**
 
+# app
+-keep class com.github.meypod.al_azan.** { *; }
+
 # alarm module
 
--keep class com.reactnativealarmmodule { *; }
+-keep class com.reactnativealarmmodule.** { *; }
 
 # location module
--keep class com.github.douglasjunior { *; }
+-keep class com.github.douglasjunior.** { *; }
+
+# system settings module
+-keep class com.ninty.system.setting.** { *; }
