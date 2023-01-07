@@ -286,7 +286,7 @@ export function LocationSettings(props: IScrollViewProps) {
       <Divider label={t`Using Coordinates`} mb="2" mt="4" />
 
       <HStack>
-        <FormControl flex={5} pr="1" mb="1">
+        <FormControl flex={1} flexGrow={1} pr="1" mb="1">
           <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
           <Input
             py="0"
@@ -302,7 +302,7 @@ export function LocationSettings(props: IScrollViewProps) {
             {t`Latitude is invalid`}
           </FormControl.ErrorMessage>
         </FormControl>
-        <FormControl flex={5} pl="1">
+        <FormControl flex={1} flexGrow={1} pl="1">
           <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
           <Input
             py="0"
@@ -319,20 +319,16 @@ export function LocationSettings(props: IScrollViewProps) {
           </FormControl.ErrorMessage>
         </FormControl>
 
-        <FormControl flex={2} pl="1">
-          <FormControl.Label>{''}</FormControl.Label>
+        <FormControl flexShrink={1} flexGrow={0} width="10" pl="1">
+          <FormControl.Label> </FormControl.Label>
           <Button
-            width="100%"
-            px="1"
+            borderColor="danger.900"
+            variant="outline"
+            colorScheme="danger"
             size="sm"
-            onPress={clearCoordinates}
-            _text={{
-              adjustsFontSizeToFit: true,
-              noOfLines: 1,
-              minimumFontScale: 0.01,
-              fontSize: 200,
-            }}
-            textAlign="center">{t`Clear`}</Button>
+            onPress={clearCoordinates}>
+            <CloseIcon />
+          </Button>
         </FormControl>
       </HStack>
       <HStack mt="5">

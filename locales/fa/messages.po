@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-07 22:39+0330\n"
+"POT-Creation-Date: 2023-01-08 01:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -163,10 +163,6 @@ msgstr "سیستم شماره گذاری را انتخاب کنید"
 #: src/screens/settings_location/index.tsx:246
 msgid "City/Area"
 msgstr "شهر/ناحیه"
-
-#: src/screens/settings_location/index.tsx:333
-msgid "Clear"
-msgstr "پاک کردن"
 
 #: src/screens/settings_location/index.tsx:144
 msgid "Clipboard data does not contain coordinates"
@@ -488,7 +484,7 @@ msgstr "تنظیمات مدیریت انرژی را باز کن"
 msgid "Options"
 msgstr "گزینه ها"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:344
 msgid "Paste"
 msgstr "چسباندن"
 
@@ -752,7 +748,7 @@ msgstr "خوش آمدید"
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:338
 msgid "You can also paste coords from clipboard"
 msgstr "همچنین می توانید مختصات را از کلیپ بورد بچسبانید"
 

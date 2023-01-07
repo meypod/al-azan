@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-07 22:39+0330\n"
+"POT-Creation-Date: 2023-01-08 01:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -163,10 +163,6 @@ msgstr "नंबरिंग सिस्टम चुनें"
 #: src/screens/settings_location/index.tsx:246
 msgid "City/Area"
 msgstr "शहर/क्षेत्र"
-
-#: src/screens/settings_location/index.tsx:333
-msgid "Clear"
-msgstr "साफ़"
 
 #: src/screens/settings_location/index.tsx:144
 msgid "Clipboard data does not contain coordinates"
@@ -488,7 +484,7 @@ msgstr "पावर मैनेजर सेटिंग्स खोलें
 msgid "Options"
 msgstr "विकल्प"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:344
 msgid "Paste"
 msgstr "पेस्ट करें"
 
@@ -752,7 +748,7 @@ msgstr "स्वागत"
 msgid "You can access your device Power Manager using the button below."
 msgstr "आप नीचे दिए गए बटन का उपयोग करके अपने डिवाइस पावर मैनेजर तक पहुंच सकते हैं।"
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:338
 msgid "You can also paste coords from clipboard"
 msgstr "आप क्लिपबोर्ड से भी कोऑरड पेस्ट कर सकते हैं"
 

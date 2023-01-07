@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-07 22:39+0330\n"
+"POT-Creation-Date: 2023-01-08 01:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -163,10 +163,6 @@ msgstr "Nummerierungssystem auswählen"
 #: src/screens/settings_location/index.tsx:246
 msgid "City/Area"
 msgstr "Stadt/Gebiet"
-
-#: src/screens/settings_location/index.tsx:333
-msgid "Clear"
-msgstr "Löschen"
 
 #: src/screens/settings_location/index.tsx:144
 msgid "Clipboard data does not contain coordinates"
@@ -488,7 +484,7 @@ msgstr "Einstellungen für die Energieverwaltung öffnen"
 msgid "Options"
 msgstr "Optionen"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:344
 msgid "Paste"
 msgstr "Einfügen"
 
@@ -757,7 +753,7 @@ msgstr "Willkommen"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Über die untere Schaltfläche können Sie auf die Energieverwaltung Ihres Geräts zugreifen."
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:338
 msgid "You can also paste coords from clipboard"
 msgstr "Sie können die Koordinaten auch aus der Zwischenablage einfügen"
 

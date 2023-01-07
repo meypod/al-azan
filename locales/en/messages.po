@@ -170,10 +170,6 @@ msgstr "Choose numbering system"
 msgid "City/Area"
 msgstr "City/Area"
 
-#: src/screens/settings_location/index.tsx:333
-msgid "Clear"
-msgstr "Clear"
-
 #: src/screens/settings_location/index.tsx:144
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
@@ -494,7 +490,7 @@ msgstr "Open Power Manager Settings"
 msgid "Options"
 msgstr "Options"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:344
 msgid "Paste"
 msgstr "Paste"
 
@@ -770,7 +766,7 @@ msgstr "Welcome"
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:338
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 
