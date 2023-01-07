@@ -2,6 +2,7 @@
 - Fixed reminders (they should work more reliably now)
 - Allow reminders to play adhan
 - Added option to show/play reminder only once
+- Added option to change the secondary calendar
 - There's a change to settings internally, no problem should occur during the update, but if you decided to use an older version after updating, you will lose your reminders.
 - App will now always open fullscreen alarm when adhan is playing when you open the app
 - Reduced app size even more!
