@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-06 22:58+0330\n"
+"POT-Creation-Date: 2023-01-07 22:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +139,7 @@ msgstr "اختر طريقة الحساب"
 msgid "Choose High Latitude Setting"
 msgstr "اختر إعدادات خطوط العرض العالية"
 
-#: src/screens/settings_display/language_settings.tsx:87
+#: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
 msgstr "اختر اللغة"
 
@@ -151,6 +151,7 @@ msgstr "اختر حساب المناطق القطبية"
 msgid "Choose Shafaq method"
 msgstr "اختر طريقة شفق"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "اختر نوع التقويم"
@@ -163,7 +164,7 @@ msgstr "اختر نظام الترقيم"
 msgid "City/Area"
 msgstr "مدينة/منطقة"
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:333
 msgid "Clear"
 msgstr "امسح"
 
@@ -262,6 +263,10 @@ msgstr "خطأ أثناء تنزيل الصوت"
 msgid "Error while getting coordinates"
 msgstr "خطأ أثناء الحصول على الإحداثيات"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:32
+msgid "Ethiopic"
+msgstr "إثيوبي"
+
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "البحث عن موقعي"
@@ -281,6 +286,10 @@ msgstr "الحصول على الإحداثيات"
 #: src/intro/intro.tsx:125
 msgid "Got it"
 msgstr "فهمت"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:30
+msgid "Gregorian"
+msgstr "ميلادي"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
@@ -348,7 +357,7 @@ msgstr "الكويت"
 msgid "Label"
 msgstr "مُلصَق"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:79
 msgid "Language"
 msgstr "لغة"
 
@@ -425,7 +434,7 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:110
 msgid "Next Day"
 msgstr "اليوم التالي"
 
@@ -479,7 +488,7 @@ msgstr "افتح إعدادات مدير الطاقة"
 msgid "Options"
 msgstr "خيارات"
 
-#: src/screens/settings_location/index.tsx:333
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "لصق"
 
@@ -496,7 +505,7 @@ msgstr "حساب المناطق القطبية"
 msgid "Power Manager"
 msgstr "مدير الطاقة"
 
-#: src/screens/home/index.tsx:86
+#: src/screens/home/index.tsx:81
 msgid "Prev Day"
 msgstr "اليوم السابق"
 
@@ -534,6 +543,10 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Saturday"
 msgstr "السبت"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:21
+msgid "Secondary Calendar"
+msgstr "التقويم الثانوي"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
 msgstr "اختر أذان الفجر"
@@ -569,7 +582,7 @@ msgstr "الشيعة ، معهد الجيوفيزياء ، جامعة طهران
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:104
 msgid "Show Today"
 msgstr "اعرض اليوم"
 
@@ -588,6 +601,10 @@ msgstr "سنغافورة"
 #: src/intro/intro.tsx:103
 msgid "Skip"
 msgstr "تخطى"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:31
+msgid "Solar Hijri"
+msgstr "هجري شمسي"
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
@@ -617,6 +634,10 @@ msgstr "الأحد"
 msgid "System Default"
 msgstr "افتراضي النظام"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:33
+msgid "Thai Buddhist"
+msgstr "بوذي تايلاندي"
+
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
@@ -627,9 +648,13 @@ msgstr "شكرا لاختيار هذا التطبيق! هناك أشياء عل�
 msgid "The Gulf Region (Dubai)"
 msgstr "منطقة الخليج (دبي)"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:23
+msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgstr "نوع التقويم الذي يظهر أعلى الشاشة الرئيسية وبجانب التاريخ القمري في التطبیقات المصغّر"
+
 #: src/screens/settings_display/calendar_settings.tsx:23
-msgid "The type of calendar shown in main screen and widgets"
-msgstr "نوع التقويم الذي يظهر على الشاشة الرئيسية و التطبيقات المصغّر"
+msgid "The type of lunar calendar shown in main screen and widgets"
+msgstr "نوع التقويم القمري الذي يظهر على الشاشة الرئيسية و التطبيقات المصغّر"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
@@ -727,7 +752,7 @@ msgstr "مرحبا"
 msgid "You can access your device Power Manager using the button below."
 msgstr "يمكنك الوصول إلى \"مدير الطاقة\" (Power Manager) بجهازك باستخدام الزر أدناه."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "يمكنك أيضًا لصق إحداثيات من الحافظة"
 

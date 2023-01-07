@@ -26,6 +26,7 @@ export type SettingsStore = {
   // other
   SELECTED_LOCALE: string;
   SELECTED_ARABIC_CALENDAR: string;
+  SELECTED_SECONDARY_CALENDAR: string;
   APP_INITIAL_CONFIG_DONE: boolean;
   APP_INTRO_DONE: boolean;
   SAVED_ADHAN_AUDIO_ENTRIES: AdhanEntry[];
@@ -76,6 +77,7 @@ export const settings = createVanilla<SettingsStore>()(
       THEME_COLOR: 'default',
       SELECTED_LOCALE: PREFERRED_LOCALE,
       SELECTED_ARABIC_CALENDAR: '',
+      SELECTED_SECONDARY_CALENDAR: 'gregory',
       APP_INITIAL_CONFIG_DONE: false,
       APP_INTRO_DONE: false,
       SAVED_ADHAN_AUDIO_ENTRIES: INITIAL_ADHAN_AUDIO_ENTRIES,
@@ -237,6 +239,7 @@ export const settings = createVanilla<SettingsStore>()(
             };
             delete (persistedState as any).DISMISSED_ALARM_TIMESTAMP;
             delete (persistedState as any).SCHEDULED_ALARM_TIMESTAMP;
+            (persistedState as any).SELECTED_SECONDARY_CALENDAR = 'gregory';
             break;
         }
         /* eslint-enable no-fallthrough */

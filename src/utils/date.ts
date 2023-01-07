@@ -12,12 +12,15 @@ let IS_24_HOUR_FORMAT = settings.getState().IS_24_HOUR_FORMAT;
 let NUMBERING_SYSTEM = settings.getState().NUMBERING_SYSTEM;
 let SELECTED_LOCALE = getDeterminedLocale(settings.getState());
 let SELECTED_ARABIC_CALENDAR = settings.getState().SELECTED_ARABIC_CALENDAR;
+let SELECTED_SECONDARY_CALENDAR =
+  settings.getState().SELECTED_SECONDARY_CALENDAR || 'gregory';
 
 settings.subscribe(state => {
   IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
   NUMBERING_SYSTEM = state.NUMBERING_SYSTEM;
   SELECTED_LOCALE = getDeterminedLocale(state);
   SELECTED_ARABIC_CALENDAR = state.SELECTED_ARABIC_CALENDAR;
+  SELECTED_SECONDARY_CALENDAR = state.SELECTED_SECONDARY_CALENDAR;
 });
 
 const oneDayInMs = 86400 * 1000;
@@ -75,15 +78,12 @@ export function getDayName(date: Date, length: 'long' | 'short' = 'long') {
   }).format(date);
 }
 
-export function getMonthName(date: Date) {
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
-    month: 'long',
-  }).format(date);
-}
-
-export function getDay(date: Date) {
+export function getFormattedDate(date: Date) {
   return new Intl.DateTimeFormat(SELECTED_LOCALE, {
     day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    calendar: SELECTED_SECONDARY_CALENDAR,
   }).format(date);
 }
 

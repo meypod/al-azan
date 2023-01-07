@@ -10,7 +10,7 @@ import {isRTL} from '@/i18n';
 import {useCalcSettings} from '@/store/calculation_settings';
 import {useStore} from '@/store/home';
 import {useSettingsHelper} from '@/store/settings';
-import {getArabicDate, getDay, getDayName, getMonthName} from '@/utils/date';
+import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
 import useInterval from '@/utils/hooks/use_interval';
 
 export function Home() {
@@ -37,22 +37,21 @@ export function Home() {
   const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
   const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
   const [arabicCalendar] = useSettingsHelper('SELECTED_ARABIC_CALENDAR');
+  const [secondaryCalendar] = useSettingsHelper('SELECTED_SECONDARY_CALENDAR');
 
   const [today, setToday] = useState<{
-    monthName: string;
+    dateString: string;
     todayName: string;
-    dd: string;
     arabicDate: string;
-  }>({monthName: '', todayName: '', dd: '', arabicDate: ''});
+  }>({dateString: '', todayName: '', arabicDate: ''});
 
   useEffect(() => {
     setToday({
       todayName: getDayName(currentDate),
-      monthName: getMonthName(currentDate),
-      dd: getDay(currentDate),
+      dateString: getFormattedDate(currentDate),
       arabicDate: getArabicDate(currentDate),
     });
-  }, [currentDate, numberingSystem]);
+  }, [currentDate, numberingSystem, secondaryCalendar]);
 
   useInterval(() => {
     updateCurrentDate();
@@ -70,11 +69,7 @@ export function Home() {
         flex={1}
         alignItems="center"
         onTouchStart={updateCurrentDate}>
-        <AppBar
-          dayName={today.todayName}
-          monthName={today.monthName}
-          dd={today.dd}
-        />
+        <AppBar dayName={today.todayName} dateString={today.dateString} />
         <HStack
           mt="2"
           justifyContent="space-between"

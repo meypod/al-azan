@@ -145,7 +145,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:87
+#: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -157,6 +157,7 @@ msgstr "Choose Polar Resolution"
 msgid "Choose Shafaq method"
 msgstr "Choose Shafaq method"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "Choose calendar type"
@@ -169,7 +170,7 @@ msgstr "Choose numbering system"
 msgid "City/Area"
 msgstr "City/Area"
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:333
 msgid "Clear"
 msgstr "Clear"
 
@@ -268,6 +269,10 @@ msgstr "Error while downloading audio"
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:32
+msgid "Ethiopic"
+msgstr "Ethiopic"
+
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "Find My Location"
@@ -287,6 +292,10 @@ msgstr "Getting coordinates"
 #: src/intro/intro.tsx:125
 msgid "Got it"
 msgstr "Got it"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:30
+msgid "Gregorian"
+msgstr "Gregorian"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
@@ -354,7 +363,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:79
 msgid "Language"
 msgstr "Language"
 
@@ -431,7 +440,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:110
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -485,7 +494,7 @@ msgstr "Open Power Manager Settings"
 msgid "Options"
 msgstr "Options"
 
-#: src/screens/settings_location/index.tsx:333
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Paste"
 
@@ -502,7 +511,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:86
+#: src/screens/home/index.tsx:81
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -544,6 +553,10 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:21
+msgid "Secondary Calendar"
+msgstr "Secondary Calendar"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
@@ -582,7 +595,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:104
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -601,6 +614,10 @@ msgstr "Singapore"
 #: src/intro/intro.tsx:103
 msgid "Skip"
 msgstr "Skip"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:31
+msgid "Solar Hijri"
+msgstr "Solar Hijri"
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
@@ -633,6 +650,10 @@ msgstr "Sunday"
 msgid "System Default"
 msgstr "System Default"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:33
+msgid "Thai Buddhist"
+msgstr "Thai Buddhist"
+
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
@@ -645,9 +666,13 @@ msgstr ""
 msgid "The Gulf Region (Dubai)"
 msgstr "The Gulf Region (Dubai)"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:23
+msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgstr "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+
 #: src/screens/settings_display/calendar_settings.tsx:23
-msgid "The type of calendar shown in main screen and widgets"
-msgstr "The type of calendar shown in main screen and widgets"
+msgid "The type of lunar calendar shown in main screen and widgets"
+msgstr "The type of lunar calendar shown in main screen and widgets"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
@@ -745,7 +770,7 @@ msgstr "Welcome"
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-06 22:58+0330\n"
+"POT-Creation-Date: 2023-01-07 22:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +139,7 @@ msgstr "حساب کتاب کا طریقہ منتخب کریں۔"
 msgid "Choose High Latitude Setting"
 msgstr "اعلی عرض بلد کی ترتیب کا انتخاب کریں۔"
 
-#: src/screens/settings_display/language_settings.tsx:87
+#: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
 msgstr "زبان کا انتخاب کریں۔"
 
@@ -151,6 +151,7 @@ msgstr "پولر ریزولوشن کا انتخاب کریں۔"
 msgid "Choose Shafaq method"
 msgstr "شفق کا طریقہ منتخب کریں۔"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "کیلنڈر کی قسم منتخب کریں۔"
@@ -163,7 +164,7 @@ msgstr "نمبرنگ سسٹم کا انتخاب کریں۔"
 msgid "City/Area"
 msgstr "شہر/علاقہ"
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:333
 msgid "Clear"
 msgstr "صاف"
 
@@ -262,6 +263,10 @@ msgstr "آڈیو ڈاؤن لوڈ کرتے وقت مسئلہ "
 msgid "Error while getting coordinates"
 msgstr "نقاط حاصل کرتے وقت مسلئہ۔"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:32
+msgid "Ethiopic"
+msgstr "ایتھوپیک"
+
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "میرا مقام تلاش کریں۔"
@@ -281,6 +286,10 @@ msgstr "کوآرڈینیٹ حاصل کرنا"
 #: src/intro/intro.tsx:125
 msgid "Got it"
 msgstr "یہ مل گیا"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:30
+msgid "Gregorian"
+msgstr "گریگورین"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
@@ -348,7 +357,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "لیبل"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:79
 msgid "Language"
 msgstr "زبان"
 
@@ -425,7 +434,7 @@ msgstr "نئی یاد دہانی"
 msgid "Next"
 msgstr "اگلے"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:110
 msgid "Next Day"
 msgstr "اگلے دن"
 
@@ -479,7 +488,7 @@ msgstr "پاور مینیجر کی ترتیبات کھولیں۔"
 msgid "Options"
 msgstr "اختیارات"
 
-#: src/screens/settings_location/index.tsx:333
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "چسپاں کریں۔"
 
@@ -496,7 +505,7 @@ msgstr "پولر ریزولوشن"
 msgid "Power Manager"
 msgstr "پاور مینیجر"
 
-#: src/screens/home/index.tsx:86
+#: src/screens/home/index.tsx:81
 msgid "Prev Day"
 msgstr "پچھلا دن"
 
@@ -534,6 +543,10 @@ msgstr "سام سنگ ڈیوائسز کا اپنا حسب ضرورت پاور م
 msgid "Saturday"
 msgstr "ہفتہ"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:21
+msgid "Secondary Calendar"
+msgstr "ثانوی کیلنڈر"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
 msgstr "فجر کی اذان کے طور پر منتخب کریں۔"
@@ -569,7 +582,7 @@ msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:104
 msgid "Show Today"
 msgstr "آج دکھائیں۔"
 
@@ -588,6 +601,10 @@ msgstr "سنگاپور"
 #: src/intro/intro.tsx:103
 msgid "Skip"
 msgstr "آگے بڑھیں "
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:31
+msgid "Solar Hijri"
+msgstr "شمسی ہجری"
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
@@ -617,6 +634,10 @@ msgstr "اتوار"
 msgid "System Default"
 msgstr "سسٹم ڈیفالٹ"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:33
+msgid "Thai Buddhist"
+msgstr "تھائی بدھسٹ"
+
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
@@ -627,9 +648,13 @@ msgstr "اس ایپ کو منتخب کرنے کا شکریہ! اس ایپ کا �
 msgid "The Gulf Region (Dubai)"
 msgstr "خلیجی علاقہ (دبئی)"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:23
+msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgstr "کیلنڈر کی وہ قسم جو ہوم اسکرین کے اوپر اور وجیٹس میں قمری تاریخ کے ساتھ دکھائی جاتی ہے۔"
+
 #: src/screens/settings_display/calendar_settings.tsx:23
-msgid "The type of calendar shown in main screen and widgets"
-msgstr "کیلنڈر کی قسم جو مین اسکرین اور ویجٹ میں دکھائی جاتی ہے۔"
+msgid "The type of lunar calendar shown in main screen and widgets"
+msgstr "مرکزی اسکرین اور ویجٹ میں دکھائے جانے والے قمری کیلنڈر کی قسم"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
@@ -727,7 +752,7 @@ msgstr "خوش آمدید"
 msgid "You can access your device Power Manager using the button below."
 msgstr "آپ نیچے دیئے گئے بٹن کا استعمال کرکے اپنے ڈیوائس پاور مینیجر تک رسائی حاصل کرسکتے ہیں۔"
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "آپ کلپ بورڈ سے بھی کوڈ پیسٹ کر سکتے ہیں۔"
 

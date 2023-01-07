@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-06 22:58+0330\n"
+"POT-Creation-Date: 2023-01-07 22:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +139,7 @@ msgstr "Hesaplama Yöntemini Seçin"
 msgid "Choose High Latitude Setting"
 msgstr "Yüksek Enlem Ayarını Seçin"
 
-#: src/screens/settings_display/language_settings.tsx:87
+#: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
 msgstr "Dil seçiniz"
 
@@ -151,6 +151,7 @@ msgstr "Kutuplar için çözüm"
 msgid "Choose Shafaq method"
 msgstr "Şafak hesaplama methodu"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "Takvim türünü seçin"
@@ -163,7 +164,7 @@ msgstr "Numaralandırma sistemini seçin"
 msgid "City/Area"
 msgstr "Şehir/Bölge"
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:333
 msgid "Clear"
 msgstr "Temizle"
 
@@ -262,6 +263,10 @@ msgstr "Sesler indirilirken hata"
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:32
+msgid "Ethiopic"
+msgstr "Etiyopya"
+
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "Konumumu Bul"
@@ -281,6 +286,10 @@ msgstr "Koordinatları alma"
 #: src/intro/intro.tsx:125
 msgid "Got it"
 msgstr "Anlaşıldı"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:30
+msgid "Gregorian"
+msgstr "Gregoryen"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
@@ -348,7 +357,7 @@ msgstr "Kuveyt"
 msgid "Label"
 msgstr "Etiket"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:79
 msgid "Language"
 msgstr "Dil"
 
@@ -425,7 +434,7 @@ msgstr "Yeni Hatırlatıcı"
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:110
 msgid "Next Day"
 msgstr "Ertesi gün"
 
@@ -479,7 +488,7 @@ msgstr "Güç Yönetimi Ayarlarını Açın"
 msgid "Options"
 msgstr "Seçenekler"
 
-#: src/screens/settings_location/index.tsx:333
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Yapıştır"
 
@@ -496,7 +505,7 @@ msgstr "Kutuplar için hesaplama yöntemi"
 msgid "Power Manager"
 msgstr "Güç Yöneticisi"
 
-#: src/screens/home/index.tsx:86
+#: src/screens/home/index.tsx:81
 msgid "Prev Day"
 msgstr "Önceki Gün"
 
@@ -534,6 +543,10 @@ msgstr "Samsung cihazlarının \"Aygıt Bakımı\" adı verilen kendi özel Gü�
 msgid "Saturday"
 msgstr "Cumartesi"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:21
+msgid "Secondary Calendar"
+msgstr "İkincil Takvim"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
 msgstr "Fecr Ezanı olarak seçin"
@@ -569,7 +582,7 @@ msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 msgid "Show Adhan Options"
 msgstr "Ezan Seçeneklerini Göster"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:104
 msgid "Show Today"
 msgstr "Bugünü Göster"
 
@@ -588,6 +601,10 @@ msgstr "Singapur"
 #: src/intro/intro.tsx:103
 msgid "Skip"
 msgstr "Atla"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:31
+msgid "Solar Hijri"
+msgstr "Güneş Hicri"
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
@@ -617,6 +634,10 @@ msgstr "Pazar"
 msgid "System Default"
 msgstr "Sistem varsayılanı"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:33
+msgid "Thai Buddhist"
+msgstr "Taylandlı Budist"
+
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
@@ -627,9 +648,13 @@ msgstr "Bu uygulamayı seçtiğiniz için teşekkürler! Bu uygulamayı kullanma
 msgid "The Gulf Region (Dubai)"
 msgstr "Körfez Bölgesi (Dubai)"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:23
+msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgstr "Ana ekranın üstünde ve widget'larda ay tarihinin yanında gösterilen takvim türü"
+
 #: src/screens/settings_display/calendar_settings.tsx:23
-msgid "The type of calendar shown in main screen and widgets"
-msgstr "Ana ekranda ve widget'larda gösterilen takvim türü"
+msgid "The type of lunar calendar shown in main screen and widgets"
+msgstr "Ana ekranda ve widget'larda gösterilen ay takvimi türü"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
@@ -727,7 +752,7 @@ msgstr "Hoş geldiniz"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kodları yapıştırabilirsiniz"
 

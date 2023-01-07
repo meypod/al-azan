@@ -5,11 +5,10 @@ import {navigate} from '@/navigation/root_navigation';
 
 type AppBarProps = {
   dayName?: string;
-  dd?: string;
-  monthName?: string;
+  dateString?: string;
 };
 
-function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
+function AppBar({dayName, dateString}: AppBarProps = {}) {
   const settingsPressed = () => {
     navigate('Settings');
   };
@@ -25,9 +24,7 @@ function AppBar({dayName, monthName, dd}: AppBarProps = {}) {
         borderBottomColor="coolGray.300"
         w="100%">
         <HStack alignItems="center">
-          <Text>
-            {monthName}, {dd}
-          </Text>
+          <Text>{dateString}</Text>
         </HStack>
         <HStack
           left="0"

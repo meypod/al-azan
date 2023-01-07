@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-06 22:58+0330\n"
+"POT-Creation-Date: 2023-01-07 22:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -141,7 +141,7 @@ msgstr "Pilih Metode Perhitungan"
 msgid "Choose High Latitude Setting"
 msgstr "Pilih Pengaturan Lintang Tinggi"
 
-#: src/screens/settings_display/language_settings.tsx:87
+#: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
 msgstr "Pilih Bahasa"
 
@@ -153,6 +153,7 @@ msgstr "Pilih Resolusi Kutub"
 msgid "Choose Shafaq method"
 msgstr "Pilih metode Shafaq"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "Pilih jenis kalender"
@@ -165,7 +166,7 @@ msgstr "Pilih sistem penomoran"
 msgid "City/Area"
 msgstr "Kota/Daerah"
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:333
 msgid "Clear"
 msgstr "Bersihkan"
 
@@ -264,6 +265,10 @@ msgstr "Kesalahan saat mengunduh audio"
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:32
+msgid "Ethiopic"
+msgstr "Etiopia"
+
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
@@ -283,6 +288,10 @@ msgstr "Mendapatkan Koordinat"
 #: src/intro/intro.tsx:125
 msgid "Got it"
 msgstr "Mengerti"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:30
+msgid "Gregorian"
+msgstr "Gregorian"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
@@ -350,7 +359,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Judul"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:79
 msgid "Language"
 msgstr "Bahasa"
 
@@ -427,7 +436,7 @@ msgstr "Buat Pengingat"
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:110
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -481,7 +490,7 @@ msgstr "Buka Pengaturan"
 msgid "Options"
 msgstr "Opsi"
 
-#: src/screens/settings_location/index.tsx:333
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Tempel"
 
@@ -498,7 +507,7 @@ msgstr "Resolusi Kutub"
 msgid "Power Manager"
 msgstr "Pengelola Daya"
 
-#: src/screens/home/index.tsx:86
+#: src/screens/home/index.tsx:81
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -538,6 +547,10 @@ msgstr "Perangkat Samsung memiliki Power Manajer kustom mereka sendiri yang dise
 msgid "Saturday"
 msgstr "Sabtu"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:21
+msgid "Secondary Calendar"
+msgstr "Kalender Sekunder"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
 msgstr "Pilih sebagai Adzan Subuh"
@@ -575,7 +588,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:104
 msgid "Show Today"
 msgstr "Hari Ini"
 
@@ -594,6 +607,10 @@ msgstr "Singapura"
 #: src/intro/intro.tsx:103
 msgid "Skip"
 msgstr "Lewati"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:31
+msgid "Solar Hijri"
+msgstr "Matahari Hijriah"
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
@@ -623,6 +640,10 @@ msgstr "Minggu"
 msgid "System Default"
 msgstr "Default Sistem"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:33
+msgid "Thai Buddhist"
+msgstr "Buddha Thailand"
+
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
@@ -633,9 +654,13 @@ msgstr "Terima kasih telah memilih Al-Azan! Lakukan pengaturan awal sebelum mula
 msgid "The Gulf Region (Dubai)"
 msgstr "The Gulf Region (Dubai)"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:23
+msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgstr "Jenis kalender yang ditampilkan di bagian atas layar beranda dan di samping tanggal lunar di widget"
+
 #: src/screens/settings_display/calendar_settings.tsx:23
-msgid "The type of calendar shown in main screen and widgets"
-msgstr "Jenis kalender yang ditampilkan di layar utama dan widget"
+msgid "The type of lunar calendar shown in main screen and widgets"
+msgstr "Jenis kalender lunar yang ditampilkan di layar utama dan widget"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
@@ -733,7 +758,7 @@ msgstr "Selamat Datang!"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 

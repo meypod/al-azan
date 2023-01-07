@@ -7,7 +7,7 @@ import {
   updatePermanentNotifWidget,
 } from '@/notifee';
 import {settings} from '@/store/settings';
-import {getArabicDate, getDay, getMonthName, getTime} from '@/utils/date';
+import {getArabicDate, getFormattedDate, getTime} from '@/utils/date';
 
 export async function updateWidgets() {
   const now = new Date();
@@ -31,7 +31,7 @@ export async function updateWidgets() {
       ] as [prayerName: string, prayerTime: string, isActive: Boolean],
   );
 
-  const dayAndMonth = getMonthName(now) + ', ' + getDay(now);
+  const dayAndMonth = getFormattedDate(now);
   const hijriDate = getArabicDate(now);
 
   if (settings.getState().SHOW_WIDGET) {

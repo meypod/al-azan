@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-06 22:58+0330\n"
+"POT-Creation-Date: 2023-01-07 22:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +139,7 @@ msgstr "Choisir la méthode de calcul"
 msgid "Choose High Latitude Setting"
 msgstr "Choisir le réglage de la latitude élevée"
 
-#: src/screens/settings_display/language_settings.tsx:87
+#: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
 msgstr "Choisir la langue"
 
@@ -151,6 +151,7 @@ msgstr "Choisir la résolution polaire"
 msgid "Choose Shafaq method"
 msgstr "Choisissez la méthode Shafaq"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "Choisissez le type de calendrier"
@@ -163,7 +164,7 @@ msgstr "Choisir le système de numérotation"
 msgid "City/Area"
 msgstr "Ville/Zone"
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:333
 msgid "Clear"
 msgstr "Effacer"
 
@@ -262,6 +263,10 @@ msgstr "Erreur lors du téléchargement d'un fichier audio"
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:32
+msgid "Ethiopic"
+msgstr "Éthiopique"
+
 #: src/screens/settings_location/index.tsx:198
 msgid "Find My Location"
 msgstr "Trouver ma position"
@@ -281,6 +286,10 @@ msgstr "Obtenir des coordonnées"
 #: src/intro/intro.tsx:125
 msgid "Got it"
 msgstr "Obtenu"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:30
+msgid "Gregorian"
+msgstr "Grégorien"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
@@ -348,7 +357,7 @@ msgstr "Koweït"
 msgid "Label"
 msgstr "Intitulé"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:79
 msgid "Language"
 msgstr "Langue"
 
@@ -425,7 +434,7 @@ msgstr "Nouveau rappel"
 msgid "Next"
 msgstr "Suivant"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:110
 msgid "Next Day"
 msgstr "Jour suivant"
 
@@ -479,7 +488,7 @@ msgstr "Ouvrir les paramètres de gestion d'énergie"
 msgid "Options"
 msgstr "Options"
 
-#: src/screens/settings_location/index.tsx:333
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Coller"
 
@@ -496,7 +505,7 @@ msgstr "Résolution polaire"
 msgid "Power Manager"
 msgstr "Gestionnaire d'énergie"
 
-#: src/screens/home/index.tsx:86
+#: src/screens/home/index.tsx:81
 msgid "Prev Day"
 msgstr "Jour précédent"
 
@@ -538,6 +547,10 @@ msgstr ""
 msgid "Saturday"
 msgstr "Samedi"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:21
+msgid "Secondary Calendar"
+msgstr "Calendrier secondaire"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:187
 msgid "Select as Fajr Adhan"
 msgstr "Sélectionner comme Adhan du Fajr"
@@ -576,7 +589,7 @@ msgstr "Shia, Institut de géophysique, Université de Téhéran"
 msgid "Show Adhan Options"
 msgstr "Afficher les options pour l'Adhan"
 
-#: src/screens/home/index.tsx:108
+#: src/screens/home/index.tsx:104
 msgid "Show Today"
 msgstr "Montrer aujourd'hui"
 
@@ -595,6 +608,10 @@ msgstr "Singapour"
 #: src/intro/intro.tsx:103
 msgid "Skip"
 msgstr "Passer"
+
+#: src/screens/settings_display/calendar_secondary_settings.tsx:31
+msgid "Solar Hijri"
+msgstr "Hijri solaire"
 
 #: src/screens/settings_battery_optimizations/index.tsx:72
 msgid ""
@@ -627,6 +644,10 @@ msgstr "Dimanche"
 msgid "System Default"
 msgstr "Système par défaut"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:33
+msgid "Thai Buddhist"
+msgstr "Bouddhiste thaïlandais"
+
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
@@ -639,9 +660,13 @@ msgstr ""
 msgid "The Gulf Region (Dubai)"
 msgstr "La région du Golfe (Dubaï)"
 
+#: src/screens/settings_display/calendar_secondary_settings.tsx:23
+msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgstr "Le type de calendrier qui s'affiche en haut de l'écran d'accueil et à côté de la date lunaire dans les widgets"
+
 #: src/screens/settings_display/calendar_settings.tsx:23
-msgid "The type of calendar shown in main screen and widgets"
-msgstr "Le type de calendrier affiché dans l'écran principal et les widgets"
+msgid "The type of lunar calendar shown in main screen and widgets"
+msgstr "Le type de calendrier lunaire affiché dans l'écran principal et les widgets"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
@@ -739,7 +764,7 @@ msgstr "Bienvenue sur"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Vous pouvez accéder au gestionnaire d'énergie de votre appareil en utilisant le bouton ci-dessous."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "Vous pouvez également coller les coordonnées à partir du presse-papiers"
 
