@@ -329,6 +329,8 @@ export function LocationSettings(props: IScrollViewProps) {
             _text={{
               adjustsFontSizeToFit: true,
               noOfLines: 1,
+              minimumFontScale: 0.01,
+              fontSize: 200,
             }}
             textAlign="center">{t`Clear`}</Button>
         </FormControl>
