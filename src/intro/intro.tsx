@@ -10,8 +10,8 @@ import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
 import {StepLabel} from '@/intro/step_label';
-import {alarmSettings} from '@/store/alarm_settings';
-import {calcSettings} from '@/store/calculation_settings';
+import {alarmSettings} from '@/store/alarm';
+import {calcSettings} from '@/store/calculation';
 import {reminderSettings} from '@/store/reminder';
 import {settings, useSettingsHelper} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-type Item = typeof data[0];
+type Item = (typeof data)[0];
 
 function _keyExtractor(item: Item) {
   return item.title();

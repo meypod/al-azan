@@ -13,7 +13,7 @@ import {
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
 import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
-import {useCalcSettingsHelper} from '@/store/calculation_settings';
+import {useCalcSettingsHelper} from '@/store/calculation';
 
 export function CalculationSettings(props: IScrollViewProps) {
   const [calculationMethodKey, setCalculationMethodKey] = useCalcSettingsHelper(

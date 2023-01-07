@@ -9,10 +9,7 @@ import {
   PRE_ADHAN_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_NAME,
 } from '@/constants/notification';
-import {
-  alarmSettings,
-  hasAtLeastOneNotificationSetting,
-} from '@/store/alarm_settings';
+import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';

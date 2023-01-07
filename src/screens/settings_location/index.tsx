@@ -19,7 +19,7 @@ import {ToastAndroid} from 'react-native';
 import LocationProvider from 'react-native-get-location';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import Divider from '@/components/Divider';
-import {useCalcSettingsHelper} from '@/store/calculation_settings';
+import {useCalcSettingsHelper} from '@/store/calculation';
 import {useSettingsHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
 import {
@@ -319,17 +319,19 @@ export function LocationSettings(props: IScrollViewProps) {
           </FormControl.ErrorMessage>
         </FormControl>
 
-        <FormControl flexShrink={1} flexGrow={0} width="10" pl="1">
-          <FormControl.Label> </FormControl.Label>
-          <Button
-            borderColor="danger.900"
-            variant="outline"
-            colorScheme="danger"
-            size="sm"
-            onPress={clearCoordinates}>
-            <CloseIcon />
-          </Button>
-        </FormControl>
+        {(lat || long) && (
+          <FormControl flexShrink={1} flexGrow={0} width="10" pl="1">
+            <FormControl.Label> </FormControl.Label>
+            <Button
+              borderColor="danger.900"
+              variant="outline"
+              colorScheme="danger"
+              size="sm"
+              onPress={clearCoordinates}>
+              <CloseIcon />
+            </Button>
+          </FormControl>
+        )}
       </HStack>
       <HStack mt="5">
         <FormControl alignItems="center" justifyContent="center">

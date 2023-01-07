@@ -1,7 +1,7 @@
 import {produce} from 'immer';
 import {useCallback} from 'react';
 import create from 'zustand';
-import {persist} from 'zustand/middleware';
+import {createJSONStorage, persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
@@ -117,7 +117,7 @@ export const reminderSettings = createVanilla<ReminderStore>()(
     }),
     {
       name: REMINDER_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),

@@ -5,7 +5,7 @@ import {Prayer, translatePrayer} from '@/adhan';
 import {
   getPrayerAdjustmentSettingKey,
   useCalcSettingsHelper,
-} from '@/store/calculation_settings';
+} from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
 
 type AdjustmentSettingProps = {

@@ -4,8 +4,8 @@ import {
   Prayer,
   PrayersInOrder,
 } from '@/adhan';
-import {alarmSettings, getAdhanSettingKey} from '@/store/alarm_settings';
-import {calcSettings} from '@/store/calculation_settings';
+import {alarmSettings, getAdhanSettingKey} from '@/store/alarm';
+import {calcSettings} from '@/store/calculation';
 import {addDays} from '@/utils/date';
 
 const timezone_mock = require('timezone-mock');

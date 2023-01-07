@@ -19,8 +19,8 @@ import {
   alarmSettings,
   getAdhanSettingKey,
   PrayerAlarmSettings,
-} from '@/store/alarm_settings';
-import {calcSettings, CalcSettingsStore} from '@/store/calculation_settings';
+} from '@/store/alarm';
+import {calcSettings, CalcSettingsStore} from '@/store/calculation';
 import {addDays, getDayBeginning, WeekDayIndex} from '@/utils/date';
 
 export type PrayerTimesOptions = {

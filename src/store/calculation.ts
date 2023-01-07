@@ -2,9 +2,9 @@ import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
 import {produce} from 'immer';
 import {useCallback} from 'react';
 import create from 'zustand';
-import {persist} from 'zustand/middleware';
+import {createJSONStorage, persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
-import {alarmSettings, AlarmSettingsStore} from './alarm_settings';
+import {alarmSettings, AlarmSettingsStore} from './alarm';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 
@@ -102,7 +102,7 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
     }),
     {
       name: CALC_SETTINGS_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),

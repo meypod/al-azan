@@ -11,7 +11,7 @@ import {
   getAdhanSettingKey,
   PrayerAlarmSettings,
   useAlarmSettingsHelper,
-} from '@/store/alarm_settings';
+} from '@/store/alarm';
 import {WeekDayIndex} from '@/utils/date';
 
 type NotificationSettingProps = {

@@ -3,9 +3,9 @@ import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
 import ReactNativeBlobUtil from 'react-native-blob-util';
 import create from 'zustand';
-import {persist} from 'zustand/middleware';
+import {createJSONStorage, persist} from 'zustand/middleware';
 import createVanilla from 'zustand/vanilla';
-import {alarmSettings} from './alarm_settings';
+import {alarmSettings} from './alarm';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
@@ -185,7 +185,7 @@ export const settings = createVanilla<SettingsStore>()(
     }),
     {
       name: SETTINGS_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),

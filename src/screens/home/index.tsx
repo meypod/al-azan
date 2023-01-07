@@ -7,7 +7,7 @@ import {UpdateIcon} from '@/assets/icons/update';
 import AppBar from '@/components/AppBar';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
 import {isRTL} from '@/i18n';
-import {useCalcSettings} from '@/store/calculation_settings';
+import {useCalcSettings} from '@/store/calculation';
 import {useStore} from '@/store/home';
 import {useSettingsHelper} from '@/store/settings';
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
