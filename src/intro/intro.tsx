@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Modal, Box, StatusBar, Button} from 'native-base';
+import {Modal, Box, Button} from 'native-base';
 import {useCallback, useState} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
@@ -86,7 +86,6 @@ export function Intro() {
 
   return (
     <Box flex="1" safeArea>
-      <StatusBar />
       <AppIntroSlider<Item>
         keyboardDismissMode="on-drag"
         keyboardShouldPersistTaps="handled"

@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {Text, Box, Button, StatusBar, Spacer} from 'native-base';
+import {Text, Box, Button, Spacer} from 'native-base';
 import {memo, useCallback, useEffect, useState} from 'react';
 import {BackHandler} from 'react-native';
 import {replace} from '@/navigation/root_navigation';
@@ -85,7 +85,6 @@ function FullscreenAlarm({route}: ScreenProps) {
       safeArea
       alignItems="stretch"
       display="flex">
-      <StatusBar />
       <Text
         textAlign="center"
         fontSize="sm"

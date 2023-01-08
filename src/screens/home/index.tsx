@@ -3,10 +3,12 @@ import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
+import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/update';
-import AppBar from '@/components/AppBar';
+import Divider from '@/components/Divider';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
 import {isRTL} from '@/i18n';
+import {navigate} from '@/navigation/root_navigation';
 import {useCalcSettings} from '@/store/calculation';
 import {useStore} from '@/store/home';
 import {useSettingsHelper} from '@/store/settings';
@@ -69,7 +71,26 @@ export function Home() {
         flex={1}
         alignItems="center"
         onTouchStart={updateCurrentDate}>
-        <AppBar dayName={today.todayName} dateString={today.dateString} />
+        <HStack
+          mb="-3"
+          px="3"
+          justifyContent="space-between"
+          alignItems="center"
+          w="100%">
+          <HStack alignItems="center">
+            <Text>{today.dateString}</Text>
+          </HStack>
+
+          <Button
+            marginRight="-3"
+            variant="ghost"
+            onPress={() => {
+              navigate('Settings');
+            }}>
+            <SettingsSharpIcon size="2xl" />
+          </Button>
+        </HStack>
+        <Divider borderColor="coolGray.300">{today.todayName}</Divider>
         <HStack
           mt="2"
           justifyContent="space-between"

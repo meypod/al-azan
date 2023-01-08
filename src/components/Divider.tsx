@@ -4,6 +4,8 @@ import {memo} from 'react';
 function Divider({
   label,
   fontSize = 'sm',
+  _text,
+  children,
   ...boxProps
 }: {label?: string} & IBoxProps) {
   return (
@@ -17,32 +19,27 @@ function Divider({
         flex={1}
         flexShrink={1}
         borderBottomWidth={1}
-        borderBottomColor="coolGray.300:alpha.20"
+        borderBottomColor="coolGray.300:alpha.50"
         _light={{
-          borderBottomColor: 'coolGray.600:alpha.20',
+          borderBottomColor: 'coolGray.600:alpha.50',
         }}></Flex>
-      {label && (
-        <Text
-          fontSize={fontSize}
-          color="coolGray.400"
-          _light={{
-            color: 'coolGray.600',
-          }}
-          noOfLines={1}
-          allowFontScaling={true}
-          maxFontSizeMultiplier={1.5}
-          flexShrink={0}
-          mx="2">
-          {label}
-        </Text>
-      )}
+      <Text
+        fontSize={fontSize}
+        noOfLines={1}
+        allowFontScaling={true}
+        maxFontSizeMultiplier={1.5}
+        flexShrink={0}
+        mx="2"
+        {..._text}>
+        {label || children}
+      </Text>
       <Flex
         flex={1}
         flexShrink={1}
         borderBottomWidth={1}
-        borderBottomColor="coolGray.300:alpha.20"
+        borderBottomColor="coolGray.300:alpha.50"
         _light={{
-          borderBottomColor: 'coolGray.600:alpha.20',
+          borderBottomColor: 'coolGray.600:alpha.50',
         }}></Flex>
     </Box>
   );
