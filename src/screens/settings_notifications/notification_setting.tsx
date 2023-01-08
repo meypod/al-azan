@@ -211,6 +211,11 @@ function NotificationSetting({
                   backgroundColor: notifyFullActive
                     ? 'primary.500'
                     : 'black:alpha.5',
+                  borderColor: notifyFullActive
+                    ? 'primary.500'
+                    : notify
+                    ? 'primary.500'
+                    : 'black:alpha.5',
                 }}
                 _dark={{
                   backgroundColor: notifyFullActive ? 'primary.800' : 'black',
@@ -252,6 +257,11 @@ function NotificationSetting({
                 borderWidth={1}
                 _light={{
                   backgroundColor: soundFullActive
+                    ? 'emerald.500:alpha.70'
+                    : 'black:alpha.5',
+                  borderColor: soundFullActive
+                    ? 'emerald.500:alpha.70'
+                    : sound
                     ? 'emerald.500:alpha.70'
                     : 'black:alpha.5',
                 }}
