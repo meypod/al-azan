@@ -206,6 +206,7 @@ function NotificationSetting({
                 px="2"
                 variant="unstyled"
                 onPress={toggleNotify}
+                borderWidth={1}
                 _light={{
                   backgroundColor: notifyFullActive
                     ? 'primary.500'
@@ -213,6 +214,11 @@ function NotificationSetting({
                 }}
                 _dark={{
                   backgroundColor: notifyFullActive ? 'primary.800' : 'black',
+                  borderColor: notifyFullActive
+                    ? 'primary.800'
+                    : notify
+                    ? 'primary.900'
+                    : 'black',
                 }}>
                 <HStack justifyContent="center" alignItems="center">
                   <Text
@@ -243,6 +249,7 @@ function NotificationSetting({
                 alignItems="center"
                 variant="unstyled"
                 onPress={toggleSound}
+                borderWidth={1}
                 _light={{
                   backgroundColor: soundFullActive
                     ? 'emerald.500:alpha.70'
@@ -250,6 +257,11 @@ function NotificationSetting({
                 }}
                 _dark={{
                   backgroundColor: soundFullActive ? 'emerald.700' : 'black',
+                  borderColor: soundFullActive
+                    ? 'emerald.700'
+                    : sound
+                    ? 'emerald.800'
+                    : 'black',
                 }}>
                 <HStack justifyContent="center" alignItems="center">
                   <Text
