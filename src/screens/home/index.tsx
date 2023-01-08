@@ -90,7 +90,9 @@ export function Home() {
             <SettingsSharpIcon size="2xl" />
           </Button>
         </HStack>
-        <Divider borderColor="coolGray.300">{today.todayName}</Divider>
+        <Divider borderColor="coolGray.300" mb="-2">
+          {today.todayName}
+        </Divider>
         <HStack
           mt="2"
           justifyContent="space-between"
