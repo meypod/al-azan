@@ -134,7 +134,10 @@ export function CalculationSettings(props: IScrollViewProps) {
                 selectedValue={asrCalculationSetting || Madhab.Shafi}
                 onValueChange={asrCalculationSettingChanged}
                 flex="1">
-                <Select.Item label={t`Shafi (Default)`} value={Madhab.Shafi} />
+                <Select.Item
+                  label={t`Shafi, Maliki, Hanbali (Default)`}
+                  value={Madhab.Shafi}
+                />
                 <Select.Item label={t`Hanafi`} value={Madhab.Hanafi} />
               </Select>
             </FormControl>

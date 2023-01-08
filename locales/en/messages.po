@@ -41,7 +41,7 @@ msgstr "90 min"
 msgid "Abdul-Basit Abdus-Samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
-#: src/screens/settings_calculation/index.tsx:184
+#: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad"
 
@@ -74,7 +74,7 @@ msgstr "Adjustments"
 msgid "Advanced Calculation Settings"
 msgstr "Advanced Calculation Settings"
 
-#: src/screens/settings_calculation/index.tsx:183
+#: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
 msgstr "Ahmer"
 
@@ -102,7 +102,7 @@ msgstr "Asr Calculation"
 msgid "At least one prayer time must be shown"
 msgstr "At least one prayer time must be shown"
 
-#: src/intro/intro.tsx:119
+#: src/intro/intro.tsx:118
 msgid "Attention"
 msgstr "Attention"
 
@@ -149,11 +149,11 @@ msgstr "Choose High Latitude Setting"
 msgid "Choose Language"
 msgstr "Choose Language"
 
-#: src/screens/settings_calculation/index.tsx:146
+#: src/screens/settings_calculation/index.tsx:149
 msgid "Choose Polar Resolution"
 msgstr "Choose Polar Resolution"
 
-#: src/screens/settings_calculation/index.tsx:175
+#: src/screens/settings_calculation/index.tsx:178
 msgid "Choose Shafaq method"
 msgstr "Choose Shafaq method"
 
@@ -174,11 +174,11 @@ msgstr "City/Area"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
 
-#: src/screens/settings_calculation/index.tsx:157
+#: src/screens/settings_calculation/index.tsx:160
 msgid "Closest City"
 msgstr "Closest City"
 
-#: src/screens/settings_calculation/index.tsx:161
+#: src/screens/settings_calculation/index.tsx:164
 msgid "Closest Date"
 msgstr "Closest Date"
 
@@ -220,7 +220,7 @@ msgstr "Deselect as Fajr Adhan"
 msgid "Disabled"
 msgstr "Disabled"
 
-#: src/screens/fullscreen_alarm/index.tsx:124
+#: src/screens/fullscreen_alarm/index.tsx:123
 #: src/tasks/set_alarm.ts:98
 msgid "Dismiss"
 msgstr "Dismiss"
@@ -229,7 +229,7 @@ msgstr "Dismiss"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
-#: src/intro/intro.tsx:102
+#: src/intro/intro.tsx:101
 msgid "Done"
 msgstr "Done"
 
@@ -277,7 +277,7 @@ msgstr "Find My Location"
 msgid "Friday"
 msgstr "Friday"
 
-#: src/screens/settings_calculation/index.tsx:180
+#: src/screens/settings_calculation/index.tsx:183
 msgid "General (default)"
 msgstr "General (default)"
 
@@ -285,7 +285,7 @@ msgstr "General (default)"
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
 
-#: src/intro/intro.tsx:125
+#: src/intro/intro.tsx:124
 msgid "Got it"
 msgstr "Got it"
 
@@ -297,7 +297,7 @@ msgstr "Gregorian"
 msgid "Gulf region"
 msgstr "Gulf region"
 
-#: src/screens/settings_calculation/index.tsx:138
+#: src/screens/settings_calculation/index.tsx:141
 msgid "Hanafi"
 msgstr "Hanafi"
 
@@ -430,13 +430,13 @@ msgstr "Name"
 msgid "New Reminder"
 msgstr "New Reminder"
 
-#: src/intro/intro.tsx:101
+#: src/intro/intro.tsx:100
 #: src/tasks/set_next_adhan.ts:62
 #: src/tasks/set_next_adhan.ts:94
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:110
+#: src/screens/home/index.tsx:136
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -448,8 +448,8 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:225
-#: src/screens/settings_notifications/notification_setting.tsx:293
+#: src/screens/settings_notifications/notification_setting.tsx:236
+#: src/screens/settings_notifications/notification_setting.tsx:321
 msgid "Notification"
 msgstr "Notification"
 
@@ -499,7 +499,7 @@ msgstr "Paste"
 msgid "Play adhan?"
 msgstr "Play adhan?"
 
-#: src/screens/settings_calculation/index.tsx:143
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Polar Resolution"
 
@@ -507,7 +507,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:81
+#: src/screens/home/index.tsx:107
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -529,7 +529,7 @@ msgstr "Referred to as the ISNA method"
 msgid "Reminder"
 msgstr "Reminder"
 
-#: src/intro/intro.tsx:121
+#: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 
@@ -561,11 +561,11 @@ msgstr "Select as Fajr Adhan"
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
-#: src/screens/settings_calculation/index.tsx:167
+#: src/screens/settings_calculation/index.tsx:170
 msgid "Shafaq"
 msgstr "Shafaq"
 
-#: src/screens/settings_calculation/index.tsx:169
+#: src/screens/settings_calculation/index.tsx:172
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
@@ -575,9 +575,9 @@ msgstr ""
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 
-#: src/screens/settings_calculation/index.tsx:137
-msgid "Shafi (Default)"
-msgstr "Shafi (Default)"
+#: src/screens/settings_calculation/index.tsx:138
+msgid "Shafi, Maliki, Hanbali (Default)"
+msgstr "Shafi, Maliki, Hanbali (Default)"
 
 #: src/adhan/calculation_methods.ts:106
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
@@ -591,7 +591,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:104
+#: src/screens/home/index.tsx:130
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -607,7 +607,7 @@ msgstr "Show notification widget?"
 msgid "Singapore"
 msgstr "Singapore"
 
-#: src/intro/intro.tsx:103
+#: src/intro/intro.tsx:102
 msgid "Skip"
 msgstr "Skip"
 
@@ -625,8 +625,8 @@ msgstr ""
 "to prevent the app from getting killed in the background.\n"
 "In that case disable any power saving option for the app."
 
-#: src/screens/settings_notifications/notification_setting.tsx:262
-#: src/screens/settings_notifications/notification_setting.tsx:301
+#: src/screens/settings_notifications/notification_setting.tsx:287
+#: src/screens/settings_notifications/notification_setting.tsx:329
 msgid "Sound"
 msgstr "Sound"
 
@@ -717,7 +717,7 @@ msgstr "Union Organization Islamic de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "University of Islamic Sciences, Karachi"
 
-#: src/screens/settings_calculation/index.tsx:153
+#: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
@@ -918,10 +918,10 @@ msgstr "{durationInMinutes} min after {prayer}"
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} min before {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:233
+#: src/screens/settings_notifications/notification_setting.tsx:244
 msgid "{prayerName} notification will be shown"
 msgstr "{prayerName} notification will be shown"
 
-#: src/screens/settings_notifications/notification_setting.tsx:271
+#: src/screens/settings_notifications/notification_setting.tsx:296
 msgid "{prayerName} sound will be played"
 msgstr "{prayerName} sound will be played"

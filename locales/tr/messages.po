@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-08 16:44+0330\n"
+"POT-Creation-Date: 2023-01-08 19:16+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "90 dk."
 msgid "Abdul-Basit Abdus-Samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
-#: src/screens/settings_calculation/index.tsx:184
+#: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad (Beyazlık)"
 
@@ -68,7 +68,7 @@ msgstr "Ayarlamalar"
 msgid "Advanced Calculation Settings"
 msgstr "Gelişmiş Hesaplama Ayarları"
 
-#: src/screens/settings_calculation/index.tsx:183
+#: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
 msgstr "Ahmer (Kızıllık)"
 
@@ -96,7 +96,7 @@ msgstr "İkindi hesabı"
 msgid "At least one prayer time must be shown"
 msgstr "En az bir namaz vakti gösterilmelidir"
 
-#: src/intro/intro.tsx:119
+#: src/intro/intro.tsx:118
 msgid "Attention"
 msgstr "Dikkat"
 
@@ -143,11 +143,11 @@ msgstr "Yüksek Enlem Ayarını Seçin"
 msgid "Choose Language"
 msgstr "Dil seçiniz"
 
-#: src/screens/settings_calculation/index.tsx:146
+#: src/screens/settings_calculation/index.tsx:149
 msgid "Choose Polar Resolution"
 msgstr "Kutuplar için çözüm"
 
-#: src/screens/settings_calculation/index.tsx:175
+#: src/screens/settings_calculation/index.tsx:178
 msgid "Choose Shafaq method"
 msgstr "Şafak hesaplama methodu"
 
@@ -168,11 +168,11 @@ msgstr "Şehir/Bölge"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
 
-#: src/screens/settings_calculation/index.tsx:157
+#: src/screens/settings_calculation/index.tsx:160
 msgid "Closest City"
 msgstr "En yakın şehir"
 
-#: src/screens/settings_calculation/index.tsx:161
+#: src/screens/settings_calculation/index.tsx:164
 msgid "Closest Date"
 msgstr "En yakın tarih"
 
@@ -214,7 +214,7 @@ msgstr "Fecr Ezanı olarak seçimi kaldır"
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
-#: src/screens/fullscreen_alarm/index.tsx:124
+#: src/screens/fullscreen_alarm/index.tsx:123
 #: src/tasks/set_alarm.ts:98
 msgid "Dismiss"
 msgstr "Reddet"
@@ -223,7 +223,7 @@ msgstr "Reddet"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkiye"
 
-#: src/intro/intro.tsx:102
+#: src/intro/intro.tsx:101
 msgid "Done"
 msgstr "Tamamlandı"
 
@@ -271,7 +271,7 @@ msgstr "Konumumu Bul"
 msgid "Friday"
 msgstr "Cuma"
 
-#: src/screens/settings_calculation/index.tsx:180
+#: src/screens/settings_calculation/index.tsx:183
 msgid "General (default)"
 msgstr "Genel (varsayılan)"
 
@@ -279,7 +279,7 @@ msgstr "Genel (varsayılan)"
 msgid "Getting coordinates"
 msgstr "Koordinatları alma"
 
-#: src/intro/intro.tsx:125
+#: src/intro/intro.tsx:124
 msgid "Got it"
 msgstr "Anlaşıldı"
 
@@ -291,7 +291,7 @@ msgstr "Gregoryen"
 msgid "Gulf region"
 msgstr "Körfez bölgesi"
 
-#: src/screens/settings_calculation/index.tsx:138
+#: src/screens/settings_calculation/index.tsx:141
 msgid "Hanafi"
 msgstr "Hanefi"
 
@@ -424,13 +424,13 @@ msgstr "Ad"
 msgid "New Reminder"
 msgstr "Yeni Hatırlatıcı"
 
-#: src/intro/intro.tsx:101
+#: src/intro/intro.tsx:100
 #: src/tasks/set_next_adhan.ts:62
 #: src/tasks/set_next_adhan.ts:94
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:110
+#: src/screens/home/index.tsx:136
 msgid "Next Day"
 msgstr "Ertesi gün"
 
@@ -442,8 +442,8 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:225
-#: src/screens/settings_notifications/notification_setting.tsx:293
+#: src/screens/settings_notifications/notification_setting.tsx:236
+#: src/screens/settings_notifications/notification_setting.tsx:321
 msgid "Notification"
 msgstr "Bildirim"
 
@@ -493,7 +493,7 @@ msgstr "Yapıştır"
 msgid "Play adhan?"
 msgstr "Ezan çalmak mı?"
 
-#: src/screens/settings_calculation/index.tsx:143
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Kutuplar için hesaplama yöntemi"
 
@@ -501,7 +501,7 @@ msgstr "Kutuplar için hesaplama yöntemi"
 msgid "Power Manager"
 msgstr "Güç Yöneticisi"
 
-#: src/screens/home/index.tsx:81
+#: src/screens/home/index.tsx:107
 msgid "Prev Day"
 msgstr "Önceki Gün"
 
@@ -523,7 +523,7 @@ msgstr "ISNA yöntemi"
 msgid "Reminder"
 msgstr "Hatırlatıcı"
 
-#: src/intro/intro.tsx:121
+#: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar eksik. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
 
@@ -551,20 +551,20 @@ msgstr "Fecr Ezanı olarak seçin"
 msgid "Selecting a name is required"
 msgstr "Bir ad seçmek gereklidir"
 
-#: src/screens/settings_calculation/index.tsx:167
+#: src/screens/settings_calculation/index.tsx:170
 msgid "Shafaq"
 msgstr "Şafak"
 
-#: src/screens/settings_calculation/index.tsx:169
+#: src/screens/settings_calculation/index.tsx:172
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "Şafak tipi seçimi, sabah namazının zamanını belirlemek için MoonsightingCommittee'nin hesap yönteminde kullanılır."
 
-#: src/screens/settings_calculation/index.tsx:137
-msgid "Shafi (Default)"
-msgstr "Şafi (Varsayılan)"
+#: src/screens/settings_calculation/index.tsx:138
+msgid "Shafi, Maliki, Hanbali (Default)"
+msgstr "Şafi, Maliki, Hanbeli (Varsayılan)"
 
 #: src/adhan/calculation_methods.ts:106
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
@@ -578,7 +578,7 @@ msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 msgid "Show Adhan Options"
 msgstr "Ezan Seçeneklerini Göster"
 
-#: src/screens/home/index.tsx:104
+#: src/screens/home/index.tsx:130
 msgid "Show Today"
 msgstr "Bugünü Göster"
 
@@ -594,7 +594,7 @@ msgstr "Bildirim widget'ı gösterilsin mi?"
 msgid "Singapore"
 msgstr "Singapur"
 
-#: src/intro/intro.tsx:103
+#: src/intro/intro.tsx:102
 msgid "Skip"
 msgstr "Atla"
 
@@ -609,8 +609,8 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "Bazı cihazların, uygulamanın arka planda öldürülmesini önlemek için Güç Yöneticilerinde ek ayarlara ihtiyacı vardır. Bu durumda, uygulama için herhangi bir güç tasarrufu seçeneğini devre dışı bırakın."
 
-#: src/screens/settings_notifications/notification_setting.tsx:262
-#: src/screens/settings_notifications/notification_setting.tsx:301
+#: src/screens/settings_notifications/notification_setting.tsx:287
+#: src/screens/settings_notifications/notification_setting.tsx:329
 msgid "Sound"
 msgstr "Ses"
 
@@ -699,7 +699,7 @@ msgstr "Fransa İslam organizasyon birliği"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "İslami İlimler Üniversitesi, Karaçi"
 
-#: src/screens/settings_calculation/index.tsx:153
+#: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Çözümlenmemiş (varsayılan)"
 
@@ -897,10 +897,10 @@ msgstr "{durationInMinutes} dakika sonra {prayer}"
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} dakika önce {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:233
+#: src/screens/settings_notifications/notification_setting.tsx:244
 msgid "{prayerName} notification will be shown"
 msgstr "{prayerName} bildirimi gösterilecek"
 
-#: src/screens/settings_notifications/notification_setting.tsx:271
+#: src/screens/settings_notifications/notification_setting.tsx:296
 msgid "{prayerName} sound will be played"
 msgstr "{prayerName} sesi çalınacak"
