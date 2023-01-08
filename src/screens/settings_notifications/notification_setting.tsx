@@ -242,6 +242,9 @@ function NotificationSetting({
                     value="notify"
                     isChecked={!!notify}
                     accessibilityLabel={t`${prayerName} notification will be shown`}
+                    _disabled={{
+                      opacity: 1,
+                    }}
                   />
                 </HStack>
               </Button>
@@ -291,6 +294,9 @@ function NotificationSetting({
                     isDisabled={true}
                     isChecked={!!sound}
                     accessibilityLabel={t`${prayerName} sound will be played`}
+                    _disabled={{
+                      opacity: 1,
+                    }}
                   />
                 </HStack>
               </Button>
