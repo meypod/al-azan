@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-08 01:55+0330\n"
+"POT-Creation-Date: 2023-01-08 16:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -425,8 +425,8 @@ msgid "New Reminder"
 msgstr "Neue Erinnerung"
 
 #: src/intro/intro.tsx:101
-#: src/tasks/set_next_adhan.ts:65
-#: src/tasks/set_next_adhan.ts:97
+#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:94
 msgid "Next"
 msgstr "Weiter"
 
@@ -484,7 +484,7 @@ msgstr "Einstellungen für die Energieverwaltung öffnen"
 msgid "Options"
 msgstr "Optionen"
 
-#: src/screens/settings_location/index.tsx:344
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Einfügen"
 
@@ -636,8 +636,8 @@ msgid "System Default"
 msgstr "Systemvoreinstellung"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
-msgid "Thai Buddhist"
-msgstr "Thailändischer Buddhist"
+msgid "Thai Solar"
+msgstr "Thailändisch Solar"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
@@ -753,7 +753,7 @@ msgstr "Willkommen"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Über die untere Schaltfläche können Sie auf die Energieverwaltung Ihres Geräts zugreifen."
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "Sie können die Koordinaten auch aus der Zwischenablage einfügen"
 

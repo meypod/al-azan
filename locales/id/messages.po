@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-08 01:55+0330\n"
+"POT-Creation-Date: 2023-01-08 16:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -427,8 +427,8 @@ msgid "New Reminder"
 msgstr "Buat Pengingat"
 
 #: src/intro/intro.tsx:101
-#: src/tasks/set_next_adhan.ts:65
-#: src/tasks/set_next_adhan.ts:97
+#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:94
 msgid "Next"
 msgstr "Lanjut"
 
@@ -486,7 +486,7 @@ msgstr "Buka Pengaturan"
 msgid "Options"
 msgstr "Opsi"
 
-#: src/screens/settings_location/index.tsx:344
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Tempel"
 
@@ -637,8 +637,8 @@ msgid "System Default"
 msgstr "Default Sistem"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
-msgid "Thai Buddhist"
-msgstr "Buddha Thailand"
+msgid "Thai Solar"
+msgstr "Thai Solar"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
@@ -754,7 +754,7 @@ msgstr "Selamat Datang!"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 

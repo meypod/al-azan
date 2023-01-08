@@ -30,7 +30,7 @@ export function CalendarSecondarySettings(props: IStackProps) {
           <Select.Item label={t`Gregorian`} value="gregory" />
           <Select.Item label={t`Solar Hijri`} value="persian" />
           <Select.Item label={t`Ethiopic`} value="ethiopic" />
-          <Select.Item label={t`Thai Buddhist`} value="buddhist" />
+          <Select.Item label={t`Thai Solar`} value="buddhist" />
         </Select>
       </FormControl>
     </HStack>

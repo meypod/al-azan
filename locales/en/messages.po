@@ -431,8 +431,8 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:101
-#: src/tasks/set_next_adhan.ts:65
-#: src/tasks/set_next_adhan.ts:97
+#: src/tasks/set_next_adhan.ts:62
+#: src/tasks/set_next_adhan.ts:94
 msgid "Next"
 msgstr "Next"
 
@@ -490,7 +490,7 @@ msgstr "Open Power Manager Settings"
 msgid "Options"
 msgstr "Options"
 
-#: src/screens/settings_location/index.tsx:344
+#: src/screens/settings_location/index.tsx:346
 msgid "Paste"
 msgstr "Paste"
 
@@ -647,8 +647,8 @@ msgid "System Default"
 msgstr "System Default"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
-msgid "Thai Buddhist"
-msgstr "Thai Buddhist"
+msgid "Thai Solar"
+msgstr "Thai Solar"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
@@ -766,7 +766,7 @@ msgstr "Welcome"
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
-#: src/screens/settings_location/index.tsx:338
+#: src/screens/settings_location/index.tsx:340
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 
