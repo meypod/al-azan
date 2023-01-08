@@ -1,4 +1,14 @@
-import {AppRegistry} from 'react-native';
+import {LogBox, AppRegistry} from 'react-native';
+
+if (__DEV__) {
+  LogBox.ignoreLogs([
+    'new NativeEventEmitter',
+    'UNSAFE_componentWillReceiveProps',
+    'UNSAFE_componentWillMount',
+    '[DEPRECATED] `getStorage`',
+  ]);
+}
+
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {bootstrap} from '@/bootstrap';
