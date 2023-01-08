@@ -90,7 +90,10 @@ export function Home() {
             <SettingsSharpIcon size="2xl" />
           </Button>
         </HStack>
-        <Divider borderColor="coolGray.300" mb="-2">
+        <Divider
+          borderColor="coolGray.300"
+          mb="-2"
+          _text={{fontWeight: 'bold'}}>
           {today.todayName}
         </Divider>
         <HStack
