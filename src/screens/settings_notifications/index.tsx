@@ -1,4 +1,11 @@
-import {ScrollView, IScrollViewProps} from 'native-base';
+import {t} from '@lingui/macro';
+import {
+  ScrollView,
+  IScrollViewProps,
+  InfoIcon,
+  HStack,
+  Text,
+} from 'native-base';
 import {useCallback, useState} from 'react';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
@@ -34,7 +41,27 @@ export function NotificationSettings(props: IScrollViewProps) {
           expanded={expandedPrayer === p}
         />
       ))}
-
+      <HStack p="1" alignItems="flex-start">
+        <Text
+          fontSize="xs"
+          _dark={{
+            color: 'muted.400',
+          }}
+          _light={{
+            color: 'muted.500',
+          }}
+          flexShrink={1}>
+          <InfoIcon
+            _dark={{
+              color: 'muted.400',
+            }}
+            _light={{
+              color: 'muted.500',
+            }}
+          />{' '}
+          {t`Tahajjud time is the last third of the night`}
+        </Text>
+      </HStack>
       <NotifyNextAdhanSetting mt="4" />
     </ScrollView>
   );
