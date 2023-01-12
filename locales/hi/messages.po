@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-10 00:26+0330\n"
+"POT-Creation-Date: 2023-01-12 13:09+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -215,7 +215,7 @@ msgid "Disabled"
 msgstr "अक्षम"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:98
+#: src/tasks/set_alarm.ts:99
 msgid "Dismiss"
 msgstr "हटा दीजिए"
 
@@ -442,8 +442,8 @@ msgstr "नहीं"
 msgid "None (Automatic)"
 msgstr "कोई नहीं (स्वचालित)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:236
-#: src/screens/settings_notifications/notification_setting.tsx:321
+#: src/screens/settings_notifications/notification_setting.tsx:239
+#: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
 msgstr "अधिसूचना"
 
@@ -609,8 +609,8 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "ऐप को बैकग्राउंड में बंद होने से बचाने के लिए कुछ डिवाइसों को अपने पावर मैनेजर के अंदर अतिरिक्त सेटिंग्स की आवश्यकता होती है। उस स्थिति में ऐप के लिए किसी भी बिजली बचत विकल्प को अक्षम करें।"
 
-#: src/screens/settings_notifications/notification_setting.tsx:287
-#: src/screens/settings_notifications/notification_setting.tsx:329
+#: src/screens/settings_notifications/notification_setting.tsx:290
+#: src/screens/settings_notifications/notification_setting.tsx:330
 msgid "Sound"
 msgstr "ध्वनि"
 
@@ -629,6 +629,10 @@ msgstr "रविवार"
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
 msgstr "प्रणालीगत डिफॉल्ट"
+
+#: src/screens/settings_notifications/index.tsx:62
+msgid "Tahajjud time is the last third of the night"
+msgstr "तहज्जुद का समय रात का आखिरी तीसरा समय होता है"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
 msgid "Thai Solar"
@@ -897,10 +901,10 @@ msgstr "{durationInMinutes} मिनट के बाद {prayer}"
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} मिनट पहले {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:244
+#: src/screens/settings_notifications/notification_setting.tsx:247
 msgid "{prayerName} notification will be shown"
 msgstr "{prayerName} अधिसूचना दिखाई जाएगी"
 
-#: src/screens/settings_notifications/notification_setting.tsx:296
+#: src/screens/settings_notifications/notification_setting.tsx:299
 msgid "{prayerName} sound will be played"
 msgstr "{prayerName} ध्वनि बजाई जाएगी"

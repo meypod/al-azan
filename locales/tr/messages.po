@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-10 00:26+0330\n"
+"POT-Creation-Date: 2023-01-12 13:09+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -215,7 +215,7 @@ msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:98
+#: src/tasks/set_alarm.ts:99
 msgid "Dismiss"
 msgstr "Reddet"
 
@@ -442,8 +442,8 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:236
-#: src/screens/settings_notifications/notification_setting.tsx:321
+#: src/screens/settings_notifications/notification_setting.tsx:239
+#: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
 msgstr "Bildirim"
 
@@ -609,8 +609,8 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "Bazı cihazların, uygulamanın arka planda öldürülmesini önlemek için Güç Yöneticilerinde ek ayarlara ihtiyacı vardır. Bu durumda, uygulama için herhangi bir güç tasarrufu seçeneğini devre dışı bırakın."
 
-#: src/screens/settings_notifications/notification_setting.tsx:287
-#: src/screens/settings_notifications/notification_setting.tsx:329
+#: src/screens/settings_notifications/notification_setting.tsx:290
+#: src/screens/settings_notifications/notification_setting.tsx:330
 msgid "Sound"
 msgstr "Ses"
 
@@ -629,6 +629,10 @@ msgstr "Pazar"
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
 msgstr "Sistem varsayılanı"
+
+#: src/screens/settings_notifications/index.tsx:62
+msgid "Tahajjud time is the last third of the night"
+msgstr "Teheccüd vakti gecenin son üçte biridir"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
 msgid "Thai Solar"
@@ -897,10 +901,10 @@ msgstr "{durationInMinutes} dakika sonra {prayer}"
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} dakika önce {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:244
+#: src/screens/settings_notifications/notification_setting.tsx:247
 msgid "{prayerName} notification will be shown"
 msgstr "{prayerName} bildirimi gösterilecek"
 
-#: src/screens/settings_notifications/notification_setting.tsx:296
+#: src/screens/settings_notifications/notification_setting.tsx:299
 msgid "{prayerName} sound will be played"
 msgstr "{prayerName} sesi çalınacak"

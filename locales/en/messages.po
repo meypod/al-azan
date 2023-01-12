@@ -221,7 +221,7 @@ msgid "Disabled"
 msgstr "Disabled"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:98
+#: src/tasks/set_alarm.ts:99
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -448,8 +448,8 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/screens/settings_notifications/notification_setting.tsx:236
-#: src/screens/settings_notifications/notification_setting.tsx:321
+#: src/screens/settings_notifications/notification_setting.tsx:239
+#: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
 msgstr "Notification"
 
@@ -625,8 +625,8 @@ msgstr ""
 "to prevent the app from getting killed in the background.\n"
 "In that case disable any power saving option for the app."
 
-#: src/screens/settings_notifications/notification_setting.tsx:287
-#: src/screens/settings_notifications/notification_setting.tsx:329
+#: src/screens/settings_notifications/notification_setting.tsx:290
+#: src/screens/settings_notifications/notification_setting.tsx:330
 msgid "Sound"
 msgstr "Sound"
 
@@ -645,6 +645,10 @@ msgstr "Sunday"
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
 msgstr "System Default"
+
+#: src/screens/settings_notifications/index.tsx:62
+msgid "Tahajjud time is the last third of the night"
+msgstr "Tahajjud time is the last third of the night"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
 msgid "Thai Solar"
@@ -918,10 +922,10 @@ msgstr "{durationInMinutes} min after {prayer}"
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} min before {prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:244
+#: src/screens/settings_notifications/notification_setting.tsx:247
 msgid "{prayerName} notification will be shown"
 msgstr "{prayerName} notification will be shown"
 
-#: src/screens/settings_notifications/notification_setting.tsx:296
+#: src/screens/settings_notifications/notification_setting.tsx:299
 msgid "{prayerName} sound will be played"
 msgstr "{prayerName} sound will be played"
