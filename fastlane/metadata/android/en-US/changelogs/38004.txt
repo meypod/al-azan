@@ -6,6 +6,7 @@
 - Added option to change the secondary calendar
 - There's a change to settings internally, no problem should occur during the update, but if you decided to use an older version after updating, you will lose your reminders.
 - App will now always open fullscreen alarm when adhan is playing when you open the app
+- Fullscreen alarm behavior is improved, which may also reduce battery usage of the app a little bit
 - Reduced app size even more!
 - Improved app startup performance
 - Minor tweaks and improvements
