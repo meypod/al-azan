@@ -55,9 +55,9 @@ export async function cancelAlarmNotif({
   if (notification?.android?.asForegroundService) {
     if (options?.playSound) {
       await stopAdhan().catch(console.error);
-      await notifee.stopForegroundService();
       replace('Home');
     }
+    await notifee.stopForegroundService();
   }
 
   if (options?.notifId) {
@@ -230,7 +230,7 @@ export function setupNotifeeHandlers() {
       if (options?.playSound) {
         return playAdhan(options.prayer)
           .then(() => cancelAlarmNotif({notification, options}))
-          .then(() => BackHandler.exitApp());
+          .finally(() => BackHandler.exitApp());
       }
     }
 
