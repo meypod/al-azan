@@ -1,4 +1,5 @@
 - Added settings to play adhan only on certain days (like play Dhuhr on Sundays and not the other days)
+- Changed default islamic calendar to Umm al-Qura, except for persian language which will use Civil by default. You can always change this in settings. This change does not affect you if you have already changed your calendar.
 - Fixed reminders (they should work more reliably now)
 - Allow reminders to play adhan
 - Added option to show/play reminder only once
