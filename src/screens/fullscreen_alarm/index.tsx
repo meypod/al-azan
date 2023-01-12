@@ -2,11 +2,9 @@ import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, Spacer} from 'native-base';
 import {memo, useCallback, useEffect, useState} from 'react';
-import {BackHandler} from 'react-native';
-import {replace} from '@/navigation/root_navigation';
+import {finishAndRemoveTask} from '@/modules/activity';
 import {RootStackParamList} from '@/navigation/types';
 import {cancelAlarmNotif} from '@/notifee';
-import {isPlayingAdhan} from '@/services/azan_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
 
@@ -33,7 +31,7 @@ function FullscreenAlarm({route}: ScreenProps) {
       route.params.options || 'false',
     ) as SetAlarmTaskOptions;
     if (!parsedAlarmOptions) {
-      replace('Home');
+      finishAndRemoveTask();
       return;
     }
     parsedAlarmOptions.date = new Date(parsedAlarmOptions.date);
@@ -53,28 +51,22 @@ function FullscreenAlarm({route}: ScreenProps) {
       subtitle,
       date: parsedAlarmOptions.date,
     });
-
-    if (!isPlayingAdhan()) {
-      replace('Home');
-    }
-  }, [route]);
+  }, [route.params.options]);
 
   const onDismissPress = useCallback(async () => {
-    const parsedAlarmOptions = JSON.parse(
-      route.params.options || 'false',
-    ) as SetAlarmTaskOptions;
-    if (!parsedAlarmOptions) {
-      replace('Home');
-      return;
-    }
-    if (isPlayingAdhan()) {
+    try {
+      const parsedAlarmOptions = JSON.parse(
+        route.params.options || 'false',
+      ) as SetAlarmTaskOptions;
+      if (!parsedAlarmOptions) {
+        return;
+      }
       await cancelAlarmNotif({
         options: parsedAlarmOptions,
         notification: {android: {asForegroundService: true}},
       });
-      BackHandler.exitApp();
-    } else {
-      replace('Home');
+    } finally {
+      finishAndRemoveTask();
     }
   }, [route]);
 

@@ -1,25 +1,25 @@
 package com.github.meypod.al_azan.modules;
 
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+
 import androidx.annotation.NonNull;
-import androidx.core.content.IntentCompat;
+
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-public class RestartModule extends ReactContextBaseJavaModule {
-  RestartModule(ReactApplicationContext context) {
+public class ActivityModule extends ReactContextBaseJavaModule {
+  ActivityModule(ReactApplicationContext context) {
     super(context);
   }
 
   @NonNull
   @Override
   public String getName() {
-    return "RestartModule";
+    return "ActivityModule";
   }
 
   @ReactMethod
@@ -37,5 +37,33 @@ public class RestartModule extends ReactContextBaseJavaModule {
       System.exit(0);    // System finishes and automatically relaunches us.
     }
 
+  }
+
+  @ReactMethod
+  public void finish() {
+    Activity currentActivity = getReactApplicationContext().getCurrentActivity();
+    if (currentActivity != null) {
+      currentActivity.finish();
+    }
+  }
+
+  @ReactMethod
+  public void finishAndRemoveTask() {
+    Activity currentActivity = getReactApplicationContext().getCurrentActivity();
+    if (currentActivity != null) {
+      currentActivity.finishAffinity();
+      currentActivity.finishAndRemoveTask();
+    }
+  }
+
+
+  @ReactMethod
+  public void getActivityName(final Promise promise) {
+    Activity currentActivity = getReactApplicationContext().getCurrentActivity();
+    if (currentActivity != null) {
+      promise.resolve(currentActivity.getLocalClassName());
+      return;
+    }
+    promise.resolve("");
   }
 }

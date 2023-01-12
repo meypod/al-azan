@@ -9,9 +9,9 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.github.meypod.al_azan.modules.ActivityModulePackage;
 import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
-import com.github.meypod.al_azan.modules.RestartModulePackage;
 import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage;
 
 import java.lang.reflect.InvocationTargetException;
@@ -30,8 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
-          packages.add(new RestartModulePackage());
+          packages.add(new ActivityModulePackage());
           packages.add(new MediaPlayerModulePackage());
           packages.add(new NotificationWidgetModulePackage());
           packages.add(new ScreenWidgetModulePackage());

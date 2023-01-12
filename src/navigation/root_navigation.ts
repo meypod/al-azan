@@ -1,27 +1,20 @@
 import {
   createNavigationContainerRef,
+  Route,
   StackActions,
 } from '@react-navigation/native';
 import type {RootStackParamList} from '@/navigation/types';
 
 export const navigationRef = createNavigationContainerRef<RootStackParamList>();
 
-type Action = [Function, unknown[]];
-const actionQueue: Action[] = [];
+type Action = {
+  fn: Function;
+  args: unknown[];
+};
+let todoAction: Action | undefined = undefined;
 
-function pushToQueue(action: Action) {
-  if (actionQueue.length >= 1) {
-    actionQueue.shift();
-  }
-  actionQueue.push(action);
-}
-
-function sleep(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-export function getCurrentRoute() {
-  let currentRoute = {name: ''};
+export function getCurrentRoute(): Route<string, object | undefined> {
+  let currentRoute = {name: '', key: ''};
   if (navigationRef.isReady()) {
     currentRoute = navigationRef.getCurrentRoute() || currentRoute;
   }
@@ -29,10 +22,8 @@ export function getCurrentRoute() {
 }
 
 export async function onReady() {
-  while (actionQueue.length) {
-    const [action, options] = actionQueue.shift() as Action;
-    action(...options);
-    if (actionQueue.length) await sleep(10);
+  if (todoAction) {
+    todoAction.fn(...todoAction.args);
   }
 }
 
@@ -43,7 +34,10 @@ export const navigate = ((...options: any) => {
     navigationRef.navigate('Home');
     navigationRef.navigate(...options);
   } else {
-    pushToQueue([navigate, options]);
+    todoAction = {
+      fn: navigate,
+      args: options,
+    };
   }
 }) as NavigateType;
 
@@ -53,7 +47,10 @@ export function dispatch(
   if (navigationRef.isReady()) {
     navigationRef.dispatch(...options);
   } else {
-    pushToQueue([dispatch, options]);
+    todoAction = {
+      fn: dispatch,
+      args: options,
+    };
   }
 }
 
@@ -66,7 +63,10 @@ export function push(...options: Parameters<typeof StackActions.push>) {
       navigationRef.dispatch(StackActions.push(...options));
     }
   } else {
-    pushToQueue([push, options]);
+    todoAction = {
+      fn: push,
+      args: options,
+    };
   }
 }
 
@@ -74,7 +74,10 @@ export function replace(...options: Parameters<typeof StackActions.push>) {
   if (navigationRef.isReady()) {
     navigationRef.dispatch(StackActions.replace(...options));
   } else {
-    pushToQueue([replace, options]);
+    todoAction = {
+      fn: replace,
+      args: options,
+    };
   }
 }
 
@@ -82,6 +85,9 @@ export function popToTop() {
   if (navigationRef.isReady()) {
     navigationRef.dispatch(StackActions.popToTop());
   } else {
-    pushToQueue([popToTop, []]);
+    todoAction = {
+      fn: popToTop,
+      args: [],
+    };
   }
 }

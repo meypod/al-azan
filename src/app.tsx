@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useColorMode} from 'native-base';
+import {getActivityName} from './modules/activity';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,

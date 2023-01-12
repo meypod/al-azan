@@ -3,7 +3,7 @@ import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useEffect} from 'react';
 import {I18nManager} from 'react-native';
 import {isRTL, loadLocale} from '@/i18n';
-import {restart} from '@/modules/restart';
+import {restart} from '@/modules/activity';
 import {settings, useSettingsHelper} from '@/store/settings';
 
 type LanguageEntry = {

@@ -1,6 +1,7 @@
 package com.github.meypod.al_azan.modules;
 
 import androidx.annotation.NonNull;
+
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -10,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RestartModulePackage implements ReactPackage {
+public class ActivityModulePackage implements ReactPackage {
   @NonNull
   @Override
   public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new RestartModule(reactContext));
+    modules.add(new ActivityModule(reactContext));
     return modules;
   }
 

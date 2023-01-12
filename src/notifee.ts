@@ -5,7 +5,7 @@ import notifee, {
   AndroidVisibility,
   Notification,
 } from '@notifee/react-native';
-import {BackHandler} from 'react-native';
+import {finish, finishAndRemoveTask} from './modules/activity';
 import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
@@ -55,13 +55,14 @@ export async function cancelAlarmNotif({
   if (notification?.android?.asForegroundService) {
     if (options?.playSound) {
       await stopAdhan().catch(console.error);
-      replace('Home');
     }
-    await notifee.stopForegroundService();
+    await notifee.stopForegroundService().catch(console.error);
   }
 
   if (options?.notifId) {
-    await notifee.cancelDisplayedNotification(options.notifId);
+    await notifee
+      .cancelDisplayedNotification(options.notifId)
+      .catch(console.error);
   }
 }
 
@@ -230,7 +231,7 @@ export function setupNotifeeHandlers() {
       if (options?.playSound) {
         return playAdhan(options.prayer)
           .then(() => cancelAlarmNotif({notification, options}))
-          .finally(() => BackHandler.exitApp());
+          .finally(() => finishAndRemoveTask());
       }
     }
 

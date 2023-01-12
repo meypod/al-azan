@@ -45,6 +45,7 @@ export type SettingsStore = {
   REMINDER_SETTINGS_HASH: string;
   /** timestamp of when the alarm for updating widget is going to Or was fired */
   LAST_WIDGET_UPDATE: number;
+  IS_PLAYING_ADHAN: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -96,6 +97,7 @@ export const settings = createVanilla<SettingsStore>()(
       REMINDER_SETTINGS_HASH: '',
       DISMISSED_ALARM_TIMESTAMPS: {},
       LAST_WIDGET_UPDATE: 0,
+      IS_PLAYING_ADHAN: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

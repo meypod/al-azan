@@ -3,8 +3,9 @@ import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
 import {PixelRatio, useColorScheme} from 'react-native';
-import {replace} from './navigation/root_navigation';
-import {isPlayingAdhan, stopAdhan} from './services/azan_service';
+import {getActivityName} from './modules/activity';
+import {getCurrentRoute, replace} from './navigation/root_navigation';
+import {stopAdhan} from './services/azan_service';
 import {getFgSvcNotification, setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettingsHelper} from '@/store/settings';
 import {colors} from '@/theme/colors';
@@ -50,8 +51,10 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
     };
   }, []);
 
+  const [isPlayingAdhan] = useSettingsHelper('IS_PLAYING_ADHAN');
+
   useEffect(() => {
-    if (isPlayingAdhan()) {
+    if (isPlayingAdhan) {
       getFgSvcNotification().then(dn => {
         if (dn?.notification?.data?.options) {
           replace('FullscreenAlarm', {
@@ -61,8 +64,16 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
           stopAdhan();
         }
       });
+    } else {
+      getActivityName().then(name => {
+        if (name !== 'MainActivityElevated') {
+          if (getCurrentRoute().name === 'FullscreenAlarm') {
+            replace('Home');
+          }
+        }
+      });
     }
-  }, []);
+  }, [isPlayingAdhan]);
 
   const systemColorScheme = useColorScheme();
 

@@ -5,7 +5,6 @@ import notifee, {
   AndroidImportance,
   AndroidCategory,
   AndroidVisibility,
-  AndroidLaunchActivityFlag,
 } from '@notifee/react-native';
 import {Prayer} from '@/adhan';
 
@@ -82,16 +81,13 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
         autoCancel: !playSound,
         fullScreenAction: playSound
           ? {
-              id: 'default',
-              launchActivityFlags: [
-                AndroidLaunchActivityFlag.NO_HISTORY,
-                AndroidLaunchActivityFlag.SINGLE_TOP,
-                AndroidLaunchActivityFlag.EXCLUDE_FROM_RECENTS,
-              ],
+              id: 'fullscreen',
+              launchActivity: 'com.github.meypod.al_azan.MainActivityElevated',
             }
           : undefined,
         pressAction: {
-          id: 'default',
+          id: 'fullscreen',
+          launchActivity: 'com.github.meypod.al_azan.MainActivityElevated',
         },
         asForegroundService: playSound,
         actions: [
