@@ -110,8 +110,7 @@ export function getArabicDate(date: Date) {
   if (SELECTED_ARABIC_CALENDAR) {
     calendar = SELECTED_ARABIC_CALENDAR;
   } else {
-    calendar =
-      PREFERRED_LOCALE === 'ar-SA' ? 'islamic-umalqura' : 'islamic-civil';
+    calendar = PREFERRED_LOCALE.startsWith('fa') ? 'islamic-civil' : 'islamic';
   }
 
   let numbering = '-nu-arab';
