@@ -59,7 +59,7 @@ export function NotificationSettings(props: IScrollViewProps) {
               color: 'muted.500',
             }}
           />{' '}
-          {t`Tahajjud time is the last third of the night`}
+          {t`Tahajjud time mentioned in the app is the last third of the night`}
         </Text>
       </HStack>
       <NotifyNextAdhanSetting mt="4" />

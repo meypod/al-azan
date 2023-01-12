@@ -647,8 +647,8 @@ msgid "System Default"
 msgstr "System Default"
 
 #: src/screens/settings_notifications/index.tsx:62
-msgid "Tahajjud time is the last third of the night"
-msgstr "Tahajjud time is the last third of the night"
+msgid "Tahajjud time mentioned in the app is the last third of the night"
+msgstr "Tahajjud time mentioned in the app is the last third of the night"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
 msgid "Thai Solar"
