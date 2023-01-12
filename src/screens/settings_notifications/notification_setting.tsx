@@ -193,115 +193,116 @@ function NotificationSetting({
       borderRadius={4}
       mb="1"
       {...vStackProps}>
-      <HStack alignItems="center" py="1" px="2" mb={internalExpanded ? -2 : 0}>
+      <HStack
+        alignItems="center"
+        py="1"
+        pl="2"
+        pr="1"
+        mb={internalExpanded ? -2 : 0}>
         <Text width="1/4" flex={0} flexShrink={0}>
           {prayerName}
         </Text>
         <HStack justifyContent="center" alignItems="center" flex={1} px="2">
-          {true && (
-            <>
-              <Button
-                size="sm"
-                py="1"
-                px="2"
-                variant="unstyled"
-                onPress={toggleNotify}
-                borderWidth={1}
+          <Button
+            size="sm"
+            py="1"
+            px="2"
+            variant="unstyled"
+            onPress={toggleNotify}
+            borderWidth={1}
+            _light={{
+              backgroundColor: notifyFullActive
+                ? 'primary.500'
+                : 'black:alpha.5',
+              borderColor: notifyFullActive
+                ? 'primary.500'
+                : notify
+                ? 'primary.500'
+                : 'black:alpha.5',
+            }}
+            _dark={{
+              backgroundColor: notifyFullActive ? 'primary.800' : 'black',
+              borderColor: notifyFullActive
+                ? 'primary.800'
+                : notify
+                ? 'primary.900'
+                : 'black',
+            }}>
+            <HStack justifyContent="center" alignItems="center">
+              <Text
+                fontSize="xs"
                 _light={{
-                  backgroundColor: notifyFullActive
-                    ? 'primary.500'
-                    : 'black:alpha.5',
-                  borderColor: notifyFullActive
-                    ? 'primary.500'
-                    : notify
-                    ? 'primary.500'
-                    : 'black:alpha.5',
+                  color: notifyFullActive ? 'white' : 'black:alpha.70',
                 }}
                 _dark={{
-                  backgroundColor: notifyFullActive ? 'primary.800' : 'black',
-                  borderColor: notifyFullActive
-                    ? 'primary.800'
-                    : notify
-                    ? 'primary.900'
-                    : 'black',
-                }}>
-                <HStack justifyContent="center" alignItems="center">
-                  <Text
-                    fontSize="xs"
-                    _light={{
-                      color: notifyFullActive ? 'white' : 'black:alpha.70',
-                    }}
-                    _dark={{
-                      color: 'white:alpha.90',
-                    }}>{t`Notification`}</Text>
-                  <Flex mx="0.5" />
-                  <Checkbox
-                    p="0"
-                    size="sm"
-                    isDisabled={true}
-                    value="notify"
-                    isChecked={!!notify}
-                    accessibilityLabel={t`${prayerName} notification will be shown`}
-                    _disabled={{
-                      opacity: 1,
-                    }}
-                  />
-                </HStack>
-              </Button>
-              <HStack flex={0} flexGrow={0} mx="1" />
-              <Button
+                  color: 'white:alpha.90',
+                }}>{t`Notification`}</Text>
+              <Flex mx="0.5" />
+              <Checkbox
+                p="0"
                 size="sm"
-                py="1"
-                px="2"
-                justifyContent="center"
-                alignItems="center"
-                variant="unstyled"
-                onPress={toggleSound}
-                borderWidth={1}
+                isDisabled={true}
+                value="notify"
+                isChecked={!!notify}
+                accessibilityLabel={t`${prayerName} notification will be shown`}
+                _disabled={{
+                  opacity: 1,
+                }}
+              />
+            </HStack>
+          </Button>
+          <HStack flex={0} flexGrow={0} mx="1" />
+          <Button
+            size="sm"
+            py="1"
+            px="2"
+            justifyContent="center"
+            alignItems="center"
+            variant="unstyled"
+            onPress={toggleSound}
+            borderWidth={1}
+            _light={{
+              backgroundColor: soundFullActive
+                ? 'emerald.500:alpha.70'
+                : 'black:alpha.5',
+              borderColor: soundFullActive
+                ? 'emerald.500:alpha.70'
+                : sound
+                ? 'emerald.500:alpha.70'
+                : 'black:alpha.5',
+            }}
+            _dark={{
+              backgroundColor: soundFullActive ? 'emerald.700' : 'black',
+              borderColor: soundFullActive
+                ? 'emerald.700'
+                : sound
+                ? 'emerald.800'
+                : 'black',
+            }}>
+            <HStack justifyContent="center" alignItems="center">
+              <Text
+                fontSize="xs"
                 _light={{
-                  backgroundColor: soundFullActive
-                    ? 'emerald.500:alpha.70'
-                    : 'black:alpha.5',
-                  borderColor: soundFullActive
-                    ? 'emerald.500:alpha.70'
-                    : sound
-                    ? 'emerald.500:alpha.70'
-                    : 'black:alpha.5',
+                  color: soundFullActive ? 'white' : 'black:alpha.70',
                 }}
                 _dark={{
-                  backgroundColor: soundFullActive ? 'emerald.700' : 'black',
-                  borderColor: soundFullActive
-                    ? 'emerald.700'
-                    : sound
-                    ? 'emerald.800'
-                    : 'black',
-                }}>
-                <HStack justifyContent="center" alignItems="center">
-                  <Text
-                    fontSize="xs"
-                    _light={{
-                      color: soundFullActive ? 'white' : 'black:alpha.70',
-                    }}
-                    _dark={{
-                      color: 'white:alpha.90',
-                    }}>{t`Sound`}</Text>
-                  <Flex mx="0.5" />
-                  <Checkbox
-                    p="0"
-                    size="sm"
-                    value="sound"
-                    colorScheme="emerald"
-                    isDisabled={true}
-                    isChecked={!!sound}
-                    accessibilityLabel={t`${prayerName} sound will be played`}
-                    _disabled={{
-                      opacity: 1,
-                    }}
-                  />
-                </HStack>
-              </Button>
-            </>
-          )}
+                  color: 'white:alpha.90',
+                }}>{t`Sound`}</Text>
+              <Flex mx="0.5" />
+              <Checkbox
+                p="0"
+                size="sm"
+                value="sound"
+                colorScheme="emerald"
+                isDisabled={true}
+                isChecked={!!sound}
+                accessibilityLabel={t`${prayerName} sound will be played`}
+                _disabled={{
+                  opacity: 1,
+                }}
+              />
+            </HStack>
+          </Button>
         </HStack>
 
         <HStack justifyContent="flex-end" flexShrink={1}>
