@@ -24,7 +24,7 @@ export function setUpdateWidgetsAlarms() {
     timestamp: begginingOfNextDay,
     taskName: 'update_screen_widget_task', // reuse the task name for widget module update request
     allowedInForeground: true,
-    type: 'setAndAllowWhileIdle',
+    type: 'setExact',
     wakeup: false,
     keepAwake: false,
   });
@@ -34,7 +34,7 @@ export function setUpdateWidgetsAlarms() {
       timestamp: prayerTimes[prayer].valueOf(),
       taskName: 'update_screen_widget_task',
       allowedInForeground: true,
-      type: 'setAndAllowWhileIdle',
+      type: 'setExact',
       wakeup: false,
       keepAwake: false,
     });
