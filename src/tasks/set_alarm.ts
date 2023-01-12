@@ -43,7 +43,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     title,
     body,
     subtitle,
-    playSound,
+    playSound = false,
     notifChannelId,
     notifChannelName,
     notifId,
@@ -74,6 +74,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       subtitle: subtitle,
       body: body,
       android: {
+        lightUpScreen: playSound,
         smallIcon: 'ic_stat_name',
         channelId,
         category: AndroidCategory.ALARM,
@@ -92,7 +93,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
         pressAction: {
           id: 'default',
         },
-        asForegroundService: !!playSound,
+        asForegroundService: playSound,
         actions: [
           {
             title: t`Dismiss`,
