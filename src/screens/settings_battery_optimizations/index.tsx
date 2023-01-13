@@ -66,13 +66,17 @@ export function BatteryOptimizationSettings(props: IScrollViewProps) {
       </FormControl>
 
       {powerManagerInfo?.activity && (
-        <FormControl display="flex">
+        <FormControl display="flex" pb="8">
           <FormControl.Label>{t`Power Manager`}</FormControl.Label>
           <FormControl.HelperText>
-            <Text textAlign="justify">{t`Some devices need extra settings inside their Power Manager 
+            <Text
+              textAlign="justify"
+              fontSize="xs">{t`Some devices need extra settings inside their Power Manager 
           to prevent the app from getting killed in the background.
           In that case disable any power saving option for the app.`}</Text>
-            <Text textAlign="justify">{t`You can access your device Power Manager using the button below.`}</Text>
+            <Text
+              textAlign="justify"
+              fontSize="xs">{t`You can access your device Power Manager using the button below.`}</Text>
 
             {powerManagerInfo?.activity &&
               powerManagerInfo.manufacturer?.toLowerCase() === 'samsung' && (
@@ -92,6 +96,13 @@ export function BatteryOptimizationSettings(props: IScrollViewProps) {
             }>{t`Open Power Manager Settings`}</Button>
         </FormControl>
       )}
+
+      <Text
+        textAlign="justify"
+        fontSize="xs"
+        dataDetectorType={
+          'link'
+        }>{t`If you still had problem with app stopping after some time, please consider visiting dontkillmyapp.com for more solutions.`}</Text>
     </ScrollView>
   );
 }
