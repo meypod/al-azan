@@ -102,7 +102,7 @@ export function AdhanListItem({
           style: 'cancel',
         },
         {
-          text: 'Yes',
+          text: t`Yes`,
           onPress: () => settings.getState().deleteAdhanEntry(item),
           style: 'destructive',
         },

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-12 13:16+0330\n"
+"POT-Creation-Date: 2023-01-13 09:06+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "إضافة أذان مخصص"
 msgid "Add Reminder"
 msgstr "إضافة تذكير"
 
-#: src/screens/fullscreen_alarm/index.tsx:40
+#: src/screens/fullscreen_alarm/index.tsx:39
 msgid "Adhan"
 msgstr "أذان"
 
@@ -76,11 +76,11 @@ msgstr "أحمر"
 msgid "An error occured while playing the current track"
 msgstr "حدث خطأ أثناء تشغيل المسار الحالي"
 
-#: src/screens/settings_display/number_format_settings.tsx:31
+#: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Arabic"
 msgstr "عربي"
 
-#: src/screens/settings_display/number_format_settings.tsx:32
+#: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic/Persian"
 msgstr "عربي / فارسي"
 
@@ -156,15 +156,15 @@ msgstr "اختر طريقة شفق"
 msgid "Choose calendar type"
 msgstr "اختر نوع التقويم"
 
-#: src/screens/settings_display/number_format_settings.tsx:25
+#: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
 msgstr "اختر نظام الترقيم"
 
-#: src/screens/settings_location/index.tsx:246
+#: src/screens/settings_location/index.tsx:245
 msgid "City/Area"
 msgstr "مدينة/منطقة"
 
-#: src/screens/settings_location/index.tsx:144
+#: src/screens/settings_location/index.tsx:143
 msgid "Clipboard data does not contain coordinates"
 msgstr "لا تحتوي بيانات الحافظة على إحداثيات"
 
@@ -180,11 +180,11 @@ msgstr "أقرب تاريخ"
 msgid "Confirm"
 msgstr "أكّد"
 
-#: src/screens/settings_location/index.tsx:170
+#: src/screens/settings_location/index.tsx:169
 msgid "Coordinates updated"
 msgstr "تم تحديث الإحداثيات"
 
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/index.tsx:215
 msgid "Country"
 msgstr "دولة"
 
@@ -193,7 +193,7 @@ msgid "Dark"
 msgstr "داکن"
 
 #: src/screens/settings_display/calendar_settings.tsx:30
-#: src/screens/settings_display/number_format_settings.tsx:29
+#: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "افتراضي"
 
@@ -214,8 +214,8 @@ msgstr "إلغاء اختيار أذان الفجر"
 msgid "Disabled"
 msgstr "غير مفعّل"
 
-#: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:99
+#: src/screens/fullscreen_alarm/index.tsx:116
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "تجاهل"
 
@@ -239,15 +239,15 @@ msgstr "الهيئة المصرية العامة للمساحة"
 msgid "Enabled"
 msgstr "مفعّل"
 
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:149
 msgid "Error getting clipboard data"
 msgstr "خطأ في الحصول على بيانات الحافظة"
 
-#: src/screens/settings_location/index.tsx:236
+#: src/screens/settings_location/index.tsx:235
 msgid "Error in loading countries"
 msgstr "خطأ في تحميل البلدان"
 
-#: src/screens/settings_location/index.tsx:267
+#: src/screens/settings_location/index.tsx:266
 msgid "Error in loading search results"
 msgstr "خطأ في تحميل نتائج البحث"
 
@@ -255,7 +255,7 @@ msgstr "خطأ في تحميل نتائج البحث"
 msgid "Error while downloading audio"
 msgstr "خطأ أثناء تنزيل الصوت"
 
-#: src/screens/settings_location/index.tsx:174
+#: src/screens/settings_location/index.tsx:173
 msgid "Error while getting coordinates"
 msgstr "خطأ أثناء الحصول على الإحداثيات"
 
@@ -263,7 +263,7 @@ msgstr "خطأ أثناء الحصول على الإحداثيات"
 msgid "Ethiopic"
 msgstr "إثيوبي"
 
-#: src/screens/settings_location/index.tsx:198
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "البحث عن موقعي"
 
@@ -275,7 +275,7 @@ msgstr "الجمعة"
 msgid "General (default)"
 msgstr "عام (افتراضي)"
 
-#: src/screens/settings_location/index.tsx:202
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "الحصول على الإحداثيات"
 
@@ -313,7 +313,7 @@ msgstr "خط العرض العالي"
 msgid "Home"
 msgstr "الرئيسية"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "في حالة التمكين، عند عرض إشعار، سيحتوي على معلومات خاصة بوقت الصلاة التالي"
 
@@ -357,16 +357,16 @@ msgstr "مُلصَق"
 msgid "Language"
 msgstr "لغة"
 
-#: src/screens/settings_display/number_format_settings.tsx:30
+#: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Latin"
 msgstr "لاتيني"
 
-#: src/screens/settings_location/index.tsx:290
-#: src/screens/settings_location/index.tsx:295
+#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/index.tsx:294
 msgid "Latitude"
 msgstr "خط العرض"
 
-#: src/screens/settings_location/index.tsx:302
+#: src/screens/settings_location/index.tsx:301
 msgid "Latitude is invalid"
 msgstr "خط العرض غير صالح"
 
@@ -382,12 +382,12 @@ msgstr "فاتح"
 msgid "Location"
 msgstr "موقع"
 
-#: src/screens/settings_location/index.tsx:306
-#: src/screens/settings_location/index.tsx:311
+#: src/screens/settings_location/index.tsx:305
+#: src/screens/settings_location/index.tsx:310
 msgid "Longitude"
 msgstr "خط الطول"
 
-#: src/screens/settings_location/index.tsx:318
+#: src/screens/settings_location/index.tsx:317
 msgid "Longitude is invalid"
 msgstr "خط الطول غير صالح"
 
@@ -430,7 +430,7 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:136
+#: src/screens/home/index.tsx:135
 msgid "Next Day"
 msgstr "اليوم التالي"
 
@@ -451,7 +451,7 @@ msgstr "إشعار"
 msgid "Notification & Sound"
 msgstr "الإشعار و الصوت"
 
-#: src/screens/settings_display/number_format_settings.tsx:20
+#: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
 msgstr "نظام الترقيم"
 
@@ -484,7 +484,7 @@ msgstr "افتح إعدادات مدير الطاقة"
 msgid "Options"
 msgstr "خيارات"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "لصق"
 
@@ -501,7 +501,7 @@ msgstr "حساب المناطق القطبية"
 msgid "Power Manager"
 msgstr "مدير الطاقة"
 
-#: src/screens/home/index.tsx:107
+#: src/screens/home/index.tsx:106
 msgid "Prev Day"
 msgstr "اليوم السابق"
 
@@ -517,7 +517,7 @@ msgstr "راغب مصطفى غلوش"
 msgid "Referred to as the ISNA method"
 msgstr "يشار إليها باسم طريقة ISNA"
 
-#: src/screens/fullscreen_alarm/index.tsx:44
+#: src/screens/fullscreen_alarm/index.tsx:43
 #: src/tasks/set_reminder.ts:70
 #: src/tasks/set_reminder.ts:96
 msgid "Reminder"
@@ -578,11 +578,11 @@ msgstr "الشيعة ، معهد الجيوفيزياء ، جامعة طهران
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:130
+#: src/screens/home/index.tsx:129
 msgid "Show Today"
 msgstr "اعرض اليوم"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "إظهار التالي في الإشعار؟"
 
@@ -675,7 +675,7 @@ msgstr "وقت"
 msgid "Time format"
 msgstr "تنسيق الوقت"
 
-#: src/screens/settings_location/index.tsx:188
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "لحساب الأذان، نحتاج إلى موقعك. يمكنك استخدام زر \"العثور على موقعي\"، أو استخدام البحث عن البلد والمدينة/ المنطقة، أو إدخال إحداثياتك يدويًا."
 
@@ -720,15 +720,15 @@ msgstr "التنبيه القادم"
 msgid "Use 24-Hour format"
 msgstr "استخدام تنسيق 24 ساعة"
 
-#: src/screens/settings_location/index.tsx:286
+#: src/screens/settings_location/index.tsx:285
 msgid "Using Coordinates"
 msgstr "باستخدام الإحداثيات"
 
-#: src/screens/settings_location/index.tsx:190
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "باستخدام GPS"
 
-#: src/screens/settings_location/index.tsx:209
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "باستخدام البحث"
 
@@ -748,11 +748,15 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
+#: src/screens/settings_adhan/adhan_list_item.tsx:105
+msgid "Yes"
+msgstr "نعم"
+
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "يمكنك الوصول إلى \"مدير الطاقة\" (Power Manager) بجهازك باستخدام الزر أدناه."
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:339
 msgid "You can also paste coords from clipboard"
 msgstr "يمكنك أيضًا لصق إحداثيات من الحافظة"
 
@@ -818,7 +822,7 @@ msgstr "العرض"
 msgid "fajr.prayer"
 msgstr "فجر"
 
-#: src/screens/settings_display/number_format_settings.tsx:22
+#: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
 msgstr "يفرض أن تكون جميع الأرقام في النظام المحدد"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-12 13:16+0330\n"
+"POT-Creation-Date: 2023-01-13 09:06+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "कस्टम अज़ान जोड़ें"
 msgid "Add Reminder"
 msgstr "अनुस्मारक जोड़ें"
 
-#: src/screens/fullscreen_alarm/index.tsx:40
+#: src/screens/fullscreen_alarm/index.tsx:39
 msgid "Adhan"
 msgstr "अज़ान "
 
@@ -76,11 +76,11 @@ msgstr "अहमर "
 msgid "An error occured while playing the current track"
 msgstr "वर्तमान ट्रैक चलाते समय एक गलती हुई"
 
-#: src/screens/settings_display/number_format_settings.tsx:31
+#: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Arabic"
 msgstr "अरबी"
 
-#: src/screens/settings_display/number_format_settings.tsx:32
+#: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic/Persian"
 msgstr "अरबी/फारसी"
 
@@ -156,15 +156,15 @@ msgstr "शफाक विधि चुनें"
 msgid "Choose calendar type"
 msgstr "कैलेंडर के प्रकार चुनें"
 
-#: src/screens/settings_display/number_format_settings.tsx:25
+#: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
 msgstr "नंबरिंग सिस्टम चुनें"
 
-#: src/screens/settings_location/index.tsx:246
+#: src/screens/settings_location/index.tsx:245
 msgid "City/Area"
 msgstr "शहर/क्षेत्र"
 
-#: src/screens/settings_location/index.tsx:144
+#: src/screens/settings_location/index.tsx:143
 msgid "Clipboard data does not contain coordinates"
 msgstr "क्लिपबोर्ड डेटा में निर्देशांक नहीं हैं"
 
@@ -180,11 +180,11 @@ msgstr "निकटतम तारीख "
 msgid "Confirm"
 msgstr "पुष्टि करें "
 
-#: src/screens/settings_location/index.tsx:170
+#: src/screens/settings_location/index.tsx:169
 msgid "Coordinates updated"
 msgstr "निर्देशांक अपडेट किए गए"
 
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/index.tsx:215
 msgid "Country"
 msgstr "देश"
 
@@ -193,7 +193,7 @@ msgid "Dark"
 msgstr "अँधेरा"
 
 #: src/screens/settings_display/calendar_settings.tsx:30
-#: src/screens/settings_display/number_format_settings.tsx:29
+#: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "डिफॉल्ट "
 
@@ -214,8 +214,8 @@ msgstr "फज्र अज़ान के लिए चयन हटा दी
 msgid "Disabled"
 msgstr "अक्षम"
 
-#: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:99
+#: src/screens/fullscreen_alarm/index.tsx:116
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "हटा दीजिए"
 
@@ -239,15 +239,15 @@ msgstr "मिस्र का सामान्य सर्वेक्षण
 msgid "Enabled"
 msgstr "सक्रिय"
 
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:149
 msgid "Error getting clipboard data"
 msgstr "क्लिपबोर्ड डेटा प्राप्त करने में गलती"
 
-#: src/screens/settings_location/index.tsx:236
+#: src/screens/settings_location/index.tsx:235
 msgid "Error in loading countries"
 msgstr "देशों को लोड करने में गलती"
 
-#: src/screens/settings_location/index.tsx:267
+#: src/screens/settings_location/index.tsx:266
 msgid "Error in loading search results"
 msgstr "खोज परिणाम लोड करने में गलती"
 
@@ -255,7 +255,7 @@ msgstr "खोज परिणाम लोड करने में गलत�
 msgid "Error while downloading audio"
 msgstr "ऑडियो डाउनलोड करते समय गलती"
 
-#: src/screens/settings_location/index.tsx:174
+#: src/screens/settings_location/index.tsx:173
 msgid "Error while getting coordinates"
 msgstr "निर्देशांक प्राप्त करने में गलती"
 
@@ -263,7 +263,7 @@ msgstr "निर्देशांक प्राप्त करने मे
 msgid "Ethiopic"
 msgstr "इथियोपिक"
 
-#: src/screens/settings_location/index.tsx:198
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "मेरा स्थान खोजें"
 
@@ -275,7 +275,7 @@ msgstr "जुम्मा"
 msgid "General (default)"
 msgstr "सामान्य (डिफ़ॉल्ट)"
 
-#: src/screens/settings_location/index.tsx:202
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "निर्देशांक प्राप्त कर रहे"
 
@@ -313,7 +313,7 @@ msgstr "उच्च अक्षांश"
 msgid "Home"
 msgstr "घर"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "यदि सक्षम है, जब एक सूचना दिखाई जाती है, तो इसमें अगली प्रार्थना के समय की जानकारी होगी"
 
@@ -357,16 +357,16 @@ msgstr "लेबल"
 msgid "Language"
 msgstr "भाषा"
 
-#: src/screens/settings_display/number_format_settings.tsx:30
+#: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Latin"
 msgstr "लैटिन"
 
-#: src/screens/settings_location/index.tsx:290
-#: src/screens/settings_location/index.tsx:295
+#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/index.tsx:294
 msgid "Latitude"
 msgstr "अक्षांश"
 
-#: src/screens/settings_location/index.tsx:302
+#: src/screens/settings_location/index.tsx:301
 msgid "Latitude is invalid"
 msgstr "अक्षांश अमान्य है"
 
@@ -382,12 +382,12 @@ msgstr "रोशनी"
 msgid "Location"
 msgstr "स्थान"
 
-#: src/screens/settings_location/index.tsx:306
-#: src/screens/settings_location/index.tsx:311
+#: src/screens/settings_location/index.tsx:305
+#: src/screens/settings_location/index.tsx:310
 msgid "Longitude"
 msgstr "देशांतर"
 
-#: src/screens/settings_location/index.tsx:318
+#: src/screens/settings_location/index.tsx:317
 msgid "Longitude is invalid"
 msgstr "देशांतर अमान्य है"
 
@@ -430,7 +430,7 @@ msgstr "नया अनुस्मारक"
 msgid "Next"
 msgstr "अगला"
 
-#: src/screens/home/index.tsx:136
+#: src/screens/home/index.tsx:135
 msgid "Next Day"
 msgstr "अगले दिन"
 
@@ -451,7 +451,7 @@ msgstr "अधिसूचना"
 msgid "Notification & Sound"
 msgstr "सूचना ध्वनि"
 
-#: src/screens/settings_display/number_format_settings.tsx:20
+#: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
 msgstr "नंबरिंग सिस्टम"
 
@@ -484,7 +484,7 @@ msgstr "पावर मैनेजर सेटिंग्स खोलें
 msgid "Options"
 msgstr "विकल्प"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "पेस्ट करें"
 
@@ -501,7 +501,7 @@ msgstr "ध्रुवीय रेज़ोल्यूशन "
 msgid "Power Manager"
 msgstr "पावर मैनेजर"
 
-#: src/screens/home/index.tsx:107
+#: src/screens/home/index.tsx:106
 msgid "Prev Day"
 msgstr "पिछला दिन"
 
@@ -517,7 +517,7 @@ msgstr "राघेब मुस्तफा गलवाश"
 msgid "Referred to as the ISNA method"
 msgstr "ISNA पद्धति के रूप में संदर्भित"
 
-#: src/screens/fullscreen_alarm/index.tsx:44
+#: src/screens/fullscreen_alarm/index.tsx:43
 #: src/tasks/set_reminder.ts:70
 #: src/tasks/set_reminder.ts:96
 msgid "Reminder"
@@ -578,11 +578,11 @@ msgstr "शिया, भूभौतिकी संस्थान, तेह�
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
-#: src/screens/home/index.tsx:130
+#: src/screens/home/index.tsx:129
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "सूचना में अगला दिखाएं?"
 
@@ -675,7 +675,7 @@ msgstr "समय"
 msgid "Time format"
 msgstr "समय प्रारूप"
 
-#: src/screens/settings_location/index.tsx:188
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "अज़ान की गणना करने के लिए, हमें आप की लोकेशन की आवश्यकता है। आप \"मेरा स्थान खोजें\" बटन का उपयोग कर सकते हैं, या देश और शहर/क्षेत्र सर्च का उपयोग कर सकते हैं, या अपने निर्देशांक मैन्युअली दर्ज कर सकते हैं।"
 
@@ -720,15 +720,15 @@ msgstr "आगामी अलार्म"
 msgid "Use 24-Hour format"
 msgstr "24 घंटे के प्रारूप का प्रयोग करें"
 
-#: src/screens/settings_location/index.tsx:286
+#: src/screens/settings_location/index.tsx:285
 msgid "Using Coordinates"
 msgstr "निर्देशांक का उपयोग कर रहे हैं"
 
-#: src/screens/settings_location/index.tsx:190
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "जीपीएस का उपयोग कर रहे हैं"
 
-#: src/screens/settings_location/index.tsx:209
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "खोज का उपयोग कर रहे हैं"
 
@@ -748,11 +748,15 @@ msgstr "बुधवार"
 msgid "Welcome"
 msgstr "स्वागत"
 
+#: src/screens/settings_adhan/adhan_list_item.tsx:105
+msgid "Yes"
+msgstr "हां"
+
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "आप नीचे दिए गए बटन का उपयोग करके अपने डिवाइस पावर मैनेजर तक पहुंच सकते हैं।"
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:339
 msgid "You can also paste coords from clipboard"
 msgstr "आप क्लिपबोर्ड से भी कोऑरड पेस्ट कर सकते हैं"
 
@@ -813,7 +817,7 @@ msgstr "डिस्प्ले"
 msgid "fajr.prayer"
 msgstr "फज्र"
 
-#: src/screens/settings_display/number_format_settings.tsx:22
+#: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
 msgstr "सभी नंबरों को चयनित सिस्टम में होने के लिए बाध्य करता है"
 

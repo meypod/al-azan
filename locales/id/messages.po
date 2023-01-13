@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-12 13:16+0330\n"
+"POT-Creation-Date: 2023-01-13 09:06+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,7 +54,7 @@ msgstr "Tambah Suara Adzan Kustom"
 msgid "Add Reminder"
 msgstr "Buat Pengingat"
 
-#: src/screens/fullscreen_alarm/index.tsx:40
+#: src/screens/fullscreen_alarm/index.tsx:39
 msgid "Adhan"
 msgstr "Adzan"
 
@@ -78,11 +78,11 @@ msgstr "Ahmer"
 msgid "An error occured while playing the current track"
 msgstr "Eror saat memutar track audio"
 
-#: src/screens/settings_display/number_format_settings.tsx:31
+#: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Arabic"
 msgstr "Arab"
 
-#: src/screens/settings_display/number_format_settings.tsx:32
+#: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic/Persian"
 msgstr "Arab/Persia"
 
@@ -158,15 +158,15 @@ msgstr "Pilih metode Shafaq"
 msgid "Choose calendar type"
 msgstr "Pilih jenis kalender"
 
-#: src/screens/settings_display/number_format_settings.tsx:25
+#: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
 msgstr "Pilih sistem penomoran"
 
-#: src/screens/settings_location/index.tsx:246
+#: src/screens/settings_location/index.tsx:245
 msgid "City/Area"
 msgstr "Kota/Daerah"
 
-#: src/screens/settings_location/index.tsx:144
+#: src/screens/settings_location/index.tsx:143
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
@@ -182,11 +182,11 @@ msgstr "Tanggal terdekat"
 msgid "Confirm"
 msgstr "Selesai"
 
-#: src/screens/settings_location/index.tsx:170
+#: src/screens/settings_location/index.tsx:169
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/index.tsx:215
 msgid "Country"
 msgstr "Negara"
 
@@ -195,7 +195,7 @@ msgid "Dark"
 msgstr "Gelap"
 
 #: src/screens/settings_display/calendar_settings.tsx:30
-#: src/screens/settings_display/number_format_settings.tsx:29
+#: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Bawaan"
 
@@ -216,8 +216,8 @@ msgstr "Batalkan pilihan sebagai Adzan Subuh"
 msgid "Disabled"
 msgstr "Tidak Aktif"
 
-#: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:99
+#: src/screens/fullscreen_alarm/index.tsx:116
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Hentikan"
 
@@ -241,15 +241,15 @@ msgstr "Otoritas Umum Mesir"
 msgid "Enabled"
 msgstr "Aktif"
 
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:149
 msgid "Error getting clipboard data"
 msgstr "Tidak mendapatkan data clipboard"
 
-#: src/screens/settings_location/index.tsx:236
+#: src/screens/settings_location/index.tsx:235
 msgid "Error in loading countries"
 msgstr "Kesalahan dalam memuat daftar negara"
 
-#: src/screens/settings_location/index.tsx:267
+#: src/screens/settings_location/index.tsx:266
 msgid "Error in loading search results"
 msgstr "Kesalahan dalam memuat hasil pencarian"
 
@@ -257,7 +257,7 @@ msgstr "Kesalahan dalam memuat hasil pencarian"
 msgid "Error while downloading audio"
 msgstr "Kesalahan saat mengunduh audio"
 
-#: src/screens/settings_location/index.tsx:174
+#: src/screens/settings_location/index.tsx:173
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
@@ -265,7 +265,7 @@ msgstr "Kesalahan saat mendapatkan koordinat"
 msgid "Ethiopic"
 msgstr "Etiopia"
 
-#: src/screens/settings_location/index.tsx:198
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
 
@@ -277,7 +277,7 @@ msgstr "Jumat"
 msgid "General (default)"
 msgstr "Umum (default)"
 
-#: src/screens/settings_location/index.tsx:202
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "Mendapatkan Koordinat"
 
@@ -315,7 +315,7 @@ msgstr "Lintang Tinggi"
 msgid "Home"
 msgstr "Situs"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:21
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Jika diaktifkan, ketika notifikasi ditampilkan, maka akan berisi info untuk waktu shalat berikutnya"
 
@@ -359,16 +359,16 @@ msgstr "Judul"
 msgid "Language"
 msgstr "Bahasa"
 
-#: src/screens/settings_display/number_format_settings.tsx:30
+#: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Latin"
 msgstr "Latin"
 
-#: src/screens/settings_location/index.tsx:290
-#: src/screens/settings_location/index.tsx:295
+#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/index.tsx:294
 msgid "Latitude"
 msgstr "Latitud"
 
-#: src/screens/settings_location/index.tsx:302
+#: src/screens/settings_location/index.tsx:301
 msgid "Latitude is invalid"
 msgstr "Latitud tidak valid"
 
@@ -384,12 +384,12 @@ msgstr "Terang"
 msgid "Location"
 msgstr "Lokasi"
 
-#: src/screens/settings_location/index.tsx:306
-#: src/screens/settings_location/index.tsx:311
+#: src/screens/settings_location/index.tsx:305
+#: src/screens/settings_location/index.tsx:310
 msgid "Longitude"
 msgstr "Longitud"
 
-#: src/screens/settings_location/index.tsx:318
+#: src/screens/settings_location/index.tsx:317
 msgid "Longitude is invalid"
 msgstr "Longitud tidak valid"
 
@@ -432,7 +432,7 @@ msgstr "Buat Pengingat"
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:136
+#: src/screens/home/index.tsx:135
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -453,7 +453,7 @@ msgstr "Notifikasi"
 msgid "Notification & Sound"
 msgstr "Notifikasi & Suara"
 
-#: src/screens/settings_display/number_format_settings.tsx:20
+#: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
 msgstr "Sistem penomoran"
 
@@ -486,7 +486,7 @@ msgstr "Buka Pengaturan"
 msgid "Options"
 msgstr "Opsi"
 
-#: src/screens/settings_location/index.tsx:346
+#: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "Tempel"
 
@@ -503,7 +503,7 @@ msgstr "Resolusi Kutub"
 msgid "Power Manager"
 msgstr "Pengelola Daya"
 
-#: src/screens/home/index.tsx:107
+#: src/screens/home/index.tsx:106
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -521,7 +521,7 @@ msgstr ""
 msgid "Referred to as the ISNA method"
 msgstr "Mengacu pada metode ISNA"
 
-#: src/screens/fullscreen_alarm/index.tsx:44
+#: src/screens/fullscreen_alarm/index.tsx:43
 #: src/tasks/set_reminder.ts:70
 #: src/tasks/set_reminder.ts:96
 msgid "Reminder"
@@ -584,11 +584,11 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:130
+#: src/screens/home/index.tsx:129
 msgid "Show Today"
 msgstr "Hari Ini"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:13
+#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "Tampilkan pemberitahuan berikutnya?"
 
@@ -681,7 +681,7 @@ msgstr "Waktu"
 msgid "Time format"
 msgstr "Format waktu"
 
-#: src/screens/settings_location/index.tsx:188
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
@@ -726,15 +726,15 @@ msgstr "Alarm selanjutnya"
 msgid "Use 24-Hour format"
 msgstr "Gunakan format 24 Jam"
 
-#: src/screens/settings_location/index.tsx:286
+#: src/screens/settings_location/index.tsx:285
 msgid "Using Coordinates"
 msgstr "Menggunakan Koordinat"
 
-#: src/screens/settings_location/index.tsx:190
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "Menggunakan GPS"
 
-#: src/screens/settings_location/index.tsx:209
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "Menggunakan Pencarian"
 
@@ -754,11 +754,15 @@ msgstr "Rabu"
 msgid "Welcome"
 msgstr "Selamat Datang!"
 
+#: src/screens/settings_adhan/adhan_list_item.tsx:105
+msgid "Yes"
+msgstr "Ya"
+
 #: src/screens/settings_battery_optimizations/index.tsx:75
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:339
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 
@@ -819,7 +823,7 @@ msgstr "Tampilan"
 msgid "fajr.prayer"
 msgstr "Subuh"
 
-#: src/screens/settings_display/number_format_settings.tsx:22
+#: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
 msgstr "Set semua nomor menyesuaikan sistem"
 
