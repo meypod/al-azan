@@ -37,10 +37,6 @@ msgstr "60 min"
 msgid "90 min"
 msgstr "90 min"
 
-#: src/assets/adhan_entries.ts:23
-msgid "Abdul-Basit Abdus-Samad"
-msgstr "Abdul-Basit Abdus-Samad"
-
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad"
@@ -90,7 +86,7 @@ msgstr "Arabic"
 msgid "Arabic/Persian"
 msgstr "Arabic/Persian"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
 
@@ -203,8 +199,8 @@ msgstr "Dark"
 msgid "Default"
 msgstr "Default"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:97
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Delete"
 msgstr "Delete"
 
@@ -212,7 +208,7 @@ msgstr "Delete"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:186
+#: src/screens/settings_adhan/adhan_list_item.tsx:189
 msgid "Deselect as Fajr Adhan"
 msgstr "Deselect as Fajr Adhan"
 
@@ -257,7 +253,7 @@ msgstr "Error in loading countries"
 msgid "Error in loading search results"
 msgstr "Error in loading search results"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:82
+#: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
@@ -397,17 +393,9 @@ msgstr "Longitude"
 msgid "Longitude is invalid"
 msgstr "Longitude is invalid"
 
-#: src/assets/adhan_entries.ts:19
-msgid "Masjid An Nabawi"
-msgstr "Masjid An Nabawi"
-
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Middle of the Night"
-
-#: src/assets/adhan_entries.ts:33
-msgid "Moazen Zade"
-msgstr "Moazen Zade"
 
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
@@ -440,7 +428,7 @@ msgstr "Next"
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "No"
 
@@ -515,10 +503,6 @@ msgstr "Prev Day"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/assets/adhan_entries.ts:28
-msgid "Ragheb Mustafa Ghalwash"
-msgstr "Ragheb Mustafa Ghalwash"
-
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
@@ -553,7 +537,7 @@ msgstr "Saturday"
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:187
+#: src/screens/settings_adhan/adhan_list_item.tsx:190
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
 
@@ -587,7 +571,7 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:177
+#: src/screens/settings_adhan/adhan_list_item.tsx:180
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
@@ -766,7 +750,7 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:105
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "Yes"
 
@@ -785,6 +769,10 @@ msgstr "You can hide prayer times you don't want to see in the main screen here:
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "You can hide prayer times you don't want to see in the widget here:"
+
+#: src/assets/adhan_entries.ts:21
+msgid "abdul_basit_abdus_samad"
+msgstr "Abdul-Basit Abdus-Samad"
 
 #: src/screens/settings_about/index.tsx:36
 msgid "about.credits"
@@ -869,6 +857,14 @@ msgstr "Location"
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
+#: src/assets/adhan_entries.ts:17
+msgid "masjid_an_nabawi"
+msgstr "Masjid An Nabawi"
+
+#: src/assets/adhan_entries.ts:29
+msgid "moazen_zade"
+msgstr "Moazen Zade"
+
 #. screen title
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
@@ -878,6 +874,10 @@ msgstr "Muezzin"
 #: src/navigation/types.ts:49
 msgid "notification_settings"
 msgstr "Notification & Sound"
+
+#: src/assets/adhan_entries.ts:25
+msgid "ragheb_mustafa_ghalwash"
+msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
 #: src/navigation/types.ts:74

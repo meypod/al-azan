@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-13 09:06+0330\n"
+"POT-Creation-Date: 2023-01-13 09:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,10 +30,6 @@ msgstr "60 मिनट"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "90 min"
 msgstr "90 मिनट"
-
-#: src/assets/adhan_entries.ts:23
-msgid "Abdul-Basit Abdus-Samad"
-msgstr "अब्दुल-बसित अब्दुस-समद"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
@@ -84,7 +80,7 @@ msgstr "अरबी"
 msgid "Arabic/Persian"
 msgstr "अरबी/फारसी"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "क्या आप वाकई \"{0}\" हटाना चाहते हैं?"
 
@@ -197,8 +193,8 @@ msgstr "अँधेरा"
 msgid "Default"
 msgstr "डिफॉल्ट "
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:97
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Delete"
 msgstr "मिटाना"
 
@@ -206,7 +202,7 @@ msgstr "मिटाना"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "आपके डिवाइस और एंड्रॉइड वर्जन के आधार पर, बैटरी बचाने के लिए कभी-कभी आपका डिवाइस बैकग्राउंड में ऐप को बंद कर सकता है। यह अलार्म/सूचनाओं को डिलीवर होने से रोक सकता है।"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:186
+#: src/screens/settings_adhan/adhan_list_item.tsx:189
 msgid "Deselect as Fajr Adhan"
 msgstr "फज्र अज़ान के लिए चयन हटा दीजिए "
 
@@ -251,7 +247,7 @@ msgstr "देशों को लोड करने में गलती"
 msgid "Error in loading search results"
 msgstr "खोज परिणाम लोड करने में गलती"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:82
+#: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Error while downloading audio"
 msgstr "ऑडियो डाउनलोड करते समय गलती"
 
@@ -391,17 +387,9 @@ msgstr "देशांतर"
 msgid "Longitude is invalid"
 msgstr "देशांतर अमान्य है"
 
-#: src/assets/adhan_entries.ts:19
-msgid "Masjid An Nabawi"
-msgstr "मस्जिद अन नबवी"
-
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "आधी रात में"
-
-#: src/assets/adhan_entries.ts:33
-msgid "Moazen Zade"
-msgstr "मोअज़न ज़ादे"
 
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
@@ -434,7 +422,7 @@ msgstr "अगला"
 msgid "Next Day"
 msgstr "अगले दिन"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "नहीं"
 
@@ -509,10 +497,6 @@ msgstr "पिछला दिन"
 msgid "Qatar"
 msgstr "कतर"
 
-#: src/assets/adhan_entries.ts:28
-msgid "Ragheb Mustafa Ghalwash"
-msgstr "राघेब मुस्तफा गलवाश"
-
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "ISNA पद्धति के रूप में संदर्भित"
@@ -543,7 +527,7 @@ msgstr "शनिवार"
 msgid "Secondary Calendar"
 msgstr "माध्यमिक कैलेंडर"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:187
+#: src/screens/settings_adhan/adhan_list_item.tsx:190
 msgid "Select as Fajr Adhan"
 msgstr "फज्र अज़ान के लिए चुनें"
 
@@ -574,7 +558,7 @@ msgstr "शिया इथना अशरी, लेवा संस्था�
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "शिया, भूभौतिकी संस्थान, तेहरान विश्वविद्यालय"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:177
+#: src/screens/settings_adhan/adhan_list_item.tsx:180
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
@@ -748,7 +732,7 @@ msgstr "बुधवार"
 msgid "Welcome"
 msgstr "स्वागत"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:105
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "हां"
 
@@ -767,6 +751,10 @@ msgstr " में जिन नमाज़ के समयों आप म�
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "जिन नमाज़ों के वक्त को आप विजेट में नही देखना चाहते हैं, उन्हें आप यहां छिपा सकते हैं:"
+
+#: src/assets/adhan_entries.ts:21
+msgid "abdul_basit_abdus_samad"
+msgstr "अब्दुल-बसित अब्दुस-समद"
 
 #: src/screens/settings_about/index.tsx:36
 msgid "about.credits"
@@ -848,6 +836,14 @@ msgstr "स्थान"
 msgid "maghrib.prayer"
 msgstr "मग़रिब"
 
+#: src/assets/adhan_entries.ts:17
+msgid "masjid_an_nabawi"
+msgstr "मस्जिद अन नबवी"
+
+#: src/assets/adhan_entries.ts:29
+msgid "moazen_zade"
+msgstr "मोअज़न ज़ादे"
+
 #. screen title
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
@@ -857,6 +853,10 @@ msgstr "मुअज़्ज़िन"
 #: src/navigation/types.ts:49
 msgid "notification_settings"
 msgstr "सूचना और ध्वनि"
+
+#: src/assets/adhan_entries.ts:25
+msgid "ragheb_mustafa_ghalwash"
+msgstr "राघेब मुस्तफा गलवाश"
 
 #. screen title
 #: src/navigation/types.ts:74

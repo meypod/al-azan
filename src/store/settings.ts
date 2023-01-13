@@ -4,7 +4,11 @@ import {useCallback} from 'react';
 import ReactNativeBlobUtil from 'react-native-blob-util';
 import {Prayer} from '@/adhan';
 import {useStore} from 'zustand';
-import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
+import {
+  AdhanEntry,
+  adhanEntryTranslations,
+  INITIAL_ADHAN_AUDIO_ENTRIES,
+} from '@/assets/adhan_entries';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
 import {createStore} from 'zustand/vanilla';
@@ -192,7 +196,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 4,
+      version: 5,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -242,6 +246,18 @@ export const settings = createStore<SettingsStore>()(
             delete (persistedState as any).DISMISSED_ALARM_TIMESTAMP;
             delete (persistedState as any).SCHEDULED_ALARM_TIMESTAMP;
             (persistedState as any).SELECTED_SECONDARY_CALENDAR = 'gregory';
+          case 4:
+            for (const key in (persistedState as SettingsStore)
+              .SAVED_ADHAN_AUDIO_ENTRIES) {
+              if (
+                (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[key]
+                  .id in adhanEntryTranslations
+              ) {
+                (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[
+                  key
+                ].label = '';
+              }
+            }
             break;
         }
         /* eslint-enable no-fallthrough */

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-13 09:06+0330\n"
+"POT-Creation-Date: 2023-01-13 09:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,10 +30,6 @@ msgstr "60 min"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "90 min"
 msgstr "90 min"
-
-#: src/assets/adhan_entries.ts:23
-msgid "Abdul-Basit Abdus-Samad"
-msgstr "Abdul-Basit Abdus-Samad"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
@@ -84,7 +80,7 @@ msgstr "Arabisch"
 msgid "Arabic/Persian"
 msgstr "Arabisch/Persisch"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Sind Sie sicher, dass Sie \"{0}\" löschen wollen? ?"
 
@@ -197,8 +193,8 @@ msgstr "Dunkel"
 msgid "Default"
 msgstr "Standard"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:97
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Delete"
 msgstr "Löschen"
 
@@ -206,7 +202,7 @@ msgstr "Löschen"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Je nach Gerät und Android-Version kann es vorkommen, dass Ihr Gerät die App im Hintergrund beendet, um Akku-Laufzeit zu sparen. Dies kann dazu führen, dass Alarme/Benachrichtigungen nicht zugestellt werden."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:186
+#: src/screens/settings_adhan/adhan_list_item.tsx:189
 msgid "Deselect as Fajr Adhan"
 msgstr "Als Fajr-Adhan abwählen"
 
@@ -251,7 +247,7 @@ msgstr "Fehler beim Laden der Länder"
 msgid "Error in loading search results"
 msgstr "Fehler beim Laden der Suchergebnisse"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:82
+#: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Error while downloading audio"
 msgstr "Fehler beim Herunterladen der Audio-Dateien"
 
@@ -391,17 +387,9 @@ msgstr "Längengrad"
 msgid "Longitude is invalid"
 msgstr "Der Längengrad ist ungültig"
 
-#: src/assets/adhan_entries.ts:19
-msgid "Masjid An Nabawi"
-msgstr "Masjid an-Nabawi"
-
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Mitten in der Nacht"
-
-#: src/assets/adhan_entries.ts:33
-msgid "Moazen Zade"
-msgstr "Moazen Zade"
 
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
@@ -434,7 +422,7 @@ msgstr "Weiter"
 msgid "Next Day"
 msgstr "Nächster Tag"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "Nein"
 
@@ -509,10 +497,6 @@ msgstr "Voriger Tag"
 msgid "Qatar"
 msgstr "Katar"
 
-#: src/assets/adhan_entries.ts:28
-msgid "Ragheb Mustafa Ghalwash"
-msgstr "Ragheb Mustafa Ghalwash"
-
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "ISNA-Methode"
@@ -545,7 +529,7 @@ msgstr "Samstag"
 msgid "Secondary Calendar"
 msgstr "Sekundärer Kalender"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:187
+#: src/screens/settings_adhan/adhan_list_item.tsx:190
 msgid "Select as Fajr Adhan"
 msgstr "Als Fajr-Adhan auswählen"
 
@@ -579,7 +563,7 @@ msgstr "Shia Ithna Ashari, Leva-Institut, Qom"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institut für Geophysik, Universität von Teheran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:177
+#: src/screens/settings_adhan/adhan_list_item.tsx:180
 msgid "Show Adhan Options"
 msgstr "Adhan-Optionen anzeigen"
 
@@ -753,7 +737,7 @@ msgstr "Mittwoch"
 msgid "Welcome"
 msgstr "Willkommen"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:105
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "Ja"
 
@@ -772,6 +756,10 @@ msgstr "Hier können Sie die Gebetszeiten ausblenden, die Sie nicht auf dem Haup
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Sie können die Gebetszeiten, die Sie nicht sehen möchten, hier ausblenden:"
+
+#: src/assets/adhan_entries.ts:21
+msgid "abdul_basit_abdus_samad"
+msgstr "Abdul-Basit Abdus-Samad"
 
 #: src/screens/settings_about/index.tsx:36
 msgid "about.credits"
@@ -856,6 +844,14 @@ msgstr "Standort"
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
+#: src/assets/adhan_entries.ts:17
+msgid "masjid_an_nabawi"
+msgstr "Masjid an-Nabawi"
+
+#: src/assets/adhan_entries.ts:29
+msgid "moazen_zade"
+msgstr "Moazen Zade"
+
 #. screen title
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
@@ -865,6 +861,10 @@ msgstr "Muezzin"
 #: src/navigation/types.ts:49
 msgid "notification_settings"
 msgstr "Benachrichtigung & Ton"
+
+#: src/assets/adhan_entries.ts:25
+msgid "ragheb_mustafa_ghalwash"
+msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
 #: src/navigation/types.ts:74

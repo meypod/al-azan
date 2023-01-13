@@ -1,6 +1,8 @@
-import {AdhanEntry} from '@/assets/adhan_entries';
-import {t} from '@lingui/macro';
+import {AdhanEntry, adhanEntryTranslations} from '@/assets/adhan_entries';
+import {i18n} from '@lingui/core';
 import {CheckIcon} from '@/assets/icons/check';
+import {t} from '@lingui/macro';
+import {CloseIcon} from '@/assets/icons/close';
 import {
   Button,
   HStack,
@@ -10,17 +12,16 @@ import {
   Pressable,
   Menu,
 } from 'native-base';
-import {CloseIcon} from '@/assets/icons/close';
-import {useCallback, useState} from 'react';
 import {DownloadIcon} from '@/assets/icons/download';
-import {Alert, ToastAndroid} from 'react-native';
+import {useCallback, useState} from 'react';
 import {MoreVertIcon} from '@/assets/icons/more_vert';
+import {Alert, ToastAndroid} from 'react-native';
+import {PlayIcon} from '@/assets/icons/play';
 import ReactNativeBlobUtil, {
   FetchBlobResponse,
   StatefulPromise,
   // eslint-disable-next-line
 } from 'react-native-blob-util';
-import {PlayIcon} from '@/assets/icons/play';
 import {StopIcon} from '@/assets/icons/stop';
 import {PlaybackState} from '@/modules/media_player';
 import {settings} from '@/store/settings';
@@ -95,7 +96,9 @@ export function AdhanListItem({
   const onDeletePressed = useCallback(() => {
     Alert.alert(
       t`Delete`,
-      t`Are you sure you want to delete "${item.label}" ?`,
+      t`Are you sure you want to delete "${
+        item.label || i18n._(adhanEntryTranslations[item.id])
+      }" ?`,
       [
         {
           text: t`No`,
@@ -152,7 +155,7 @@ export function AdhanListItem({
                 />
               )}
               <Text flex={1} flexGrow={1} noOfLines={1}>
-                {item.label}
+                {item.label ? 'foo' : i18n._(adhanEntryTranslations[item.id])}
               </Text>
             </HStack>
 

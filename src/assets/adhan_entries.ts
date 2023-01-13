@@ -1,4 +1,5 @@
-import {t} from '@lingui/macro';
+import {MessageDescriptor} from '@lingui/core';
+import {defineMessage} from '@lingui/macro';
 
 const RemoteBaseURI = 'https://github.com/meypod/audio_files/raw/main/adhan/';
 
@@ -12,25 +13,44 @@ export type AdhanEntry = {
 
 export const defautlAdhanAssetId = require('@/assets/sounds/masjid_an_nabawi.mp3');
 
+export const adhanEntryTranslations = {
+  masjid_an_nabawi: defineMessage({
+    id: 'masjid_an_nabawi',
+    message: 'Masjid An Nabawi',
+  }),
+  abdul_basit_abdus_samad: defineMessage({
+    id: 'abdul_basit_abdus_samad',
+    message: 'Abdul-Basit Abdus-Samad',
+  }),
+  ragheb_mustafa_ghalwash: defineMessage({
+    id: 'ragheb_mustafa_ghalwash',
+    message: 'Ragheb Mustafa Ghalwash',
+  }),
+  moazen_zade: defineMessage({
+    id: 'moazen_zade',
+    message: 'Moazen Zade',
+  }),
+} as Record<string, MessageDescriptor>;
+
 export const INITIAL_ADHAN_AUDIO_ENTRIES: AdhanEntry[] = [
   {
     id: 'masjid_an_nabawi',
     filepath: defautlAdhanAssetId,
-    label: t`Masjid An Nabawi`,
+    label: '',
   },
   {
     id: 'abdul_basit_abdus_samad',
-    label: t`Abdul-Basit Abdus-Samad`,
     remoteUri: RemoteBaseURI + 'abdul_basit_abdus_samad.mp3',
+    label: '',
   },
   {
     id: 'ragheb_mustafa_ghalwash',
-    label: t`Ragheb Mustafa Ghalwash`,
     remoteUri: RemoteBaseURI + 'ragheb_mustafa_ghalwash.mp3',
+    label: '',
   },
   {
     id: 'moazen_zade',
-    label: t`Moazen Zade`,
     remoteUri: RemoteBaseURI + 'moazen_zade.mp3',
+    label: '',
   },
 ];

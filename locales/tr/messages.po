@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-13 09:06+0330\n"
+"POT-Creation-Date: 2023-01-13 09:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,10 +30,6 @@ msgstr "60 dk."
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "90 min"
 msgstr "90 dk."
-
-#: src/assets/adhan_entries.ts:23
-msgid "Abdul-Basit Abdus-Samad"
-msgstr "Abdul-Basit Abdus-Samad"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
@@ -84,7 +80,7 @@ msgstr "Arapça"
 msgid "Arabic/Persian"
 msgstr "Arapça/Farsça"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "\"{0}\" dosyasını silmek istediğinizden emin misiniz?"
 
@@ -197,8 +193,8 @@ msgstr "Koyu"
 msgid "Default"
 msgstr "Varsayılan"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:97
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Delete"
 msgstr "Sil"
 
@@ -206,7 +202,7 @@ msgstr "Sil"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Cihazınıza ve android sürümünüze bağlı olarak, bazen cihazınız pilden tasarruf etmek için uygulamayı arka planda kalpatabilir. Bu durum, alarmların/bildirimlerin iletilmesini engelleyebilir."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:186
+#: src/screens/settings_adhan/adhan_list_item.tsx:189
 msgid "Deselect as Fajr Adhan"
 msgstr "Fecr Ezanı olarak seçimi kaldır"
 
@@ -251,7 +247,7 @@ msgstr "Ülkeler yüklenirken hata oluştu"
 msgid "Error in loading search results"
 msgstr "Arama sonuçları yüklenirken hata oluştu"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:82
+#: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Error while downloading audio"
 msgstr "Sesler indirilirken hata"
 
@@ -391,17 +387,9 @@ msgstr "Boylam"
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
-#: src/assets/adhan_entries.ts:19
-msgid "Masjid An Nabawi"
-msgstr "Mescid-i Nebevî"
-
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Gece yarısı"
-
-#: src/assets/adhan_entries.ts:33
-msgid "Moazen Zade"
-msgstr "Moazen Zade"
 
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
@@ -434,7 +422,7 @@ msgstr "Sonraki"
 msgid "Next Day"
 msgstr "Ertesi gün"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "No"
 
@@ -509,10 +497,6 @@ msgstr "Önceki Gün"
 msgid "Qatar"
 msgstr "Katar"
 
-#: src/assets/adhan_entries.ts:28
-msgid "Ragheb Mustafa Ghalwash"
-msgstr "Ragheb Mustafa Ghalwash"
-
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "ISNA yöntemi"
@@ -543,7 +527,7 @@ msgstr "Cumartesi"
 msgid "Secondary Calendar"
 msgstr "İkincil Takvim"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:187
+#: src/screens/settings_adhan/adhan_list_item.tsx:190
 msgid "Select as Fajr Adhan"
 msgstr "Fecr Ezanı olarak seçin"
 
@@ -574,7 +558,7 @@ msgstr "Şii Ithna Ashari, Leva Enstitüsü, Kum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:177
+#: src/screens/settings_adhan/adhan_list_item.tsx:180
 msgid "Show Adhan Options"
 msgstr "Ezan Seçeneklerini Göster"
 
@@ -748,7 +732,7 @@ msgstr "Çarşamba"
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:105
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "Evet"
 
@@ -767,6 +751,10 @@ msgstr "Ana ekranda görmek istemediğiniz namaz vakitlerini buradan gizleyebili
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Widget'ta görmek istemediğiniz namaz vakitlerini buradan gizleyebilirsiniz:"
+
+#: src/assets/adhan_entries.ts:21
+msgid "abdul_basit_abdus_samad"
+msgstr "Abdul-Basit Abdus-Samad"
 
 #: src/screens/settings_about/index.tsx:36
 msgid "about.credits"
@@ -848,6 +836,14 @@ msgstr "Konum"
 msgid "maghrib.prayer"
 msgstr "Akşam"
 
+#: src/assets/adhan_entries.ts:17
+msgid "masjid_an_nabawi"
+msgstr "Mescid-i Nebevî"
+
+#: src/assets/adhan_entries.ts:29
+msgid "moazen_zade"
+msgstr "Moazen Zade"
+
 #. screen title
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
@@ -857,6 +853,10 @@ msgstr "Müezzin"
 #: src/navigation/types.ts:49
 msgid "notification_settings"
 msgstr "Bildirim & Ses"
+
+#: src/assets/adhan_entries.ts:25
+msgid "ragheb_mustafa_ghalwash"
+msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
 #: src/navigation/types.ts:74
