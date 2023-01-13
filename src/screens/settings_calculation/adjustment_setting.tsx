@@ -4,7 +4,7 @@ import {useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {
   getPrayerAdjustmentSettingKey,
-  useCalcSettingsHelper,
+  useCalcSettings,
 } from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
 
@@ -16,7 +16,7 @@ export function AdjustmentSetting({
   prayer,
   ...hStackProps
 }: AdjustmentSettingProps & IVStackProps) {
-  const [adjustment, setAdjustment] = useCalcSettingsHelper(
+  const [adjustment, setAdjustment] = useCalcSettings(
     getPrayerAdjustmentSettingKey(prayer),
   );
 

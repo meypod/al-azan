@@ -11,7 +11,7 @@ import {
 } from 'native-base';
 import {ToastAndroid} from 'react-native';
 import {Prayer, PrayersInOrder, translatePrayer} from '@/adhan';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 
 function HidePrayerSetting({prayer, ...props}: IStackProps & {prayer: Prayer}) {
   const prayerName = translatePrayer(prayer);
@@ -31,7 +31,7 @@ function HidePrayerSetting({prayer, ...props}: IStackProps & {prayer: Prayer}) {
 }
 
 export function HidePrayerSettings(props: IStackProps) {
-  const [hiddenPrayer, setHiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
+  const [hiddenPrayer, setHiddenPrayers] = useSettings('HIDDEN_PRAYERS');
 
   const setHiddenPrayersProxy = (hiddenPrayers: Prayer[]) => {
     if (hiddenPrayers.length >= PrayersInOrder.length) {

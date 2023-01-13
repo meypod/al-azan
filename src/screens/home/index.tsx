@@ -1,17 +1,16 @@
-import {t} from '@lingui/macro';
-import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
-import {useEffect, useState} from 'react';
 import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/update';
+import {t} from '@lingui/macro';
 import Divider from '@/components/Divider';
+import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
+import {useEffect, useState} from 'react';
 import {isRTL} from '@/i18n';
 import {navigate} from '@/navigation/root_navigation';
-import {useCalcSettings} from '@/store/calculation';
 import {useStore} from '@/store/home';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
 import useInterval from '@/utils/hooks/use_interval';
 
@@ -35,11 +34,11 @@ export function Home() {
 
   const [isToday, setIsToday] = useState<boolean>();
 
-  const calcSettingsState = useCalcSettings(state => state);
-  const [hiddenPrayers] = useSettingsHelper('HIDDEN_PRAYERS');
-  const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
-  const [arabicCalendar] = useSettingsHelper('SELECTED_ARABIC_CALENDAR');
-  const [secondaryCalendar] = useSettingsHelper('SELECTED_SECONDARY_CALENDAR');
+  const [calcSettingsHash] = useSettings('CALC_SETTINGS_HASH');
+  const [hiddenPrayers] = useSettings('HIDDEN_PRAYERS');
+  const [numberingSystem] = useSettings('NUMBERING_SYSTEM');
+  const [arabicCalendar] = useSettings('SELECTED_ARABIC_CALENDAR');
+  const [secondaryCalendar] = useSettings('SELECTED_SECONDARY_CALENDAR');
 
   const [today, setToday] = useState<{
     dateString: string;
@@ -62,7 +61,7 @@ export function Home() {
   useEffect(() => {
     setPrayerTimes(getPrayerTimes(currentDate));
     setIsToday(currentDate.toDateString() === new Date().toDateString());
-  }, [currentDate, calcSettingsState]);
+  }, [currentDate, calcSettingsHash]);
 
   return (
     <ScrollView>

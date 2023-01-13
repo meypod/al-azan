@@ -7,12 +7,12 @@ import {ReminderItem} from '@/screens/settings_reminders/reminder_item';
 import {
   Reminder,
   reminderSettings,
-  useReminderSettingsHelper,
+  useReminderSettings,
 } from '@/store/reminder';
 import {setReminders} from '@/tasks/set_reminder';
 
 export function RemindersSettings(props: IBoxProps) {
-  const [reminderEntries] = useReminderSettingsHelper('REMINDERS');
+  const [reminderEntries] = useReminderSettings('REMINDERS');
   const [creatingReminder, setCreatingReminder] =
     useState<Partial<Reminder> | null>(null);
 

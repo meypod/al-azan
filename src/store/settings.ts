@@ -2,16 +2,16 @@ import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
 import ReactNativeBlobUtil from 'react-native-blob-util';
-import create from 'zustand';
-import {persist} from 'zustand/middleware';
-import createVanilla from 'zustand/vanilla';
-import {alarmSettings} from './alarm';
-import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
+import {useStore} from 'zustand';
 import {AdhanEntry, INITIAL_ADHAN_AUDIO_ENTRIES} from '@/assets/adhan_entries';
+import {persist, createJSONStorage} from 'zustand/middleware';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
+import {createStore} from 'zustand/vanilla';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
+import {alarmSettings} from './alarm';
+import {zustandStorage} from './mmkv';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
@@ -72,7 +72,7 @@ const invalidKeys = [
   'deleteTimestamp',
 ];
 
-export const settings = createVanilla<SettingsStore>()(
+export const settings = createStore<SettingsStore>()(
   persist(
     set => ({
       THEME_COLOR: 'default',
@@ -187,7 +187,7 @@ export const settings = createVanilla<SettingsStore>()(
     }),
     {
       name: SETTINGS_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
@@ -251,11 +251,9 @@ export const settings = createVanilla<SettingsStore>()(
   ),
 );
 
-export const useSettings = create(settings);
-
-export function useSettingsHelper<T extends keyof SettingsStore>(key: T) {
-  const state = useSettings(s => s[key]);
-  const setterCurry = useSettings(s => s.setSettingCurry);
+export function useSettings<T extends keyof SettingsStore>(key: T) {
+  const state = useStore(settings, s => s[key]);
+  const setterCurry = useStore(settings, s => s.setSettingCurry);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [

@@ -1,7 +1,3 @@
-import {t} from '@lingui/macro';
-import {Modal, Box, Button} from 'native-base';
-import {useCallback, useState} from 'react';
-import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
 import {IntroItem} from '@/intro/intro_item';
 import {BatteryOptimizationSlide} from '@/intro/slides/battery';
@@ -9,11 +5,15 @@ import {CalculationSlide} from '@/intro/slides/calculation';
 import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
 import {WelcomeSlide} from '@/intro/slides/welcome';
+import {t} from '@lingui/macro';
 import {StepLabel} from '@/intro/step_label';
+import {Modal, Box, Button} from 'native-base';
 import {alarmSettings} from '@/store/alarm';
+import {useCallback, useState} from 'react';
 import {calcSettings} from '@/store/calculation';
+import AppIntroSlider from 'react-native-app-intro-slider';
 import {reminderSettings} from '@/store/reminder';
-import {settings, useSettingsHelper} from '@/store/settings';
+import {settings, useSettings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {updateWidgets} from '@/tasks/update_widgets';
 import {sha256} from '@/utils/hash';
@@ -50,7 +50,7 @@ function _keyExtractor(item: Item) {
 export default Intro;
 
 export function Intro() {
-  const [, setAppIntroDone] = useSettingsHelper('APP_INTRO_DONE');
+  const [, setAppIntroDone] = useSettings('APP_INTRO_DONE');
 
   const [configAlertIsOpen, setConfigAlertIsOpen] = useState(false);
 

@@ -1,10 +1,11 @@
 import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Switch, Text} from 'native-base';
-import {useAlarmSettingsHelper} from '@/store/alarm';
+import {useAlarmSettings} from '@/store/alarm';
 
 export function NotifyNextAdhanSetting(props: IStackProps) {
-  const [notifyNextPrayerTime, setNotifyNextPrayerTime] =
-    useAlarmSettingsHelper('SHOW_NEXT_PRAYER_TIME');
+  const [notifyNextPrayerTime, setNotifyNextPrayerTime] = useAlarmSettings(
+    'SHOW_NEXT_PRAYER_TIME',
+  );
 
   return (
     <HStack {...props}>

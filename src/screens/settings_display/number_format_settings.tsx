@@ -1,14 +1,13 @@
 import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useEffect} from 'react';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 import {updateWidgets} from '@/tasks/update_widgets';
 
 // UPDATE WIDGETS WHEN SETTINGS CHANGES
 
 export function NumberFormatSettings(props: IStackProps) {
-  const [numberingSystem, setNumberingSystem] =
-    useSettingsHelper('NUMBERING_SYSTEM');
+  const [numberingSystem, setNumberingSystem] = useSettings('NUMBERING_SYSTEM');
 
   useEffect(() => {
     updateWidgets();

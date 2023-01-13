@@ -1,3 +1,4 @@
+import {bootstrap} from '@/bootstrap';
 import notifee, {
   EventType,
   EventDetail,
@@ -5,12 +6,6 @@ import notifee, {
   AndroidVisibility,
   Notification,
 } from '@notifee/react-native';
-import {finish, finishAndRemoveTask} from './modules/activity';
-import {Reminder, reminderSettings} from './store/reminder';
-import {settings} from './store/settings';
-import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
-import {setReminders} from './tasks/set_reminder';
-import {bootstrap} from '@/bootstrap';
 import {
   ADHAN_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
@@ -25,9 +20,14 @@ import {
 import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
+import {finishAndRemoveTask} from './modules/activity';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {Reminder, reminderSettings} from './store/reminder';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
+import {settings} from './store/settings';
 import {updateWidgets} from '@/tasks/update_widgets';
+import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
+import {setReminders} from './tasks/set_reminder';
 
 // TODO: remove when notifee has added FG_ALREADY_EXIST to their npm package
 declare module '@notifee/react-native' {

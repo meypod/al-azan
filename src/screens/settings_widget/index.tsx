@@ -9,12 +9,12 @@ import {
 } from 'native-base';
 import {useEffect} from 'react';
 import {HideWidgetPrayerSettings} from '@/screens/settings_widget/hide_widget_prayer_settings';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 import {updateWidgets} from '@/tasks/update_widgets';
 
 export function WidgetSettings(props: IScrollViewProps) {
-  const [showWidget, setShowWidget] = useSettingsHelper('SHOW_WIDGET');
-  const [hiddenPrayers] = useSettingsHelper('HIDDEN_WIDGET_PRAYERS');
+  const [showWidget, setShowWidget] = useSettings('SHOW_WIDGET');
+  const [hiddenPrayers] = useSettings('HIDDEN_WIDGET_PRAYERS');
 
   useEffect(() => {
     updateWidgets();

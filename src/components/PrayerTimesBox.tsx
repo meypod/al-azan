@@ -5,7 +5,7 @@ import {Prayer, PrayersInOrder, PrayerTime, PrayerTimesHelper} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
 import PrayerTimeRow from '@/components/PrayerTimeRow';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 
 type PrayerTimesBoxProps = {
   prayerTimes?: PrayerTimesHelper;
@@ -15,8 +15,8 @@ type PrayerTimesBoxProps = {
 
 function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
   const [nextPrayer, setNextPrayer] = useState<PrayerTime | undefined>();
-  const [is24Hour] = useSettingsHelper('IS_24_HOUR_FORMAT');
-  const [numberingSystem] = useSettingsHelper('NUMBERING_SYSTEM');
+  const [is24Hour] = useSettings('IS_24_HOUR_FORMAT');
+  const [numberingSystem] = useSettings('NUMBERING_SYSTEM');
 
   useEffect(() => {
     setNextPrayer(prayerTimes?.nextPrayer());
@@ -25,7 +25,7 @@ function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
   const [nextPrayerSoundIsMuted, setNextPrayerSoundIsMuted] = useState(false);
-  const [dismissedAlarms] = useSettingsHelper('DISMISSED_ALARM_TIMESTAMPS');
+  const [dismissedAlarms] = useSettings('DISMISSED_ALARM_TIMESTAMPS');
 
   const [visiblePrayerTimes, setVisiblePrayerTimes] = useState(PrayersInOrder);
   const [activePrayer, setActivePrayer] = useState<Prayer | undefined>();

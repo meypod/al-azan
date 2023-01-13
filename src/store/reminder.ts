@@ -1,10 +1,10 @@
 import {produce} from 'immer';
 import {useCallback} from 'react';
-import create from 'zustand';
-import {persist} from 'zustand/middleware';
-import createVanilla from 'zustand/vanilla';
-import {zustandStorage} from './mmkv';
+import {useStore} from 'zustand';
+import {createJSONStorage, persist} from 'zustand/middleware';
+import {createStore} from 'zustand/vanilla';
 import {Prayer} from '@/adhan';
+import {zustandStorage} from './mmkv';
 
 const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
 
@@ -48,7 +48,7 @@ const invalidKeys = [
   'disableReminder',
 ];
 
-export const reminderSettings = createVanilla<ReminderStore>()(
+export const reminderSettings = createStore<ReminderStore>()(
   persist(
     set => ({
       REMINDERS: [],
@@ -117,7 +117,7 @@ export const reminderSettings = createVanilla<ReminderStore>()(
     }),
     {
       name: REMINDER_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
@@ -138,13 +138,9 @@ export const reminderSettings = createVanilla<ReminderStore>()(
   ),
 );
 
-export const useReminderSettings = create(reminderSettings);
-
-export function useReminderSettingsHelper<T extends keyof ReminderStore>(
-  key: T,
-) {
-  const state = useReminderSettings(s => s[key]);
-  const setterCurry = useReminderSettings(s => s.setSettingCurry);
+export function useReminderSettings<T extends keyof ReminderStore>(key: T) {
+  const state = useStore(reminderSettings, s => s[key]);
+  const setterCurry = useStore(reminderSettings, s => s.setSettingCurry);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [

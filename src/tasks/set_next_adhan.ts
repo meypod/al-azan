@@ -1,5 +1,4 @@
 import {t} from '@lingui/macro';
-import {cancelAlarmsAndReminders} from './cancel_alarms';
 import {getPrayerTimes, translatePrayer} from '@/adhan';
 import {
   ADHAN_NOTIFICATION_ID,
@@ -12,6 +11,7 @@ import {
 import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
+import {cancelAlarmsAndReminders} from './cancel_alarms';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {getTime} from '@/utils/date';
 import {getUpcommingTimeDay, showUpcomingToast} from '@/utils/upcoming';

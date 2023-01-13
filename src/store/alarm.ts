@@ -1,12 +1,12 @@
 import {produce} from 'immer';
 import {useCallback} from 'react';
-import create from 'zustand';
-import {persist} from 'zustand/middleware';
-import createVanilla from 'zustand/vanilla';
-import {zustandStorage} from './mmkv';
-import {reminderSettings} from './reminder';
+import {useStore} from 'zustand';
+import {createJSONStorage, persist} from 'zustand/middleware';
+import {createStore} from 'zustand/vanilla';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {WeekDayIndex} from '@/utils/date';
+import {zustandStorage} from './mmkv';
+import {reminderSettings} from './reminder';
 
 const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
 
@@ -67,7 +67,7 @@ export type AlarmSettingsStore = {
 
 const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 
-export const alarmSettings = createVanilla<AlarmSettingsStore>()(
+export const alarmSettings = createStore<AlarmSettingsStore>()(
   persist(
     set => ({
       SHOW_NEXT_PRAYER_TIME: false,
@@ -102,7 +102,7 @@ export const alarmSettings = createVanilla<AlarmSettingsStore>()(
     }),
     {
       name: ALARM_SETTINGS_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
@@ -128,13 +128,9 @@ export const alarmSettings = createVanilla<AlarmSettingsStore>()(
   ),
 );
 
-export const useAlarmSettings = create(alarmSettings);
-
-export function useAlarmSettingsHelper<T extends keyof AlarmSettingsStore>(
-  key: T,
-) {
-  const state = useAlarmSettings(s => s[key]);
-  const setterCurry = useAlarmSettings(s => s.setSettingCurry);
+export function useAlarmSettings<T extends keyof AlarmSettingsStore>(key: T) {
+  const state = useStore(alarmSettings, s => s[key]);
+  const setterCurry = useStore(alarmSettings, s => s.setSettingCurry);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [

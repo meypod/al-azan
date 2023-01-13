@@ -13,30 +13,30 @@ import {
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/menu';
 import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
-import {useCalcSettingsHelper} from '@/store/calculation';
+import {useCalcSettings} from '@/store/calculation';
 
 export function CalculationSettings(props: IScrollViewProps) {
-  const [calculationMethodKey, setCalculationMethodKey] = useCalcSettingsHelper(
+  const [calculationMethodKey, setCalculationMethodKey] = useCalcSettings(
     'CALCULATION_METHOD_KEY',
   );
 
-  const [, setFajrAdjustment] = useCalcSettingsHelper('FAJR_ADJUSTMENT');
-  const [, setSunriseAdjustment] = useCalcSettingsHelper('SUNRISE_ADJUSTMENT');
-  const [, setDhuhrAdjustment] = useCalcSettingsHelper('DHUHR_ADJUSTMENT');
-  const [, setAsrAdjustment] = useCalcSettingsHelper('ASR_ADJUSTMENT');
-  const [, setMaghribAdjustment] = useCalcSettingsHelper('MAGHRIB_ADJUSTMENT');
-  const [, setIshaAdjustment] = useCalcSettingsHelper('ISHA_ADJUSTMENT');
+  const [, setFajrAdjustment] = useCalcSettings('FAJR_ADJUSTMENT');
+  const [, setSunriseAdjustment] = useCalcSettings('SUNRISE_ADJUSTMENT');
+  const [, setDhuhrAdjustment] = useCalcSettings('DHUHR_ADJUSTMENT');
+  const [, setAsrAdjustment] = useCalcSettings('ASR_ADJUSTMENT');
+  const [, setMaghribAdjustment] = useCalcSettings('MAGHRIB_ADJUSTMENT');
+  const [, setIshaAdjustment] = useCalcSettings('ISHA_ADJUSTMENT');
 
   const [highLatitudeRuleSetting, setHighLatitudeRuleSetting] =
-    useCalcSettingsHelper('HIGH_LATITUDE_RULE');
+    useCalcSettings('HIGH_LATITUDE_RULE');
 
   const [asrCalculationSetting, setAsrCalculationSetting] =
-    useCalcSettingsHelper('ASR_CALCULATION');
+    useCalcSettings('ASR_CALCULATION');
 
   const [polarResolutionSetting, setPolarResolutionSetting] =
-    useCalcSettingsHelper('POLAR_RESOLUTION');
+    useCalcSettings('POLAR_RESOLUTION');
 
-  const [shafaqSetting, setShafaqSetting] = useCalcSettingsHelper('SHAFAQ');
+  const [shafaqSetting, setShafaqSetting] = useCalcSettings('SHAFAQ');
 
   const calculationMethodKeyChanged = (itemValue: string) => {
     setCalculationMethodKey(itemValue);

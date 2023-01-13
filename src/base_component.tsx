@@ -3,12 +3,12 @@ import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
 import {PixelRatio, useColorScheme} from 'react-native';
+import {getFgSvcNotification, setupNotifeeForegroundHandler} from '@/notifee';
+import {useSettings} from '@/store/settings';
+import {colors} from '@/theme/colors';
 import {getActivityName} from './modules/activity';
 import {getCurrentRoute, replace} from './navigation/root_navigation';
 import {stopAdhan} from './services/azan_service';
-import {getFgSvcNotification, setupNotifeeForegroundHandler} from '@/notifee';
-import {useSettingsHelper} from '@/store/settings';
-import {colors} from '@/theme/colors';
 
 const pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
 
@@ -51,7 +51,7 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
     };
   }, []);
 
-  const [isPlayingAdhan] = useSettingsHelper('IS_PLAYING_ADHAN');
+  const [isPlayingAdhan] = useSettings('IS_PLAYING_ADHAN');
 
   useEffect(() => {
     if (isPlayingAdhan) {
@@ -77,7 +77,7 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
 
   const systemColorScheme = useColorScheme();
 
-  const [themeColor, setThemeColor] = useSettingsHelper('THEME_COLOR');
+  const [themeColor, setThemeColor] = useSettings('THEME_COLOR');
 
   const colorCodeManager = {
     async get() {

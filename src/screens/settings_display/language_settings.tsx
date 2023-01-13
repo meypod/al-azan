@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import {I18nManager} from 'react-native';
 import {isRTL, loadLocale} from '@/i18n';
 import {restart} from '@/modules/activity';
-import {settings, useSettingsHelper} from '@/store/settings';
+import {settings, useSettings} from '@/store/settings';
 
 type LanguageEntry = {
   label: string;
@@ -12,7 +12,7 @@ type LanguageEntry = {
 };
 
 export function LanguageSettings(props: IStackProps) {
-  const [lang, setLang] = useSettingsHelper('SELECTED_LOCALE');
+  const [lang, setLang] = useSettings('SELECTED_LOCALE');
 
   const languageEntries: LanguageEntry[] = [
     {

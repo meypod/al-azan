@@ -1,16 +1,16 @@
 import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
 import {HStack, Text, Button, VStack, Checkbox, Flex} from 'native-base';
-import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {memo, useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
+import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
 import {ExpandCircleDownIcon} from '@/assets/icons/expand_circle_down';
+import {memo, useCallback, useEffect, useState} from 'react';
 import Divider from '@/components/Divider';
 import {WeekDaySelector} from '@/components/week_day_selector';
 import {
   getAdhanSettingKey,
   PrayerAlarmSettings,
-  useAlarmSettingsHelper,
+  useAlarmSettings,
 } from '@/store/alarm';
 import {WeekDayIndex} from '@/utils/date';
 
@@ -130,10 +130,10 @@ function NotificationSetting({
   expanded,
   ...vStackProps
 }: NotificationSettingProps & IVStackProps) {
-  const [notify, setNotify] = useAlarmSettingsHelper(
+  const [notify, setNotify] = useAlarmSettings(
     getAdhanSettingKey(prayer, 'notify') as 'FAJR_NOTIFY', // any notify/sound key to get the types
   );
-  const [sound, setSound] = useAlarmSettingsHelper(
+  const [sound, setSound] = useAlarmSettings(
     getAdhanSettingKey(prayer, 'sound') as 'FAJR_SOUND',
   );
 

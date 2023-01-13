@@ -1,12 +1,12 @@
 import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
 import {produce} from 'immer';
 import {useCallback} from 'react';
-import create from 'zustand';
-import {persist} from 'zustand/middleware';
-import createVanilla from 'zustand/vanilla';
+import {useStore} from 'zustand';
+import {createJSONStorage, persist} from 'zustand/middleware';
+import {createStore} from 'zustand/vanilla';
+import {Prayer} from '@/adhan';
 import {alarmSettings, AlarmSettingsStore} from './alarm';
 import {zustandStorage} from './mmkv';
-import {Prayer} from '@/adhan';
 
 const CALC_SETTINGS_STORAGE_KEY = 'CALC_SETTINGS_STORAGE';
 
@@ -52,7 +52,7 @@ export type CalcSettingsStore = {
 
 const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
 
-export const calcSettings = createVanilla<CalcSettingsStore>()(
+export const calcSettings = createStore<CalcSettingsStore>()(
   persist(
     set => ({
       LOCATION_LAT: undefined,
@@ -102,7 +102,7 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
     }),
     {
       name: CALC_SETTINGS_STORAGE_KEY,
-      getStorage: () => zustandStorage,
+      storage: createJSONStorage(() => zustandStorage),
       partialize: state =>
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
@@ -143,13 +143,9 @@ export const calcSettings = createVanilla<CalcSettingsStore>()(
   ),
 );
 
-export const useCalcSettings = create(calcSettings);
-
-export function useCalcSettingsHelper<T extends keyof CalcSettingsStore>(
-  key: T,
-) {
-  const state = useCalcSettings(s => s[key]);
-  const setterCurry = useCalcSettings(s => s.setSettingCurry);
+export function useCalcSettings<T extends keyof CalcSettingsStore>(key: T) {
+  const state = useStore(calcSettings, s => s[key]);
+  const setterCurry = useStore(calcSettings, s => s.setSettingCurry);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [

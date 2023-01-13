@@ -11,7 +11,7 @@ import {
 } from 'native-base';
 import {ToastAndroid} from 'react-native';
 import {Prayer, PrayersInOrder, translatePrayer} from '@/adhan';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 
 function HideWidgetPrayerSetting({
   prayer,
@@ -34,7 +34,7 @@ function HideWidgetPrayerSetting({
 }
 
 export function HideWidgetPrayerSettings(props: IStackProps) {
-  const [hiddenWidgetPrayer, setHiddenWidgetPrayers] = useSettingsHelper(
+  const [hiddenWidgetPrayer, setHiddenWidgetPrayers] = useSettings(
     'HIDDEN_WIDGET_PRAYERS',
   );
 

@@ -1,6 +1,3 @@
-import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
-import {memo, useEffect} from 'react';
-
 import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
@@ -13,10 +10,13 @@ import {WidgetIcon} from '@/assets/icons/widget';
 import {push} from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {clearCache} from '@/store/adhan_calc_cache';
-import {useAlarmSettings} from '@/store/alarm';
-import {useCalcSettings} from '@/store/calculation';
-import {useReminderSettings} from '@/store/reminder';
-import {settings, useSettingsHelper} from '@/store/settings';
+import {alarmSettings} from '@/store/alarm';
+import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
+import {calcSettings} from '@/store/calculation';
+import {memo, useEffect} from 'react';
+import {reminderSettings} from '@/store/reminder';
+import {useStore} from 'zustand';
+import {settings, useSettings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {updateWidgets} from '@/tasks/update_widgets';
@@ -86,15 +86,15 @@ function renderItem({item}: {item: ScreenListItem}) {
 }
 
 function Settings() {
-  const calcSettingsState = useCalcSettings(state => state);
-  const alarmSettingsState = useAlarmSettings(state => state);
-  const reminderSettingsState = useReminderSettings(state => state);
+  const calcSettingsState = useStore(calcSettings, state => state);
+  const alarmSettingsState = useStore(alarmSettings, state => state);
+  const reminderSettingsState = useStore(reminderSettings, state => state);
   const [calcSettingsHash, setCalcSettingsHash] =
-    useSettingsHelper('CALC_SETTINGS_HASH');
-  const [alarmSettingsHash, setAlarmSettingsHash] = useSettingsHelper(
+    useSettings('CALC_SETTINGS_HASH');
+  const [alarmSettingsHash, setAlarmSettingsHash] = useSettings(
     'ALARM_SETTINGS_HASH',
   );
-  const [reminderSettingsHash, setReminderSettingsHash] = useSettingsHelper(
+  const [reminderSettingsHash, setReminderSettingsHash] = useSettings(
     'REMINDER_SETTINGS_HASH',
   );
 

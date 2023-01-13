@@ -8,12 +8,12 @@ import {
   Text,
 } from 'native-base';
 import {useCallback} from 'react';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 
 export function ThemeSettings(props: IStackProps) {
   const {setColorMode} = useColorMode();
 
-  const [themeColor] = useSettingsHelper('THEME_COLOR');
+  const [themeColor] = useSettings('THEME_COLOR');
 
   const changeColor = useCallback(
     (colorString: string) => {

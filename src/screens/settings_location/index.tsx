@@ -1,6 +1,8 @@
 import {t} from '@lingui/macro';
 import Clipboard from '@react-native-clipboard/clipboard';
+import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {debounce} from 'lodash';
+import Divider from '@/components/Divider';
 import {
   HStack,
   Input,
@@ -14,14 +16,12 @@ import {
   WarningOutlineIcon,
   Spacer,
 } from 'native-base';
+import {useCalcSettings} from '@/store/calculation';
 import {useCallback, useLayoutEffect, useState} from 'react';
+import {useSettings} from '@/store/settings';
 import {ToastAndroid} from 'react-native';
-import LocationProvider from 'react-native-get-location';
-import {AutocompleteInput} from '@/components/AutocompleteInput';
-import Divider from '@/components/Divider';
-import {useCalcSettingsHelper} from '@/store/calculation';
-import {useSettingsHelper} from '@/store/settings';
 import {getCached} from '@/utils/cached';
+import LocationProvider from 'react-native-get-location';
 import {
   CountryInfo,
   getCountries,
@@ -37,21 +37,20 @@ function isValidCoords(num: number) {
 const clipboardCoordsRegex = /\s*([-\d.]+)[\s°NS]*[,| ]{1}\s*([-\d.]+)[\s°EW]*/;
 
 export function LocationSettings(props: IScrollViewProps) {
-  const [lat, setLat] = useCalcSettingsHelper('LOCATION_LAT');
-  const [long, setLong] = useCalcSettingsHelper('LOCATION_LONG');
+  const [lat, setLat] = useCalcSettings('LOCATION_LAT');
+  const [long, setLong] = useCalcSettings('LOCATION_LONG');
   const [tempLat, setTempLat] = useState<string>('-');
   const [tempLong, setTempLong] = useState<string>('-');
   const [gettingLocation, setGettingLocation] = useState<boolean>(false);
-  const [selectedCountry, setSelectedCountry] =
-    useSettingsHelper('LOCATION_COUNTRY');
-  const [locale] = useSettingsHelper('SELECTED_LOCALE');
+  const [selectedCountry, setSelectedCountry] = useSettings('LOCATION_COUNTRY');
+  const [locale] = useSettings('SELECTED_LOCALE');
 
   useLayoutEffect(() => {
     setTempLat(lat?.toString() || '-');
     setTempLong(long?.toString() || '-');
   }, [lat, long]);
 
-  const [selectedCity, setSelectedCity] = useSettingsHelper('LOCATION_CITY');
+  const [selectedCity, setSelectedCity] = useSettings('LOCATION_CITY');
 
   const {
     pending: isLoadingCountries,

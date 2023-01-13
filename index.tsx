@@ -1,3 +1,5 @@
+import {App} from '@/app';
+import {BaseComponent} from '@/base_component';
 import {LogBox, AppRegistry} from 'react-native';
 
 if (__DEV__) {
@@ -5,12 +7,9 @@ if (__DEV__) {
     'new NativeEventEmitter',
     'UNSAFE_componentWillReceiveProps',
     'UNSAFE_componentWillMount',
-    '[DEPRECATED] `getStorage`',
   ]);
 }
 
-import {App} from '@/app';
-import {BaseComponent} from '@/base_component';
 import {bootstrap} from '@/bootstrap';
 import {APP_KEY} from '@/constants/app';
 import WidgetMod from '@/modules/screen_widget';

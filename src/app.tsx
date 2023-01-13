@@ -1,12 +1,3 @@
-import HeaderTitle from '@react-navigation/elements/src/Header/HeaderTitle';
-import {
-  NavigationContainer,
-  DarkTheme,
-  DefaultTheme,
-} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {useColorMode} from 'native-base';
-import {getActivityName} from './modules/activity';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
@@ -19,14 +10,22 @@ import {Home} from '@/screens/home';
 import Settings from '@/screens/settings';
 import {AboutSettings} from '@/screens/settings_about';
 import {AdhanSettings} from '@/screens/settings_adhan';
+import HeaderTitle from '@react-navigation/elements/src/Header/HeaderTitle';
 import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
+import {
+  NavigationContainer,
+  DarkTheme,
+  DefaultTheme,
+} from '@react-navigation/native';
 import {CalculationSettings} from '@/screens/settings_calculation';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {DisplaySettings} from '@/screens/settings_display';
+import {useColorMode} from 'native-base';
 import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
-import {useSettingsHelper} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -40,7 +39,7 @@ const TranslatedHeaderTitle = (...props: any[]) => {
 };
 
 export function App() {
-  const [appIntroDone] = useSettingsHelper('APP_INTRO_DONE');
+  const [appIntroDone] = useSettings('APP_INTRO_DONE');
   const {colorMode} = useColorMode();
 
   const isDarkMode = colorMode === 'dark';
