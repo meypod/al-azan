@@ -27,6 +27,7 @@ function FullscreenAlarm({route}: ScreenProps) {
   });
 
   useEffect(() => {
+    // TODO Use notification here ?
     const parsedAlarmOptions = JSON.parse(
       route.params.options || 'false',
     ) as SetAlarmTaskOptions;

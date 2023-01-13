@@ -102,7 +102,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
       player.stop();
     } catch (Exception ignored) {
     } finally {
-      onCompletion(player);
+      onCompletion(true);
       ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
           .emit("state", STATE_STOPPED);
     }
@@ -252,15 +252,19 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   @Override
   public void onCompletion(MediaPlayer mp) {
+    onCompletion(false);
+  }
+
+  public void onCompletion(boolean wasInterrupted) {
     isStarted = false;
     isPaused = false;
     wasPlaying = false;
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     audioManager.abandonAudioFocus(this);
     ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-        .emit("completed", null);
+            .emit("completed", wasInterrupted);
     ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-        .emit("state", STATE_STOPPED);
+            .emit("state", STATE_STOPPED);
   }
 
   class MusicBinder extends Binder {

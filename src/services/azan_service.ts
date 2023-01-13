@@ -3,6 +3,7 @@ import {defautlAdhanAssetId} from '@/assets/adhan_entries';
 import {destroy, play, stop} from '@/services/play_sound';
 import {settings} from '@/store/settings';
 
+/** returns `true` if interrupted during play, `false` otherwise */
 export async function playAdhan(prayer: Prayer) {
   let adhanFilePath: string | number = defautlAdhanAssetId;
 
@@ -21,10 +22,11 @@ export async function playAdhan(prayer: Prayer) {
     await stop();
   }
   settings.setState({IS_PLAYING_ADHAN: true});
-  await play(adhanFilePath);
+  const result = await play(adhanFilePath);
   settings.setState({IS_PLAYING_ADHAN: false});
 
-  return destroy();
+  await destroy();
+  return result;
 }
 
 export async function stopAdhan() {

@@ -20,12 +20,12 @@ import {
 import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
-import {finishAndRemoveTask} from './modules/activity';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {Reminder, reminderSettings} from './store/reminder';
+import {finishAndRemoveTask, isDndActive} from './modules/activity';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
-import {settings} from './store/settings';
+import {Reminder, reminderSettings} from './store/reminder';
 import {updateWidgets} from '@/tasks/update_widgets';
+import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
 import {setReminders} from './tasks/set_reminder';
 
@@ -46,11 +46,14 @@ export type NotifeeEvent = {
 export type CancelNotifOptions = {
   notification: Notification | undefined;
   options: SetAlarmTaskOptions | undefined;
+  /** should the notification be replaced with a notification without actions after it was cancelled ? */
+  replaceWithNormal?: boolean;
 };
 
 export async function cancelAlarmNotif({
   options,
   notification,
+  replaceWithNormal,
 }: CancelNotifOptions) {
   if (notification?.android?.asForegroundService) {
     if (options?.playSound) {
@@ -62,6 +65,22 @@ export async function cancelAlarmNotif({
   if (options?.notifId) {
     await notifee
       .cancelDisplayedNotification(options.notifId)
+      .catch(console.error);
+  }
+
+  if (replaceWithNormal && notification) {
+    await notifee
+      .displayNotification({
+        ...notification,
+        id: notification.id + '-remains',
+        android: {
+          ...notification.android,
+          actions: undefined,
+          asForegroundService: false,
+          fullScreenAction: undefined,
+          importance: AndroidImportance.DEFAULT,
+        },
+      })
       .catch(console.error);
   }
 }
@@ -229,9 +248,23 @@ export function setupNotifeeHandlers() {
       const options = getAlarmOptions(notification);
 
       if (options?.playSound) {
-        return playAdhan(options.prayer)
-          .then(() => cancelAlarmNotif({notification, options}))
-          .finally(() => finishAndRemoveTask());
+        const canBypassDnd = (
+          await notifee.getChannel(channelId).catch(console.error)
+        )?.bypassDnd;
+
+        const isDnd = await isDndActive();
+
+        if (!isDnd || canBypassDnd) {
+          return playAdhan(options.prayer)
+            .then(interrupted =>
+              cancelAlarmNotif({
+                notification,
+                options,
+                replaceWithNormal: !interrupted,
+              }),
+            )
+            .finally(() => finishAndRemoveTask());
+        }
       }
     }
 

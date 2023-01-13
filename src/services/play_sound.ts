@@ -2,7 +2,7 @@ import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
 import MediaPlayer from '@/modules/media_player';
 
-/** @returns {boolean} - true if played successfully, false otherwise */
+/** returns `true` if interrupted during play, `false` otherwise */
 export async function play(uri: string | number) {
   const volumeListener = SystemSetting.addVolumeListener(data => {
     MediaPlayer.setVolume(data.value);
@@ -21,11 +21,14 @@ export async function play(uri: string | number) {
     playbackFinishedDefer.resolve(errored);
   };
 
-  const endSub = MediaPlayer.addEventListener('completed', () => {
-    endSub.remove();
-    console.log('MediaPlayer completed');
-    onFinally(false);
-  });
+  const endSub = MediaPlayer.addEventListener(
+    'completed',
+    (interrupted: boolean) => {
+      endSub.remove();
+      console.log('MediaPlayer completed, Interrupted? ', interrupted);
+      onFinally(interrupted);
+    },
+  );
   const errorSub = MediaPlayer.addEventListener('error', err => {
     errorSub.remove();
     console.error('MediaPlayer Error: ', err);
@@ -36,7 +39,6 @@ export async function play(uri: string | number) {
 
   await MediaPlayer.start();
   const playbackResult = await playbackFinishedDefer;
-
   return playbackResult;
 }
 
