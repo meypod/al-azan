@@ -63,9 +63,6 @@ export function setNextAdhan(options?: SetNextAdhanOptions) {
         next.prayer,
       )}, ${getUpcommingTimeDay(next.date)}`;
     }
-  } else {
-    body = subtitle;
-    subtitle = undefined;
   }
 
   const adhanOptions = {
