@@ -102,7 +102,7 @@ export function BatteryOptimizationSettings(props: IScrollViewProps) {
         fontSize="xs"
         dataDetectorType={
           'link'
-        }>{t`If you still had problem with app stopping after some time, please consider visiting dontkillmyapp.com for more solutions.`}</Text>
+        }>{t`If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions.`}</Text>
     </ScrollView>
   );
 }

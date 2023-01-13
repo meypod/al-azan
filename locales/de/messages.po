@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-13 09:51+0330\n"
+"POT-Creation-Date: 2023-01-13 18:19+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -313,6 +313,10 @@ msgstr "Startseite"
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Wenn diese Option aktiviert ist, enthält die Benachrichtigung Informationen über die nächste Gebetszeit"
 
+#: src/screens/settings_battery_optimizations/index.tsx:105
+msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
+msgstr "Wenn Sie immer noch das Problem haben, dass die App nach einiger Zeit stoppt, besuchen Sie bitte dontkillmyapp.com für weitere Lösungen."
+
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Wenn Sie sicherstellen möchten, dass die App zuverlässig funktioniert, müssen Sie die Energieoptimierung für diese App deaktivieren. Sie können die entsprechenden Einstellungen über die untere Schaltfläche öffnen."
@@ -464,7 +468,7 @@ msgstr "Es können nur sechs Elemente gleichzeitig angezeigt werden"
 msgid "Open Battery Optimization Settings"
 msgstr "Einstellungen für die Akku-Optimierung öffnen"
 
-#: src/screens/settings_battery_optimizations/index.tsx:92
+#: src/screens/settings_battery_optimizations/index.tsx:96
 msgid "Open Power Manager Settings"
 msgstr "Einstellungen für die Energieverwaltung öffnen"
 
@@ -511,7 +515,7 @@ msgstr "Erinnerung"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Die erforderlichen Einstellungen sind unvollständig. Damit die App die Gebetszeiten anzeigen kann, müssen Sie diese später in den Einstellungen konfigurieren."
 
-#: src/screens/settings_battery_optimizations/index.tsx:82
+#: src/screens/settings_battery_optimizations/index.tsx:86
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -591,7 +595,7 @@ msgstr "Überspringen"
 msgid "Solar Hijri"
 msgstr "Iranischer Kalender (Hijri)"
 
-#: src/screens/settings_battery_optimizations/index.tsx:72
+#: src/screens/settings_battery_optimizations/index.tsx:74
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -741,7 +745,7 @@ msgstr "Willkommen"
 msgid "Yes"
 msgstr "Ja"
 
-#: src/screens/settings_battery_optimizations/index.tsx:75
+#: src/screens/settings_battery_optimizations/index.tsx:79
 msgid "You can access your device Power Manager using the button below."
 msgstr "Über die untere Schaltfläche können Sie auf die Energieverwaltung Ihres Geräts zugreifen."
 
