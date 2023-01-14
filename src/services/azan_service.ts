@@ -31,5 +31,6 @@ export async function playAdhan(prayer: Prayer) {
 
 export async function stopAdhan() {
   await stop();
+  settings.setState({IS_PLAYING_ADHAN: false});
   await destroy();
 }
