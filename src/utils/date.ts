@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import {settings, SettingsStore} from '@/store/settings';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
@@ -78,13 +79,72 @@ export function getDayName(date: Date, length: 'long' | 'short' = 'long') {
   }).format(date);
 }
 
+const persianMonthNames: Record<string, Record<string | number, string>> = {
+  en: {
+    1: 'Farvardin',
+    2: 'Ordibehesht',
+    3: 'Khordad',
+    4: 'Tir',
+    5: 'Mordad',
+    6: 'Shahrivar',
+    7: 'Mehr',
+    8: 'Aban',
+    9: 'Azar',
+    10: 'Dey',
+    11: 'Bahman',
+    12: 'Esfand',
+  },
+  fa: {
+    1: 'فروردین',
+    2: 'اردیبهشت',
+    3: 'خرداد',
+    4: 'تیر',
+    5: 'مرداد',
+    6: 'شهریور',
+    7: 'مهر',
+    8: 'آبان',
+    9: 'آذر',
+    10: 'دی',
+    11: 'بهمن',
+    12: 'اسفند',
+  },
+};
+
 export function getFormattedDate(date: Date) {
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric',
-    calendar: SELECTED_SECONDARY_CALENDAR,
-  }).format(date);
+  if (Platform.Version < 30 && SELECTED_SECONDARY_CALENDAR === 'persian') {
+    // polyfill for older androids not showing persian calendar properly
+    const month = new Intl.DateTimeFormat('en-US', {
+      month: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    }).format(date);
+
+    let dateParts = new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      day: '2-digit',
+      year: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    })
+      .format(date)
+      .split(' ');
+
+    let formattedDate;
+
+    if (SELECTED_LOCALE.startsWith('fa')) {
+      const monthName = persianMonthNames['fa'][month];
+      formattedDate = `${dateParts[1]} ${monthName} ${dateParts[0]}`;
+    } else {
+      const monthName = persianMonthNames['en'][month];
+      formattedDate = `${monthName} ${dateParts[0]}, ${dateParts[1]} AP`;
+    }
+
+    return formattedDate;
+  } else {
+    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    }).format(date);
+  }
 }
 
 export function getTime(date: Date) {
