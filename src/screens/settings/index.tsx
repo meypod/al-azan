@@ -11,17 +11,18 @@ import {push} from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {clearCache} from '@/store/adhan_calc_cache';
 import {alarmSettings} from '@/store/alarm';
-import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {calcSettings} from '@/store/calculation';
-import {memo, useEffect} from 'react';
+import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {reminderSettings} from '@/store/reminder';
-import {useStore} from 'zustand';
+import {memo, useEffect} from 'react';
 import {settings, useSettings} from '@/store/settings';
+import {useStore} from 'zustand';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {updateWidgets} from '@/tasks/update_widgets';
 import {sha256} from '@/utils/hash';
 import useNoInitialEffect from '@/utils/hooks/use_update_effect';
+import {askPermissions} from '@/utils/permission';
 
 type ScreenListItem = {
   name: keyof RootStackParamList;
@@ -110,8 +111,10 @@ function Settings() {
   useEffect(() => {
     const stateHash = sha256(JSON.stringify(alarmSettingsState));
     if (alarmSettingsHash !== stateHash) {
-      setAlarmSettingsHash(stateHash);
-      settings.setState({DISMISSED_ALARM_TIMESTAMPS: {}});
+      askPermissions().then(() => {
+        setAlarmSettingsHash(stateHash);
+        settings.setState({DISMISSED_ALARM_TIMESTAMPS: {}});
+      });
     }
   }, [alarmSettingsState, alarmSettingsHash, setAlarmSettingsHash]);
 

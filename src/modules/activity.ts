@@ -21,6 +21,7 @@ interface ActivityModuleInterface {
   finishAndRemoveTask(): Promise<void>;
   getActivityName(): Promise<string>;
   isDndActive(): Promise<boolean>;
+  openApplicationSettings(): Promise<void>;
 }
 
 export const restart = ActivityModule.restart;
@@ -28,5 +29,6 @@ export const finish = ActivityModule.finish;
 export const finishAndRemoveTask = ActivityModule.finishAndRemoveTask;
 export const getActivityName = ActivityModule.getActivityName;
 export const isDndActive = ActivityModule.isDndActive;
+export const openApplicationSettings = ActivityModule.openApplicationSettings;
 
 export default ActivityModule;

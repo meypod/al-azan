@@ -2,17 +2,21 @@ import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/update';
-import {t} from '@lingui/macro';
 import Divider from '@/components/Divider';
-import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
+import {t} from '@lingui/macro';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
-import {useEffect, useState} from 'react';
 import {isRTL} from '@/i18n';
+
+import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {navigate} from '@/navigation/root_navigation';
+import {useEffect, useState} from 'react';
+
 import {useStore} from '@/store/home';
+
 import {useSettings} from '@/store/settings';
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
 import useInterval from '@/utils/hooks/use_interval';
+import {askPermissions} from '@/utils/permission';
 
 export function Home() {
   const [
@@ -62,6 +66,10 @@ export function Home() {
     setPrayerTimes(getPrayerTimes(currentDate));
     setIsToday(currentDate.toDateString() === new Date().toDateString());
   }, [currentDate, calcSettingsHash]);
+
+  useEffect(() => {
+    void askPermissions();
+  }, []);
 
   return (
     <ScrollView>

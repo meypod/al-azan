@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-13 18:19+0330\n"
+"POT-Creation-Date: 2023-01-14 10:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -67,6 +67,10 @@ msgstr "Gelişmiş Hesaplama Ayarları"
 #: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
 msgstr "Ahmer (Kızıllık)"
+
+#: src/utils/permission.ts:61
+msgid "Alarms Permission"
+msgstr "Alarm İzni"
 
 #: src/screens/settings_adhan/index.tsx:55
 msgid "An error occured while playing the current track"
@@ -211,13 +215,22 @@ msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
 #: src/screens/fullscreen_alarm/index.tsx:116
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Reddet"
 
 #: src/adhan/calculation_methods.ts:94
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkiye"
+
+#: src/utils/permission.ts:35
+#: src/utils/permission.ts:65
+msgid "Don't ask again"
+msgstr "Bir daha sorma"
+
+#: src/utils/permission.ts:109
+msgid "Don't show again"
+msgstr "Bir daha gösterme"
 
 #: src/intro/intro.tsx:101
 msgid "Done"
@@ -418,21 +431,28 @@ msgstr "Yeni Hatırlatıcı"
 
 #: src/intro/intro.tsx:100
 #: src/tasks/set_next_adhan.ts:62
-#: src/tasks/set_next_adhan.ts:94
+#: src/tasks/set_next_adhan.ts:91
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:135
+#: src/screens/home/index.tsx:143
 msgid "Next Day"
 msgstr "Ertesi gün"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/utils/permission.ts:21
+#: src/utils/permission.ts:95
 msgid "No"
 msgstr "No"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
+
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:71
+msgid "Not now"
+msgstr "Şimdi olmaz"
 
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -443,9 +463,23 @@ msgstr "Bildirim"
 msgid "Notification & Sound"
 msgstr "Bildirim & Ses"
 
+#: src/utils/permission.ts:19
+#: src/utils/permission.ts:31
+msgid "Notifications Permission"
+msgstr "Bildirim İzni"
+
 #: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
 msgstr "Numaralandırma sistemi"
+
+#: src/utils/permission.ts:22
+#: src/utils/permission.ts:96
+msgid "Okay"
+msgstr "Tamam"
+
+#: src/utils/permission.ts:62
+msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
+msgstr "Android 12 ve daha yeni sürümlerde, uygulamanın düzgün çalışması için alarm iznine de ihtiyacı vardır, bu nedenle buna da izin vermelisiniz."
 
 #: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "Once"
@@ -480,6 +514,10 @@ msgstr "Seçenekler"
 msgid "Paste"
 msgstr "Yapıştır"
 
+#: src/utils/permission.ts:93
+msgid "Phone State Permission"
+msgstr "Telefon Durumu İzni"
+
 #. shown in add/edit reminder dialog
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:188
 msgid "Play adhan?"
@@ -493,7 +531,7 @@ msgstr "Kutuplar için hesaplama yöntemi"
 msgid "Power Manager"
 msgstr "Güç Yöneticisi"
 
-#: src/screens/home/index.tsx:106
+#: src/screens/home/index.tsx:114
 msgid "Prev Day"
 msgstr "Önceki Gün"
 
@@ -514,6 +552,10 @@ msgstr "Hatırlatıcı"
 #: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar eksik. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
+
+#: src/utils/permission.ts:32
+msgid "Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission."
+msgstr "Şu anda, uygulama bildirimleri düzgün bir şekilde göstermek için yeterli izinlere sahip değil, bunu yapmak için bildirimlere izin vermelisiniz."
 
 #: src/screens/settings_battery_optimizations/index.tsx:86
 msgid ""
@@ -566,7 +608,7 @@ msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 msgid "Show Adhan Options"
 msgstr "Ezan Seçeneklerini Göster"
 
-#: src/screens/home/index.tsx:129
+#: src/screens/home/index.tsx:137
 msgid "Show Today"
 msgstr "Bugünü Göster"
 
@@ -577,6 +619,12 @@ msgstr "Sıradaki bildirimi göster?"
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
 msgstr "Bildirim widget'ı gösterilsin mi?"
+
+#: src/utils/permission.ts:45
+#: src/utils/permission.ts:75
+#: src/utils/permission.ts:115
+msgid "Show settings"
+msgstr "Ayarları göster"
 
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
@@ -667,6 +715,14 @@ msgstr "Zaman formatı"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
+#: src/utils/permission.ts:20
+msgid "To see notifications about adhan, we need your permission."
+msgstr "Ezanla ilgili bildirimleri görmek için izninize ihtiyacımız var."
+
+#: src/utils/permission.ts:94
+msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
+msgstr "Bir çağrı aldığınızda ezan çalmayı durdurmak için telefonunuzun durumunu okumamız gerekir. bu izne izin vermemek özelliği devre dışı bırakır."
+
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"
 msgstr "Yarın"
@@ -724,6 +780,10 @@ msgstr "Aramayı Kullan"
 msgid "Version"
 msgstr "Sürüm"
 
+#: src/utils/permission.ts:105
+msgid "Warning"
+msgstr "Uyarı"
+
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "Bunları hızlı bir şekilde yapmanıza yardımcı olacağız."
@@ -735,6 +795,10 @@ msgstr "Çarşamba"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Hoş geldiniz"
+
+#: src/utils/permission.ts:106
+msgid "Without phone state permission, we won't be able to stop playing adhan during a call!"
+msgstr "Telefon devletinin izni olmadan, bir arama sırasında ezan çalmayı durduramayacağız!"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"

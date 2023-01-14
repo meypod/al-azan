@@ -3,6 +3,7 @@ package com.github.meypod.al_azan.modules;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.provider.Settings;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,8 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+
+import java.util.logging.Logger;
 
 public class ActivityModule extends ReactContextBaseJavaModule {
     ActivityModule(ReactApplicationContext context) {
@@ -70,12 +73,38 @@ public class ActivityModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void isDndActive(final Promise promise) {
-        Activity currentActivity = getReactApplicationContext().getCurrentActivity();
         try {
             int state = Settings.Global.getInt(getReactApplicationContext().getContentResolver(), "zen_mode");
             promise.resolve(state > 0);
         } catch (Exception _e) {
             promise.resolve(false);
+        }
+    }
+
+
+    @ReactMethod
+    public void openApplicationSettings(final Promise promise) {
+        Activity currentActivity = getReactApplicationContext().getCurrentActivity();
+        if (currentActivity != null) {
+            try {
+                Intent intent = new Intent();
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                String packageName = getReactApplicationContext().getPackageName();
+                intent.setData(Uri.parse("package:" + packageName));
+
+                currentActivity.runOnUiThread(
+                        () -> {
+                            try {
+                                getReactApplicationContext().startActivity(intent);
+                                promise.resolve(null);
+                            } catch (Exception e) {
+                                promise.reject("An error occurred whilst trying to start activity on Ui Thread", e);
+                            }
+                        });
+            } catch (Exception e) {
+                promise.reject("An error occurred whilst trying to open app settings", e);
+            }
         }
     }
 }

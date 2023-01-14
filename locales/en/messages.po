@@ -74,6 +74,10 @@ msgstr "Advanced Calculation Settings"
 msgid "Ahmer"
 msgstr "Ahmer"
 
+#: src/utils/permission.ts:61
+msgid "Alarms Permission"
+msgstr "Alarms Permission"
+
 #: src/screens/settings_adhan/index.tsx:55
 msgid "An error occured while playing the current track"
 msgstr "An error occured while playing the current track"
@@ -217,13 +221,22 @@ msgid "Disabled"
 msgstr "Disabled"
 
 #: src/screens/fullscreen_alarm/index.tsx:116
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Dismiss"
 
 #: src/adhan/calculation_methods.ts:94
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
+
+#: src/utils/permission.ts:35
+#: src/utils/permission.ts:65
+msgid "Don't ask again"
+msgstr "Don't ask again"
+
+#: src/utils/permission.ts:109
+msgid "Don't show again"
+msgstr "Don't show again"
 
 #: src/intro/intro.tsx:101
 msgid "Done"
@@ -424,21 +437,28 @@ msgstr "New Reminder"
 
 #: src/intro/intro.tsx:100
 #: src/tasks/set_next_adhan.ts:62
-#: src/tasks/set_next_adhan.ts:94
+#: src/tasks/set_next_adhan.ts:91
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:135
+#: src/screens/home/index.tsx:143
 msgid "Next Day"
 msgstr "Next Day"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/utils/permission.ts:21
+#: src/utils/permission.ts:95
 msgid "No"
 msgstr "No"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
+
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:71
+msgid "Not now"
+msgstr "Not now"
 
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -449,9 +469,23 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
 
+#: src/utils/permission.ts:19
+#: src/utils/permission.ts:31
+msgid "Notifications Permission"
+msgstr "Notifications Permission"
+
 #: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
 msgstr "Numbering system"
+
+#: src/utils/permission.ts:22
+#: src/utils/permission.ts:96
+msgid "Okay"
+msgstr "Okay"
+
+#: src/utils/permission.ts:62
+msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
+msgstr "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 
 #: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "Once"
@@ -486,6 +520,10 @@ msgstr "Options"
 msgid "Paste"
 msgstr "Paste"
 
+#: src/utils/permission.ts:93
+msgid "Phone State Permission"
+msgstr "Phone State Permission"
+
 #. shown in add/edit reminder dialog
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:188
 msgid "Play adhan?"
@@ -499,7 +537,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:106
+#: src/screens/home/index.tsx:114
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -520,6 +558,10 @@ msgstr "Reminder"
 #: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
+
+#: src/utils/permission.ts:32
+msgid "Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission."
+msgstr "Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission."
 
 #: src/screens/settings_battery_optimizations/index.tsx:86
 msgid ""
@@ -579,7 +621,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:129
+#: src/screens/home/index.tsx:137
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -590,6 +632,12 @@ msgstr "Show next in notification?"
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
+
+#: src/utils/permission.ts:45
+#: src/utils/permission.ts:75
+#: src/utils/permission.ts:115
+msgid "Show settings"
+msgstr "Show settings"
 
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
@@ -685,6 +733,14 @@ msgstr "Time format"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
+#: src/utils/permission.ts:20
+msgid "To see notifications about adhan, we need your permission."
+msgstr "To see notifications about adhan, we need your permission."
+
+#: src/utils/permission.ts:94
+msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
+msgstr "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
+
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"
 msgstr "Tomorrow"
@@ -742,6 +798,10 @@ msgstr "Using Search"
 msgid "Version"
 msgstr "Version"
 
+#: src/utils/permission.ts:105
+msgid "Warning"
+msgstr "Warning"
+
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "We'll help you do them quickly."
@@ -753,6 +813,10 @@ msgstr "Wednesday"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Welcome"
+
+#: src/utils/permission.ts:106
+msgid "Without phone state permission, we won't be able to stop playing adhan during a call!"
+msgstr "Without phone state permission, we won't be able to stop playing adhan during a call!"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"

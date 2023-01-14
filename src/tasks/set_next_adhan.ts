@@ -1,5 +1,5 @@
-import {t} from '@lingui/macro';
 import {getPrayerTimes, translatePrayer} from '@/adhan';
+import {t} from '@lingui/macro';
 import {
   ADHAN_NOTIFICATION_ID,
   ADHAN_CHANNEL_ID,
@@ -11,20 +11,27 @@ import {
 import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
-import {cancelAlarmsAndReminders} from './cancel_alarms';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
+import {cancelAdhanAlarms} from './cancel_alarms';
 import {getTime} from '@/utils/date';
+import {canScheduleNotifications} from '@/utils/permission';
 import {getUpcommingTimeDay, showUpcomingToast} from '@/utils/upcoming';
 
 type SetNextAdhanOptions = {
   noToast?: boolean;
 };
 
-export function setNextAdhan(options?: SetNextAdhanOptions) {
+export async function setNextAdhan(
+  options?: SetNextAdhanOptions,
+): Promise<void> {
   const notificationSettingsIsValid = hasAtLeastOneNotificationSetting();
 
   if (!notificationSettingsIsValid) {
-    void cancelAlarmsAndReminders();
+    void cancelAdhanAlarms();
+    return;
+  }
+
+  if (!(await canScheduleNotifications())) {
     return;
   }
 

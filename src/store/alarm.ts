@@ -128,6 +128,11 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
   ),
 );
 
+export function isAnyNotificationEnabled() {
+  const state = alarmSettings.getState();
+  return !!PrayersInOrder.find(p => state[getAdhanSettingKey(p, 'notify')]);
+}
+
 export function useAlarmSettings<T extends keyof AlarmSettingsStore>(key: T) {
   const state = useStore(alarmSettings, s => s[key]);
   const setterCurry = useStore(alarmSettings, s => s.setSettingCurry);

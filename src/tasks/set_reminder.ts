@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
-import notifee from '@notifee/react-native';
 import {getPrayerTimes} from '@/adhan';
+import notifee from '@notifee/react-native';
 import {
   PRE_REMINDER_CHANNEL_ID,
   PRE_REMINDER_CHANNEL_NAME,
@@ -10,8 +10,9 @@ import {
 import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
 import {reminderSettings, Reminder} from '@/store/reminder';
 import {settings} from '@/store/settings';
-import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
 import {getNextDayBeginning} from '@/utils/date';
+import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
+import {canScheduleNotifications} from '@/utils/permission';
 import {setPreAlarmTask} from './set_pre_alarm';
 import {showUpcomingToast} from '@/utils/upcoming';
 
@@ -28,6 +29,10 @@ export async function setReminders(options?: SetReminderOptions) {
     noToast = false,
     force = false,
   } = options || {};
+
+  if (!(await canScheduleNotifications())) {
+    return;
+  }
 
   const date = new Date();
 

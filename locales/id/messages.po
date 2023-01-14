@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-13 18:19+0330\n"
+"POT-Creation-Date: 2023-01-14 10:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -67,6 +67,10 @@ msgstr "Pengaturan Lanjutan"
 #: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
 msgstr "Ahmer"
+
+#: src/utils/permission.ts:61
+msgid "Alarms Permission"
+msgstr "Izin Alarm"
 
 #: src/screens/settings_adhan/index.tsx:55
 msgid "An error occured while playing the current track"
@@ -211,13 +215,22 @@ msgid "Disabled"
 msgstr "Tidak Aktif"
 
 #: src/screens/fullscreen_alarm/index.tsx:116
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Hentikan"
 
 #: src/adhan/calculation_methods.ts:94
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Presidensi Urusan Agama Republik Turki (Diyanet)"
+
+#: src/utils/permission.ts:35
+#: src/utils/permission.ts:65
+msgid "Don't ask again"
+msgstr "Jangan tanya lagi"
+
+#: src/utils/permission.ts:109
+msgid "Don't show again"
+msgstr "Jangan tampilkan lagi"
 
 #: src/intro/intro.tsx:101
 msgid "Done"
@@ -418,21 +431,28 @@ msgstr "Buat Pengingat"
 
 #: src/intro/intro.tsx:100
 #: src/tasks/set_next_adhan.ts:62
-#: src/tasks/set_next_adhan.ts:94
+#: src/tasks/set_next_adhan.ts:91
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:135
+#: src/screens/home/index.tsx:143
 msgid "Next Day"
 msgstr "Hari Brkut"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/utils/permission.ts:21
+#: src/utils/permission.ts:95
 msgid "No"
 msgstr "Tidak"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "Tidak ada (Otomatis)"
+
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:71
+msgid "Not now"
+msgstr "Tidak sekarang"
 
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -443,9 +463,23 @@ msgstr "Notifikasi"
 msgid "Notification & Sound"
 msgstr "Notifikasi & Suara"
 
+#: src/utils/permission.ts:19
+#: src/utils/permission.ts:31
+msgid "Notifications Permission"
+msgstr "Izin Pemberitahuan"
+
 #: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
 msgstr "Sistem penomoran"
+
+#: src/utils/permission.ts:22
+#: src/utils/permission.ts:96
+msgid "Okay"
+msgstr "Oke"
+
+#: src/utils/permission.ts:62
+msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
+msgstr "Pada Android 12 dan yang lebih baru, aplikasi ini juga memerlukan izin alarm agar berfungsi dengan baik, jadi Anda harus mengizinkannya juga."
 
 #: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "Once"
@@ -480,6 +514,10 @@ msgstr "Opsi"
 msgid "Paste"
 msgstr "Tempel"
 
+#: src/utils/permission.ts:93
+msgid "Phone State Permission"
+msgstr "Izin Status Telepon"
+
 #. shown in add/edit reminder dialog
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:188
 msgid "Play adhan?"
@@ -493,7 +531,7 @@ msgstr "Resolusi Kutub"
 msgid "Power Manager"
 msgstr "Pengelola Daya"
 
-#: src/screens/home/index.tsx:106
+#: src/screens/home/index.tsx:114
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -514,6 +552,10 @@ msgstr "Pengingat"
 #: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Pengaturan yang diperlukan tidak lengkap. Agar aplikasi menampilkan waktu sholat, proses pengaturan perlu dilanjutkan kembali nanti."
+
+#: src/utils/permission.ts:32
+msgid "Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission."
+msgstr "Saat ini, aplikasi tidak memiliki izin yang cukup untuk menampilkan notifikasi dengan benar, untuk melakukannya Anda harus mengizinkan izin notifikasi."
 
 #: src/screens/settings_battery_optimizations/index.tsx:86
 msgid ""
@@ -568,7 +610,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:129
+#: src/screens/home/index.tsx:137
 msgid "Show Today"
 msgstr "Hari Ini"
 
@@ -579,6 +621,12 @@ msgstr "Tampilkan pemberitahuan berikutnya?"
 #: src/screens/settings_widget/index.tsx:32
 msgid "Show notification widget?"
 msgstr "Tampilkan widget notifikasi?"
+
+#: src/utils/permission.ts:45
+#: src/utils/permission.ts:75
+#: src/utils/permission.ts:115
+msgid "Show settings"
+msgstr "Tampilkan pengaturan"
 
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
@@ -669,6 +717,14 @@ msgstr "Format waktu"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
+#: src/utils/permission.ts:20
+msgid "To see notifications about adhan, we need your permission."
+msgstr "Untuk melihat pemberitahuan tentang adzan, kami memerlukan izin Anda."
+
+#: src/utils/permission.ts:94
+msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
+msgstr "Untuk berhenti memainkan adzan ketika Anda menerima panggilan, kami perlu membaca status telepon Anda. tidak mengizinkan izin ini hanya akan menonaktifkan fitur tersebut."
+
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"
 msgstr "Besok"
@@ -726,6 +782,10 @@ msgstr "Menggunakan Pencarian"
 msgid "Version"
 msgstr "Versi"
 
+#: src/utils/permission.ts:105
+msgid "Warning"
+msgstr "Peringatan"
+
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "Pengaturan hanya butuh beberapa langkah saja."
@@ -737,6 +797,10 @@ msgstr "Rabu"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Selamat Datang!"
+
+#: src/utils/permission.ts:106
+msgid "Without phone state permission, we won't be able to stop playing adhan during a call!"
+msgstr "Tanpa izin dari negara bagian telepon, kita tidak akan bisa berhenti mengumandangkan adzan selama panggilan telepon!"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"

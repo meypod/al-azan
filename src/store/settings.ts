@@ -50,6 +50,10 @@ export type SettingsStore = {
   /** timestamp of when the alarm for updating widget is going to Or was fired */
   LAST_WIDGET_UPDATE: number;
   IS_PLAYING_ADHAN: boolean;
+  /** permission related */
+  DONT_ASK_PERMISSION_NOTIFICATIONS: boolean;
+  DONT_ASK_PERMISSION_ALARM: boolean;
+  DONT_ASK_PERMISSION_PHONE_STATE: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -102,6 +106,9 @@ export const settings = createStore<SettingsStore>()(
       DISMISSED_ALARM_TIMESTAMPS: {},
       LAST_WIDGET_UPDATE: 0,
       IS_PLAYING_ADHAN: false,
+      DONT_ASK_PERMISSION_NOTIFICATIONS: false,
+      DONT_ASK_PERMISSION_ALARM: false,
+      DONT_ASK_PERMISSION_PHONE_STATE: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

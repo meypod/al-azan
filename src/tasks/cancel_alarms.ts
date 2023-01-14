@@ -3,7 +3,6 @@ import {
   ADHAN_NOTIFICATION_ID,
   PRE_ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
-import {reminderSettings} from '@/store/reminder';
 
 function cancelPreAdhanNotification() {
   return notifee
@@ -17,18 +16,6 @@ function cancelAdhanNotification() {
     .catch(console.error);
 }
 
-function cancelReminders() {
-  return notifee
-    .cancelTriggerNotifications(
-      reminderSettings.getState().REMINDERS.map(r => r.id),
-    )
-    .catch(console.error);
-}
-
-export function cancelAlarmsAndReminders() {
-  return Promise.all([
-    cancelPreAdhanNotification(),
-    cancelAdhanNotification(),
-    cancelReminders(),
-  ]);
+export function cancelAdhanAlarms() {
+  return Promise.all([cancelPreAdhanNotification(), cancelAdhanNotification()]);
 }
