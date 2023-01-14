@@ -8,6 +8,8 @@ import notifee, {
 } from '@notifee/react-native';
 import {
   ADHAN_CHANNEL_ID,
+  PRE_ADHAN_CHANNEL_ID,
+  PRE_REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
   WIDGET_CHANNEL_ID,
   WIDGET_CHANNEL_NAME,
@@ -118,7 +120,7 @@ export async function cancelNotifOnDismissed({
 }: NotifeeEvent) {
   if (type === EventType.TRIGGER_NOTIFICATION_CREATED) return;
   const {pressAction} = detail;
-
+  console.log('Event arrived', type, EventType[type]);
   if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
     if (options?.date) {
       settings
@@ -179,9 +181,16 @@ async function handleNotification({
     bootstrap();
   }
   const {notification} = detail;
-  const channelId = notification?.android?.channelId;
+  const channelId = notification?.android?.channelId || '';
 
-  if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
+  if (
+    [
+      ADHAN_CHANNEL_ID,
+      REMINDER_CHANNEL_ID,
+      PRE_ADHAN_CHANNEL_ID,
+      PRE_REMINDER_CHANNEL_ID,
+    ].includes(channelId)
+  ) {
     const options = getAlarmOptions(notification)!;
 
     if (
