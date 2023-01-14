@@ -143,8 +143,8 @@ android {
         applicationId "com.github.meypod.al_azan"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 37
-        versionName "1.9.0"
+        versionCode 38
+        versionName "1.10.0-rc.12"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
         if (!project.hasProperty("noSign")) { 
             signingConfig signingConfigs.debug
