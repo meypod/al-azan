@@ -2,7 +2,7 @@ import {i18n} from '@lingui/core';
 import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
-import {PixelRatio, useColorScheme} from 'react-native';
+import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
 import {getFgSvcNotification, setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
 import {colors} from '@/theme/colors';
@@ -10,7 +10,11 @@ import {getActivityName} from './modules/activity';
 import {getCurrentRoute, replace} from './navigation/root_navigation';
 import {stopAdhan} from './services/azan_service';
 
-const pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
+let pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
+
+if (Dimensions.get('screen').width < 420) {
+  pixelRatio = pixelRatio * 0.85;
+}
 
 const extendedTheme = extendTheme({
   colors: colors,
