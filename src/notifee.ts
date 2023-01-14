@@ -120,7 +120,7 @@ export async function cancelNotifOnDismissed({
 }: NotifeeEvent) {
   if (type === EventType.TRIGGER_NOTIFICATION_CREATED) return;
   const {pressAction} = detail;
-  console.log('Event arrived', type, EventType[type]);
+
   if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
     if (options?.date) {
       settings
@@ -150,7 +150,8 @@ export async function cancelNotifOnDismissed({
 function openFullscreenAlarmIfNeeded({detail, options, type}: NotifeeEvent) {
   if (
     (type === EventType.PRESS || type === EventType.DELIVERED) &&
-    options?.playSound
+    options?.playSound &&
+    !options.notifId.startsWith('pre')
   ) {
     replace('FullscreenAlarm', {
       options: detail.notification?.data?.options,
@@ -163,7 +164,7 @@ export async function getFgSvcNotification() {
     const fgNotify = await notifee
       .getDisplayedNotifications()
       .then(list =>
-        list.find(n => n.notification.android?.asForegroundService),
+        list.find(n => !!n.notification.android?.asForegroundService),
       );
     return fgNotify;
   } catch (e) {
