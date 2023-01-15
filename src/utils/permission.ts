@@ -7,6 +7,7 @@ import {Alert, PermissionsAndroid, Platform} from 'react-native';
 import {openApplicationSettings} from '@/modules/activity';
 import {isAnyNotificationEnabled} from '@/store/alarm';
 import {settings} from '@/store/settings';
+import {setNextAdhan} from '@/tasks/set_next_adhan';
 
 /** returns `true` if we can schedule notifications and expect them to trigger */
 async function askNotificationPermission() {
@@ -36,6 +37,8 @@ async function askNotificationPermission() {
               ).then(result => {
                 if (result === 'denied') {
                   notifee.openNotificationSettings();
+                } else {
+                  setNextAdhan();
                 }
               }),
           },
@@ -105,6 +108,8 @@ async function askPhoneStatePermission() {
             ).then(result => {
               if (result === 'denied') {
                 openApplicationSettings();
+              } else {
+                setNextAdhan();
               }
             }),
         },
