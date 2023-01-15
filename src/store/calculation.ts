@@ -3,6 +3,7 @@ import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
+import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {Prayer} from '@/adhan';
 import {alarmSettings, AlarmSettingsStore} from './alarm';
@@ -145,7 +146,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
 
 export function useCalcSettings<T extends keyof CalcSettingsStore>(key: T) {
   const state = useStore(calcSettings, s => s[key]);
-  const setterCurry = useStore(calcSettings, s => s.setSettingCurry);
+  const setterCurry = useStore(calcSettings, s => s.setSettingCurry, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [

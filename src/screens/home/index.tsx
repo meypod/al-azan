@@ -5,17 +5,18 @@ import {UpdateIcon} from '@/assets/icons/update';
 import Divider from '@/components/Divider';
 import {t} from '@lingui/macro';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
+import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {isRTL} from '@/i18n';
 
-import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
-import {navigate} from '@/navigation/root_navigation';
 import {useEffect, useState} from 'react';
+import {navigate} from '@/navigation/root_navigation';
 
-import {useStore} from '@/store/home';
+import {useStore} from 'zustand';
+import {shallow} from 'zustand/shallow';
+import {homeStore} from '@/store/home';
+import {settings} from '@/store/settings';
 
-import {useSettings} from '@/store/settings';
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
-import useInterval from '@/utils/hooks/use_interval';
 import {askPermissions} from '@/utils/permission';
 
 export function Home() {
@@ -25,59 +26,59 @@ export function Home() {
     decreaseCurrentDateByOne,
     updateCurrentDate,
     resetCurrentDate,
-  ] = useStore(state => [
+  ] = useStore(homeStore, state => [
     state.date,
     state.increaseCurrentDateByOne,
     state.decreaseCurrentDateByOne,
     state.updateCurrentDate,
     state.resetCurrentDate,
   ]);
+
+  const impactfulSettings = useStore(
+    settings,
+    s => ({
+      NUMBERING_SYSTEM: s.NUMBERING_SYSTEM,
+      SELECTED_ARABIC_CALENDAR: s.SELECTED_ARABIC_CALENDAR,
+      SELECTED_SECONDARY_CALENDAR: s.SELECTED_SECONDARY_CALENDAR,
+      CALC_SETTINGS_HASH: s.CALC_SETTINGS_HASH,
+      HIDDEN_PRAYERS: s.HIDDEN_PRAYERS,
+      DISMISSED_ALARM_TIMESTAMPS: s.DISMISSED_ALARM_TIMESTAMPS,
+    }),
+    shallow,
+  );
+
   const [prayerTimes, setPrayerTimes] = useState<PrayerTimesHelper | undefined>(
     undefined,
   );
 
-  const [isToday, setIsToday] = useState<boolean>();
-
-  const [calcSettingsHash] = useSettings('CALC_SETTINGS_HASH');
-  const [hiddenPrayers] = useSettings('HIDDEN_PRAYERS');
-  const [numberingSystem] = useSettings('NUMBERING_SYSTEM');
-  const [arabicCalendar] = useSettings('SELECTED_ARABIC_CALENDAR');
-  const [secondaryCalendar] = useSettings('SELECTED_SECONDARY_CALENDAR');
-
-  const [today, setToday] = useState<{
+  const [day, setDay] = useState<{
     dateString: string;
-    todayName: string;
+    dayName: string;
     arabicDate: string;
-  }>({dateString: '', todayName: '', arabicDate: ''});
+    isToday: boolean;
+  }>({dateString: '', dayName: '', arabicDate: '', isToday: true});
 
   useEffect(() => {
-    setToday({
-      todayName: getDayName(currentDate),
+    setDay({
+      dayName: getDayName(currentDate),
       dateString: getFormattedDate(currentDate),
       arabicDate: getArabicDate(currentDate),
+      isToday: currentDate.toDateString() === new Date().toDateString(),
     });
-  }, [currentDate, numberingSystem, secondaryCalendar]);
-
-  useInterval(() => {
-    updateCurrentDate();
-  }, 60 * 1000);
-
-  useEffect(() => {
     setPrayerTimes(getPrayerTimes(currentDate));
-    setIsToday(currentDate.toDateString() === new Date().toDateString());
-  }, [currentDate, calcSettingsHash]);
+  }, [currentDate]);
 
   useEffect(() => {
     void askPermissions();
   }, []);
 
+  useEffect(() => {
+    updateCurrentDate();
+  }, [impactfulSettings, updateCurrentDate]);
+
   return (
     <ScrollView>
-      <Box
-        safeArea
-        flex={1}
-        alignItems="center"
-        onTouchStart={updateCurrentDate}>
+      <Box safeArea flex={1} alignItems="center">
         <HStack
           mb="-3"
           px="3"
@@ -85,7 +86,7 @@ export function Home() {
           alignItems="center"
           w="100%">
           <HStack alignItems="center">
-            <Text>{today.dateString}</Text>
+            <Text>{day.dateString}</Text>
           </HStack>
 
           <Button
@@ -101,7 +102,7 @@ export function Home() {
           borderColor="coolGray.300"
           mb="-2"
           _text={{fontWeight: 'bold'}}>
-          {today.todayName}
+          {day.dayName}
         </Divider>
         <HStack
           mt="2"
@@ -115,7 +116,7 @@ export function Home() {
               <RestoreIcon size="xl" />
             </Flex>
           </Button>
-          {!isToday && (
+          {!day.isToday && (
             <Button
               onPress={resetCurrentDate}
               variant="outline"
@@ -146,11 +147,11 @@ export function Home() {
         </HStack>
         <PrayerTimesBox
           prayerTimes={prayerTimes}
-          hiddenPrayers={hiddenPrayers}
           date={currentDate}
+          settings={impactfulSettings}
         />
-        <Text key={arabicCalendar} mb="3">
-          {today.arabicDate}
+        <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="3">
+          {day.arabicDate}
         </Text>
       </Box>
     </ScrollView>

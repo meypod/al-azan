@@ -5,6 +5,7 @@ import {LogBox, AppRegistry} from 'react-native';
 import {onUpdateScreenWidgetRequested} from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
 import fullscreen_alarm from '@/screens/fullscreen_alarm';
+import {homeStore} from '@/store/home';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
@@ -24,6 +25,8 @@ onUpdateScreenWidgetRequested(async () => {
   bootstrap();
   setUpdateWidgetsAlarms();
   await updateWidgets();
+  // probably home screen needs updating too, if its visible
+  homeStore.getState().updateCurrentDate();
 });
 
 AppRegistry.registerRunnable('main-app', async initialProps => {

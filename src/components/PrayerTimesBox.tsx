@@ -1,71 +1,48 @@
 import {difference} from 'lodash';
 import {Box} from 'native-base';
-import {memo, useEffect, useState} from 'react';
-import {Prayer, PrayersInOrder, PrayerTime, PrayerTimesHelper} from '@/adhan';
+import {memo} from 'react';
+import {PrayersInOrder, PrayerTimesHelper} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
 import PrayerTimeRow from '@/components/PrayerTimeRow';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
-import {useSettings} from '@/store/settings';
+import {SettingsStore} from '@/store/settings';
 
 type PrayerTimesBoxProps = {
   prayerTimes?: PrayerTimesHelper;
+  settings: Pick<
+    SettingsStore,
+    'HIDDEN_PRAYERS' | 'DISMISSED_ALARM_TIMESTAMPS'
+  >;
   date: Date;
-  hiddenPrayers?: Prayer[];
 };
 
-function PrayerTimesBox({prayerTimes, hiddenPrayers}: PrayerTimesBoxProps) {
-  const [nextPrayer, setNextPrayer] = useState<PrayerTime | undefined>();
-  const [is24Hour] = useSettings('IS_24_HOUR_FORMAT');
-  const [numberingSystem] = useSettings('NUMBERING_SYSTEM');
-
-  useEffect(() => {
-    setNextPrayer(prayerTimes?.nextPrayer());
-  }, [prayerTimes]);
-
+function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
+  const nextPrayer = prayerTimes?.nextPrayer();
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
-  const [nextPrayerSoundIsMuted, setNextPrayerSoundIsMuted] = useState(false);
-  const [dismissedAlarms] = useSettings('DISMISSED_ALARM_TIMESTAMPS');
+  const visiblePrayerTimes = difference(
+    PrayersInOrder,
+    settings.HIDDEN_PRAYERS || [],
+  );
+  const activePrayer = prayerTimes?.date
+    ? getActivePrayer(prayerTimes.date, visiblePrayerTimes)
+    : undefined;
 
-  const [visiblePrayerTimes, setVisiblePrayerTimes] = useState(PrayersInOrder);
-  const [activePrayer, setActivePrayer] = useState<Prayer | undefined>();
-
-  useEffect(() => {
-    setVisiblePrayerTimes(difference(PrayersInOrder, hiddenPrayers || []));
-  }, [hiddenPrayers, prayerTimes]);
-
-  useEffect(() => {
-    if (prayerTimes?.date) {
-      setActivePrayer(getActivePrayer(prayerTimes.date, visiblePrayerTimes));
-    } else {
-      setActivePrayer(undefined);
-    }
-  }, [prayerTimes, visiblePrayerTimes]);
-
-  useEffect(() => {
-    if (!activePrayer || !prayerTimes) return;
-    if (
-      !dismissedAlarms[ADHAN_NOTIFICATION_ID] ||
-      !prayerTimes[activePrayer].valueOf()
-    )
-      return;
-    if (
-      prayerTimes[activePrayer].valueOf() === nextPrayerDateValueOf &&
-      dismissedAlarms[ADHAN_NOTIFICATION_ID] >= nextPrayerDateValueOf
-    ) {
-      setNextPrayerSoundIsMuted(true);
-    } else {
-      setNextPrayerSoundIsMuted(false);
-    }
-  }, [activePrayer, dismissedAlarms, nextPrayerDateValueOf, prayerTimes]);
+  let nextPrayerSoundIsMuted: boolean;
+  if (
+    prayerTimes &&
+    activePrayer &&
+    prayerTimes[activePrayer].valueOf() === nextPrayerDateValueOf &&
+    (settings.DISMISSED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0) >=
+      nextPrayerDateValueOf
+  ) {
+    nextPrayerSoundIsMuted = true;
+  } else {
+    nextPrayerSoundIsMuted = false;
+  }
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      px="3"
-      py="2"
-      key={is24Hour.toString() + numberingSystem}>
+    <Box display="flex" flexDirection="column" px="3" py="2">
       {visiblePrayerTimes.map(prayer => (
         <PrayerTimeRow
           key={prayer}

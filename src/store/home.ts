@@ -1,5 +1,5 @@
 import {produce} from 'immer';
-import {create} from 'zustand';
+import {createStore} from 'zustand/vanilla';
 import {addDays} from '@/utils/date';
 
 type AppState = {
@@ -12,7 +12,7 @@ type AppState = {
   resetCurrentDate: () => void;
 };
 
-export const useStore = create<AppState>()(set => ({
+export const homeStore = createStore<AppState>()(set => ({
   date: new Date(),
   navigating: false,
   changeCurrentDate: (newDate: Date) =>

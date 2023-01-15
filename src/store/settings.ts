@@ -11,8 +11,9 @@ import {
 } from '@/assets/adhan_entries';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
-import {createStore} from 'zustand/vanilla';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
+import {shallow} from 'zustand/shallow';
+import {createStore} from 'zustand/vanilla';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 import {alarmSettings} from './alarm';
 import {zustandStorage} from './mmkv';
@@ -275,7 +276,7 @@ export const settings = createStore<SettingsStore>()(
 );
 
 export function useSettings<T extends keyof SettingsStore>(key: T) {
-  const state = useStore(settings, s => s[key]);
+  const state = useStore(settings, s => s[key], shallow);
   const setterCurry = useStore(settings, s => s.setSettingCurry);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);

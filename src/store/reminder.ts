@@ -2,6 +2,7 @@ import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
+import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {Prayer} from '@/adhan';
 import {zustandStorage} from './mmkv';
@@ -139,7 +140,7 @@ export const reminderSettings = createStore<ReminderStore>()(
 );
 
 export function useReminderSettings<T extends keyof ReminderStore>(key: T) {
-  const state = useStore(reminderSettings, s => s[key]);
+  const state = useStore(reminderSettings, s => s[key], shallow);
   const setterCurry = useStore(reminderSettings, s => s.setSettingCurry);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);

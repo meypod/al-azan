@@ -2,6 +2,7 @@ import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
+import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {WeekDayIndex} from '@/utils/date';
@@ -135,7 +136,7 @@ export function isAnyNotificationEnabled() {
 
 export function useAlarmSettings<T extends keyof AlarmSettingsStore>(key: T) {
   const state = useStore(alarmSettings, s => s[key]);
-  const setterCurry = useStore(alarmSettings, s => s.setSettingCurry);
+  const setterCurry = useStore(alarmSettings, s => s.setSettingCurry, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [
