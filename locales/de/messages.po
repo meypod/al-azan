@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-14 10:45+0330\n"
+"POT-Creation-Date: 2023-01-15 15:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,7 +68,7 @@ msgstr "Erweiterte Berechnungseinstellungen"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:51
 msgid "Alarms Permission"
 msgstr "Erlaubnis für Alarme"
 
@@ -215,7 +215,7 @@ msgid "Disabled"
 msgstr "Deaktiviert"
 
 #: src/screens/fullscreen_alarm/index.tsx:116
-#: src/tasks/set_alarm.ts:102
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Ablehnen"
 
@@ -223,14 +223,11 @@ msgstr "Ablehnen"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkei"
 
-#: src/utils/permission.ts:35
-#: src/utils/permission.ts:65
+#: src/utils/permission.ts:22
+#: src/utils/permission.ts:55
+#: src/utils/permission.ts:88
 msgid "Don't ask again"
 msgstr "Frag nicht noch einmal"
-
-#: src/utils/permission.ts:109
-msgid "Don't show again"
-msgstr "Nicht mehr anzeigen"
 
 #: src/intro/intro.tsx:101
 msgid "Done"
@@ -430,8 +427,8 @@ msgid "New Reminder"
 msgstr "Neue Erinnerung"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:62
-#: src/tasks/set_next_adhan.ts:91
+#: src/tasks/set_next_adhan.ts:69
+#: src/tasks/set_next_adhan.ts:98
 msgid "Next"
 msgstr "Weiter"
 
@@ -440,8 +437,6 @@ msgid "Next Day"
 msgstr "Nächster Tag"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
-#: src/utils/permission.ts:21
-#: src/utils/permission.ts:95
 msgid "No"
 msgstr "Nein"
 
@@ -449,8 +444,7 @@ msgstr "Nein"
 msgid "None (Automatic)"
 msgstr "Keine (automatisch)"
 
-#: src/utils/permission.ts:41
-#: src/utils/permission.ts:71
+#: src/utils/permission.ts:60
 msgid "Not now"
 msgstr "Nicht jetzt"
 
@@ -463,8 +457,7 @@ msgstr "Benachrichtigung"
 msgid "Notification & Sound"
 msgstr "Benachrichtigung & Ton"
 
-#: src/utils/permission.ts:19
-#: src/utils/permission.ts:31
+#: src/utils/permission.ts:18
 msgid "Notifications Permission"
 msgstr "Benachrichtigung Erlaubnis"
 
@@ -472,12 +465,12 @@ msgstr "Benachrichtigung Erlaubnis"
 msgid "Numbering system"
 msgstr "Nummerierungssystem"
 
-#: src/utils/permission.ts:22
-#: src/utils/permission.ts:96
+#: src/utils/permission.ts:28
+#: src/utils/permission.ts:94
 msgid "Okay"
 msgstr "Okay"
 
-#: src/utils/permission.ts:62
+#: src/utils/permission.ts:52
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Unter Android 12 und neuer benötigt die App auch die Erlaubnis für Alarme, um ordnungsgemäß zu funktionieren, also müssen Sie auch dies erlauben."
 
@@ -514,7 +507,7 @@ msgstr "Optionen"
 msgid "Paste"
 msgstr "Einfügen"
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:84
 msgid "Phone State Permission"
 msgstr "Telefonstatus Erlaubnis"
 
@@ -544,18 +537,14 @@ msgid "Referred to as the ISNA method"
 msgstr "ISNA-Methode"
 
 #: src/screens/fullscreen_alarm/index.tsx:43
-#: src/tasks/set_reminder.ts:70
-#: src/tasks/set_reminder.ts:96
+#: src/tasks/set_reminder.ts:75
+#: src/tasks/set_reminder.ts:101
 msgid "Reminder"
 msgstr "Erinnerung"
 
 #: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Die erforderlichen Einstellungen sind unvollständig. Damit die App die Gebetszeiten anzeigen kann, müssen Sie diese später in den Einstellungen konfigurieren."
-
-#: src/utils/permission.ts:32
-msgid "Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission."
-msgstr "Derzeit verfügt die App nicht über ausreichende Berechtigungen, um Benachrichtigungen ordnungsgemäß anzuzeigen, daher müssen Sie die Berechtigung für Benachrichtigungen zulassen."
 
 #: src/screens/settings_battery_optimizations/index.tsx:86
 msgid ""
@@ -625,9 +614,7 @@ msgstr "Als nächstes in der Benachrichtigung anzeigen?"
 msgid "Show notification widget?"
 msgstr "Benachrichtigungs-Widget anzeigen?"
 
-#: src/utils/permission.ts:45
-#: src/utils/permission.ts:75
-#: src/utils/permission.ts:115
+#: src/utils/permission.ts:64
 msgid "Show settings"
 msgstr "Einstellungen anzeigen"
 
@@ -720,11 +707,11 @@ msgstr "Zeitformat"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Um den Adhan zu berechnen, benötigen wir Ihren Standort. Sie können die Schaltfläche \"Meinen Standort finden\" verwenden, die Suche nach Land und Stadt/Gebiet nutzen oder Ihre Koordinaten manuell eingeben."
 
-#: src/utils/permission.ts:20
+#: src/utils/permission.ts:19
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Um Benachrichtigungen über den Adhan zu sehen, benötigen wir Ihre Zustimmung."
 
-#: src/utils/permission.ts:94
+#: src/utils/permission.ts:85
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Um das Abspielen des Adhan bei einem Anruf zu stoppen, müssen wir Ihren Telefonstatus auslesen. Wenn Sie diese Berechtigung nicht zulassen, wird die Funktion einfach deaktiviert."
 
@@ -785,10 +772,6 @@ msgstr "Suche verwenden"
 msgid "Version"
 msgstr "Version"
 
-#: src/utils/permission.ts:105
-msgid "Warning"
-msgstr "Warnung"
-
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "Wir helfen Ihnen dabei, sie schnell zu erledigen."
@@ -800,10 +783,6 @@ msgstr "Mittwoch"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Willkommen"
-
-#: src/utils/permission.ts:106
-msgid "Without phone state permission, we won't be able to stop playing adhan during a call!"
-msgstr "Ohne die Erlaubnis des Telefonstaats können wir das Abspielen des Adhan während eines Anrufs nicht beenden!"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"

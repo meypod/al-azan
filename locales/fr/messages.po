@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-14 10:45+0330\n"
+"POT-Creation-Date: 2023-01-15 15:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,7 +68,7 @@ msgstr "Paramètres de calcul avancés"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:51
 msgid "Alarms Permission"
 msgstr "Autorisation des alarmes"
 
@@ -215,7 +215,7 @@ msgid "Disabled"
 msgstr "Désactivé"
 
 #: src/screens/fullscreen_alarm/index.tsx:116
-#: src/tasks/set_alarm.ts:102
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Passer"
 
@@ -223,14 +223,11 @@ msgstr "Passer"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turquie"
 
-#: src/utils/permission.ts:35
-#: src/utils/permission.ts:65
+#: src/utils/permission.ts:22
+#: src/utils/permission.ts:55
+#: src/utils/permission.ts:88
 msgid "Don't ask again"
 msgstr "Ne demandez pas à nouveau"
-
-#: src/utils/permission.ts:109
-msgid "Don't show again"
-msgstr "Ne pas montrer à nouveau"
 
 #: src/intro/intro.tsx:101
 msgid "Done"
@@ -430,8 +427,8 @@ msgid "New Reminder"
 msgstr "Nouveau rappel"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:62
-#: src/tasks/set_next_adhan.ts:91
+#: src/tasks/set_next_adhan.ts:69
+#: src/tasks/set_next_adhan.ts:98
 msgid "Next"
 msgstr "Suivant"
 
@@ -440,8 +437,6 @@ msgid "Next Day"
 msgstr "Jour suivant"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
-#: src/utils/permission.ts:21
-#: src/utils/permission.ts:95
 msgid "No"
 msgstr "Non"
 
@@ -449,8 +444,7 @@ msgstr "Non"
 msgid "None (Automatic)"
 msgstr "Aucun (automatique)"
 
-#: src/utils/permission.ts:41
-#: src/utils/permission.ts:71
+#: src/utils/permission.ts:60
 msgid "Not now"
 msgstr "Pas maintenant"
 
@@ -463,8 +457,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification et son"
 
-#: src/utils/permission.ts:19
-#: src/utils/permission.ts:31
+#: src/utils/permission.ts:18
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -472,12 +465,12 @@ msgstr "Notifications Permission"
 msgid "Numbering system"
 msgstr "Système de numérotation"
 
-#: src/utils/permission.ts:22
-#: src/utils/permission.ts:96
+#: src/utils/permission.ts:28
+#: src/utils/permission.ts:94
 msgid "Okay"
 msgstr "D'accord"
 
-#: src/utils/permission.ts:62
+#: src/utils/permission.ts:52
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Sur Android 12 et plus récent, l'application a également besoin de l'autorisation des alarmes pour fonctionner correctement, vous devez donc l'autoriser également."
 
@@ -514,7 +507,7 @@ msgstr "Options"
 msgid "Paste"
 msgstr "Coller"
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:84
 msgid "Phone State Permission"
 msgstr "Permission de l'État du téléphone"
 
@@ -544,18 +537,14 @@ msgid "Referred to as the ISNA method"
 msgstr "Appelée la méthode ISNA"
 
 #: src/screens/fullscreen_alarm/index.tsx:43
-#: src/tasks/set_reminder.ts:70
-#: src/tasks/set_reminder.ts:96
+#: src/tasks/set_reminder.ts:75
+#: src/tasks/set_reminder.ts:101
 msgid "Reminder"
 msgstr "Rappel"
 
 #: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Les paramètres requis sont incomplets. Pour que l'application affiche les heures de prière, vous devrez les configurer à partir de paramètres ultérieurement."
-
-#: src/utils/permission.ts:32
-msgid "Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission."
-msgstr "Pour le moment, l'application ne dispose pas des autorisations suffisantes pour afficher correctement les notifications. Pour ce faire, vous devez autoriser les notifications."
 
 #: src/screens/settings_battery_optimizations/index.tsx:86
 msgid ""
@@ -627,9 +616,7 @@ msgstr "Montrer le prochain dans la notification ?"
 msgid "Show notification widget?"
 msgstr "Afficher le widget de notification ?"
 
-#: src/utils/permission.ts:45
-#: src/utils/permission.ts:75
-#: src/utils/permission.ts:115
+#: src/utils/permission.ts:64
 msgid "Show settings"
 msgstr "Afficher les paramètres"
 
@@ -727,11 +714,11 @@ msgstr "Format de l'heure"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez utiliser le bouton \"Trouver ma position\", ou utiliser la recherche par pays et ville/région, ou encore entrer vos coordonnées manuellement."
 
-#: src/utils/permission.ts:20
+#: src/utils/permission.ts:19
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Pour voir les notifications concernant l'adhan, nous avons besoin de votre permission."
 
-#: src/utils/permission.ts:94
+#: src/utils/permission.ts:85
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Pour arrêter la lecture de l'adhan lorsque vous recevez un appel, nous devons lire l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
 
@@ -792,10 +779,6 @@ msgstr "Utilisation de la recherche"
 msgid "Version"
 msgstr "Version"
 
-#: src/utils/permission.ts:105
-msgid "Warning"
-msgstr "Avertissement"
-
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
 msgstr "Nous vous aiderons à les réaliser rapidement."
@@ -807,10 +790,6 @@ msgstr "Mercredi"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Bienvenue sur"
-
-#: src/utils/permission.ts:106
-msgid "Without phone state permission, we won't be able to stop playing adhan during a call!"
-msgstr "Sans la permission de l'État du téléphone, nous ne pourrons pas arrêter de jouer l'adhan pendant un appel !"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"

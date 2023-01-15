@@ -14,23 +14,9 @@ async function askNotificationPermission() {
     const notifySettings = await notifee.getNotificationSettings();
     if (!settings.getState().DONT_ASK_PERMISSION_NOTIFICATIONS) {
       if (notifySettings.authorizationStatus === AuthorizationStatus.DENIED) {
-        const granted = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.POST_NOTIFICATION,
-          {
-            title: t`Notifications Permission`,
-            message: t`To see notifications about adhan, we need your permission.`,
-            buttonNegative: Platform.Version <= 30 ? t`No` : undefined,
-            buttonPositive: t`Okay`,
-          },
-        );
-        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-          notifySettings.authorizationStatus = AuthorizationStatus.AUTHORIZED;
-        }
-      }
-      if (notifySettings.authorizationStatus === AuthorizationStatus.DENIED) {
         Alert.alert(
           t`Notifications Permission`,
-          t`Right now, the app does not have sufficient permissions to show notifications properly, to do so you must allow notifications permission.`,
+          t`To see notifications about adhan, we need your permission.`,
           [
             {
               text: t`Don't ask again`,
@@ -39,13 +25,16 @@ async function askNotificationPermission() {
                 settings.setState({DONT_ASK_PERMISSION_NOTIFICATIONS: true}),
             },
             {
-              text: t`Not now`,
-              style: 'cancel',
-            },
-            {
-              text: t`Show settings`,
+              text: t`Okay`,
               style: 'default',
-              onPress: () => notifee.openNotificationSettings(),
+              onPress: () =>
+                PermissionsAndroid.request(
+                  PermissionsAndroid.PERMISSIONS.POST_NOTIFICATION,
+                ).then(result => {
+                  if (result === 'denied') {
+                    notifee.openNotificationSettings();
+                  }
+                }),
             },
           ],
           {
@@ -86,34 +75,32 @@ async function askNotificationPermission() {
 }
 
 async function askPhoneStatePermission() {
-  const result = await PermissionsAndroid.request(
+  const granted = await PermissionsAndroid.check(
     PermissionsAndroid.PERMISSIONS.READ_PHONE_STATE,
-    {
-      title: t`Phone State Permission`,
-      message: t`To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature.`,
-      buttonNegative: Platform.Version <= 30 ? t`No` : undefined,
-      buttonPositive: t`Okay`,
-    },
   );
 
-  if (
-    result !== PermissionsAndroid.RESULTS.GRANTED &&
-    !settings.getState().DONT_ASK_PERMISSION_PHONE_STATE
-  ) {
+  if (!granted && !settings.getState().DONT_ASK_PERMISSION_PHONE_STATE) {
     Alert.alert(
-      t`Warning`,
-      t`Without phone state permission, we won't be able to stop playing adhan during a call!`,
+      t`Phone State Permission`,
+      t`To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature.`,
       [
         {
-          text: t`Don't show again`,
+          text: t`Don't ask again`,
           style: 'destructive',
           onPress: () =>
             settings.setState({DONT_ASK_PERMISSION_PHONE_STATE: true}),
         },
         {
-          text: t`Show settings`,
+          text: t`Okay`,
           style: 'default',
-          onPress: () => openApplicationSettings(),
+          onPress: () =>
+            PermissionsAndroid.request(
+              PermissionsAndroid.PERMISSIONS.READ_PHONE_STATE,
+            ).then(result => {
+              if (result === 'denied') {
+                openApplicationSettings();
+              }
+            }),
         },
       ],
       {
@@ -124,8 +111,14 @@ async function askPhoneStatePermission() {
 }
 
 export async function askPermissions() {
-  await askNotificationPermission();
-  await askPhoneStatePermission();
+  if (Platform.Version >= 33) {
+    // notification permissions do not exist before android 13 (api 33)
+    await askNotificationPermission();
+  }
+  if (Platform.Version >= 31) {
+    // we only need this permission to react to incomming calls on android 12 (api 31) and later
+    await askPhoneStatePermission();
+  }
 }
 
 /** returns `true` if we can schedule notifications and expect them to trigger */
