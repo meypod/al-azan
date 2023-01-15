@@ -10,60 +10,34 @@ import {settings} from '@/store/settings';
 
 /** returns `true` if we can schedule notifications and expect them to trigger */
 async function askNotificationPermission() {
-  if (isAnyNotificationEnabled()) {
+  if (Platform.Version >= 33 && isAnyNotificationEnabled()) {
     const notifySettings = await notifee.getNotificationSettings();
-    if (!settings.getState().DONT_ASK_PERMISSION_NOTIFICATIONS) {
-      if (notifySettings.authorizationStatus === AuthorizationStatus.DENIED) {
-        Alert.alert(
-          t`Notifications Permission`,
-          t`To see notifications about adhan, we need your permission.`,
-          [
-            {
-              text: t`Don't ask again`,
-              style: 'destructive',
-              onPress: () =>
-                settings.setState({DONT_ASK_PERMISSION_NOTIFICATIONS: true}),
-            },
-            {
-              text: t`Okay`,
-              style: 'default',
-              onPress: () =>
-                PermissionsAndroid.request(
-                  PermissionsAndroid.PERMISSIONS.POST_NOTIFICATION,
-                ).then(result => {
-                  if (result === 'denied') {
-                    notifee.openNotificationSettings();
-                  }
-                }),
-            },
-          ],
-          {
-            cancelable: true,
-          },
-        );
-      }
-    }
+    // notification permissions do not exist before android 13 (api 33)
     if (
-      !settings.getState().DONT_ASK_PERMISSION_ALARM &&
-      notifySettings.android.alarm === AndroidNotificationSetting.DISABLED
+      notifySettings.authorizationStatus === AuthorizationStatus.DENIED &&
+      !settings.getState().DONT_ASK_PERMISSION_NOTIFICATIONS
     ) {
       Alert.alert(
-        t`Alarms Permission`,
-        t`On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well.`,
+        t`Notifications Permission`,
+        t`To see notifications about adhan, we need your permission.`,
         [
           {
             text: t`Don't ask again`,
             style: 'destructive',
-            onPress: () => settings.setState({DONT_ASK_PERMISSION_ALARM: true}),
+            onPress: () =>
+              settings.setState({DONT_ASK_PERMISSION_NOTIFICATIONS: true}),
           },
           {
-            text: t`Not now`,
-            style: 'cancel',
-          },
-          {
-            text: t`Show settings`,
+            text: t`Okay`,
             style: 'default',
-            onPress: () => notifee.openAlarmPermissionSettings(),
+            onPress: () =>
+              PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.POST_NOTIFICATION,
+              ).then(result => {
+                if (result === 'denied') {
+                  notifee.openNotificationSettings();
+                }
+              }),
           },
         ],
         {
@@ -71,6 +45,38 @@ async function askNotificationPermission() {
         },
       );
     }
+  }
+}
+
+async function askAlarmPermission() {
+  const notifySettings = await notifee.getNotificationSettings();
+  if (
+    notifySettings.android.alarm === AndroidNotificationSetting.DISABLED &&
+    !settings.getState().DONT_ASK_PERMISSION_ALARM
+  ) {
+    Alert.alert(
+      t`Alarms Permission`,
+      t`On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well.`,
+      [
+        {
+          text: t`Don't ask again`,
+          style: 'destructive',
+          onPress: () => settings.setState({DONT_ASK_PERMISSION_ALARM: true}),
+        },
+        {
+          text: t`Not now`,
+          style: 'cancel',
+        },
+        {
+          text: t`Show settings`,
+          style: 'default',
+          onPress: () => notifee.openAlarmPermissionSettings(),
+        },
+      ],
+      {
+        cancelable: true,
+      },
+    );
   }
 }
 
@@ -111,10 +117,8 @@ async function askPhoneStatePermission() {
 }
 
 export async function askPermissions() {
-  if (Platform.Version >= 33) {
-    // notification permissions do not exist before android 13 (api 33)
-    await askNotificationPermission();
-  }
+  await askNotificationPermission();
+  await askAlarmPermission();
   if (Platform.Version >= 31) {
     // we only need this permission to react to incomming calls on android 12 (api 31) and later
     await askPhoneStatePermission();
