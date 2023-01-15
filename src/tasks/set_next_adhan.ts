@@ -57,8 +57,8 @@ export async function setNextAdhan(
   const showNextPrayerInfo = alarmSettings.getState().SHOW_NEXT_PRAYER_TIME;
 
   const title = translatePrayer(prayer);
-  let body: string | undefined;
-  let subtitle: string | undefined = getTime(date);
+  let body: string | undefined = getTime(date);
+  let subtitle: string | undefined = body;
 
   if (showNextPrayerInfo) {
     const next = getPrayerTimes(new Date(date.valueOf() + 1000))?.nextPrayer({
@@ -66,7 +66,7 @@ export async function setNextAdhan(
       useSettings: true,
     });
     if (next) {
-      body = `${t`Next`}: ${translatePrayer(
+      body += ` - ${t`Next`}: ${translatePrayer(
         next.prayer,
       )}, ${getUpcommingTimeDay(next.date)}`;
     }

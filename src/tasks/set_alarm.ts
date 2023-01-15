@@ -5,7 +5,6 @@ import notifee, {
   AndroidImportance,
   AndroidCategory,
   AndroidVisibility,
-  AndroidStyle,
 } from '@notifee/react-native';
 import {Prayer} from '@/adhan';
 
@@ -67,8 +66,6 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
   // to replace the notification settings
   await notifee.cancelTriggerNotification(notifId).catch(console.error);
 
-  const lines: string[] = [subtitle, body].filter(Boolean) as string[];
-
   await notifee.createTriggerNotification(
     {
       id: notifId,
@@ -76,10 +73,6 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       subtitle: subtitle,
       body: body,
       android: {
-        style: {
-          type: AndroidStyle.INBOX,
-          lines,
-        },
         lightUpScreen: playSound,
         smallIcon: 'ic_stat_name',
         channelId,
