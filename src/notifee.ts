@@ -19,7 +19,6 @@ import {
   updateNotification,
   UpdateWidgetOptions,
 } from '@/modules/notification_widget';
-import {replace} from '@/navigation/root_navigation';
 import {playAdhan, stopAdhan} from '@/services/azan_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
@@ -88,11 +87,21 @@ export async function cancelAlarmNotif({
 }
 
 export function getAlarmOptions(notification: Notification | undefined) {
-  if (!notification) return;
+  if (!notification || !notification.data?.options) return;
 
-  const options = JSON.parse(
-    notification.data?.options as string,
-  ) as SetAlarmTaskOptions;
+  let options;
+  try {
+    options = JSON.parse(
+      notification.data.options as string,
+    ) as SetAlarmTaskOptions;
+  } catch (e) {
+    console.error(
+      'Faulty options: ',
+      notification.data?.options,
+      ' Error: ',
+      e,
+    );
+  }
 
   if (options) {
     options.date = new Date(options.date);
@@ -147,18 +156,6 @@ export async function cancelNotifOnDismissed({
   }
 }
 
-function openFullscreenAlarmIfNeeded({detail, options, type}: NotifeeEvent) {
-  if (
-    (type === EventType.PRESS || type === EventType.DELIVERED) &&
-    options?.playSound &&
-    !options.notifId.startsWith('pre')
-  ) {
-    replace('FullscreenAlarm', {
-      options: detail.notification?.data?.options,
-    });
-  }
-}
-
 export async function getFgSvcNotification() {
   try {
     const fgNotify = await notifee
@@ -166,7 +163,7 @@ export async function getFgSvcNotification() {
       .then(list =>
         list.find(n => !!n.notification.android?.asForegroundService),
       );
-    return fgNotify;
+    return fgNotify?.notification;
   } catch (e) {
     console.error(e);
   }
@@ -235,7 +232,6 @@ async function handleNotification({
     } else {
       await cancelNotifOnDismissed({type, detail, options});
     }
-    openFullscreenAlarmIfNeeded({type, detail, options});
   }
 }
 

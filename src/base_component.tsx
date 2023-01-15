@@ -3,12 +3,10 @@ import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
 import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
-import {getFgSvcNotification, setupNotifeeForegroundHandler} from '@/notifee';
+import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
 import {colors} from '@/theme/colors';
-import {getActivityName} from './modules/activity';
-import {getCurrentRoute, replace} from './navigation/root_navigation';
-import {stopAdhan} from './services/azan_service';
+import {replace} from './navigation/root_navigation';
 
 let pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
 
@@ -59,23 +57,7 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
 
   useEffect(() => {
     if (isPlayingAdhan) {
-      getFgSvcNotification().then(dn => {
-        if (dn?.notification?.data?.options) {
-          replace('FullscreenAlarm', {
-            options: dn.notification.data.options,
-          });
-        } else {
-          stopAdhan();
-        }
-      });
-    } else {
-      getActivityName().then(name => {
-        if (name !== 'MainActivityElevated') {
-          if (getCurrentRoute().name === 'FullscreenAlarm') {
-            replace('Home');
-          }
-        }
-      });
+      replace('FullscreenAlarm');
     }
   }, [isPlayingAdhan]);
 

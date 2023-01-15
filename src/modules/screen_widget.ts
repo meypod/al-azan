@@ -40,18 +40,13 @@ interface ScreenWidgetModuleInterface {
   updateScreenWidget(options: UpdateWidgetOptions): Promise<void>;
 }
 
-const updateScreenWidget = ScreenWidgetModule.updateScreenWidget;
+export const updateScreenWidget = ScreenWidgetModule.updateScreenWidget;
 
-const onUpdateScreenWidgetRequested = (handler: () => Promise<void>) => {
+export const onUpdateScreenWidgetRequested = (handler: () => Promise<void>) => {
   if (typeof handler !== 'function') {
     throw new Error(
       "[screen widget module] onUpdateScreenWidgetRequested(*) 'handler' expected a function.",
     );
   }
   backgroundEventHandler = handler;
-};
-
-export default {
-  updateScreenWidget,
-  onUpdateScreenWidgetRequested,
 };

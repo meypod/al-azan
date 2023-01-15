@@ -1,75 +1,82 @@
 import {t} from '@lingui/macro';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Text, Box, Button, Spacer} from 'native-base';
+import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {memo, useCallback, useEffect, useState} from 'react';
-import {finishAndRemoveTask} from '@/modules/activity';
-import {RootStackParamList} from '@/navigation/types';
-import {cancelAlarmNotif} from '@/notifee';
+import {replace} from '@/navigation/root_navigation';
+import {
+  cancelAlarmNotif,
+  getAlarmOptions,
+  getFgSvcNotification,
+} from '@/notifee';
+import {stopAdhan} from '@/services/azan_service';
+import {useSettings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
 
-type ScreenProps = NativeStackScreenProps<
-  RootStackParamList,
-  'FullscreenAlarm'
->;
-
-function FullscreenAlarm({route}: ScreenProps) {
+function FullscreenAlarm() {
   const [fullscreenOptions, setFullscreenOptions] = useState<{
-    date: Date;
     title: String;
     subtitle: String;
     body: String;
   }>({
-    date: new Date(),
     title: '',
     subtitle: '',
     body: '',
   });
 
+  const [isPlayingAdhan] = useSettings('IS_PLAYING_ADHAN');
+
+  const [taskOptions, setTaskOptions] = useState<
+    SetAlarmTaskOptions | undefined
+  >(undefined);
+
   useEffect(() => {
-    // TODO Use notification here ?
-    const parsedAlarmOptions = JSON.parse(
-      route.params.options || 'false',
-    ) as SetAlarmTaskOptions;
-    if (!parsedAlarmOptions) {
-      finishAndRemoveTask();
-      return;
-    }
-    parsedAlarmOptions.date = new Date(parsedAlarmOptions.date);
+    getFgSvcNotification().then(async notification => {
+      const options = getAlarmOptions(notification);
+      if (!isPlayingAdhan || !options) {
+        if ((await getActivityName()) === 'AlarmActivity') {
+          return finishAndRemoveTask();
+        } else {
+          await stopAdhan();
+          return replace('Home');
+        }
+      }
+      setTaskOptions(options);
+    });
+  }, [isPlayingAdhan]);
+
+  useEffect(() => {
+    if (!taskOptions) return;
     let title = t`Adhan`;
-    let body = parsedAlarmOptions.body || '';
+    let body = taskOptions.body || '';
     let subtitle = '';
-    if (parsedAlarmOptions.isReminder) {
+    if (taskOptions.isReminder) {
       title = t`Reminder`;
-      subtitle = parsedAlarmOptions.subtitle || '';
+      subtitle = taskOptions.subtitle || '';
     } else {
-      subtitle = parsedAlarmOptions.title;
-      body = getTime(parsedAlarmOptions.date);
+      subtitle = taskOptions.title;
+      body = getTime(taskOptions.date);
     }
     setFullscreenOptions({
       title,
       body,
       subtitle,
-      date: parsedAlarmOptions.date,
     });
-  }, [route.params.options]);
+  }, [taskOptions]);
 
   const onDismissPress = useCallback(async () => {
     try {
-      const parsedAlarmOptions = JSON.parse(
-        route.params.options || 'false',
-      ) as SetAlarmTaskOptions;
-      if (!parsedAlarmOptions) {
+      if (!taskOptions) {
         return;
       }
       await cancelAlarmNotif({
-        options: parsedAlarmOptions,
+        options: taskOptions,
         notification: {android: {asForegroundService: true}},
       });
     } finally {
       finishAndRemoveTask();
     }
-  }, [route]);
+  }, [taskOptions]);
 
   return (
     <Box

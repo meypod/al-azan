@@ -1,7 +1,7 @@
 import difference from 'lodash/difference';
 import {getPrayerTimes, PrayersInOrder, translatePrayer} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
-import WidgetMod from '@/modules/screen_widget';
+import {updateScreenWidget} from '@/modules/screen_widget';
 import {
   cancelPermanentNotifWidget,
   updatePermanentNotifWidget,
@@ -44,7 +44,7 @@ export async function updateWidgets() {
     cancelPermanentNotifWidget();
   }
 
-  await WidgetMod.updateScreenWidget({
+  await updateScreenWidget({
     dayAndMonth,
     hijriDate,
     prayers,

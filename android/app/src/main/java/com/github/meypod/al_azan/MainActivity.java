@@ -23,7 +23,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return NotifeeApiModule.getMainComponent("AdhanProject");
+    return NotifeeApiModule.getMainComponent("main-app");
   }
 
   /**

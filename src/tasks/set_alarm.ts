@@ -82,12 +82,12 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
         fullScreenAction: playSound
           ? {
               id: 'fullscreen',
-              launchActivity: 'com.github.meypod.al_azan.MainActivityElevated',
+              launchActivity: 'com.github.meypod.al_azan.AlarmActivity',
             }
           : undefined,
         pressAction: {
           id: 'fullscreen',
-          launchActivity: 'com.github.meypod.al_azan.MainActivityElevated',
+          launchActivity: 'com.github.meypod.al_azan.AlarmActivity',
         },
         asForegroundService: playSound,
         actions: [

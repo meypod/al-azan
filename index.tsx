@@ -1,6 +1,14 @@
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
+import {bootstrap} from '@/bootstrap';
 import {LogBox, AppRegistry} from 'react-native';
+import {onUpdateScreenWidgetRequested} from '@/modules/screen_widget';
+import {setupNotifeeHandlers} from '@/notifee';
+import fullscreen_alarm from '@/screens/fullscreen_alarm';
+import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {setReminders} from '@/tasks/set_reminder';
+import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 if (__DEV__) {
   LogBox.ignoreLogs([
@@ -10,29 +18,30 @@ if (__DEV__) {
   ]);
 }
 
-import {bootstrap} from '@/bootstrap';
-import {APP_KEY} from '@/constants/app';
-import WidgetMod from '@/modules/screen_widget';
-import {setupNotifeeHandlers} from '@/notifee';
-import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {setReminders} from '@/tasks/set_reminder';
-import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
-import {updateWidgets} from '@/tasks/update_widgets';
-
 setupNotifeeHandlers();
 
-WidgetMod.onUpdateScreenWidgetRequested(async () => {
+onUpdateScreenWidgetRequested(async () => {
   bootstrap();
   setUpdateWidgetsAlarms();
   await updateWidgets();
 });
 
-AppRegistry.registerRunnable(APP_KEY, async initialProps => {
+AppRegistry.registerRunnable('main-app', async initialProps => {
   bootstrap();
   setNextAdhan();
   setReminders();
   setUpdateWidgetsAlarms();
   updateWidgets();
-  AppRegistry.registerComponent(APP_KEY, () => BaseComponent.bind(this, App));
-  AppRegistry.runApplication(APP_KEY, initialProps);
+  AppRegistry.registerComponent('main-app', () =>
+    BaseComponent.bind(this, App),
+  );
+  AppRegistry.runApplication('main-app', initialProps);
+});
+
+AppRegistry.registerRunnable('fs-alarm', async initialProps => {
+  bootstrap();
+  AppRegistry.registerComponent('fs-alarm', () =>
+    BaseComponent.bind(this, fullscreen_alarm),
+  );
+  AppRegistry.runApplication('fs-alarm', initialProps);
 });

@@ -30,7 +30,7 @@
         android:exported="false"
         android:label="@string/app_name"
         android:launchMode="singleTask"
-        android:name=".MainActivityElevated"
+        android:name=".AlarmActivity"
         android:noHistory="true"
         android:excludeFromRecents="true"
         android:showWhenLocked="true"
