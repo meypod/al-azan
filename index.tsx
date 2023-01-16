@@ -43,6 +43,10 @@ AppRegistry.registerRunnable('main-app', async initialProps => {
 
 AppRegistry.registerRunnable('fs-alarm', async initialProps => {
   bootstrap();
+  setNextAdhan();
+  setReminders();
+  setUpdateWidgetsAlarms();
+  updateWidgets();
   AppRegistry.registerComponent('fs-alarm', () =>
     BaseComponent.bind(this, fullscreen_alarm),
   );
