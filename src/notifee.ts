@@ -57,9 +57,7 @@ export async function cancelAlarmNotif({
   replaceWithNormal,
 }: CancelNotifOptions) {
   if (notification?.android?.asForegroundService) {
-    if (options?.playSound) {
-      await stopAdhan().catch(console.error);
-    }
+    await stopAdhan().catch(console.error);
     await notifee.stopForegroundService().catch(console.error);
   }
 
