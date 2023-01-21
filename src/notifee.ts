@@ -150,6 +150,12 @@ export async function cancelNotifOnDismissed({
         );
 
       await notifee.cancelNotification(scheduledAlarmOptions.notifId);
+
+      if ((scheduledAlarmOptions as Pick<Reminder, 'once'>).once) {
+        reminderSettings.getState().disableReminder({
+          id: scheduledAlarmOptions.notifId,
+        });
+      }
     }
   }
 }
