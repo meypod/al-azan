@@ -17,6 +17,7 @@
     "postversion": "react-native-version"
   },
   "dependencies": {
+    "@lingui/macro": "^3.16.0",
     "@lingui/react": "^3.16.0",
     "@notifee/react-native": "^7.4.0",
     "@react-native-clipboard/clipboard": "^1.11.1",
@@ -53,8 +54,7 @@
     "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@lingui/cli": "^3.14.0",
-    "@lingui/macro": "^3.14.0",
+    "@lingui/cli": "^3.16.0",
     "@testing-library/react-hooks": "^8.0.0",
     "@tsconfig/react-native": "^2.0.3",
     "@types/jest": "^29.2.4",

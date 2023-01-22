@@ -21,5 +21,14 @@ module.exports = {
     sourceExts: process.env.RN_SRC_EXT
       ? [...process.env.RN_SRC_EXT.split(',').concat(defaultSourceExts), 'mjs']
       : [...defaultSourceExts, 'mjs'],
+    resolveRequest(context, moduleName, platform) {
+      if (moduleName.startsWith('@lingui/core/compile')) {
+        moduleName = moduleName.replace(
+          '@lingui/core/compile',
+          '@lingui/core/build/esm/compile.js',
+        );
+      }
+      return context.resolveRequest(context, moduleName, platform);
+    },
   },
 };
