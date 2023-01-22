@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: cimg/android:2021.09.1-ndk
+      image: cimg/android:2022.08.1-ndk
       options: --user root
     
     steps:

@@ -38,8 +38,8 @@ const TranslatedHeaderTitle = (...props: any[]) => {
   }
 };
 
-export function App() {
-  const [appIntroDone] = useSettings('APP_INTRO_DONE');
+export function App(): JSX.Element {
+  const [appIntroDone] = useSettingsHelper('APP_INTRO_DONE');
   const {colorMode} = useColorMode();
 
   const isDarkMode = colorMode === 'dark';
