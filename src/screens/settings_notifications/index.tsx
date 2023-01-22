@@ -7,8 +7,8 @@ import {
   Text,
 } from 'native-base';
 import {useCallback, useState} from 'react';
-import {Prayer, PrayersInOrder} from '@/adhan';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
+import {Prayer, PrayersInOrder} from '@/adhan';
 import NotificationSetting from '@/screens/settings_notifications/notification_setting';
 
 export function NotificationSettings(props: IScrollViewProps) {

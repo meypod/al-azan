@@ -1,8 +1,6 @@
 import {t} from '@lingui/macro';
 import Clipboard from '@react-native-clipboard/clipboard';
-import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {debounce} from 'lodash';
-import Divider from '@/components/Divider';
 import {
   HStack,
   Input,
@@ -16,12 +14,14 @@ import {
   WarningOutlineIcon,
   Spacer,
 } from 'native-base';
-import {useCalcSettings} from '@/store/calculation';
 import {useCallback, useLayoutEffect, useState} from 'react';
-import {useSettings} from '@/store/settings';
 import {ToastAndroid} from 'react-native';
-import {getCached} from '@/utils/cached';
 import LocationProvider from 'react-native-get-location';
+import {AutocompleteInput} from '@/components/AutocompleteInput';
+import Divider from '@/components/Divider';
+import {useCalcSettings} from '@/store/calculation';
+import {useSettings} from '@/store/settings';
+import {getCached} from '@/utils/cached';
 import {
   CountryInfo,
   getCountries,

@@ -16,13 +16,6 @@ module.exports = {
     jest: true,
   },
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
-  },
   plugins: ['react', 'react-hooks', '@typescript-eslint', 'import', 'prettier'],
   rules: {
     'prettier/prettier': 'error',

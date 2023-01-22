@@ -11,15 +11,15 @@ import {
   Text,
   IBoxProps,
 } from 'native-base';
-import {AdhanEntry} from '@/assets/adhan_entries';
 import {useEffect, useState} from 'react';
+import {ToastAndroid} from 'react-native';
+import {pickSingle} from 'react-native-document-picker';
+import {AdhanEntry} from '@/assets/adhan_entries';
 import MediaPlayer, {
   PlaybackState,
   usePlaybackState,
 } from '@/modules/media_player';
-import {ToastAndroid} from 'react-native';
 import {RootStackParamList} from '@/navigation/types';
-import {pickSingle} from 'react-native-document-picker';
 
 import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
 import {play, stop, destroy} from '@/services/play_sound';

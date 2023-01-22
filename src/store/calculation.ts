@@ -5,9 +5,9 @@ import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
-import {Prayer} from '@/adhan';
 import {alarmSettings, AlarmSettingsStore} from './alarm';
 import {zustandStorage} from './mmkv';
+import {Prayer} from '@/adhan';
 
 const CALC_SETTINGS_STORAGE_KEY = 'CALC_SETTINGS_STORAGE';
 

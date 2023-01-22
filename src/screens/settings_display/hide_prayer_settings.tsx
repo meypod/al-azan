@@ -9,9 +9,9 @@ import {
   IStackProps,
 } from 'native-base';
 import {ToastAndroid} from 'react-native';
+import HidePrayerSetting from './hide_prayer_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {useSettings} from '@/store/settings';
-import HidePrayerSetting from './hide_prayer_setting';
 
 export function HidePrayerSettings(props: IStackProps) {
   const [hiddenPrayer, setHiddenPrayers] = useSettings('HIDDEN_PRAYERS');

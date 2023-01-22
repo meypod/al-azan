@@ -4,10 +4,10 @@ import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
-import {Prayer, PrayersInOrder} from '@/adhan';
-import {WeekDayIndex} from '@/utils/date';
 import {zustandStorage} from './mmkv';
 import {reminderSettings} from './reminder';
+import {Prayer, PrayersInOrder} from '@/adhan';
+import {WeekDayIndex} from '@/utils/date';
 
 const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
 

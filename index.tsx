@@ -1,7 +1,7 @@
+import {LogBox, AppRegistry} from 'react-native';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {bootstrap} from '@/bootstrap';
-import {LogBox, AppRegistry} from 'react-native';
 import {onUpdateScreenWidgetRequested} from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
 import fullscreen_alarm from '@/screens/fullscreen_alarm';

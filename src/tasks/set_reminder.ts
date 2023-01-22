@@ -1,6 +1,8 @@
 import {t} from '@lingui/macro';
-import {getPrayerTimes} from '@/adhan';
 import notifee from '@notifee/react-native';
+import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
+import {setPreAlarmTask} from './set_pre_alarm';
+import {getPrayerTimes} from '@/adhan';
 import {
   PRE_REMINDER_CHANNEL_ID,
   PRE_REMINDER_CHANNEL_NAME,
@@ -11,9 +13,7 @@ import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
 import {reminderSettings, Reminder} from '@/store/reminder';
 import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
-import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
 import {canScheduleNotifications} from '@/utils/permission';
-import {setPreAlarmTask} from './set_pre_alarm';
 import {showUpcomingToast} from '@/utils/upcoming';
 
 type SetReminderOptions = {

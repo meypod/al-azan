@@ -4,8 +4,8 @@ import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
-import {Prayer} from '@/adhan';
 import {zustandStorage} from './mmkv';
+import {Prayer} from '@/adhan';
 
 const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
 

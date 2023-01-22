@@ -1,3 +1,6 @@
+import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
+import {memo, useEffect} from 'react';
+import {useStore} from 'zustand';
 import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
@@ -12,11 +15,8 @@ import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {clearCache} from '@/store/adhan_calc_cache';
 import {alarmSettings} from '@/store/alarm';
 import {calcSettings} from '@/store/calculation';
-import {Box, FlatList, Text, Pressable, HStack} from 'native-base';
 import {reminderSettings} from '@/store/reminder';
-import {memo, useEffect} from 'react';
 import {settings, useSettings} from '@/store/settings';
-import {useStore} from 'zustand';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {updateWidgets} from '@/tasks/update_widgets';

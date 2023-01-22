@@ -8,18 +8,18 @@ import {
   Shafaq,
   PolarCircleResolution,
 } from 'adhan';
+import {CalculationMethods} from './calculation_methods';
+import {PrayersInOrder, Prayer} from './prayer';
 import {
   CachedPrayerTimes,
   getCachedPrayerTimes,
 } from '@/store/adhan_calc_cache';
-import {CalculationMethods} from './calculation_methods';
 
 import {
   alarmSettings,
   getAdhanSettingKey,
   PrayerAlarmSettings,
 } from '@/store/alarm';
-import {PrayersInOrder, Prayer} from './prayer';
 import {calcSettings, CalcSettingsStore} from '@/store/calculation';
 import {addDays, getDayBeginning, WeekDayIndex} from '@/utils/date';
 

@@ -3,10 +3,10 @@ import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
 import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
+import {replace} from './navigation/root_navigation';
 import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
 import {colors} from '@/theme/colors';
-import {replace} from './navigation/root_navigation';
 
 let pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
 

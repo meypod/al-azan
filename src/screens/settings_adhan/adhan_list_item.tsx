@@ -1,8 +1,5 @@
-import {AdhanEntry, adhanEntryTranslations} from '@/assets/adhan_entries';
 import {i18n} from '@lingui/core';
-import {CheckIcon} from '@/assets/icons/check';
 import {t} from '@lingui/macro';
-import {CloseIcon} from '@/assets/icons/close';
 import {
   Button,
   HStack,
@@ -12,16 +9,19 @@ import {
   Pressable,
   Menu,
 } from 'native-base';
-import {DownloadIcon} from '@/assets/icons/download';
 import {useCallback, useState} from 'react';
-import {MoreVertIcon} from '@/assets/icons/more_vert';
 import {Alert, ToastAndroid} from 'react-native';
-import {PlayIcon} from '@/assets/icons/play';
 import ReactNativeBlobUtil, {
   FetchBlobResponse,
   StatefulPromise,
   // eslint-disable-next-line
 } from 'react-native-blob-util';
+import {AdhanEntry, adhanEntryTranslations} from '@/assets/adhan_entries';
+import {CheckIcon} from '@/assets/icons/check';
+import {CloseIcon} from '@/assets/icons/close';
+import {DownloadIcon} from '@/assets/icons/download';
+import {MoreVertIcon} from '@/assets/icons/more_vert';
+import {PlayIcon} from '@/assets/icons/play';
 import {StopIcon} from '@/assets/icons/stop';
 import {PlaybackState} from '@/modules/media_player';
 import {settings} from '@/store/settings';

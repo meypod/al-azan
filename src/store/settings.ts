@@ -2,21 +2,21 @@ import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
 import ReactNativeBlobUtil from 'react-native-blob-util';
-import {Prayer} from '@/adhan';
 import {useStore} from 'zustand';
+import {persist, createJSONStorage} from 'zustand/middleware';
+import {shallow} from 'zustand/shallow';
+import {createStore} from 'zustand/vanilla';
+import {alarmSettings} from './alarm';
+import {zustandStorage} from './mmkv';
+import {Prayer} from '@/adhan';
 import {
   AdhanEntry,
   adhanEntryTranslations,
   INITIAL_ADHAN_AUDIO_ENTRIES,
 } from '@/assets/adhan_entries';
-import {persist, createJSONStorage} from 'zustand/middleware';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
-import {shallow} from 'zustand/shallow';
-import {createStore} from 'zustand/vanilla';
 import {PREFERRED_LOCALE} from '@/utils/locale';
-import {alarmSettings} from './alarm';
-import {zustandStorage} from './mmkv';
 
 const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 

@@ -1,5 +1,6 @@
-import {getPrayerTimes, translatePrayer} from '@/adhan';
 import {t} from '@lingui/macro';
+import {cancelAdhanAlarms} from './cancel_alarms';
+import {getPrayerTimes, translatePrayer} from '@/adhan';
 import {
   ADHAN_NOTIFICATION_ID,
   ADHAN_CHANNEL_ID,
@@ -12,7 +13,6 @@ import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
-import {cancelAdhanAlarms} from './cancel_alarms';
 import {getTime} from '@/utils/date';
 import {canScheduleNotifications} from '@/utils/permission';
 import {getUpcommingTimeDay, showUpcomingToast} from '@/utils/upcoming';

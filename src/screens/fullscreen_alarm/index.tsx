@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {Text, Box, Button, Spacer} from 'native-base';
-import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {memo, useCallback, useEffect, useState} from 'react';
+import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {replace} from '@/navigation/root_navigation';
 import {
   cancelAlarmNotif,

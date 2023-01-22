@@ -1,18 +1,18 @@
+import {t} from '@lingui/macro';
+import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
+import {useEffect, useState} from 'react';
+import {useStore} from 'zustand';
+import {shallow} from 'zustand/shallow';
 import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/update';
 import Divider from '@/components/Divider';
-import {t} from '@lingui/macro';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
-import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {isRTL} from '@/i18n';
 
-import {useEffect, useState} from 'react';
 import {navigate} from '@/navigation/root_navigation';
 
-import {useStore} from 'zustand';
-import {shallow} from 'zustand/shallow';
 import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
 
