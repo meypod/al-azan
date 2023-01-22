@@ -4,31 +4,14 @@ import {
   HStack,
   VStack,
   Text,
-  Stack,
   Checkbox,
   FormControl,
   IStackProps,
 } from 'native-base';
 import {ToastAndroid} from 'react-native';
-import {Prayer, PrayersInOrder, translatePrayer} from '@/adhan';
+import {Prayer, PrayersInOrder} from '@/adhan';
 import {useSettings} from '@/store/settings';
-
-function HidePrayerSetting({prayer, ...props}: IStackProps & {prayer: Prayer}) {
-  const prayerName = translatePrayer(prayer);
-  return (
-    <HStack {...props} justifyContent="space-between">
-      <Text width="1/2">{prayerName}</Text>
-
-      <Stack width="1/2" justifyContent="center" alignItems="center">
-        <Checkbox
-          value={prayer}
-          size="md"
-          accessibilityLabel={t`should ${prayerName} be hidden?`}
-        />
-      </Stack>
-    </HStack>
-  );
-}
+import HidePrayerSetting from './hide_prayer_setting';
 
 export function HidePrayerSettings(props: IStackProps) {
   const [hiddenPrayer, setHiddenPrayers] = useSettings('HIDDEN_PRAYERS');
