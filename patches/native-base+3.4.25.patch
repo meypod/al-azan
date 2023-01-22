@@ -1,0 +1,45 @@
+diff --git a/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js b/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js
+index 4241fa2..6a719e4 100644
+--- a/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js
++++ b/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js
+@@ -177,6 +177,10 @@ const Select = ({
+     value: selectedItem ? selectedItem.label : '',
+     editable: false,
+     focusable: false,
++    _input: {
++      readOnly: true,
++      autoCorrect: false,
++    },
+     isDisabled: isDisabled,
+     pointerEvents: "none",
+     variant: variant
+diff --git a/node_modules/native-base/lib/module/components/primitives/Select/Select.js b/node_modules/native-base/lib/module/components/primitives/Select/Select.js
+index 5ece8a7..965ca71 100644
+--- a/node_modules/native-base/lib/module/components/primitives/Select/Select.js
++++ b/node_modules/native-base/lib/module/components/primitives/Select/Select.js
+@@ -138,6 +138,10 @@ const Select = ({
+     value: selectedItem ? selectedItem.label : '',
+     editable: false,
+     focusable: false,
++    _input: {
++      readOnly: true,
++      autoCorrect: false,
++    },
+     isDisabled: isDisabled,
+     pointerEvents: "none",
+     variant: variant
+diff --git a/node_modules/native-base/src/components/primitives/Select/Select.tsx b/node_modules/native-base/src/components/primitives/Select/Select.tsx
+index ee8df1e..402f9a0 100644
+--- a/node_modules/native-base/src/components/primitives/Select/Select.tsx
++++ b/node_modules/native-base/src/components/primitives/Select/Select.tsx
+@@ -169,6 +169,10 @@ const Select = (
+       value={selectedItem ? selectedItem.label : ''}
+       editable={false}
+       focusable={false}
++      _input={{
++        readOnly: true,
++        autoCorrect: false,
++      }}
+       isDisabled={isDisabled}
+       pointerEvents="none"
+       variant={variant}

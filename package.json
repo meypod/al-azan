@@ -14,7 +14,8 @@
     "sync_and_purge": "lingui extract --overwrite --clean && lingui compile",
     "lingui": "lingui",
     "np": "np --no-publish",
-    "postversion": "react-native-version"
+    "postversion": "react-native-version",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@lingui/macro": "^3.16.0",
@@ -81,6 +82,8 @@
     "metro-react-native-babel-preset": "0.73.7",
     "mkdirp": "^1.0.4",
     "np": "^7.6.2",
+    "patch-package": "^6.5.1",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.6.1",
     "react-native-version": "^4.0.0",
     "react-test-renderer": "18.2.0",
