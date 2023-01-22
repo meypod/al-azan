@@ -1,7 +1,7 @@
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
-import ReactNativeBlobUtil from 'react-native-blob-util';
+import {ReactNativeBlobUtil} from 'react-native-blob-util';
 import {useStore} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';

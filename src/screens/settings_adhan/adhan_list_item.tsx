@@ -11,7 +11,8 @@ import {
 } from 'native-base';
 import {useCallback, useState} from 'react';
 import {Alert, ToastAndroid} from 'react-native';
-import ReactNativeBlobUtil, {
+import {
+  ReactNativeBlobUtil,
   FetchBlobResponse,
   StatefulPromise,
   // eslint-disable-next-line
