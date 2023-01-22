@@ -54,7 +54,7 @@ msgstr "Add Custom Adhan"
 msgid "Add Reminder"
 msgstr "Add Reminder"
 
-#: src/screens/fullscreen_alarm/index.tsx:39
+#: src/screens/fullscreen_alarm/index.tsx:50
 msgid "Adhan"
 msgstr "Adhan"
 
@@ -74,7 +74,7 @@ msgstr "Advanced Calculation Settings"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:51
+#: src/utils/permission.ts:61
 msgid "Alarms Permission"
 msgstr "Alarms Permission"
 
@@ -220,7 +220,7 @@ msgstr "Deselect as Fajr Adhan"
 msgid "Disabled"
 msgstr "Disabled"
 
-#: src/screens/fullscreen_alarm/index.tsx:116
+#: src/screens/fullscreen_alarm/index.tsx:123
 #: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Dismiss"
@@ -229,9 +229,9 @@ msgstr "Dismiss"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
-#: src/utils/permission.ts:22
-#: src/utils/permission.ts:55
-#: src/utils/permission.ts:88
+#: src/utils/permission.ts:26
+#: src/utils/permission.ts:65
+#: src/utils/permission.ts:97
 msgid "Don't ask again"
 msgstr "Don't ask again"
 
@@ -438,7 +438,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:143
+#: src/screens/home/index.tsx:144
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -450,7 +450,7 @@ msgstr "No"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/utils/permission.ts:60
+#: src/utils/permission.ts:70
 msgid "Not now"
 msgstr "Not now"
 
@@ -463,7 +463,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
 
-#: src/utils/permission.ts:18
+#: src/utils/permission.ts:22
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -471,12 +471,12 @@ msgstr "Notifications Permission"
 msgid "Numbering system"
 msgstr "Numbering system"
 
-#: src/utils/permission.ts:28
-#: src/utils/permission.ts:94
+#: src/utils/permission.ts:32
+#: src/utils/permission.ts:103
 msgid "Okay"
 msgstr "Okay"
 
-#: src/utils/permission.ts:52
+#: src/utils/permission.ts:62
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 
@@ -513,7 +513,7 @@ msgstr "Options"
 msgid "Paste"
 msgstr "Paste"
 
-#: src/utils/permission.ts:84
+#: src/utils/permission.ts:93
 msgid "Phone State Permission"
 msgstr "Phone State Permission"
 
@@ -530,7 +530,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:114
+#: src/screens/home/index.tsx:115
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -542,7 +542,7 @@ msgstr "Qatar"
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
-#: src/screens/fullscreen_alarm/index.tsx:43
+#: src/screens/fullscreen_alarm/index.tsx:54
 #: src/tasks/set_reminder.ts:75
 #: src/tasks/set_reminder.ts:101
 msgid "Reminder"
@@ -610,7 +610,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:137
+#: src/screens/home/index.tsx:138
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -622,7 +622,7 @@ msgstr "Show next in notification?"
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
-#: src/utils/permission.ts:64
+#: src/utils/permission.ts:74
 msgid "Show settings"
 msgstr "Show settings"
 
@@ -720,11 +720,11 @@ msgstr "Time format"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
-#: src/utils/permission.ts:19
+#: src/utils/permission.ts:23
 msgid "To see notifications about adhan, we need your permission."
 msgstr "To see notifications about adhan, we need your permission."
 
-#: src/utils/permission.ts:85
+#: src/utils/permission.ts:94
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 
