@@ -135,7 +135,7 @@ export function isAnyNotificationEnabled() {
 }
 
 export function useAlarmSettings<T extends keyof AlarmSettingsStore>(key: T) {
-  const state = useStore(alarmSettings, s => s[key]);
+  const state = useStore(alarmSettings, s => s[key], shallow);
   const setterCurry = useStore(alarmSettings, s => s.setSettingCurry, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);

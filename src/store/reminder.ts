@@ -141,7 +141,11 @@ export const reminderSettings = createStore<ReminderStore>()(
 
 export function useReminderSettings<T extends keyof ReminderStore>(key: T) {
   const state = useStore(reminderSettings, s => s[key], shallow);
-  const setterCurry = useStore(reminderSettings, s => s.setSettingCurry);
+  const setterCurry = useStore(
+    reminderSettings,
+    s => s.setSettingCurry,
+    shallow,
+  );
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [

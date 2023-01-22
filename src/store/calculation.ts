@@ -145,7 +145,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
 );
 
 export function useCalcSettings<T extends keyof CalcSettingsStore>(key: T) {
-  const state = useStore(calcSettings, s => s[key]);
+  const state = useStore(calcSettings, s => s[key], shallow);
   const setterCurry = useStore(calcSettings, s => s.setSettingCurry, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);

@@ -277,7 +277,7 @@ export const settings = createStore<SettingsStore>()(
 
 export function useSettings<T extends keyof SettingsStore>(key: T) {
   const state = useStore(settings, s => s[key], shallow);
-  const setterCurry = useStore(settings, s => s.setSettingCurry);
+  const setterCurry = useStore(settings, s => s.setSettingCurry, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(setterCurry(key), [key]);
   return [state, setCallback] as [
