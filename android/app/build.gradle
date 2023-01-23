@@ -154,7 +154,7 @@ android {
             def versionName = variant.versionName 
             def flavor = variant.flavorName
             def architecture = output.getFilter(com.android.build.OutputFile.ABI) ?: "universal"
-            output.outputFileName = "al-azan-${flavor}-${builtType}-${versionName}-${output.versionCodeOverride}-${architecture}.apk"
+            output.outputFileName = "al-azan-${flavor}-${builtType}-${versionName}-${architecture}-${output.versionCodeOverride}.apk"
         }
     }
 
