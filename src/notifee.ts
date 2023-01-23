@@ -30,14 +30,6 @@ import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
-// TODO: remove when notifee has added FG_ALREADY_EXIST to their npm package
-declare module '@notifee/react-native' {
-  // eslint-disable-next-line @typescript-eslint/no-shadow
-  export enum EventType {
-    FG_ALREADY_EXIST = 8,
-  }
-}
-
 export type NotifeeEvent = {
   type: EventType;
   detail: EventDetail;
@@ -198,9 +190,12 @@ async function handleNotification({
     if (
       type === EventType.DELIVERED ||
       type === EventType.UNKNOWN ||
-      type === 8
+      type === EventType.FG_ALREADY_EXIST
     ) {
-      if ((type === 8 || type === EventType.UNKNOWN) && notification) {
+      if (
+        (type === EventType.FG_ALREADY_EXIST || type === EventType.UNKNOWN) &&
+        notification
+      ) {
         await notifee
           .displayNotification({
             ...notification,
