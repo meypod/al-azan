@@ -156,7 +156,9 @@ export function AdhanListItem({
                 />
               )}
               <Text flex={1} flexGrow={1} noOfLines={1}>
-                {item.label ? 'foo' : i18n._(adhanEntryTranslations[item.id])}
+                {item.label
+                  ? item.label
+                  : i18n._(adhanEntryTranslations[item.id])}
               </Text>
             </HStack>
 
