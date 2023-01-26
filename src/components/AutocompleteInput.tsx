@@ -89,7 +89,7 @@ export const AutocompleteInput = <T extends unknown>(
         {...inputProps}
       />
       <Actionsheet isOpen={isOpen} onClose={onClose}>
-        <Actionsheet.Content height="80%">
+        <Actionsheet.Content minHeight="70%">
           <KeyboardAvoidingView>
             {actionsheetLabel && (
               <Text textAlign="center" mb="2">
