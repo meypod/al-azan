@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-22 07:31+0330\n"
+"POT-Creation-Date: 2023-01-26 21:56+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -84,7 +84,7 @@ msgstr "Arab"
 msgid "Arabic/Persian"
 msgstr "Arab/Persia"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/screens/settings_adhan/adhan_list_item.tsx:100
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
 
@@ -92,7 +92,7 @@ msgstr "Yakin ingin menghapus \"{0}\" ?"
 msgid "Asr Calculation"
 msgstr "Perhitungan Waktu Ashar"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:39
+#: src/screens/settings_display/hide_prayer_settings.tsx:22
 msgid "At least one prayer time must be shown"
 msgstr "Setidaknya satu waktu sholat harus ditampilkan"
 
@@ -160,11 +160,12 @@ msgstr "Pilih jenis kalender"
 msgid "Choose numbering system"
 msgstr "Pilih sistem penomoran"
 
-#: src/screens/settings_location/index.tsx:245
+#: src/screens/settings_location/index.tsx:248
+#: src/screens/settings_location/index.tsx:250
 msgid "City/Area"
 msgstr "Kota/Daerah"
 
-#: src/screens/settings_location/index.tsx:143
+#: src/screens/settings_location/index.tsx:134
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
@@ -180,11 +181,12 @@ msgstr "Tanggal terdekat"
 msgid "Confirm"
 msgstr "Selesai"
 
-#: src/screens/settings_location/index.tsx:169
+#: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
-#: src/screens/settings_location/index.tsx:215
+#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:227
 msgid "Country"
 msgstr "Negara"
 
@@ -197,8 +199,8 @@ msgstr "Gelap"
 msgid "Default"
 msgstr "Bawaan"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/screens/settings_adhan/adhan_list_item.tsx:197
 msgid "Delete"
 msgstr "Hapus"
 
@@ -206,7 +208,7 @@ msgstr "Hapus"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa perangkat mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:189
+#: src/screens/settings_adhan/adhan_list_item.tsx:192
 msgid "Deselect as Fajr Adhan"
 msgstr "Batalkan pilihan sebagai Adzan Subuh"
 
@@ -245,23 +247,23 @@ msgstr "Otoritas Umum Mesir"
 msgid "Enabled"
 msgstr "Aktif"
 
-#: src/screens/settings_location/index.tsx:149
+#: src/screens/settings_location/index.tsx:140
 msgid "Error getting clipboard data"
 msgstr "Tidak mendapatkan data clipboard"
 
-#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:238
 msgid "Error in loading countries"
 msgstr "Kesalahan dalam memuat daftar negara"
 
-#: src/screens/settings_location/index.tsx:266
+#: src/screens/settings_location/index.tsx:264
 msgid "Error in loading search results"
 msgstr "Kesalahan dalam memuat hasil pencarian"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:84
 msgid "Error while downloading audio"
 msgstr "Kesalahan saat mengunduh audio"
 
-#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
@@ -269,7 +271,7 @@ msgstr "Kesalahan saat mendapatkan koordinat"
 msgid "Ethiopic"
 msgstr "Etiopia"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:210
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
 
@@ -281,7 +283,7 @@ msgstr "Jumat"
 msgid "General (default)"
 msgstr "Umum (default)"
 
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:214
 msgid "Getting coordinates"
 msgstr "Mendapatkan Koordinat"
 
@@ -301,12 +303,12 @@ msgstr "Wilayah Gulf"
 msgid "Hanafi"
 msgstr "Hanafi"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:58
+#: src/screens/settings_display/hide_prayer_settings.tsx:41
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
 msgstr "Sembunyikan?"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:54
+#: src/screens/settings_display/hide_prayer_settings.tsx:37
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
 msgid "Hide Prayer Times"
 msgstr "Sembunyikan Waktu Sholat"
@@ -436,9 +438,17 @@ msgstr "Lanjut"
 msgid "Next Day"
 msgstr "Hari Brkut"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/screens/settings_adhan/adhan_list_item.tsx:105
 msgid "No"
 msgstr "Tidak"
+
+#: src/components/AutocompleteInput.tsx:133
+msgid "No Data"
+msgstr "Tidak ada data"
+
+#: src/components/AutocompleteInput.tsx:137
+msgid "No Results"
+msgstr "Tidak ada hasil"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
@@ -558,11 +568,15 @@ msgstr "Perangkat Samsung memiliki Power Manajer kustom mereka sendiri yang dise
 msgid "Saturday"
 msgstr "Sabtu"
 
+#: src/components/AutocompleteInput.tsx:107
+msgid "Search"
+msgstr "Pencarian"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
 msgid "Secondary Calendar"
 msgstr "Kalender Sekunder"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:190
+#: src/screens/settings_adhan/adhan_list_item.tsx:193
 msgid "Select as Fajr Adhan"
 msgstr "Pilih sebagai Adzan Subuh"
 
@@ -595,7 +609,7 @@ msgstr ""
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:180
+#: src/screens/settings_adhan/adhan_list_item.tsx:183
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
@@ -690,7 +704,7 @@ msgstr "Warna Tema"
 msgid "Thursday"
 msgstr "Kamis"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:57
+#: src/screens/settings_display/hide_prayer_settings.tsx:40
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:103
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
@@ -700,7 +714,7 @@ msgstr "Waktu"
 msgid "Time format"
 msgstr "Format waktu"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:200
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
@@ -736,6 +750,10 @@ msgstr "Serikat Organisasi Islam Perancis (UOIF)"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Universitas Ilmu Islam, Karachi"
 
+#: src/components/AutocompleteInput.tsx:128
+msgid "Unknown Error"
+msgstr "Kesalahan Tidak Dikenal"
+
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Tidak ada (default)"
@@ -757,11 +775,11 @@ msgstr "Gunakan format 24 Jam"
 msgid "Using Coordinates"
 msgstr "Menggunakan Koordinat"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:202
 msgid "Using GPS"
 msgstr "Menggunakan GPS"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:221
 msgid "Using Search"
 msgstr "Menggunakan Pencarian"
 
@@ -781,7 +799,7 @@ msgstr "Rabu"
 msgid "Welcome"
 msgstr "Selamat Datang!"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:108
+#: src/screens/settings_adhan/adhan_list_item.tsx:109
 msgid "Yes"
 msgstr "Ya"
 
@@ -793,7 +811,7 @@ msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:55
+#: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
 msgstr "Menyembunyikan waktu sholat agar tidak ditampilkan di layar utama:"
 
@@ -867,7 +885,7 @@ msgstr "Putar Adzan"
 msgid "home"
 msgstr "Situs"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:63
+#: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
 msgid "is prayer time hidden?"
 msgstr "apakah waktu sholat tersembunyi?"
@@ -920,7 +938,7 @@ msgstr "Pengaturan"
 msgid "should notification widget be shown?"
 msgstr "Apakah ingin menampilkan widget notifikasi?"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:26
+#: src/screens/settings_display/hide_prayer_setting.tsx:16
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
 msgstr "Apakah {prayerName} disembunyikan?"

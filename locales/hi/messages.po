@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-22 07:31+0330\n"
+"POT-Creation-Date: 2023-01-26 21:56+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -84,7 +84,7 @@ msgstr "अरबी"
 msgid "Arabic/Persian"
 msgstr "अरबी/फारसी"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/screens/settings_adhan/adhan_list_item.tsx:100
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "क्या आप वाकई \"{0}\" हटाना चाहते हैं?"
 
@@ -92,7 +92,7 @@ msgstr "क्या आप वाकई \"{0}\" हटाना चाहते
 msgid "Asr Calculation"
 msgstr "असर की गणना"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:39
+#: src/screens/settings_display/hide_prayer_settings.tsx:22
 msgid "At least one prayer time must be shown"
 msgstr "कम से कम एक नमाज़ का समय दिखाया जाना चाहिए"
 
@@ -160,11 +160,12 @@ msgstr "कैलेंडर के प्रकार चुनें"
 msgid "Choose numbering system"
 msgstr "नंबरिंग सिस्टम चुनें"
 
-#: src/screens/settings_location/index.tsx:245
+#: src/screens/settings_location/index.tsx:248
+#: src/screens/settings_location/index.tsx:250
 msgid "City/Area"
 msgstr "शहर/क्षेत्र"
 
-#: src/screens/settings_location/index.tsx:143
+#: src/screens/settings_location/index.tsx:134
 msgid "Clipboard data does not contain coordinates"
 msgstr "क्लिपबोर्ड डेटा में निर्देशांक नहीं हैं"
 
@@ -180,11 +181,12 @@ msgstr "निकटतम तारीख "
 msgid "Confirm"
 msgstr "पुष्टि करें "
 
-#: src/screens/settings_location/index.tsx:169
+#: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "निर्देशांक अपडेट किए गए"
 
-#: src/screens/settings_location/index.tsx:215
+#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:227
 msgid "Country"
 msgstr "देश"
 
@@ -197,8 +199,8 @@ msgstr "अँधेरा"
 msgid "Default"
 msgstr "डिफॉल्ट "
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/screens/settings_adhan/adhan_list_item.tsx:197
 msgid "Delete"
 msgstr "मिटाना"
 
@@ -206,7 +208,7 @@ msgstr "मिटाना"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "आपके डिवाइस और एंड्रॉइड वर्जन के आधार पर, बैटरी बचाने के लिए कभी-कभी आपका डिवाइस बैकग्राउंड में ऐप को बंद कर सकता है। यह अलार्म/सूचनाओं को डिलीवर होने से रोक सकता है।"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:189
+#: src/screens/settings_adhan/adhan_list_item.tsx:192
 msgid "Deselect as Fajr Adhan"
 msgstr "फज्र अज़ान के लिए चयन हटा दीजिए "
 
@@ -245,23 +247,23 @@ msgstr "मिस्र का सामान्य सर्वेक्षण
 msgid "Enabled"
 msgstr "सक्रिय"
 
-#: src/screens/settings_location/index.tsx:149
+#: src/screens/settings_location/index.tsx:140
 msgid "Error getting clipboard data"
 msgstr "क्लिपबोर्ड डेटा प्राप्त करने में गलती"
 
-#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:238
 msgid "Error in loading countries"
 msgstr "देशों को लोड करने में गलती"
 
-#: src/screens/settings_location/index.tsx:266
+#: src/screens/settings_location/index.tsx:264
 msgid "Error in loading search results"
 msgstr "खोज परिणाम लोड करने में गलती"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:84
 msgid "Error while downloading audio"
 msgstr "ऑडियो डाउनलोड करते समय गलती"
 
-#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "निर्देशांक प्राप्त करने में गलती"
 
@@ -269,7 +271,7 @@ msgstr "निर्देशांक प्राप्त करने मे
 msgid "Ethiopic"
 msgstr "इथियोपिक"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:210
 msgid "Find My Location"
 msgstr "मेरा स्थान खोजें"
 
@@ -281,7 +283,7 @@ msgstr "जुम्मा"
 msgid "General (default)"
 msgstr "सामान्य (डिफ़ॉल्ट)"
 
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:214
 msgid "Getting coordinates"
 msgstr "निर्देशांक प्राप्त कर रहे"
 
@@ -301,12 +303,12 @@ msgstr "खाड़ी क्षेत्र"
 msgid "Hanafi"
 msgstr "हनफी"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:58
+#: src/screens/settings_display/hide_prayer_settings.tsx:41
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
 msgstr "छुपे हुए?"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:54
+#: src/screens/settings_display/hide_prayer_settings.tsx:37
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
 msgid "Hide Prayer Times"
 msgstr "नमाज़ के समय छुपाएं"
@@ -436,9 +438,17 @@ msgstr "अगला"
 msgid "Next Day"
 msgstr "अगले दिन"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/screens/settings_adhan/adhan_list_item.tsx:105
 msgid "No"
 msgstr "नहीं"
+
+#: src/components/AutocompleteInput.tsx:133
+msgid "No Data"
+msgstr "कोई आकड़ा उपलब्ध नहीं है"
+
+#: src/components/AutocompleteInput.tsx:137
+msgid "No Results"
+msgstr "कोई परिणाम नहीं"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
@@ -558,11 +568,15 @@ msgstr "सैमसंग उपकरणों का अपना खुद �
 msgid "Saturday"
 msgstr "शनिवार"
 
+#: src/components/AutocompleteInput.tsx:107
+msgid "Search"
+msgstr "खोज"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
 msgid "Secondary Calendar"
 msgstr "माध्यमिक कैलेंडर"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:190
+#: src/screens/settings_adhan/adhan_list_item.tsx:193
 msgid "Select as Fajr Adhan"
 msgstr "फज्र अज़ान के लिए चुनें"
 
@@ -593,7 +607,7 @@ msgstr "शिया इथना अशरी, लेवा संस्था�
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "शिया, भूभौतिकी संस्थान, तेहरान विश्वविद्यालय"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:180
+#: src/screens/settings_adhan/adhan_list_item.tsx:183
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
@@ -688,7 +702,7 @@ msgstr "थीम रंग"
 msgid "Thursday"
 msgstr "गुरुवार"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:57
+#: src/screens/settings_display/hide_prayer_settings.tsx:40
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:103
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
@@ -698,7 +712,7 @@ msgstr "समय"
 msgid "Time format"
 msgstr "समय प्रारूप"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:200
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "अज़ान की गणना करने के लिए, हमें आप की लोकेशन की आवश्यकता है। आप \"मेरा स्थान खोजें\" बटन का उपयोग कर सकते हैं, या देश और शहर/क्षेत्र सर्च का उपयोग कर सकते हैं, या अपने निर्देशांक मैन्युअली दर्ज कर सकते हैं।"
 
@@ -734,6 +748,10 @@ msgstr "संघ संगठन इस्लामिक डी फ्रा�
 msgid "University of Islamic Sciences, Karachi"
 msgstr "इस्लामी विज्ञान विश्वविद्यालय, कराची"
 
+#: src/components/AutocompleteInput.tsx:128
+msgid "Unknown Error"
+msgstr "अज्ञात त्रुटि"
+
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "अनसुलझा (डिफ़ॉल्ट)"
@@ -755,11 +773,11 @@ msgstr "24 घंटे के प्रारूप का प्रयोग �
 msgid "Using Coordinates"
 msgstr "निर्देशांक का उपयोग कर रहे हैं"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:202
 msgid "Using GPS"
 msgstr "जीपीएस का उपयोग कर रहे हैं"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:221
 msgid "Using Search"
 msgstr "खोज का उपयोग कर रहे हैं"
 
@@ -779,7 +797,7 @@ msgstr "बुधवार"
 msgid "Welcome"
 msgstr "स्वागत"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:108
+#: src/screens/settings_adhan/adhan_list_item.tsx:109
 msgid "Yes"
 msgstr "हां"
 
@@ -791,7 +809,7 @@ msgstr "आप नीचे दिए गए बटन का उपयोग �
 msgid "You can also paste coords from clipboard"
 msgstr "आप क्लिपबोर्ड से भी कोऑरड पेस्ट कर सकते हैं"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:55
+#: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
 msgstr " में जिन नमाज़ के समयों आप मुख्य स्क्रीन पर नहीं देखना चाहते हैं, उनको आप यहां छिपा सकते हैं:"
 
@@ -865,7 +883,7 @@ msgstr "अज़ान प्ले हो रही है"
 msgid "home"
 msgstr "घर"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:63
+#: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
 msgid "is prayer time hidden?"
 msgstr "क्या नमाज़ का वक्त छिपा हुआ है?"
@@ -918,7 +936,7 @@ msgstr "समायोजन"
 msgid "should notification widget be shown?"
 msgstr "अधिसूचना विजेट दिखाया जाना चाहिए?"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:26
+#: src/screens/settings_display/hide_prayer_setting.tsx:16
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
 msgstr "क्या {prayerName} छुपाया जाना चाहिए?"

@@ -90,7 +90,7 @@ msgstr "Arabic"
 msgid "Arabic/Persian"
 msgstr "Arabic/Persian"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/screens/settings_adhan/adhan_list_item.tsx:100
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
 
@@ -98,7 +98,7 @@ msgstr "Are you sure you want to delete \"{0}\" ?"
 msgid "Asr Calculation"
 msgstr "Asr Calculation"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:39
+#: src/screens/settings_display/hide_prayer_settings.tsx:22
 msgid "At least one prayer time must be shown"
 msgstr "At least one prayer time must be shown"
 
@@ -166,11 +166,12 @@ msgstr "Choose calendar type"
 msgid "Choose numbering system"
 msgstr "Choose numbering system"
 
-#: src/screens/settings_location/index.tsx:245
+#: src/screens/settings_location/index.tsx:248
+#: src/screens/settings_location/index.tsx:250
 msgid "City/Area"
 msgstr "City/Area"
 
-#: src/screens/settings_location/index.tsx:143
+#: src/screens/settings_location/index.tsx:134
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
 
@@ -186,11 +187,12 @@ msgstr "Closest Date"
 msgid "Confirm"
 msgstr "Confirm"
 
-#: src/screens/settings_location/index.tsx:169
+#: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "Coordinates updated"
 
-#: src/screens/settings_location/index.tsx:215
+#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:227
 msgid "Country"
 msgstr "Country"
 
@@ -203,8 +205,8 @@ msgstr "Dark"
 msgid "Default"
 msgstr "Default"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/screens/settings_adhan/adhan_list_item.tsx:197
 msgid "Delete"
 msgstr "Delete"
 
@@ -212,7 +214,7 @@ msgstr "Delete"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:189
+#: src/screens/settings_adhan/adhan_list_item.tsx:192
 msgid "Deselect as Fajr Adhan"
 msgstr "Deselect as Fajr Adhan"
 
@@ -251,23 +253,23 @@ msgstr "Egyptian General Survey Authority"
 msgid "Enabled"
 msgstr "Enabled"
 
-#: src/screens/settings_location/index.tsx:149
+#: src/screens/settings_location/index.tsx:140
 msgid "Error getting clipboard data"
 msgstr "Error getting clipboard data"
 
-#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:238
 msgid "Error in loading countries"
 msgstr "Error in loading countries"
 
-#: src/screens/settings_location/index.tsx:266
+#: src/screens/settings_location/index.tsx:264
 msgid "Error in loading search results"
 msgstr "Error in loading search results"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:84
 msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
-#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
 
@@ -275,7 +277,7 @@ msgstr "Error while getting coordinates"
 msgid "Ethiopic"
 msgstr "Ethiopic"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:210
 msgid "Find My Location"
 msgstr "Find My Location"
 
@@ -287,7 +289,7 @@ msgstr "Friday"
 msgid "General (default)"
 msgstr "General (default)"
 
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:214
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
 
@@ -307,12 +309,12 @@ msgstr "Gulf region"
 msgid "Hanafi"
 msgstr "Hanafi"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:58
+#: src/screens/settings_display/hide_prayer_settings.tsx:41
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
 msgstr "Hidden?"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:54
+#: src/screens/settings_display/hide_prayer_settings.tsx:37
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
 msgid "Hide Prayer Times"
 msgstr "Hide Prayer Times"
@@ -442,9 +444,17 @@ msgstr "Next"
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/screens/settings_adhan/adhan_list_item.tsx:105
 msgid "No"
 msgstr "No"
+
+#: src/components/AutocompleteInput.tsx:133
+msgid "No Data"
+msgstr "No Data"
+
+#: src/components/AutocompleteInput.tsx:137
+msgid "No Results"
+msgstr "No Results"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
@@ -568,11 +578,15 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
+#: src/components/AutocompleteInput.tsx:107
+msgid "Search"
+msgstr "Search"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:190
+#: src/screens/settings_adhan/adhan_list_item.tsx:193
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
 
@@ -606,7 +620,7 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:180
+#: src/screens/settings_adhan/adhan_list_item.tsx:183
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
@@ -706,7 +720,7 @@ msgstr "Theme Color"
 msgid "Thursday"
 msgstr "Thursday"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:57
+#: src/screens/settings_display/hide_prayer_settings.tsx:40
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:103
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
@@ -716,7 +730,7 @@ msgstr "Time"
 msgid "Time format"
 msgstr "Time format"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:200
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
@@ -752,6 +766,10 @@ msgstr "Union Organization Islamic de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "University of Islamic Sciences, Karachi"
 
+#: src/components/AutocompleteInput.tsx:128
+msgid "Unknown Error"
+msgstr "Unknown Error"
+
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
@@ -773,11 +791,11 @@ msgstr "Use 24-Hour format"
 msgid "Using Coordinates"
 msgstr "Using Coordinates"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:202
 msgid "Using GPS"
 msgstr "Using GPS"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:221
 msgid "Using Search"
 msgstr "Using Search"
 
@@ -797,7 +815,7 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:108
+#: src/screens/settings_adhan/adhan_list_item.tsx:109
 msgid "Yes"
 msgstr "Yes"
 
@@ -809,7 +827,7 @@ msgstr "You can access your device Power Manager using the button below."
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:55
+#: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
 msgstr "You can hide prayer times you don't want to see in the main screen here:"
 
@@ -886,7 +904,7 @@ msgstr "Playing Adhan"
 msgid "home"
 msgstr "Home"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:63
+#: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
 msgid "is prayer time hidden?"
 msgstr "is prayer time hidden?"
@@ -939,7 +957,7 @@ msgstr "Settings"
 msgid "should notification widget be shown?"
 msgstr "should notification widget be shown?"
 
-#: src/screens/settings_display/hide_prayer_settings.tsx:26
+#: src/screens/settings_display/hide_prayer_setting.tsx:16
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
 msgstr "should {prayerName} be hidden?"
