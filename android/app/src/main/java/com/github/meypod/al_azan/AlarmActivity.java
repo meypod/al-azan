@@ -1,6 +1,8 @@
 package com.github.meypod.al_azan;
 
 import android.os.Bundle;
+import android.view.WindowManager;
+
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
@@ -16,6 +18,7 @@ public class AlarmActivity extends ReactActivity {
         super.onCreate(null);
         I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance();
         sharedI18nUtilInstance.allowRTL(getApplicationContext(), true);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     /**
