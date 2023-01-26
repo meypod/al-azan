@@ -1,18 +1,21 @@
+import {t} from '@lingui/macro';
 import {debounce} from 'lodash';
 import {
   FlatList,
   Input,
   View,
   IInputProps,
-  ScrollView,
   Text,
+  useDisclose,
+  Actionsheet,
+  KeyboardAvoidingView,
+  SearchIcon,
+  HStack,
+  Spinner,
+  Box,
+  WarningOutlineIcon,
 } from 'native-base';
-import {useCallback, useEffect, useRef, useState} from 'react';
-import {
-  NativeSyntheticEvent,
-  TextInputFocusEventData,
-  TouchableWithoutFeedback,
-} from 'react-native';
+import {useCallback, useMemo, useRef, useState} from 'react';
 import useFuse from '@/utils/hooks/use_fuse';
 
 export const AutocompleteInput = <T extends unknown>(
@@ -26,18 +29,16 @@ export const AutocompleteInput = <T extends unknown>(
     getOptionLabel = defaultGetOptionLabel(label || 'label'),
     onItemSelected = () => {},
     onChangeText: onChangeTextProp,
-    clearOnSelect = true,
-    onBlur: onBlurProp,
-    onFocus: onFocusProp,
-    isInsideScrollView = false,
+    actionsheetLabel,
+    loading,
+    selectedItem,
+    showError,
+    errorMessage,
     ...inputProps
   } = props;
 
-  const FlatListWrapper = isInsideScrollView ? ScrollView : View;
-
-  const [showResults, setShowResults] = useState<boolean>(!!data?.length);
+  const {isOpen, onOpen, onClose} = useDisclose();
   const [inputVal, setInputVal] = useState<string>('');
-  const [hideResults, setHideResults] = useState<boolean>(false);
 
   const flatlistRef = useRef();
 
@@ -59,7 +60,6 @@ export const AutocompleteInput = <T extends unknown>(
     (text: string) => {
       setInputVal(text);
       updateSearchTerm(text);
-      setHideResults(false);
       onChangeTextProp && onChangeTextProp(text);
     },
     [onChangeTextProp, updateSearchTerm],
@@ -68,79 +68,96 @@ export const AutocompleteInput = <T extends unknown>(
   const onListItemPressed = useCallback(
     (item: T) => {
       onItemSelected && onItemSelected(item);
-      setHideResults(true);
-      setShowResults(false);
-      if (clearOnSelect) {
-        setInputVal('');
-      }
+      setInputVal('');
+      onClose();
     },
-    [onItemSelected, clearOnSelect],
+    [onItemSelected, onClose],
   );
 
-  const onBlur = useCallback(
-    (e?: NativeSyntheticEvent<TextInputFocusEventData>) => {
-      setShowResults(false);
-      setHideResults(true);
-      e && onBlurProp && onBlurProp(e);
-    },
-    [onBlurProp],
+  const textValue = useMemo(
+    () => selectedItem && getOptionLabel(selectedItem),
+    [getOptionLabel, selectedItem],
   );
-
-  const onFocus = useCallback(
-    (e?: NativeSyntheticEvent<TextInputFocusEventData>) => {
-      setHideResults(false);
-      e && onFocusProp && onFocusProp(e);
-    },
-    [onFocusProp],
-  );
-
-  useEffect(() => {
-    setShowResults(!!results?.length && !!inputVal);
-  }, [results, inputVal]);
 
   return (
     <View flex={1}>
-      <View position="relative">
-        <Input
-          width="100%"
-          onBlur={onBlur}
-          onFocus={onFocus}
-          onChangeText={onChangeText}
-          value={inputVal}
-          {...inputProps}
-        />
-        {!hideResults && showResults && (
-          <FlatListWrapper
-            keyboardShouldPersistTaps="handled"
-            _dark={{
-              bgColor: 'light.900',
-            }}
-            _light={{
-              bgColor: 'light.200',
-            }}
-            horizontal={true}
-            contentContainerStyle={{flexGrow: 1}}
-            position="absolute"
-            zIndex={1}
-            width="100%"
-            maxHeight="100"
-            top="100%"
-            borderBottomRadius={5}>
+      <Input
+        width="100%"
+        onTouchEnd={onOpen}
+        value={textValue}
+        variant={selectedItem ? 'underlined' : undefined}
+        {...inputProps}
+      />
+      <Actionsheet isOpen={isOpen} onClose={onClose}>
+        <Actionsheet.Content>
+          <KeyboardAvoidingView>
+            {actionsheetLabel && (
+              <Text textAlign="center" mb="2">
+                {actionsheetLabel}
+              </Text>
+            )}
+            <HStack width="100%">
+              <Input
+                // eslint-disable-next-line jsx-a11y/no-autofocus
+                autoFocus={true}
+                flex={1}
+                InputLeftElement={<SearchIcon ml="2" />}
+                onChangeText={onChangeText}
+                value={inputVal}
+                placeholder={t`Search`}
+              />
+              {loading ? <Spinner mx="1"></Spinner> : null}
+            </HStack>
+            {(!data?.length || !results.length || showError) && (
+              <Box
+                mt="2"
+                pt="16"
+                mb="6"
+                _light={{
+                  backgroundColor: 'gray.200',
+                }}
+                _dark={{
+                  backgroundColor: 'gray.700',
+                }}
+                flexGrow="1"
+                alignItems="center">
+                {showError ? (
+                  <>
+                    <WarningOutlineIcon color="danger.400" size="3xl" mb="2" />
+                    <Text color="danger.400" fontSize="xl">
+                      {errorMessage ? errorMessage : t`Unknown Error`}
+                    </Text>
+                  </>
+                ) : !data?.length ? (
+                  <Text color="gray.500" fontSize="xl">
+                    {t`No Data`}
+                  </Text>
+                ) : (
+                  <Text color="gray.400" fontSize="xl">
+                    {t`No Results`}
+                  </Text>
+                )}
+              </Box>
+            )}
+
             <FlatList
+              flexShrink={1}
+              flexGrow={0}
               nestedScrollEnabled={true}
               keyboardShouldPersistTaps={'handled'}
               ref={flatlistRef}
               data={results}
               renderItem={listItemInfo => (
-                <TouchableWithoutFeedback
+                <Actionsheet.Item
                   onPress={() => onListItemPressed(listItemInfo.item)}>
-                  <Text p="1">{getOptionLabel(listItemInfo.item)}</Text>
-                </TouchableWithoutFeedback>
+                  {getOptionLabel(listItemInfo.item)}
+                </Actionsheet.Item>
               )}
-              keyExtractor={getOptionKey}></FlatList>
-          </FlatListWrapper>
-        )}
-      </View>
+              keyExtractor={getOptionKey}
+            />
+          </KeyboardAvoidingView>
+        </Actionsheet.Content>
+      </Actionsheet>
     </View>
   );
 };
@@ -177,15 +194,16 @@ const defaultGetOptionLabel = (label: string) => (option: any) => {
 type AutocompleteInputProps<T> = IInputProps & {
   data?: Array<T>;
   label?: string;
+  showError?: boolean;
+  errorMessage?: string;
+  actionsheetLabel?: string;
+  loading?: boolean;
+  selectedItem?: T;
   autoCompleteKeys?: string[];
   getOptionKey?: (item: T) => string;
   getOptionLabel?: (item: T) => string;
   onItemSelected?: (item: T) => void;
   onChangeText?: (text: string) => void;
-  onBlur?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
-  onFocus?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
-  clearOnSelect?: boolean;
-  isInsideScrollView?: boolean;
 };
 
 export default AutocompleteInput;

@@ -75,25 +75,14 @@ export function LocationSettings(props: IScrollViewProps) {
     }),
   );
 
-  const onCountrySelected = useCallback(
-    (country: CountryInfo) => {
-      setSelectedCountry(country);
-    },
-    [setSelectedCountry],
-  );
+  const clearCountryAndCity = useCallback(() => {
+    setSelectedCountry(undefined);
+    setSelectedCity(undefined);
+  }, [setSelectedCity, setSelectedCountry]);
 
   const onChangeText = useCallback(() => {
     if (!countries) getCountriesAction();
   }, [countries, getCountriesAction]);
-
-  const onCitySelected = useCallback(
-    (result: SearchResult) => {
-      setSelectedCity(result);
-      setLong(parseFloat(result.lng));
-      setLat(parseFloat(result.lat));
-    },
-    [setSelectedCity, setLong, setLat],
-  );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const onCitiesChangeText = useCallback(
@@ -103,35 +92,37 @@ export function LocationSettings(props: IScrollViewProps) {
     [searchCitiesAction],
   );
 
-  const onLatChangeText = (str: string) => {
-    const parsedValue = parseFloat(str);
-    if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
-      setLat(parsedValue);
-      setTempLat(parsedValue.toString());
-    } else {
-      setLat(undefined);
-      setTempLat('-');
-    }
-    clearCountryAndCity();
-  };
-  const onLongChangeText = (str: string) => {
-    let parsedValue = parseFloat(str);
-    if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
-      setLong(parsedValue);
-      setTempLong(parsedValue.toString());
-    } else {
-      setLong(undefined);
-      setTempLong('-');
-    }
-    clearCountryAndCity();
-  };
+  const onLatChangeText = useCallback(
+    (str: string) => {
+      const parsedValue = parseFloat(str);
+      if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
+        setLat(parsedValue);
+        setTempLat(parsedValue.toString());
+      } else {
+        setLat(undefined);
+        setTempLat('-');
+      }
+      clearCountryAndCity();
+    },
+    [clearCountryAndCity, setLat],
+  );
 
-  const clearCountryAndCity = () => {
-    setSelectedCountry(undefined);
-    setSelectedCity(undefined);
-  };
+  const onLongChangeText = useCallback(
+    (str: string) => {
+      let parsedValue = parseFloat(str);
+      if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
+        setLong(parsedValue);
+        setTempLong(parsedValue.toString());
+      } else {
+        setLong(undefined);
+        setTempLong('-');
+      }
+      clearCountryAndCity();
+    },
+    [clearCountryAndCity, setLong],
+  );
 
-  const onPasteButtonPressed = () => {
+  const onPasteButtonPressed = useCallback(() => {
     Clipboard.getString()
       .then(str => {
         const match = str.match(clipboardCoordsRegex);
@@ -148,15 +139,9 @@ export function LocationSettings(props: IScrollViewProps) {
       .catch(() => {
         ToastAndroid.show(t`Error getting clipboard data`, ToastAndroid.SHORT);
       });
-  };
+  }, [onLatChangeText, onLongChangeText]);
 
-  const clearCoordinates = () => {
-    setLat(undefined);
-    setLong(undefined);
-    clearCountryAndCity();
-  };
-
-  const getCoordinatesFromLocationProvider = () => {
+  const getCoordinatesFromLocationProvider = useCallback(() => {
     setGettingLocation(true);
     LocationProvider.getCurrentPosition({
       enableHighAccuracy: true,
@@ -175,7 +160,35 @@ export function LocationSettings(props: IScrollViewProps) {
         );
       })
       .finally(() => setGettingLocation(false));
-  };
+  }, [clearCountryAndCity, setLat, setLong]);
+
+  const clearCoordinates = useCallback(() => {
+    setLat(undefined);
+    setLong(undefined);
+  }, [setLat, setLong]);
+
+  const clearCoordinatesAndCities = useCallback(() => {
+    clearCoordinates();
+    clearCountryAndCity();
+  }, [clearCountryAndCity, clearCoordinates]);
+
+  const onCountrySelected = useCallback(
+    (country: CountryInfo) => {
+      setSelectedCountry(country);
+      setSelectedCity(undefined);
+      clearCoordinates();
+    },
+    [clearCoordinates, setSelectedCity, setSelectedCountry],
+  );
+
+  const onCitySelected = useCallback(
+    (result: SearchResult) => {
+      setSelectedCity(result);
+      setLong(parseFloat(result.lng));
+      setLat(parseFloat(result.lat));
+    },
+    [setSelectedCity, setLong, setLat],
+  );
 
   return (
     <ScrollView
@@ -207,60 +220,45 @@ export function LocationSettings(props: IScrollViewProps) {
 
       <Divider label={t`Using Search`} mt="4" />
 
-      <HStack display="flex" flexGrow={0}>
-        <FormControl
-          display="flex"
-          width={selectedCountry ? undefined : '100%'}
-          isInvalid={!!getCountryError}>
+      <HStack>
+        <FormControl width={selectedCountry ? '35%' : '100%'}>
           <FormControl.Label>{t`Country`}</FormControl.Label>
-          <HStack alignItems="center" justifyContent="space-between" mb="2">
-            {selectedCountry ? (
-              <Text borderBottomWidth="1" borderColor="coolGray.500">
-                {selectedCountry.countryCode}
-              </Text>
-            ) : undefined}
-            {!selectedCountry && (
-              <AutocompleteInput<CountryInfo>
-                data={countries}
-                isInsideScrollView={true}
-                onItemSelected={onCountrySelected}
-                getOptionLabel={item => item.countryName}
-                getOptionKey={item => item.countryCode}
-                autoCompleteKeys={['countryCode', 'countryName']}
-                onChangeText={onChangeText}></AutocompleteInput>
-            )}
-            {isLoadingCountries && <Spinner />}
-          </HStack>
-          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-            {t`Error in loading countries`}
-          </FormControl.ErrorMessage>
+          <AutocompleteInput<CountryInfo>
+            actionsheetLabel={t`Country`}
+            data={countries}
+            onItemSelected={onCountrySelected}
+            getOptionLabel={item => item.countryName}
+            getOptionKey={item => item.countryCode}
+            autoCompleteKeys={['countryCode', 'countryName']}
+            onChangeText={onChangeText}
+            loading={isLoadingCountries}
+            selectedItem={selectedCountry}
+            size="sm"
+            px="1"
+            errorMessage={t`Error in loading countries`}
+            showError={!!getCountryError}
+          />
         </FormControl>
 
         {selectedCountry && (
           <FormControl
-            ml="3%"
-            width={selectedCity ? undefined : '66%'}
-            flexGrow={1}
+            ml="2"
+            width={selectedCity ? '40%' : '60%'}
             isInvalid={!!searchCitiesError}>
             <FormControl.Label>{t`City/Area`}</FormControl.Label>
-            <HStack alignItems="center" justifyContent="space-between" mb="2">
-              {selectedCity ? (
-                <Text borderBottomWidth="1" borderColor="coolGray.500">
-                  {selectedCity.name}
-                </Text>
-              ) : undefined}
-              {!selectedCity && (
-                <AutocompleteInput<SearchResult>
-                  data={citiesSearchResult}
-                  isInsideScrollView={true}
-                  onItemSelected={onCitySelected}
-                  getOptionKey={item => item.geonameId.toString()}
-                  getOptionLabel={item => item.name}
-                  autoCompleteKeys={['name']}
-                  onChangeText={onCitiesChangeText}></AutocompleteInput>
-              )}
-              {isLoadingCities && <Spinner pl="1" />}
-            </HStack>
+            <AutocompleteInput<SearchResult>
+              actionsheetLabel={t`City/Area`}
+              data={citiesSearchResult}
+              onItemSelected={onCitySelected}
+              getOptionKey={item => item.geonameId.toString()}
+              getOptionLabel={item => item.name}
+              autoCompleteKeys={['name']}
+              onChangeText={onCitiesChangeText}
+              loading={isLoadingCities}
+              selectedItem={selectedCity}
+              size="sm"
+              px="1"
+            />
             <FormControl.ErrorMessage
               leftIcon={<WarningOutlineIcon size="xs" />}>
               {t`Error in loading search results`}
@@ -269,12 +267,14 @@ export function LocationSettings(props: IScrollViewProps) {
         )}
 
         {(selectedCountry || selectedCity) && (
-          <FormControl flex={1} flexShrink={0}>
+          <FormControl ml="3" justifyContent="center">
             <FormControl.Label> </FormControl.Label>
             <Button
-              mb="2"
-              flex={1}
-              variant="ghost"
+              borderColor="danger.900"
+              variant="outline"
+              colorScheme="danger"
+              width="10"
+              height="10"
               onPress={clearCountryAndCity}>
               <CloseIcon />
             </Button>
@@ -326,7 +326,7 @@ export function LocationSettings(props: IScrollViewProps) {
               variant="outline"
               colorScheme="danger"
               size="sm"
-              onPress={clearCoordinates}>
+              onPress={clearCoordinatesAndCities}>
               <CloseIcon />
             </Button>
           </FormControl>
