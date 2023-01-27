@@ -13,7 +13,6 @@ import {updateWidgets} from '@/tasks/update_widgets';
 
 if (__DEV__) {
   LogBox.ignoreLogs([
-    'new NativeEventEmitter',
     'UNSAFE_componentWillReceiveProps',
     'UNSAFE_componentWillMount',
   ]);
