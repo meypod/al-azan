@@ -32,6 +32,8 @@ module.exports = {
         },
       },
     ],
+    'import/no-namespace': 'error',
+    'import/namespace': 'off',
     'object-curly-spacing': ['error', 'never'],
     'no-multiple-empty-lines': ['error', {max: 2, maxEOF: 0}],
     'no-unused-vars': 'off',
