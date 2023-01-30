@@ -69,11 +69,12 @@ function useData() {
         adhanEntries: state.adhanEntries
           .filter(e => !!e.filepath)
           .map(e => {
-            if (e.internal) {
-              e.label = i18n._(adhanEntryTranslations[e.id]);
+            const copy = {...e};
+            if (copy.internal) {
+              copy.label = i18n._(adhanEntryTranslations[e.id]);
             }
-            (e as any).a = true;
-            return e;
+            (copy as any).a = true;
+            return copy;
           }) as AudioEntry[],
         deviceEntries: d.deviceEntries,
       })),
