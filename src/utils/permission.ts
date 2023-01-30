@@ -5,13 +5,12 @@ import notifee, {
 } from '@notifee/react-native';
 import {Alert, PermissionsAndroid, Platform} from 'react-native';
 import {openApplicationSettings} from '@/modules/activity';
-import {isAnyNotificationEnabled} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 
 /** returns `true` if we can schedule notifications and expect them to trigger */
 async function askNotificationPermission() {
-  if (Platform.Version >= 33 && isAnyNotificationEnabled()) {
+  if (Platform.Version >= 33) {
     const notifySettings = await notifee.getNotificationSettings();
     // notification permissions do not exist before android 13 (api 33)
     if (
