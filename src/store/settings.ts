@@ -242,7 +242,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 5,
+      version: 6,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -293,15 +293,12 @@ export const settings = createStore<SettingsStore>()(
             delete (persistedState as any).SCHEDULED_ALARM_TIMESTAMP;
             (persistedState as any).SELECTED_SECONDARY_CALENDAR = 'gregory';
           case 4:
-            for (const key in (persistedState as SettingsStore)
+          case 5:
+            for (const entry of (persistedState as SettingsStore)
               .SAVED_ADHAN_AUDIO_ENTRIES) {
-              if (
-                (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[key]
-                  .id in adhanEntryTranslations
-              ) {
-                (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[
-                  key
-                ].label = '';
+              if (entry.id in adhanEntryTranslations) {
+                entry.label = '';
+                entry.internal = true;
               }
             }
             break;

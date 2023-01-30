@@ -97,7 +97,7 @@ export function AdhanListItem({
     Alert.alert(
       t`Delete`,
       t`Are you sure you want to delete "${
-        item.label || i18n._(adhanEntryTranslations[item.id])
+        item.internal ? i18n._(adhanEntryTranslations[item.id]) : item.label
       }" ?`,
       [
         {
@@ -155,9 +155,9 @@ export function AdhanListItem({
                 />
               )}
               <Text flex={1} flexGrow={1} noOfLines={1}>
-                {item.label
-                  ? item.label
-                  : i18n._(adhanEntryTranslations[item.id])}
+                {item.internal
+                  ? i18n._(adhanEntryTranslations[item.id])
+                  : item.label}
               </Text>
             </HStack>
 

@@ -62,7 +62,9 @@ function useData() {
         adhanEntries: state.adhanEntries
           .filter(e => !!e.filepath)
           .map(e => {
-            e.label = e.label || i18n._(adhanEntryTranslations[e.id]);
+            if (e.internal) {
+              e.label = i18n._(adhanEntryTranslations[e.id]);
+            }
             (e as any).a = true;
             return e;
           }) as AudioEntry[],
@@ -132,7 +134,9 @@ function showDeleteDialog(item: AudioEntry) {
     Alert.alert(
       t`Delete`,
       t`Are you sure you want to delete "${
-        item.label || i18n._(adhanEntryTranslations[item.id])
+        (item as any).internal
+          ? i18n._(adhanEntryTranslations[item.id])
+          : item.label
       }" ?`,
       [
         {

@@ -9,6 +9,7 @@ export type AdhanEntry = {
   label: string;
   remoteUri?: string;
   canDelete?: boolean;
+  internal?: boolean;
 };
 
 export const defautlAdhanAssetId = require('@/assets/sounds/masjid_an_nabawi.mp3');
@@ -37,20 +38,24 @@ export const INITIAL_ADHAN_AUDIO_ENTRIES: AdhanEntry[] = [
     id: 'masjid_an_nabawi',
     filepath: defautlAdhanAssetId,
     label: '',
+    internal: true,
   },
   {
     id: 'abdul_basit_abdus_samad',
     remoteUri: RemoteBaseURI + 'abdul_basit_abdus_samad.mp3',
     label: '',
+    internal: true,
   },
   {
     id: 'ragheb_mustafa_ghalwash',
     remoteUri: RemoteBaseURI + 'ragheb_mustafa_ghalwash.mp3',
     label: '',
+    internal: true,
   },
   {
     id: 'moazen_zade',
     remoteUri: RemoteBaseURI + 'moazen_zade.mp3',
     label: '',
+    internal: true,
   },
 ];
