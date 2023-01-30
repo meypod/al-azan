@@ -34,12 +34,14 @@ export type AudioEntry = {
   notif?: boolean;
 };
 
-export function isIntrusive(entry: AudioEntry | undefined) {
-  return !!entry && entry.id !== 'silent' && !entry.notif;
+export function isSilent(entry: AudioEntry | undefined) {
+  if (!entry) return true;
+  if (entry.id === 'silent') return true;
+  return false;
 }
 
-export function isSilent(entry: AudioEntry | undefined) {
-  return !entry || entry.id === 'silent';
+export function isIntrusive(entry: AudioEntry | undefined) {
+  return !isSilent(entry) && !entry?.notif;
 }
 
 interface MediaPlayerModuleInterface {
