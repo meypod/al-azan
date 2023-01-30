@@ -70,6 +70,9 @@ export async function cancelAlarmNotif({
           actions: undefined,
           asForegroundService: false,
           fullScreenAction: undefined,
+          pressAction: {
+            id: 'default',
+          },
           importance: AndroidImportance.DEFAULT,
         },
       })
