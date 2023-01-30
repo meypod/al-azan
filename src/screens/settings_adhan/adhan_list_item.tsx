@@ -73,6 +73,8 @@ export function AdhanListItem({
         .then(resp => {
           return settings.getState().saveAdhanEntry({
             ...item,
+            label: '',
+            internal: true,
             filepath: resp.path(),
           });
         })
