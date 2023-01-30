@@ -52,7 +52,14 @@ function useData() {
   const [data, setData] = useState({
     userEntries: [] as AudioEntry[],
     adhanEntries: [] as AudioEntry[],
-    deviceEntries: [] as AudioEntry[],
+    deviceEntries: [
+      {
+        id: 'default',
+        label: t`Default` + ` (${t`Notification`})`,
+        filepath: null as unknown,
+        notif: true,
+      },
+    ] as AudioEntry[],
   });
 
   useEffect(

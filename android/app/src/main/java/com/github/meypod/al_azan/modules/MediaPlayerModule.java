@@ -139,12 +139,9 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
       } else {
         uri = Uri.parse(RAW_RESOURCE_PREFIX + resourceId);
       }
-      if (uri != null) {
-        boolean isLoopUri = bundle.getBoolean("loop", false);
-        mediaPlayerService.setDataSource(uri, isLoopUri, promise);
-      } else {
-        promise.reject("ERROR", "Could not resolve uri");
-      }
+      boolean isLoopUri = bundle.getBoolean("loop", false);
+      // uri can be null
+      mediaPlayerService.setDataSource(uri, isLoopUri, promise);
     } else {
       promise.reject("ERROR", "MediaPlayer is not set up yet.");
     }
@@ -192,16 +189,17 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
         WritableArray ringtones = Arguments.createArray();
         try {
           {
-            Uri defaultRingtone = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            // NOTIFICATION DEFAULT Option
             WritableMap map = Arguments.createMap();
             map.putString("id", "default");
-            map.putString("label", defaultRingtone.getLastPathSegment());
-            map.putString("filepath", defaultRingtone.toString());
+            map.putString("label", "");
+            map.putString("filepath", null);
             map.putBoolean("notif", true);
             ringtones.pushMap(map);
           }
 
           {
+            // NOTIFICATIONS
             RingtoneManager manager = new RingtoneManager(getReactApplicationContext());
             manager.setType(RingtoneManager.TYPE_NOTIFICATION);
             Cursor cursor = manager.getCursor();
@@ -220,8 +218,28 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
           }
 
           {
+            // ALARMS
             RingtoneManager manager = new RingtoneManager(getReactApplicationContext());
             manager.setType(RingtoneManager.TYPE_ALARM);
+            Cursor cursor = manager.getCursor();
+            while (cursor.moveToNext()) {
+              Long id = cursor.getLong(RingtoneManager.ID_COLUMN_INDEX);
+              String title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
+
+              Uri ringtoneURI = manager.getRingtoneUri(cursor.getPosition());
+              WritableMap map = Arguments.createMap();
+              map.putString("id", Long.toString(id));
+              map.putString("label", title);
+              map.putString("filepath", ringtoneURI.toString());
+              map.putBoolean("loop", true);
+              ringtones.pushMap(map);
+            }
+          }
+
+          {
+            // RINGTONES
+            RingtoneManager manager = new RingtoneManager(getReactApplicationContext());
+            manager.setType(RingtoneManager.TYPE_RINGTONE);
             Cursor cursor = manager.getCursor();
             while (cursor.moveToNext()) {
               Long id = cursor.getLong(RingtoneManager.ID_COLUMN_INDEX);

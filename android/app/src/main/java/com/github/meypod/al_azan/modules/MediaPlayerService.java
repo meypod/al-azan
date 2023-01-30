@@ -13,6 +13,7 @@ import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
 import android.media.MediaPlayer;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.Build.VERSION;
@@ -28,6 +29,7 @@ import androidx.core.content.ContextCompat;
 import com.facebook.react.HeadlessJsTaskService;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
@@ -181,7 +183,8 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   }
 
 
-  public void setDataSource(Uri uri, boolean isLoopUri, Promise promise) {
+  /** plays default notification sound if uri is null */
+  public void setDataSource(@Nullable Uri uri, boolean isLoopUri, Promise promise) {
     if (setDataSourcePromise != null) {
       promise.reject("ERROR", "A setDataSource Call is already pending");
       return;
@@ -191,6 +194,10 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
       this.isLoopUri = isLoopUri;
       player.reset();
       player.setLooping(this.isLoopUri);
+      if (uri == null) {
+        // NOTIFICATION DEFAULT
+        uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+      }
       int id = getIdFromRawResourceUri(uri);
       if (id > 0) {
         try {
