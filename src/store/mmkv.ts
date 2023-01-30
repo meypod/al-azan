@@ -1,5 +1,5 @@
 import {MMKV} from 'react-native-mmkv';
-import {StateStorage} from 'zustand/middleware/persist';
+import {StateStorage} from 'zustand/middleware';
 
 export const storage = new MMKV();
 

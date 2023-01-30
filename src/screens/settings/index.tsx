@@ -103,7 +103,7 @@ function Settings() {
     const stateHash = sha256(JSON.stringify(calcSettingsState));
     if (calcSettingsHash !== stateHash) {
       setCalcSettingsHash(stateHash);
-      settings.setState({DISMISSED_ALARM_TIMESTAMPS: {}});
+      settings.setState({DELIVERED_ALARM_TIMESTAMPS: {}});
       clearCache();
     }
   }, [calcSettingsState, calcSettingsHash, setCalcSettingsHash]);
@@ -113,7 +113,7 @@ function Settings() {
     if (alarmSettingsHash !== stateHash) {
       askPermissions().then(() => {
         setAlarmSettingsHash(stateHash);
-        settings.setState({DISMISSED_ALARM_TIMESTAMPS: {}});
+        settings.setState({DELIVERED_ALARM_TIMESTAMPS: {}});
       });
     }
   }, [alarmSettingsState, alarmSettingsHash, setAlarmSettingsHash]);

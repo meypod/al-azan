@@ -15,7 +15,7 @@ import {
   Box,
   WarningOutlineIcon,
 } from 'native-base';
-import {useCallback, useMemo, useRef, useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import useFuse from '@/utils/hooks/use_fuse';
 
 export const AutocompleteInput = <T extends unknown>(
@@ -39,8 +39,6 @@ export const AutocompleteInput = <T extends unknown>(
 
   const {isOpen, onOpen, onClose} = useDisclose();
   const [inputVal, setInputVal] = useState<string>('');
-
-  const flatlistRef = useRef();
 
   const {results, setSearchTerm} = useFuse(data, {
     keys: autoCompleteKeys,
@@ -68,8 +66,8 @@ export const AutocompleteInput = <T extends unknown>(
   const onListItemPressed = useCallback(
     (item: T) => {
       onItemSelected && onItemSelected(item);
-      setInputVal('');
       onClose();
+      setInputVal('');
     },
     [onItemSelected, onClose],
   );
@@ -84,6 +82,11 @@ export const AutocompleteInput = <T extends unknown>(
       <Input
         width="100%"
         onTouchEnd={onOpen}
+        autoCorrect={false}
+        caretHidden={true}
+        _input={{
+          contextMenuHidden: true,
+        }}
         value={textValue}
         variant={selectedItem ? 'underlined' : undefined}
         {...inputProps}
@@ -96,7 +99,7 @@ export const AutocompleteInput = <T extends unknown>(
                 {actionsheetLabel}
               </Text>
             )}
-            <HStack width="100%">
+            <HStack width="100%" mb="2">
               <Input
                 // eslint-disable-next-line jsx-a11y/no-autofocus
                 autoFocus={true}
@@ -143,9 +146,6 @@ export const AutocompleteInput = <T extends unknown>(
             <FlatList
               flexShrink={1}
               flexGrow={0}
-              nestedScrollEnabled={true}
-              keyboardShouldPersistTaps={'handled'}
-              ref={flatlistRef}
               data={results}
               renderItem={listItemInfo => (
                 <Actionsheet.Item

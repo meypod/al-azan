@@ -67,7 +67,7 @@ export async function setReminders(options?: SetReminderOptions) {
     if (triggerDate.getTime() < Date.now()) continue;
 
     const dismissedAlarmTS =
-      settings.getState().DISMISSED_ALARM_TIMESTAMPS[reminder.id] || 0;
+      settings.getState().DELIVERED_ALARM_TIMESTAMPS[reminder.id] || 0;
 
     if (!force && dismissedAlarmTS >= triggerDate.getTime()) continue;
 
@@ -81,7 +81,7 @@ export async function setReminders(options?: SetReminderOptions) {
       notifChannelId: REMINDER_CHANNEL_ID,
       notifChannelName: REMINDER_CHANNEL_NAME,
       isReminder: true,
-      playSound: !!reminder.playSound,
+      sound: reminder.sound,
       once: reminder.once,
     };
 

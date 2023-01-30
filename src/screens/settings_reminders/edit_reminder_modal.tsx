@@ -11,10 +11,12 @@ import {
   Input,
   Switch,
 } from 'native-base';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Modal} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/close';
+import {AudioPicker} from '@/components/audio_picker';
+import type {AudioEntry} from '@/modules/media_player';
 import {Reminder} from '@/store/reminder';
 
 const minute = 60 * 1000;
@@ -35,6 +37,16 @@ export function EditReminderModal({
     useState<Partial<Reminder> | null>(null);
   const [editMode, setEditMode] = useState(false);
 
+  const onAudioSelected = useCallback(
+    (item: AudioEntry) => {
+      setDraftReminderState({
+        ...draftReminderState,
+        sound: item,
+      });
+    },
+    [draftReminderState],
+  );
+
   useEffect(() => {
     if (reminderState) {
       const eMode = !!Object.keys(reminderState).length;
@@ -52,10 +64,10 @@ export function EditReminderModal({
     }
   }, [reminderState]);
 
-  const onConfirmProxy = () => {
+  const onConfirmProxy = useCallback(() => {
     onConfirm(draftReminderState as Reminder);
     setDraftReminderState(null);
-  };
+  }, [draftReminderState, onConfirm]);
 
   return (
     <Modal
@@ -182,25 +194,20 @@ export function EditReminderModal({
               </VStack>
             </FormControl>
             <FormControl>
+              <FormControl.Label>{t`Sound`}:</FormControl.Label>
+              <AudioPicker
+                actionsheetLabel={t`Sound`}
+                onItemSelected={onAudioSelected}
+                getOptionLabel={item => item.label}
+                autoCompleteKeys={['label']}
+                selectedItem={draftReminderState?.sound}
+                size="sm"
+                height="10"
+              />
+            </FormControl>
+
+            <FormControl>
               <FormControl.Label>{t`Options`}:</FormControl.Label>
-              <HStack mb="2" alignItems="center" justifyContent="space-between">
-                <Text>
-                  {t({
-                    message: `Play adhan?`,
-                    comment: 'shown in add/edit reminder dialog',
-                  })}
-                </Text>
-                <Switch
-                  value={!!draftReminderState?.playSound}
-                  onToggle={(state: boolean) =>
-                    setDraftReminderState({
-                      ...draftReminderState,
-                      playSound: state,
-                    })
-                  }
-                  size="lg"
-                />
-              </HStack>
               <HStack alignItems="center" justifyContent="space-between">
                 <Text>
                   {t({

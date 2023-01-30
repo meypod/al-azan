@@ -25,6 +25,23 @@ export enum PlaybackState {
   'paused' = 'paused',
 }
 
+export type AudioEntry = {
+  id: string;
+  filepath: string | number;
+  label: string;
+  canDelete?: boolean;
+  loop?: boolean;
+  notif?: boolean;
+};
+
+export function isIntrusive(entry: AudioEntry | undefined) {
+  return entry && entry.id !== 'silent' && !entry.notif;
+}
+
+export function isSilent(entry: AudioEntry | undefined) {
+  return !entry || entry.id === 'silent';
+}
+
 interface MediaPlayerModuleInterface {
   start(): Promise<void>;
   stop(): Promise<void>;
@@ -34,6 +51,7 @@ interface MediaPlayerModuleInterface {
   setVolume(value: number): Promise<void>;
   setDataSource(options: {uri: string | number}): Promise<void>;
   getState(): Promise<PlaybackState>;
+  getRingtones(): Promise<AudioEntry[]>;
 }
 
 type EventListener = (
@@ -59,6 +77,8 @@ const getState = MediaPlayerModule.getState;
 const addEventListener = eventEmitter.addListener.bind(
   eventEmitter,
 ) as EventListener;
+
+export const getRingtones = MediaPlayerModule.getRingtones;
 
 export const usePlaybackState = () => {
   const [state, setState] = useState(PlaybackState.stopped);
@@ -106,4 +126,5 @@ export default {
   eventEmitter,
   usePlaybackState,
   PlaybackState,
+  getRingtones,
 };

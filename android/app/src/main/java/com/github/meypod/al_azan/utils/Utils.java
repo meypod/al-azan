@@ -48,6 +48,9 @@ public class Utils {
   };
 
   public static int getIdFromRawResourceUri(Uri uri) {
+    if (!uri.toString().startsWith(RAW_RESOURCE_PREFIX)) {
+      return 0;
+    }
     String id = uri.getLastPathSegment();
     try {
       return Integer.parseInt(id);

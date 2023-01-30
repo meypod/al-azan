@@ -7,6 +7,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.database.Cursor;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -20,6 +22,10 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeMap;
+import com.github.meypod.al_azan.utils.Async;
 import com.github.meypod.al_azan.utils.Utils;
 
 public class MediaPlayerModule extends ReactContextBaseJavaModule implements ServiceConnection {
@@ -174,6 +180,73 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
       mediaPlayerService.pause();
     }
     promise.resolve(null);
+  }
+
+  @ReactMethod
+  public void getRingtones(Promise promise) {
+    Async.execute(new Async.Task<Object>() {
+
+      @Override
+      public Object doAsync() {
+        WritableArray ringtones = Arguments.createArray();
+        try {
+          {
+            Uri defaultRingtone = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            WritableMap map = Arguments.createMap();
+            map.putString("id", "default");
+            map.putString("label", defaultRingtone.getLastPathSegment());
+            map.putString("filepath", defaultRingtone.toString());
+            map.putBoolean("notif", true);
+            ringtones.pushMap(map);
+          }
+
+          {
+            RingtoneManager manager = new RingtoneManager(getReactApplicationContext());
+            manager.setType(RingtoneManager.TYPE_NOTIFICATION);
+            Cursor cursor = manager.getCursor();
+            while (cursor.moveToNext()) {
+              Long id = cursor.getLong(RingtoneManager.ID_COLUMN_INDEX);
+              String title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
+
+              Uri ringtoneURI = manager.getRingtoneUri(cursor.getPosition());
+              WritableMap map = Arguments.createMap();
+              map.putString("id", Long.toString(id));
+              map.putString("label", title);
+              map.putString("filepath", ringtoneURI.toString());
+              map.putBoolean("notif", true);
+              ringtones.pushMap(map);
+            }
+          }
+
+          {
+            RingtoneManager manager = new RingtoneManager(getReactApplicationContext());
+            manager.setType(RingtoneManager.TYPE_ALARM);
+            Cursor cursor = manager.getCursor();
+            while (cursor.moveToNext()) {
+              Long id = cursor.getLong(RingtoneManager.ID_COLUMN_INDEX);
+              String title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
+
+              Uri ringtoneURI = manager.getRingtoneUri(cursor.getPosition());
+              WritableMap map = Arguments.createMap();
+              map.putString("id", Long.toString(id));
+              map.putString("label", title);
+              map.putString("filepath", ringtoneURI.toString());
+              map.putBoolean("loop", true);
+              ringtones.pushMap(map);
+            }
+          }
+
+        } catch (Exception ignored) {
+        }
+        return ringtones;
+      }
+
+      @Override
+      public void doSync(Object ringtones) {
+        promise.resolve(ringtones);
+      }
+
+    });
   }
 
   // Required for rn built in EventEmitter Calls.

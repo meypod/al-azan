@@ -11,11 +11,10 @@ import {
 } from 'native-base';
 import {useCallback, useState} from 'react';
 import {Alert, ToastAndroid} from 'react-native';
-import {
-  ReactNativeBlobUtil,
+// eslint-disable-next-line import/no-named-as-default
+import ReactNativeBlobUtil, {
   FetchBlobResponse,
   StatefulPromise,
-  // eslint-disable-next-line
 } from 'react-native-blob-util';
 import {AdhanEntry, adhanEntryTranslations} from '@/assets/adhan_entries';
 import {CheckIcon} from '@/assets/icons/check';

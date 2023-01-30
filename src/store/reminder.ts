@@ -6,6 +6,7 @@ import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
+import type {AudioEntry} from '@/modules/media_player';
 
 const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
 
@@ -18,8 +19,8 @@ export type Reminder = {
   duration: number;
   /** has a value of `-1` or `+1` */
   durationModifier: number;
-  /** should reminder play adhan ? */
-  playSound?: boolean;
+  /** should reminder play sound and what sound ? */
+  sound?: AudioEntry;
   /** should reminder be set only once? */
   once?: boolean;
 };

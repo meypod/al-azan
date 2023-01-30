@@ -11,7 +11,7 @@ type PrayerTimesBoxProps = {
   prayerTimes?: PrayerTimesHelper;
   settings: Pick<
     SettingsStore,
-    'HIDDEN_PRAYERS' | 'DISMISSED_ALARM_TIMESTAMPS'
+    'HIDDEN_PRAYERS' | 'DELIVERED_ALARM_TIMESTAMPS'
   >;
   date: Date;
 };
@@ -33,7 +33,7 @@ function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
     prayerTimes &&
     activePrayer &&
     prayerTimes[activePrayer].valueOf() === nextPrayerDateValueOf &&
-    (settings.DISMISSED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0) >=
+    (settings.DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0) >=
       nextPrayerDateValueOf
   ) {
     nextPrayerSoundIsMuted = true;

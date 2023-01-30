@@ -6,6 +6,7 @@ import notifee, {
   Notification,
 } from '@notifee/react-native';
 import {finishAndRemoveTask, isDndActive} from './modules/activity';
+import {isIntrusive, isSilent} from './modules/media_player';
 import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
@@ -24,7 +25,7 @@ import {
   updateNotification,
   UpdateWidgetOptions,
 } from '@/modules/notification_widget';
-import {playAdhan, stopAdhan} from '@/services/azan_service';
+import {playAudio, stopAdhan} from '@/services/audio_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
@@ -48,7 +49,7 @@ export async function cancelAlarmNotif({
   notification,
   replaceWithNormal,
 }: CancelNotifOptions) {
-  if (notification?.android?.asForegroundService) {
+  if (!isSilent(options?.sound)) {
     await stopAdhan().catch(console.error);
     await notifee.stopForegroundService().catch(console.error);
   }
@@ -121,11 +122,6 @@ export async function cancelNotifOnDismissed({
   const {pressAction} = detail;
 
   if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
-    if (options?.date) {
-      settings
-        .getState()
-        .saveTimestamp(options.notifId, options.date.valueOf());
-    }
     await cancelAlarmNotif({notification: detail.notification, options});
   } else if (pressAction?.id === 'cancel_alarm') {
     // 'cancel_alarm' only exists on a pre-alarm notification
@@ -192,6 +188,10 @@ async function handleNotification({
       type === EventType.UNKNOWN ||
       type === EventType.FG_ALREADY_EXIST
     ) {
+      settings
+        .getState()
+        .saveTimestamp(options.notifId, options.date.valueOf());
+
       if (
         (type === EventType.FG_ALREADY_EXIST || type === EventType.UNKNOWN) &&
         notification
@@ -209,7 +209,8 @@ async function handleNotification({
           })
           .catch(console.error);
       }
-      if (options.playSound) {
+
+      if (isIntrusive(options.sound)) {
         // even though we could not check options.playSound and
         // this would simply become a noop,
         // we have to reduce the cpu usage as much as we can
@@ -218,6 +219,7 @@ async function handleNotification({
           .cancelNotification('pre-' + options.notifId)
           .catch(console.error);
       }
+
       if (channelId === ADHAN_CHANNEL_ID) {
         setNextAdhan();
         updateWidgets();
@@ -252,7 +254,7 @@ export function setupNotifeeHandlers() {
     if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
       const options = getAlarmOptions(notification);
 
-      if (options?.playSound) {
+      if (options?.sound && options.sound.id !== 'silent') {
         const canBypassDnd = (
           await notifee.getChannel(channelId).catch(console.error)
         )?.bypassDnd;
@@ -260,7 +262,7 @@ export function setupNotifeeHandlers() {
         const isDnd = await isDndActive();
 
         if (!isDnd || canBypassDnd) {
-          return playAdhan(options.prayer)
+          return playAudio(options.sound)
             .then(interrupted =>
               cancelAlarmNotif({
                 notification,

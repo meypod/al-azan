@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {cancelAdhanAlarms} from './cancel_alarms';
-import {getPrayerTimes, translatePrayer} from '@/adhan';
+import {getPrayerTimes, Prayer, translatePrayer} from '@/adhan';
 import {
   ADHAN_NOTIFICATION_ID,
   ADHAN_CHANNEL_ID,
@@ -9,6 +9,7 @@ import {
   PRE_ADHAN_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_NAME,
 } from '@/constants/notification';
+import {AudioEntry} from '@/modules/media_player';
 import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
@@ -36,7 +37,7 @@ export async function setNextAdhan(
   }
 
   const dismissedAlarmTS =
-    settings.getState().DISMISSED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
+    settings.getState().DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
 
   let targetDate = new Date(dismissedAlarmTS + 10000);
 
@@ -72,6 +73,15 @@ export async function setNextAdhan(
     }
   }
 
+  let sound: AudioEntry | undefined = undefined;
+  if (playSound) {
+    if (prayer === Prayer.Fajr) {
+      sound = settings.getState().SELECTED_FAJR_ADHAN_ENTRY as AudioEntry;
+    } else {
+      sound = settings.getState().SELECTED_ADHAN_ENTRY as AudioEntry;
+    }
+  }
+
   const adhanOptions = {
     notifId: ADHAN_NOTIFICATION_ID,
     notifChannelId: ADHAN_CHANNEL_ID,
@@ -80,7 +90,7 @@ export async function setNextAdhan(
     title,
     body,
     subtitle,
-    playSound,
+    sound,
     prayer,
   };
 

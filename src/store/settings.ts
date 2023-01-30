@@ -1,7 +1,8 @@
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
-import {ReactNativeBlobUtil} from 'react-native-blob-util';
+// eslint-disable-next-line import/no-named-as-default
+import ReactNativeBlobUtil from 'react-native-blob-util';
 import {useStore} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
@@ -15,6 +16,7 @@ import {
   INITIAL_ADHAN_AUDIO_ENTRIES,
 } from '@/assets/adhan_entries';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
+import type {AudioEntry} from '@/modules/media_player';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
@@ -22,7 +24,7 @@ const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
 export type SettingsStore = {
   /** an object that keeps track of dismissed alarms timestamp by their notification id */
-  DISMISSED_ALARM_TIMESTAMPS: Record<string, number | undefined>;
+  DELIVERED_ALARM_TIMESTAMPS: Record<string, number | undefined>;
   // theme
   THEME_COLOR?: ColorMode | 'default';
   // display
@@ -35,6 +37,7 @@ export type SettingsStore = {
   APP_INITIAL_CONFIG_DONE: boolean;
   APP_INTRO_DONE: boolean;
   SAVED_ADHAN_AUDIO_ENTRIES: AdhanEntry[];
+  SAVED_USER_AUDIO_ENTRIES: AudioEntry[];
   SELECTED_ADHAN_ENTRY: AdhanEntry;
   SELECTED_FAJR_ADHAN_ENTRY: AdhanEntry | undefined;
   LOCATION_COUNTRY: CountryInfo | undefined;
@@ -50,7 +53,7 @@ export type SettingsStore = {
   REMINDER_SETTINGS_HASH: string;
   /** timestamp of when the alarm for updating widget is going to Or was fired */
   LAST_WIDGET_UPDATE: number;
-  IS_PLAYING_ADHAN: boolean;
+  IS_PLAYING_AUDIO: boolean;
   /** permission related */
   DONT_ASK_PERMISSION_NOTIFICATIONS: boolean;
   DONT_ASK_PERMISSION_ALARM: boolean;
@@ -59,6 +62,8 @@ export type SettingsStore = {
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
+  saveAudioEntry: (entry: AudioEntry) => void;
+  deleteAudioEntry: (entry: AudioEntry) => void;
   saveTimestamp: (alarmId: string, timestamp: number) => void;
   deleteTimestamp: (alarmId: string) => void;
   setSetting: <T extends keyof SettingsStore>(
@@ -91,6 +96,7 @@ export const settings = createStore<SettingsStore>()(
       APP_INITIAL_CONFIG_DONE: false,
       APP_INTRO_DONE: false,
       SAVED_ADHAN_AUDIO_ENTRIES: INITIAL_ADHAN_AUDIO_ENTRIES,
+      SAVED_USER_AUDIO_ENTRIES: [],
       SELECTED_ADHAN_ENTRY: INITIAL_ADHAN_AUDIO_ENTRIES[0],
       SELECTED_FAJR_ADHAN_ENTRY: undefined,
       LOCATION_COUNTRY: undefined,
@@ -104,9 +110,9 @@ export const settings = createStore<SettingsStore>()(
       CALC_SETTINGS_HASH: '',
       ALARM_SETTINGS_HASH: '',
       REMINDER_SETTINGS_HASH: '',
-      DISMISSED_ALARM_TIMESTAMPS: {},
+      DELIVERED_ALARM_TIMESTAMPS: {},
       LAST_WIDGET_UPDATE: 0,
-      IS_PLAYING_ADHAN: false,
+      IS_PLAYING_AUDIO: false,
       DONT_ASK_PERMISSION_NOTIFICATIONS: false,
       DONT_ASK_PERMISSION_ALARM: false,
       DONT_ASK_PERMISSION_PHONE_STATE: false,
@@ -155,17 +161,49 @@ export const settings = createStore<SettingsStore>()(
           }),
         ),
 
+      // user audio entry helper
+      saveAudioEntry: entry =>
+        set(
+          produce<SettingsStore>(draft => {
+            let fIndex = draft.SAVED_USER_AUDIO_ENTRIES.findIndex(
+              e => e.id === entry.id,
+            );
+            if (fIndex !== -1) {
+              draft.SAVED_USER_AUDIO_ENTRIES.splice(fIndex, 1, entry);
+            } else {
+              draft.SAVED_USER_AUDIO_ENTRIES.push(entry);
+            }
+          }),
+        ),
+
+      deleteAudioEntry: entry =>
+        set(
+          produce<SettingsStore>(draft => {
+            let fIndex = draft.SAVED_USER_AUDIO_ENTRIES.findIndex(
+              e => e.id === entry.id,
+            );
+            if (fIndex !== -1) {
+              draft.SAVED_USER_AUDIO_ENTRIES.splice(fIndex, 1);
+              if (typeof entry.filepath === 'string') {
+                ReactNativeBlobUtil.fs.unlink(entry.filepath).catch(err => {
+                  console.error(err);
+                });
+              }
+            }
+          }),
+        ),
+
       // for timestamps
       saveTimestamp: (alarmId, timestamp) =>
         set(
           produce<SettingsStore>(draft => {
-            draft.DISMISSED_ALARM_TIMESTAMPS[alarmId] = timestamp;
+            draft.DELIVERED_ALARM_TIMESTAMPS[alarmId] = timestamp;
           }),
         ),
       deleteTimestamp: alarmId =>
         set(
           produce<SettingsStore>(draft => {
-            delete draft.DISMISSED_ALARM_TIMESTAMPS[alarmId];
+            delete draft.DELIVERED_ALARM_TIMESTAMPS[alarmId];
           }),
         ),
 
@@ -247,7 +285,7 @@ export const settings = createStore<SettingsStore>()(
               );
             }
           case 3:
-            (persistedState as SettingsStore).DISMISSED_ALARM_TIMESTAMPS = {
+            (persistedState as SettingsStore).DELIVERED_ALARM_TIMESTAMPS = {
               [ADHAN_NOTIFICATION_ID]: (persistedState as any)
                 .DISMISSED_ALARM_TIMESTAMP,
             };
