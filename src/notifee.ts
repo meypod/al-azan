@@ -191,6 +191,13 @@ async function handleNotification({
       type === EventType.UNKNOWN ||
       type === EventType.FG_ALREADY_EXIST
     ) {
+      if (
+        settings.getState().DELIVERED_ALARM_TIMESTAMPS[options.notifId] ===
+        options.date.valueOf()
+      ) {
+        // we already have processed this notification
+        return;
+      }
       settings
         .getState()
         .saveTimestamp(options.notifId, options.date.valueOf());
