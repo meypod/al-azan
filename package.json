@@ -1,6 +1,6 @@
 {
   "name": "al-azan",
-  "version": "1.9.0",
+  "version": "1.10.0-rc.19",
   "private": true,
   "scripts": {
     "android": "react-native run-android --no-packager",
