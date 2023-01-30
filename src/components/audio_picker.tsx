@@ -318,6 +318,12 @@ export const AudioPicker = (props: AudioPickerProps) => {
     }
   }, [onClose]);
 
+  useEffect(() => {
+    return () => {
+      stop();
+    };
+  }, []);
+
   return (
     <HStack>
       <Input
