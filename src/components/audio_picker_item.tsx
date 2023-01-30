@@ -47,6 +47,8 @@ function AudioPickerItem({
       onPress={onPress.bind(null, item, index)}>
       <Text
         fontSize="sm"
+        numberOfLines={1}
+        flexShrink={1}
         _light={{color: 'dark.200'}}
         _dark={{color: 'light.200'}}>
         {getOptionLabel(item)}
