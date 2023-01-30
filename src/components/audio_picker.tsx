@@ -330,7 +330,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
           contextMenuHidden: true,
         }}
         rightElement={
-          memoSelectedItem?.id !== 'silent' ? (
+          memoSelectedItem && memoSelectedItem.id !== 'silent' ? (
             <Button onPress={toggleAudioEntry} p="2" variant="ghost">
               {playbackState === PlaybackState.started ? (
                 <StopIcon size="xl" />
