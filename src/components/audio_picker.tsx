@@ -74,7 +74,7 @@ function useData() {
   useEffect(() => {
     getRingtones().then(entries => {
       const [def, ...rest] = entries;
-      if (def) def.label = t`Default` + ` (${def.label})`; // first item is always default;
+      if (def) def.label = t`Default` + ` (${t`Notification`})`; // first item is always default;
 
       if (rest.length) {
         for (const e of rest) {
