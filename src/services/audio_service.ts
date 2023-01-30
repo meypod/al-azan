@@ -10,7 +10,7 @@ export async function playAudio(audio: AudioEntry) {
     await stop();
   }
   settings.setState({IS_PLAYING_AUDIO: true});
-  const result = await play(audio.filepath);
+  const result = await play(audio);
   settings.setState({IS_PLAYING_AUDIO: false});
 
   await destroy();

@@ -16,6 +16,7 @@ import {ToastAndroid} from 'react-native';
 import {pickSingle} from 'react-native-document-picker';
 import {AdhanEntry} from '@/assets/adhan_entries';
 import MediaPlayer, {
+  AudioEntry,
   PlaybackState,
   usePlaybackState,
 } from '@/modules/media_player';
@@ -79,7 +80,9 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
       } else {
         setPlayingAdhanEntry(item);
         await stop();
-        await play((item?.filepath || item?.remoteUri) as string | number);
+        if (item.filepath) {
+          await play(item as AudioEntry);
+        }
       }
     } catch (e) {
       console.error(e);

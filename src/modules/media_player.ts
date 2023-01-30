@@ -49,7 +49,7 @@ interface MediaPlayerModuleInterface {
   setupPlayer(): Promise<void>;
   destroy(): Promise<void>;
   setVolume(value: number): Promise<void>;
-  setDataSource(options: {uri: string | number}): Promise<void>;
+  setDataSource(options: {uri: string | number; loop: boolean}): Promise<void>;
   getState(): Promise<PlaybackState>;
   getRingtones(): Promise<AudioEntry[]>;
 }
@@ -65,13 +65,16 @@ const pause = MediaPlayerModule.pause;
 const setupPlayer = MediaPlayerModule.setupPlayer;
 const destroy = MediaPlayerModule.destroy;
 const setVolume = MediaPlayerModule.setVolume;
-const setDataSource = async (options: {uri: string | number}) => {
-  let {uri} = options;
+const setDataSource = async (options: {
+  uri: string | number;
+  loop: boolean;
+}) => {
+  let {uri, loop} = options;
   if (typeof options.uri === 'number') {
     const resolved = Image.resolveAssetSource(options.uri);
     uri = resolved.uri;
   }
-  return MediaPlayerModule.setDataSource({uri});
+  return MediaPlayerModule.setDataSource({uri, loop});
 };
 const getState = MediaPlayerModule.getState;
 const addEventListener = eventEmitter.addListener.bind(

@@ -293,7 +293,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
       if (playbackState === PlaybackState.started) {
         await stop();
       } else {
-        await play(memoSelectedItem.filepath);
+        await play(memoSelectedItem);
       }
     } catch (e) {
       console.error(e);

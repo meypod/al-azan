@@ -31,6 +31,9 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MediaPlayerService extends HeadlessJsTaskService implements
     MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener,
     OnAudioFocusChangeListener {
@@ -39,12 +42,16 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private static final String STATE_STARTED = "started";
   private static final String STATE_PAUSED = "paused";
 
+  private static final long LOOP_SOUND_TIMER_LIMIT = 5 * 60 * 1000;
+
 
   private MediaPlayer player;
   private boolean wasPlaying = false;
   private boolean isStarted = false;
   private boolean isPaused = false;
   private Promise setDataSourcePromise = null;
+  private boolean isLoopUri = false;
+  private Timer timer = null;
   private TelephonyManager telephonyManager;
   private TelephonyStateListener telephonyStateListener;
   private PhoneStateListener phoneStateListener;
@@ -98,11 +105,18 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   }
 
   public void stop() {
+    stop(true);
+  }
+  public void stop(boolean wasInterrupted) {
+    if (timer != null) {
+      timer.cancel();
+      timer = null;
+    }
     try {
       player.stop();
     } catch (Exception ignored) {
     } finally {
-      onCompletion(true);
+      onCompletion(wasInterrupted);
       ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
           .emit("state", STATE_STOPPED);
     }
@@ -128,6 +142,15 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
         wasPlaying = false;
         ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
             .emit("state", STATE_STARTED);
+        if (isLoopUri) {
+          timer= new Timer();
+          timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+              stop(false);
+            }
+          }, LOOP_SOUND_TIMER_LIMIT);
+        }
       } else {
         isStarted = true;
         wasPlaying = true;
@@ -158,14 +181,16 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   }
 
 
-  public void setDataSource(Uri uri, Promise promise) {
+  public void setDataSource(Uri uri, boolean isLoopUri, Promise promise) {
     if (setDataSourcePromise != null) {
       promise.reject("ERROR", "A setDataSource Call is already pending");
       return;
     }
     try {
       setDataSourcePromise = promise;
+      this.isLoopUri = isLoopUri;
       player.reset();
+      player.setLooping(this.isLoopUri);
       int id = getIdFromRawResourceUri(uri);
       if (id > 0) {
         try {
@@ -187,6 +212,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     } catch (Exception e) {
       promise.reject("ERROR", "setDataSource: " + e.getLocalizedMessage());
       setDataSourcePromise = null;
+      this.isLoopUri = false;
     }
   }
 

@@ -140,7 +140,8 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
         uri = Uri.parse(RAW_RESOURCE_PREFIX + resourceId);
       }
       if (uri != null) {
-        mediaPlayerService.setDataSource(uri, promise);
+        boolean isLoopUri = bundle.getBoolean("loop", false);
+        mediaPlayerService.setDataSource(uri, isLoopUri, promise);
       } else {
         promise.reject("ERROR", "Could not resolve uri");
       }

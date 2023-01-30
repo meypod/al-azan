@@ -1,9 +1,9 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
-import MediaPlayer from '@/modules/media_player';
+import MediaPlayer, {AudioEntry} from '@/modules/media_player';
 
 /** returns `true` if interrupted during play, `false` otherwise */
-export async function play(uri: string | number) {
+export async function play(audioEntry: AudioEntry) {
   const volumeListener = SystemSetting.addVolumeListener(data => {
     MediaPlayer.setVolume(data.value);
   });
@@ -35,7 +35,10 @@ export async function play(uri: string | number) {
     onFinally(true);
   });
 
-  await MediaPlayer.setDataSource({uri});
+  await MediaPlayer.setDataSource({
+    uri: audioEntry.filepath,
+    loop: !!audioEntry.loop,
+  });
 
   await MediaPlayer.start();
   const playbackResult = await playbackFinishedDefer;
