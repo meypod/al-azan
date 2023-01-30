@@ -254,7 +254,7 @@ export function setupNotifeeHandlers() {
     if (channelId === ADHAN_CHANNEL_ID || channelId === REMINDER_CHANNEL_ID) {
       const options = getAlarmOptions(notification);
 
-      if (options?.sound && options.sound.id !== 'silent') {
+      if (!isSilent(options?.sound)) {
         const canBypassDnd = (
           await notifee.getChannel(channelId).catch(console.error)
         )?.bypassDnd;
@@ -262,7 +262,7 @@ export function setupNotifeeHandlers() {
         const isDnd = await isDndActive();
 
         if (!isDnd || canBypassDnd) {
-          return playAudio(options.sound)
+          return playAudio(options!.sound!)
             .then(interrupted =>
               cancelAlarmNotif({
                 notification,
