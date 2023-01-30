@@ -1,33 +1,33 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-26 21:56+0330\n"
+"POT-Creation-Date: 2023-01-30 20:52+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ar\n"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:122
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "10 min"
 msgstr "10 دقائق"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:126
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "15 min"
 msgstr "15 دقيقة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:130
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 msgid "30 min"
 msgstr "30 دقيقة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
 msgstr "5 دقائق"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:134
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "60 min"
 msgstr "60 دقيقة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 دقيقة"
 
@@ -35,12 +35,13 @@ msgstr "90 دقيقة"
 msgid "Abyad"
 msgstr "أبيض"
 
-#: src/screens/settings_adhan/index.tsx:183
+#: src/components/audio_picker.tsx:366
+#: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "إضافة"
 
-#: src/screens/settings_adhan/index.tsx:156
-#: src/screens/settings_adhan/index.tsx:161
+#: src/screens/settings_adhan/index.tsx:159
+#: src/screens/settings_adhan/index.tsx:164
 msgid "Add Custom Adhan"
 msgstr "إضافة أذان مخصص"
 
@@ -48,11 +49,12 @@ msgstr "إضافة أذان مخصص"
 msgid "Add Reminder"
 msgstr "إضافة تذكير"
 
+#: src/components/audio_picker.tsx:114
 #: src/screens/fullscreen_alarm/index.tsx:50
 msgid "Adhan"
 msgstr "أذان"
 
-#: src/screens/settings_adhan/index.tsx:94
+#: src/screens/settings_adhan/index.tsx:97
 msgid "Adhan audio file is not downloaded yet"
 msgstr "لم يتم تنزيل ملف صوت الأذان بعد"
 
@@ -72,7 +74,7 @@ msgstr "أحمر"
 msgid "Alarms Permission"
 msgstr "إذن المنبّهات"
 
-#: src/screens/settings_adhan/index.tsx:55
+#: src/screens/settings_adhan/index.tsx:56
 msgid "An error occured while playing the current track"
 msgstr "حدث خطأ أثناء تشغيل المسار الحالي"
 
@@ -84,7 +86,8 @@ msgstr "عربي"
 msgid "Arabic/Persian"
 msgstr "عربي / فارسي"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:100
+#: src/components/audio_picker.tsx:134
+#: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "هل أنت متأكد من أنك تريد حذف \"{0}\"؟"
 
@@ -121,9 +124,9 @@ msgstr "طريقة حساب"
 msgid "Calendar"
 msgstr "التقويم"
 
-#: src/screens/settings_adhan/index.tsx:180
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
-#: src/tasks/set_pre_alarm.ts:63
+#: src/screens/settings_adhan/index.tsx:183
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:245
+#: src/tasks/set_pre_alarm.ts:61
 msgid "Cancel"
 msgstr "ألغ"
 
@@ -177,7 +180,7 @@ msgstr "أقرب مدينة"
 msgid "Closest Date"
 msgstr "أقرب تاريخ"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "أكّد"
 
@@ -194,13 +197,16 @@ msgstr "دولة"
 msgid "Dark"
 msgstr "داکن"
 
+#: src/components/audio_picker.tsx:77
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "افتراضي"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
-#: src/screens/settings_adhan/adhan_list_item.tsx:197
+#: src/components/audio_picker.tsx:133
+#: src/components/audio_picker_item.tsx:61
+#: src/screens/settings_adhan/adhan_list_item.tsx:98
+#: src/screens/settings_adhan/adhan_list_item.tsx:196
 msgid "Delete"
 msgstr "احذف"
 
@@ -208,16 +214,20 @@ msgstr "احذف"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "اعتمادًا على جهازك وإصدار الأندروید، قد يقتل جهازك أحيانًا التطبيق في الخلفية لتوفير طاقة البطارية. هذا يمكن أن يمنع إرسال الإنذارات/الإشعارات."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:192
+#: src/screens/settings_adhan/adhan_list_item.tsx:191
 msgid "Deselect as Fajr Adhan"
 msgstr "إلغاء اختيار أذان الفجر"
+
+#: src/components/audio_picker.tsx:120
+msgid "Device sounds"
+msgstr "نغمات الجهاز"
 
 #: src/screens/settings_battery_optimizations/index.tsx:57
 msgid "Disabled"
 msgstr "غير مفعّل"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:105
 msgid "Dismiss"
 msgstr "تجاهل"
 
@@ -235,7 +245,7 @@ msgstr "لا تسأل مرة أخرى"
 msgid "Done"
 msgstr "تم"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:85
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "Edit Reminder"
 msgstr "تحرير تذكير"
 
@@ -259,7 +269,7 @@ msgstr "خطأ في تحميل البلدان"
 msgid "Error in loading search results"
 msgstr "خطأ في تحميل نتائج البحث"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:84
+#: src/screens/settings_adhan/adhan_list_item.tsx:83
 msgid "Error while downloading audio"
 msgstr "خطأ أثناء تنزيل الصوت"
 
@@ -361,7 +371,7 @@ msgstr "وزارة الدين بجمهورية إندونيسيا"
 msgid "Kuwait"
 msgstr "الكويت"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:93
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "مُلصَق"
 
@@ -419,18 +429,18 @@ msgstr "لجنة رؤية الهلال"
 msgid "Muslim World League"
 msgstr "رابطة العالم الإسلامي"
 
-#: src/screens/settings_adhan/index.tsx:164
 #: src/screens/settings_adhan/index.tsx:167
+#: src/screens/settings_adhan/index.tsx:170
 msgid "Name"
 msgstr "اسم"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:85
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "New Reminder"
 msgstr "تذكير جديد"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:69
-#: src/tasks/set_next_adhan.ts:98
+#: src/tasks/set_next_adhan.ts:70
+#: src/tasks/set_next_adhan.ts:108
 msgid "Next"
 msgstr "التالي"
 
@@ -438,15 +448,17 @@ msgstr "التالي"
 msgid "Next Day"
 msgstr "اليوم التالي"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:105
+#: src/components/audio_picker.tsx:139
+#: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "لا"
 
-#: src/components/AutocompleteInput.tsx:133
+#: src/components/AutocompleteInput.tsx:136
 msgid "No Data"
 msgstr "لايوجد بيانات"
 
-#: src/components/AutocompleteInput.tsx:137
+#: src/components/audio_picker.tsx:382
+#: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "دون نتائج"
 
@@ -458,6 +470,7 @@ msgstr "لا شيء (تلقائي)"
 msgid "Not now"
 msgstr "ليس الان"
 
+#: src/components/audio_picker.tsx:77
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -493,7 +506,7 @@ msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:206
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Only once?"
 msgstr "مرة واحدة فقط؟"
 
@@ -509,7 +522,7 @@ msgstr "افتح إعدادات تحسين البطارية"
 msgid "Open Power Manager Settings"
 msgstr "افتح إعدادات مدير الطاقة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:185
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:210
 msgid "Options"
 msgstr "خيارات"
 
@@ -520,11 +533,6 @@ msgstr "لصق"
 #: src/utils/permission.ts:93
 msgid "Phone State Permission"
 msgstr "إذن حالة الهاتف"
-
-#. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:188
-msgid "Play adhan?"
-msgstr "تشغيل الأذان؟"
 
 #: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
@@ -552,6 +560,10 @@ msgstr "يشار إليها باسم طريقة ISNA"
 msgid "Reminder"
 msgstr "تذكير"
 
+#: src/components/audio_picker.tsx:82
+msgid "Repeat"
+msgstr "يكرر"
+
 #: src/intro/intro.tsx:120
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "الإعدادات المطلوبة غير كاملة. لكي يعرض التطبيق مواقيت الصلاة ، يجب عليك تهيئته من الإعدادات لاحقًا."
@@ -568,7 +580,8 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Saturday"
 msgstr "السبت"
 
-#: src/components/AutocompleteInput.tsx:107
+#: src/components/audio_picker.tsx:360
+#: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "بحث"
 
@@ -576,11 +589,11 @@ msgstr "بحث"
 msgid "Secondary Calendar"
 msgstr "التقويم الثانوي"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:193
+#: src/screens/settings_adhan/adhan_list_item.tsx:192
 msgid "Select as Fajr Adhan"
 msgstr "اختر أذان الفجر"
 
-#: src/screens/settings_adhan/index.tsx:173
+#: src/screens/settings_adhan/index.tsx:176
 msgid "Selecting a name is required"
 msgstr "اختيار الاسم مطلوب"
 
@@ -607,7 +620,7 @@ msgstr "الشيعة اثنا عشري ، معهد ليفا ، قم"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "الشيعة ، معهد الجيوفيزياء ، جامعة طهران"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:183
+#: src/screens/settings_adhan/adhan_list_item.tsx:182
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
@@ -626,6 +639,10 @@ msgstr "عرض التطبيق المصغّر في الإشعارات؟"
 #: src/utils/permission.ts:74
 msgid "Show settings"
 msgstr "اعرض إعدادات"
+
+#: src/components/audio_picker.tsx:91
+msgid "Silent"
+msgstr "صامتة"
 
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
@@ -648,6 +665,8 @@ msgstr "تحتاج بعض الأجهزة إلى إعدادات إضافية دا
 
 #: src/screens/settings_notifications/notification_setting.tsx:290
 #: src/screens/settings_notifications/notification_setting.tsx:330
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:197
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
 msgid "Sound"
 msgstr "صوت"
 
@@ -703,7 +722,7 @@ msgid "Thursday"
 msgstr "الخميس"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:103
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:115
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "وقت"
@@ -748,7 +767,7 @@ msgstr "منظمة الاتحاد الإسلامية الفرنسية"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "جامعة العلوم الإسلامية بكراتشي"
 
-#: src/components/AutocompleteInput.tsx:128
+#: src/components/AutocompleteInput.tsx:131
 msgid "Unknown Error"
 msgstr "خطأ غير معروف"
 
@@ -761,7 +780,7 @@ msgid "Unsupported"
 msgstr "غير مدعوم"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:49
+#: src/tasks/set_pre_alarm.ts:47
 msgid "Upcoming alarm"
 msgstr "التنبيه القادم"
 
@@ -797,7 +816,8 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:109
+#: src/components/audio_picker.tsx:144
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "نعم"
 
@@ -818,6 +838,10 @@ msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr ""
 "يمكنك إخفاء أوقات الصلاة التي لا تريد رؤيتها في التطبيق المصغر هنا:\n"
 ""
+
+#: src/components/audio_picker.tsx:108
+msgid "Your sounds"
+msgstr "نغماتك"
 
 #: src/assets/adhan_entries.ts:21
 msgid "abdul_basit_abdus_samad"
@@ -840,7 +864,7 @@ msgstr "عن التطبيق"
 msgid "adjustment.hint"
 msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوقات المحسوبة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "after"
 msgstr "بعد"
 
@@ -853,7 +877,7 @@ msgstr "عصر"
 msgid "battery_optimization_settings"
 msgstr "تحسين البطارية"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
 msgstr "قبل"
 
