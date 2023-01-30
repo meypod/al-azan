@@ -8817,6 +8817,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-alarm-module@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-alarm-module/-/react-native-alarm-module-3.0.0.tgz#b48f8720aca876af245130fff317cde1fb068e96"
+  integrity sha512-mTp/f7cD4IT+0vpkordcdOTkB1wvmoG/t0jz93UF9PNaJl69KAa265MJhvypdzUf7TmhlB2aT1DBerfH0dSfpA==
+
 react-native-app-intro-slider@^4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/react-native-app-intro-slider/-/react-native-app-intro-slider-4.0.4.tgz#fa5cda7057db62c448ac975ffd2ba0cff94cc8d8"

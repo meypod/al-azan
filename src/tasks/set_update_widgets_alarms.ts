@@ -1,5 +1,5 @@
+import {setAlarm} from 'react-native-alarm-module';
 import {getPrayerTimes, PrayersInOrder} from '@/adhan';
-import {scheduleWork} from '@/modules/work';
 import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
 
@@ -20,18 +20,22 @@ export function setUpdateWidgetsAlarms() {
   const begginingOfNextDay = getNextDayBeginning(targetDate).valueOf();
   LAST_WIDGET_UPDATE = begginingOfNextDay;
   // day change update
-  scheduleWork({
+  setAlarm({
     timestamp: begginingOfNextDay,
     taskName: 'update_screen_widget_task', // reuse the task name for widget module update request
     allowedInForeground: true,
+    type: 'setExact',
+    wakeup: false,
     keepAwake: false,
   });
 
   for (const prayer of PrayersInOrder) {
-    scheduleWork({
+    setAlarm({
       timestamp: prayerTimes[prayer].valueOf(),
       taskName: 'update_screen_widget_task',
       allowedInForeground: true,
+      type: 'setExact',
+      wakeup: false,
       keepAwake: false,
     });
     if (prayerTimes[prayer].valueOf() > LAST_WIDGET_UPDATE) {
