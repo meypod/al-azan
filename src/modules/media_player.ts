@@ -35,7 +35,7 @@ export type AudioEntry = {
 };
 
 export function isIntrusive(entry: AudioEntry | undefined) {
-  return entry && entry.id !== 'silent' && !entry.notif;
+  return !!entry && entry.id !== 'silent' && !entry.notif;
 }
 
 export function isSilent(entry: AudioEntry | undefined) {
