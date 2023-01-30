@@ -113,7 +113,10 @@ function useData() {
     }
 
     s.push({
-      title: t`Adhan`,
+      title: t({
+        id: 'muezzin_settings',
+        message: 'Muezzin',
+      }),
       data: data.adhanEntries,
     });
 

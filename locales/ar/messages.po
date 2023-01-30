@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-30 20:52+0330\n"
+"POT-Creation-Date: 2023-01-30 22:34+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "90 دقيقة"
 msgid "Abyad"
 msgstr "أبيض"
 
-#: src/components/audio_picker.tsx:366
+#: src/components/audio_picker.tsx:379
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "إضافة"
@@ -49,7 +49,6 @@ msgstr "إضافة أذان مخصص"
 msgid "Add Reminder"
 msgstr "إضافة تذكير"
 
-#: src/components/audio_picker.tsx:114
 #: src/screens/fullscreen_alarm/index.tsx:50
 msgid "Adhan"
 msgstr "أذان"
@@ -86,7 +85,7 @@ msgstr "عربي"
 msgid "Arabic/Persian"
 msgstr "عربي / فارسي"
 
-#: src/components/audio_picker.tsx:134
+#: src/components/audio_picker.tsx:139
 #: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "هل أنت متأكد من أنك تريد حذف \"{0}\"؟"
@@ -197,13 +196,13 @@ msgstr "دولة"
 msgid "Dark"
 msgstr "داکن"
 
-#: src/components/audio_picker.tsx:77
+#: src/components/audio_picker.tsx:79
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "افتراضي"
 
-#: src/components/audio_picker.tsx:133
+#: src/components/audio_picker.tsx:138
 #: src/components/audio_picker_item.tsx:61
 #: src/screens/settings_adhan/adhan_list_item.tsx:98
 #: src/screens/settings_adhan/adhan_list_item.tsx:196
@@ -218,7 +217,7 @@ msgstr "اعتمادًا على جهازك وإصدار الأندروید، ق�
 msgid "Deselect as Fajr Adhan"
 msgstr "إلغاء اختيار أذان الفجر"
 
-#: src/components/audio_picker.tsx:120
+#: src/components/audio_picker.tsx:125
 msgid "Device sounds"
 msgstr "نغمات الجهاز"
 
@@ -448,7 +447,7 @@ msgstr "التالي"
 msgid "Next Day"
 msgstr "اليوم التالي"
 
-#: src/components/audio_picker.tsx:139
+#: src/components/audio_picker.tsx:146
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "لا"
@@ -457,7 +456,7 @@ msgstr "لا"
 msgid "No Data"
 msgstr "لايوجد بيانات"
 
-#: src/components/audio_picker.tsx:382
+#: src/components/audio_picker.tsx:395
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "دون نتائج"
@@ -470,7 +469,7 @@ msgstr "لا شيء (تلقائي)"
 msgid "Not now"
 msgstr "ليس الان"
 
-#: src/components/audio_picker.tsx:77
+#: src/components/audio_picker.tsx:79
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -560,7 +559,7 @@ msgstr "يشار إليها باسم طريقة ISNA"
 msgid "Reminder"
 msgstr "تذكير"
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Repeat"
 msgstr "يكرر"
 
@@ -580,7 +579,7 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Saturday"
 msgstr "السبت"
 
-#: src/components/audio_picker.tsx:360
+#: src/components/audio_picker.tsx:373
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "بحث"
@@ -640,7 +639,7 @@ msgstr "عرض التطبيق المصغّر في الإشعارات؟"
 msgid "Show settings"
 msgstr "اعرض إعدادات"
 
-#: src/components/audio_picker.tsx:91
+#: src/components/audio_picker.tsx:93
 msgid "Silent"
 msgstr "صامتة"
 
@@ -816,7 +815,7 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
-#: src/components/audio_picker.tsx:144
+#: src/components/audio_picker.tsx:151
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "نعم"
@@ -839,11 +838,11 @@ msgstr ""
 "يمكنك إخفاء أوقات الصلاة التي لا تريد رؤيتها في التطبيق المصغر هنا:\n"
 ""
 
-#: src/components/audio_picker.tsx:108
+#: src/components/audio_picker.tsx:110
 msgid "Your sounds"
 msgstr "نغماتك"
 
-#: src/assets/adhan_entries.ts:21
+#: src/assets/adhan_entries.ts:22
 msgid "abdul_basit_abdus_samad"
 msgstr "عبد الباسط عبد الصمد"
 
@@ -930,15 +929,16 @@ msgstr "موقع"
 msgid "maghrib.prayer"
 msgstr "مغرب"
 
-#: src/assets/adhan_entries.ts:17
+#: src/assets/adhan_entries.ts:18
 msgid "masjid_an_nabawi"
 msgstr "المسجد النبوي"
 
-#: src/assets/adhan_entries.ts:29
+#: src/assets/adhan_entries.ts:30
 msgid "moazen_zade"
 msgstr "مؤذن زاده"
 
 #. screen title
+#: src/components/audio_picker.tsx:116
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
 msgstr "المؤذن"
@@ -948,7 +948,7 @@ msgstr "المؤذن"
 msgid "notification_settings"
 msgstr "الإشعار و الصوت"
 
-#: src/assets/adhan_entries.ts:25
+#: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفى غلوش"
 

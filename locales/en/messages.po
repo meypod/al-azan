@@ -41,7 +41,7 @@ msgstr "90 min"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/components/audio_picker.tsx:366
+#: src/components/audio_picker.tsx:379
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "Add"
@@ -55,7 +55,6 @@ msgstr "Add Custom Adhan"
 msgid "Add Reminder"
 msgstr "Add Reminder"
 
-#: src/components/audio_picker.tsx:114
 #: src/screens/fullscreen_alarm/index.tsx:50
 msgid "Adhan"
 msgstr "Adhan"
@@ -92,7 +91,7 @@ msgstr "Arabic"
 msgid "Arabic/Persian"
 msgstr "Arabic/Persian"
 
-#: src/components/audio_picker.tsx:134
+#: src/components/audio_picker.tsx:139
 #: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
@@ -203,13 +202,13 @@ msgstr "Country"
 msgid "Dark"
 msgstr "Dark"
 
-#: src/components/audio_picker.tsx:77
+#: src/components/audio_picker.tsx:79
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Default"
 
-#: src/components/audio_picker.tsx:133
+#: src/components/audio_picker.tsx:138
 #: src/components/audio_picker_item.tsx:61
 #: src/screens/settings_adhan/adhan_list_item.tsx:98
 #: src/screens/settings_adhan/adhan_list_item.tsx:196
@@ -224,7 +223,7 @@ msgstr "Depending on your device and android version, Sometimes your device may 
 msgid "Deselect as Fajr Adhan"
 msgstr "Deselect as Fajr Adhan"
 
-#: src/components/audio_picker.tsx:120
+#: src/components/audio_picker.tsx:125
 msgid "Device sounds"
 msgstr "Device sounds"
 
@@ -454,7 +453,7 @@ msgstr "Next"
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/components/audio_picker.tsx:139
+#: src/components/audio_picker.tsx:146
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "No"
@@ -463,7 +462,7 @@ msgstr "No"
 msgid "No Data"
 msgstr "No Data"
 
-#: src/components/audio_picker.tsx:382
+#: src/components/audio_picker.tsx:395
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "No Results"
@@ -476,7 +475,7 @@ msgstr "None (Automatic)"
 msgid "Not now"
 msgstr "Not now"
 
-#: src/components/audio_picker.tsx:77
+#: src/components/audio_picker.tsx:79
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -566,7 +565,7 @@ msgstr "Referred to as the ISNA method"
 msgid "Reminder"
 msgstr "Reminder"
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Repeat"
 msgstr "Repeat"
 
@@ -590,7 +589,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
-#: src/components/audio_picker.tsx:360
+#: src/components/audio_picker.tsx:373
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Search"
@@ -653,7 +652,7 @@ msgstr "Show notification widget?"
 msgid "Show settings"
 msgstr "Show settings"
 
-#: src/components/audio_picker.tsx:91
+#: src/components/audio_picker.tsx:93
 msgid "Silent"
 msgstr "Silent"
 
@@ -834,7 +833,7 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/components/audio_picker.tsx:144
+#: src/components/audio_picker.tsx:151
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "Yes"
@@ -855,11 +854,11 @@ msgstr "You can hide prayer times you don't want to see in the main screen here:
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "You can hide prayer times you don't want to see in the widget here:"
 
-#: src/components/audio_picker.tsx:108
+#: src/components/audio_picker.tsx:110
 msgid "Your sounds"
 msgstr "Your sounds"
 
-#: src/assets/adhan_entries.ts:21
+#: src/assets/adhan_entries.ts:22
 msgid "abdul_basit_abdus_samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
@@ -946,15 +945,16 @@ msgstr "Location"
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
-#: src/assets/adhan_entries.ts:17
+#: src/assets/adhan_entries.ts:18
 msgid "masjid_an_nabawi"
 msgstr "Masjid An Nabawi"
 
-#: src/assets/adhan_entries.ts:29
+#: src/assets/adhan_entries.ts:30
 msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
+#: src/components/audio_picker.tsx:116
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
 msgstr "Muezzin"
@@ -964,7 +964,7 @@ msgstr "Muezzin"
 msgid "notification_settings"
 msgstr "Notification & Sound"
 
-#: src/assets/adhan_entries.ts:25
+#: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 

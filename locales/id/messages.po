@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-30 20:52+0330\n"
+"POT-Creation-Date: 2023-01-30 22:34+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "90 menit"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/components/audio_picker.tsx:366
+#: src/components/audio_picker.tsx:379
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "Tambah"
@@ -49,7 +49,6 @@ msgstr "Tambah Suara Adzan Kustom"
 msgid "Add Reminder"
 msgstr "Buat Pengingat"
 
-#: src/components/audio_picker.tsx:114
 #: src/screens/fullscreen_alarm/index.tsx:50
 msgid "Adhan"
 msgstr "Adzan"
@@ -86,7 +85,7 @@ msgstr "Arab"
 msgid "Arabic/Persian"
 msgstr "Arab/Persia"
 
-#: src/components/audio_picker.tsx:134
+#: src/components/audio_picker.tsx:139
 #: src/screens/settings_adhan/adhan_list_item.tsx:99
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
@@ -197,13 +196,13 @@ msgstr "Negara"
 msgid "Dark"
 msgstr "Gelap"
 
-#: src/components/audio_picker.tsx:77
+#: src/components/audio_picker.tsx:79
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Bawaan"
 
-#: src/components/audio_picker.tsx:133
+#: src/components/audio_picker.tsx:138
 #: src/components/audio_picker_item.tsx:61
 #: src/screens/settings_adhan/adhan_list_item.tsx:98
 #: src/screens/settings_adhan/adhan_list_item.tsx:196
@@ -218,7 +217,7 @@ msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa per
 msgid "Deselect as Fajr Adhan"
 msgstr "Batalkan pilihan sebagai Adzan Subuh"
 
-#: src/components/audio_picker.tsx:120
+#: src/components/audio_picker.tsx:125
 msgid "Device sounds"
 msgstr "Suara perangkat"
 
@@ -448,7 +447,7 @@ msgstr "Lanjut"
 msgid "Next Day"
 msgstr "Hari Brkut"
 
-#: src/components/audio_picker.tsx:139
+#: src/components/audio_picker.tsx:146
 #: src/screens/settings_adhan/adhan_list_item.tsx:104
 msgid "No"
 msgstr "Tidak"
@@ -457,7 +456,7 @@ msgstr "Tidak"
 msgid "No Data"
 msgstr "Tidak ada data"
 
-#: src/components/audio_picker.tsx:382
+#: src/components/audio_picker.tsx:395
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Tidak ada hasil"
@@ -470,7 +469,7 @@ msgstr "Tidak ada (Otomatis)"
 msgid "Not now"
 msgstr "Tidak sekarang"
 
-#: src/components/audio_picker.tsx:77
+#: src/components/audio_picker.tsx:79
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -560,7 +559,7 @@ msgstr "Mengacu pada metode ISNA"
 msgid "Reminder"
 msgstr "Pengingat"
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Repeat"
 msgstr "Ulangi"
 
@@ -580,7 +579,7 @@ msgstr "Perangkat Samsung memiliki Power Manajer kustom mereka sendiri yang dise
 msgid "Saturday"
 msgstr "Sabtu"
 
-#: src/components/audio_picker.tsx:360
+#: src/components/audio_picker.tsx:373
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Pencarian"
@@ -642,7 +641,7 @@ msgstr "Tampilkan widget notifikasi?"
 msgid "Show settings"
 msgstr "Tampilkan pengaturan"
 
-#: src/components/audio_picker.tsx:91
+#: src/components/audio_picker.tsx:93
 msgid "Silent"
 msgstr "Diam"
 
@@ -818,7 +817,7 @@ msgstr "Rabu"
 msgid "Welcome"
 msgstr "Selamat Datang!"
 
-#: src/components/audio_picker.tsx:144
+#: src/components/audio_picker.tsx:151
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 msgid "Yes"
 msgstr "Ya"
@@ -839,11 +838,11 @@ msgstr "Menyembunyikan waktu sholat agar tidak ditampilkan di layar utama:"
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Menyembunyikan waktu sholat agar tidak tampil pada widget:"
 
-#: src/components/audio_picker.tsx:108
+#: src/components/audio_picker.tsx:110
 msgid "Your sounds"
 msgstr "Suara Anda"
 
-#: src/assets/adhan_entries.ts:21
+#: src/assets/adhan_entries.ts:22
 msgid "abdul_basit_abdus_samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
@@ -927,15 +926,16 @@ msgstr "Lokasi"
 msgid "maghrib.prayer"
 msgstr "Maghrib"
 
-#: src/assets/adhan_entries.ts:17
+#: src/assets/adhan_entries.ts:18
 msgid "masjid_an_nabawi"
 msgstr "Masjid Nabawi"
 
-#: src/assets/adhan_entries.ts:29
+#: src/assets/adhan_entries.ts:30
 msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
+#: src/components/audio_picker.tsx:116
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
 msgstr "Muazin"
@@ -945,7 +945,7 @@ msgstr "Muazin"
 msgid "notification_settings"
 msgstr "Notifikasi & Suara"
 
-#: src/assets/adhan_entries.ts:25
+#: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
