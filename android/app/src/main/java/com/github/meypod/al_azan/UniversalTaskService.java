@@ -14,9 +14,9 @@ public class UniversalTaskService extends HeadlessJsTaskService {
   HeadlessJsTaskConfig getTaskConfig(Intent intent) {
     Bundle extras = intent.getExtras();
     if (extras != null) {
-      long timeout = intent.getLongExtra("timeout", 5000);
-      boolean allowedInForeground = intent.getBooleanExtra("allowedInForeground", false);
-      String taskName = intent.getStringExtra("taskName");
+      long timeout = extras.getLong("timeout", 5000);
+      boolean allowedInForeground = extras.getBoolean("allowedInForeground", false);
+      String taskName = extras.getString("taskName");
 
       return new HeadlessJsTaskConfig(
           taskName,

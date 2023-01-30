@@ -191,6 +191,8 @@ dependencies {
     implementation("com.facebook.react:react-android")
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
+    implementation 'androidx.work:work-runtime:2.7.1' // using the same version as notifee core
+    implementation("com.google.guava:guava:31.1-android") // using the same version as notifee core
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {

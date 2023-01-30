@@ -15,6 +15,7 @@ import com.github.meypod.al_azan.modules.ActivityModulePackage;
 import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage;
+import com.github.meypod.al_azan.modules.WorkModulePackage;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -36,6 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
           packages.add(new MediaPlayerModulePackage());
           packages.add(new NotificationWidgetModulePackage());
           packages.add(new ScreenWidgetModulePackage());
+          packages.add(new WorkModulePackage());
           return packages;
         }
 
