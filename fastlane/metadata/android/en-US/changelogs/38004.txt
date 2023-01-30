@@ -1,7 +1,7 @@
 - Added settings to play adhan only on certain days (like play Dhuhr on Sundays and not the other days)
 - Changed default islamic calendar to Umm al-Qura, except for persian language which will use Civil by default. You can always change this in settings. This change does not affect you if you have already changed your calendar.
 - Fixed reminders (they should work more reliably now)
-- Allow reminders to play adhan
+- Allow reminders to play custom sound
 - Added option to show/play reminder only once
 - Added option to change the secondary calendar
 - There's a change to settings internally, no problem should occur during the update, but if you decided to use an older version after updating, you will lose your reminders.
