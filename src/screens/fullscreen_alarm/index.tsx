@@ -24,7 +24,7 @@ function FullscreenAlarm() {
     body: '',
   });
 
-  const [isPlayingAdhan] = useSettings('IS_PLAYING_ADHAN');
+  const [isPlayingAudio] = useSettings('IS_PLAYING_AUDIO');
 
   const [taskOptions, setTaskOptions] = useState<
     SetAlarmTaskOptions | undefined
@@ -33,7 +33,7 @@ function FullscreenAlarm() {
   useEffect(() => {
     getFgSvcNotification().then(async notification => {
       const options = getAlarmOptions(notification);
-      if (!isPlayingAdhan || !options) {
+      if (!isPlayingAudio || !options) {
         if ((await getActivityName()) === 'AlarmActivity') {
           return finishAndRemoveTask();
         } else {
@@ -43,7 +43,7 @@ function FullscreenAlarm() {
       }
       setTaskOptions(options);
     });
-  }, [isPlayingAdhan]);
+  }, [isPlayingAudio]);
 
   useEffect(() => {
     if (!taskOptions) return;

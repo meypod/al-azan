@@ -53,13 +53,13 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
     };
   }, []);
 
-  const [isPlayingAdhan] = useSettings('IS_PLAYING_ADHAN');
+  const [isPlayingAudio] = useSettings('IS_PLAYING_AUDIO');
 
   useEffect(() => {
-    if (isPlayingAdhan) {
+    if (isPlayingAudio) {
       replace('FullscreenAlarm');
     }
-  }, [isPlayingAdhan]);
+  }, [isPlayingAudio]);
 
   const systemColorScheme = useColorScheme();
 
