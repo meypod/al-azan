@@ -79,7 +79,7 @@ function useData() {
       if (rest.length) {
         for (const e of rest) {
           if (e.loop) {
-            e.label = e.label + ` (${t`Loop`})`;
+            e.label = e.label + ` (${t`Repeat`})`;
           }
         }
       }
