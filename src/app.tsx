@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useColorMode} from 'native-base';
+import {useEffect} from 'react';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
@@ -26,6 +27,10 @@ import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {useSettings} from '@/store/settings';
+import {setNextAdhan} from '@/tasks/set_next_adhan';
+import {setReminders} from '@/tasks/set_reminder';
+import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
+import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -43,6 +48,13 @@ export function App(): JSX.Element {
   const {colorMode} = useColorMode();
 
   const isDarkMode = colorMode === 'dark';
+
+  useEffect(() => {
+    setNextAdhan();
+    setReminders();
+    setUpdateWidgetsAlarms();
+    updateWidgets();
+  }, []);
 
   if (!appIntroDone) {
     return <Intro></Intro>;

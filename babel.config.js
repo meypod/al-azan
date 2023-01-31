@@ -24,15 +24,12 @@ module.exports = function (api) {
     comments: true,
   };
 
-  // if (
-  //   process.env.NODE_ENV === 'production' ||
-  //   process.env.BABEL_ENV === 'production'
-  // ) {
-  //   config.plugins.push([
-  //     'transform-remove-console',
-  //     {exclude: ['error', 'warn']},
-  //   ]);
-  // }
+  if (
+    process.env.NODE_ENV === 'production' ||
+    process.env.BABEL_ENV === 'production'
+  ) {
+    config.plugins.push(['transform-remove-console', {exclude: ['error']}]);
+  }
 
   return config;
 };

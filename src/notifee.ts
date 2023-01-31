@@ -20,6 +20,7 @@ import {
   WIDGET_CHANNEL_ID,
   WIDGET_CHANNEL_NAME,
   WIDGET_NOTIFICATION_ID,
+  WIDGET_UPDATE_CHANNEL_ID,
 } from '@/constants/notification';
 import {
   updateNotification,
@@ -229,9 +230,11 @@ async function handleNotification({
       }
 
       if (channelId === ADHAN_CHANNEL_ID) {
-        setNextAdhan();
-        updateWidgets();
-        setUpdateWidgetsAlarms();
+        await Promise.all([
+          setNextAdhan(),
+          updateWidgets(),
+          setUpdateWidgetsAlarms(),
+        ]);
       } else if (channelId === REMINDER_CHANNEL_ID) {
         if ((options as Pick<Reminder, 'once'>).once) {
           reminderSettings.getState().disableReminder({id: options.notifId});
@@ -281,6 +284,8 @@ export function setupNotifeeHandlers() {
             .finally(() => finishAndRemoveTask());
         }
       }
+    } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
+      await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
     }
 
     return Promise.resolve();

@@ -5,9 +5,6 @@ import {bootstrap} from '@/bootstrap';
 import {onUpdateScreenWidgetRequested} from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
 import fullscreen_alarm from '@/screens/fullscreen_alarm';
-import {homeStore} from '@/store/home';
-import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {setReminders} from '@/tasks/set_reminder';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
@@ -22,18 +19,11 @@ setupNotifeeHandlers();
 
 onUpdateScreenWidgetRequested(async () => {
   bootstrap();
-  setUpdateWidgetsAlarms();
-  await updateWidgets();
-  // probably home screen needs updating too, if its visible
-  homeStore.getState().updateCurrentDate();
+  await Promise.all([setUpdateWidgetsAlarms(), updateWidgets()]);
 });
 
 AppRegistry.registerRunnable('main-app', async initialProps => {
   bootstrap();
-  setNextAdhan();
-  setReminders();
-  setUpdateWidgetsAlarms();
-  updateWidgets();
   AppRegistry.registerComponent('main-app', () =>
     BaseComponent.bind(this, App),
   );
@@ -42,10 +32,6 @@ AppRegistry.registerRunnable('main-app', async initialProps => {
 
 AppRegistry.registerRunnable('fs-alarm', async initialProps => {
   bootstrap();
-  setNextAdhan();
-  setReminders();
-  setUpdateWidgetsAlarms();
-  updateWidgets();
   AppRegistry.registerComponent('fs-alarm', () =>
     BaseComponent.bind(this, fullscreen_alarm),
   );

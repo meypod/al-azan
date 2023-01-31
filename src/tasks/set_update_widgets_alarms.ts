@@ -1,9 +1,48 @@
-import {setAlarm} from 'react-native-alarm-module';
+import {t} from '@lingui/macro';
+import notifee, {
+  TimestampTrigger,
+  TriggerType,
+  AndroidImportance,
+  AndroidCategory,
+  AndroidVisibility,
+} from '@notifee/react-native';
 import {getPrayerTimes, PrayersInOrder} from '@/adhan';
+import {
+  WIDGET_UPDATE_CHANNEL_ID,
+  WIDGET_UPDATE_CHANNEL_NAME,
+} from '@/constants/notification';
 import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
 
-export function setUpdateWidgetsAlarms() {
+async function createNotificationTrigger(channelId: string, timestamp: number) {
+  // for 00:00 updates
+  const trigger: TimestampTrigger = {
+    type: TriggerType.TIMESTAMP,
+    timestamp,
+  };
+
+  await notifee
+    .createTriggerNotification(
+      {
+        title: t`Updating widgets`,
+        android: {
+          smallIcon: 'ic_stat_name',
+          channelId,
+          category: AndroidCategory.SERVICE,
+          importance: AndroidImportance.MIN,
+          asForegroundService: false,
+          ongoing: true,
+          progress: {
+            indeterminate: true,
+          },
+        },
+      },
+      trigger,
+    )
+    .catch(console.error);
+}
+
+export async function setUpdateWidgetsAlarms() {
   let targetDate = new Date();
 
   let {LAST_WIDGET_UPDATE} = settings.getState();
@@ -19,29 +58,30 @@ export function setUpdateWidgetsAlarms() {
 
   const begginingOfNextDay = getNextDayBeginning(targetDate).valueOf();
   LAST_WIDGET_UPDATE = begginingOfNextDay;
-  // day change update
-  setAlarm({
-    timestamp: begginingOfNextDay,
-    taskName: 'update_screen_widget_task', // reuse the task name for widget module update request
-    allowedInForeground: true,
-    type: 'setExact',
-    wakeup: false,
-    keepAwake: false,
+
+  const channelId = await notifee.createChannel({
+    id: WIDGET_UPDATE_CHANNEL_ID,
+    name: WIDGET_UPDATE_CHANNEL_NAME,
+    importance: AndroidImportance.MIN,
+    visibility: AndroidVisibility.SECRET,
+    lights: false,
+    badge: false,
+    vibration: false,
   });
 
+  // for 00:00 updates
+  const tasks = [createNotificationTrigger(channelId, begginingOfNextDay)];
+
   for (const prayer of PrayersInOrder) {
-    setAlarm({
-      timestamp: prayerTimes[prayer].valueOf(),
-      taskName: 'update_screen_widget_task',
-      allowedInForeground: true,
-      type: 'setExact',
-      wakeup: false,
-      keepAwake: false,
-    });
+    tasks.push(
+      createNotificationTrigger(channelId, prayerTimes[prayer].valueOf()),
+    );
     if (prayerTimes[prayer].valueOf() > LAST_WIDGET_UPDATE) {
       LAST_WIDGET_UPDATE = prayerTimes[prayer].valueOf();
     }
   }
 
   settings.setState({LAST_WIDGET_UPDATE});
+
+  await Promise.all(tasks);
 }
