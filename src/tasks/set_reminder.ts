@@ -30,17 +30,6 @@ export async function setReminders(options?: SetReminderOptions) {
     force = false,
   } = options || {};
 
-  if (!(await canScheduleNotifications())) {
-    return;
-  }
-
-  const date = new Date();
-
-  let prayerTimes = getPrayerTimes(date);
-  let tomorrowPrayerTimes = getPrayerTimes(getNextDayBeginning(date));
-
-  if (!prayerTimes || !tomorrowPrayerTimes) return;
-
   {
     // we dont need reminderIdsToCancel out of this scope, hence the extra {}
     let reminderIdsToCancel: Array<string>;
@@ -53,6 +42,17 @@ export async function setReminders(options?: SetReminderOptions) {
       .cancelTriggerNotifications(reminderIdsToCancel)
       .catch(console.error);
   }
+
+  if (!(await canScheduleNotifications())) {
+    return;
+  }
+
+  const date = new Date();
+
+  let prayerTimes = getPrayerTimes(date);
+  let tomorrowPrayerTimes = getPrayerTimes(getNextDayBeginning(date));
+
+  if (!prayerTimes || !tomorrowPrayerTimes) return;
 
   for (const reminder of reminders.filter(r => r.enabled)) {
     let pTime = prayerTimes[reminder.prayer].getTime();
