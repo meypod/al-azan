@@ -168,11 +168,9 @@ export async function getFgSvcNotification() {
 async function handleNotification({
   detail,
   type,
-  bgEvent,
-}: Omit<NotifeeEvent, 'options'> & {bgEvent: boolean}) {
-  if (bgEvent) {
-    bootstrap();
-  }
+}: Omit<NotifeeEvent, 'options'>) {
+  bootstrap();
+
   const {notification} = detail;
   const channelId = notification?.android?.channelId || '';
 
@@ -248,13 +246,13 @@ async function handleNotification({
 
 export function setupNotifeeForegroundHandler() {
   return notifee.onForegroundEvent(({type, detail}) =>
-    handleNotification({type, detail, bgEvent: true}),
+    handleNotification({type, detail}),
   );
 }
 
 export function setupNotifeeHandlers() {
   notifee.onBackgroundEvent(({type, detail}) =>
-    handleNotification({type, detail, bgEvent: true}),
+    handleNotification({type, detail}),
   );
 
   notifee.registerForegroundService(async notification => {
