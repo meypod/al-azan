@@ -9,15 +9,17 @@ import {
   Button,
   Switch,
 } from 'native-base';
+import {memo} from 'react';
 import {translatePrayer} from '@/adhan';
 import {DeleteIcon} from '@/assets/icons/delete';
 import {EditIcon} from '@/assets/icons/edit';
 import {Reminder} from '@/store/reminder';
 
 export type ReminderItemProps = {
-  onEditPressed?: (reminderState: Reminder) => void;
-  onToggle?: (reminderState: Reminder) => void;
-  onDelete?: (reminderState: Reminder) => void;
+  onEditPress: (reminderState: Reminder) => void;
+  onChange: (reminderState: Reminder) => void;
+  onDelete: (reminderState: Reminder) => void;
+  item: Reminder;
 };
 
 export function getReminderSubtitle(reminder: Reminder) {
@@ -36,16 +38,15 @@ export function getReminderSubtitle(reminder: Reminder) {
   return subtitle;
 }
 
-export function ReminderItem(
-  options: ReminderItemProps,
-  {item}: {item: Reminder},
-) {
-  const onDelete =
-    (() => options.onDelete && options.onDelete(item)) || (() => {});
-
+function ReminderItem({
+  item,
+  onDelete = () => {},
+  onChange,
+  onEditPress,
+}: ReminderItemProps) {
   const onToggle = (state: boolean) => {
     const newReminderState = {...item, enabled: state};
-    options.onToggle && options.onToggle(newReminderState);
+    onChange(newReminderState);
   };
 
   return (
@@ -88,18 +89,14 @@ export function ReminderItem(
               <Spacer />
             )}
             <HStack>
-              <Button
-                onPress={() =>
-                  options.onEditPressed && options.onEditPressed(item)
-                }
-                variant="ghost">
+              <Button onPress={onEditPress.bind(null, item)} variant="ghost">
                 <EditIcon
                   color="coolGray.300"
                   size="xl"
                   _light={{color: 'coolGray.600'}}
                 />
               </Button>
-              <Button onPress={onDelete} variant="ghost">
+              <Button onPress={onDelete.bind(null, item)} variant="ghost">
                 <DeleteIcon color="red.500" size="xl" />
               </Button>
             </HStack>
@@ -115,3 +112,5 @@ export function ReminderItem(
     </Pressable>
   );
 }
+
+export default memo(ReminderItem);
