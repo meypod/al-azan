@@ -36,8 +36,15 @@ export async function setNextAdhan(
     return;
   }
 
+  const {
+    DELIVERED_ALARM_TIMESTAMPS,
+    SELECTED_FAJR_ADHAN_ENTRY,
+    SELECTED_ADHAN_ENTRY,
+    SAVED_ADHAN_AUDIO_ENTRIES,
+  } = settings.getState();
+
   const dismissedAlarmTS =
-    settings.getState().DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
+    DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
 
   let targetDate = new Date(dismissedAlarmTS + 10000);
 
@@ -76,9 +83,13 @@ export async function setNextAdhan(
   let sound: AudioEntry | undefined = undefined;
   if (playSound) {
     if (prayer === Prayer.Fajr) {
-      sound = settings.getState().SELECTED_FAJR_ADHAN_ENTRY as AudioEntry;
+      sound = (SELECTED_FAJR_ADHAN_ENTRY || SELECTED_ADHAN_ENTRY) as AudioEntry;
     } else {
-      sound = settings.getState().SELECTED_ADHAN_ENTRY as AudioEntry;
+      sound = SELECTED_ADHAN_ENTRY as AudioEntry;
+    }
+
+    if (!sound) {
+      sound = SAVED_ADHAN_AUDIO_ENTRIES[0] as AudioEntry;
     }
   }
 
