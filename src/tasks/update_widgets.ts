@@ -35,13 +35,13 @@ export async function updateWidgets() {
   const hijriDate = getArabicDate(now);
 
   if (settings.getState().SHOW_WIDGET) {
-    updatePermanentNotifWidget({
+    await updatePermanentNotifWidget({
       dayAndMonth,
       hijriDate,
       prayers,
     }).catch(console.error);
   } else {
-    cancelPermanentNotifWidget();
+    await cancelPermanentNotifWidget();
   }
 
   await updateScreenWidget({

@@ -312,7 +312,7 @@ export async function updatePermanentNotifWidget({
     visibility: AndroidVisibility.PUBLIC,
   });
 
-  return updateNotification({
+  await updateNotification({
     dayAndMonth,
     hijriDate,
     prayers,
