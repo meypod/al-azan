@@ -104,22 +104,21 @@ export async function setNextAdhan(
     prayer,
   };
 
-  return setPreAlarmTask({
+  await setAlarmTask(adhanOptions);
+  await setPreAlarmTask({
     ...adhanOptions,
     notifId: PRE_ADHAN_NOTIFICATION_ID,
     notifChannelId: PRE_ADHAN_CHANNEL_ID,
     notifChannelName: PRE_ADHAN_CHANNEL_NAME,
     targetAlarmNotifId: ADHAN_NOTIFICATION_ID,
-  })
-    .then(() => setAlarmTask(adhanOptions))
-    .then(() => {
-      if (!options?.noToast) {
-        const translatedPrayerName = translatePrayer(prayer);
-        let message = t`Next` + ': ' + translatedPrayerName + ',';
-        showUpcomingToast({
-          message,
-          date,
-        });
-      }
+  });
+
+  if (!options?.noToast) {
+    const translatedPrayerName = translatePrayer(prayer);
+    let message = t`Next` + ': ' + translatedPrayerName + ',';
+    showUpcomingToast({
+      message,
+      date,
     });
+  }
 }
