@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-30 22:34+0330\n"
+"POT-Creation-Date: 2023-02-01 04:08+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "90 menit"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:387
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "Tambah"
@@ -45,7 +45,7 @@ msgstr "Tambah"
 msgid "Add Custom Adhan"
 msgstr "Tambah Suara Adzan Kustom"
 
-#: src/screens/settings_reminders/index.tsx:58
+#: src/screens/settings_reminders/index.tsx:66
 msgid "Add Reminder"
 msgstr "Buat Pengingat"
 
@@ -69,7 +69,7 @@ msgstr "Pengaturan Lanjutan"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:60
 msgid "Alarms Permission"
 msgstr "Izin Alarm"
 
@@ -85,8 +85,8 @@ msgstr "Arab"
 msgid "Arabic/Persian"
 msgstr "Arab/Persia"
 
-#: src/components/audio_picker.tsx:139
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/components/audio_picker.tsx:147
+#: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
 
@@ -196,16 +196,17 @@ msgstr "Negara"
 msgid "Dark"
 msgstr "Gelap"
 
-#: src/components/audio_picker.tsx:79
+#: src/components/audio_picker.tsx:58
+#: src/components/audio_picker.tsx:87
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Bawaan"
 
-#: src/components/audio_picker.tsx:138
-#: src/components/audio_picker_item.tsx:61
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
-#: src/screens/settings_adhan/adhan_list_item.tsx:196
+#: src/components/audio_picker.tsx:146
+#: src/components/audio_picker_item.tsx:63
+#: src/screens/settings_adhan/adhan_list_item.tsx:100
+#: src/screens/settings_adhan/adhan_list_item.tsx:198
 msgid "Delete"
 msgstr "Hapus"
 
@@ -213,11 +214,11 @@ msgstr "Hapus"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa perangkat mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:193
 msgid "Deselect as Fajr Adhan"
 msgstr "Batalkan pilihan sebagai Adzan Subuh"
 
-#: src/components/audio_picker.tsx:125
+#: src/components/audio_picker.tsx:133
 msgid "Device sounds"
 msgstr "Suara perangkat"
 
@@ -234,9 +235,9 @@ msgstr "Hentikan"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Presidensi Urusan Agama Republik Turki (Diyanet)"
 
-#: src/utils/permission.ts:26
-#: src/utils/permission.ts:65
-#: src/utils/permission.ts:97
+#: src/utils/permission.ts:25
+#: src/utils/permission.ts:64
+#: src/utils/permission.ts:96
 msgid "Don't ask again"
 msgstr "Jangan tanya lagi"
 
@@ -268,7 +269,7 @@ msgstr "Kesalahan dalam memuat daftar negara"
 msgid "Error in loading search results"
 msgstr "Kesalahan dalam memuat hasil pencarian"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:85
 msgid "Error while downloading audio"
 msgstr "Kesalahan saat mengunduh audio"
 
@@ -438,8 +439,8 @@ msgid "New Reminder"
 msgstr "Buat Pengingat"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:70
-#: src/tasks/set_next_adhan.ts:108
+#: src/tasks/set_next_adhan.ts:77
+#: src/tasks/set_next_adhan.ts:119
 msgid "Next"
 msgstr "Lanjut"
 
@@ -447,8 +448,8 @@ msgstr "Lanjut"
 msgid "Next Day"
 msgstr "Hari Brkut"
 
-#: src/components/audio_picker.tsx:146
-#: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/components/audio_picker.tsx:154
+#: src/screens/settings_adhan/adhan_list_item.tsx:106
 msgid "No"
 msgstr "Tidak"
 
@@ -456,7 +457,7 @@ msgstr "Tidak"
 msgid "No Data"
 msgstr "Tidak ada data"
 
-#: src/components/audio_picker.tsx:395
+#: src/components/audio_picker.tsx:403
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Tidak ada hasil"
@@ -465,11 +466,12 @@ msgstr "Tidak ada hasil"
 msgid "None (Automatic)"
 msgstr "Tidak ada (Otomatis)"
 
-#: src/utils/permission.ts:70
+#: src/utils/permission.ts:69
 msgid "Not now"
 msgstr "Tidak sekarang"
 
-#: src/components/audio_picker.tsx:79
+#: src/components/audio_picker.tsx:58
+#: src/components/audio_picker.tsx:87
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -479,7 +481,7 @@ msgstr "Notifikasi"
 msgid "Notification & Sound"
 msgstr "Notifikasi & Suara"
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:21
 msgid "Notifications Permission"
 msgstr "Izin Pemberitahuan"
 
@@ -487,16 +489,16 @@ msgstr "Izin Pemberitahuan"
 msgid "Numbering system"
 msgstr "Sistem penomoran"
 
-#: src/utils/permission.ts:32
-#: src/utils/permission.ts:103
+#: src/utils/permission.ts:31
+#: src/utils/permission.ts:102
 msgid "Okay"
 msgstr "Oke"
 
-#: src/utils/permission.ts:62
+#: src/utils/permission.ts:61
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Pada Android 12 dan yang lebih baru, aplikasi ini juga memerlukan izin alarm agar berfungsi dengan baik, jadi Anda harus mengizinkannya juga."
 
-#: src/screens/settings_reminders/reminder_item.tsx:33
+#: src/screens/settings_reminders/reminder_item.tsx:35
 msgid "Once"
 msgstr "Sekali"
 
@@ -529,7 +531,7 @@ msgstr "Opsi"
 msgid "Paste"
 msgstr "Tempel"
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:92
 msgid "Phone State Permission"
 msgstr "Izin Status Telepon"
 
@@ -559,7 +561,7 @@ msgstr "Mengacu pada metode ISNA"
 msgid "Reminder"
 msgstr "Pengingat"
 
-#: src/components/audio_picker.tsx:84
+#: src/components/audio_picker.tsx:92
 msgid "Repeat"
 msgstr "Ulangi"
 
@@ -579,7 +581,7 @@ msgstr "Perangkat Samsung memiliki Power Manajer kustom mereka sendiri yang dise
 msgid "Saturday"
 msgstr "Sabtu"
 
-#: src/components/audio_picker.tsx:373
+#: src/components/audio_picker.tsx:381
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Pencarian"
@@ -588,7 +590,7 @@ msgstr "Pencarian"
 msgid "Secondary Calendar"
 msgstr "Kalender Sekunder"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:192
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Select as Fajr Adhan"
 msgstr "Pilih sebagai Adzan Subuh"
 
@@ -621,7 +623,7 @@ msgstr ""
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:182
+#: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
@@ -637,11 +639,11 @@ msgstr "Tampilkan pemberitahuan berikutnya?"
 msgid "Show notification widget?"
 msgstr "Tampilkan widget notifikasi?"
 
-#: src/utils/permission.ts:74
+#: src/utils/permission.ts:73
 msgid "Show settings"
 msgstr "Tampilkan pengaturan"
 
-#: src/components/audio_picker.tsx:93
+#: src/components/audio_picker.tsx:101
 msgid "Silent"
 msgstr "Diam"
 
@@ -736,11 +738,11 @@ msgstr "Format waktu"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
-#: src/utils/permission.ts:23
+#: src/utils/permission.ts:22
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Untuk melihat pemberitahuan tentang adzan, kami memerlukan izin Anda."
 
-#: src/utils/permission.ts:94
+#: src/utils/permission.ts:93
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Untuk berhenti memainkan adzan ketika Anda menerima panggilan, kami perlu membaca status telepon Anda. tidak mengizinkan izin ini hanya akan menonaktifkan fitur tersebut."
 
@@ -785,6 +787,10 @@ msgstr "Tidak didukung"
 msgid "Upcoming alarm"
 msgstr "Alarm selanjutnya"
 
+#: src/tasks/set_update_widgets_alarms.ts:28
+msgid "Updating widgets"
+msgstr "Memperbarui widget"
+
 #: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
 msgstr "Gunakan format 24 Jam"
@@ -817,8 +823,8 @@ msgstr "Rabu"
 msgid "Welcome"
 msgstr "Selamat Datang!"
 
-#: src/components/audio_picker.tsx:151
-#: src/screens/settings_adhan/adhan_list_item.tsx:108
+#: src/components/audio_picker.tsx:159
+#: src/screens/settings_adhan/adhan_list_item.tsx:110
 msgid "Yes"
 msgstr "Ya"
 
@@ -838,7 +844,7 @@ msgstr "Menyembunyikan waktu sholat agar tidak ditampilkan di layar utama:"
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Menyembunyikan waktu sholat agar tidak tampil pada widget:"
 
-#: src/components/audio_picker.tsx:110
+#: src/components/audio_picker.tsx:118
 msgid "Your sounds"
 msgstr "Suara Anda"
 
@@ -935,7 +941,7 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:116
+#: src/components/audio_picker.tsx:124
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
 msgstr "Muazin"
@@ -988,11 +994,11 @@ msgstr "Terbenam"
 msgid "widget_settings"
 msgstr "Pengaturan Widget"
 
-#: src/screens/settings_reminders/reminder_item.tsx:30
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} menit setelah {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:29
+#: src/screens/settings_reminders/reminder_item.tsx:31
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} menit sebelum {prayer}"
 

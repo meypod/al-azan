@@ -41,7 +41,7 @@ msgstr "90 min"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:387
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "Add"
@@ -51,7 +51,7 @@ msgstr "Add"
 msgid "Add Custom Adhan"
 msgstr "Add Custom Adhan"
 
-#: src/screens/settings_reminders/index.tsx:58
+#: src/screens/settings_reminders/index.tsx:66
 msgid "Add Reminder"
 msgstr "Add Reminder"
 
@@ -75,7 +75,7 @@ msgstr "Advanced Calculation Settings"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:60
 msgid "Alarms Permission"
 msgstr "Alarms Permission"
 
@@ -91,8 +91,8 @@ msgstr "Arabic"
 msgid "Arabic/Persian"
 msgstr "Arabic/Persian"
 
-#: src/components/audio_picker.tsx:139
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/components/audio_picker.tsx:147
+#: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
 
@@ -202,16 +202,17 @@ msgstr "Country"
 msgid "Dark"
 msgstr "Dark"
 
-#: src/components/audio_picker.tsx:79
+#: src/components/audio_picker.tsx:58
+#: src/components/audio_picker.tsx:87
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Default"
 
-#: src/components/audio_picker.tsx:138
-#: src/components/audio_picker_item.tsx:61
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
-#: src/screens/settings_adhan/adhan_list_item.tsx:196
+#: src/components/audio_picker.tsx:146
+#: src/components/audio_picker_item.tsx:63
+#: src/screens/settings_adhan/adhan_list_item.tsx:100
+#: src/screens/settings_adhan/adhan_list_item.tsx:198
 msgid "Delete"
 msgstr "Delete"
 
@@ -219,11 +220,11 @@ msgstr "Delete"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:193
 msgid "Deselect as Fajr Adhan"
 msgstr "Deselect as Fajr Adhan"
 
-#: src/components/audio_picker.tsx:125
+#: src/components/audio_picker.tsx:133
 msgid "Device sounds"
 msgstr "Device sounds"
 
@@ -240,9 +241,9 @@ msgstr "Dismiss"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
-#: src/utils/permission.ts:26
-#: src/utils/permission.ts:65
-#: src/utils/permission.ts:97
+#: src/utils/permission.ts:25
+#: src/utils/permission.ts:64
+#: src/utils/permission.ts:96
 msgid "Don't ask again"
 msgstr "Don't ask again"
 
@@ -274,7 +275,7 @@ msgstr "Error in loading countries"
 msgid "Error in loading search results"
 msgstr "Error in loading search results"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:85
 msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
@@ -444,8 +445,8 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:70
-#: src/tasks/set_next_adhan.ts:108
+#: src/tasks/set_next_adhan.ts:77
+#: src/tasks/set_next_adhan.ts:119
 msgid "Next"
 msgstr "Next"
 
@@ -453,8 +454,8 @@ msgstr "Next"
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/components/audio_picker.tsx:146
-#: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/components/audio_picker.tsx:154
+#: src/screens/settings_adhan/adhan_list_item.tsx:106
 msgid "No"
 msgstr "No"
 
@@ -462,7 +463,7 @@ msgstr "No"
 msgid "No Data"
 msgstr "No Data"
 
-#: src/components/audio_picker.tsx:395
+#: src/components/audio_picker.tsx:403
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "No Results"
@@ -471,11 +472,12 @@ msgstr "No Results"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/utils/permission.ts:70
+#: src/utils/permission.ts:69
 msgid "Not now"
 msgstr "Not now"
 
-#: src/components/audio_picker.tsx:79
+#: src/components/audio_picker.tsx:58
+#: src/components/audio_picker.tsx:87
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -485,7 +487,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:21
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -493,16 +495,16 @@ msgstr "Notifications Permission"
 msgid "Numbering system"
 msgstr "Numbering system"
 
-#: src/utils/permission.ts:32
-#: src/utils/permission.ts:103
+#: src/utils/permission.ts:31
+#: src/utils/permission.ts:102
 msgid "Okay"
 msgstr "Okay"
 
-#: src/utils/permission.ts:62
+#: src/utils/permission.ts:61
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 
-#: src/screens/settings_reminders/reminder_item.tsx:33
+#: src/screens/settings_reminders/reminder_item.tsx:35
 msgid "Once"
 msgstr "Once"
 
@@ -535,7 +537,7 @@ msgstr "Options"
 msgid "Paste"
 msgstr "Paste"
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:92
 msgid "Phone State Permission"
 msgstr "Phone State Permission"
 
@@ -565,7 +567,7 @@ msgstr "Referred to as the ISNA method"
 msgid "Reminder"
 msgstr "Reminder"
 
-#: src/components/audio_picker.tsx:84
+#: src/components/audio_picker.tsx:92
 msgid "Repeat"
 msgstr "Repeat"
 
@@ -589,7 +591,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
-#: src/components/audio_picker.tsx:373
+#: src/components/audio_picker.tsx:381
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Search"
@@ -598,7 +600,7 @@ msgstr "Search"
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:192
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
 
@@ -632,7 +634,7 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:182
+#: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
@@ -648,11 +650,11 @@ msgstr "Show next in notification?"
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
-#: src/utils/permission.ts:74
+#: src/utils/permission.ts:73
 msgid "Show settings"
 msgstr "Show settings"
 
-#: src/components/audio_picker.tsx:93
+#: src/components/audio_picker.tsx:101
 msgid "Silent"
 msgstr "Silent"
 
@@ -752,11 +754,11 @@ msgstr "Time format"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
-#: src/utils/permission.ts:23
+#: src/utils/permission.ts:22
 msgid "To see notifications about adhan, we need your permission."
 msgstr "To see notifications about adhan, we need your permission."
 
-#: src/utils/permission.ts:94
+#: src/utils/permission.ts:93
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 
@@ -801,6 +803,10 @@ msgstr "Unsupported"
 msgid "Upcoming alarm"
 msgstr "Upcoming alarm"
 
+#: src/tasks/set_update_widgets_alarms.ts:28
+msgid "Updating widgets"
+msgstr "Updating widgets"
+
 #: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
 msgstr "Use 24-Hour format"
@@ -833,8 +839,8 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/components/audio_picker.tsx:151
-#: src/screens/settings_adhan/adhan_list_item.tsx:108
+#: src/components/audio_picker.tsx:159
+#: src/screens/settings_adhan/adhan_list_item.tsx:110
 msgid "Yes"
 msgstr "Yes"
 
@@ -854,7 +860,7 @@ msgstr "You can hide prayer times you don't want to see in the main screen here:
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "You can hide prayer times you don't want to see in the widget here:"
 
-#: src/components/audio_picker.tsx:110
+#: src/components/audio_picker.tsx:118
 msgid "Your sounds"
 msgstr "Your sounds"
 
@@ -954,7 +960,7 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:116
+#: src/components/audio_picker.tsx:124
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
 msgstr "Muezzin"
@@ -1007,11 +1013,11 @@ msgstr "Sunset"
 msgid "widget_settings"
 msgstr "Widget Settings"
 
-#: src/screens/settings_reminders/reminder_item.tsx:30
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} min after {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:29
+#: src/screens/settings_reminders/reminder_item.tsx:31
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} min before {prayer}"
 

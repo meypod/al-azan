@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-01-30 22:34+0330\n"
+"POT-Creation-Date: 2023-02-01 04:08+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "90 min"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:387
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "Ajouter"
@@ -45,7 +45,7 @@ msgstr "Ajouter"
 msgid "Add Custom Adhan"
 msgstr "Ajouter un Adhan personnalisé"
 
-#: src/screens/settings_reminders/index.tsx:58
+#: src/screens/settings_reminders/index.tsx:66
 msgid "Add Reminder"
 msgstr "Ajouter un rappel"
 
@@ -69,7 +69,7 @@ msgstr "Paramètres de calcul avancés"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:60
 msgid "Alarms Permission"
 msgstr "Autorisation des alarmes"
 
@@ -85,8 +85,8 @@ msgstr "Arabe"
 msgid "Arabic/Persian"
 msgstr "Arabe/Persan"
 
-#: src/components/audio_picker.tsx:139
-#: src/screens/settings_adhan/adhan_list_item.tsx:99
+#: src/components/audio_picker.tsx:147
+#: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Etes-vous sûr de vouloir supprimer \"{0}\" ?"
 
@@ -196,16 +196,17 @@ msgstr "Pays"
 msgid "Dark"
 msgstr "Sombre"
 
-#: src/components/audio_picker.tsx:79
+#: src/components/audio_picker.tsx:58
+#: src/components/audio_picker.tsx:87
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Défaut"
 
-#: src/components/audio_picker.tsx:138
-#: src/components/audio_picker_item.tsx:61
-#: src/screens/settings_adhan/adhan_list_item.tsx:98
-#: src/screens/settings_adhan/adhan_list_item.tsx:196
+#: src/components/audio_picker.tsx:146
+#: src/components/audio_picker_item.tsx:63
+#: src/screens/settings_adhan/adhan_list_item.tsx:100
+#: src/screens/settings_adhan/adhan_list_item.tsx:198
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -213,11 +214,11 @@ msgstr "Supprimer"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "En fonction de votre appareil et de la version d'Android, il peut arriver que votre appareil arrête l'application en arrière-plan pour économiser la batterie. Cela peut empêcher le fonctionnement des alarmes et notifications."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:191
+#: src/screens/settings_adhan/adhan_list_item.tsx:193
 msgid "Deselect as Fajr Adhan"
 msgstr "Désélectionner comme Adhan du Fajr"
 
-#: src/components/audio_picker.tsx:125
+#: src/components/audio_picker.tsx:133
 msgid "Device sounds"
 msgstr "Sons de l'appareil"
 
@@ -234,9 +235,9 @@ msgstr "Passer"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turquie"
 
-#: src/utils/permission.ts:26
-#: src/utils/permission.ts:65
-#: src/utils/permission.ts:97
+#: src/utils/permission.ts:25
+#: src/utils/permission.ts:64
+#: src/utils/permission.ts:96
 msgid "Don't ask again"
 msgstr "Ne demandez pas à nouveau"
 
@@ -268,7 +269,7 @@ msgstr "Erreur dans le chargement des pays"
 msgid "Error in loading search results"
 msgstr "Erreur dans le chargement des résultats de recherche"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:83
+#: src/screens/settings_adhan/adhan_list_item.tsx:85
 msgid "Error while downloading audio"
 msgstr "Erreur lors du téléchargement d'un fichier audio"
 
@@ -438,8 +439,8 @@ msgid "New Reminder"
 msgstr "Nouveau rappel"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:70
-#: src/tasks/set_next_adhan.ts:108
+#: src/tasks/set_next_adhan.ts:77
+#: src/tasks/set_next_adhan.ts:119
 msgid "Next"
 msgstr "Suivant"
 
@@ -447,8 +448,8 @@ msgstr "Suivant"
 msgid "Next Day"
 msgstr "Jour suivant"
 
-#: src/components/audio_picker.tsx:146
-#: src/screens/settings_adhan/adhan_list_item.tsx:104
+#: src/components/audio_picker.tsx:154
+#: src/screens/settings_adhan/adhan_list_item.tsx:106
 msgid "No"
 msgstr "Non"
 
@@ -456,7 +457,7 @@ msgstr "Non"
 msgid "No Data"
 msgstr "Pas de données"
 
-#: src/components/audio_picker.tsx:395
+#: src/components/audio_picker.tsx:403
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Aucun résultat"
@@ -465,11 +466,12 @@ msgstr "Aucun résultat"
 msgid "None (Automatic)"
 msgstr "Aucun (automatique)"
 
-#: src/utils/permission.ts:70
+#: src/utils/permission.ts:69
 msgid "Not now"
 msgstr "Pas maintenant"
 
-#: src/components/audio_picker.tsx:79
+#: src/components/audio_picker.tsx:58
+#: src/components/audio_picker.tsx:87
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -479,7 +481,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification et son"
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:21
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -487,16 +489,16 @@ msgstr "Notifications Permission"
 msgid "Numbering system"
 msgstr "Système de numérotation"
 
-#: src/utils/permission.ts:32
-#: src/utils/permission.ts:103
+#: src/utils/permission.ts:31
+#: src/utils/permission.ts:102
 msgid "Okay"
 msgstr "D'accord"
 
-#: src/utils/permission.ts:62
+#: src/utils/permission.ts:61
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Sur Android 12 et plus récent, l'application a également besoin de l'autorisation des alarmes pour fonctionner correctement, vous devez donc l'autoriser également."
 
-#: src/screens/settings_reminders/reminder_item.tsx:33
+#: src/screens/settings_reminders/reminder_item.tsx:35
 msgid "Once"
 msgstr "Une fois"
 
@@ -529,7 +531,7 @@ msgstr "Options"
 msgid "Paste"
 msgstr "Coller"
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:92
 msgid "Phone State Permission"
 msgstr "Permission de l'État du téléphone"
 
@@ -559,7 +561,7 @@ msgstr "Appelée la méthode ISNA"
 msgid "Reminder"
 msgstr "Rappel"
 
-#: src/components/audio_picker.tsx:84
+#: src/components/audio_picker.tsx:92
 msgid "Repeat"
 msgstr "Répéter"
 
@@ -583,7 +585,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Samedi"
 
-#: src/components/audio_picker.tsx:373
+#: src/components/audio_picker.tsx:381
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Recherche"
@@ -592,7 +594,7 @@ msgstr "Recherche"
 msgid "Secondary Calendar"
 msgstr "Calendrier secondaire"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:192
+#: src/screens/settings_adhan/adhan_list_item.tsx:194
 msgid "Select as Fajr Adhan"
 msgstr "Sélectionner comme Adhan du Fajr"
 
@@ -626,7 +628,7 @@ msgstr "Shia Ithna Ashari, Institut Leva, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institut de géophysique, Université de Téhéran"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:182
+#: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "Afficher les options pour l'Adhan"
 
@@ -642,11 +644,11 @@ msgstr "Montrer le prochain dans la notification ?"
 msgid "Show notification widget?"
 msgstr "Afficher le widget de notification ?"
 
-#: src/utils/permission.ts:74
+#: src/utils/permission.ts:73
 msgid "Show settings"
 msgstr "Afficher les paramètres"
 
-#: src/components/audio_picker.tsx:93
+#: src/components/audio_picker.tsx:101
 msgid "Silent"
 msgstr "Silencieux"
 
@@ -746,11 +748,11 @@ msgstr "Format de l'heure"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez utiliser le bouton \"Trouver ma position\", ou utiliser la recherche par pays et ville/région, ou encore entrer vos coordonnées manuellement."
 
-#: src/utils/permission.ts:23
+#: src/utils/permission.ts:22
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Pour voir les notifications concernant l'adhan, nous avons besoin de votre permission."
 
-#: src/utils/permission.ts:94
+#: src/utils/permission.ts:93
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Pour arrêter la lecture de l'adhan lorsque vous recevez un appel, nous devons lire l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
 
@@ -795,6 +797,10 @@ msgstr "Non pris en charge"
 msgid "Upcoming alarm"
 msgstr "Alarme à venir"
 
+#: src/tasks/set_update_widgets_alarms.ts:28
+msgid "Updating widgets"
+msgstr "Mise à jour des widgets"
+
 #: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
 msgstr "Utiliser le format 24 heures"
@@ -827,8 +833,8 @@ msgstr "Mercredi"
 msgid "Welcome"
 msgstr "Bienvenue sur"
 
-#: src/components/audio_picker.tsx:151
-#: src/screens/settings_adhan/adhan_list_item.tsx:108
+#: src/components/audio_picker.tsx:159
+#: src/screens/settings_adhan/adhan_list_item.tsx:110
 msgid "Yes"
 msgstr "Oui"
 
@@ -848,7 +854,7 @@ msgstr "Vous pouvez masquer ici les heures de prière que vous ne souhaitez pas 
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Vous pouvez masquer les heures de prière que vous ne voulez pas voir dans le widget ici :"
 
-#: src/components/audio_picker.tsx:110
+#: src/components/audio_picker.tsx:118
 msgid "Your sounds"
 msgstr "Vos sons"
 
@@ -948,7 +954,7 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:116
+#: src/components/audio_picker.tsx:124
 #: src/navigation/types.ts:54
 msgid "muezzin_settings"
 msgstr "Muezzin"
@@ -1001,11 +1007,11 @@ msgstr "Coucher de soleil"
 msgid "widget_settings"
 msgstr "Paramètres des widgets"
 
-#: src/screens/settings_reminders/reminder_item.tsx:30
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} min après {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:29
+#: src/screens/settings_reminders/reminder_item.tsx:31
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} min avant {prayer}"
 
