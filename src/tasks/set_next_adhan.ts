@@ -43,10 +43,9 @@ export async function setNextAdhan(
     SAVED_ADHAN_AUDIO_ENTRIES,
   } = settings.getState();
 
-  const dismissedAlarmTS =
-    DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
+  const deliveredTS = DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
 
-  let targetDate = new Date(dismissedAlarmTS + 10000);
+  let targetDate = new Date(deliveredTS + 10000);
 
   if (targetDate.valueOf() < Date.now()) {
     targetDate = new Date();
@@ -60,7 +59,7 @@ export async function setNextAdhan(
 
   const {date, prayer, playSound} = nextPrayer!;
 
-  if (dismissedAlarmTS >= date.valueOf()) return;
+  if (deliveredTS >= date.valueOf()) return;
 
   const showNextPrayerInfo = alarmSettings.getState().SHOW_NEXT_PRAYER_TIME;
 
