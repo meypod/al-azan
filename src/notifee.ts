@@ -244,6 +244,12 @@ async function handleNotification({
     } else {
       await cancelNotifOnDismissed({type, detail, options});
     }
+  } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
+    if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
+      console.log('UPDATING ?!', notification?.id);
+      await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
+      await notifee.cancelNotification(notification!.id!).catch(console.error);
+    }
   }
 }
 
@@ -284,8 +290,6 @@ export function setupNotifeeHandlers() {
             .finally(() => finishAndRemoveTask());
         }
       }
-    } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
-      await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
     }
 
     return Promise.resolve();
