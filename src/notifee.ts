@@ -192,14 +192,14 @@ async function handleNotification({
     ) {
       if (
         settings.getState().DELIVERED_ALARM_TIMESTAMPS[options.notifId] ===
-        options.date.valueOf()
+        options.date.getTime()
       ) {
         // we already have processed this notification
         return;
       }
       settings
         .getState()
-        .saveTimestamp(options.notifId, options.date.valueOf());
+        .saveTimestamp(options.notifId, options.date.getTime());
 
       if (
         (type === EventType.FG_ALREADY_EXIST || type === EventType.UNKNOWN) &&
@@ -246,8 +246,13 @@ async function handleNotification({
     }
   } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
     if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
+      const notifId = notification!.id!;
+      const triggerDate = notification?.data?.timestamp as number | undefined;
+      if (triggerDate) {
+        settings.getState().saveTimestamp(notifId, triggerDate);
+      }
       await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
-      await notifee.cancelNotification(notification!.id!).catch(console.error);
+      await notifee.cancelNotification(notifId).catch(console.error);
     }
   }
 }

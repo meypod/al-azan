@@ -51,8 +51,6 @@ export type SettingsStore = {
   CALC_SETTINGS_HASH: string;
   ALARM_SETTINGS_HASH: string;
   REMINDER_SETTINGS_HASH: string;
-  /** timestamp of when the alarm for updating widget is going to Or was fired */
-  LAST_WIDGET_UPDATE: number;
   IS_PLAYING_AUDIO: boolean;
   /** permission related */
   DONT_ASK_PERMISSION_NOTIFICATIONS: boolean;
@@ -111,7 +109,6 @@ export const settings = createStore<SettingsStore>()(
       ALARM_SETTINGS_HASH: '',
       REMINDER_SETTINGS_HASH: '',
       DELIVERED_ALARM_TIMESTAMPS: {},
-      LAST_WIDGET_UPDATE: 0,
       IS_PLAYING_AUDIO: false,
       DONT_ASK_PERMISSION_NOTIFICATIONS: false,
       DONT_ASK_PERMISSION_ALARM: false,
@@ -242,7 +239,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 6,
+      version: 7,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -259,7 +256,7 @@ export const settings = createStore<SettingsStore>()(
               REMINDERS: (persistedState as any)['REMINDERS'],
             });
             delete (persistedState as any)['REMINDERS'];
-            (persistedState as SettingsStore)['LAST_WIDGET_UPDATE'] = (
+            (persistedState as any)['LAST_WIDGET_UPDATE'] = (
               persistedState as any
             )['LAST_ALARM_DATE_VALUEOF'];
             delete (persistedState as any)['LAST_ALARM_DATE_VALUEOF'];
@@ -301,6 +298,8 @@ export const settings = createStore<SettingsStore>()(
                 entry.internal = true;
               }
             }
+          case 6:
+            delete (persistedState as any)['LAST_WIDGET_UPDATE'];
             break;
         }
         /* eslint-enable no-fallthrough */

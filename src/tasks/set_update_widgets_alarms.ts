@@ -6,15 +6,21 @@ import notifee, {
   AndroidCategory,
   AndroidVisibility,
 } from '@notifee/react-native';
-import {getPrayerTimes, PrayersInOrder} from '@/adhan';
+import {getPrayerTimes} from '@/adhan';
 import {
   WIDGET_UPDATE_CHANNEL_ID,
   WIDGET_UPDATE_CHANNEL_NAME,
+  WIDGET_UPDATE_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
 
-async function createNotificationTrigger(channelId: string, timestamp: number) {
+async function createNotificationTrigger(options: {
+  channelId: string;
+  timestamp: number;
+  notificationId: string;
+}) {
+  const {channelId, notificationId, timestamp} = options;
   // for 00:00 updates
   const trigger: TimestampTrigger = {
     type: TriggerType.TIMESTAMP,
@@ -25,6 +31,7 @@ async function createNotificationTrigger(channelId: string, timestamp: number) {
   await notifee
     .createTriggerNotification(
       {
+        id: notificationId,
         title: t`Updating widgets`,
         android: {
           smallIcon: 'ic_stat_name',
@@ -33,6 +40,9 @@ async function createNotificationTrigger(channelId: string, timestamp: number) {
           importance: AndroidImportance.MIN,
           ongoing: true,
         },
+        data: {
+          timestamp,
+        },
       },
       trigger,
     )
@@ -40,21 +50,23 @@ async function createNotificationTrigger(channelId: string, timestamp: number) {
 }
 
 export async function setUpdateWidgetsAlarms() {
-  let nowDate = new Date();
+  const deliveredTS =
+    settings.getState().DELIVERED_ALARM_TIMESTAMPS[
+      WIDGET_UPDATE_NOTIFICATION_ID
+    ] || 0;
 
-  let {LAST_WIDGET_UPDATE} = settings.getState();
+  let targetDate = new Date(deliveredTS + 10000);
 
-  // when the last alarm goes off, it gets past this if
-  // because till the last alarm, this condition always returns
-  // so that we dont end up setting many alarms
-  if (nowDate.getTime() < LAST_WIDGET_UPDATE) return;
+  if (targetDate.getTime() < Date.now()) {
+    targetDate = new Date();
+  }
 
-  let prayerTimes = getPrayerTimes(nowDate);
+  const nextPrayer = getPrayerTimes(targetDate)?.nextPrayer({
+    useSettings: false,
+    checkNextDay: true,
+  });
 
-  if (!prayerTimes) return; // cant get prayer times to set alarms
-
-  const begginingOfNextDay = getNextDayBeginning(nowDate).getTime();
-  LAST_WIDGET_UPDATE = begginingOfNextDay;
+  if (!nextPrayer) return;
 
   const channelId = await notifee.createChannel({
     id: WIDGET_UPDATE_CHANNEL_ID,
@@ -66,21 +78,20 @@ export async function setUpdateWidgetsAlarms() {
     vibration: false,
   });
 
-  // for 00:00 updates
-  const tasks = [createNotificationTrigger(channelId, begginingOfNextDay)];
+  const begginingOfNextDay = getNextDayBeginning(new Date()).getTime();
 
-  for (const prayer of PrayersInOrder) {
-    if (prayerTimes[prayer].getTime() > nowDate.getTime()) {
-      tasks.push(
-        createNotificationTrigger(channelId, prayerTimes[prayer].valueOf()),
-      );
-      if (prayerTimes[prayer].valueOf() > LAST_WIDGET_UPDATE) {
-        LAST_WIDGET_UPDATE = prayerTimes[prayer].valueOf();
-      }
-    }
-  }
-
-  settings.setState({LAST_WIDGET_UPDATE});
-
-  await Promise.all(tasks);
+  await Promise.all([
+    // for 00:00 updates
+    createNotificationTrigger({
+      channelId,
+      timestamp: begginingOfNextDay,
+      notificationId: WIDGET_UPDATE_NOTIFICATION_ID + '-nextday',
+    }),
+    // for next prayer
+    createNotificationTrigger({
+      channelId,
+      timestamp: nextPrayer.date.getTime(),
+      notificationId: WIDGET_UPDATE_NOTIFICATION_ID,
+    }),
+  ]);
 }
