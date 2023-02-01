@@ -47,7 +47,7 @@ export async function setNextAdhan(
 
   let targetDate = new Date(deliveredTS + 10000);
 
-  if (targetDate.valueOf() < Date.now()) {
+  if (targetDate.getTime() < Date.now()) {
     targetDate = new Date();
   }
 
@@ -55,11 +55,15 @@ export async function setNextAdhan(
     useSettings: true,
     checkNextDays: true,
   });
-  if (!nextPrayer) return;
+  if (!nextPrayer) {
+    return;
+  }
 
   const {date, prayer, playSound} = nextPrayer!;
 
-  if (deliveredTS >= date.valueOf()) return;
+  if (deliveredTS >= date.getTime()) {
+    return;
+  }
 
   const showNextPrayerInfo = alarmSettings.getState().SHOW_NEXT_PRAYER_TIME;
 

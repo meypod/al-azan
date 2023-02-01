@@ -63,9 +63,6 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     },
   };
 
-  // to replace the notification settings
-  await notifee.cancelTriggerNotification(notifId).catch(console.error);
-
   const intrusive = isIntrusive(sound);
   const silent = isSilent(sound);
 
