@@ -246,7 +246,6 @@ async function handleNotification({
     }
   } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
     if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
-      console.log('UPDATING ?!', notification?.id);
       await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
       await notifee.cancelNotification(notification!.id!).catch(console.error);
     }
