@@ -38,9 +38,14 @@ export async function setReminders(options?: SetReminderOptions) {
     } else {
       reminderIdsToCancel = reminders.filter(r => !r.enabled).map(r => r.id);
     }
-    await notifee
-      .cancelTriggerNotifications(reminderIdsToCancel)
-      .catch(console.error);
+    await Promise.all([
+      notifee
+        .cancelAllNotifications([
+          ...reminderIdsToCancel,
+          ...reminderIdsToCancel.map(id => 'pre-' + id),
+        ])
+        .catch(console.error),
+    ]);
   }
 
   if (!(await canScheduleNotifications())) {
