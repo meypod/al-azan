@@ -26,7 +26,7 @@ import {
   updateNotification,
   UpdateWidgetOptions,
 } from '@/modules/notification_widget';
-import {playAudio, stopAdhan} from '@/services/audio_service';
+import {playAudio, stopAudio} from '@/services/audio_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
@@ -51,7 +51,7 @@ export async function cancelAlarmNotif({
   replaceWithNormal,
 }: CancelNotifOptions) {
   if (!isSilent(options?.sound)) {
-    await stopAdhan().catch(console.error);
+    await stopAudio().catch(console.error);
     await notifee.stopForegroundService().catch(console.error);
   }
 

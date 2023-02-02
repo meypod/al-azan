@@ -17,7 +17,7 @@ export async function playAudio(audio: AudioEntry) {
   return result;
 }
 
-export async function stopAdhan() {
+export async function stopAudio() {
   await stop();
   settings.setState({IS_PLAYING_AUDIO: false});
   await destroy();
