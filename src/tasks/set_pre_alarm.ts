@@ -39,6 +39,7 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
   const trigger: TimestampTrigger = {
     type: TriggerType.TIMESTAMP,
     timestamp: triggerTs,
+    alarmManager: true,
   };
 
   await notifee.createTriggerNotification(

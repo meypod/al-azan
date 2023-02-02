@@ -26,7 +26,7 @@ import {
   updateNotification,
   UpdateWidgetOptions,
 } from '@/modules/notification_widget';
-import {playAudio, stopAdhan} from '@/services/audio_service';
+import {playAudio, stopAudio} from '@/services/audio_service';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
@@ -51,7 +51,7 @@ export async function cancelAlarmNotif({
   replaceWithNormal,
 }: CancelNotifOptions) {
   if (!isSilent(options?.sound)) {
-    await stopAdhan().catch(console.error);
+    await stopAudio().catch(console.error);
     await notifee.stopForegroundService().catch(console.error);
   }
 
@@ -65,7 +65,7 @@ export async function cancelAlarmNotif({
     await notifee
       .displayNotification({
         ...notification,
-        id: notification.id + '-remains',
+        id: undefined, // to assign a unique id to it
         android: {
           ...notification.android,
           actions: undefined,
@@ -110,46 +110,9 @@ export function getAlarmOptions(notification: Notification | undefined) {
 export async function getSecheduledAlarmOptions(targetAlarmNotifId: string) {
   const scheduledNotif = await notifee
     .getTriggerNotifications()
-    .then(
-      notifs => notifs.filter(n => n.notification.id === targetAlarmNotifId)[0],
-    )
+    .then(notifs => notifs.find(n => n.notification.id === targetAlarmNotifId))
     .catch(console.error);
   return getAlarmOptions(scheduledNotif?.notification);
-}
-
-export async function cancelNotifOnDismissed({
-  detail,
-  options,
-  type,
-}: NotifeeEvent) {
-  if (type === EventType.TRIGGER_NOTIFICATION_CREATED) return;
-  const {pressAction} = detail;
-
-  if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
-    await cancelAlarmNotif({notification: detail.notification, options});
-  } else if (pressAction?.id === 'cancel_alarm') {
-    // 'cancel_alarm' only exists on a pre-alarm notification
-    const scheduledAlarmOptions = await getSecheduledAlarmOptions(
-      (options as SetPreAlarmTaskOptions).targetAlarmNotifId,
-    );
-    if (scheduledAlarmOptions) {
-      // save date of upcoming alarm to prevent setting alarm/prealarm before it
-      settings
-        .getState()
-        .saveTimestamp(
-          scheduledAlarmOptions.notifId,
-          scheduledAlarmOptions.date.valueOf(),
-        );
-
-      await notifee.cancelNotification(scheduledAlarmOptions.notifId);
-
-      if ((scheduledAlarmOptions as Pick<Reminder, 'once'>).once) {
-        reminderSettings.getState().disableReminder({
-          id: scheduledAlarmOptions.notifId,
-        });
-      }
-    }
-  }
 }
 
 export async function getFgSvcNotification() {
@@ -241,8 +204,42 @@ async function handleNotification({
         }
         await setReminders();
       }
-    } else {
-      await cancelNotifOnDismissed({type, detail, options});
+    } else if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
+      const {pressAction} = detail;
+
+      if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
+        await cancelAlarmNotif({notification: detail.notification, options});
+      } else if (pressAction?.id === 'cancel_alarm') {
+        // 'cancel_alarm' only exists on a pre-alarm notification
+        const scheduledAlarmOptions = await getSecheduledAlarmOptions(
+          (options as SetPreAlarmTaskOptions).targetAlarmNotifId,
+        );
+
+        if (scheduledAlarmOptions) {
+          await notifee.cancelNotification(scheduledAlarmOptions.notifId);
+
+          // save date of upcoming alarm to prevent setting alarm/prealarm before it
+          settings
+            .getState()
+            .saveTimestamp(
+              scheduledAlarmOptions.notifId,
+              scheduledAlarmOptions.date.getTime(),
+            );
+
+          if (scheduledAlarmOptions.notifChannelId === ADHAN_CHANNEL_ID) {
+            await setNextAdhan();
+          } else if (
+            scheduledAlarmOptions.notifChannelId === REMINDER_CHANNEL_ID
+          ) {
+            if ((scheduledAlarmOptions as Pick<Reminder, 'once'>).once) {
+              reminderSettings.getState().disableReminder({
+                id: scheduledAlarmOptions.notifId,
+              });
+            }
+            await setReminders();
+          }
+        }
+      }
     }
   } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
     if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
@@ -283,7 +280,7 @@ export function setupNotifeeHandlers() {
         const isDnd = await isDndActive();
 
         if (!isDnd || canBypassDnd) {
-          return playAudio(options!.sound!)
+          await playAudio(options!.sound!)
             .then(interrupted =>
               cancelAlarmNotif({
                 notification,
@@ -295,8 +292,6 @@ export function setupNotifeeHandlers() {
         }
       }
     }
-
-    return Promise.resolve();
   });
 }
 

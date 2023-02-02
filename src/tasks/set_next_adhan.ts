@@ -47,7 +47,7 @@ export async function setNextAdhan(
 
   let targetDate = new Date(deliveredTS + 10000);
 
-  if (targetDate.valueOf() < Date.now()) {
+  if (targetDate.getTime() < Date.now()) {
     targetDate = new Date();
   }
 
@@ -55,11 +55,15 @@ export async function setNextAdhan(
     useSettings: true,
     checkNextDays: true,
   });
-  if (!nextPrayer) return;
+  if (!nextPrayer) {
+    return;
+  }
 
   const {date, prayer, playSound} = nextPrayer!;
 
-  if (deliveredTS >= date.valueOf()) return;
+  if (deliveredTS >= date.getTime()) {
+    return;
+  }
 
   const showNextPrayerInfo = alarmSettings.getState().SHOW_NEXT_PRAYER_TIME;
 
@@ -104,22 +108,21 @@ export async function setNextAdhan(
     prayer,
   };
 
-  return setPreAlarmTask({
+  await setAlarmTask(adhanOptions);
+  await setPreAlarmTask({
     ...adhanOptions,
     notifId: PRE_ADHAN_NOTIFICATION_ID,
     notifChannelId: PRE_ADHAN_CHANNEL_ID,
     notifChannelName: PRE_ADHAN_CHANNEL_NAME,
     targetAlarmNotifId: ADHAN_NOTIFICATION_ID,
-  })
-    .then(() => setAlarmTask(adhanOptions))
-    .then(() => {
-      if (!options?.noToast) {
-        const translatedPrayerName = translatePrayer(prayer);
-        let message = t`Next` + ': ' + translatedPrayerName + ',';
-        showUpcomingToast({
-          message,
-          date,
-        });
-      }
+  });
+
+  if (!options?.noToast) {
+    const translatedPrayerName = translatePrayer(prayer);
+    let message = t`Next` + ': ' + translatedPrayerName + ',';
+    showUpcomingToast({
+      message,
+      date,
     });
+  }
 }

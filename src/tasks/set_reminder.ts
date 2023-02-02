@@ -59,6 +59,8 @@ export async function setReminders(options?: SetReminderOptions) {
 
   if (!prayerTimes || !tomorrowPrayerTimes) return;
 
+  const tasks = [];
+
   for (const reminder of reminders.filter(r => r.enabled)) {
     let pTime = prayerTimes[reminder.prayer].getTime();
     if (pTime + reminder.duration * reminder.durationModifier < Date.now()) {
@@ -90,24 +92,33 @@ export async function setReminders(options?: SetReminderOptions) {
       once: reminder.once,
     };
 
-    await setPreAlarmTask({
-      ...reminderOptions,
-      notifId: 'pre-' + reminder.id,
-      notifChannelId: PRE_REMINDER_CHANNEL_ID,
-      notifChannelName: PRE_REMINDER_CHANNEL_NAME,
-      targetAlarmNotifId: reminder.id,
-    })
-      .then(() => setAlarmTask(reminderOptions))
-      .catch(console.error);
-
-    if (!noToast) {
-      showUpcomingToast({
-        message:
-          t`Reminder` + ': ' + (reminder.label ? reminder.label + ', ' : ''),
-        date: triggerDate,
-      });
-    }
+    tasks.push(
+      setAlarmTask(reminderOptions)
+        .then(() =>
+          setPreAlarmTask({
+            ...reminderOptions,
+            notifId: 'pre-' + reminder.id,
+            notifChannelId: PRE_REMINDER_CHANNEL_ID,
+            notifChannelName: PRE_REMINDER_CHANNEL_NAME,
+            targetAlarmNotifId: reminder.id,
+          }),
+        )
+        .then(() => {
+          if (!noToast) {
+            showUpcomingToast({
+              message:
+                t`Reminder` +
+                ': ' +
+                (reminder.label ? reminder.label + ', ' : ''),
+              date: triggerDate,
+            });
+          }
+        })
+        .catch(console.error),
+    );
   }
+
+  await Promise.all(tasks);
 
   return Promise.resolve();
 }

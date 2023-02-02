@@ -8,7 +8,7 @@ import {
   getAlarmOptions,
   getFgSvcNotification,
 } from '@/notifee';
-import {stopAdhan} from '@/services/audio_service';
+import {stopAudio} from '@/services/audio_service';
 import {useSettings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
@@ -37,7 +37,7 @@ function FullscreenAlarm() {
         if ((await getActivityName()) === 'AlarmActivity') {
           return finishAndRemoveTask();
         } else {
-          await stopAdhan();
+          await stopAudio();
           return replace('Home');
         }
       }
