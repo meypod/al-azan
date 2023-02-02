@@ -65,7 +65,7 @@ export async function cancelAlarmNotif({
     await notifee
       .displayNotification({
         ...notification,
-        id: notification.id + '-remains',
+        id: undefined, // to assign a unique id to it
         android: {
           ...notification.android,
           actions: undefined,
