@@ -280,7 +280,7 @@ export function setupNotifeeHandlers() {
         const isDnd = await isDndActive();
 
         if (!isDnd || canBypassDnd) {
-          return playAudio(options!.sound!)
+          await playAudio(options!.sound!)
             .then(interrupted =>
               cancelAlarmNotif({
                 notification,
@@ -292,8 +292,6 @@ export function setupNotifeeHandlers() {
         }
       }
     }
-
-    return Promise.resolve();
   });
 }
 
