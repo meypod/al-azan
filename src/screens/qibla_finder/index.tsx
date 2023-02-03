@@ -5,7 +5,9 @@ import {
   useCompassHeading,
   useCompassAccuracy,
   AccuracyLevel,
+  setCompassLocation,
 } from '@/modules/compass';
+import {calcSettings} from '@/store/calculation';
 
 export function QiblaFinder() {
   const heading = useCompassHeading();
@@ -24,15 +26,20 @@ export function QiblaFinder() {
       lastHeading.current = heading;
     }
 
-    if (!isNaN(lastHeading.current)) {
-      Animated.timing(rotationValue.current, {
-        toValue: lastHeading.current,
-        duration: 300,
-        easing: Easing.bezier(0.37, 0, 0.63, 1),
-        useNativeDriver: true,
-      }).start();
-    }
+    Animated.timing(rotationValue.current, {
+      toValue: lastHeading.current,
+      duration: 300,
+      easing: Easing.bezier(0.37, 0, 0.63, 1),
+      useNativeDriver: true,
+    }).start();
   }, [heading]);
+
+  useEffect(() => {
+    const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
+    if (LOCATION_LAT && LOCATION_LONG) {
+      setCompassLocation(LOCATION_LAT, LOCATION_LONG, 1);
+    }
+  }, []);
 
   const rotation = rotationValue.current.interpolate({
     inputRange: [-360, 360],

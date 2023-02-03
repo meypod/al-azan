@@ -26,6 +26,10 @@ public class CompassSensor implements SensorEventListener {
     private final float[] magnetometerReading = new float[3];
 
     public void start(ReactContext context) {
+        start(context, 120);
+    }
+
+    public void start(ReactContext context, int updateRateMs) {
         if (sensorManager == null) {
             this.context = context;
             sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
@@ -33,10 +37,10 @@ public class CompassSensor implements SensorEventListener {
             accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         }
 
-        sensorManager.registerListener(this, accelerometerSensor,
-                SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
-        boolean hasMagnetSensor = sensorManager.registerListener(this, magneticSensor,
-                SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
+        final int updateRate = updateRateMs * 1000; // millisecond to microsecond
+        sensorManager.registerListener(this, accelerometerSensor, updateRate);
+        boolean hasMagnetSensor =
+                sensorManager.registerListener(this, magneticSensor, updateRate);
 
         if (hasMagnetSensor) {
             oneTimeListener = new SensorEventListener() {
@@ -46,15 +50,15 @@ public class CompassSensor implements SensorEventListener {
                             .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                             .emit("accuracyChanged", event.accuracy);
                     sensorManager.unregisterListener(oneTimeListener);
-                    oneTimeListener=null;
+                    oneTimeListener = null;
                 }
 
                 @Override
-                public void onAccuracyChanged(Sensor sensor, int accuracy) { }
+                public void onAccuracyChanged(Sensor sensor, int accuracy) {
+                }
             };
 
-            sensorManager.registerListener(oneTimeListener, magneticSensor,
-                    SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(oneTimeListener, magneticSensor, updateRate);
         } else {
             context
                     .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
