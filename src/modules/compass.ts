@@ -45,6 +45,8 @@ export function useCompassHeading() {
 }
 
 export enum AccuracyLevel {
+  SENSOR_STATUS_SENSOR_NOT_FOUND = -3,
+  SENSOR_STATUS_SENSOR_NOT_WORKING = -2,
   SENSOR_STATUS_NO_CONTACT = -1,
   SENSOR_STATUS_UNRELIABLE = 0,
   SENSOR_STATUS_ACCURACY_LOW = 1,

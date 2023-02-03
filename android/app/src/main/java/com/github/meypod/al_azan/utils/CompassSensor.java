@@ -5,6 +5,10 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
+import android.view.Display;
+import android.view.Surface;
+import android.view.WindowManager;
 
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
@@ -13,36 +17,34 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 // with help from https://talesofcode.com/developing-compass-android-application/
 public class CompassSensor implements SensorEventListener {
     private SensorManager sensorManager;
-    private Sensor magneticSensor;
-    private Sensor accelerometerSensor;
+    private Sensor rotationSensor;
     private ReactContext context;
     private SensorEventListener oneTimeListener;
-
-    private float heading = 0;
-    private float trueHeading = 0;
     private float magneticDeclination = 0;
-
-    private final float[] accelerometerReading = new float[3];
-    private final float[] magnetometerReading = new float[3];
+    private final float[] rotationSensorReading = new float[3];
 
     public void start(ReactContext context) {
-        start(context, 120);
+        start(context, 16);
     }
 
     public void start(ReactContext context, int updateRateMs) {
         if (sensorManager == null) {
             this.context = context;
             sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
-            magneticSensor = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-            accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+            rotationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+        }
+
+        if (rotationSensor == null) {
+            context
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("accuracyChanged", -3);
+            return;
         }
 
         final int updateRate = updateRateMs * 1000; // millisecond to microsecond
-        sensorManager.registerListener(this, accelerometerSensor, updateRate);
-        boolean hasMagnetSensor =
-                sensorManager.registerListener(this, magneticSensor, updateRate);
+        boolean hasSensor = sensorManager.registerListener(this, rotationSensor, updateRate);
 
-        if (hasMagnetSensor) {
+        if (hasSensor) {
             oneTimeListener = new SensorEventListener() {
                 @Override
                 public void onSensorChanged(SensorEvent event) {
@@ -58,11 +60,11 @@ public class CompassSensor implements SensorEventListener {
                 }
             };
 
-            sensorManager.registerListener(oneTimeListener, magneticSensor, updateRate);
+            sensorManager.registerListener(oneTimeListener, rotationSensor, updateRate);
         } else {
             context
                     .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                    .emit("accuracyChanged", -1);
+                    .emit("accuracyChanged", -2);
             stop();
         }
 
@@ -76,21 +78,39 @@ public class CompassSensor implements SensorEventListener {
                 oneTimeListener = null;
             }
             sensorManager = null;
-            magneticSensor = null;
-            accelerometerSensor = null;
+            rotationSensor = null;
         }
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            //make sensor readings smoother using a low pass filter
-            CompassHelper.lowPassFilter(event.values.clone(), accelerometerReading);
-        } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-            //make sensor readings smoother using a low pass filter
-            CompassHelper.lowPassFilter(event.values.clone(), magnetometerReading);
+        if (event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
+            updateCompass(event);
         }
-        updateHeading();
+    }
+
+    private void updateCompass(SensorEvent event) {
+        //make sensor readings smoother using a low pass filter
+        MathUtils.lowPassFilter(event.values, rotationSensorReading);
+        /// TODO: getDisplayRotation
+        DisplayRotation displayRotation = DisplayRotation.ROTATION_0;
+        float normalizedAzimuth = MathUtils.calculateAzimuth(rotationSensorReading, displayRotation);
+
+        if (!Float.isNaN(normalizedAzimuth)) {
+            if (this.magneticDeclination != 0) {
+                float trueHeading = normalizedAzimuth + magneticDeclination;
+                if (trueHeading > 360) { //if trueHeading was 362 degrees for example, it should be adjusted to be 2 degrees instead
+                    trueHeading = trueHeading - 360;
+                }
+                context
+                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                        .emit("heading", trueHeading);
+            } else {
+                context
+                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                        .emit("heading", normalizedAzimuth);
+            }
+        }
     }
 
     @Override
@@ -102,30 +122,37 @@ public class CompassSensor implements SensorEventListener {
         }
     }
 
-    private void updateHeading() {
-        heading = CompassHelper.calculateHeading(accelerometerReading, magnetometerReading);
-        heading = CompassHelper.convertRadtoDeg(heading);
-        heading = CompassHelper.map180to360(heading);
+    public void updateMagneticDeclination(double latitude, double longitude, double altitude) {
+        this.magneticDeclination = MathUtils.calculateMagneticDeclination(latitude, longitude, altitude);
+    }
 
-        if (!Float.isNaN(heading)) {
-            if (this.magneticDeclination != 0) {
-                trueHeading = heading + magneticDeclination;
-                if (trueHeading > 360) { //if trueHeading was 362 degrees for example, it should be adjusted to be 2 degrees instead
-                    trueHeading = trueHeading - 360;
-                }
-                context
-                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                        .emit("heading", trueHeading);
-            } else {
-                context
-                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                        .emit("heading", heading);
-            }
+    private DisplayRotation getDisplayRotation() {
+        final Display display = getDisplayCompat();
+        final int rotation;
+        if (display != null) {
+            rotation = display.getRotation();
+        } else {
+            rotation = 0;
+        }
+        switch (rotation) {
+            case Surface.ROTATION_90:
+                return DisplayRotation.ROTATION_90;
+            case Surface.ROTATION_180:
+                return DisplayRotation.ROTATION_180;
+            case Surface.ROTATION_270:
+                return DisplayRotation.ROTATION_270;
+            default:
+                return DisplayRotation.ROTATION_0;
         }
     }
 
-    public void updateMagneticDeclination(double latitude, double longitude, double altitude) {
-        this.magneticDeclination = CompassHelper.calculateMagneticDeclination(latitude, longitude, altitude);
+
+    private Display getDisplayCompat() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            return  context.getDisplay();
+        } else {
+            return ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        }
     }
 
 }
