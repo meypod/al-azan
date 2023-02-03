@@ -18,8 +18,8 @@ public class CompassSensor implements SensorEventListener {
     private ReactContext context;
     private SensorEventListener oneTimeListener;
 
-    private float heading;
-    private float trueHeading;
+    private float heading = 0;
+    private float trueHeading = 0;
     private float magneticDeclination = 0;
 
     private final float[] accelerometerReading = new float[3];
@@ -35,25 +35,33 @@ public class CompassSensor implements SensorEventListener {
 
         sensorManager.registerListener(this, accelerometerSensor,
                 SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
-        sensorManager.registerListener(this, magneticSensor,
+        boolean hasMagnetSensor = sensorManager.registerListener(this, magneticSensor,
                 SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
 
-        oneTimeListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent event) {
-                context
-                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                        .emit("accuracyChanged", event.accuracy);
-                sensorManager.unregisterListener(oneTimeListener);
-                oneTimeListener=null;
-            }
+        if (hasMagnetSensor) {
+            oneTimeListener = new SensorEventListener() {
+                @Override
+                public void onSensorChanged(SensorEvent event) {
+                    context
+                            .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                            .emit("accuracyChanged", event.accuracy);
+                    sensorManager.unregisterListener(oneTimeListener);
+                    oneTimeListener=null;
+                }
 
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int accuracy) { }
-        };
+                @Override
+                public void onAccuracyChanged(Sensor sensor, int accuracy) { }
+            };
 
-        sensorManager.registerListener(oneTimeListener, magneticSensor,
-                SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(oneTimeListener, magneticSensor,
+                    SensorManager.SENSOR_DELAY_UI, SensorManager.SENSOR_DELAY_UI);
+        } else {
+            context
+                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                    .emit("accuracyChanged", -1);
+            stop();
+        }
+
     }
 
     public void stop() {
@@ -95,18 +103,20 @@ public class CompassSensor implements SensorEventListener {
         heading = CompassHelper.convertRadtoDeg(heading);
         heading = CompassHelper.map180to360(heading);
 
-        if (this.magneticDeclination != 0) {
-            trueHeading = heading + magneticDeclination;
-            if (trueHeading > 360) { //if trueHeading was 362 degrees for example, it should be adjusted to be 2 degrees instead
-                trueHeading = trueHeading - 360;
+        if (!Float.isNaN(heading)) {
+            if (this.magneticDeclination != 0) {
+                trueHeading = heading + magneticDeclination;
+                if (trueHeading > 360) { //if trueHeading was 362 degrees for example, it should be adjusted to be 2 degrees instead
+                    trueHeading = trueHeading - 360;
+                }
+                context
+                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                        .emit("heading", trueHeading);
+            } else {
+                context
+                        .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                        .emit("heading", heading);
             }
-            context
-                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                    .emit("heading", trueHeading);
-        } else {
-            context
-                    .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                    .emit("heading", heading);
         }
     }
 

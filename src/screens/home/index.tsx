@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
+import {ExploreIcon} from '@/assets/icons/explore';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/update';
@@ -89,14 +90,24 @@ export function Home() {
             <Text>{day.dateString}</Text>
           </HStack>
 
-          <Button
-            marginRight="-3"
-            variant="ghost"
-            onPress={() => {
-              navigate('Settings');
-            }}>
-            <SettingsSharpIcon size="2xl" />
-          </Button>
+          <HStack alignItems="center">
+            <Button
+              marginLeft="3"
+              variant="ghost"
+              onPress={() => {
+                navigate('QiblaFinder');
+              }}>
+              <ExploreIcon size="2xl" />
+            </Button>
+            <Button
+              marginRight="-3"
+              variant="ghost"
+              onPress={() => {
+                navigate('Settings');
+              }}>
+              <SettingsSharpIcon size="2xl" />
+            </Button>
+          </HStack>
         </HStack>
         <Divider
           borderColor="coolGray.300"

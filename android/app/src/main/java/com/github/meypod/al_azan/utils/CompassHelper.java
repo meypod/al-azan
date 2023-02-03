@@ -50,7 +50,7 @@ public class CompassHelper {
 
     //0 ≤ ALPHA ≤ 1
     //smaller ALPHA results in smoother sensor data but slower updates
-    public static final float ALPHA = 0.15f;
+    public static final float ALPHA = 0.5f;
 
     public static float[] lowPassFilter(float[] input, float[] output) {
         if (output == null) return input;
