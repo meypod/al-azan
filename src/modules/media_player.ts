@@ -17,7 +17,7 @@ const MediaPlayerModule = (
       )
 ) as MediaPlayerModuleInterface;
 
-const eventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerModule);
+const eventEmitter = new NativeEventEmitter(MediaPlayerModule);
 
 export enum PlaybackState {
   'started' = 'started',
@@ -54,6 +54,8 @@ interface MediaPlayerModuleInterface {
   setDataSource(options: {uri: string | number; loop: boolean}): Promise<void>;
   getState(): Promise<PlaybackState>;
   getRingtones(): Promise<AudioEntry[]>;
+  addListener(eventName: string): void;
+  removeListeners(count: Number): void;
 }
 
 type EventListener = (
