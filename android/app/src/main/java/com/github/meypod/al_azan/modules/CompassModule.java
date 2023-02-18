@@ -38,7 +38,9 @@ public class CompassModule extends ReactContextBaseJavaModule {
     public void removeListeners(Integer count) {
         listenerCount -= count;
         if (listenerCount == 0) {
-            compassSensor.stop();
+            if (compassSensor != null) {
+                compassSensor.stop();
+            }
         }
     }
 

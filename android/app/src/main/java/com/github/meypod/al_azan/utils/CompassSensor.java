@@ -23,11 +23,10 @@ public class CompassSensor implements SensorEventListener {
     private float magneticDeclination = 0;
     private final float[] rotationSensorReading = new float[3];
 
-    public void start(ReactContext context) {
-        start(context, 16);
-    }
+    private static int updateRateMs = 16; // milliseconds
+    private static int updateRate = updateRateMs * 1000; // microseconds
 
-    public void start(ReactContext context, int updateRateMs) {
+    public void start(ReactContext context) {
         if (sensorManager == null) {
             this.context = context;
             sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
@@ -45,29 +44,34 @@ public class CompassSensor implements SensorEventListener {
         boolean hasSensor = sensorManager.registerListener(this, rotationSensor, updateRate);
 
         if (hasSensor) {
-            oneTimeListener = new SensorEventListener() {
-                @Override
-                public void onSensorChanged(SensorEvent event) {
-                    context
-                            .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                            .emit("accuracyChanged", event.accuracy);
-                    sensorManager.unregisterListener(oneTimeListener);
-                    oneTimeListener = null;
-                }
-
-                @Override
-                public void onAccuracyChanged(Sensor sensor, int accuracy) {
-                }
-            };
-
-            sensorManager.registerListener(oneTimeListener, rotationSensor, updateRate);
+            updateAccuracy();
         } else {
             context
                     .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                     .emit("accuracyChanged", -2);
             stop();
         }
+    }
 
+    public void updateAccuracy() {
+        oneTimeListener = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent event) {
+                if (event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
+                    context
+                            .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+                            .emit("accuracyChanged", event.accuracy);
+                    sensorManager.unregisterListener(oneTimeListener);
+                    oneTimeListener = null;
+                }
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+            }
+        };
+
+        sensorManager.registerListener(oneTimeListener, rotationSensor, updateRate);
     }
 
     public void stop() {
