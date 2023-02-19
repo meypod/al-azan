@@ -32,7 +32,7 @@ async function askNotificationPermission() {
             style: 'default',
             onPress: () =>
               PermissionsAndroid.request(
-                PermissionsAndroid.PERMISSIONS.POST_NOTIFICATION,
+                PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
               ).then(result => {
                 if (result === 'denied') {
                   notifee.openNotificationSettings();
