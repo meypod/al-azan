@@ -6,9 +6,22 @@ import {
   Text,
   Divider,
 } from 'native-base';
+import {useCallback, useState} from 'react';
+import {ToastAndroid} from 'react-native';
 import pkg from '@/../package.json';
+import {settings} from '@/store/settings';
 
 export function AboutSettings(props: IScrollViewProps) {
+  const [tCount, setTCount] = useState(0);
+
+  const handleT = useCallback(() => {
+    setTCount(tCount + 1);
+    if (tCount === 5) {
+      settings.setState({DEV_MODE: true});
+      ToastAndroid.show('Dev Mode Enabled', ToastAndroid.SHORT);
+    }
+  }, [setTCount, tCount]);
+
   return (
     <ScrollView
       keyboardShouldPersistTaps="handled"
@@ -17,7 +30,9 @@ export function AboutSettings(props: IScrollViewProps) {
       _contentContainerStyle={{paddingBottom: 40}}
       {...props}>
       <FormControl mb="3">
-        <FormControl.Label m="0">{t`Version`}:</FormControl.Label>
+        <FormControl.Label m="0" onTouchStart={handleT}>
+          {t`Version`}:
+        </FormControl.Label>
         <Text fontSize="lg">{pkg.version}</Text>
       </FormControl>
       <FormControl mb="3">

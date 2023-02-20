@@ -56,6 +56,8 @@ export type SettingsStore = {
   DONT_ASK_PERMISSION_NOTIFICATIONS: boolean;
   DONT_ASK_PERMISSION_ALARM: boolean;
   DONT_ASK_PERMISSION_PHONE_STATE: boolean;
+  // DEV
+  DEV_MODE: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -113,6 +115,7 @@ export const settings = createStore<SettingsStore>()(
       DONT_ASK_PERMISSION_NOTIFICATIONS: false,
       DONT_ASK_PERMISSION_ALARM: false,
       DONT_ASK_PERMISSION_PHONE_STATE: false,
+      DEV_MODE: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
