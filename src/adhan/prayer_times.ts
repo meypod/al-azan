@@ -220,8 +220,8 @@ export function getNextPrayer(
   // we need this check only for the first 6 hours of the day
   if (date.getHours() < 6 && !_actualDate) {
     const prayerTimeFromPrevDay = getNextPrayer({
-      ...options,
       date: addDays(date, -1),
+      useSettings,
       _actualDate: date,
       prayers: [Prayer.Midnight, Prayer.Tahajjud], // we only need to check prayers that can go after 00:00 AM
     });
