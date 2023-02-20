@@ -190,6 +190,13 @@ type NextPrayerOptions = {
   prayers?: Array<Prayer>;
 };
 
+export function getPrayerTimes(date: Date) {
+  const options = getPrayerTimesOptionsFromSettings();
+  if (!options) return;
+
+  return getCachedPrayerTimes(date);
+}
+
 export function getNextPrayer(
   options?: NextPrayerOptions,
 ): PrayerTime | undefined {
@@ -204,7 +211,9 @@ export function getNextPrayer(
 
   const actualdate = _actualDate || date;
 
-  const cachedTimes = getCachedPrayerTimes(date);
+  const prayerTimes = getPrayerTimes(date);
+
+  if (!prayerTimes) return;
 
   let prayerTime: PrayerTime | undefined;
 
@@ -221,11 +230,11 @@ export function getNextPrayer(
 
   for (let prayer of prayers) {
     if (
-      actualdate <= cachedTimes[prayer] &&
+      actualdate <= prayerTimes[prayer] &&
       shouldNotifyPrayer(prayer, date, useSettings)
     ) {
       prayerTime = {
-        date: cachedTimes[prayer],
+        date: prayerTimes[prayer],
         prayer,
       };
       break;
@@ -253,7 +262,7 @@ export function getNextPrayer(
     }
     for (let i = 1; i < limit; i++) {
       prayerTime = getNextPrayer({
-        ...options,
+        useSettings,
         date: getDayBeginning(addDays(date, i)),
       });
       if (prayerTime) {
@@ -263,11 +272,4 @@ export function getNextPrayer(
   }
 
   return prayerTime;
-}
-
-export function getPrayerTimes(date: Date) {
-  const options = getPrayerTimesOptionsFromSettings();
-  if (!options) return;
-
-  return getCachedPrayerTimes(date);
 }
