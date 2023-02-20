@@ -148,7 +148,10 @@ export function calculatePrayerTimes(date: Date) {
 }
 
 export type PrayerTime = {
+  /** when is this prayer time */
   date: Date;
+  /** The date this prayer time is calculated from */
+  calculatedFrom: Date;
   prayer: Prayer;
   playSound?: boolean;
 };
@@ -235,6 +238,7 @@ export function getNextPrayer(
     ) {
       prayerTime = {
         date: prayerTimes[prayer],
+        calculatedFrom: date,
         prayer,
       };
       break;
