@@ -3,6 +3,7 @@ import {defineMessage} from '@lingui/macro';
 
 export type RootStackParamList = {
   Home: undefined;
+  QiblaFinder: undefined;
   Settings: undefined;
   FullscreenAlarm: {options: string};
   DisplaySettings: undefined;
@@ -26,6 +27,10 @@ const routeTranslations = {
   Home: defineMessage({
     id: 'home',
     message: 'Home',
+  }),
+  QiblaFinder: defineMessage({
+    id: 'qibla_finder',
+    message: 'Qibla Finder',
   }),
   Settings: defineMessage({
     id: 'settings',

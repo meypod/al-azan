@@ -1,11 +1,9 @@
 package com.github.meypod.al_azan;
 
 import android.app.Application;
-import android.content.Context;
 
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
-import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
@@ -15,8 +13,8 @@ import com.github.meypod.al_azan.modules.ActivityModulePackage;
 import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage;
+import com.github.meypod.al_azan.modules.CompassModulePackage;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -36,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
           packages.add(new MediaPlayerModulePackage());
           packages.add(new NotificationWidgetModulePackage());
           packages.add(new ScreenWidgetModulePackage());
+          packages.add(new CompassModulePackage());
           return packages;
         }
 

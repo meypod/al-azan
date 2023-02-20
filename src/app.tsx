@@ -16,6 +16,7 @@ import {
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
+import {QiblaFinder} from '@/screens/qibla_finder';
 import Settings from '@/screens/settings';
 import {AboutSettings} from '@/screens/settings_about';
 import {AdhanSettings} from '@/screens/settings_adhan';
@@ -73,6 +74,7 @@ export function App(): JSX.Element {
           <Stack.Screen name="Home" component={Home} />
         </Stack.Group>
         <Stack.Group>
+          <Stack.Screen name="QiblaFinder" component={QiblaFinder} />
           <Stack.Screen name="Settings" component={Settings} />
           <Stack.Screen name="DisplaySettings" component={DisplaySettings} />
           <Stack.Screen name="LocationSettings" component={LocationSettings} />
