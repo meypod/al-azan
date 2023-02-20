@@ -180,7 +180,7 @@ type NextPrayerOptions = {
   date?: Date;
 
   /** an internal option for recursing */
-  _actualDate?: Date;
+  _originalDate?: Date | boolean;
   /** should we consider the user settings?
    * setting this to true means that we only return a prayer if
    *  user has enabled notification/sound for the prayer, otherwise `undefined` is returned */
@@ -205,14 +205,14 @@ export function getNextPrayer(
 ): PrayerTime | undefined {
   const {
     date = new Date(),
-    _actualDate,
+    _originalDate = undefined,
     useSettings = false,
     checkNextDay = false,
     checkNextDays = false,
     prayers = PrayersInOrder,
   } = options || {};
 
-  const actualdate = _actualDate || date;
+  const originalDate = _originalDate || date;
 
   const prayerTimes = getPrayerTimes(date);
 
@@ -221,11 +221,11 @@ export function getNextPrayer(
   let prayerTime: PrayerTime | undefined;
 
   // we need this check only for the first 6 hours of the day
-  if (date.getHours() < 6 && !_actualDate) {
+  if (date.getHours() < 6 && typeof _originalDate === 'undefined') {
     const prayerTimeFromPrevDay = getNextPrayer({
       date: addDays(date, -1),
       useSettings,
-      _actualDate: date,
+      _originalDate: date,
       prayers: [Prayer.Midnight, Prayer.Tahajjud], // we only need to check prayers that can go after 00:00 AM
     });
     if (prayerTimeFromPrevDay) return prayerTimeFromPrevDay; // otherwise continue getting it normally
@@ -233,7 +233,7 @@ export function getNextPrayer(
 
   for (let prayer of prayers) {
     if (
-      actualdate <= prayerTimes[prayer] &&
+      originalDate <= prayerTimes[prayer] &&
       shouldNotifyPrayer(prayer, date, useSettings)
     ) {
       prayerTime = {
@@ -258,16 +258,18 @@ export function getNextPrayer(
     }
   }
 
-  if (!prayerTime && !_actualDate && (checkNextDay || checkNextDays)) {
+  if (!prayerTime && !_originalDate && (checkNextDay || checkNextDays)) {
     // n+1 for limit (n starts from 1)
     let limit = 2;
     if (checkNextDays) {
       limit = 8;
     }
     for (let i = 1; i < limit; i++) {
+      const dayToCheck = getDayBeginning(addDays(date, i));
       prayerTime = getNextPrayer({
         useSettings,
-        date: getDayBeginning(addDays(date, i)),
+        date: dayToCheck,
+        _originalDate: false, // this makes it a boolean, and thus not checking the day before it
       });
       if (prayerTime) {
         break;

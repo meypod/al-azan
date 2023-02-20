@@ -7,7 +7,7 @@ import {
 } from '@/adhan';
 import {alarmSettings, getAdhanSettingKey} from '@/store/alarm';
 import {calcSettings} from '@/store/calculation';
-import {addDays} from '@/utils/date';
+import {addDays, getDayBeginning} from '@/utils/date';
 
 const timezone_mock = require('timezone-mock');
 
@@ -189,6 +189,7 @@ describe('getNextPrayer()', () => {
             date: new Date('2022-12-27T00:00:00.000Z'),
           }),
         ).toEqual({
+          calculatedFrom: new Date('2022-12-27T00:00:00.000Z'),
           date: new Date('2022-12-27T04:40:00.000Z'),
           playSound: false,
           prayer: 'fajr',
@@ -201,6 +202,7 @@ describe('getNextPrayer()', () => {
             useSettings: true,
           }),
         ).toEqual({
+          calculatedFrom: new Date('2022-12-27T00:00:00.000Z'),
           date: new Date('2022-12-27T04:40:00.000Z'),
           playSound: true,
           prayer: 'fajr',
@@ -227,6 +229,9 @@ describe('getNextPrayer()', () => {
             useSettings: true,
           }),
         ).toEqual({
+          calculatedFrom: new Date(
+            new Date('2022-12-27T04:40:00.000Z').valueOf() + 1000,
+          ),
           date: new Date('2022-12-27T12:02:00.000Z'),
           playSound: false,
           prayer: 'dhuhr',
@@ -242,6 +247,9 @@ describe('getNextPrayer()', () => {
             useSettings: true,
           }),
         ).toEqual({
+          calculatedFrom: new Date(
+            new Date('2022-12-27T12:02:00.000Z').valueOf() + 1000,
+          ),
           date: new Date('2022-12-28T01:08:00.000Z'),
           playSound: true,
           prayer: 'tahajjud',
@@ -260,14 +268,22 @@ describe('getNextPrayer()', () => {
             useSettings: true,
           }),
         ).toEqual({
+          calculatedFrom: addDays(
+            new Date(
+              new Date('2022-12-28T00:01:00.000Z').valueOf() + 1000, // it should be from the previous day
+            ),
+            -1,
+          ),
           date: new Date('2022-12-28T01:08:00.000Z'),
           playSound: true,
           prayer: 'tahajjud',
         });
       });
 
-      it('returns the next available prayer (with checkNextDays)', () => {
+      it('returns the next available prayer (with checkNextDay[s])', () => {
         alarmSettings.setState({FAJR_NOTIFY: true});
+
+        expect(alarmSettings.getState()['FAJR_NOTIFY']).toBe(true);
 
         expect(
           getNextPrayer({
@@ -275,6 +291,7 @@ describe('getNextPrayer()', () => {
             useSettings: true,
           }),
         ).toEqual({
+          calculatedFrom: new Date('2022-12-27T00:00:00.000Z'),
           date: new Date('2022-12-27T04:40:00.000Z'),
           playSound: false,
           prayer: 'fajr',
@@ -282,15 +299,18 @@ describe('getNextPrayer()', () => {
 
         // test with advancing clock after the set prayer
         // this should yield tomorrow's fajr
+        let testDate = new Date(
+          new Date('2022-12-27T04:40:00.000Z').valueOf() + 1000,
+        );
+        let nextDayOfTestDate = getDayBeginning(addDays(testDate, 1));
         expect(
           getNextPrayer({
-            date: new Date(
-              new Date('2022-12-27T04:40:00.000Z').valueOf() + 1000,
-            ),
+            date: testDate,
             useSettings: true,
             checkNextDay: true,
           }),
         ).toEqual({
+          calculatedFrom: nextDayOfTestDate,
           date: new Date('2022-12-28T04:41:00.000Z'),
           playSound: false,
           prayer: 'fajr',
@@ -299,13 +319,12 @@ describe('getNextPrayer()', () => {
         // repeat with checkNextDays
         expect(
           getNextPrayer({
-            date: new Date(
-              new Date('2022-12-27T04:40:00.000Z').valueOf() + 1000,
-            ),
+            date: testDate,
             useSettings: true,
             checkNextDays: true,
           }),
         ).toEqual({
+          calculatedFrom: nextDayOfTestDate,
           date: new Date('2022-12-28T04:41:00.000Z'),
           playSound: false,
           prayer: 'fajr',
