@@ -20,7 +20,7 @@
   "dependencies": {
     "@lingui/macro": "^3.16.0",
     "@lingui/react": "^3.16.0",
-    "@notifee/react-native": "^7.4.0",
+    "@notifee/react-native": "^7.5.0",
     "@react-native-clipboard/clipboard": "^1.11.1",
     "@react-navigation/native": "^6.1.2",
     "@react-navigation/native-stack": "^6.9.8",
