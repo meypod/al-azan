@@ -1,14 +1,16 @@
 import {difference} from 'lodash';
 import {Box} from 'native-base';
 import {memo} from 'react';
-import {PrayersInOrder, PrayerTimesHelper} from '@/adhan';
+import {PrayersInOrder} from '@/adhan';
+import {getNextPrayer} from '@/adhan/prayer_times';
 import {getActivePrayer} from '@/adhan/utils';
 import PrayerTimeRow from '@/components/PrayerTimeRow';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
+import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {SettingsStore} from '@/store/settings';
 
 type PrayerTimesBoxProps = {
-  prayerTimes?: PrayerTimesHelper;
+  prayerTimes?: CachedPrayerTimes;
   settings: Pick<
     SettingsStore,
     'HIDDEN_PRAYERS' | 'DELIVERED_ALARM_TIMESTAMPS'
@@ -17,7 +19,12 @@ type PrayerTimesBoxProps = {
 };
 
 function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
-  const nextPrayer = prayerTimes?.nextPrayer();
+  const nextPrayer = prayerTimes?.date
+    ? getNextPrayer({
+        date: prayerTimes.date,
+      })
+    : undefined;
+
   const nextPrayerDateValueOf = nextPrayer?.date.valueOf();
 
   const visiblePrayerTimes = difference(

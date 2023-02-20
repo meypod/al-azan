@@ -1,6 +1,7 @@
 import {t} from '@lingui/macro';
 import {cancelAdhanAlarms} from './cancel_alarms';
-import {getPrayerTimes, Prayer, translatePrayer} from '@/adhan';
+import {Prayer, translatePrayer} from '@/adhan';
+import {getNextPrayer} from '@/adhan/prayer_times';
 import {
   ADHAN_NOTIFICATION_ID,
   ADHAN_CHANNEL_ID,
@@ -51,7 +52,8 @@ export async function setNextAdhan(
     targetDate = new Date();
   }
 
-  let nextPrayer = getPrayerTimes(targetDate)?.nextPrayer({
+  let nextPrayer = getNextPrayer({
+    date: targetDate,
     useSettings: true,
     checkNextDays: true,
   });
@@ -72,7 +74,8 @@ export async function setNextAdhan(
   let subtitle: string | undefined = body;
 
   if (showNextPrayerInfo) {
-    const next = getPrayerTimes(new Date(date.valueOf() + 1000))?.nextPrayer({
+    const next = getNextPrayer({
+      date: new Date(date.valueOf() + 1000),
       checkNextDays: true,
       useSettings: true,
     });

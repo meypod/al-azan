@@ -1,4 +1,4 @@
-import {Prayer, getPrayerTimes, PrayerTime} from '@/adhan';
+import {Prayer, getPrayerTimes, PrayerTime, getNextPrayer} from '@/adhan';
 import {addDays, getDayBeginning} from '@/utils/date';
 
 export function getActivePrayer(
@@ -10,7 +10,8 @@ export function getActivePrayer(
   const tomorrow = addDays(now, 1);
   const yesterday = addDays(now, -1);
 
-  const activePrayer: PrayerTime | undefined = getPrayerTimes(now)?.nextPrayer({
+  const activePrayer: PrayerTime | undefined = getNextPrayer({
+    date: now,
     prayers: prayersList,
     checkNextDay: true,
   });

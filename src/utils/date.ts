@@ -26,6 +26,10 @@ settings.subscribe(state => {
 
 const oneDayInMs = 86400 * 1000;
 
+export function addDays(date: Date, days: number) {
+  return new Date(date.valueOf() + days * oneDayInMs);
+}
+
 export function getDayBeginning(date: Date) {
   const beginningOfDay = new Date(date.valueOf());
   beginningOfDay.setHours(0, 0, 0, 0);
@@ -34,7 +38,11 @@ export function getDayBeginning(date: Date) {
 }
 
 export function getNextDayBeginning(date: Date) {
-  return new Date(getDayBeginning(date).valueOf() + oneDayInMs);
+  return getDayBeginning(addDays(date, 1));
+}
+
+export function getPrevDayBeginning(date: Date) {
+  return getDayBeginning(addDays(date, -1));
 }
 
 export function getMonthBeginning(date: Date) {
@@ -55,10 +63,6 @@ export function getNextMonthBeginning(date: Date) {
     beginningOfMonth.setMonth(beginningOfMonth.getMonth() + 1);
   }
   return beginningOfMonth;
-}
-
-export function addDays(date: Date, days: number) {
-  return new Date(date.valueOf() + days * oneDayInMs);
 }
 
 export function addMonths(date: Date, months: number = 0) {

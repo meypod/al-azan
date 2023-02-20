@@ -6,7 +6,7 @@ import notifee, {
   AndroidCategory,
   AndroidVisibility,
 } from '@notifee/react-native';
-import {getPrayerTimes} from '@/adhan';
+import {getNextPrayer} from '@/adhan';
 import {
   WIDGET_UPDATE_CHANNEL_ID,
   WIDGET_UPDATE_CHANNEL_NAME,
@@ -61,7 +61,8 @@ export async function setUpdateWidgetsAlarms() {
     targetDate = new Date();
   }
 
-  const nextPrayer = getPrayerTimes(targetDate)?.nextPrayer({
+  const nextPrayer = getNextPrayer({
+    date: targetDate,
     useSettings: false,
     checkNextDay: true,
   });

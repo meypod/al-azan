@@ -3,7 +3,7 @@ import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
-import {getPrayerTimes, PrayerTimesHelper} from '@/adhan';
+import {getPrayerTimes} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/restore';
 import {SettingsSharpIcon} from '@/assets/icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/update';
@@ -13,6 +13,7 @@ import {isRTL} from '@/i18n';
 
 import {navigate} from '@/navigation/root_navigation';
 
+import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
 
@@ -47,7 +48,7 @@ export function Home() {
     shallow,
   );
 
-  const [prayerTimes, setPrayerTimes] = useState<PrayerTimesHelper | undefined>(
+  const [prayerTimes, setPrayerTimes] = useState<CachedPrayerTimes | undefined>(
     undefined,
   );
 
