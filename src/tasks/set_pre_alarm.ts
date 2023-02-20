@@ -7,6 +7,7 @@ import notifee, {
 } from '@notifee/react-native';
 import {SetAlarmTaskOptions} from './set_alarm';
 import {isIntrusive} from '@/modules/media_player';
+import {alarmSettings} from '@/store/alarm';
 import {getTime} from '@/utils/date';
 
 export type SetPreAlarmTaskOptions = SetAlarmTaskOptions & {
@@ -18,10 +19,12 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
     options;
 
   // to replace the notification settings
-  await notifee.cancelTriggerNotification(notifId).catch(console.error);
+  await notifee.cancelNotification(notifId).catch(console.error);
 
   // We don't need a pre alarm for alarms that do not play sound.
-  if (!isIntrusive(sound)) return;
+  if (!isIntrusive(sound) || alarmSettings.getState().DONT_NOTIFY_UPCOMING) {
+    return;
+  }
 
   const channelId = await notifee.createChannel({
     id: notifChannelId,

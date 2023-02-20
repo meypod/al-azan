@@ -55,6 +55,8 @@ export type AlarmSettingsStore = {
   TAHAJJUD_SOUND?: PrayerAlarmSettings;
   // alarm notification
   SHOW_NEXT_PRAYER_TIME: boolean;
+  // pre alarm notification
+  DONT_NOTIFY_UPCOMING: boolean;
 
   setSetting: <T extends keyof AlarmSettingsStore>(
     key: T,
@@ -72,6 +74,7 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
   persist(
     set => ({
       SHOW_NEXT_PRAYER_TIME: false,
+      DONT_NOTIFY_UPCOMING: false,
 
       // general
       setSetting: <T extends keyof AlarmSettingsStore>(

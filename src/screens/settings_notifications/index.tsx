@@ -7,6 +7,7 @@ import {
   Text,
 } from 'native-base';
 import {useCallback, useState} from 'react';
+import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import NotificationSetting from '@/screens/settings_notifications/notification_setting';
@@ -63,6 +64,7 @@ export function NotificationSettings(props: IScrollViewProps) {
         </Text>
       </HStack>
       <NotifyNextAdhanSetting mt="4" />
+      <DontNotifyUpcomingSetting mt="4" mb="3" />
     </ScrollView>
   );
 }
