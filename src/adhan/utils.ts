@@ -20,7 +20,8 @@ export function getActivePrayer(
 
   if (
     lookingAtDay.toDateString() === now.toDateString() &&
-    activePrayer.date.toDateString() === now.toDateString()
+    (activePrayer.date.toDateString() === now.toDateString() ||
+      activePrayer.date.toDateString() === tomorrow.toDateString())
   ) {
     return activePrayer.prayer;
   }
