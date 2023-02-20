@@ -41,6 +41,10 @@ msgstr "90 min"
 msgid "Abyad"
 msgstr "Abyad"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+msgid "Accuracy"
+msgstr "Accuracy"
+
 #: src/components/audio_picker.tsx:387
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
@@ -131,7 +135,7 @@ msgstr "Calendar"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:61
+#: src/tasks/set_pre_alarm.ts:65
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -185,6 +189,10 @@ msgstr "Closest City"
 msgid "Closest Date"
 msgstr "Closest Date"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+msgid "Compass sensor unavailable"
+msgstr "Compass sensor unavailable"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Confirm"
@@ -233,7 +241,7 @@ msgid "Disabled"
 msgstr "Disabled"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:105
+#: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -329,11 +337,15 @@ msgstr "Hidden?"
 msgid "Hide Prayer Times"
 msgstr "Hide Prayer Times"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+msgid "High"
+msgstr "High"
+
 #: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "High Latitude"
 
-#: src/screens/settings_about/index.tsx:24
+#: src/screens/settings_about/index.tsx:39
 msgid "Home"
 msgstr "Home"
 
@@ -398,7 +410,7 @@ msgstr "Latitude"
 msgid "Latitude is invalid"
 msgstr "Latitude is invalid"
 
-#: src/screens/settings_about/index.tsx:30
+#: src/screens/settings_about/index.tsx:45
 msgid "License"
 msgstr "License"
 
@@ -418,6 +430,14 @@ msgstr "Longitude"
 #: src/screens/settings_location/index.tsx:317
 msgid "Longitude is invalid"
 msgstr "Longitude is invalid"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+msgid "Low"
+msgstr "Low"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+msgid "Medium"
+msgstr "Medium"
 
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
@@ -445,12 +465,12 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:77
-#: src/tasks/set_next_adhan.ts:119
+#: src/tasks/set_next_adhan.ts:83
+#: src/tasks/set_next_adhan.ts:125
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:144
+#: src/screens/home/index.tsx:160
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -549,7 +569,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:115
+#: src/screens/home/index.tsx:131
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -562,8 +582,8 @@ msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
 #: src/screens/fullscreen_alarm/index.tsx:54
-#: src/tasks/set_reminder.ts:75
-#: src/tasks/set_reminder.ts:101
+#: src/tasks/set_reminder.ts:82
+#: src/tasks/set_reminder.ts:110
 msgid "Reminder"
 msgstr "Reminder"
 
@@ -638,7 +658,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:154
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -653,6 +673,10 @@ msgstr "Show notification widget?"
 #: src/utils/permission.ts:73
 msgid "Show settings"
 msgstr "Show settings"
+
+#: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:21
+msgid "Show upcoming alarm notification?"
+msgstr "Show upcoming alarm notification?"
 
 #: src/components/audio_picker.tsx:101
 msgid "Silent"
@@ -703,7 +727,7 @@ msgstr "Sunday"
 msgid "System Default"
 msgstr "System Default"
 
-#: src/screens/settings_notifications/index.tsx:62
+#: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Tahajjud time mentioned in the app is the last third of the night"
 
@@ -790,6 +814,10 @@ msgstr "University of Islamic Sciences, Karachi"
 msgid "Unknown Error"
 msgstr "Unknown Error"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+msgid "Unreliable"
+msgstr "Unreliable"
+
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
@@ -799,11 +827,11 @@ msgid "Unsupported"
 msgstr "Unsupported"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:47
+#: src/tasks/set_pre_alarm.ts:51
 msgid "Upcoming alarm"
 msgstr "Upcoming alarm"
 
-#: src/tasks/set_update_widgets_alarms.ts:28
+#: src/tasks/set_update_widgets_alarms.ts:35
 msgid "Updating widgets"
 msgstr "Updating widgets"
 
@@ -823,7 +851,7 @@ msgstr "Using GPS"
 msgid "Using Search"
 msgstr "Using Search"
 
-#: src/screens/settings_about/index.tsx:20
+#: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "Version"
 
@@ -868,7 +896,7 @@ msgstr "Your sounds"
 msgid "abdul_basit_abdus_samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
-#: src/screens/settings_about/index.tsx:36
+#: src/screens/settings_about/index.tsx:51
 msgid "about.credits"
 msgstr ""
 "All copyrights for adhan voices belong to their respective owners.\n"
@@ -876,7 +904,7 @@ msgstr ""
 "Thanks to all open source community members who made all these wonderful libraries that made making this app possible."
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:84
 msgid "about_settings"
 msgstr "About"
 
@@ -894,7 +922,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:69
 msgid "battery_optimization_settings"
 msgstr "Battery Optimization"
 
@@ -903,7 +931,7 @@ msgid "before"
 msgstr "before"
 
 #. screen title
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:64
 msgid "calculation_settings"
 msgstr "Calculation"
 
@@ -912,7 +940,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:44
 msgid "display_settings"
 msgstr "Display"
 
@@ -925,13 +953,17 @@ msgid "forces all numbers to be in the selected system"
 msgstr "forces all numbers to be in the selected system"
 
 #. screen title
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:39
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
-#: src/navigation/types.ts:26
+#: src/navigation/types.ts:27
 msgid "home"
 msgstr "Home"
+
+#: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
+msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
+msgstr "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
@@ -943,7 +975,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:49
 msgid "location_settings"
 msgstr "Location"
 
@@ -961,25 +993,29 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:59
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:54
 msgid "notification_settings"
 msgstr "Notification & Sound"
+
+#: src/navigation/types.ts:31
+msgid "qibla_finder"
+msgstr "Qibla Finder"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:79
 msgid "reminders_settings"
 msgstr "Reminders"
 
-#: src/navigation/types.ts:30
+#: src/navigation/types.ts:35
 msgid "settings"
 msgstr "Settings"
 
@@ -1009,7 +1045,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:74
 msgid "widget_settings"
 msgstr "Widget Settings"
 

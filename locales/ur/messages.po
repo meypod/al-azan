@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-01 04:08+0330\n"
+"POT-Creation-Date: 2023-02-20 23:02+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,6 +34,10 @@ msgstr "90 منٹ"
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "ابیاد"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+msgid "Accuracy"
+msgstr "درستگی"
 
 #: src/components/audio_picker.tsx:387
 #: src/screens/settings_adhan/index.tsx:186
@@ -125,7 +129,7 @@ msgstr "کیلنڈر"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:61
+#: src/tasks/set_pre_alarm.ts:65
 msgid "Cancel"
 msgstr "منسوخ کریں۔"
 
@@ -179,6 +183,10 @@ msgstr "قریب ترین شہر"
 msgid "Closest Date"
 msgstr "قریب ترین تاریخ"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+msgid "Compass sensor unavailable"
+msgstr "کمپاس سینسر دستیاب نہیں ہے۔"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "تصدیق کریں۔"
@@ -227,7 +235,7 @@ msgid "Disabled"
 msgstr "غیر فعال"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:105
+#: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "برطرف کرنا"
 
@@ -323,11 +331,15 @@ msgstr "چھپا ہوا؟"
 msgid "Hide Prayer Times"
 msgstr "نماز کے اوقات چھپائیں۔"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+msgid "High"
+msgstr "اعلی"
+
 #: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "ہائی عرض بلد"
 
-#: src/screens/settings_about/index.tsx:24
+#: src/screens/settings_about/index.tsx:39
 msgid "Home"
 msgstr "گھر"
 
@@ -392,7 +404,7 @@ msgstr "طول"
 msgid "Latitude is invalid"
 msgstr "عرض البلد غلط ہے۔"
 
-#: src/screens/settings_about/index.tsx:30
+#: src/screens/settings_about/index.tsx:45
 msgid "License"
 msgstr "لائسنس"
 
@@ -412,6 +424,14 @@ msgstr "طول البلد"
 #: src/screens/settings_location/index.tsx:317
 msgid "Longitude is invalid"
 msgstr "طول البلد غلط ہے۔"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+msgid "Low"
+msgstr "کم"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+msgid "Medium"
+msgstr "درمیانہ"
 
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
@@ -439,12 +459,12 @@ msgid "New Reminder"
 msgstr "نئی یاد دہانی"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:77
-#: src/tasks/set_next_adhan.ts:119
+#: src/tasks/set_next_adhan.ts:83
+#: src/tasks/set_next_adhan.ts:125
 msgid "Next"
 msgstr "اگلے"
 
-#: src/screens/home/index.tsx:144
+#: src/screens/home/index.tsx:160
 msgid "Next Day"
 msgstr "اگلے دن"
 
@@ -543,7 +563,7 @@ msgstr "پولر ریزولوشن"
 msgid "Power Manager"
 msgstr "پاور مینیجر"
 
-#: src/screens/home/index.tsx:115
+#: src/screens/home/index.tsx:131
 msgid "Prev Day"
 msgstr "پچھلا دن"
 
@@ -556,8 +576,8 @@ msgid "Referred to as the ISNA method"
 msgstr "ISNA طریقہ کے طور پر کہا جاتا ہے۔"
 
 #: src/screens/fullscreen_alarm/index.tsx:54
-#: src/tasks/set_reminder.ts:75
-#: src/tasks/set_reminder.ts:101
+#: src/tasks/set_reminder.ts:82
+#: src/tasks/set_reminder.ts:110
 msgid "Reminder"
 msgstr "یاد دہانی"
 
@@ -625,7 +645,7 @@ msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:154
 msgid "Show Today"
 msgstr "آج دکھائیں۔"
 
@@ -640,6 +660,10 @@ msgstr "اطلاع ویجیٹ دکھائیں؟"
 #: src/utils/permission.ts:73
 msgid "Show settings"
 msgstr "ترتیبات دکھائیں۔"
+
+#: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:21
+msgid "Show upcoming alarm notification?"
+msgstr "آنے والے الارم کی اطلاع دکھائیں؟"
 
 #: src/components/audio_picker.tsx:101
 msgid "Silent"
@@ -687,7 +711,7 @@ msgstr "اتوار"
 msgid "System Default"
 msgstr "سسٹم ڈیفالٹ"
 
-#: src/screens/settings_notifications/index.tsx:62
+#: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "ایپ میں تہجد کا وقت رات کا آخری تہائی حصہ ہے۔"
 
@@ -772,6 +796,10 @@ msgstr "جامعہ اسلامیہ، کراچی"
 msgid "Unknown Error"
 msgstr "نامعلوم خامی"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+msgid "Unreliable"
+msgstr "ناقابل اعتبار"
+
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "غیر حل شدہ (پہلے سے طے شدہ)"
@@ -781,11 +809,11 @@ msgid "Unsupported"
 msgstr "غیر تعاون یافتہ"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:47
+#: src/tasks/set_pre_alarm.ts:51
 msgid "Upcoming alarm"
 msgstr "آنے والا الارم"
 
-#: src/tasks/set_update_widgets_alarms.ts:28
+#: src/tasks/set_update_widgets_alarms.ts:35
 msgid "Updating widgets"
 msgstr "ویجٹ کو اپ ڈیٹ کرنا"
 
@@ -805,7 +833,7 @@ msgstr "GPS استعمال کرنا"
 msgid "Using Search"
 msgstr "تلاش کا استعمال کرتے ہوئے"
 
-#: src/screens/settings_about/index.tsx:20
+#: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "ورژن"
 
@@ -850,12 +878,12 @@ msgstr "آپ کی آوازیں"
 msgid "abdul_basit_abdus_samad"
 msgstr "عبدالباسط عبدالصمد"
 
-#: src/screens/settings_about/index.tsx:36
+#: src/screens/settings_about/index.tsx:51
 msgid "about.credits"
 msgstr "اذان کی آوازوں کے تمام کاپی رائٹس ان کے متعلقہ مالکان کے ہیں۔ ان کی شاندار خدمات کے لیے translation.io (lingui.js) کا خصوصی شکریہ۔ تمام اوپن سورس کمیونٹی ممبران کا شکریہ جنہوں نے یہ تمام شاندار لائبریریاں بنائیں جنہوں نے اس ایپ کو ممکن بنایا۔"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:84
 msgid "about_settings"
 msgstr "معلومات"
 
@@ -873,7 +901,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:69
 msgid "battery_optimization_settings"
 msgstr "بیٹری کی اصلاح"
 
@@ -882,7 +910,7 @@ msgid "before"
 msgstr "پہلے"
 
 #. screen title
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:64
 msgid "calculation_settings"
 msgstr "حساب کتاب"
 
@@ -891,7 +919,7 @@ msgid "dhuhr.prayer"
 msgstr "ظہر"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:44
 msgid "display_settings"
 msgstr "ڈسپلے"
 
@@ -904,13 +932,17 @@ msgid "forces all numbers to be in the selected system"
 msgstr "تمام نمبروں کو منتخب نظام میں ہونے پر مجبور کرتا ہے۔"
 
 #. screen title
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:39
 msgid "fullscreen_alarm"
 msgstr "اذان چلائیں"
 
-#: src/navigation/types.ts:26
+#: src/navigation/types.ts:27
 msgid "home"
 msgstr "گھر"
+
+#: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
+msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
+msgstr "اگر فعال ہو تو، کسی بھی نماز کے وقت یا یاد دہانی سے تقریباً ایک گھنٹہ پہلے ایک اطلاع دکھائی جائے گی جس میں آواز ہے۔"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
@@ -922,7 +954,7 @@ msgid "isha.prayer"
 msgstr "عشاء"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:49
 msgid "location_settings"
 msgstr "مقام"
 
@@ -940,25 +972,29 @@ msgstr "معزن زادے ۔"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:59
 msgid "muezzin_settings"
 msgstr "مؤذن"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:54
 msgid "notification_settings"
 msgstr "اطلاع اور آواز"
+
+#: src/navigation/types.ts:31
+msgid "qibla_finder"
+msgstr "قبلہ تلاش کرنے والا"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفیٰ غلواش"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:79
 msgid "reminders_settings"
 msgstr "یاد دہانیاں"
 
-#: src/navigation/types.ts:30
+#: src/navigation/types.ts:35
 msgid "settings"
 msgstr "ترتیبات"
 
@@ -988,7 +1024,7 @@ msgid "sunset"
 msgstr "غروب آفتاب"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:74
 msgid "widget_settings"
 msgstr "ویجیٹ کی ترتیبات"
 

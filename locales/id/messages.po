@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-01 04:08+0330\n"
+"POT-Creation-Date: 2023-02-20 23:02+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,6 +34,10 @@ msgstr "90 menit"
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+msgid "Accuracy"
+msgstr "Akurasi"
 
 #: src/components/audio_picker.tsx:387
 #: src/screens/settings_adhan/index.tsx:186
@@ -125,7 +129,7 @@ msgstr "Kalender"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:61
+#: src/tasks/set_pre_alarm.ts:65
 msgid "Cancel"
 msgstr "Batal"
 
@@ -179,6 +183,10 @@ msgstr "Kota terdekat"
 msgid "Closest Date"
 msgstr "Tanggal terdekat"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+msgid "Compass sensor unavailable"
+msgstr "Sensor kompas tidak tersedia"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Selesai"
@@ -227,7 +235,7 @@ msgid "Disabled"
 msgstr "Tidak Aktif"
 
 #: src/screens/fullscreen_alarm/index.tsx:123
-#: src/tasks/set_alarm.ts:105
+#: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Hentikan"
 
@@ -323,11 +331,15 @@ msgstr "Sembunyikan?"
 msgid "Hide Prayer Times"
 msgstr "Sembunyikan Waktu Sholat"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+msgid "High"
+msgstr "Tinggi"
+
 #: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "Lintang Tinggi"
 
-#: src/screens/settings_about/index.tsx:24
+#: src/screens/settings_about/index.tsx:39
 msgid "Home"
 msgstr "Situs"
 
@@ -392,7 +404,7 @@ msgstr "Latitud"
 msgid "Latitude is invalid"
 msgstr "Latitud tidak valid"
 
-#: src/screens/settings_about/index.tsx:30
+#: src/screens/settings_about/index.tsx:45
 msgid "License"
 msgstr "Lisensi"
 
@@ -412,6 +424,14 @@ msgstr "Longitud"
 #: src/screens/settings_location/index.tsx:317
 msgid "Longitude is invalid"
 msgstr "Longitud tidak valid"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+msgid "Low"
+msgstr "Rendah"
+
+#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+msgid "Medium"
+msgstr "Sedang"
 
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
@@ -439,12 +459,12 @@ msgid "New Reminder"
 msgstr "Buat Pengingat"
 
 #: src/intro/intro.tsx:100
-#: src/tasks/set_next_adhan.ts:77
-#: src/tasks/set_next_adhan.ts:119
+#: src/tasks/set_next_adhan.ts:83
+#: src/tasks/set_next_adhan.ts:125
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:144
+#: src/screens/home/index.tsx:160
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -543,7 +563,7 @@ msgstr "Resolusi Kutub"
 msgid "Power Manager"
 msgstr "Pengelola Daya"
 
-#: src/screens/home/index.tsx:115
+#: src/screens/home/index.tsx:131
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -556,8 +576,8 @@ msgid "Referred to as the ISNA method"
 msgstr "Mengacu pada metode ISNA"
 
 #: src/screens/fullscreen_alarm/index.tsx:54
-#: src/tasks/set_reminder.ts:75
-#: src/tasks/set_reminder.ts:101
+#: src/tasks/set_reminder.ts:82
+#: src/tasks/set_reminder.ts:110
 msgid "Reminder"
 msgstr "Pengingat"
 
@@ -627,7 +647,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:154
 msgid "Show Today"
 msgstr "Hari Ini"
 
@@ -642,6 +662,10 @@ msgstr "Tampilkan widget notifikasi?"
 #: src/utils/permission.ts:73
 msgid "Show settings"
 msgstr "Tampilkan pengaturan"
+
+#: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:21
+msgid "Show upcoming alarm notification?"
+msgstr "Tampilkan pemberitahuan alarm yang akan datang?"
 
 #: src/components/audio_picker.tsx:101
 msgid "Silent"
@@ -689,7 +713,7 @@ msgstr "Minggu"
 msgid "System Default"
 msgstr "Default Sistem"
 
-#: src/screens/settings_notifications/index.tsx:62
+#: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Waktu Tahajjud yang disebutkan dalam aplikasi adalah sepertiga malam terakhir"
 
@@ -774,6 +798,10 @@ msgstr "Universitas Ilmu Islam, Karachi"
 msgid "Unknown Error"
 msgstr "Kesalahan Tidak Dikenal"
 
+#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+msgid "Unreliable"
+msgstr "Tidak dapat diandalkan"
+
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Tidak ada (default)"
@@ -783,11 +811,11 @@ msgid "Unsupported"
 msgstr "Tidak didukung"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:47
+#: src/tasks/set_pre_alarm.ts:51
 msgid "Upcoming alarm"
 msgstr "Alarm selanjutnya"
 
-#: src/tasks/set_update_widgets_alarms.ts:28
+#: src/tasks/set_update_widgets_alarms.ts:35
 msgid "Updating widgets"
 msgstr "Memperbarui widget"
 
@@ -807,7 +835,7 @@ msgstr "Menggunakan GPS"
 msgid "Using Search"
 msgstr "Menggunakan Pencarian"
 
-#: src/screens/settings_about/index.tsx:20
+#: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "Versi"
 
@@ -852,12 +880,12 @@ msgstr "Suara Anda"
 msgid "abdul_basit_abdus_samad"
 msgstr "Abdul-Basit Abdus-Samad"
 
-#: src/screens/settings_about/index.tsx:36
+#: src/screens/settings_about/index.tsx:51
 msgid "about.credits"
 msgstr "Semua hak cipta untuk suara adzan adalah milik masing-masing pemiliknya. Terima kasih khusus kepada translation.io (lingui.js) untuk layanan mereka yang luar biasa. Terima kasih kepada semua anggota komunitas open source yang membuat semua library luar biasa ini yang akhirnya memungkinkan aplikasi ini rilis."
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:84
 msgid "about_settings"
 msgstr "Tentang"
 
@@ -875,7 +903,7 @@ msgid "asr.prayer"
 msgstr "Ashar"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:69
 msgid "battery_optimization_settings"
 msgstr "Optimasi Baterai"
 
@@ -884,7 +912,7 @@ msgid "before"
 msgstr "sebelum"
 
 #. screen title
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:64
 msgid "calculation_settings"
 msgstr "Perhitungan"
 
@@ -893,7 +921,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhur"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:44
 msgid "display_settings"
 msgstr "Tampilan"
 
@@ -906,13 +934,17 @@ msgid "forces all numbers to be in the selected system"
 msgstr "Set semua nomor menyesuaikan sistem"
 
 #. screen title
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:39
 msgid "fullscreen_alarm"
 msgstr "Putar Adzan"
 
-#: src/navigation/types.ts:26
+#: src/navigation/types.ts:27
 msgid "home"
 msgstr "Situs"
+
+#: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
+msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
+msgstr "jika diaktifkan, notifikasi akan ditampilkan sekitar satu jam sebelum waktu sholat atau pengingat yang memiliki suara"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
@@ -924,7 +956,7 @@ msgid "isha.prayer"
 msgstr "Isya'"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:49
 msgid "location_settings"
 msgstr "Lokasi"
 
@@ -942,25 +974,29 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:59
 msgid "muezzin_settings"
 msgstr "Muazin"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:54
 msgid "notification_settings"
 msgstr "Notifikasi & Suara"
+
+#: src/navigation/types.ts:31
+msgid "qibla_finder"
+msgstr "Penunjuk Arah Kiblat"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:79
 msgid "reminders_settings"
 msgstr "Pengingat"
 
-#: src/navigation/types.ts:30
+#: src/navigation/types.ts:35
 msgid "settings"
 msgstr "Pengaturan"
 
@@ -990,7 +1026,7 @@ msgid "sunset"
 msgstr "Terbenam"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:74
 msgid "widget_settings"
 msgstr "Pengaturan Widget"
 
