@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {Text, Box, Button, Spacer} from 'native-base';
-import {memo, useCallback, useEffect, useState} from 'react';
+import {memo, useCallback, useEffect, useRef, useState} from 'react';
 import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {replace} from '@/navigation/root_navigation';
 import {
@@ -12,6 +12,7 @@ import {stopAudio} from '@/services/audio_service';
 import {useSettings} from '@/store/settings';
 import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
+import {usePrevious} from '@/utils/hooks/use_previous';
 
 function FullscreenAlarm() {
   const [fullscreenOptions, setFullscreenOptions] = useState<{
@@ -30,20 +31,36 @@ function FullscreenAlarm() {
     SetAlarmTaskOptions | undefined
   >(undefined);
 
+  const handlingFinish = useRef(false);
+
+  const audioFinished = useCallback(async () => {
+    if (handlingFinish.current) return;
+    handlingFinish.current = true;
+    if ((await getActivityName()) === 'AlarmActivity') {
+      return finishAndRemoveTask();
+    } else {
+      await stopAudio();
+      return replace('Home');
+    }
+  }, []);
+
   useEffect(() => {
     getFgSvcNotification().then(async notification => {
       const options = getAlarmOptions(notification);
-      if (!isPlayingAudio || !options) {
-        if ((await getActivityName()) === 'AlarmActivity') {
-          return finishAndRemoveTask();
-        } else {
-          await stopAudio();
-          return replace('Home');
-        }
+      if (!options) {
+        await audioFinished();
       }
       setTaskOptions(options);
     });
-  }, [isPlayingAudio]);
+  }, [audioFinished]);
+
+  const previousIsPlaying = usePrevious(isPlayingAudio);
+
+  useEffect(() => {
+    if (previousIsPlaying && !isPlayingAudio) {
+      audioFinished();
+    }
+  }, [audioFinished, isPlayingAudio, previousIsPlaying]);
 
   useEffect(() => {
     if (!taskOptions) return;
@@ -72,7 +89,8 @@ function FullscreenAlarm() {
       options: taskOptions,
       notification: {android: {asForegroundService: true}},
     });
-  }, [taskOptions]);
+    await audioFinished();
+  }, [audioFinished, taskOptions]);
 
   return (
     <Box
