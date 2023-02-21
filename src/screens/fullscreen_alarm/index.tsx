@@ -65,17 +65,13 @@ function FullscreenAlarm() {
   }, [taskOptions]);
 
   const onDismissPress = useCallback(async () => {
-    try {
-      if (!taskOptions) {
-        return;
-      }
-      await cancelAlarmNotif({
-        options: taskOptions,
-        notification: {android: {asForegroundService: true}},
-      });
-    } finally {
-      finishAndRemoveTask();
+    if (!taskOptions) {
+      return;
     }
+    await cancelAlarmNotif({
+      options: taskOptions,
+      notification: {android: {asForegroundService: true}},
+    });
   }, [taskOptions]);
 
   return (

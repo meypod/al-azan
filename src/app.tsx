@@ -12,6 +12,7 @@ import {
   getCurrentRoute,
   navigationRef,
   onReady,
+  replace,
 } from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
@@ -56,6 +57,15 @@ export function App(): JSX.Element {
     setUpdateWidgetsAlarms();
     updateWidgets();
   }, []);
+
+  const [isPlayingAudio] = useSettings('IS_PLAYING_AUDIO');
+
+  useEffect(() => {
+    if (isPlayingAudio) {
+      console.log('GOIIIIIIIIIIIIIIIIINNNNNNNNNNGGGGGGGGG FULLLL');
+      replace('FullscreenAlarm');
+    }
+  }, [isPlayingAudio]);
 
   if (!appIntroDone) {
     return <Intro></Intro>;

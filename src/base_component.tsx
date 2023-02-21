@@ -3,7 +3,6 @@ import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
 import React, {StrictMode, useEffect} from 'react';
 import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
-import {replace} from './navigation/root_navigation';
 import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
 import {colors} from '@/theme/colors';
@@ -52,14 +51,6 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
       unsubscribe();
     };
   }, []);
-
-  const [isPlayingAudio] = useSettings('IS_PLAYING_AUDIO');
-
-  useEffect(() => {
-    if (isPlayingAudio) {
-      replace('FullscreenAlarm');
-    }
-  }, [isPlayingAudio]);
 
   const systemColorScheme = useColorScheme();
 

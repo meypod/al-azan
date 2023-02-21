@@ -5,7 +5,7 @@ import notifee, {
   AndroidVisibility,
   Notification,
 } from '@notifee/react-native';
-import {finishAndRemoveTask, isDndActive} from './modules/activity';
+import {isDndActive} from './modules/activity';
 import {isIntrusive, isSilent} from './modules/media_player';
 import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
@@ -52,7 +52,6 @@ export async function cancelAlarmNotif({
 }: CancelNotifOptions) {
   if (!isSilent(options?.sound)) {
     await stopAudio().catch(console.error);
-    await notifee.stopForegroundService().catch(console.error);
   }
 
   if (options?.notifId) {
@@ -280,15 +279,13 @@ export function setupNotifeeHandlers() {
         const isDnd = await isDndActive();
 
         if (!isDnd || canBypassDnd) {
-          await playAudio(options!.sound!)
-            .then(interrupted =>
-              cancelAlarmNotif({
-                notification,
-                options,
-                replaceWithNormal: !interrupted,
-              }),
-            )
-            .finally(() => finishAndRemoveTask());
+          const interrupted = await playAudio(options!.sound!);
+          await cancelAlarmNotif({
+            notification,
+            options,
+            replaceWithNormal: !interrupted,
+          });
+          await notifee.stopForegroundService().catch(console.error);
         }
       }
     }
