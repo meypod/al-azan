@@ -49,6 +49,7 @@ export async function play(audioEntry: AudioEntry) {
     const playbackResult = await playbackFinishedDefer;
     return playbackResult;
   } catch (e) {
+    onFinally(true); // to resolve the pending promise
     return true; // interrupted or errored
   } finally {
     removeListeners();
