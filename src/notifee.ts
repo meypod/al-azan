@@ -52,6 +52,7 @@ export async function cancelAlarmNotif({
 }: CancelNotifOptions) {
   if (!isSilent(options?.sound)) {
     await stopAudio().catch(console.error);
+    await notifee.stopForegroundService().catch(console.error);
   }
 
   if (options?.notifId) {
@@ -285,7 +286,6 @@ export function setupNotifeeHandlers() {
             options,
             replaceWithNormal: !interrupted,
           });
-          await notifee.stopForegroundService().catch(console.error);
         }
       }
     }
