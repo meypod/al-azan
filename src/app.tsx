@@ -62,7 +62,6 @@ export function App(): JSX.Element {
 
   useEffect(() => {
     if (isPlayingAudio) {
-      console.log('GOIIIIIIIIIIIIIIIIINNNNNNNNNNGGGGGGGGG FULLLL');
       replace('FullscreenAlarm');
     }
   }, [isPlayingAudio]);
