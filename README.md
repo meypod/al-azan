@@ -111,7 +111,9 @@ Translation to other languages has been done by these awesome people:
 
 ## Thanks to
 
-react-native community members.
+[Adhan-js](https://github.com/batoulapps/adhan-js) for providing the prayer times library.
+
+React-native community members.
 
 [Translation.io](https://translation.io/) (Lingui.js) for providing free services for open source projects.
 
