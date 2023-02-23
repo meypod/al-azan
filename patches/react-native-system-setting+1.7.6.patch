@@ -1,0 +1,20 @@
+diff --git a/node_modules/react-native-system-setting/android/src/main/java/com/ninty/system/setting/SystemSetting.java b/node_modules/react-native-system-setting/android/src/main/java/com/ninty/system/setting/SystemSetting.java
+index dedd524..7b152c5 100644
+--- a/node_modules/react-native-system-setting/android/src/main/java/com/ninty/system/setting/SystemSetting.java
++++ b/node_modules/react-native-system-setting/android/src/main/java/com/ninty/system/setting/SystemSetting.java
+@@ -597,4 +597,15 @@ public class SystemSetting extends ReactContextBaseJavaModule implements Activit
+             }
+         }
+     }
++    
++    // Required for rn built in EventEmitter Calls.
++    @ReactMethod
++    public void addListener(String eventName) {
++    // do nothing
++    }
++
++    @ReactMethod
++    public void removeListeners(Integer count) {
++    // do nothing
++    }
+ }
