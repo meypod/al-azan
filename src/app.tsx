@@ -23,6 +23,7 @@ import {AboutSettings} from '@/screens/settings_about';
 import {AdhanSettings} from '@/screens/settings_adhan';
 import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
 import {CalculationSettings} from '@/screens/settings_calculation';
+import {DevSettings} from '@/screens/settings_dev';
 import {DisplaySettings} from '@/screens/settings_display';
 import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
@@ -106,6 +107,7 @@ export function App(): JSX.Element {
             component={RemindersSettings}
           />
           <Stack.Screen name="AboutSettings" component={AboutSettings} />
+          <Stack.Screen name="DevSettings" component={DevSettings} />
         </Stack.Group>
         <Stack.Group
           screenOptions={{presentation: 'modal', headerShown: false}}>

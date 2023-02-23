@@ -6,6 +6,7 @@ import {AlarmIcon} from '@/assets/icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/brightness_medium';
 import {CalculateIcon} from '@/assets/icons/calculate';
+import {DevModeIcon} from '@/assets/icons/dev_mode';
 import {ExploreIcon} from '@/assets/icons/explore';
 import {InfoIcon} from '@/assets/icons/info';
 import {NotificationsActiveIcon} from '@/assets/icons/notifications_active';
@@ -67,6 +68,13 @@ const settingsScreenList: ScreenListItem[] = [
     icon: InfoIcon,
   },
 ];
+
+if (settings.getState().DEV_MODE) {
+  settingsScreenList.push({
+    name: 'DevSettings',
+    icon: DevModeIcon,
+  });
+}
 
 function Settings() {
   const calcSettingsState = useStore(calcSettings, state => state);
