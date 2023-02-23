@@ -59,7 +59,7 @@ msgstr "Add Custom Adhan"
 msgid "Add Reminder"
 msgstr "Add Reminder"
 
-#: src/screens/fullscreen_alarm/index.tsx:50
+#: src/screens/fullscreen_alarm/index.tsx:67
 msgid "Adhan"
 msgstr "Adhan"
 
@@ -240,7 +240,7 @@ msgstr "Device sounds"
 msgid "Disabled"
 msgstr "Disabled"
 
-#: src/screens/fullscreen_alarm/index.tsx:123
+#: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Dismiss"
@@ -465,6 +465,7 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:100
+#: src/screens/settings_dev/index.tsx:34
 #: src/tasks/set_next_adhan.ts:83
 #: src/tasks/set_next_adhan.ts:125
 msgid "Next"
@@ -581,7 +582,7 @@ msgstr "Qatar"
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
-#: src/screens/fullscreen_alarm/index.tsx:54
+#: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:82
 #: src/tasks/set_reminder.ts:110
 msgid "Reminder"
@@ -904,7 +905,7 @@ msgstr ""
 "Thanks to all open source community members who made all these wonderful libraries that made making this app possible."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:85
 msgid "about_settings"
 msgstr "About"
 
@@ -922,7 +923,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:70
 msgid "battery_optimization_settings"
 msgstr "Battery Optimization"
 
@@ -931,16 +932,21 @@ msgid "before"
 msgstr "before"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:65
 msgid "calculation_settings"
 msgstr "Calculation"
+
+#. screen title
+#: src/navigation/types.ts:90
+msgid "dev_settings"
+msgstr "Developer"
 
 #: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:45
 msgid "display_settings"
 msgstr "Display"
 
@@ -953,11 +959,11 @@ msgid "forces all numbers to be in the selected system"
 msgstr "forces all numbers to be in the selected system"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
-#: src/navigation/types.ts:27
+#: src/navigation/types.ts:28
 msgid "home"
 msgstr "Home"
 
@@ -975,7 +981,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:50
 msgid "location_settings"
 msgstr "Location"
 
@@ -993,16 +999,16 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:60
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:55
 msgid "notification_settings"
 msgstr "Notification & Sound"
 
-#: src/navigation/types.ts:31
+#: src/navigation/types.ts:32
 msgid "qibla_finder"
 msgstr "Qibla Finder"
 
@@ -1011,11 +1017,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:80
 msgid "reminders_settings"
 msgstr "Reminders"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "Settings"
 
@@ -1045,7 +1051,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:75
 msgid "widget_settings"
 msgstr "Widget Settings"
 

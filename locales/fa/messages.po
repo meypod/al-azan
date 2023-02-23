@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-20 23:02+0330\n"
+"POT-Creation-Date: 2023-02-23 14:02+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,7 +53,7 @@ msgstr "اضافه کردن اذان دلخواه"
 msgid "Add Reminder"
 msgstr " اضافه کردن یادآوری"
 
-#: src/screens/fullscreen_alarm/index.tsx:50
+#: src/screens/fullscreen_alarm/index.tsx:67
 msgid "Adhan"
 msgstr "اذان"
 
@@ -234,7 +234,7 @@ msgstr "صداهای دستگاه"
 msgid "Disabled"
 msgstr "غیرفعال"
 
-#: src/screens/fullscreen_alarm/index.tsx:123
+#: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "رد کردن"
@@ -459,6 +459,7 @@ msgid "New Reminder"
 msgstr "یادآوری جدید"
 
 #: src/intro/intro.tsx:100
+#: src/screens/settings_dev/index.tsx:34
 #: src/tasks/set_next_adhan.ts:83
 #: src/tasks/set_next_adhan.ts:125
 msgid "Next"
@@ -575,7 +576,7 @@ msgstr "قطر"
 msgid "Referred to as the ISNA method"
 msgstr "معروف به روش ایسنا"
 
-#: src/screens/fullscreen_alarm/index.tsx:54
+#: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:82
 #: src/tasks/set_reminder.ts:110
 msgid "Reminder"
@@ -886,7 +887,7 @@ msgstr ""
 "ممنون از همه اعضای جامعه اوپن سورس که همه این کتابخانه های فوق العاده را ایجاد کردند که ساخت این برنامه را ممکن کرد."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:85
 msgid "about_settings"
 msgstr "درباره"
 
@@ -904,7 +905,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:70
 msgid "battery_optimization_settings"
 msgstr "بهینه سازی باتری"
 
@@ -913,16 +914,21 @@ msgid "before"
 msgstr "قبل از"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:65
 msgid "calculation_settings"
 msgstr "محاسبه"
+
+#. screen title
+#: src/navigation/types.ts:90
+msgid "dev_settings"
+msgstr "توسعه دهنده"
 
 #: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "ظهر"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:45
 msgid "display_settings"
 msgstr "نمایش"
 
@@ -935,11 +941,11 @@ msgid "forces all numbers to be in the selected system"
 msgstr "همه اعداد را مجبور می کند که در سیستم انتخاب شده باشند"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "در حال پخش اذان"
 
-#: src/navigation/types.ts:27
+#: src/navigation/types.ts:28
 msgid "home"
 msgstr "خانه"
 
@@ -957,7 +963,7 @@ msgid "isha.prayer"
 msgstr "عشاء"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:50
 msgid "location_settings"
 msgstr "موقعیت"
 
@@ -975,16 +981,16 @@ msgstr "موذن زاده"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:60
 msgid "muezzin_settings"
 msgstr "مؤذن"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:55
 msgid "notification_settings"
 msgstr "اعلان و صدا"
 
-#: src/navigation/types.ts:31
+#: src/navigation/types.ts:32
 msgid "qibla_finder"
 msgstr "قبله یاب"
 
@@ -993,11 +999,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفی غلوش"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:80
 msgid "reminders_settings"
 msgstr "یادآوری ها"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "تنظیمات"
 
@@ -1027,7 +1033,7 @@ msgid "sunset"
 msgstr "غروب"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:75
 msgid "widget_settings"
 msgstr "تنظیمات ابزارک"
 

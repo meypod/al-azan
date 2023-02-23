@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-20 23:02+0330\n"
+"POT-Creation-Date: 2023-02-23 14:02+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,7 +53,7 @@ msgstr "Ajouter un Adhan personnalisé"
 msgid "Add Reminder"
 msgstr "Ajouter un rappel"
 
-#: src/screens/fullscreen_alarm/index.tsx:50
+#: src/screens/fullscreen_alarm/index.tsx:67
 msgid "Adhan"
 msgstr "Adhan"
 
@@ -234,7 +234,7 @@ msgstr "Sons de l'appareil"
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: src/screens/fullscreen_alarm/index.tsx:123
+#: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:102
 msgid "Dismiss"
 msgstr "Passer"
@@ -459,6 +459,7 @@ msgid "New Reminder"
 msgstr "Nouveau rappel"
 
 #: src/intro/intro.tsx:100
+#: src/screens/settings_dev/index.tsx:34
 #: src/tasks/set_next_adhan.ts:83
 #: src/tasks/set_next_adhan.ts:125
 msgid "Next"
@@ -575,7 +576,7 @@ msgstr "Qatar"
 msgid "Referred to as the ISNA method"
 msgstr "Appelée la méthode ISNA"
 
-#: src/screens/fullscreen_alarm/index.tsx:54
+#: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:82
 #: src/tasks/set_reminder.ts:110
 msgid "Reminder"
@@ -898,7 +899,7 @@ msgstr ""
 "Merci à tous les membres de la communauté open source qui ont créé toutes ces merveilleuses bibliothèques qui ont rendu cette application possible."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:85
 msgid "about_settings"
 msgstr "À propos de"
 
@@ -916,7 +917,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:70
 msgid "battery_optimization_settings"
 msgstr "Optimisation de la batterie"
 
@@ -925,16 +926,21 @@ msgid "before"
 msgstr "avant"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:65
 msgid "calculation_settings"
 msgstr "Calcul"
+
+#. screen title
+#: src/navigation/types.ts:90
+msgid "dev_settings"
+msgstr "Développeur"
 
 #: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:45
 msgid "display_settings"
 msgstr "Affichage"
 
@@ -947,11 +953,11 @@ msgid "forces all numbers to be in the selected system"
 msgstr "Force tous les numéros à être dans le système sélectionné"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "Jouer l'Adhan"
 
-#: src/navigation/types.ts:27
+#: src/navigation/types.ts:28
 msgid "home"
 msgstr "Accueil"
 
@@ -969,7 +975,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:50
 msgid "location_settings"
 msgstr "Localisation"
 
@@ -987,16 +993,16 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:60
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:55
 msgid "notification_settings"
 msgstr "Notification et son"
 
-#: src/navigation/types.ts:31
+#: src/navigation/types.ts:32
 msgid "qibla_finder"
 msgstr "Chercheur de Qibla"
 
@@ -1005,11 +1011,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:80
 msgid "reminders_settings"
 msgstr "Rappels"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "Paramètres"
 
@@ -1039,7 +1045,7 @@ msgid "sunset"
 msgstr "Coucher de soleil"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:75
 msgid "widget_settings"
 msgstr "Paramètres des widgets"
 
