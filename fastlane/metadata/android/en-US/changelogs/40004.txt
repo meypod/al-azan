@@ -1,0 +1,1 @@
+- fix: keep notification when It's not dismissed
