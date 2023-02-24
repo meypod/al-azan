@@ -1,5 +1,6 @@
 package com.github.meypod.al_azan.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -10,6 +11,7 @@ import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
 
+import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
@@ -18,15 +20,15 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 public class CompassSensor implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor rotationSensor;
-    private ReactContext context;
+    private ReactApplicationContext context;
     private SensorEventListener oneTimeListener;
     private float magneticDeclination = 0;
     private final float[] rotationSensorReading = new float[3];
 
-    private static int updateRateMs = 16; // milliseconds
+    private static int updateRateMs = 25; // milliseconds
     private static int updateRate = updateRateMs * 1000; // microseconds
 
-    public void start(ReactContext context) {
+    public void start(ReactApplicationContext context) {
         if (sensorManager == null) {
             this.context = context;
             sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
@@ -96,8 +98,7 @@ public class CompassSensor implements SensorEventListener {
     private void updateCompass(SensorEvent event) {
         //make sensor readings smoother using a low pass filter
         MathUtils.lowPassFilter(event.values, rotationSensorReading);
-        /// TODO: getDisplayRotation
-        DisplayRotation displayRotation = DisplayRotation.ROTATION_0;
+        DisplayRotation displayRotation = getDisplayRotation();
         float normalizedAzimuth = MathUtils.calculateAzimuth(rotationSensorReading, displayRotation);
 
         if (!Float.isNaN(normalizedAzimuth)) {
@@ -153,7 +154,11 @@ public class CompassSensor implements SensorEventListener {
 
     private Display getDisplayCompat() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            return  context.getDisplay();
+            Activity activity = context.getCurrentActivity();
+            if (activity != null) {
+                return activity.getDisplay();
+            }
+            return null;
         } else {
             return ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         }

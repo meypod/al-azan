@@ -1,20 +1,22 @@
 import {Qibla, Coordinates} from 'adhan';
-import {Flex, HStack, Text, useColorMode, View} from 'native-base';
-import {useEffect, useMemo, useState} from 'react';
-import {Animated, useWindowDimensions} from 'react-native';
-import AccuracyIndicator from './accuracy_indicator';
+import {Flex, HStack, Input, useColorMode, View} from 'native-base';
+import {useEffect, useMemo, useRef} from 'react';
 import {
-  useCompassHeading,
-  useCompassAccuracy,
+  useWindowDimensions,
+  Image,
+  TextInput as NativeTextInput,
+} from 'react-native';
+import AccuracyIndicator from './accuracy_indicator';
+import CompassMod, {
   setCompassLocation,
+  useCompassAccuracy,
 } from '@/modules/compass';
 import {calcSettings} from '@/store/calculation';
 
 export function QiblaFinder() {
-  const heading = useCompassHeading();
   const accuracy = useCompassAccuracy();
   const {colorMode} = useColorMode();
-  const [qiblaDegree, setQiblaDegree] = useState(0);
+  const qiblaDegree = useRef(0);
 
   const dimensions = useWindowDimensions();
 
@@ -33,8 +35,35 @@ export function QiblaFinder() {
     if (LOCATION_LAT && LOCATION_LONG) {
       setCompassLocation(LOCATION_LAT, LOCATION_LONG, 1);
       const qibla = Qibla(new Coordinates(LOCATION_LAT, LOCATION_LONG));
-      setQiblaDegree(qibla);
+      qiblaDegree.current = qibla;
     }
+  }, []);
+
+  const compassImgRef = useRef<Image>(null);
+  const qiblaImgRef = useRef<Image>(null);
+  const degreeTextRef = useRef<NativeTextInput>(null);
+
+  useEffect(() => {
+    const sub = CompassMod.addListener('heading', degrees => {
+      compassImgRef.current?.setNativeProps({
+        transform: [
+          {
+            rotate: -degrees + 'deg',
+          },
+        ],
+      });
+      qiblaImgRef.current?.setNativeProps({
+        transform: [
+          {
+            rotate: -degrees + qiblaDegree.current + 'deg',
+          },
+        ],
+      });
+      degreeTextRef.current?.setNativeProps({
+        text: Math.round(degrees) + '\u00B0', // deg symbol
+      });
+    });
+    return () => sub.remove();
   }, []);
 
   return (
@@ -47,7 +76,8 @@ export function QiblaFinder() {
         justifyContent="center"
         alignItems="center"
         my="5">
-        <Animated.Image
+        <Image
+          ref={compassImgRef}
           source={
             colorMode === 'dark'
               ? require('@/assets/compass/compass_base_dark.png')
@@ -57,7 +87,6 @@ export function QiblaFinder() {
             [lockedVariableName]: dimensions[lockedVariableName],
             [unlockedVariableName]: dimensions[lockedVariableName],
             resizeMode: 'contain',
-            transform: [{rotate: -heading + 'deg'}],
           }}
         />
         <View
@@ -68,7 +97,13 @@ export function QiblaFinder() {
           bottom={0}
           justifyContent="center"
           alignItems="center">
-          <Text fontSize="3xl">{Math.round(heading)}&deg;</Text>
+          <Input
+            fontSize="3xl"
+            ref={degreeTextRef}
+            defaultValue="0&deg;"
+            borderWidth={0}
+            textAlign="center"
+          />
         </View>
         <View
           position="absolute"
@@ -78,17 +113,13 @@ export function QiblaFinder() {
           bottom={0}
           justifyContent="center"
           alignItems="center">
-          <Animated.Image
+          <Image
+            ref={qiblaImgRef}
             source={require('@/assets/compass/qibla_indicator.png')}
             style={{
               [lockedVariableName]: dimensions[lockedVariableName],
               [unlockedVariableName]: dimensions[lockedVariableName],
               resizeMode: 'contain',
-              transform: [
-                {
-                  rotate: -heading + qiblaDegree + 'deg',
-                },
-              ],
             }}
           />
         </View>
