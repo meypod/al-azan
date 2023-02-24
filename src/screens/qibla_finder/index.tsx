@@ -103,6 +103,8 @@ export function QiblaFinder() {
             defaultValue="0&deg;"
             borderWidth={0}
             textAlign="center"
+            caretHidden={true}
+            isReadOnly={true}
           />
         </View>
         <View
