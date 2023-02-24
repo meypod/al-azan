@@ -49,7 +49,7 @@ export function DevSettings(props: IScrollViewProps) {
     }
 
     const adhanOptions = {
-      notifId: ADHAN_NOTIFICATION_ID,
+      notifId: ADHAN_NOTIFICATION_ID, // TODO: using same notification id is troublesome when dismissing
       notifChannelId: ADHAN_CHANNEL_ID,
       notifChannelName: ADHAN_CHANNEL_NAME,
       date,
