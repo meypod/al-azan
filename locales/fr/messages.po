@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-23 14:02+0330\n"
+"POT-Creation-Date: 2023-02-24 10:54+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,6 +30,10 @@ msgstr "60 min"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 min"
+
+#: src/constants/notification.ts:20
+msgid "ADHAN_CHANNEL_NAME"
+msgstr "Adhan"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
@@ -73,7 +77,7 @@ msgstr "Paramètres de calcul avancés"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:60
+#: src/utils/permission.ts:124
 msgid "Alarms Permission"
 msgstr "Autorisation des alarmes"
 
@@ -129,7 +133,7 @@ msgstr "Calendrier"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:65
+#: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -235,7 +239,7 @@ msgid "Disabled"
 msgstr "Désactivé"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:102
+#: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
 msgstr "Passer"
 
@@ -243,9 +247,9 @@ msgstr "Passer"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turquie"
 
-#: src/utils/permission.ts:25
-#: src/utils/permission.ts:64
-#: src/utils/permission.ts:96
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:128
+#: src/utils/permission.ts:160
 msgid "Don't ask again"
 msgstr "Ne demandez pas à nouveau"
 
@@ -459,9 +463,9 @@ msgid "New Reminder"
 msgstr "Nouveau rappel"
 
 #: src/intro/intro.tsx:100
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:83
-#: src/tasks/set_next_adhan.ts:125
+#: src/screens/settings_dev/index.tsx:33
+#: src/tasks/set_next_adhan.ts:81
+#: src/tasks/set_next_adhan.ts:121
 msgid "Next"
 msgstr "Suivant"
 
@@ -487,7 +491,7 @@ msgstr "Aucun résultat"
 msgid "None (Automatic)"
 msgstr "Aucun (automatique)"
 
-#: src/utils/permission.ts:69
+#: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "Pas maintenant"
 
@@ -502,7 +506,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification et son"
 
-#: src/utils/permission.ts:21
+#: src/utils/permission.ts:37
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -510,12 +514,12 @@ msgstr "Notifications Permission"
 msgid "Numbering system"
 msgstr "Système de numérotation"
 
-#: src/utils/permission.ts:31
-#: src/utils/permission.ts:102
+#: src/utils/permission.ts:47
+#: src/utils/permission.ts:166
 msgid "Okay"
 msgstr "D'accord"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:125
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Sur Android 12 et plus récent, l'application a également besoin de l'autorisation des alarmes pour fonctionner correctement, vous devez donc l'autoriser également."
 
@@ -548,11 +552,19 @@ msgstr "Ouvrir les paramètres de gestion d'énergie"
 msgid "Options"
 msgstr "Options"
 
+#: src/constants/notification.ts:24
+msgid "PRE_ADHAN_CHANNEL_NAME"
+msgstr "Adhan à venir"
+
+#: src/constants/notification.ts:40
+msgid "PRE_REMINDER_CHANNEL_NAME"
+msgstr "Prochain rappel"
+
 #: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "Coller"
 
-#: src/utils/permission.ts:92
+#: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "Permission de l'État du téléphone"
 
@@ -572,13 +584,17 @@ msgstr "Jour précédent"
 msgid "Qatar"
 msgstr "Qatar"
 
+#: src/constants/notification.ts:36
+msgid "REMINDER_CHANNEL_NAME"
+msgstr "Rappel"
+
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "Appelée la méthode ISNA"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:82
-#: src/tasks/set_reminder.ts:110
+#: src/tasks/set_reminder.ts:80
+#: src/tasks/set_reminder.ts:106
 msgid "Reminder"
 msgstr "Rappel"
 
@@ -665,7 +681,7 @@ msgstr "Montrer le prochain dans la notification ?"
 msgid "Show notification widget?"
 msgstr "Afficher le widget de notification ?"
 
-#: src/utils/permission.ts:73
+#: src/utils/permission.ts:137
 msgid "Show settings"
 msgstr "Afficher les paramètres"
 
@@ -773,11 +789,11 @@ msgstr "Format de l'heure"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez utiliser le bouton \"Trouver ma position\", ou utiliser la recherche par pays et ville/région, ou encore entrer vos coordonnées manuellement."
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:38
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Pour voir les notifications concernant l'adhan, nous avons besoin de votre permission."
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:157
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Pour arrêter la lecture de l'adhan lorsque vous recevez un appel, nous devons lire l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
 
@@ -822,11 +838,11 @@ msgid "Unsupported"
 msgstr "Non pris en charge"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:51
+#: src/tasks/set_pre_alarm.ts:43
 msgid "Upcoming alarm"
 msgstr "Alarme à venir"
 
-#: src/tasks/set_update_widgets_alarms.ts:35
+#: src/tasks/set_update_widgets_alarms.ts:33
 msgid "Updating widgets"
 msgstr "Mise à jour des widgets"
 
@@ -849,6 +865,14 @@ msgstr "Utilisation de la recherche"
 #: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "Version"
+
+#: src/constants/notification.ts:28
+msgid "WIDGET_CHANNEL_NAME"
+msgstr "Widget"
+
+#: src/constants/notification.ts:32
+msgid "WIDGET_UPDATE_CHANNEL_NAME"
+msgstr "Mise à jour du widget"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."

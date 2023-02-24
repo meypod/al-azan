@@ -37,6 +37,10 @@ msgstr "60 min"
 msgid "90 min"
 msgstr "90 min"
 
+#: src/constants/notification.ts:20
+msgid "ADHAN_CHANNEL_NAME"
+msgstr "Adhan"
+
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad"
@@ -79,7 +83,7 @@ msgstr "Advanced Calculation Settings"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: src/utils/permission.ts:60
+#: src/utils/permission.ts:124
 msgid "Alarms Permission"
 msgstr "Alarms Permission"
 
@@ -135,7 +139,7 @@ msgstr "Calendar"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:65
+#: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -241,7 +245,7 @@ msgid "Disabled"
 msgstr "Disabled"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:102
+#: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -249,9 +253,9 @@ msgstr "Dismiss"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
-#: src/utils/permission.ts:25
-#: src/utils/permission.ts:64
-#: src/utils/permission.ts:96
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:128
+#: src/utils/permission.ts:160
 msgid "Don't ask again"
 msgstr "Don't ask again"
 
@@ -465,9 +469,9 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:100
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:83
-#: src/tasks/set_next_adhan.ts:125
+#: src/screens/settings_dev/index.tsx:33
+#: src/tasks/set_next_adhan.ts:81
+#: src/tasks/set_next_adhan.ts:121
 msgid "Next"
 msgstr "Next"
 
@@ -493,7 +497,7 @@ msgstr "No Results"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/utils/permission.ts:69
+#: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "Not now"
 
@@ -508,7 +512,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
 
-#: src/utils/permission.ts:21
+#: src/utils/permission.ts:37
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -516,12 +520,12 @@ msgstr "Notifications Permission"
 msgid "Numbering system"
 msgstr "Numbering system"
 
-#: src/utils/permission.ts:31
-#: src/utils/permission.ts:102
+#: src/utils/permission.ts:47
+#: src/utils/permission.ts:166
 msgid "Okay"
 msgstr "Okay"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:125
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 
@@ -554,11 +558,19 @@ msgstr "Open Power Manager Settings"
 msgid "Options"
 msgstr "Options"
 
+#: src/constants/notification.ts:24
+msgid "PRE_ADHAN_CHANNEL_NAME"
+msgstr "Upcoming adhan"
+
+#: src/constants/notification.ts:40
+msgid "PRE_REMINDER_CHANNEL_NAME"
+msgstr "Upcoming reminder"
+
 #: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "Paste"
 
-#: src/utils/permission.ts:92
+#: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "Phone State Permission"
 
@@ -578,13 +590,17 @@ msgstr "Prev Day"
 msgid "Qatar"
 msgstr "Qatar"
 
+#: src/constants/notification.ts:36
+msgid "REMINDER_CHANNEL_NAME"
+msgstr "Reminder"
+
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:82
-#: src/tasks/set_reminder.ts:110
+#: src/tasks/set_reminder.ts:80
+#: src/tasks/set_reminder.ts:106
 msgid "Reminder"
 msgstr "Reminder"
 
@@ -671,7 +687,7 @@ msgstr "Show next in notification?"
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
-#: src/utils/permission.ts:73
+#: src/utils/permission.ts:137
 msgid "Show settings"
 msgstr "Show settings"
 
@@ -779,11 +795,11 @@ msgstr "Time format"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:38
 msgid "To see notifications about adhan, we need your permission."
 msgstr "To see notifications about adhan, we need your permission."
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:157
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 
@@ -828,11 +844,11 @@ msgid "Unsupported"
 msgstr "Unsupported"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:51
+#: src/tasks/set_pre_alarm.ts:43
 msgid "Upcoming alarm"
 msgstr "Upcoming alarm"
 
-#: src/tasks/set_update_widgets_alarms.ts:35
+#: src/tasks/set_update_widgets_alarms.ts:33
 msgid "Updating widgets"
 msgstr "Updating widgets"
 
@@ -855,6 +871,14 @@ msgstr "Using Search"
 #: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "Version"
+
+#: src/constants/notification.ts:28
+msgid "WIDGET_CHANNEL_NAME"
+msgstr "Widget"
+
+#: src/constants/notification.ts:32
+msgid "WIDGET_UPDATE_CHANNEL_NAME"
+msgstr "Widget Update"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."

@@ -5,7 +5,6 @@ import {ToastAndroid} from 'react-native';
 import {getNextPrayer, Prayer, translatePrayer} from '@/adhan';
 import {
   ADHAN_CHANNEL_ID,
-  ADHAN_CHANNEL_NAME,
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {AudioEntry} from '@/modules/media_player';
@@ -51,7 +50,6 @@ export function DevSettings(props: IScrollViewProps) {
     const adhanOptions = {
       notifId: ADHAN_NOTIFICATION_ID, // TODO: using same notification id is troublesome when dismissing
       notifChannelId: ADHAN_CHANNEL_ID,
-      notifChannelName: ADHAN_CHANNEL_NAME,
       date,
       title,
       body,

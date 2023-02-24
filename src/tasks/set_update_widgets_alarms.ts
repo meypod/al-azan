@@ -4,12 +4,10 @@ import notifee, {
   TriggerType,
   AndroidImportance,
   AndroidCategory,
-  AndroidVisibility,
 } from '@notifee/react-native';
 import {getNextPrayer} from '@/adhan';
 import {
   WIDGET_UPDATE_CHANNEL_ID,
-  WIDGET_UPDATE_CHANNEL_NAME,
   WIDGET_UPDATE_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {settings} from '@/store/settings';
@@ -69,28 +67,18 @@ export async function setUpdateWidgetsAlarms() {
 
   if (!nextPrayer) return;
 
-  const channelId = await notifee.createChannel({
-    id: WIDGET_UPDATE_CHANNEL_ID,
-    name: WIDGET_UPDATE_CHANNEL_NAME,
-    importance: AndroidImportance.MIN,
-    visibility: AndroidVisibility.SECRET,
-    lights: false,
-    badge: false,
-    vibration: false,
-  });
-
   const begginingOfNextDay = getNextDayBeginning(new Date()).getTime();
 
   await Promise.all([
     // for 00:00 updates
     createNotificationTrigger({
-      channelId,
+      channelId: WIDGET_UPDATE_CHANNEL_ID,
       timestamp: begginingOfNextDay,
       notificationId: WIDGET_UPDATE_NOTIFICATION_ID + '-nextday',
     }),
     // for next prayer
     createNotificationTrigger({
-      channelId,
+      channelId: WIDGET_UPDATE_CHANNEL_ID,
       timestamp: nextPrayer.date.getTime(),
       notificationId: WIDGET_UPDATE_NOTIFICATION_ID,
     }),

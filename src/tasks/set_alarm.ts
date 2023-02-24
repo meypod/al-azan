@@ -4,7 +4,6 @@ import notifee, {
   TriggerType,
   AndroidImportance,
   AndroidCategory,
-  AndroidVisibility,
 } from '@notifee/react-native';
 import {Prayer} from '@/adhan';
 import {AudioEntry, isIntrusive, isSilent} from '@/modules/media_player';
@@ -14,8 +13,6 @@ export type SetAlarmTaskOptions = {
   notifId: string;
   /** notification channel id */
   notifChannelId: string;
-  /** notification cahnnel name */
-  notifChannelName: string;
   /** When the alarm is going to be triggered */
   date: Date;
   /** notification title */
@@ -37,23 +34,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
    *  otherwise all options should have neen checked.
    */
 
-  const {
-    date,
-    title,
-    body,
-    subtitle,
-    sound,
-    notifChannelId,
-    notifChannelName,
-    notifId,
-  } = options;
-
-  const channelId = await notifee.createChannel({
-    id: notifChannelId,
-    name: notifChannelName,
-    importance: AndroidImportance.HIGH,
-    visibility: AndroidVisibility.PUBLIC,
-  });
+  const {date, title, body, subtitle, sound, notifChannelId, notifId} = options;
 
   const trigger: TimestampTrigger = {
     type: TriggerType.TIMESTAMP,
@@ -75,7 +56,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       android: {
         lightUpScreen: intrusive,
         smallIcon: 'ic_stat_name',
-        channelId,
+        channelId: notifChannelId,
         category: AndroidCategory.ALARM,
         importance: AndroidImportance.HIGH,
         autoCancel: !intrusive,

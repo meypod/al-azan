@@ -2,7 +2,6 @@ import notifee, {
   EventType,
   EventDetail,
   AndroidImportance,
-  AndroidVisibility,
   Notification,
 } from '@notifee/react-native';
 import {isDndActive} from './modules/activity';
@@ -18,7 +17,6 @@ import {
   PRE_REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
   WIDGET_CHANNEL_ID,
-  WIDGET_CHANNEL_NAME,
   WIDGET_NOTIFICATION_ID,
   WIDGET_UPDATE_CHANNEL_ID,
 } from '@/constants/notification';
@@ -302,18 +300,11 @@ export async function updatePermanentNotifWidget({
   hijriDate,
   prayers,
 }: updateWidgetOptions) {
-  const channelId = await notifee.createChannel({
-    id: WIDGET_CHANNEL_ID,
-    name: WIDGET_CHANNEL_NAME,
-    importance: AndroidImportance.LOW,
-    visibility: AndroidVisibility.PUBLIC,
-  });
-
   await updateNotification({
     dayAndMonth,
     hijriDate,
     prayers,
-    channelId,
+    channelId: WIDGET_CHANNEL_ID,
     notificationId: WIDGET_NOTIFICATION_ID,
   });
 }

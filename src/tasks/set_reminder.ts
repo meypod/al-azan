@@ -5,9 +5,7 @@ import {setPreAlarmTask} from './set_pre_alarm';
 import {getPrayerTimes} from '@/adhan';
 import {
   PRE_REMINDER_CHANNEL_ID,
-  PRE_REMINDER_CHANNEL_NAME,
   REMINDER_CHANNEL_ID,
-  REMINDER_CHANNEL_NAME,
 } from '@/constants/notification';
 import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
 import {reminderSettings, Reminder} from '@/store/reminder';
@@ -86,7 +84,6 @@ export async function setReminders(options?: SetReminderOptions) {
       prayer: reminder.prayer,
       notifId: reminder.id,
       notifChannelId: REMINDER_CHANNEL_ID,
-      notifChannelName: REMINDER_CHANNEL_NAME,
       isReminder: true,
       sound: reminder.sound,
       once: reminder.once,
@@ -99,7 +96,6 @@ export async function setReminders(options?: SetReminderOptions) {
             ...reminderOptions,
             notifId: 'pre-' + reminder.id,
             notifChannelId: PRE_REMINDER_CHANNEL_ID,
-            notifChannelName: PRE_REMINDER_CHANNEL_NAME,
             targetAlarmNotifId: reminder.id,
           }),
         )

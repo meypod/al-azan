@@ -5,10 +5,8 @@ import {getNextPrayer} from '@/adhan/prayer_times';
 import {
   ADHAN_NOTIFICATION_ID,
   ADHAN_CHANNEL_ID,
-  ADHAN_CHANNEL_NAME,
   PRE_ADHAN_NOTIFICATION_ID,
   PRE_ADHAN_CHANNEL_ID,
-  PRE_ADHAN_CHANNEL_NAME,
 } from '@/constants/notification';
 import {AudioEntry} from '@/modules/media_player';
 import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
@@ -102,7 +100,6 @@ export async function setNextAdhan(
   const adhanOptions = {
     notifId: ADHAN_NOTIFICATION_ID,
     notifChannelId: ADHAN_CHANNEL_ID,
-    notifChannelName: ADHAN_CHANNEL_NAME,
     date,
     title,
     body,
@@ -116,7 +113,6 @@ export async function setNextAdhan(
     ...adhanOptions,
     notifId: PRE_ADHAN_NOTIFICATION_ID,
     notifChannelId: PRE_ADHAN_CHANNEL_ID,
-    notifChannelName: PRE_ADHAN_CHANNEL_NAME,
     targetAlarmNotifId: ADHAN_NOTIFICATION_ID,
   });
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-23 14:02+0330\n"
+"POT-Creation-Date: 2023-02-24 10:54+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,6 +30,10 @@ msgstr "60 دقیقه"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 دقیقه"
+
+#: src/constants/notification.ts:20
+msgid "ADHAN_CHANNEL_NAME"
+msgstr "اذان"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
@@ -73,7 +77,7 @@ msgstr "تنظیمات پیشرفته محاسبه"
 msgid "Ahmer"
 msgstr "قرمز"
 
-#: src/utils/permission.ts:60
+#: src/utils/permission.ts:124
 msgid "Alarms Permission"
 msgstr "مجوز هشدارها"
 
@@ -129,7 +133,7 @@ msgstr "تقویم"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:65
+#: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
 msgstr "لغو"
 
@@ -235,7 +239,7 @@ msgid "Disabled"
 msgstr "غیرفعال"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:102
+#: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
 msgstr "رد کردن"
 
@@ -243,9 +247,9 @@ msgstr "رد کردن"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "ریاست امور مذهبی، ترکیه"
 
-#: src/utils/permission.ts:25
-#: src/utils/permission.ts:64
-#: src/utils/permission.ts:96
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:128
+#: src/utils/permission.ts:160
 msgid "Don't ask again"
 msgstr "دیگه نپرس"
 
@@ -459,9 +463,9 @@ msgid "New Reminder"
 msgstr "یادآوری جدید"
 
 #: src/intro/intro.tsx:100
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:83
-#: src/tasks/set_next_adhan.ts:125
+#: src/screens/settings_dev/index.tsx:33
+#: src/tasks/set_next_adhan.ts:81
+#: src/tasks/set_next_adhan.ts:121
 msgid "Next"
 msgstr "بعدی"
 
@@ -487,7 +491,7 @@ msgstr "نتیجه ای یافت نشد"
 msgid "None (Automatic)"
 msgstr "هیچکدام (اتوماتیک)"
 
-#: src/utils/permission.ts:69
+#: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "الان نه"
 
@@ -502,7 +506,7 @@ msgstr "اعلان"
 msgid "Notification & Sound"
 msgstr "اعلان و صدا"
 
-#: src/utils/permission.ts:21
+#: src/utils/permission.ts:37
 msgid "Notifications Permission"
 msgstr "مجوز اعلان"
 
@@ -510,12 +514,12 @@ msgstr "مجوز اعلان"
 msgid "Numbering system"
 msgstr "سیستم شماره گذاری"
 
-#: src/utils/permission.ts:31
-#: src/utils/permission.ts:102
+#: src/utils/permission.ts:47
+#: src/utils/permission.ts:166
 msgid "Okay"
 msgstr "باشه"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:125
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "در اندروید 12 و جدیدتر، برنامه برای درست کار کردن به مجوز زنگ هشدار نیز نیاز دارد، بنابراین باید این اجازه را نیز بدهید."
 
@@ -548,11 +552,19 @@ msgstr "تنظیمات مدیریت انرژی را باز کن"
 msgid "Options"
 msgstr "گزینه ها"
 
+#: src/constants/notification.ts:24
+msgid "PRE_ADHAN_CHANNEL_NAME"
+msgstr "هشدار بعدی"
+
+#: src/constants/notification.ts:40
+msgid "PRE_REMINDER_CHANNEL_NAME"
+msgstr "یادآوری بعدی"
+
 #: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "چسباندن"
 
-#: src/utils/permission.ts:92
+#: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "مجوز وضعیت تلفن"
 
@@ -572,13 +584,17 @@ msgstr "روز قبل"
 msgid "Qatar"
 msgstr "قطر"
 
+#: src/constants/notification.ts:36
+msgid "REMINDER_CHANNEL_NAME"
+msgstr "یادآوری"
+
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "معروف به روش ایسنا"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:82
-#: src/tasks/set_reminder.ts:110
+#: src/tasks/set_reminder.ts:80
+#: src/tasks/set_reminder.ts:106
 msgid "Reminder"
 msgstr "یادآوری"
 
@@ -658,7 +674,7 @@ msgstr "بعدی در اعلان نشان داده شود؟"
 msgid "Show notification widget?"
 msgstr "ابزارک اعلان نمایش داده شود؟"
 
-#: src/utils/permission.ts:73
+#: src/utils/permission.ts:137
 msgid "Show settings"
 msgstr "نمایش تنظیمات"
 
@@ -761,11 +777,11 @@ msgstr "قالب زمان"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "برای محاسبه اذان، به موقعیت مکانی شما نیاز داریم. می‌توانید از دکمه «پیدا کردن مکان من» استفاده کنید یا از جستجوی کشور و شهر/منطقه استفاده کنید یا مختصات خود را به صورت دستی وارد کنید."
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:38
 msgid "To see notifications about adhan, we need your permission."
 msgstr "برای دیدن اعلان‌های اذان، به اجازه شما نیاز داریم."
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:157
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "برای توقف پخش اذان هنگام دریافت تماس، باید وضعیت تلفن شما را بخوانیم. اجازه ندادن به این مجوز به سادگی این ویژگی را غیرفعال می کند."
 
@@ -810,11 +826,11 @@ msgid "Unsupported"
 msgstr "پشتیبانی نشده"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:51
+#: src/tasks/set_pre_alarm.ts:43
 msgid "Upcoming alarm"
 msgstr "هشدار بعدی"
 
-#: src/tasks/set_update_widgets_alarms.ts:35
+#: src/tasks/set_update_widgets_alarms.ts:33
 msgid "Updating widgets"
 msgstr "در حال به روزرسانی ویجت ها"
 
@@ -837,6 +853,14 @@ msgstr "با استفاده از جستجو"
 #: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "نسخه"
+
+#: src/constants/notification.ts:28
+msgid "WIDGET_CHANNEL_NAME"
+msgstr "ویجت"
+
+#: src/constants/notification.ts:32
+msgid "WIDGET_UPDATE_CHANNEL_NAME"
+msgstr "به روز رسانی ویجت"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."

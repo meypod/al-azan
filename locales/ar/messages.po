@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-23 14:02+0330\n"
+"POT-Creation-Date: 2023-02-24 10:54+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,6 +30,10 @@ msgstr "60 دقيقة"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 دقيقة"
+
+#: src/constants/notification.ts:20
+msgid "ADHAN_CHANNEL_NAME"
+msgstr "أذان"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
@@ -73,7 +77,7 @@ msgstr "إعدادات الحساب المتقدمة"
 msgid "Ahmer"
 msgstr "أحمر"
 
-#: src/utils/permission.ts:60
+#: src/utils/permission.ts:124
 msgid "Alarms Permission"
 msgstr "إذن المنبّهات"
 
@@ -129,7 +133,7 @@ msgstr "التقويم"
 
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
-#: src/tasks/set_pre_alarm.ts:65
+#: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
 msgstr "ألغ"
 
@@ -235,7 +239,7 @@ msgid "Disabled"
 msgstr "غير مفعّل"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:102
+#: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
 msgstr "تجاهل"
 
@@ -243,9 +247,9 @@ msgstr "تجاهل"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "رئاسة الشؤون الدينية ، تركيا"
 
-#: src/utils/permission.ts:25
-#: src/utils/permission.ts:64
-#: src/utils/permission.ts:96
+#: src/utils/permission.ts:41
+#: src/utils/permission.ts:128
+#: src/utils/permission.ts:160
 msgid "Don't ask again"
 msgstr "لا تسأل مرة أخرى"
 
@@ -459,9 +463,9 @@ msgid "New Reminder"
 msgstr "تذكير جديد"
 
 #: src/intro/intro.tsx:100
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:83
-#: src/tasks/set_next_adhan.ts:125
+#: src/screens/settings_dev/index.tsx:33
+#: src/tasks/set_next_adhan.ts:81
+#: src/tasks/set_next_adhan.ts:121
 msgid "Next"
 msgstr "التالي"
 
@@ -487,7 +491,7 @@ msgstr "دون نتائج"
 msgid "None (Automatic)"
 msgstr "لا شيء (تلقائي)"
 
-#: src/utils/permission.ts:69
+#: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "ليس الان"
 
@@ -502,7 +506,7 @@ msgstr "إشعار"
 msgid "Notification & Sound"
 msgstr "الإشعار و الصوت"
 
-#: src/utils/permission.ts:21
+#: src/utils/permission.ts:37
 msgid "Notifications Permission"
 msgstr "إذن الإشعارات"
 
@@ -510,12 +514,12 @@ msgstr "إذن الإشعارات"
 msgid "Numbering system"
 msgstr "نظام الترقيم"
 
-#: src/utils/permission.ts:31
-#: src/utils/permission.ts:102
+#: src/utils/permission.ts:47
+#: src/utils/permission.ts:166
 msgid "Okay"
 msgstr "تمام"
 
-#: src/utils/permission.ts:61
+#: src/utils/permission.ts:125
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "في نظام Android 12 والإصدارات الأحدث ، يحتاج التطبيق أيضًا إلى إذن المنبّهات للعمل بشكل صحيح ، لذلك يجب أن تسمح بذلك أيضًا."
 
@@ -548,11 +552,19 @@ msgstr "افتح إعدادات مدير الطاقة"
 msgid "Options"
 msgstr "خيارات"
 
+#: src/constants/notification.ts:24
+msgid "PRE_ADHAN_CHANNEL_NAME"
+msgstr "الآذان القادمة"
+
+#: src/constants/notification.ts:40
+msgid "PRE_REMINDER_CHANNEL_NAME"
+msgstr "التذكير القادم"
+
 #: src/screens/settings_location/index.tsx:345
 msgid "Paste"
 msgstr "لصق"
 
-#: src/utils/permission.ts:92
+#: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "إذن حالة الهاتف"
 
@@ -572,13 +584,17 @@ msgstr "اليوم السابق"
 msgid "Qatar"
 msgstr "دولة قطر"
 
+#: src/constants/notification.ts:36
+msgid "REMINDER_CHANNEL_NAME"
+msgstr "تذكير"
+
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "يشار إليها باسم طريقة ISNA"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:82
-#: src/tasks/set_reminder.ts:110
+#: src/tasks/set_reminder.ts:80
+#: src/tasks/set_reminder.ts:106
 msgid "Reminder"
 msgstr "تذكير"
 
@@ -658,7 +674,7 @@ msgstr "إظهار التالي في الإشعار؟"
 msgid "Show notification widget?"
 msgstr "عرض التطبيق المصغّر في الإشعارات؟"
 
-#: src/utils/permission.ts:73
+#: src/utils/permission.ts:137
 msgid "Show settings"
 msgstr "اعرض إعدادات"
 
@@ -761,11 +777,11 @@ msgstr "تنسيق الوقت"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "لحساب الأذان، نحتاج إلى موقعك. يمكنك استخدام زر \"العثور على موقعي\"، أو استخدام البحث عن البلد والمدينة/ المنطقة، أو إدخال إحداثياتك يدويًا."
 
-#: src/utils/permission.ts:22
+#: src/utils/permission.ts:38
 msgid "To see notifications about adhan, we need your permission."
 msgstr "لرؤية إشعارات حول الأذان، نحتاج إلى إذنك."
 
-#: src/utils/permission.ts:93
+#: src/utils/permission.ts:157
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "لإيقاف تشغيل الأذان عند تلقي مكالمة، نحتاج إلى قراءة حالة هاتفك. عدم السماح بهذا الإذن يؤدي ببساطة إلى تعطيل الميزة."
 
@@ -810,11 +826,11 @@ msgid "Unsupported"
 msgstr "غير مدعوم"
 
 #. notification title
-#: src/tasks/set_pre_alarm.ts:51
+#: src/tasks/set_pre_alarm.ts:43
 msgid "Upcoming alarm"
 msgstr "التنبيه القادم"
 
-#: src/tasks/set_update_widgets_alarms.ts:35
+#: src/tasks/set_update_widgets_alarms.ts:33
 msgid "Updating widgets"
 msgstr "تحدیث التطبيقات المصغّر"
 
@@ -837,6 +853,14 @@ msgstr "باستخدام البحث"
 #: src/screens/settings_about/index.tsx:34
 msgid "Version"
 msgstr "إصدار"
+
+#: src/constants/notification.ts:28
+msgid "WIDGET_CHANNEL_NAME"
+msgstr "التطبيق المصغر"
+
+#: src/constants/notification.ts:32
+msgid "WIDGET_UPDATE_CHANNEL_NAME"
+msgstr "تحدیث التطبيق المصغّر"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
