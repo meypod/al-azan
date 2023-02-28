@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {Box, Button, HStack, Text} from 'native-base';
 import {useCallback} from 'react';
-import {push} from '@/navigation/root_navigation';
+import {navigate} from '@/navigation/root_navigation';
 import {useSettings} from '@/store/settings';
 
 export function QiblaFinder() {
@@ -21,9 +21,9 @@ export function QiblaFinder() {
       </Text>
       {understood ? (
         <HStack justifyContent="space-around">
-          <Button onPress={push.bind(null, 'QiblaMap')}>{t`Use Map`}</Button>
+          <Button onPress={() => navigate('QiblaMap')}>{t`Use Map`}</Button>
           <Button
-            onPress={push.bind(null, 'QiblaCompass')}>{t`Use Compass`}</Button>
+            onPress={() => navigate('QiblaCompass')}>{t`Use Compass`}</Button>
         </HStack>
       ) : (
         <Button onPress={onUnderstood}>{t`I Understand`}</Button>
