@@ -60,6 +60,7 @@ export type SettingsStore = {
   DEV_MODE: boolean;
   // qibla finder related
   QIBLA_FINDER_UNDERSTOOD: boolean;
+  QIBLA_FINDER_ORIENTATION_LOCKED: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -119,6 +120,7 @@ export const settings = createStore<SettingsStore>()(
       DONT_ASK_PERMISSION_PHONE_STATE: false,
       DEV_MODE: false,
       QIBLA_FINDER_UNDERSTOOD: false,
+      QIBLA_FINDER_ORIENTATION_LOCKED: true,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -245,7 +247,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 7,
+      version: 8,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -306,6 +308,8 @@ export const settings = createStore<SettingsStore>()(
             }
           case 6:
             delete (persistedState as any)['LAST_WIDGET_UPDATE'];
+          case 7:
+            (persistedState as any).QIBLA_FINDER_ORIENTATION_LOCKED = true;
             break;
         }
         /* eslint-enable no-fallthrough */

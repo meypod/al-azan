@@ -5,8 +5,9 @@ import {
   DefaultTheme,
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {useColorMode} from 'native-base';
-import {useEffect} from 'react';
+import {HStack, useColorMode} from 'native-base';
+import {memo, useEffect} from 'react';
+import {OrientationLock} from './components/orientation_lock';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
@@ -39,10 +40,25 @@ import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const TranslatedHeaderTitle = (...props: any[]) => {
+const TranslatedHeaderTitle = memo(function TranslatedHeaderTitle(
+  ...props: any[]
+) {
   const routeName = getCurrentRoute().name;
   if (routeName) {
     return <HeaderTitle {...props}>{translateRoute(routeName)}</HeaderTitle>;
+  } else {
+    return <></>;
+  }
+});
+
+const QiblaFinderHeaderRight = function QiblaFinderHeaderRight() {
+  const routeName = getCurrentRoute().name;
+  if (routeName === 'QiblaCompass' || routeName === 'QiblaMap') {
+    return (
+      <HStack>
+        <OrientationLock p="2" mr="-2" size="xl"></OrientationLock>
+      </HStack>
+    );
   } else {
     return <></>;
   }
@@ -81,6 +97,7 @@ export function App(): JSX.Element {
       <Stack.Navigator
         screenOptions={{
           headerTitle: TranslatedHeaderTitle,
+          headerRight: QiblaFinderHeaderRight,
         }}>
         <Stack.Group screenOptions={{headerShown: false}}>
           <Stack.Screen name="Home" component={Home} />
