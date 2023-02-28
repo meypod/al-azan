@@ -1,5 +1,0 @@
-<resources>
-  <!-- Its a fix for orientation related bugs on android 8 (Oreo), just future proofing -->
-  <item name="android:windowIsTranslucent">false</item>
-  <item name="android:windowIsFloating">false</item>
-</resources>
