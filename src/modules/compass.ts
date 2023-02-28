@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {NativeEventEmitter, NativeModules} from 'react-native';
 
 const CompassModule = NativeModules.CompassModule
@@ -31,12 +31,29 @@ export const setCompassLocation = CompassModule.setLocation as (
   altitude: Number,
 ) => void;
 
+export const setUpdateRate = CompassModule.setUpdateRate as (
+  rateInMs: Number,
+) => void;
+
 export function useCompassHeading() {
   const [heading, setHeading] = useState(0);
 
   useEffect(() => {
     const sub = addEventListener('heading', (degrees: number) => {
       setHeading(degrees);
+    });
+    return () => sub.remove();
+  }, []);
+
+  return heading;
+}
+
+export function useCompassHeadingRef() {
+  const heading = useRef(0);
+
+  useEffect(() => {
+    const sub = addEventListener('heading', (degrees: number) => {
+      heading.current = degrees;
     });
     return () => sub.remove();
   }, []);
@@ -68,8 +85,20 @@ export function useCompassAccuracy() {
   return accuracy;
 }
 
+export function isCompassAvailable() {
+  return new Promise(resolve => {
+    const sub = addEventListener('accuracyChanged', (level: AccuracyLevel) => {
+      sub.remove();
+      resolve(level);
+    });
+  });
+}
+
 export default {
   addListener: addEventListener,
   setLocation: setCompassLocation,
   useCompassHeading,
+  useCompassHeadingRef,
+  setUpdateRate,
+  isCompassAvailable,
 };

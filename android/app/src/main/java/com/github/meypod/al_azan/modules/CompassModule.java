@@ -20,15 +20,21 @@ public class CompassModule extends ReactContextBaseJavaModule {
     }
 
     private int listenerCount = 0;
+    private static int updateRateMs = 25; // ms
     private CompassSensor compassSensor;
 
     @ReactMethod
     public void addListener(String eventName) {
         if (compassSensor == null) {
-            compassSensor = new CompassSensor();
+            compassSensor = new CompassSensor(getReactApplicationContext());
         }
+
         if (listenerCount == 0) {
-            compassSensor.start(getReactApplicationContext());
+            compassSensor.start(updateRateMs);
+        }
+
+        if (eventName.equals("accuracyChanged")) {
+            compassSensor.setAccuracyReceived(false);
         }
 
         listenerCount += 1;
@@ -41,6 +47,14 @@ public class CompassModule extends ReactContextBaseJavaModule {
             if (compassSensor != null) {
                 compassSensor.stop();
             }
+        }
+    }
+
+    @ReactMethod
+    public void setUpdateRate(int ms) {
+        updateRateMs = ms;
+        if (this.compassSensor != null) {
+            compassSensor.setUpdateRate(ms);
         }
     }
 
