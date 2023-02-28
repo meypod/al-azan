@@ -58,6 +58,8 @@ export type SettingsStore = {
   DONT_ASK_PERMISSION_PHONE_STATE: boolean;
   // DEV
   DEV_MODE: boolean;
+  // qibla finder related
+  QIBLA_FINDER_UNDERSTOOD: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -116,6 +118,7 @@ export const settings = createStore<SettingsStore>()(
       DONT_ASK_PERMISSION_ALARM: false,
       DONT_ASK_PERMISSION_PHONE_STATE: false,
       DEV_MODE: false,
+      QIBLA_FINDER_UNDERSTOOD: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
