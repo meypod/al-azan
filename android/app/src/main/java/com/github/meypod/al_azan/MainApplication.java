@@ -14,6 +14,7 @@ import com.github.meypod.al_azan.modules.MediaPlayerModulePackage;
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage;
 import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage;
 import com.github.meypod.al_azan.modules.CompassModulePackage;
+import org.wonday.orientation.OrientationActivityLifecycle;
 
 import java.util.List;
 
@@ -68,6 +69,7 @@ public class MainApplication extends Application implements ReactApplication {
       DefaultNewArchitectureEntryPoint.load();
     }
     ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+    registerActivityLifecycleCallbacks(OrientationActivityLifecycle.getInstance());
   }
 
 }
