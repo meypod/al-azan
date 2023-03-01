@@ -27,9 +27,9 @@ import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import AudioPickerItem from './audio_picker_item';
 import {adhanEntryTranslations} from '@/assets/adhan_entries';
-import {AddIcon} from '@/assets/icons/google/add';
-import {PlayIcon} from '@/assets/icons/google/play';
-import {StopIcon} from '@/assets/icons/google/stop';
+import {AddIcon} from '@/assets/icons/material_icons/add';
+import {PlayIcon} from '@/assets/icons/material_icons/play';
+import {StopIcon} from '@/assets/icons/material_icons/stop';
 import {
   AudioEntry,
   getRingtones,

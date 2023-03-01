@@ -1,8 +1,8 @@
 import {t} from '@lingui/macro';
 import {Button, HStack, Pressable, Text} from 'native-base';
 import {memo} from 'react';
-import {CheckCircleIcon} from '@/assets/icons/google/check_circle';
-import {DeleteIcon} from '@/assets/icons/google/delete';
+import {CheckCircleIcon} from '@/assets/icons/material_icons/check_circle';
+import {DeleteIcon} from '@/assets/icons/material_icons/delete';
 import {AudioEntry} from '@/modules/media_player';
 
 export type ExtendedAudioEntry = AudioEntry & {

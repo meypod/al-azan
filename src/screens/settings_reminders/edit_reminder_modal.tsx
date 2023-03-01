@@ -14,7 +14,7 @@ import {
 import {useCallback, useEffect, useState} from 'react';
 import {Modal} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
-import {CloseIcon} from '@/assets/icons/google/close';
+import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {AudioPicker} from '@/components/audio_picker';
 import type {AudioEntry} from '@/modules/media_player';
 import {Reminder} from '@/store/reminder';
