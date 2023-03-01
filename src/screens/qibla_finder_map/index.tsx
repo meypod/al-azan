@@ -202,34 +202,41 @@ export function QiblaMap() {
     <View style={styles.page}>
       <View
         style={{
-          backgroundColor: '#00000099',
           position: 'absolute',
           right: 0,
           bottom: 0,
           zIndex: 1,
-          flexDirection: 'row',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
         }}>
-        <Text
-          padding="1"
-          color="white"
-          fontSize="xs"
-          onPress={onOpenStreetMapPress}>
-          &copy; OpenStreetMap Contributors
-        </Text>
+        <Button
+          mb="1"
+          mr="1"
+          backgroundColor="black:alpha.60"
+          h="10"
+          w="10"
+          borderColor={compassLock ? 'primary.400' : 'black:alpha.50'}
+          borderWidth={1}
+          onPress={toggleCompassLock}>
+          <ExploreIcon
+            color={compassLock ? 'primary.400' : 'white'}
+            size="2xl"
+          />
+        </Button>
+        <View
+          style={{
+            backgroundColor: '#00000099',
+          }}>
+          <Text
+            background="red"
+            padding="1"
+            color="white"
+            fontSize="xs"
+            onPress={onOpenStreetMapPress}>
+            &copy; OpenStreetMap Contributors
+          </Text>
+        </View>
       </View>
-      <Button
-        position="absolute"
-        right="1"
-        bottom="8"
-        zIndex={1}
-        backgroundColor="black:alpha.50"
-        h="10"
-        w="10"
-        borderColor={compassLock ? 'primary.400' : 'black:alpha.50'}
-        borderWidth={1}
-        onPress={toggleCompassLock}>
-        <ExploreIcon color={compassLock ? 'primary.400' : 'white'} size="2xl" />
-      </Button>
       {compassLock ? (
         <View
           style={{
