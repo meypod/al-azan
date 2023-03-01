@@ -11,7 +11,7 @@ import {
 } from 'native-base';
 
 import {CalculationMethods} from '@/adhan';
-import {MenuIcon} from '@/assets/icons/menu';
+import {MenuIcon} from '@/assets/icons/google/menu';
 import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
 import {useCalcSettings} from '@/store/calculation';
 

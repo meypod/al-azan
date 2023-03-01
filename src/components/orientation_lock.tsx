@@ -1,9 +1,9 @@
 import {Button, IButtonProps, IIconProps} from 'native-base';
 import {useCallback, useEffect} from 'react';
 import Orientation, {OrientationType} from 'react-native-orientation-locker';
-import {ScreenLockLandscape} from '@/assets/icons/screen_lock_landscape';
-import {ScreenLockPortrait} from '@/assets/icons/screen_lock_portrait';
-import {ScreenRotationIcon} from '@/assets/icons/screen_rotation';
+import {ScreenLockLandscape} from '@/assets/icons/google/screen_lock_landscape';
+import {ScreenLockPortrait} from '@/assets/icons/google/screen_lock_portrait';
+import {ScreenRotationIcon} from '@/assets/icons/google/screen_rotation';
 import {useSettings} from '@/store/settings';
 import {useOrientation} from '@/utils/hooks/use_orientation';
 

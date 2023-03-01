@@ -55,6 +55,12 @@ export function AboutSettings(props: IScrollViewProps) {
             Thanks to all open source community members who made all these wonderful libraries that made making this app possible.`,
           })}
         </Text>
+        <Text>
+          {t({
+            id: 'about.credits.google',
+            message: `Most of icons used in this app are from google material icons.`,
+          })}
+        </Text>
       </FormControl>
     </ScrollView>
   );

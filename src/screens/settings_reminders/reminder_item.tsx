@@ -11,8 +11,8 @@ import {
 } from 'native-base';
 import {memo} from 'react';
 import {translatePrayer} from '@/adhan';
-import {DeleteIcon} from '@/assets/icons/delete';
-import {EditIcon} from '@/assets/icons/edit';
+import {DeleteIcon} from '@/assets/icons/google/delete';
+import {EditIcon} from '@/assets/icons/google/edit';
 import {Reminder} from '@/store/reminder';
 
 export type ReminderItemProps = {

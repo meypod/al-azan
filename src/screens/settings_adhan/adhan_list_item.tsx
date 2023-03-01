@@ -17,12 +17,12 @@ import ReactNativeBlobUtil, {
   StatefulPromise,
 } from 'react-native-blob-util';
 import {AdhanEntry, adhanEntryTranslations} from '@/assets/adhan_entries';
-import {CheckIcon} from '@/assets/icons/check';
-import {CloseIcon} from '@/assets/icons/close';
-import {DownloadIcon} from '@/assets/icons/download';
-import {MoreVertIcon} from '@/assets/icons/more_vert';
-import {PlayIcon} from '@/assets/icons/play';
-import {StopIcon} from '@/assets/icons/stop';
+import {CheckIcon} from '@/assets/icons/google/check';
+import {CloseIcon} from '@/assets/icons/google/close';
+import {DownloadIcon} from '@/assets/icons/google/download';
+import {MoreVertIcon} from '@/assets/icons/google/more_vert';
+import {PlayIcon} from '@/assets/icons/google/play';
+import {StopIcon} from '@/assets/icons/google/stop';
 import {PlaybackState} from '@/modules/media_player';
 import {settings} from '@/store/settings';
 

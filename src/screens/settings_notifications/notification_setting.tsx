@@ -4,7 +4,7 @@ import {HStack, Text, Button, VStack, Checkbox, Flex} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
 import {memo, useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
-import {ExpandCircleDownIcon} from '@/assets/icons/expand_circle_down';
+import {ExpandCircleDownIcon} from '@/assets/icons/google/expand_circle_down';
 import Divider from '@/components/Divider';
 import {WeekDaySelector} from '@/components/week_day_selector';
 import {

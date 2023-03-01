@@ -1,7 +1,7 @@
 import {Flex, Spacer, Text, HStack} from 'native-base';
 import {memo} from 'react';
 import {NonPrayer, Prayer, translatePrayer} from '@/adhan';
-import {MutedIcon} from '@/assets/icons/muted';
+import {MutedIcon} from '@/assets/icons/google/muted';
 import {getTime} from '@/utils/date';
 
 type TimeRowProps = {
