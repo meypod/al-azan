@@ -1,5 +1,6 @@
 import MapLibreGL, {ShapeSourceProps} from '@maplibre/maplibre-react-native';
 import {Coordinates, Qibla} from 'adhan';
+import debounce from 'lodash/debounce';
 import {Button, Text} from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';
 import {Linking, StyleSheet, View} from 'react-native';
@@ -189,6 +190,14 @@ export function QiblaMap() {
     setCompassLock(compassLockRef.current);
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debouncedCameraUpdate = useCallback(
+    debounce(() => {
+      updateCamera();
+    }, 150),
+    [],
+  );
+
   return (
     <View style={styles.page}>
       <View
@@ -250,7 +259,7 @@ export function QiblaMap() {
         compassEnabled={true}
         localizeLabels={true}
         compassViewPosition={1}
-        onTouchEndCapture={updateCamera}>
+        onTouchEnd={debouncedCameraUpdate}>
         {/* @ts-ignore */}
         <MapLibreGL.Style json={mapStyle} />
         <MapLibreGL.Camera
