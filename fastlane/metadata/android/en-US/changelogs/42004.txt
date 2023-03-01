@@ -1,0 +1,2 @@
+- Added qibla finder
+- Fixed widget not updating sometimes
