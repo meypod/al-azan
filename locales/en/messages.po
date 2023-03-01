@@ -244,6 +244,10 @@ msgstr "Device sounds"
 msgid "Disabled"
 msgstr "Disabled"
 
+#: src/screens/qibla_finder/index.tsx:17
+msgid "Disclaimer"
+msgstr "Disclaimer"
+
 #: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
@@ -291,6 +295,7 @@ msgstr "Error in loading search results"
 msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
+#: src/screens/qibla_finder_compass/index.tsx:73
 #: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
@@ -311,6 +316,7 @@ msgstr "Friday"
 msgid "General (default)"
 msgstr "General (default)"
 
+#: src/screens/qibla_finder_compass/index.tsx:145
 #: src/screens/settings_location/index.tsx:214
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
@@ -352,6 +358,10 @@ msgstr "High Latitude"
 #: src/screens/settings_about/index.tsx:39
 msgid "Home"
 msgstr "Home"
+
+#: src/screens/qibla_finder/index.tsx:29
+msgid "I Understand"
+msgstr "I Understand"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
@@ -423,6 +433,7 @@ msgid "Light"
 msgstr "Light"
 
 #: src/intro/intro.tsx:27
+#: src/screens/qibla_finder_compass/index.tsx:130
 msgid "Location"
 msgstr "Location"
 
@@ -475,7 +486,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:160
+#: src/screens/home/index.tsx:156
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -500,6 +511,10 @@ msgstr "None (Automatic)"
 #: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "Not now"
+
+#: src/screens/qibla_finder/index.tsx:20
+msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
+msgstr "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -582,13 +597,17 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:131
+#: src/screens/home/index.tsx:127
 msgid "Prev Day"
 msgstr "Prev Day"
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
 msgstr "Qatar"
+
+#: src/screens/qibla_finder_compass/index.tsx:121
+msgid "Qibla"
+msgstr "Qibla"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -597,6 +616,10 @@ msgstr "Reminder"
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
+
+#: src/screens/qibla_finder_compass/index.tsx:149
+msgid "Refresh using GPS"
+msgstr "Refresh using GPS"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -675,7 +698,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:154
+#: src/screens/home/index.tsx:150
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -856,6 +879,14 @@ msgstr "Updating widgets"
 msgid "Use 24-Hour format"
 msgstr "Use 24-Hour format"
 
+#: src/screens/qibla_finder/index.tsx:26
+msgid "Use Compass"
+msgstr "Use Compass"
+
+#: src/screens/qibla_finder/index.tsx:24
+msgid "Use Map"
+msgstr "Use Map"
+
 #: src/screens/settings_location/index.tsx:285
 msgid "Using Coordinates"
 msgstr "Using Coordinates"
@@ -928,8 +959,12 @@ msgstr ""
 "Special thanks to translation.io (lingui.js) for their wonderful services.\n"
 "Thanks to all open source community members who made all these wonderful libraries that made making this app possible."
 
+#: src/screens/settings_about/index.tsx:59
+msgid "about.credits.google"
+msgstr "Most of icons used in this app are from google material icons."
+
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:83
 msgid "about_settings"
 msgstr "About"
 
@@ -947,7 +982,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:68
 msgid "battery_optimization_settings"
 msgstr "Battery Optimization"
 
@@ -956,12 +991,12 @@ msgid "before"
 msgstr "before"
 
 #. screen title
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:63
 msgid "calculation_settings"
 msgstr "Calculation"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:88
 msgid "dev_settings"
 msgstr "Developer"
 
@@ -970,7 +1005,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:45
+#: src/navigation/types.ts:43
 msgid "display_settings"
 msgstr "Display"
 
@@ -982,12 +1017,20 @@ msgstr "Fajr"
 msgid "forces all numbers to be in the selected system"
 msgstr "forces all numbers to be in the selected system"
 
+#: src/screens/qibla_finder_compass/index.tsx:125
+msgid "from North"
+msgstr "from North"
+
+#: src/screens/qibla_finder_compass/index.tsx:136
+msgid "from settings"
+msgstr "from settings"
+
 #. screen title
-#: src/navigation/types.ts:40
+#: src/navigation/types.ts:38
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
-#: src/navigation/types.ts:28
+#: src/navigation/types.ts:30
 msgid "home"
 msgstr "Home"
 
@@ -1005,7 +1048,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:48
 msgid "location_settings"
 msgstr "Location"
 
@@ -1023,29 +1066,37 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:58
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:53
 msgid "notification_settings"
 msgstr "Notification & Sound"
 
-#: src/navigation/types.ts:32
+#: src/navigation/types.ts:101
+msgid "qibla_compass"
+msgstr "Qibla Compass"
+
+#: src/navigation/types.ts:93
 msgid "qibla_finder"
 msgstr "Qibla Finder"
+
+#: src/navigation/types.ts:97
+msgid "qibla_map"
+msgstr "Qibla Map"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:78
 msgid "reminders_settings"
 msgstr "Reminders"
 
-#: src/navigation/types.ts:36
+#: src/navigation/types.ts:34
 msgid "settings"
 msgstr "Settings"
 
@@ -1075,7 +1126,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:73
 msgid "widget_settings"
 msgstr "Widget Settings"
 

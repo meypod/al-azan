@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-24 10:54+0330\n"
+"POT-Creation-Date: 2023-03-01 12:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -238,6 +238,10 @@ msgstr "ڈیوائس کی آوازیں۔"
 msgid "Disabled"
 msgstr "غیر فعال"
 
+#: src/screens/qibla_finder/index.tsx:17
+msgid "Disclaimer"
+msgstr "ڈس کلیمر"
+
 #: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
@@ -285,6 +289,7 @@ msgstr "تلاش کے نتائج لوڈ کرنے میں مسلئہ۔"
 msgid "Error while downloading audio"
 msgstr "آڈیو ڈاؤن لوڈ کرتے وقت مسئلہ "
 
+#: src/screens/qibla_finder_compass/index.tsx:73
 #: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "نقاط حاصل کرتے وقت مسلئہ۔"
@@ -305,6 +310,7 @@ msgstr "جمعہ"
 msgid "General (default)"
 msgstr "عمومی (پہلے سے طے شدہ)"
 
+#: src/screens/qibla_finder_compass/index.tsx:145
 #: src/screens/settings_location/index.tsx:214
 msgid "Getting coordinates"
 msgstr "کوآرڈینیٹ حاصل کرنا"
@@ -346,6 +352,10 @@ msgstr "ہائی عرض بلد"
 #: src/screens/settings_about/index.tsx:39
 msgid "Home"
 msgstr "گھر"
+
+#: src/screens/qibla_finder/index.tsx:29
+msgid "I Understand"
+msgstr "میں سمجھتا ہوں۔"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
@@ -417,6 +427,7 @@ msgid "Light"
 msgstr "روشنی"
 
 #: src/intro/intro.tsx:27
+#: src/screens/qibla_finder_compass/index.tsx:130
 msgid "Location"
 msgstr "مقام"
 
@@ -469,7 +480,7 @@ msgstr "نئی یاد دہانی"
 msgid "Next"
 msgstr "اگلے"
 
-#: src/screens/home/index.tsx:160
+#: src/screens/home/index.tsx:156
 msgid "Next Day"
 msgstr "اگلے دن"
 
@@ -494,6 +505,10 @@ msgstr "کوئی نہیں (خودکار)"
 #: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "ابھی نہیں"
+
+#: src/screens/qibla_finder/index.tsx:20
+msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
+msgstr "نوٹ کریں کہ سافٹ ویئر اور ہارڈویئر کی خرابیوں کی وجہ سے، اس ایپ کی طرف سے دکھائی گئی قبلہ سمت، خاص طور پر کمپاس موڈ میں، غلط ہو سکتی ہے۔"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -576,13 +591,17 @@ msgstr "پولر ریزولوشن"
 msgid "Power Manager"
 msgstr "پاور مینیجر"
 
-#: src/screens/home/index.tsx:131
+#: src/screens/home/index.tsx:127
 msgid "Prev Day"
 msgstr "پچھلا دن"
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
 msgstr "قطر"
+
+#: src/screens/qibla_finder_compass/index.tsx:121
+msgid "Qibla"
+msgstr "قبلہ"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -591,6 +610,10 @@ msgstr "یاد دہانی"
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "ISNA طریقہ کے طور پر کہا جاتا ہے۔"
+
+#: src/screens/qibla_finder_compass/index.tsx:149
+msgid "Refresh using GPS"
+msgstr "GPS کا استعمال کرتے ہوئے ریفریش کریں۔"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -662,7 +685,7 @@ msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
-#: src/screens/home/index.tsx:154
+#: src/screens/home/index.tsx:150
 msgid "Show Today"
 msgstr "آج دکھائیں۔"
 
@@ -838,6 +861,14 @@ msgstr "ویجٹ کو اپ ڈیٹ کرنا"
 msgid "Use 24-Hour format"
 msgstr "24 گھنٹے کا فارمیٹ استعمال کریں۔"
 
+#: src/screens/qibla_finder/index.tsx:26
+msgid "Use Compass"
+msgstr "کمپاس استعمال کریں۔"
+
+#: src/screens/qibla_finder/index.tsx:24
+msgid "Use Map"
+msgstr "نقشہ استعمال کریں۔"
+
 #: src/screens/settings_location/index.tsx:285
 msgid "Using Coordinates"
 msgstr "کوآرڈینیٹس کا استعمال"
@@ -907,8 +938,12 @@ msgstr "عبدالباسط عبدالصمد"
 msgid "about.credits"
 msgstr "اذان کی آوازوں کے تمام کاپی رائٹس ان کے متعلقہ مالکان کے ہیں۔ ان کی شاندار خدمات کے لیے translation.io (lingui.js) کا خصوصی شکریہ۔ تمام اوپن سورس کمیونٹی ممبران کا شکریہ جنہوں نے یہ تمام شاندار لائبریریاں بنائیں جنہوں نے اس ایپ کو ممکن بنایا۔"
 
+#: src/screens/settings_about/index.tsx:59
+msgid "about.credits.google"
+msgstr "اس ایپ میں استعمال ہونے والے زیادہ تر شبیہیں گوگل میٹریل آئیکنز سے ہیں۔"
+
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:83
 msgid "about_settings"
 msgstr "معلومات"
 
@@ -926,7 +961,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:68
 msgid "battery_optimization_settings"
 msgstr "بیٹری کی اصلاح"
 
@@ -935,12 +970,12 @@ msgid "before"
 msgstr "پہلے"
 
 #. screen title
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:63
 msgid "calculation_settings"
 msgstr "حساب کتاب"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:88
 msgid "dev_settings"
 msgstr "ڈویلپر"
 
@@ -949,7 +984,7 @@ msgid "dhuhr.prayer"
 msgstr "ظہر"
 
 #. screen title
-#: src/navigation/types.ts:45
+#: src/navigation/types.ts:43
 msgid "display_settings"
 msgstr "ڈسپلے"
 
@@ -961,12 +996,20 @@ msgstr "فجر"
 msgid "forces all numbers to be in the selected system"
 msgstr "تمام نمبروں کو منتخب نظام میں ہونے پر مجبور کرتا ہے۔"
 
+#: src/screens/qibla_finder_compass/index.tsx:125
+msgid "from North"
+msgstr "شمال سے"
+
+#: src/screens/qibla_finder_compass/index.tsx:136
+msgid "from settings"
+msgstr "ترتیبات سے"
+
 #. screen title
-#: src/navigation/types.ts:40
+#: src/navigation/types.ts:38
 msgid "fullscreen_alarm"
 msgstr "اذان چلائیں"
 
-#: src/navigation/types.ts:28
+#: src/navigation/types.ts:30
 msgid "home"
 msgstr "گھر"
 
@@ -984,7 +1027,7 @@ msgid "isha.prayer"
 msgstr "عشاء"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:48
 msgid "location_settings"
 msgstr "مقام"
 
@@ -1002,29 +1045,37 @@ msgstr "معزن زادے ۔"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:58
 msgid "muezzin_settings"
 msgstr "مؤذن"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:53
 msgid "notification_settings"
 msgstr "اطلاع اور آواز"
 
-#: src/navigation/types.ts:32
+#: src/navigation/types.ts:101
+msgid "qibla_compass"
+msgstr "قبلہ کمپاس"
+
+#: src/navigation/types.ts:93
 msgid "qibla_finder"
 msgstr "قبلہ تلاش کرنے والا"
+
+#: src/navigation/types.ts:97
+msgid "qibla_map"
+msgstr "قبلہ نقشہ"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفیٰ غلواش"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:78
 msgid "reminders_settings"
 msgstr "یاد دہانیاں"
 
-#: src/navigation/types.ts:36
+#: src/navigation/types.ts:34
 msgid "settings"
 msgstr "ترتیبات"
 
@@ -1054,7 +1105,7 @@ msgid "sunset"
 msgstr "غروب آفتاب"
 
 #. screen title
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:73
 msgid "widget_settings"
 msgstr "ویجیٹ کی ترتیبات"
 

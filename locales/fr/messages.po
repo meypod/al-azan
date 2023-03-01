@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-02-24 10:54+0330\n"
+"POT-Creation-Date: 2023-03-01 12:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -238,6 +238,10 @@ msgstr "Sons de l'appareil"
 msgid "Disabled"
 msgstr "Désactivé"
 
+#: src/screens/qibla_finder/index.tsx:17
+msgid "Disclaimer"
+msgstr "Avis de non-responsabilité"
+
 #: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
@@ -285,6 +289,7 @@ msgstr "Erreur dans le chargement des résultats de recherche"
 msgid "Error while downloading audio"
 msgstr "Erreur lors du téléchargement d'un fichier audio"
 
+#: src/screens/qibla_finder_compass/index.tsx:73
 #: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
@@ -305,6 +310,7 @@ msgstr "Vendredi"
 msgid "General (default)"
 msgstr "Général (par défaut)"
 
+#: src/screens/qibla_finder_compass/index.tsx:145
 #: src/screens/settings_location/index.tsx:214
 msgid "Getting coordinates"
 msgstr "Obtenir des coordonnées"
@@ -346,6 +352,10 @@ msgstr "Latitude élevée"
 #: src/screens/settings_about/index.tsx:39
 msgid "Home"
 msgstr "Accueil"
+
+#: src/screens/qibla_finder/index.tsx:29
+msgid "I Understand"
+msgstr "Je comprends"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
@@ -417,6 +427,7 @@ msgid "Light"
 msgstr "Clair"
 
 #: src/intro/intro.tsx:27
+#: src/screens/qibla_finder_compass/index.tsx:130
 msgid "Location"
 msgstr "Localisation"
 
@@ -469,7 +480,7 @@ msgstr "Nouveau rappel"
 msgid "Next"
 msgstr "Suivant"
 
-#: src/screens/home/index.tsx:160
+#: src/screens/home/index.tsx:156
 msgid "Next Day"
 msgstr "Jour suivant"
 
@@ -494,6 +505,10 @@ msgstr "Aucun (automatique)"
 #: src/utils/permission.ts:133
 msgid "Not now"
 msgstr "Pas maintenant"
+
+#: src/screens/qibla_finder/index.tsx:20
+msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
+msgstr "Notez qu'en raison d'erreurs logicielles et matérielles, la direction de la Qibla indiquée par cette application, en particulier en mode boussole, peut être erronée."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -576,13 +591,17 @@ msgstr "Résolution polaire"
 msgid "Power Manager"
 msgstr "Gestionnaire d'énergie"
 
-#: src/screens/home/index.tsx:131
+#: src/screens/home/index.tsx:127
 msgid "Prev Day"
 msgstr "Jour précédent"
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
 msgstr "Qatar"
+
+#: src/screens/qibla_finder_compass/index.tsx:121
+msgid "Qibla"
+msgstr "Qibla"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -591,6 +610,10 @@ msgstr "Rappel"
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "Appelée la méthode ISNA"
+
+#: src/screens/qibla_finder_compass/index.tsx:149
+msgid "Refresh using GPS"
+msgstr "Rafraîchissement par GPS"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -669,7 +692,7 @@ msgstr "Shia, Institut de géophysique, Université de Téhéran"
 msgid "Show Adhan Options"
 msgstr "Afficher les options pour l'Adhan"
 
-#: src/screens/home/index.tsx:154
+#: src/screens/home/index.tsx:150
 msgid "Show Today"
 msgstr "Montrer aujourd'hui"
 
@@ -850,6 +873,14 @@ msgstr "Mise à jour des widgets"
 msgid "Use 24-Hour format"
 msgstr "Utiliser le format 24 heures"
 
+#: src/screens/qibla_finder/index.tsx:26
+msgid "Use Compass"
+msgstr "Utiliser la boussole"
+
+#: src/screens/qibla_finder/index.tsx:24
+msgid "Use Map"
+msgstr "Carte d'utilisation"
+
 #: src/screens/settings_location/index.tsx:285
 msgid "Using Coordinates"
 msgstr "Utilisation des coordonnées"
@@ -922,8 +953,12 @@ msgstr ""
 "Remerciements particuliers à translation.io (lingui.js) pour leurs merveilleux services.\n"
 "Merci à tous les membres de la communauté open source qui ont créé toutes ces merveilleuses bibliothèques qui ont rendu cette application possible."
 
+#: src/screens/settings_about/index.tsx:59
+msgid "about.credits.google"
+msgstr "La plupart des icônes utilisées dans cette application proviennent de google material icons."
+
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:83
 msgid "about_settings"
 msgstr "À propos de"
 
@@ -941,7 +976,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:68
 msgid "battery_optimization_settings"
 msgstr "Optimisation de la batterie"
 
@@ -950,12 +985,12 @@ msgid "before"
 msgstr "avant"
 
 #. screen title
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:63
 msgid "calculation_settings"
 msgstr "Calcul"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:88
 msgid "dev_settings"
 msgstr "Développeur"
 
@@ -964,7 +999,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:45
+#: src/navigation/types.ts:43
 msgid "display_settings"
 msgstr "Affichage"
 
@@ -976,12 +1011,20 @@ msgstr "Fajr"
 msgid "forces all numbers to be in the selected system"
 msgstr "Force tous les numéros à être dans le système sélectionné"
 
+#: src/screens/qibla_finder_compass/index.tsx:125
+msgid "from North"
+msgstr "du Nord"
+
+#: src/screens/qibla_finder_compass/index.tsx:136
+msgid "from settings"
+msgstr "à partir des paramètres"
+
 #. screen title
-#: src/navigation/types.ts:40
+#: src/navigation/types.ts:38
 msgid "fullscreen_alarm"
 msgstr "Jouer l'Adhan"
 
-#: src/navigation/types.ts:28
+#: src/navigation/types.ts:30
 msgid "home"
 msgstr "Accueil"
 
@@ -999,7 +1042,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:48
 msgid "location_settings"
 msgstr "Localisation"
 
@@ -1017,29 +1060,37 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:58
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:53
 msgid "notification_settings"
 msgstr "Notification et son"
 
-#: src/navigation/types.ts:32
+#: src/navigation/types.ts:101
+msgid "qibla_compass"
+msgstr "Boussole Qibla"
+
+#: src/navigation/types.ts:93
 msgid "qibla_finder"
 msgstr "Chercheur de Qibla"
+
+#: src/navigation/types.ts:97
+msgid "qibla_map"
+msgstr "Carte de Qibla"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:78
 msgid "reminders_settings"
 msgstr "Rappels"
 
-#: src/navigation/types.ts:36
+#: src/navigation/types.ts:34
 msgid "settings"
 msgstr "Paramètres"
 
@@ -1069,7 +1120,7 @@ msgid "sunset"
 msgstr "Coucher de soleil"
 
 #. screen title
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:73
 msgid "widget_settings"
 msgstr "Paramètres des widgets"
 
