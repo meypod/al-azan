@@ -36,6 +36,8 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Homescreen and notification Widgets
 
+* Qibla finder
+
 * Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
 
 ## Screenshots
