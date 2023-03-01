@@ -1,4 +1,4 @@
-Privacy-first ad-free open-source muslim Adhan (islamic prayer times) app
+Privacy-first ad-free open-source muslim Adhan (islamic prayer times) and qibla app
 
 App features:
 
@@ -25,6 +25,8 @@ App features:
 * Set reminders before or after a prayer time
 
 * Homescreen and notification Widgets
+
+* Qibla finder
 
 * Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
 
