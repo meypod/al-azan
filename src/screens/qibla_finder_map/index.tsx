@@ -1,8 +1,11 @@
 import MapLibreGL, {ShapeSourceProps} from '@maplibre/maplibre-react-native';
 import {Coordinates, Qibla} from 'adhan';
-import {Text} from 'native-base';
+import {Button, Text} from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';
 import {Linking, StyleSheet, View} from 'react-native';
+import {CheckIcon} from '@/assets/icons/material_icons/check';
+import {CloseIcon} from '@/assets/icons/material_icons/close';
+import {ExploreIcon} from '@/assets/icons/material_icons/explore';
 import Compass, {setUpdateRate} from '@/modules/compass';
 import {calcSettings} from '@/store/calculation';
 
@@ -99,7 +102,10 @@ export function QiblaMap() {
   const [qiblaDirCoords, setQiblaDirCoords] = useState<number[]>([0, 0]);
   const [userDirCoords, setUserDirCoords] = useState<number[]>([0, 0]);
   const wasFacingKaaba = useRef(false);
-  const [userLineColor, setUserLineColor] = useState('#000');
+  const [isFacingKaaba, setIsFacingKaaba] = useState(false);
+  const [compassLock, setCompassLock] = useState(false);
+  const compassLockRef = useRef(false);
+  const gotLocationOnce = useRef(false);
 
   const updateCamera = useCallback(() => {
     const qiblaSecondPoint = getDirectionSecondPoint({
@@ -118,32 +124,37 @@ export function QiblaMap() {
     setUserDirCoords([userSecondPoint.long, userSecondPoint.lat]);
 
     let facingKaaba = false;
-    if (Math.abs(compassDegree.current - qiblaDegree.current) < 1.1) {
+    if (Math.abs(compassDegree.current - qiblaDegree.current) < 1) {
       facingKaaba = true;
     }
     if (wasFacingKaaba.current !== facingKaaba) {
       wasFacingKaaba.current = facingKaaba;
-      if (facingKaaba) {
-        setUserLineColor('#59cf78');
-      } else {
-        setUserLineColor('#000');
-      }
+      setIsFacingKaaba(facingKaaba);
     }
 
-    cameraRef.current?.setCamera({
-      //heading: compassDegree.current,
-      centerCoordinate: coords.current,
-    });
+    if (compassLockRef.current) {
+      cameraRef.current?.setCamera({
+        heading: compassDegree.current,
+        centerCoordinate: coords.current,
+      });
+    } else {
+      cameraRef.current?.setCamera({
+        centerCoordinate: coords.current,
+      });
+    }
   }, []);
 
   useEffect(() => {
-    setUpdateRate(60);
-    const sub = Compass.addListener('heading', h => {
-      compassDegree.current = h;
-      updateCamera();
-    });
-    return () => sub.remove();
-  }, [updateCamera]);
+    setUpdateRate(100);
+    if (compassLock) {
+      const sub = Compass.addListener('heading', h => {
+        compassDegree.current = h;
+        updateCamera();
+      });
+      return () => sub.remove();
+    }
+    return () => {};
+  }, [updateCamera, compassLock]);
 
   const onUserLocationUpdate = useCallback(
     (location: MapLibreGL.Location) => {
@@ -157,8 +168,10 @@ export function QiblaMap() {
   );
 
   useEffect(() => {
+    if (gotLocationOnce.current) return;
     const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
     if (LOCATION_LAT && LOCATION_LONG) {
+      gotLocationOnce.current = true;
       onUserLocationUpdate({
         coords: {latitude: LOCATION_LAT, longitude: LOCATION_LONG},
       });
@@ -169,6 +182,11 @@ export function QiblaMap() {
     if (await Linking.canOpenURL('https://www.openstreetmap.org/copyright')) {
       Linking.openURL('https://www.openstreetmap.org/copyright');
     }
+  }, []);
+
+  const toggleCompassLock = useCallback(() => {
+    compassLockRef.current = !compassLockRef.current;
+    setCompassLock(compassLockRef.current);
   }, []);
 
   return (
@@ -190,6 +208,36 @@ export function QiblaMap() {
           &copy; OpenStreetMap Contributors
         </Text>
       </View>
+      <Button
+        position="absolute"
+        right="1"
+        bottom="8"
+        zIndex={1}
+        backgroundColor="black:alpha.50"
+        h="10"
+        w="10"
+        borderColor={compassLock ? 'primary.400' : 'black:alpha.50'}
+        borderWidth={1}
+        onPress={toggleCompassLock}>
+        <ExploreIcon color={compassLock ? 'primary.400' : 'white'} size="2xl" />
+      </Button>
+      {compassLock ? (
+        <View
+          style={{
+            backgroundColor: '#00000099',
+            position: 'absolute',
+            left: 3,
+            top: 3,
+            zIndex: 1,
+            flexDirection: 'row',
+          }}>
+          {isFacingKaaba ? (
+            <CheckIcon size="5xl" color="#59cf78" />
+          ) : (
+            <CloseIcon size="5xl" />
+          )}
+        </View>
+      ) : undefined}
       <MapLibreGL.MapView
         style={styles.map}
         attributionEnabled={true}
@@ -244,16 +292,18 @@ export function QiblaMap() {
             lineWidth: 3,
           }}
         />
-        <MapLibreGL.LineLayer
-          id="user_line_layer"
-          sourceID="user_line"
-          style={{
-            lineCap: 'round',
-            lineJoin: 'round',
-            lineColor: userLineColor,
-            lineWidth: 3,
-          }}
-        />
+        {compassLock ? (
+          <MapLibreGL.LineLayer
+            id="user_line_layer"
+            sourceID="user_line"
+            style={{
+              lineCap: 'round',
+              lineJoin: 'round',
+              lineColor: isFacingKaaba ? '#59cf78' : '#000',
+              lineWidth: 3,
+            }}
+          />
+        ) : undefined}
       </MapLibreGL.MapView>
     </View>
   );
