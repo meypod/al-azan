@@ -8,13 +8,13 @@ import {
   Shafaq,
   PolarCircleResolution,
 } from 'adhan';
+import intersection from 'lodash/intersection';
 import {CalculationMethods} from './calculation_methods';
 import {PrayersInOrder, Prayer} from './prayer';
 import {
   CachedPrayerTimes,
   getCachedPrayerTimes,
 } from '@/store/adhan_calc_cache';
-
 import {
   alarmSettings,
   getAdhanSettingKey,
@@ -212,6 +212,8 @@ export function getNextPrayer(
     prayers = PrayersInOrder,
   } = options || {};
 
+  if (!prayers.length) return;
+
   const originalDate = _originalDate || date;
 
   const prayerTimes = getPrayerTimes(date);
@@ -226,7 +228,7 @@ export function getNextPrayer(
       date: addDays(date, -1),
       useSettings,
       _originalDate: date,
-      prayers: [Prayer.Midnight, Prayer.Tahajjud], // we only need to check prayers that can go after 00:00 AM
+      prayers: intersection([Prayer.Midnight, Prayer.Tahajjud], prayers), // we only need to check prayers that can go after 00:00 AM
     });
     if (prayerTimeFromPrevDay) return prayerTimeFromPrevDay; // otherwise continue getting it normally
   }
