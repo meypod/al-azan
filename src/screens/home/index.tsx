@@ -16,7 +16,7 @@ import {navigate} from '@/navigation/root_navigation';
 
 import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {homeStore} from '@/store/home';
-import {settings, useSettings} from '@/store/settings';
+import {settings} from '@/store/settings';
 
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
 import {askPermissions} from '@/utils/permission';
@@ -35,8 +35,6 @@ export function Home() {
     state.updateCurrentDate,
     state.resetCurrentDate,
   ]);
-
-  const [devMode] = useSettings('DEV_MODE');
 
   const impactfulSettings = useStore(
     settings,
@@ -94,16 +92,14 @@ export function Home() {
           </HStack>
 
           <HStack alignItems="center">
-            {devMode ? (
-              <Button
-                marginLeft="3"
-                variant="ghost"
-                onPress={() => {
-                  navigate('QiblaFinder');
-                }}>
-                <ExploreIcon size="2xl" />
-              </Button>
-            ) : undefined}
+            <Button
+              marginLeft="3"
+              variant="ghost"
+              onPress={() => {
+                navigate('QiblaFinder');
+              }}>
+              <ExploreIcon size="2xl" />
+            </Button>
             <Button
               marginRight="-3"
               variant="ghost"
