@@ -146,7 +146,7 @@ export function QiblaMap() {
   }, []);
 
   useEffect(() => {
-    setUpdateRate(100);
+    setUpdateRate(__DEV__ ? 500 : 60);
     if (compassLock) {
       const sub = Compass.addListener('heading', h => {
         compassDegree.current = h;
