@@ -3,7 +3,7 @@ import {Coordinates, Qibla} from 'adhan';
 import debounce from 'lodash/debounce';
 import {Button, Text} from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';
-import {Linking, StyleSheet, View} from 'react-native';
+import {Linking, StyleSheet, View, I18nManager} from 'react-native';
 import {CheckIcon} from '@/assets/icons/material_icons/check';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {ExploreIcon} from '@/assets/icons/material_icons/explore';
@@ -248,9 +248,9 @@ export function QiblaMap() {
             flexDirection: 'row',
           }}>
           {isFacingKaaba ? (
-            <CheckIcon size="5xl" color="#59cf78" />
+            <CheckIcon size="6xl" color="#59cf78" />
           ) : (
-            <CloseIcon size="5xl" />
+            <CloseIcon size="6xl" color="red.400" />
           )}
         </View>
       ) : undefined}
@@ -265,7 +265,7 @@ export function QiblaMap() {
         rotateEnabled={true}
         compassEnabled={true}
         localizeLabels={true}
-        compassViewPosition={1}
+        compassViewPosition={I18nManager.isRTL ? 0 : 1}
         onTouchEnd={debouncedCameraUpdate}>
         {/* @ts-ignore */}
         <MapLibreGL.Style json={mapStyle} />
