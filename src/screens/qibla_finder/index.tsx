@@ -19,7 +19,33 @@ export function QiblaFinder() {
     setUnderstood(true);
   }, [setUnderstood]);
 
-  const navigateToQiblaMap = useCallback(() => {
+  const askForLocationService = useCallback(async () => {
+    const locationEnabled = await isLocationEnabled();
+    if (!locationEnabled) {
+      await new Promise(resolve => {
+        Alert.alert(
+          t`Location`,
+          t`Qibla finder needs location service. If not enabled, location from settings will be used.`,
+          [
+            {
+              text: t`Okay`,
+              style: 'cancel',
+              onPress: () => resolve(false),
+            },
+            {
+              text: t`Location settings`,
+              onPress: () => {
+                openLocationSettings().then(resolve);
+              },
+              style: 'default',
+            },
+          ],
+        );
+      });
+    }
+  }, []);
+
+  const navigateToQiblaMap = useCallback(async () => {
     if (Platform.OS === 'android' && Platform.Version < 23) {
       Alert.alert(
         t`Error`,
@@ -33,64 +59,46 @@ export function QiblaFinder() {
       );
       return;
     }
-    isNetworkAvailable().then(async networkAvailable => {
-      if (!networkAvailable) {
-        const networkResult = await new Promise(resolve => {
-          Alert.alert(
-            t`Internet connection`,
-            t`Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again`,
-            [
-              {
-                text: t`Okay`,
-                style: 'cancel',
-                onPress: () => resolve(false),
-              },
-              {
-                text: t`Data`,
-                onPress: () => {
-                  openMobileDataSettings().then(resolve);
-                },
-                style: 'default',
-              },
-              {
-                text: t`Wifi`,
-                onPress: () => {
-                  openMobileWifiSettings().then(resolve);
-                },
-                style: 'default',
-              },
-            ],
-          );
-        });
-        if (!networkResult) return;
-      }
+    const networkAvailable = await isNetworkAvailable();
 
-      const locationEnabled = await isLocationEnabled();
-      if (!locationEnabled) {
-        await new Promise(resolve => {
-          Alert.alert(
-            t`Location`,
-            t`Qibla map needs location service. If not enabled, location from settings will be used.`,
-            [
-              {
-                text: t`Okay`,
-                style: 'cancel',
-                onPress: () => resolve(false),
+    if (!networkAvailable) {
+      const networkResult = await new Promise(resolve => {
+        Alert.alert(
+          t`Internet connection`,
+          t`Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again`,
+          [
+            {
+              text: t`Okay`,
+              style: 'cancel',
+              onPress: () => resolve(false),
+            },
+            {
+              text: t`Data`,
+              onPress: () => {
+                openMobileDataSettings().then(resolve);
               },
-              {
-                text: t`Location settings`,
-                onPress: () => {
-                  openLocationSettings().then(resolve);
-                },
-                style: 'default',
+              style: 'default',
+            },
+            {
+              text: t`Wifi`,
+              onPress: () => {
+                openMobileWifiSettings().then(resolve);
               },
-            ],
-          );
-        });
-      }
-      navigate('QiblaMap');
-    });
-  }, []);
+              style: 'default',
+            },
+          ],
+        );
+      });
+      if (!networkResult) return;
+    }
+    await askForLocationService();
+    navigate('QiblaMap');
+  }, [askForLocationService]);
+
+  const navigateToQiblaCompass = useCallback(async () => {
+    await askForLocationService();
+    navigate('QiblaCompass');
+  }, [askForLocationService]);
 
   return (
     <Box safeArea p="3">
@@ -103,8 +111,7 @@ export function QiblaFinder() {
       {understood ? (
         <HStack justifyContent="space-around">
           <Button onPress={navigateToQiblaMap}>{t`Use Map`}</Button>
-          <Button
-            onPress={() => navigate('QiblaCompass')}>{t`Use Compass`}</Button>
+          <Button onPress={navigateToQiblaCompass}>{t`Use Compass`}</Button>
         </HStack>
       ) : (
         <Button onPress={onUnderstood}>{t`I Understand`}</Button>
