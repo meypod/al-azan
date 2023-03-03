@@ -18,6 +18,8 @@ import {
   ToastAndroid,
 } from 'react-native';
 import LocationProvider from 'react-native-get-location';
+import {LocationSearchingIcon} from '@/assets/icons/material_icons/location_searching';
+import {MyLocationIcon} from '@/assets/icons/material_icons/my_location';
 import CompassMod, {
   setCompassLocation,
   setUpdateRate,
@@ -125,8 +127,8 @@ export function QiblaCompass() {
           {t`from North`}
         </Text>
       </HStack>
-      <HStack px="3" alignItems="center" justifyContent="space-between">
-        <Text>
+      <HStack px="3" alignItems="center">
+        <Text mr="2">
           {t`Location`}
           {': '}
           {fetchedCoords
@@ -137,6 +139,7 @@ export function QiblaCompass() {
         </Text>
         <Button
           size="sm"
+          p="1"
           variant="outline"
           onPress={refreshLocation}
           disabled={gettingLocation}>
@@ -145,8 +148,10 @@ export function QiblaCompass() {
               accessibilityLabel={t`Getting coordinates`}
               color="lime.200"
             />
+          ) : fetchedCoords ? (
+            <MyLocationIcon size="md" />
           ) : (
-            <Text fontSize="xs">{t`Refresh using GPS`}</Text>
+            <LocationSearchingIcon size="md" />
           )}
         </Button>
       </HStack>
@@ -154,6 +159,7 @@ export function QiblaCompass() {
         position="relative"
         justifyContent="center"
         alignItems="center"
+        zIndex={-1}
         my="5">
         <Image
           ref={compassImgRef}
