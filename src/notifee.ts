@@ -152,15 +152,13 @@ async function handleNotification({
       type === EventType.FG_ALREADY_EXIST
     ) {
       if (
-        settings.getState().DELIVERED_ALARM_TIMESTAMPS[options.notifId] ===
+        (settings.getState().DELIVERED_ALARM_TIMESTAMPS[options.notifId] || 0) >
         options.date.getTime()
       ) {
         // we already have processed this notification
         return;
       }
-      settings
-        .getState()
-        .saveTimestamp(options.notifId, options.date.getTime());
+      settings.getState().saveTimestamp(options.notifId, Date.now());
 
       if (
         (type === EventType.FG_ALREADY_EXIST || type === EventType.UNKNOWN) &&
