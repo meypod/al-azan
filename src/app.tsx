@@ -6,7 +6,7 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, useColorMode} from 'native-base';
-import {memo, useEffect} from 'react';
+import {useEffect} from 'react';
 import {OrientationLock} from './components/orientation_lock';
 import {Intro} from '@/intro';
 import {
@@ -40,16 +40,14 @@ import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const TranslatedHeaderTitle = memo(function TranslatedHeaderTitle(
-  ...props: any[]
-) {
+const TranslatedHeaderTitle = function TranslatedHeaderTitle({...props}: any) {
   const routeName = getCurrentRoute().name;
   if (routeName) {
     return <HeaderTitle {...props}>{translateRoute(routeName)}</HeaderTitle>;
   } else {
     return <></>;
   }
-});
+};
 
 const QiblaFinderHeaderRight = function QiblaFinderHeaderRight() {
   const routeName = getCurrentRoute().name;
