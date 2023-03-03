@@ -28,7 +28,7 @@ module.exports = function (api) {
     process.env.NODE_ENV === 'production' ||
     process.env.BABEL_ENV === 'production'
   ) {
-    config.plugins.push(['transform-remove-console', {exclude: ['error']}]);
+    config.plugins.push(['transform-remove-console']);
   }
 
   return config;
