@@ -1,21 +1,34 @@
 package com.github.meypod.al_azan.modules;
 
+import static android.content.Context.CONNECTIVITY_SERVICE;
+import static android.content.Context.LOCATION_SERVICE;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
+import android.net.NetworkInfo;
+import android.net.NetworkRequest;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.Settings;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
+import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-import java.util.logging.Logger;
-
 public class ActivityModule extends ReactContextBaseJavaModule {
+    private static final int REQUEST_ENABLE_LOCATION_SERVICES = 1000;
+    private static final int REQUEST_ENABLE_DATA_ROAMING = 1001;
+    private static final int REQUEST_ENABLE_WIFI = 1002;
+
     ActivityModule(ReactApplicationContext context) {
         super(context);
     }
@@ -105,6 +118,110 @@ public class ActivityModule extends ReactContextBaseJavaModule {
             } catch (Exception e) {
                 promise.reject("An error occurred whilst trying to open app settings", e);
             }
+        }
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getReactApplicationContext().getSystemService(CONNECTIVITY_SERVICE);
+
+        if (connectivityManager == null) return false;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.getActiveNetwork());
+            return capabilities != null && (capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET));
+        } else {
+            NetworkInfo activeNetworkInfo = connectivityManager != null ? connectivityManager.getActiveNetworkInfo() : null;
+            return (activeNetworkInfo != null && (activeNetworkInfo.isConnectedOrConnecting() && activeNetworkInfo.isAvailable()));
+        }
+    }
+
+    @ReactMethod
+    public void isNetworkAvailable(final Promise promise) {
+        promise.resolve(isNetworkAvailable());
+    }
+
+    private boolean isLocationEnabled() {
+        final LocationManager locationManager = (LocationManager) getReactApplicationContext().getSystemService(LOCATION_SERVICE);
+        final boolean enabled = locationManager != null && locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        return enabled;
+    }
+
+    @ReactMethod
+    public void isLocationEnabled(final Promise promise) {
+        promise.resolve(isLocationEnabled());
+    }
+
+    /**
+     * resolve with true if user enabled location, false otherwise
+     */
+    @ReactMethod
+    public void openLocationSettings(final Promise promise) {
+        Activity activity = getCurrentActivity();
+        if (activity != null) {
+            final String action = android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS;
+            getReactApplicationContext().addActivityEventListener(new ActivityEventListener() {
+                @Override
+                public void onActivityResult(Activity activity, int requestCode, int resultCode, @Nullable Intent intent) {
+                    if (requestCode == REQUEST_ENABLE_LOCATION_SERVICES) {
+                        getReactApplicationContext().removeActivityEventListener(this);
+                        promise.resolve(isLocationEnabled());
+                    }
+                }
+
+                @Override
+                public void onNewIntent(Intent intent) { }
+            });
+            activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_LOCATION_SERVICES);
+
+        } else {
+            promise.resolve(false);
+        }
+    }
+
+    @ReactMethod
+    public void openMobileDataSettings(final Promise promise) {
+        Activity activity = getCurrentActivity();
+        if (activity != null) {
+            final String action = android.provider.Settings.ACTION_DATA_ROAMING_SETTINGS;
+            getReactApplicationContext().addActivityEventListener(new ActivityEventListener() {
+                @Override
+                public void onActivityResult(Activity activity, int requestCode, int resultCode, @Nullable Intent intent) {
+                    if (requestCode == REQUEST_ENABLE_DATA_ROAMING) {
+                        getReactApplicationContext().removeActivityEventListener(this);
+                        promise.resolve(isNetworkAvailable());
+                    }
+                }
+
+                @Override
+                public void onNewIntent(Intent intent) { }
+            });
+            activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_DATA_ROAMING);
+        } else {
+            promise.resolve(false);
+        }
+    }
+
+    @ReactMethod
+    public void openMobileWifiSettings(final Promise promise) {
+        Activity activity = getCurrentActivity();
+        if (activity != null) {
+            final String action = Settings.ACTION_WIFI_SETTINGS;
+            getReactApplicationContext().addActivityEventListener(new ActivityEventListener() {
+                @Override
+                public void onActivityResult(Activity activity, int requestCode, int resultCode, @Nullable Intent intent) {
+                    if (requestCode == REQUEST_ENABLE_WIFI) {
+                        getReactApplicationContext().removeActivityEventListener(this);
+                        promise.resolve(isNetworkAvailable());
+                    }
+                }
+
+                @Override
+                public void onNewIntent(Intent intent) { }
+            });
+            activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_WIFI);
+        } else {
+            promise.resolve(false);
         }
     }
 

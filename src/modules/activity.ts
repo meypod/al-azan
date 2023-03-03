@@ -22,6 +22,14 @@ interface ActivityModuleInterface {
   getActivityName(): Promise<string>;
   isDndActive(): Promise<boolean>;
   openApplicationSettings(): Promise<void>;
+  isNetworkAvailable(): Promise<boolean>;
+  isLocationEnabled(): Promise<boolean>;
+  /** resolve true if high accuracy location was enabled */
+  openLocationSettings(): Promise<boolean>;
+  /** resolve true if internet became available */
+  openMobileWifiSettings(): Promise<boolean>;
+  /** resolve true if internet became available */
+  openMobileDataSettings(): Promise<boolean>;
 }
 
 export const restart = ActivityModule.restart;
@@ -30,5 +38,10 @@ export const finishAndRemoveTask = ActivityModule.finishAndRemoveTask;
 export const getActivityName = ActivityModule.getActivityName;
 export const isDndActive = ActivityModule.isDndActive;
 export const openApplicationSettings = ActivityModule.openApplicationSettings;
+export const isNetworkAvailable = ActivityModule.isNetworkAvailable;
+export const isLocationEnabled = ActivityModule.isLocationEnabled;
+export const openLocationSettings = ActivityModule.openLocationSettings;
+export const openMobileWifiSettings = ActivityModule.openMobileWifiSettings;
+export const openMobileDataSettings = ActivityModule.openMobileDataSettings;
 
 export default ActivityModule;
