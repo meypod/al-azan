@@ -24,7 +24,7 @@
       android:gravity="center"
       android:maxLines="1"
       tools:ignore="HardcodedText"
-      android:text="السبت، ١٢ شعبان ١٤٤٤ هـ" />
+      android:text="السبت، ٢٣ رمضان ١٤٢٠ هـ" />
 
 
     <TextView
@@ -37,7 +37,7 @@
       android:gravity="center"
       android:maxLines="1"
       tools:ignore="HardcodedText"
-      android:text="March 04, 2023" />
+      android:text="January 01, 2000" />
 
   </LinearLayout>
 
