@@ -163,10 +163,7 @@ export function QiblaCompass() {
           onPress={onRefreshLocationPressed}
           disabled={gettingLocation}>
           {gettingLocation ? (
-            <Spinner
-              accessibilityLabel={t`Getting coordinates`}
-              color="lime.200"
-            />
+            <Spinner accessibilityLabel={t`Getting coordinates`} />
           ) : fetchedCoords ? (
             <MyLocationIcon size="md" />
           ) : (
