@@ -94,7 +94,7 @@ export function QiblaCompass() {
   useEffect(() => {
     if (triedLocationOnce.current) return;
     triedLocationOnce.current = true;
-    ToastAndroid.show(t`Updating coordinates`, ToastAndroid.SHORT);
+    ToastAndroid.show(t`Getting coordinates`, ToastAndroid.SHORT);
     refreshLocation(true).then(successful => {
       if (!successful) {
         const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();

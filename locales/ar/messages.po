@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-01 12:01+0330\n"
+"POT-Creation-Date: 2023-03-03 20:20+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "90 دقيقة"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "أذان"
 
-#: src/screens/settings_calculation/index.tsx:187
+#: src/screens/settings_calculation/index.tsx:182
 msgid "Abyad"
 msgstr "أبيض"
 
@@ -65,15 +65,15 @@ msgstr "أذان"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "لم يتم تنزيل ملف صوت الأذان بعد"
 
-#: src/screens/settings_calculation/index.tsx:93
+#: src/screens/settings_calculation/index.tsx:88
 msgid "Adjustments"
 msgstr "التعديلات"
 
-#: src/screens/settings_calculation/index.tsx:104
+#: src/screens/settings_calculation/index.tsx:99
 msgid "Advanced Calculation Settings"
 msgstr "إعدادات الحساب المتقدمة"
 
-#: src/screens/settings_calculation/index.tsx:186
+#: src/screens/settings_calculation/index.tsx:181
 msgid "Ahmer"
 msgstr "أحمر"
 
@@ -98,7 +98,7 @@ msgstr "عربي / فارسي"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "هل أنت متأكد من أنك تريد حذف \"{0}\"؟"
 
-#: src/screens/settings_calculation/index.tsx:131
+#: src/screens/settings_calculation/index.tsx:126
 msgid "Asr Calculation"
 msgstr "حساب العصر"
 
@@ -106,16 +106,16 @@ msgstr "حساب العصر"
 msgid "At least one prayer time must be shown"
 msgstr "يجب إظهار وقت صلاة واحد على الأقل"
 
-#: src/intro/intro.tsx:118
+#: src/intro/intro.tsx:116
 msgid "Attention"
 msgstr "انتباه"
 
 #: src/intro/intro.tsx:39
-#: src/screens/settings_battery_optimizations/index.tsx:46
+#: src/screens/settings_battery_optimizations/index.tsx:41
 msgid "Battery Optimization"
 msgstr "تحسين البطارية"
 
-#: src/screens/settings_calculation/index.tsx:74
+#: src/screens/settings_calculation/index.tsx:69
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "حساب الأذان له طرق عديدة ومختلفة. تقدم كل طريقة نتائج مختلفة. تقع على عاتقك مسؤولية البحث عن الطريقة الصحيحة واستخدامها."
 
@@ -123,7 +123,7 @@ msgstr "حساب الأذان له طرق عديدة ومختلفة. تقدم ك
 msgid "Calculation"
 msgstr "حساب"
 
-#: src/screens/settings_calculation/index.tsx:76
+#: src/screens/settings_calculation/index.tsx:71
 msgid "Calculation Method"
 msgstr "طريقة حساب"
 
@@ -137,15 +137,15 @@ msgstr "التقويم"
 msgid "Cancel"
 msgstr "ألغ"
 
-#: src/screens/settings_calculation/index.tsx:133
+#: src/screens/settings_calculation/index.tsx:128
 msgid "Choose Asr Calculation Madhab"
 msgstr "اختر مذهب الحساب العصر"
 
-#: src/screens/settings_calculation/index.tsx:79
+#: src/screens/settings_calculation/index.tsx:74
 msgid "Choose Calculation Method"
 msgstr "اختر طريقة الحساب"
 
-#: src/screens/settings_calculation/index.tsx:111
+#: src/screens/settings_calculation/index.tsx:106
 msgid "Choose High Latitude Setting"
 msgstr "اختر إعدادات خطوط العرض العالية"
 
@@ -153,11 +153,11 @@ msgstr "اختر إعدادات خطوط العرض العالية"
 msgid "Choose Language"
 msgstr "اختر اللغة"
 
-#: src/screens/settings_calculation/index.tsx:149
+#: src/screens/settings_calculation/index.tsx:144
 msgid "Choose Polar Resolution"
 msgstr "اختر حساب المناطق القطبية"
 
-#: src/screens/settings_calculation/index.tsx:178
+#: src/screens/settings_calculation/index.tsx:173
 msgid "Choose Shafaq method"
 msgstr "اختر طريقة شفق"
 
@@ -170,8 +170,8 @@ msgstr "اختر نوع التقويم"
 msgid "Choose numbering system"
 msgstr "اختر نظام الترقيم"
 
-#: src/screens/settings_location/index.tsx:248
-#: src/screens/settings_location/index.tsx:250
+#: src/screens/settings_location/index.tsx:243
+#: src/screens/settings_location/index.tsx:245
 msgid "City/Area"
 msgstr "مدينة/منطقة"
 
@@ -179,11 +179,11 @@ msgstr "مدينة/منطقة"
 msgid "Clipboard data does not contain coordinates"
 msgstr "لا تحتوي بيانات الحافظة على إحداثيات"
 
-#: src/screens/settings_calculation/index.tsx:160
+#: src/screens/settings_calculation/index.tsx:155
 msgid "Closest City"
 msgstr "أقرب مدينة"
 
-#: src/screens/settings_calculation/index.tsx:164
+#: src/screens/settings_calculation/index.tsx:159
 msgid "Closest Date"
 msgstr "أقرب تاريخ"
 
@@ -199,8 +199,8 @@ msgstr "أكّد"
 msgid "Coordinates updated"
 msgstr "تم تحديث الإحداثيات"
 
-#: src/screens/settings_location/index.tsx:225
-#: src/screens/settings_location/index.tsx:227
+#: src/screens/settings_location/index.tsx:220
+#: src/screens/settings_location/index.tsx:222
 msgid "Country"
 msgstr "دولة"
 
@@ -222,7 +222,7 @@ msgstr "افتراضي"
 msgid "Delete"
 msgstr "احذف"
 
-#: src/screens/settings_battery_optimizations/index.tsx:49
+#: src/screens/settings_battery_optimizations/index.tsx:44
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "اعتمادًا على جهازك وإصدار الأندروید، قد يقتل جهازك أحيانًا التطبيق في الخلفية لتوفير طاقة البطارية. هذا يمكن أن يمنع إرسال الإنذارات/الإشعارات."
 
@@ -234,11 +234,11 @@ msgstr "إلغاء اختيار أذان الفجر"
 msgid "Device sounds"
 msgstr "نغمات الجهاز"
 
-#: src/screens/settings_battery_optimizations/index.tsx:57
+#: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Disabled"
 msgstr "غير مفعّل"
 
-#: src/screens/qibla_finder/index.tsx:17
+#: src/screens/qibla_finder/index.tsx:106
 msgid "Disclaimer"
 msgstr "تنصل"
 
@@ -257,7 +257,7 @@ msgstr "رئاسة الشؤون الدينية ، تركيا"
 msgid "Don't ask again"
 msgstr "لا تسأل مرة أخرى"
 
-#: src/intro/intro.tsx:101
+#: src/intro/intro.tsx:99
 msgid "Done"
 msgstr "تم"
 
@@ -269,19 +269,23 @@ msgstr "تحرير تذكير"
 msgid "Egyptian General Survey Authority"
 msgstr "الهيئة المصرية العامة للمساحة"
 
-#: src/screens/settings_battery_optimizations/index.tsx:57
+#: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Enabled"
 msgstr "مفعّل"
+
+#: src/screens/qibla_finder/index.tsx:51
+msgid "Error"
+msgstr "خطأ"
 
 #: src/screens/settings_location/index.tsx:140
 msgid "Error getting clipboard data"
 msgstr "خطأ في الحصول على بيانات الحافظة"
 
-#: src/screens/settings_location/index.tsx:238
+#: src/screens/settings_location/index.tsx:233
 msgid "Error in loading countries"
 msgstr "خطأ في تحميل البلدان"
 
-#: src/screens/settings_location/index.tsx:264
+#: src/screens/settings_location/index.tsx:259
 msgid "Error in loading search results"
 msgstr "خطأ في تحميل نتائج البحث"
 
@@ -289,7 +293,7 @@ msgstr "خطأ في تحميل نتائج البحث"
 msgid "Error while downloading audio"
 msgstr "خطأ أثناء تنزيل الصوت"
 
-#: src/screens/qibla_finder_compass/index.tsx:73
+#: src/screens/qibla_finder_compass/index.tsx:78
 #: src/screens/settings_location/index.tsx:158
 msgid "Error while getting coordinates"
 msgstr "خطأ أثناء الحصول على الإحداثيات"
@@ -298,7 +302,7 @@ msgstr "خطأ أثناء الحصول على الإحداثيات"
 msgid "Ethiopic"
 msgstr "إثيوبي"
 
-#: src/screens/settings_location/index.tsx:210
+#: src/screens/settings_location/index.tsx:205
 msgid "Find My Location"
 msgstr "البحث عن موقعي"
 
@@ -306,16 +310,17 @@ msgstr "البحث عن موقعي"
 msgid "Friday"
 msgstr "الجمعة"
 
-#: src/screens/settings_calculation/index.tsx:183
+#: src/screens/settings_calculation/index.tsx:178
 msgid "General (default)"
 msgstr "عام (افتراضي)"
 
-#: src/screens/qibla_finder_compass/index.tsx:145
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/qibla_finder_compass/index.tsx:97
+#: src/screens/qibla_finder_compass/index.tsx:167
+#: src/screens/settings_location/index.tsx:209
 msgid "Getting coordinates"
 msgstr "الحصول على الإحداثيات"
 
-#: src/intro/intro.tsx:124
+#: src/intro/intro.tsx:122
 msgid "Got it"
 msgstr "فهمت"
 
@@ -327,7 +332,7 @@ msgstr "ميلادي"
 msgid "Gulf region"
 msgstr "منطقة الخليج"
 
-#: src/screens/settings_calculation/index.tsx:141
+#: src/screens/settings_calculation/index.tsx:136
 msgid "Hanafi"
 msgstr "حنفي"
 
@@ -345,15 +350,15 @@ msgstr "إخفاء أوقات الصلاة"
 msgid "High"
 msgstr "عالي"
 
-#: src/screens/settings_calculation/index.tsx:109
+#: src/screens/settings_calculation/index.tsx:104
 msgid "High Latitude"
 msgstr "خط العرض العالي"
 
-#: src/screens/settings_about/index.tsx:39
+#: src/screens/settings_about/index.tsx:34
 msgid "Home"
 msgstr "الرئيسية"
 
-#: src/screens/qibla_finder/index.tsx:29
+#: src/screens/qibla_finder/index.tsx:117
 msgid "I Understand"
 msgstr "أفهم"
 
@@ -361,13 +366,21 @@ msgstr "أفهم"
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "في حالة التمكين، عند عرض إشعار، سيحتوي على معلومات خاصة بوقت الصلاة التالي"
 
-#: src/screens/settings_battery_optimizations/index.tsx:105
+#: src/screens/settings_battery_optimizations/index.tsx:100
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "إذا كنت لا تزال تواجه مشكلة في إيقاف التطبيق بعد مرور بعض الوقت، فيرجى زيارة dontkillmyapp.com لمزيد من الحلول."
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:47
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "إذا كنت تريد التأكد من أن التطبيق يمكن أن يعمل بشكل موثوق، فعليك تعطيل تحسين الطاقة لهذا التطبيق. يمكنك فتح الإعدادات ذات الصلة باستخدام الزر أدناه."
+
+#: src/screens/qibla_finder/index.tsx:67
+msgid "Internet connection"
+msgstr "اتصال بالإنترنت"
+
+#: src/screens/qibla_finder/index.tsx:68
+msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
+msgstr "الاتصال بالإنترنت ضروري لعمل خريطة القبلة. يرجى تمكين wifi أو بيانات الجوال وحاول مرة أخرى."
 
 #: src/screens/settings_display/calendar_settings.tsx:31
 msgid "Islamic"
@@ -409,16 +422,16 @@ msgstr "لغة"
 msgid "Latin"
 msgstr "لاتيني"
 
+#: src/screens/settings_location/index.tsx:284
 #: src/screens/settings_location/index.tsx:289
-#: src/screens/settings_location/index.tsx:294
 msgid "Latitude"
 msgstr "خط العرض"
 
-#: src/screens/settings_location/index.tsx:301
+#: src/screens/settings_location/index.tsx:296
 msgid "Latitude is invalid"
 msgstr "خط العرض غير صالح"
 
-#: src/screens/settings_about/index.tsx:45
+#: src/screens/settings_about/index.tsx:40
 msgid "License"
 msgstr "رخصة"
 
@@ -427,16 +440,21 @@ msgid "Light"
 msgstr "فاتح"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder_compass/index.tsx:130
+#: src/screens/qibla_finder/index.tsx:27
+#: src/screens/qibla_finder_compass/index.tsx:151
 msgid "Location"
 msgstr "موقع"
 
+#: src/screens/qibla_finder/index.tsx:36
+msgid "Location settings"
+msgstr "إعدادات الموقع"
+
+#: src/screens/settings_location/index.tsx:300
 #: src/screens/settings_location/index.tsx:305
-#: src/screens/settings_location/index.tsx:310
 msgid "Longitude"
 msgstr "خط الطول"
 
-#: src/screens/settings_location/index.tsx:317
+#: src/screens/settings_location/index.tsx:312
 msgid "Longitude is invalid"
 msgstr "خط الطول غير صالح"
 
@@ -448,9 +466,13 @@ msgstr "قليل"
 msgid "Medium"
 msgstr "واسطة"
 
-#: src/screens/settings_calculation/index.tsx:117
+#: src/screens/settings_calculation/index.tsx:112
 msgid "Middle of the Night"
 msgstr "منتصف الليل"
+
+#: src/screens/qibla_finder/index.tsx:76
+msgid "Mobile Data"
+msgstr "بيانات الجوال"
 
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
@@ -473,7 +495,7 @@ msgstr "اسم"
 msgid "New Reminder"
 msgstr "تذكير جديد"
 
-#: src/intro/intro.tsx:100
+#: src/intro/intro.tsx:98
 #: src/screens/settings_dev/index.tsx:33
 #: src/tasks/set_next_adhan.ts:81
 #: src/tasks/set_next_adhan.ts:121
@@ -498,7 +520,7 @@ msgstr "لايوجد بيانات"
 msgid "No Results"
 msgstr "دون نتائج"
 
-#: src/screens/settings_calculation/index.tsx:115
+#: src/screens/settings_calculation/index.tsx:110
 msgid "None (Automatic)"
 msgstr "لا شيء (تلقائي)"
 
@@ -506,7 +528,7 @@ msgstr "لا شيء (تلقائي)"
 msgid "Not now"
 msgstr "ليس الان"
 
-#: src/screens/qibla_finder/index.tsx:20
+#: src/screens/qibla_finder/index.tsx:109
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "لاحظ أنه نظرًا لوجود أخطاء في البرامج والأجهزة ، قد يكون اتجاه القبلة الذي يظهره هذا التطبيق خاطئًا ، خاصة في وضع البوصلة."
 
@@ -529,6 +551,9 @@ msgstr "إذن الإشعارات"
 msgid "Numbering system"
 msgstr "نظام الترقيم"
 
+#: src/screens/qibla_finder/index.tsx:31
+#: src/screens/qibla_finder/index.tsx:55
+#: src/screens/qibla_finder/index.tsx:71
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -542,7 +567,7 @@ msgstr "في نظام Android 12 والإصدارات الأحدث ، يحتاج
 msgid "Once"
 msgstr "مرة واحدة"
 
-#: src/screens/settings_calculation/index.tsx:121
+#: src/screens/settings_calculation/index.tsx:116
 msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
@@ -555,11 +580,11 @@ msgstr "مرة واحدة فقط؟"
 msgid "Only six items can be shown at the same time"
 msgstr "يمكن عرض ستة عناصر فقط في نفس الوقت"
 
-#: src/screens/settings_battery_optimizations/index.tsx:65
+#: src/screens/settings_battery_optimizations/index.tsx:60
 msgid "Open Battery Optimization Settings"
 msgstr "افتح إعدادات تحسين البطارية"
 
-#: src/screens/settings_battery_optimizations/index.tsx:96
+#: src/screens/settings_battery_optimizations/index.tsx:91
 msgid "Open Power Manager Settings"
 msgstr "افتح إعدادات مدير الطاقة"
 
@@ -575,7 +600,7 @@ msgstr "الآذان القادمة"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "التذكير القادم"
 
-#: src/screens/settings_location/index.tsx:345
+#: src/screens/settings_location/index.tsx:340
 msgid "Paste"
 msgstr "لصق"
 
@@ -583,11 +608,11 @@ msgstr "لصق"
 msgid "Phone State Permission"
 msgstr "إذن حالة الهاتف"
 
-#: src/screens/settings_calculation/index.tsx:146
+#: src/screens/settings_calculation/index.tsx:141
 msgid "Polar Resolution"
 msgstr "حساب المناطق القطبية"
 
-#: src/screens/settings_battery_optimizations/index.tsx:70
+#: src/screens/settings_battery_optimizations/index.tsx:65
 msgid "Power Manager"
 msgstr "مدير الطاقة"
 
@@ -599,9 +624,17 @@ msgstr "اليوم السابق"
 msgid "Qatar"
 msgstr "دولة قطر"
 
-#: src/screens/qibla_finder_compass/index.tsx:121
+#: src/screens/qibla_finder_compass/index.tsx:142
 msgid "Qibla"
 msgstr "القبلة"
+
+#: src/screens/qibla_finder/index.tsx:28
+msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
+msgstr "مكتشف القبلة يحتاج إلى خدمة الموقع. إذا لم يتم التمكين، فسيتم استخدام الموقع من إعدادات التطبيق."
+
+#: src/screens/qibla_finder/index.tsx:52
+msgid "Qibla map is only available on Android 6.0 and above"
+msgstr "خريطة القبلة متاحة فقط على نظام أندرويد 6.0 وما فوق"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -610,10 +643,6 @@ msgstr "تذكير"
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
 msgstr "يشار إليها باسم طريقة ISNA"
-
-#: src/screens/qibla_finder_compass/index.tsx:149
-msgid "Refresh using GPS"
-msgstr "قم بالتحديث باستخدام GPS"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -625,11 +654,11 @@ msgstr "تذكير"
 msgid "Repeat"
 msgstr "يكرر"
 
-#: src/intro/intro.tsx:120
+#: src/intro/intro.tsx:118
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "الإعدادات المطلوبة غير كاملة. لكي يعرض التطبيق مواقيت الصلاة ، يجب عليك تهيئته من الإعدادات لاحقًا."
 
-#: src/screens/settings_battery_optimizations/index.tsx:86
+#: src/screens/settings_battery_optimizations/index.tsx:81
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -658,18 +687,18 @@ msgstr "اختر أذان الفجر"
 msgid "Selecting a name is required"
 msgstr "اختيار الاسم مطلوب"
 
-#: src/screens/settings_calculation/index.tsx:170
+#: src/screens/settings_calculation/index.tsx:165
 msgid "Shafaq"
 msgstr "شفق"
 
-#: src/screens/settings_calculation/index.tsx:172
+#: src/screens/settings_calculation/index.tsx:167
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "يُستخدم شفق بواسطة طريقة \"لجنة رؤية الهلال\" لتحديد نوع الشفق الذي يجب استخدامه لتحديد وقت العشاء."
 
-#: src/screens/settings_calculation/index.tsx:138
+#: src/screens/settings_calculation/index.tsx:133
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "شافعي ، مالكي ، حنبلي (افتراضي)"
 
@@ -693,7 +722,7 @@ msgstr "اعرض اليوم"
 msgid "Show next in notification?"
 msgstr "إظهار التالي في الإشعار؟"
 
-#: src/screens/settings_widget/index.tsx:32
+#: src/screens/settings_widget/index.tsx:30
 msgid "Show notification widget?"
 msgstr "عرض التطبيق المصغّر في الإشعارات؟"
 
@@ -713,7 +742,7 @@ msgstr "صامتة"
 msgid "Singapore"
 msgstr "سنغافورة"
 
-#: src/intro/intro.tsx:102
+#: src/intro/intro.tsx:100
 msgid "Skip"
 msgstr "تخطى"
 
@@ -721,7 +750,7 @@ msgstr "تخطى"
 msgid "Solar Hijri"
 msgstr "هجري شمسي"
 
-#: src/screens/settings_battery_optimizations/index.tsx:74
+#: src/screens/settings_battery_optimizations/index.tsx:69
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -739,7 +768,7 @@ msgstr "صوت"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "الإدارة الروحية لمسلمي روسيا"
 
-#: src/screens/settings_battery_optimizations/index.tsx:55
+#: src/screens/settings_battery_optimizations/index.tsx:50
 msgid "Status"
 msgstr "حالة"
 
@@ -751,7 +780,7 @@ msgstr "الأحد"
 msgid "System Default"
 msgstr "افتراضي النظام"
 
-#: src/screens/settings_notifications/index.tsx:63
+#: src/screens/settings_notifications/index.tsx:61
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "وقت التهجد المذكور في التطبيق هو الثلث الأخير من الليل"
 
@@ -796,7 +825,7 @@ msgstr "وقت"
 msgid "Time format"
 msgstr "تنسيق الوقت"
 
-#: src/screens/settings_location/index.tsx:200
+#: src/screens/settings_location/index.tsx:195
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "لحساب الأذان، نحتاج إلى موقعك. يمكنك استخدام زر \"العثور على موقعي\"، أو استخدام البحث عن البلد والمدينة/ المنطقة، أو إدخال إحداثياتك يدويًا."
 
@@ -816,7 +845,7 @@ msgstr "الغد"
 msgid "Tuesday"
 msgstr "الثلاثاء"
 
-#: src/screens/settings_calculation/index.tsx:125
+#: src/screens/settings_calculation/index.tsx:120
 msgid "Twilight Angle"
 msgstr "زاوية الشفق"
 
@@ -840,7 +869,7 @@ msgstr "خطأ غير معروف"
 msgid "Unreliable"
 msgstr "غير جدير بالثقة"
 
-#: src/screens/settings_calculation/index.tsx:156
+#: src/screens/settings_calculation/index.tsx:151
 msgid "Unresolved (default)"
 msgstr "لم يتم حلها (افتراضي)"
 
@@ -861,27 +890,27 @@ msgstr "تحدیث التطبيقات المصغّر"
 msgid "Use 24-Hour format"
 msgstr "استخدام تنسيق 24 ساعة"
 
-#: src/screens/qibla_finder/index.tsx:26
+#: src/screens/qibla_finder/index.tsx:114
 msgid "Use Compass"
 msgstr "استخدم البوصلة"
 
-#: src/screens/qibla_finder/index.tsx:24
+#: src/screens/qibla_finder/index.tsx:113
 msgid "Use Map"
 msgstr "استخدم الخريطة"
 
-#: src/screens/settings_location/index.tsx:285
+#: src/screens/settings_location/index.tsx:280
 msgid "Using Coordinates"
 msgstr "باستخدام الإحداثيات"
 
-#: src/screens/settings_location/index.tsx:202
+#: src/screens/settings_location/index.tsx:197
 msgid "Using GPS"
 msgstr "باستخدام GPS"
 
-#: src/screens/settings_location/index.tsx:221
+#: src/screens/settings_location/index.tsx:216
 msgid "Using Search"
 msgstr "باستخدام البحث"
 
-#: src/screens/settings_about/index.tsx:34
+#: src/screens/settings_about/index.tsx:29
 msgid "Version"
 msgstr "إصدار"
 
@@ -905,16 +934,20 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
+#: src/screens/qibla_finder/index.tsx:83
+msgid "Wifi"
+msgstr "wifi"
+
 #: src/components/audio_picker.tsx:159
 #: src/screens/settings_adhan/adhan_list_item.tsx:110
 msgid "Yes"
 msgstr "نعم"
 
-#: src/screens/settings_battery_optimizations/index.tsx:79
+#: src/screens/settings_battery_optimizations/index.tsx:74
 msgid "You can access your device Power Manager using the button below."
 msgstr "يمكنك الوصول إلى \"مدير الطاقة\" (Power Manager) بجهازك باستخدام الزر أدناه."
 
-#: src/screens/settings_location/index.tsx:339
+#: src/screens/settings_location/index.tsx:334
 msgid "You can also paste coords from clipboard"
 msgstr "يمكنك أيضًا لصق إحداثيات من الحافظة"
 
@@ -936,14 +969,14 @@ msgstr "نغماتك"
 msgid "abdul_basit_abdus_samad"
 msgstr "عبد الباسط عبد الصمد"
 
-#: src/screens/settings_about/index.tsx:51
+#: src/screens/settings_about/index.tsx:46
 msgid "about.credits"
 msgstr ""
 "جميع الحقوق الخاصة بأصوات الأذان محفوظة لأصحابها.\n"
 "شكر خاص لـ translation.io (lingui.js) على خدماتهم الرائعة.\n"
 "شكرًا لجميع أعضاء المجتمع مفتوح المصدر الذين أنشأوا كل هذه المكتبات الرائعة التي جعلت هذا التطبيق ممكنًا."
 
-#: src/screens/settings_about/index.tsx:59
+#: src/screens/settings_about/index.tsx:54
 msgid "about.credits.google"
 msgstr "معظم الأيقونات المستخدمة في هذا التطبيق مأخوذة من google material icons."
 
@@ -1001,11 +1034,11 @@ msgstr "فجر"
 msgid "forces all numbers to be in the selected system"
 msgstr "يفرض أن تكون جميع الأرقام في النظام المحدد"
 
-#: src/screens/qibla_finder_compass/index.tsx:125
+#: src/screens/qibla_finder_compass/index.tsx:146
 msgid "from North"
 msgstr "من الشمال"
 
-#: src/screens/qibla_finder_compass/index.tsx:136
+#: src/screens/qibla_finder_compass/index.tsx:157
 msgid "from settings"
 msgstr "من الإعدادات"
 
@@ -1084,7 +1117,7 @@ msgstr "التذكيرات"
 msgid "settings"
 msgstr "إعدادات"
 
-#: src/screens/settings_widget/index.tsx:47
+#: src/screens/settings_widget/index.tsx:45
 msgid "should notification widget be shown?"
 msgstr "هل يجب عرض التطبيق المصغر في الإشعارات؟"
 

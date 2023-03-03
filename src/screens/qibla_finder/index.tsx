@@ -25,7 +25,7 @@ export function QiblaFinder() {
       await new Promise(resolve => {
         Alert.alert(
           t`Location`,
-          t`Qibla finder needs location service. If not enabled, location from settings will be used.`,
+          t`Qibla finder needs location service. If not enabled, location from app settings will be used.`,
           [
             {
               text: t`Okay`,
@@ -65,7 +65,7 @@ export function QiblaFinder() {
       const networkResult = await new Promise(resolve => {
         Alert.alert(
           t`Internet connection`,
-          t`Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again`,
+          t`Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again.`,
           [
             {
               text: t`Okay`,
@@ -73,7 +73,7 @@ export function QiblaFinder() {
               onPress: () => resolve(false),
             },
             {
-              text: t`Data`,
+              text: t`Mobile Data`,
               onPress: () => {
                 openMobileDataSettings().then(resolve);
               },
