@@ -33,6 +33,7 @@ export function QiblaCompass() {
   const {colorMode} = useColorMode();
   const [staticQiblaDegree, setStaticQiblaDegree] = useState(0);
   const qiblaDegree = useRef(0);
+  const triedLocationOnce = useRef(false);
   const [gettingLocation, setGettingLocation] = useState(false);
   const [fetchedCoords, setFetchedCoords] = useState<
     {lat: number; long: number} | undefined
@@ -60,32 +61,50 @@ export function QiblaCompass() {
     [],
   );
 
-  const refreshLocation = useCallback(() => {
-    setGettingLocation(true);
-    LocationProvider.getCurrentPosition({
-      enableHighAccuracy: true,
-      timeout: 15000,
-    })
-      .then(location => {
+  const refreshLocation = useCallback(
+    async (ignoreError?: boolean) => {
+      setGettingLocation(true);
+      try {
+        const location = await LocationProvider.getCurrentPosition({
+          enableHighAccuracy: true,
+          timeout: 15000,
+        });
         setFetchedCoords({lat: location.latitude, long: location.longitude});
         updateQiblaDegree({lat: location.latitude, long: location.longitude});
-      })
-      .catch(() => {
-        ToastAndroid.show(
-          t`Error while getting coordinates`,
-          ToastAndroid.SHORT,
-        );
-      })
-      .finally(() => setGettingLocation(false));
-  }, [updateQiblaDegree]);
+        return true;
+      } catch {
+        if (!ignoreError) {
+          ToastAndroid.show(
+            t`Error while getting coordinates`,
+            ToastAndroid.SHORT,
+          );
+        }
+        return false;
+      } finally {
+        setGettingLocation(false);
+      }
+    },
+    [updateQiblaDegree],
+  );
+
+  const onRefreshLocationPressed = useCallback(() => {
+    refreshLocation(false);
+  }, [refreshLocation]);
 
   useEffect(() => {
-    const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
-    if (LOCATION_LAT && LOCATION_LONG) {
-      setFetchedCoords(undefined);
-      updateQiblaDegree({lat: LOCATION_LAT, long: LOCATION_LONG});
-    }
-  }, [updateQiblaDegree]);
+    if (triedLocationOnce.current) return;
+    triedLocationOnce.current = true;
+    ToastAndroid.show(t`Updating coordinates`, ToastAndroid.SHORT);
+    refreshLocation(true).then(successful => {
+      if (!successful) {
+        const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
+        if (LOCATION_LAT && LOCATION_LONG) {
+          setFetchedCoords(undefined);
+          updateQiblaDegree({lat: LOCATION_LAT, long: LOCATION_LONG});
+        }
+      }
+    });
+  }, [refreshLocation, updateQiblaDegree]);
 
   const compassImgRef = useRef<Image>(null);
   const qiblaImgRef = useRef<Image>(null);
@@ -141,7 +160,7 @@ export function QiblaCompass() {
           size="sm"
           p="1"
           variant="outline"
-          onPress={refreshLocation}
+          onPress={onRefreshLocationPressed}
           disabled={gettingLocation}>
           {gettingLocation ? (
             <Spinner
