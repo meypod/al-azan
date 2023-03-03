@@ -1,9 +1,10 @@
+import {t} from '@lingui/macro';
 import MapLibreGL, {ShapeSourceProps} from '@maplibre/maplibre-react-native';
 import {Coordinates, Qibla} from 'adhan';
 import debounce from 'lodash/debounce';
-import {Button, Text} from 'native-base';
+import {Button, HStack, Text} from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';
-import {Linking, StyleSheet, View, I18nManager} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {CheckIcon} from '@/assets/icons/material_icons/check';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {ExploreIcon} from '@/assets/icons/material_icons/explore';
@@ -176,12 +177,6 @@ export function QiblaMap() {
     }
   }, [onUserLocationUpdate]);
 
-  const onOpenStreetMapPress = useCallback(async () => {
-    if (await Linking.canOpenURL('https://www.openstreetmap.org/copyright')) {
-      Linking.openURL('https://www.openstreetmap.org/copyright');
-    }
-  }, []);
-
   const toggleCompassLock = useCallback(() => {
     compassLockRef.current = !compassLockRef.current;
     setCompassLock(compassLockRef.current);
@@ -209,27 +204,29 @@ export function QiblaMap() {
         <Button
           mb="1"
           mr="1"
-          backgroundColor="black:alpha.60"
+          px="1"
+          backgroundColor={compassLock ? 'primary.900' : 'black:alpha.60'}
           h="10"
-          w="10"
           borderColor={compassLock ? 'primary.400' : 'black:alpha.50'}
           borderWidth={1}
+          size="sm"
           onPress={toggleCompassLock}>
-          <ExploreIcon
-            color={compassLock ? 'primary.400' : 'white'}
-            size="2xl"
-          />
+          <HStack alignItems="center">
+            <Text fontSize="sm">
+              {compassLock ? t`Disable Compass` : t`Enable Compass`}
+            </Text>
+            <ExploreIcon
+              ml="1"
+              color={compassLock ? 'primary.400' : 'white'}
+              size="2xl"
+            />
+          </HStack>
         </Button>
         <View
           style={{
             backgroundColor: '#00000099',
           }}>
-          <Text
-            background="red"
-            padding="1"
-            color="white"
-            fontSize="xs"
-            onPress={onOpenStreetMapPress}>
+          <Text background="red" padding="1" color="white" fontSize="xs">
             &copy; OpenStreetMap Contributors
           </Text>
         </View>
@@ -237,18 +234,24 @@ export function QiblaMap() {
       {compassLock ? (
         <View
           style={{
-            backgroundColor: '#00000099',
+            justifyContent: 'center',
             position: 'absolute',
-            left: 3,
-            top: 3,
+            left: 0,
+            top: 0,
             zIndex: 1,
+            width: '100%',
             flexDirection: 'row',
           }}>
-          {isFacingKaaba ? (
-            <CheckIcon size="6xl" color="#59cf78" />
-          ) : (
-            <CloseIcon size="6xl" color="red.400" />
-          )}
+          <View
+            style={{
+              backgroundColor: '#00000099',
+            }}>
+            {isFacingKaaba ? (
+              <CheckIcon size="6xl" color="#59cf78" />
+            ) : (
+              <CloseIcon size="6xl" color="red.400" />
+            )}
+          </View>
         </View>
       ) : undefined}
       <MapLibreGL.MapView
@@ -262,7 +265,6 @@ export function QiblaMap() {
         rotateEnabled={true}
         compassEnabled={true}
         localizeLabels={true}
-        compassViewPosition={I18nManager.isRTL ? 0 : 1}
         onTouchEnd={debouncedCameraUpdate}
         onDidFinishRenderingMapFully={updateCamera}>
         {/* @ts-ignore */}
