@@ -212,9 +212,7 @@ export function QiblaMap() {
           size="sm"
           onPress={toggleCompassLock}>
           <HStack alignItems="center">
-            <Text fontSize="sm">
-              {compassLock ? t`Disable Compass` : t`Enable Compass`}
-            </Text>
+            <Text fontSize="sm">{t`Compass Lock`}</Text>
             <ExploreIcon
               ml="1"
               color={compassLock ? 'primary.400' : 'white'}

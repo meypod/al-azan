@@ -193,6 +193,10 @@ msgstr "Closest City"
 msgid "Closest Date"
 msgstr "Closest Date"
 
+#: src/screens/qibla_finder_map/index.tsx:215
+msgid "Compass Lock"
+msgstr "Compass Lock"
+
 #: src/screens/qibla_finder/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "Compass sensor unavailable"
@@ -321,7 +325,7 @@ msgid "General (default)"
 msgstr "General (default)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
-#: src/screens/qibla_finder_compass/index.tsx:167
+#: src/screens/qibla_finder_compass/index.tsx:163
 #: src/screens/settings_location/index.tsx:209
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
@@ -447,7 +451,7 @@ msgstr "Light"
 
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder/index.tsx:27
-#: src/screens/qibla_finder_compass/index.tsx:151
+#: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "Location"
 
@@ -630,7 +634,7 @@ msgstr "Prev Day"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/screens/qibla_finder_compass/index.tsx:142
+#: src/screens/qibla_finder_compass/index.tsx:139
 msgid "Qibla"
 msgstr "Qibla"
 
@@ -1050,11 +1054,11 @@ msgstr "Fajr"
 msgid "forces all numbers to be in the selected system"
 msgstr "forces all numbers to be in the selected system"
 
-#: src/screens/qibla_finder_compass/index.tsx:146
+#: src/screens/qibla_finder_compass/index.tsx:143
 msgid "from North"
 msgstr "from North"
 
-#: src/screens/qibla_finder_compass/index.tsx:157
+#: src/screens/qibla_finder_compass/index.tsx:154
 msgid "from settings"
 msgstr "from settings"
 

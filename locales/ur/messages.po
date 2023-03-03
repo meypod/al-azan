@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-03 20:20+0330\n"
+"POT-Creation-Date: 2023-03-03 22:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,6 +187,10 @@ msgstr "قریب ترین شہر"
 msgid "Closest Date"
 msgstr "قریب ترین تاریخ"
 
+#: src/screens/qibla_finder_map/index.tsx:215
+msgid "Compass Lock"
+msgstr "کمپاس لاک"
+
 #: src/screens/qibla_finder/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "کمپاس سینسر دستیاب نہیں ہے۔"
@@ -315,7 +319,7 @@ msgid "General (default)"
 msgstr "عمومی (پہلے سے طے شدہ)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
-#: src/screens/qibla_finder_compass/index.tsx:167
+#: src/screens/qibla_finder_compass/index.tsx:163
 #: src/screens/settings_location/index.tsx:209
 msgid "Getting coordinates"
 msgstr "کوآرڈینیٹ حاصل کرنا"
@@ -441,7 +445,7 @@ msgstr "روشنی"
 
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder/index.tsx:27
-#: src/screens/qibla_finder_compass/index.tsx:151
+#: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "مقام"
 
@@ -624,7 +628,7 @@ msgstr "پچھلا دن"
 msgid "Qatar"
 msgstr "قطر"
 
-#: src/screens/qibla_finder_compass/index.tsx:142
+#: src/screens/qibla_finder_compass/index.tsx:139
 msgid "Qibla"
 msgstr "قبلہ"
 
@@ -1029,11 +1033,11 @@ msgstr "فجر"
 msgid "forces all numbers to be in the selected system"
 msgstr "تمام نمبروں کو منتخب نظام میں ہونے پر مجبور کرتا ہے۔"
 
-#: src/screens/qibla_finder_compass/index.tsx:146
+#: src/screens/qibla_finder_compass/index.tsx:143
 msgid "from North"
 msgstr "شمال سے"
 
-#: src/screens/qibla_finder_compass/index.tsx:157
+#: src/screens/qibla_finder_compass/index.tsx:154
 msgid "from settings"
 msgstr "ترتیبات سے"
 

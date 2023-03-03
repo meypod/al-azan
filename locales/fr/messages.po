@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-03 20:20+0330\n"
+"POT-Creation-Date: 2023-03-03 22:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,6 +187,10 @@ msgstr "Ville la plus proche"
 msgid "Closest Date"
 msgstr "Date la plus proche"
 
+#: src/screens/qibla_finder_map/index.tsx:215
+msgid "Compass Lock"
+msgstr "Serrure à compas"
+
 #: src/screens/qibla_finder/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "Boussole non disponible"
@@ -315,7 +319,7 @@ msgid "General (default)"
 msgstr "Général (par défaut)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
-#: src/screens/qibla_finder_compass/index.tsx:167
+#: src/screens/qibla_finder_compass/index.tsx:163
 #: src/screens/settings_location/index.tsx:209
 msgid "Getting coordinates"
 msgstr "Obtenir des coordonnées"
@@ -441,7 +445,7 @@ msgstr "Clair"
 
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder/index.tsx:27
-#: src/screens/qibla_finder_compass/index.tsx:151
+#: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "Localisation"
 
@@ -624,7 +628,7 @@ msgstr "Jour précédent"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/screens/qibla_finder_compass/index.tsx:142
+#: src/screens/qibla_finder_compass/index.tsx:139
 msgid "Qibla"
 msgstr "Qibla"
 
@@ -1044,11 +1048,11 @@ msgstr "Fajr"
 msgid "forces all numbers to be in the selected system"
 msgstr "Force tous les numéros à être dans le système sélectionné"
 
-#: src/screens/qibla_finder_compass/index.tsx:146
+#: src/screens/qibla_finder_compass/index.tsx:143
 msgid "from North"
 msgstr "du Nord"
 
-#: src/screens/qibla_finder_compass/index.tsx:157
+#: src/screens/qibla_finder_compass/index.tsx:154
 msgid "from settings"
 msgstr "à partir des paramètres"
 
