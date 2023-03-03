@@ -24,7 +24,7 @@
       android:gravity="center"
       android:maxLines="1"
       tools:ignore="HardcodedText"
-      android:text="-" />
+      android:text="السبت، ١٢ شعبان ١٤٤٤ هـ" />
 
 
     <TextView
@@ -37,7 +37,7 @@
       android:gravity="center"
       android:maxLines="1"
       tools:ignore="HardcodedText"
-      android:text="-" />
+      android:text="March 04, 2023" />
 
   </LinearLayout>
 
@@ -61,13 +61,13 @@
         android:id="@+id/prayer1_name"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="-" />
+        android:text="Fajr" />
 
       <TextView
         android:id="@+id/prayer1_time"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="--:--" />
+        android:text="00:00" />
 
     </LinearLayout>
 
@@ -83,13 +83,13 @@
         android:id="@+id/prayer2_name"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="-" />
+        android:text="Sunrise" />
 
       <TextView
         android:id="@+id/prayer2_time"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="--:--" />
+        android:text="00:00" />
 
     </LinearLayout>
 
@@ -105,13 +105,13 @@
         android:id="@+id/prayer3_name"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="-" />
+        android:text="Dhuhr" />
 
       <TextView
         android:id="@+id/prayer3_time"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="--:--" />
+        android:text="00:00" />
 
     </LinearLayout>
 
@@ -127,13 +127,13 @@
         android:id="@+id/prayer4_name"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="-" />
+        android:text="Asr" />
 
       <TextView
         android:id="@+id/prayer4_time"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="--:--" />
+        android:text="00:00" />
 
     </LinearLayout>
 
@@ -149,13 +149,13 @@
         android:id="@+id/prayer5_name"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="-" />
+        android:text="Maghrib" />
 
       <TextView
         android:id="@+id/prayer5_time"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="--:--" />
+        android:text="00:00" />
 
     </LinearLayout>
 
@@ -171,13 +171,13 @@
         android:id="@+id/prayer6_name"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="-" />
+        android:text="Isha" />
 
       <TextView
         android:id="@+id/prayer6_time"
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
-        android:text="--:--" />
+        android:text="00:00" />
 
     </LinearLayout>
 
