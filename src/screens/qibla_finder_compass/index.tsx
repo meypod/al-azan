@@ -95,15 +95,12 @@ export function QiblaCompass() {
     if (triedLocationOnce.current) return;
     triedLocationOnce.current = true;
     ToastAndroid.show(t`Getting coordinates`, ToastAndroid.SHORT);
-    refreshLocation(true).then(successful => {
-      if (!successful) {
-        const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
-        if (LOCATION_LAT && LOCATION_LONG) {
-          setFetchedCoords(undefined);
-          updateQiblaDegree({lat: LOCATION_LAT, long: LOCATION_LONG});
-        }
-      }
-    });
+    const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
+    if (LOCATION_LAT && LOCATION_LONG) {
+      setFetchedCoords(undefined);
+      updateQiblaDegree({lat: LOCATION_LAT, long: LOCATION_LONG});
+    }
+    refreshLocation(true);
   }, [refreshLocation, updateQiblaDegree]);
 
   const compassImgRef = useRef<Image>(null);
