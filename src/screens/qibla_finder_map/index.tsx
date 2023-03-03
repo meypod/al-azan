@@ -263,7 +263,8 @@ export function QiblaMap() {
         compassEnabled={true}
         localizeLabels={true}
         compassViewPosition={I18nManager.isRTL ? 0 : 1}
-        onTouchEnd={debouncedCameraUpdate}>
+        onTouchEnd={debouncedCameraUpdate}
+        onDidFinishRenderingMapFully={updateCamera}>
         {/* @ts-ignore */}
         <MapLibreGL.Style json={mapStyle} />
         <MapLibreGL.Camera
