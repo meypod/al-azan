@@ -36,12 +36,7 @@ export function BatteryOptimizationSettings(props: IScrollViewProps) {
   });
 
   return (
-    <ScrollView
-      p="4"
-      _contentContainerStyle={{paddingBottom: 20}}
-      keyboardShouldPersistTaps="handled"
-      keyboardDismissMode="on-drag"
-      {...props}>
+    <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
       <FormControl display="flex" pb="8">
         <FormControl.Label>{t`Battery Optimization`}</FormControl.Label>
         <FormControl.HelperText>

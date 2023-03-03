@@ -9,12 +9,7 @@ import {TimeFormatSettings} from '@/screens/settings_display/time_format_setting
 
 export function DisplaySettings(props: IScrollViewProps) {
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      keyboardDismissMode="on-drag"
-      p="4"
-      _contentContainerStyle={{paddingBottom: 40}}
-      {...props}>
+    <ScrollView p="4" _contentContainerStyle={{paddingBottom: 40}} {...props}>
       <ThemeSettings mb="4" />
       <LanguageSettings mb="6" />
       <HidePrayerSettings />

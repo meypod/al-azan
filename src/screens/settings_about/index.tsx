@@ -23,12 +23,7 @@ export function AboutSettings(props: IScrollViewProps) {
   }, [setTCount, tCount]);
 
   return (
-    <ScrollView
-      keyboardShouldPersistTaps="handled"
-      keyboardDismissMode="on-drag"
-      p="4"
-      _contentContainerStyle={{paddingBottom: 40}}
-      {...props}>
+    <ScrollView p="4" _contentContainerStyle={{paddingBottom: 40}} {...props}>
       <FormControl mb="3">
         <FormControl.Label m="0" onTouchStart={handleT}>
           {t`Version`}:

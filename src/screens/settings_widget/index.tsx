@@ -25,8 +25,6 @@ export function WidgetSettings(props: IScrollViewProps) {
       p="4"
       _contentContainerStyle={{paddingBottom: 20}}
       mb="3"
-      keyboardShouldPersistTaps="handled"
-      keyboardDismissMode="on-drag"
       {...props}>
       <HStack justifyContent="space-between" mb="4">
         <Text flex="1">{t`Show notification widget?`}</Text>

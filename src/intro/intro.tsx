@@ -87,8 +87,6 @@ export function Intro() {
   return (
     <Box flex="1" safeArea>
       <AppIntroSlider<Item>
-        keyboardDismissMode="on-drag"
-        keyboardShouldPersistTaps="handled"
         keyExtractor={_keyExtractor}
         dotStyle={{borderColor: 'gray', borderWidth: 1}}
         dotClickEnabled={false}

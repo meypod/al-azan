@@ -31,8 +31,6 @@ export function NotificationSettings(props: IScrollViewProps) {
       p="4"
       _contentContainerStyle={{paddingBottom: 20}}
       mb="3"
-      keyboardShouldPersistTaps="handled"
-      keyboardDismissMode="on-drag"
       {...props}>
       {PrayersInOrder.map(p => (
         <NotificationSetting
