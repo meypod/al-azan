@@ -16,19 +16,19 @@ function AccuracyIndicator({
   switch (accuracy) {
     case AccuracyLevel.SENSOR_STATUS_ACCURACY_LOW:
       translatedAccuracy = t`Low`;
-      color = 'orange.400';
+      color = 'orange.600';
       break;
     case AccuracyLevel.SENSOR_STATUS_ACCURACY_MEDIUM:
       translatedAccuracy = t`Medium`;
-      color = 'yellow.400';
+      color = 'yellow.600';
       break;
     case AccuracyLevel.SENSOR_STATUS_ACCURACY_HIGH:
       translatedAccuracy = t`High`;
-      color = 'green.400';
+      color = 'green.600';
       break;
     default:
       translatedAccuracy = t`Unreliable`;
-      color = 'red.400';
+      color = 'red.600';
       break;
   }
 
