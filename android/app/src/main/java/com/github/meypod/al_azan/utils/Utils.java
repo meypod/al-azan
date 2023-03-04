@@ -22,29 +22,47 @@ public class Utils {
 
   public static final int[] prayersViewId = {
       R.id.prayer1,
+      R.id.prayer1active,
       R.id.prayer2,
+      R.id.prayer2active,
       R.id.prayer3,
+      R.id.prayer3active,
       R.id.prayer4,
+      R.id.prayer4active,
       R.id.prayer5,
+      R.id.prayer5active,
       R.id.prayer6,
+      R.id.prayer6active,
   };
 
   public static final int[] prayersViewNameId = {
       R.id.prayer1_name,
+      R.id.prayer1active_name,
       R.id.prayer2_name,
+      R.id.prayer2active_name,
       R.id.prayer3_name,
+      R.id.prayer3active_name,
       R.id.prayer4_name,
+      R.id.prayer4active_name,
       R.id.prayer5_name,
+      R.id.prayer5active_name,
       R.id.prayer6_name,
+      R.id.prayer6active_name,
   };
 
   public static final int[] prayersViewTimeId = {
       R.id.prayer1_time,
+      R.id.prayer1active_time,
       R.id.prayer2_time,
+      R.id.prayer2active_time,
       R.id.prayer3_time,
+      R.id.prayer3active_time,
       R.id.prayer4_time,
+      R.id.prayer4active_time,
       R.id.prayer5_time,
+      R.id.prayer5active_time,
       R.id.prayer6_time,
+      R.id.prayer6active_time,
   };
 
   public static int getIdFromRawResourceUri(Uri uri) {

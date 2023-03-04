@@ -33,4 +33,13 @@
     <item name="android:textAlignment">center</item>
   </style>
 
+  <style name="ScreenWidgetPrayerActive">
+    <item name="android:textColor">@color/active_prayer</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:textAlignment">center</item>
+  </style>
+
 </resources>

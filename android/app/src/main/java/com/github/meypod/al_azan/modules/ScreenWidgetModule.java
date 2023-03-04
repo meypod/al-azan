@@ -12,13 +12,10 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.view.View;
 import android.widget.RemoteViews;
-import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.core.widget.TextViewCompat;
-
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -41,56 +38,11 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
     return "ScreenWidgetModule";
   }
 
-  private @ColorInt int getPrayerTextColor(boolean adaptiveTheme) {
-    if (adaptiveTheme) {
-      Resources.Theme currentTheme = getReactApplicationContext().getTheme();
-      int styleResId = R.style.MyDynamicTheme;
-
-      // Create a TypedArray from the style
-      TypedArray styledAttributes = currentTheme.obtainStyledAttributes(styleResId, new int[] {
-              android.R.attr.isLightTheme,
-              android.R.attr.textColorSecondary,
-              android.R.attr.textColorSecondaryInverse,
-      });
-
-      boolean isLightTheme = styledAttributes.getBoolean(0, true);
-      int textColorSecondary = styledAttributes.getColor(1, 0);
-      int textColorSecondaryInverse = styledAttributes.getColor(2, 0);
-      styledAttributes.recycle();
-
-      return isLightTheme ? textColorSecondary : textColorSecondaryInverse;
-    } else {
-      return ResourcesCompat.getColor(getReactApplicationContext().getResources(),
-              R.color.secondary_text_color,
-              null);
-    }
-  }
-
-  private @ColorInt int getActivePrayerColor(boolean adaptiveTheme) {
-    if (adaptiveTheme) {
-      Resources.Theme currentTheme = getReactApplicationContext().getTheme();
-      int styleResId = R.style.MyDynamicTheme;
-
-      TypedArray styledAttributes = currentTheme.obtainStyledAttributes(styleResId, new int[] {
-              android.R.attr.colorAccent,
-      });
-
-      int colorAccent = styledAttributes.getColor(0, 0);
-      styledAttributes.recycle();
-
-      return colorAccent;
-    } else {
-      return ResourcesCompat.getColor(getReactApplicationContext().getResources(),
-              R.color.active_prayer,
-              null);
-    }
-  }
-
   private RemoteViews getViewUpdate(String hijriDate, String secondaryDate, ReadableArray prayers, boolean adaptiveTheme){
     Context context = getReactApplicationContext();
 
     RemoteViews widgetView = new RemoteViews(context.getPackageName(),
-            R.layout.screen_widget);
+            adaptiveTheme ? R.layout.screen_widget_adaptive : R.layout.screen_widget);
 
     String[] names = new String[prayers.size()];
     String[] times = new String[prayers.size()];
@@ -99,37 +51,43 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
       ReadableArray nameTimePair = prayers.getArray(i);
       names[i] = nameTimePair.getString(0);
       times[i] = nameTimePair.getString(1);
-      boolean isActive = nameTimePair.getBoolean(2);
+      final boolean isActive = nameTimePair.getBoolean(2);
       if (isActive) {
         activeIndex = i;
       }
     }
 
-    for (int i = 0; i < names.length; i++) {
-      widgetView.setViewVisibility(prayersViewId[i], View.VISIBLE);
-    }
-
-    for (int i = names.length; i < prayersViewId.length; i++) {
-      widgetView.setViewVisibility(prayersViewId[i], View.GONE);
-    }
-
+    // set top views text first
     widgetView.setTextViewText(R.id.hijri_date_v, hijriDate);
     widgetView.setTextViewText(R.id.day_v, secondaryDate);
 
-    // resetting color is needed for widget because of partial updates
-    @ColorInt int color = getPrayerTextColor(adaptiveTheme);
-
-    for (int i = 0; i < names.length; i++) {
-      widgetView.setTextViewText(prayersViewNameId[i], names[i]);
-      widgetView.setTextViewText(prayersViewTimeId[i], times[i]);
-      widgetView.setTextColor(prayersViewNameId[i], color);
-      widgetView.setTextColor(prayersViewTimeId[i], color);
+    // hide all views first
+    for (int i = 0; i < prayersViewId.length; i++) {
+      widgetView.setViewVisibility(prayersViewId[i], View.GONE);
     }
 
-    if (activeIndex != -1) {
-      int activeColor = getActivePrayerColor(adaptiveTheme);
-      widgetView.setTextColor(prayersViewNameId[activeIndex], activeColor);
-      widgetView.setTextColor(prayersViewTimeId[activeIndex], activeColor);
+    if (activeIndex == -1) {
+      // no prayer is active, simply make all visible
+      for (int i = 0; i < names.length * 2; i+=2) {
+        widgetView.setViewVisibility(prayersViewId[i], View.VISIBLE);
+        widgetView.setTextViewText(prayersViewNameId[i], names[Math.floorDiv(i, 2)]);
+        widgetView.setTextViewText(prayersViewTimeId[i], times[Math.floorDiv(i, 2)]);
+      }
+    } else {
+      // make all inactive prayer views visible except one that is same as active
+      for (int i = 1; i < names.length * 2; i+=2) {
+        int valueIndex = Math.floorDiv(i, 2);
+        if (valueIndex == activeIndex) {
+          widgetView.setViewVisibility(prayersViewId[i], View.VISIBLE);
+          widgetView.setTextViewText(prayersViewNameId[i], names[valueIndex]);
+          widgetView.setTextViewText(prayersViewTimeId[i], times[valueIndex]);
+        } else {
+          widgetView.setViewVisibility(prayersViewId[i-1], View.VISIBLE);
+          widgetView.setTextViewText(prayersViewNameId[i-1], names[valueIndex]);
+          widgetView.setTextViewText(prayersViewTimeId[i-1], times[valueIndex]);
+        }
+
+      }
     }
 
     widgetView.setOnClickPendingIntent(R.id.screen_widget_layout,

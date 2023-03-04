@@ -72,6 +72,28 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/prayer1active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/prayer1active_name"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="-" />
+
+      <TextView
+          android:id="@+id/prayer1active_time"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="--:--" />
+
+    </LinearLayout>
+
+    <LinearLayout
       android:id="@+id/prayer2"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -90,6 +112,28 @@
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
         android:text="00:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prayer2active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/prayer2active_name"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="-" />
+
+      <TextView
+          android:id="@+id/prayer2active_time"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="--:--" />
 
     </LinearLayout>
 
@@ -116,6 +160,28 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/prayer3active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/prayer3active_name"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="-" />
+
+      <TextView
+          android:id="@+id/prayer3active_time"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="--:--" />
+
+    </LinearLayout>
+
+    <LinearLayout
       android:id="@+id/prayer4"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -134,6 +200,28 @@
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
         android:text="00:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prayer4active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/prayer4active_name"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="-" />
+
+      <TextView
+          android:id="@+id/prayer4active_time"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="--:--" />
 
     </LinearLayout>
 
@@ -160,6 +248,28 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/prayer5active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/prayer5active_name"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="-" />
+
+      <TextView
+          android:id="@+id/prayer5active_time"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="--:--" />
+
+    </LinearLayout>
+
+    <LinearLayout
       android:id="@+id/prayer6"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -178,6 +288,28 @@
         style="@style/ScreenWidgetPrayer"
         tools:ignore="HardcodedText"
         android:text="00:00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prayer6active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/prayer6active_name"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="-" />
+
+      <TextView
+          android:id="@+id/prayer6active_time"
+          style="@style/ScreenWidgetPrayerActive"
+          tools:ignore="HardcodedText"
+          android:text="--:--" />
 
     </LinearLayout>
 
