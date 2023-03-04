@@ -31,12 +31,12 @@ export async function updateWidgets() {
       ] as [prayerName: string, prayerTime: string, isActive: Boolean],
   );
 
-  const dayAndMonth = getFormattedDate(now);
+  const secondaryDate = getFormattedDate(now);
   const hijriDate = getArabicDate(now);
 
   if (settings.getState().SHOW_WIDGET) {
     await updatePermanentNotifWidget({
-      dayAndMonth,
+      secondaryDate,
       hijriDate,
       prayers,
     }).catch(console.error);
@@ -45,7 +45,7 @@ export async function updateWidgets() {
   }
 
   await updateScreenWidget({
-    dayAndMonth,
+    secondaryDate,
     hijriDate,
     prayers,
   });

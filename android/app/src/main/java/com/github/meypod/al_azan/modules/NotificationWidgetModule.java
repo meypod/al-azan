@@ -67,7 +67,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
   }
 
   public static RemoteViews createNotifBigView(Context context, String hijriDate,
-      String dayAndMonth, String[] names,
+      String secondaryDate, String[] names,
       String[] times, int activeIndex) {
     RemoteViews bigView = new RemoteViews(context.getPackageName(),
         R.layout.notif_widget_big);
@@ -78,7 +78,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
     }
 
     bigView.setTextViewText(R.id.hijri_date_v, hijriDate);
-    bigView.setTextViewText(R.id.day_v, dayAndMonth);
+    bigView.setTextViewText(R.id.secondary_date_v, secondaryDate);
 
     // resetting color is needed for widget because of partial updates
     @ColorInt int color = ResourcesCompat.getColor(context.getResources(),
@@ -115,11 +115,11 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
     String channelId = args.getString("channelId");
     String notificationId = args.getString("notificationId");
     String hijriDate = args.getString("hijriDate");
-    String dayAndMonth = args.getString("dayAndMonth");
+    String secondaryDate = args.getString("secondaryDate");
 
     ReadableArray prayers = args.getArray("prayers");
 
-    if (channelId == null || notificationId == null || hijriDate == null || dayAndMonth == null
+    if (channelId == null || notificationId == null || hijriDate == null || secondaryDate == null
         || prayers == null) {
       promise.reject("ERROR", "required args were missing.");
       return;
@@ -141,7 +141,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
     RemoteViews notificationLayout = createNotifView(getReactApplicationContext(), names, times,
         activeIndex);
     RemoteViews notificationLayoutExpanded = createNotifBigView(getReactApplicationContext(),
-        hijriDate, dayAndMonth, names,
+        hijriDate, secondaryDate, names,
         times,
         activeIndex);
 

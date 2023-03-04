@@ -32,7 +32,7 @@ if (Platform.OS === 'android') {
 
 export type UpdateWidgetOptions = {
   hijriDate: string;
-  dayAndMonth: string;
+  secondaryDate: string;
   prayers: Array<[prayerName: string, prayerTime: string, isActive: Boolean]>;
 };
 

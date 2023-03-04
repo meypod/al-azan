@@ -8,14 +8,11 @@ import static com.github.meypod.al_azan.utils.Utils.prayersViewTimeId;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.view.View;
 import android.widget.RemoteViews;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
-import androidx.core.content.res.ResourcesCompat;
+
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -59,7 +56,7 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
 
     // set top views text first
     widgetView.setTextViewText(R.id.hijri_date_v, hijriDate);
-    widgetView.setTextViewText(R.id.day_v, secondaryDate);
+    widgetView.setTextViewText(R.id.secondary_date_v, secondaryDate);
 
     // hide all views first
     for (int i = 0; i < prayersViewId.length; i++) {
@@ -103,10 +100,10 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
       return;
     }
     String hijriDate = args.getString("hijriDate");
-    String dayAndMonth = args.getString("dayAndMonth");
+    String secondaryDate = args.getString("secondaryDate");
     ReadableArray prayers = args.getArray("prayers");
 
-    if (prayers == null || hijriDate == null || dayAndMonth == null) {
+    if (prayers == null || hijriDate == null || secondaryDate == null) {
       promise.reject("ERROR", "required args were missing.");
       return;
     }
@@ -118,7 +115,7 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
               PrayerTimesWidget.class);
       int[] classicWidgetIds = appWidgetManager.getAppWidgetIds(screenWidget);
       if (classicWidgetIds.length > 0) {
-        RemoteViews widgetView = getViewUpdate(hijriDate, dayAndMonth, prayers, false);
+        RemoteViews widgetView = getViewUpdate(hijriDate, secondaryDate, prayers, false);
         appWidgetManager.updateAppWidget(classicWidgetIds, widgetView);
       }
     }
@@ -128,7 +125,7 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
               PrayerTimesWidgetAdaptive.class);
       int[] adaptiveWidgetIds = appWidgetManager.getAppWidgetIds(screenWidget);
       if (adaptiveWidgetIds.length > 0) {
-        RemoteViews widgetView = getViewUpdate(hijriDate, dayAndMonth, prayers, true);
+        RemoteViews widgetView = getViewUpdate(hijriDate, secondaryDate, prayers, true);
         appWidgetManager.updateAppWidget(adaptiveWidgetIds, widgetView);
       }
     }

@@ -290,16 +290,16 @@ export function setupNotifeeHandlers() {
 
 export type updateWidgetOptions = Pick<
   UpdateWidgetOptions,
-  'dayAndMonth' | 'hijriDate' | 'prayers'
+  'secondaryDate' | 'hijriDate' | 'prayers'
 >;
 
 export async function updatePermanentNotifWidget({
-  dayAndMonth,
+  secondaryDate,
   hijriDate,
   prayers,
 }: updateWidgetOptions) {
   await updateNotification({
-    dayAndMonth,
+    secondaryDate,
     hijriDate,
     prayers,
     channelId: WIDGET_CHANNEL_ID,

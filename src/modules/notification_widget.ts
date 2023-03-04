@@ -19,7 +19,7 @@ export type UpdateWidgetOptions = {
   channelId: string;
   notificationId: string;
   hijriDate: string;
-  dayAndMonth: string;
+  secondaryDate: string;
   prayers: Array<[prayerName: string, prayerTime: string, isActive: Boolean]>;
 };
 

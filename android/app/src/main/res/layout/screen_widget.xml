@@ -28,7 +28,7 @@
 
 
     <TextView
-      android:id="@+id/day_v"
+      android:id="@+id/secondary_date_v"
       android:textColor="@color/secondary_text_color"
       android:textSize="13sp"
       android:layout_width="0dp"
