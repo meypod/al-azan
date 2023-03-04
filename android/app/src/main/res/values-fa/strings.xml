@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">الأذان</string>
+    <string name="classic_widget_description">تم کلاسیک</string>
+    <string name="adaptive_widget_description">تم تطبیقی</string>
 </resources>

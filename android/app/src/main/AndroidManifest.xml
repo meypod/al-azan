@@ -51,10 +51,23 @@
 
     <receiver
       android:exported="false"
-      android:name=".TimeChangeReceiver">
+      android:name=".PrayerTimesWidgetAdaptive">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+      </intent-filter>
+
+      <meta-data
+        android:name="android.appwidget.provider"
+        android:resource="@xml/prayer_times_widget_info_adaptive" />
+    </receiver>
+
+    <receiver
+      android:exported="false"
+      android:name=".WidgetChangeReceiver">
       <intent-filter>
         <action android:name="android.intent.action.DATE_CHANGED" />
         <action android:name="android.intent.action.TIME_SET" />
+        <action android:name="android.intent.action.LOCALE_CHANGED" />
       </intent-filter>
     </receiver>
 
