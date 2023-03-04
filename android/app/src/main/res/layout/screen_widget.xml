@@ -47,7 +47,6 @@
     android:layout_marginTop="8dp"
     android:baselineAligned="false"
     android:layoutDirection="rtl"
-
     android:orientation="horizontal">
 
     <LinearLayout

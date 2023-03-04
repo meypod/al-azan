@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="horizontal"
@@ -8,109 +9,265 @@
   android:baselineAligned="false">
 
   <LinearLayout
-    android:id="@+id/prayer1"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:orientation="vertical">
+      android:id="@+id/prayer1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical">
 
     <TextView
-      android:id="@+id/prayer1_name"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer1_name"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="Fajr" />
 
     <TextView
-      android:id="@+id/prayer1_time"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer1_time"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="00:00" />
 
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/prayer2"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:layout_marginStart="1dp"
-    android:orientation="vertical">
+      android:id="@+id/prayer1active"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone"
+      android:orientation="vertical">
 
     <TextView
-      android:id="@+id/prayer2_name"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer1active_name"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
     <TextView
-      android:id="@+id/prayer2_time"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer1active_time"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/prayer3"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:layout_marginStart="1dp"
-    android:orientation="vertical">
+      android:id="@+id/prayer2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="1dp"
+      android:orientation="vertical">
 
     <TextView
-      android:id="@+id/prayer3_name"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer2_name"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="Sunrise" />
 
     <TextView
-      android:id="@+id/prayer3_time"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer2_time"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="00:00" />
 
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/prayer4"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:layout_marginStart="1dp"
-    android:orientation="vertical">
+      android:id="@+id/prayer2active"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone"
+      android:orientation="vertical">
 
     <TextView
-      android:id="@+id/prayer4_name"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer2active_name"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
     <TextView
-      android:id="@+id/prayer4_time"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer2active_time"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/prayer5"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:layout_marginStart="1dp"
-    android:orientation="vertical">
+      android:id="@+id/prayer3"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="1dp"
+      android:orientation="vertical">
 
     <TextView
-      android:id="@+id/prayer5_name"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer3_name"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="Dhuhr" />
 
     <TextView
-      android:id="@+id/prayer5_time"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer3_time"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="00:00" />
 
   </LinearLayout>
 
   <LinearLayout
-    android:id="@+id/prayer6"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:layout_marginStart="1dp"
-    android:orientation="vertical">
+      android:id="@+id/prayer3active"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone"
+      android:orientation="vertical">
 
     <TextView
-      android:id="@+id/prayer6_name"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer3active_name"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="-" />
 
     <TextView
-      android:id="@+id/prayer6_time"
-      style="@style/NotifWidgetPrayer" />
+        android:id="@+id/prayer3active_time"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/prayer4"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="1dp"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/prayer4_name"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="Asr" />
+
+    <TextView
+        android:id="@+id/prayer4_time"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="00:00" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/prayer4active"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/prayer4active_name"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/prayer4active_time"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/prayer5"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="1dp"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/prayer5_name"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="Maghrib" />
+
+    <TextView
+        android:id="@+id/prayer5_time"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="00:00" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/prayer5active"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/prayer5active_name"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/prayer5active_time"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/prayer6"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginStart="1dp"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/prayer6_name"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="Isha" />
+
+    <TextView
+        android:id="@+id/prayer6_time"
+        style="@style/NotifWidgetPrayer"
+        tools:ignore="HardcodedText"
+        android:text="00:00" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/prayer6active"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:visibility="gone"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/prayer6active_name"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/prayer6active_time"
+        style="@style/NotifWidgetPrayerActive"
+        tools:ignore="HardcodedText"
+        android:text="--:--" />
 
   </LinearLayout>
 

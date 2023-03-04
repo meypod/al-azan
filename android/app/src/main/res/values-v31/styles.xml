@@ -1,23 +1,5 @@
 <resources>
 
-  <style name="NotifWidgetPrayerAdaptive">
-    <item name="android:textColor">?android:attr/textColorSecondary</item>
-    <item name="android:textSize">12sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
-
-  <style name="NotifWidgetBigPrayerAdaptive">
-    <item name="android:textColor">?android:attr/textColorSecondary</item>
-    <item name="android:textSize">13sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
-
   <style name="ScreenWidgetPrayerAdaptive">
     <item name="android:textColor">?android:attr/textColorHint</item>
     <item name="android:textSize">14sp</item>
@@ -27,12 +9,7 @@
     <item name="android:textAlignment">center</item>
   </style>
 
-  <style name="ScreenWidgetPrayerAdaptiveActive">
+  <style name="ScreenWidgetPrayerAdaptiveActive" parent="ScreenWidgetPrayerAdaptive">
     <item name="android:textColor">?android:attr/colorAccent</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
   </style>
 </resources>
