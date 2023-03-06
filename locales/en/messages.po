@@ -193,7 +193,7 @@ msgstr "Closest City"
 msgid "Closest Date"
 msgstr "Closest Date"
 
-#: src/screens/qibla_finder_map/index.tsx:215
+#: src/screens/qibla_finder_map/index.tsx:219
 msgid "Compass Lock"
 msgstr "Compass Lock"
 
@@ -654,6 +654,10 @@ msgstr "Reminder"
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
+#: src/tasks/update_widgets.ts:20
+msgid "Remaining till"
+msgstr "Remaining till"
+
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
 #: src/tasks/set_reminder.ts:106
@@ -735,11 +739,16 @@ msgstr "Show Adhan Options"
 msgid "Show Today"
 msgstr "Show Today"
 
+#: src/screens/settings_widget/index.tsx:68
+#: src/screens/settings_widget/index.tsx:83
+msgid "Show countdown?"
+msgstr "Show countdown?"
+
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "Show next in notification?"
 
-#: src/screens/settings_widget/index.tsx:30
+#: src/screens/settings_widget/index.tsx:45
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
@@ -919,6 +928,11 @@ msgstr "Use Compass"
 #: src/screens/qibla_finder/index.tsx:113
 msgid "Use Map"
 msgstr "Use Map"
+
+#: src/screens/settings_widget/index.tsx:92
+#: src/screens/settings_widget/index.tsx:107
+msgid "Use adaptive theme?"
+msgstr "Use adaptive theme?"
 
 #: src/screens/settings_location/index.tsx:280
 msgid "Using Coordinates"
@@ -1137,7 +1151,7 @@ msgstr "Reminders"
 msgid "settings"
 msgstr "Settings"
 
-#: src/screens/settings_widget/index.tsx:45
+#: src/screens/settings_widget/index.tsx:60
 msgid "should notification widget be shown?"
 msgstr "should notification widget be shown?"
 

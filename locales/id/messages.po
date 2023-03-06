@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-03 22:44+0330\n"
+"POT-Creation-Date: 2023-03-06 01:27+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,7 +187,7 @@ msgstr "Kota terdekat"
 msgid "Closest Date"
 msgstr "Tanggal terdekat"
 
-#: src/screens/qibla_finder_map/index.tsx:215
+#: src/screens/qibla_finder_map/index.tsx:219
 msgid "Compass Lock"
 msgstr "Kunci Kompas"
 
@@ -648,6 +648,10 @@ msgstr "Pengingat"
 msgid "Referred to as the ISNA method"
 msgstr "Mengacu pada metode ISNA"
 
+#: src/tasks/update_widgets.ts:20
+msgid "Remaining till"
+msgstr "Sisa sampai"
+
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
 #: src/tasks/set_reminder.ts:106
@@ -724,11 +728,16 @@ msgstr "Tampilkan Pilihan Adzan"
 msgid "Show Today"
 msgstr "Hari Ini"
 
+#: src/screens/settings_widget/index.tsx:68
+#: src/screens/settings_widget/index.tsx:83
+msgid "Show countdown?"
+msgstr "Tampilkan hitungan mundur?"
+
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "Tampilkan pemberitahuan berikutnya?"
 
-#: src/screens/settings_widget/index.tsx:30
+#: src/screens/settings_widget/index.tsx:45
 msgid "Show notification widget?"
 msgstr "Tampilkan widget notifikasi?"
 
@@ -903,6 +912,11 @@ msgstr "Gunakan Kompas"
 #: src/screens/qibla_finder/index.tsx:113
 msgid "Use Map"
 msgstr "Gunakan Peta"
+
+#: src/screens/settings_widget/index.tsx:92
+#: src/screens/settings_widget/index.tsx:107
+msgid "Use adaptive theme?"
+msgstr "Gunakan tema adaptif?"
 
 #: src/screens/settings_location/index.tsx:280
 msgid "Using Coordinates"
@@ -1118,7 +1132,7 @@ msgstr "Pengingat"
 msgid "settings"
 msgstr "Pengaturan"
 
-#: src/screens/settings_widget/index.tsx:45
+#: src/screens/settings_widget/index.tsx:60
 msgid "should notification widget be shown?"
 msgstr "Apakah ingin menampilkan widget notifikasi?"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-03 22:44+0330\n"
+"POT-Creation-Date: 2023-03-06 01:27+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,7 +187,7 @@ msgstr "نزدیک ترین شهر"
 msgid "Closest Date"
 msgstr "نزدیک ترین تاریخ"
 
-#: src/screens/qibla_finder_map/index.tsx:215
+#: src/screens/qibla_finder_map/index.tsx:219
 msgid "Compass Lock"
 msgstr "قفل قطب نما"
 
@@ -648,6 +648,10 @@ msgstr "یادآوری"
 msgid "Referred to as the ISNA method"
 msgstr "معروف به روش ایسنا"
 
+#: src/tasks/update_widgets.ts:20
+msgid "Remaining till"
+msgstr "مانده تا"
+
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
 #: src/tasks/set_reminder.ts:106
@@ -722,11 +726,16 @@ msgstr "نمایش گزینه های اذان"
 msgid "Show Today"
 msgstr "نمایش امروز"
 
+#: src/screens/settings_widget/index.tsx:68
+#: src/screens/settings_widget/index.tsx:83
+msgid "Show countdown?"
+msgstr "شمارش معکوس نشان داده شود؟"
+
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "بعدی در اعلان نشان داده شود؟"
 
-#: src/screens/settings_widget/index.tsx:30
+#: src/screens/settings_widget/index.tsx:45
 msgid "Show notification widget?"
 msgstr "ابزارک اعلان نمایش داده شود؟"
 
@@ -901,6 +910,11 @@ msgstr "استفاده از قطب نما"
 #: src/screens/qibla_finder/index.tsx:113
 msgid "Use Map"
 msgstr "استفاده از نقشه"
+
+#: src/screens/settings_widget/index.tsx:92
+#: src/screens/settings_widget/index.tsx:107
+msgid "Use adaptive theme?"
+msgstr "استفاده از تم تطبیقی؟"
 
 #: src/screens/settings_location/index.tsx:280
 msgid "Using Coordinates"
@@ -1119,7 +1133,7 @@ msgstr "یادآوری ها"
 msgid "settings"
 msgstr "تنظیمات"
 
-#: src/screens/settings_widget/index.tsx:45
+#: src/screens/settings_widget/index.tsx:60
 msgid "should notification widget be shown?"
 msgstr "آیا ابزارک اعلان نشان داده شود؟"
 

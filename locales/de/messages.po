@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-03 22:44+0330\n"
+"POT-Creation-Date: 2023-03-06 01:27+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,13 +187,13 @@ msgstr "Nächstgelegene Stadt"
 msgid "Closest Date"
 msgstr "Nächstes Datum"
 
-#: src/screens/qibla_finder_map/index.tsx:215
+#: src/screens/qibla_finder_map/index.tsx:219
 msgid "Compass Lock"
-msgstr "Kompass-Schloss"
+msgstr "Kompass-Sperre"
 
 #: src/screens/qibla_finder/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
-msgstr "Kompasssensor nicht verfügbar"
+msgstr "Kompass-Sensor nicht verfügbar"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
@@ -534,7 +534,7 @@ msgstr "Nicht jetzt"
 
 #: src/screens/qibla_finder/index.tsx:109
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
-msgstr "Beachten Sie, dass aufgrund von Software- und Hardwarefehlern die von dieser App angezeigte Qibla-Richtung, insbesondere im Kompassmodus, falsch sein kann."
+msgstr "Beachten Sie, dass aufgrund von Software- und Hardware-Fehlern die von dieser App angezeigte Qibla-Richtung, insbesondere im Kompassmodus, falsch sein kann."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -638,7 +638,7 @@ msgstr "Der Qibla-Finder benötigt einen Standortdienst. Falls nicht aktiviert, 
 
 #: src/screens/qibla_finder/index.tsx:52
 msgid "Qibla map is only available on Android 6.0 and above"
-msgstr "Die Qibla-Karte ist nur unter Android 6.0 und höher verfügbar"
+msgstr "Die Qibla-Karte ist nur ab Android 6.0 und höher verfügbar"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -648,6 +648,10 @@ msgstr "Erinnerung"
 msgid "Referred to as the ISNA method"
 msgstr "ISNA-Methode"
 
+#: src/tasks/update_widgets.ts:20
+msgid "Remaining till"
+msgstr "Verbleibend bis"
+
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
 #: src/tasks/set_reminder.ts:106
@@ -656,7 +660,7 @@ msgstr "Erinnerung"
 
 #: src/components/audio_picker.tsx:92
 msgid "Repeat"
-msgstr "Wiederholen Sie"
+msgstr "Wiederholen"
 
 #: src/intro/intro.tsx:118
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
@@ -727,11 +731,16 @@ msgstr "Adhan-Optionen anzeigen"
 msgid "Show Today"
 msgstr "Heute anzeigen"
 
+#: src/screens/settings_widget/index.tsx:68
+#: src/screens/settings_widget/index.tsx:83
+msgid "Show countdown?"
+msgstr "Countdown anzeigen?"
+
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "Als nächstes in der Benachrichtigung anzeigen?"
 
-#: src/screens/settings_widget/index.tsx:30
+#: src/screens/settings_widget/index.tsx:45
 msgid "Show notification widget?"
 msgstr "Benachrichtigungs-Widget anzeigen?"
 
@@ -907,6 +916,11 @@ msgstr "Kompass verwenden"
 msgid "Use Map"
 msgstr "Karte verwenden"
 
+#: src/screens/settings_widget/index.tsx:92
+#: src/screens/settings_widget/index.tsx:107
+msgid "Use adaptive theme?"
+msgstr "Adaptives Thema verwenden?"
+
 #: src/screens/settings_location/index.tsx:280
 msgid "Using Coordinates"
 msgstr "Koordinaten verwenden"
@@ -929,7 +943,7 @@ msgstr "Widget"
 
 #: src/constants/notification.ts:32
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
-msgstr "Widget-Update"
+msgstr "Widget-Aktualisierung"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
@@ -945,7 +959,7 @@ msgstr "Willkommen"
 
 #: src/screens/qibla_finder/index.tsx:83
 msgid "Wifi"
-msgstr "Wifi"
+msgstr "Wi-Fi"
 
 #: src/components/audio_picker.tsx:159
 #: src/screens/settings_adhan/adhan_list_item.tsx:110
@@ -985,7 +999,7 @@ msgstr ""
 
 #: src/screens/settings_about/index.tsx:54
 msgid "about.credits.google"
-msgstr "Die meisten der in dieser App verwendeten Icons stammen von Google Material Icons."
+msgstr "Die meisten in der App verwendeten Icons stammen von Google Material Icons."
 
 #. screen title
 #: src/navigation/types.ts:83
@@ -1047,7 +1061,7 @@ msgstr "aus dem Norden"
 
 #: src/screens/qibla_finder_compass/index.tsx:154
 msgid "from settings"
-msgstr "von Einstellungen"
+msgstr "aus den Einstellungen"
 
 #. screen title
 #: src/navigation/types.ts:38
@@ -1124,7 +1138,7 @@ msgstr "Erinnerungen"
 msgid "settings"
 msgstr "Einstellungen"
 
-#: src/screens/settings_widget/index.tsx:45
+#: src/screens/settings_widget/index.tsx:60
 msgid "should notification widget be shown?"
 msgstr "Soll das Benachrichtigungs-Widget angezeigt werden?"
 
