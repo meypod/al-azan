@@ -5,30 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="6dp"
-    android:layoutDirection="ltr"
+    android:gravity="center_horizontal"
     android:orientation="horizontal"
-    android:visibility="visible">
-
+    android:layoutDirection="ltr">
 
     <TextView
         android:id="@+id/countdown_label"
         style="@style/PrayerLabels"
         tools:ignore="HardcodedText"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
         android:text="Prayer: "
-        android:textAlignment="textEnd"
         android:textDirection="ltr" />
 
     <Chronometer
         android:id="@+id/countdown"
         style="@style/PrayerLabels"
         tools:targetApi="24"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
         android:countDown="true"
         android:enabled="false"
-        android:textAlignment="textStart"
-        android:textDirection="ltr" />
+        android:fontFamily="monospace"/>
 
 </LinearLayout>
