@@ -45,8 +45,11 @@ export type SettingsStore = {
   LAST_APP_FOCUS_TIMESTAMP?: number;
   HIDDEN_PRAYERS: Array<Prayer>;
   HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
-  SHOW_WIDGET: boolean;
   ADHAN_VOLUME: number;
+  // widget
+  SHOW_WIDGET: boolean;
+  SHOW_WIDGET_COUNTDOWN: boolean;
+  ADAPTIVE_WIDGETS: boolean;
   // to detect settings change
   CALC_SETTINGS_HASH: string;
   ALARM_SETTINGS_HASH: string;
@@ -106,8 +109,10 @@ export const settings = createStore<SettingsStore>()(
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [Prayer.Tahajjud],
       HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight, Prayer.Tahajjud],
-      SHOW_WIDGET: false,
       ADHAN_VOLUME: 70,
+      SHOW_WIDGET: false,
+      SHOW_WIDGET_COUNTDOWN: false,
+      ADAPTIVE_WIDGETS: false,
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
       CALC_SETTINGS_HASH: '',

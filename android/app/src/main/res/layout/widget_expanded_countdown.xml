@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/countdown_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/countdown_label"
+            style="@style/PrayerLabels"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prayer: "
+            android:textAlignment="textEnd"
+            android:textDirection="ltr"
+            tools:ignore="HardcodedText" />
+
+        <Chronometer
+            android:id="@+id/countdown"
+            style="@style/PrayerLabels"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:countDown="true"
+            android:enabled="false"
+            android:textAlignment="textStart"
+            android:textDirection="ltr"
+            tools:targetApi="24" />
+
+    </LinearLayout>
+
+</merge>

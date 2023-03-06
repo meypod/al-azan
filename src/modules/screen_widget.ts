@@ -34,6 +34,10 @@ export type UpdateWidgetOptions = {
   hijriDate: string;
   secondaryDate: string;
   prayers: Array<[prayerName: string, prayerTime: string, isActive: Boolean]>;
+  adaptiveTheme: boolean;
+  showCountdown: boolean;
+  countdownLabel: string | null;
+  countdownBase: string | null;
 };
 
 interface ScreenWidgetModuleInterface {

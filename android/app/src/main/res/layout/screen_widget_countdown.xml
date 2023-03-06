@@ -8,10 +8,12 @@
     android:orientation="vertical"
     android:paddingTop="2sp"
     android:paddingBottom="2sp"
-    android:theme="@style/WidgetExpandedBaseThemeAdaptive">
+    android:theme="@style/WidgetExpandedBaseTheme">
 
     <include layout="@layout/widget_expanded_header" />
 
     <include layout="@layout/widget_expanded_content" />
+
+    <include layout="@layout/widget_expanded_countdown" />
 
 </LinearLayout>

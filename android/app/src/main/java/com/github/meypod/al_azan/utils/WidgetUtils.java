@@ -3,11 +3,18 @@ package com.github.meypod.al_azan.utils;
 import static com.github.meypod.al_azan.utils.Utils.getLaunchPendingIntent;
 
 import android.content.Context;
+import android.icu.text.DecimalFormat;
+import android.icu.text.DecimalFormatSymbols;
+import android.icu.text.SimpleDateFormat;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.RemoteViews;
 
 import com.facebook.react.bridge.ReadableArray;
 import com.github.meypod.al_azan.R;
+
+import java.util.Date;
+import java.util.Locale;
 
 public class WidgetUtils {
     public static final int[] prayersViewId = {
@@ -56,6 +63,10 @@ public class WidgetUtils {
     };
 
     public static RemoteViews getViewUpdate(Context context, int layoutResourceId,String hijriDate, String secondaryDate, ReadableArray prayers){
+        return getViewUpdate(context, layoutResourceId, hijriDate, secondaryDate, prayers, null, 0);
+    }
+
+    public static RemoteViews getViewUpdate(Context context, int layoutResourceId,String hijriDate, String secondaryDate, ReadableArray prayers,String countdownLabel, long countdownBase){
         RemoteViews widgetView = new RemoteViews(context.getPackageName(), layoutResourceId);
 
         String[] names = new String[prayers.size()];
@@ -105,6 +116,11 @@ public class WidgetUtils {
         }
 
         widgetView.setOnClickPendingIntent(R.id.screen_widget_layout, getLaunchPendingIntent(context));
+
+        if (countdownLabel != null) {
+            widgetView.setTextViewText(R.id.countdown_label, countdownLabel);
+            widgetView.setChronometer(R.id.countdown, SystemClock.elapsedRealtime() + (countdownBase - System.currentTimeMillis()),null, true);
+        }
 
         return widgetView;
     }

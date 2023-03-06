@@ -3,7 +3,7 @@
     android:id="@+id/screen_widget_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_compat"
+    android:background="?android:attr/colorBackground"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingTop="2sp"
@@ -13,5 +13,7 @@
     <include layout="@layout/widget_expanded_header" />
 
     <include layout="@layout/widget_expanded_content" />
+
+    <include layout="@layout/widget_expanded_countdown" />
 
 </LinearLayout>

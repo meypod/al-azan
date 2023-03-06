@@ -1,5 +1,12 @@
+import {t} from '@lingui/macro';
 import difference from 'lodash/difference';
-import {getPrayerTimes, PrayersInOrder, translatePrayer} from '@/adhan';
+import {
+  getNextPrayer,
+  getPrayerTimes,
+  Prayer,
+  PrayersInOrder,
+  translatePrayer,
+} from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
 import {updateScreenWidget} from '@/modules/screen_widget';
 import {
@@ -9,18 +16,46 @@ import {
 import {settings} from '@/store/settings';
 import {getArabicDate, getFormattedDate, getTime} from '@/utils/date';
 
+function getCountdownLabel(prayer: Prayer) {
+  return t`Remaining till` + ' ' + translatePrayer(prayer) + ': ';
+}
+
 export async function updateWidgets() {
   const now = new Date();
 
   const prayerTimes = getPrayerTimes(now);
 
-  const hiddenPrayers = settings.getState().HIDDEN_WIDGET_PRAYERS;
+  const {
+    HIDDEN_WIDGET_PRAYERS: hiddenPrayers,
+    ADAPTIVE_WIDGETS: adaptiveTheme,
+    SHOW_WIDGET_COUNTDOWN: showCountdown,
+  } = settings.getState();
 
   const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers);
 
   const activePrayer = prayerTimes
     ? getActivePrayer(now, visiblePrayerTimes)
     : undefined;
+
+  let countdownLabel: string | null = null;
+  let countdownBase: string | null = null;
+  if (prayerTimes && showCountdown) {
+    if (activePrayer) {
+      countdownLabel = getCountdownLabel(activePrayer);
+      countdownBase = prayerTimes[activePrayer].valueOf().toString();
+    } else {
+      const next = getNextPrayer({
+        checkNextDay: true,
+        date: now,
+        prayers: visiblePrayerTimes,
+        useSettings: false,
+      });
+      if (next) {
+        countdownLabel = getCountdownLabel(next.prayer);
+        countdownBase = next.date.valueOf().toString();
+      }
+    }
+  }
 
   const prayers = visiblePrayerTimes.map(
     p =>
@@ -39,6 +74,10 @@ export async function updateWidgets() {
       secondaryDate,
       hijriDate,
       prayers,
+      adaptiveTheme,
+      showCountdown,
+      countdownLabel,
+      countdownBase,
     }).catch(console.error);
   } else {
     await cancelPermanentNotifWidget();
@@ -48,5 +87,9 @@ export async function updateWidgets() {
     secondaryDate,
     hijriDate,
     prayers,
+    adaptiveTheme,
+    showCountdown,
+    countdownLabel,
+    countdownBase,
   });
 }

@@ -2,7 +2,6 @@ package com.github.meypod.al_azan.modules;
 
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
-import android.content.Context;
 import android.widget.RemoteViews;
 
 import androidx.annotation.NonNull;
@@ -14,7 +13,6 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.github.meypod.al_azan.PrayerTimesWidget;
-import com.github.meypod.al_azan.PrayerTimesWidgetAdaptive;
 import com.github.meypod.al_azan.R;
 import com.github.meypod.al_azan.utils.WidgetUtils;
 
@@ -39,6 +37,17 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
         String hijriDate = args.getString("hijriDate");
         String secondaryDate = args.getString("secondaryDate");
         ReadableArray prayers = args.getArray("prayers");
+        boolean adaptiveTheme = args.getBoolean("adaptiveTheme");
+        boolean showCountdown = args.getBoolean("showCountdown");
+        final String countdownLabel;
+        final long countdownBase;
+        if (!args.isNull("countdownLabel")) {
+            countdownLabel = args.getString("countdownLabel");
+            countdownBase = Long.parseLong(args.getString("countdownBase"));
+        } else {
+            countdownLabel = null;
+            countdownBase = 0;
+        }
 
         if (prayers == null || hijriDate == null || secondaryDate == null) {
             promise.reject("ERROR", "required args were missing.");
@@ -48,24 +57,28 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getReactApplicationContext());
 
         {
+            // normal widget
+            final int layoutId;
+            if (showCountdown) {
+                if (adaptiveTheme) {
+                    layoutId = R.layout.screen_widget_countdown_adaptive;
+                } else {
+                    layoutId = R.layout.screen_widget_countdown;
+                }
+            } else {
+                if (adaptiveTheme) {
+                    layoutId = R.layout.screen_widget_adaptive;
+                } else {
+                    layoutId = R.layout.screen_widget;
+                }
+            }
             ComponentName screenWidget = new ComponentName(getReactApplicationContext(),
                     PrayerTimesWidget.class);
             int[] classicWidgetIds = appWidgetManager.getAppWidgetIds(screenWidget);
             if (classicWidgetIds.length > 0) {
-                RemoteViews widgetView =  WidgetUtils.getViewUpdate(getReactApplicationContext(),
-                        R.layout.screen_widget, hijriDate, secondaryDate, prayers);
-                appWidgetManager.updateAppWidget(classicWidgetIds, widgetView);
-            }
-        }
-
-        {
-            ComponentName screenWidget = new ComponentName(getReactApplicationContext(),
-                    PrayerTimesWidgetAdaptive.class);
-            int[] adaptiveWidgetIds = appWidgetManager.getAppWidgetIds(screenWidget);
-            if (adaptiveWidgetIds.length > 0) {
                 RemoteViews widgetView = WidgetUtils.getViewUpdate(getReactApplicationContext(),
-                        R.layout.screen_widget_adaptive, hijriDate, secondaryDate, prayers);
-                appWidgetManager.updateAppWidget(adaptiveWidgetIds, widgetView);
+                        layoutId, hijriDate, secondaryDate, prayers, countdownLabel, countdownBase);
+                appWidgetManager.updateAppWidget(classicWidgetIds, widgetView);
             }
         }
 

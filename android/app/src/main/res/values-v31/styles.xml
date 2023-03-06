@@ -1,15 +1,13 @@
 <resources>
 
-  <style name="ScreenWidgetPrayerAdaptive">
-    <item name="android:textColor">?android:attr/textColorHint</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
+    <style name="WidgetBaseThemeAdaptive" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="labelColor">?android:attr/textColorHint</item>
+        <item name="labelActiveColor">?android:attr/colorAccent</item>
+        <item name="labelFontSize">12sp</item>
+    </style>
 
-  <style name="ScreenWidgetPrayerAdaptiveActive" parent="ScreenWidgetPrayerAdaptive">
-    <item name="android:textColor">?android:attr/colorAccent</item>
-  </style>
+    <style name="WidgetExpandedBaseThemeAdaptive" parent="WidgetBaseThemeAdaptive">
+        <item name="labelFontSize">14sp</item>
+    </style>
+
 </resources>

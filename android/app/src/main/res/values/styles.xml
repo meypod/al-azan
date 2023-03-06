@@ -6,43 +6,27 @@
     <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
   </style>
 
-  <style name="NotifWidgetPrayer">
-    <item name="android:textColor">@color/secondary_text_color</item>
-    <item name="android:textSize">12sp</item>
+  <style name="WidgetBaseTheme">
+    <item name="labelColor">@color/secondary_text_color</item>
+    <item name="labelActiveColor">@color/active_prayer</item>
+    <item name="labelFontSize">12sp</item>
+  </style>
+
+  <style name="WidgetExpandedBaseTheme" parent="WidgetBaseTheme">
+    <item name="labelFontSize">14sp</item>
+  </style>
+
+  <style name="PrayerLabels">
+    <item name="android:textColor">?attr/labelColor</item>
+    <item name="android:textSize">?attr/labelFontSize</item>
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:maxLines">1</item>
     <item name="android:textAlignment">center</item>
   </style>
 
-  <style name="NotifWidgetPrayerActive" parent="NotifWidgetPrayer">
-    <item name="android:textColor">@color/active_prayer</item>
-  </style>
-
-  <style name="NotifWidgetBigPrayer">
-    <item name="android:textColor">@color/secondary_text_color</item>
-    <item name="android:textSize">13sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
-
-  <style name="NotifWidgetBigPrayerActive" parent="NotifWidgetBigPrayer">
-    <item name="android:textColor">@color/active_prayer</item>
-  </style>
-
-  <style name="ScreenWidgetPrayer">
-    <item name="android:textColor">@color/secondary_text_color</item>
-    <item name="android:textSize">14sp</item>
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:maxLines">1</item>
-    <item name="android:textAlignment">center</item>
-  </style>
-
-  <style name="ScreenWidgetPrayerActive" parent="ScreenWidgetPrayer">
-    <item name="android:textColor">@color/active_prayer</item>
+  <style name="PrayerLabelsActive" parent="PrayerLabels">
+    <item name="android:textColor">?attr/labelActiveColor</item>
   </style>
 
 </resources>

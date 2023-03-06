@@ -20,6 +20,10 @@ export type UpdateWidgetOptions = {
   notificationId: string;
   hijriDate: string;
   secondaryDate: string;
+  adaptiveTheme: boolean;
+  showCountdown: boolean;
+  countdownLabel: string | null;
+  countdownBase: string | null;
   prayers: Array<[prayerName: string, prayerTime: string, isActive: Boolean]>;
 };
 

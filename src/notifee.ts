@@ -288,20 +288,14 @@ export function setupNotifeeHandlers() {
   });
 }
 
-export type updateWidgetOptions = Pick<
+export type updateWidgetOptions = Omit<
   UpdateWidgetOptions,
-  'secondaryDate' | 'hijriDate' | 'prayers'
+  'channelId' | 'notificationId'
 >;
 
-export async function updatePermanentNotifWidget({
-  secondaryDate,
-  hijriDate,
-  prayers,
-}: updateWidgetOptions) {
+export async function updatePermanentNotifWidget(options: updateWidgetOptions) {
   await updateNotification({
-    secondaryDate,
-    hijriDate,
-    prayers,
+    ...options,
     channelId: WIDGET_CHANNEL_ID,
     notificationId: WIDGET_NOTIFICATION_ID,
   });
