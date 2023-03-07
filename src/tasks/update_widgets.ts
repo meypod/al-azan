@@ -33,9 +33,16 @@ export async function updateWidgets() {
 
   const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers);
 
-  const activePrayer = prayerTimes
-    ? getActivePrayer(now, visiblePrayerTimes)
-    : undefined;
+  let activePrayer: Prayer | undefined = undefined;
+
+  if (
+    prayerTimes &&
+    visiblePrayerTimes.length &&
+    now.valueOf() <
+      prayerTimes[visiblePrayerTimes[visiblePrayerTimes.length - 1]].valueOf()
+  ) {
+    activePrayer = getActivePrayer(now, visiblePrayerTimes);
+  }
 
   let countdownLabel: string | null = null;
   let countdownBase: string | null = null;
