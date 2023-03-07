@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-06 01:27+0330\n"
+"POT-Creation-Date: 2023-03-07 06:20+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -242,7 +242,7 @@ msgstr "صداهای دستگاه"
 msgid "Disabled"
 msgstr "غیرفعال"
 
-#: src/screens/qibla_finder/index.tsx:106
+#: src/screens/qibla_finder/index.tsx:93
 msgid "Disclaimer"
 msgstr "سلب مسئولیت"
 
@@ -276,10 +276,6 @@ msgstr "اداره کل بررسی مصر"
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Enabled"
 msgstr "فعال"
-
-#: src/screens/qibla_finder/index.tsx:51
-msgid "Error"
-msgstr "خطا"
 
 #: src/screens/settings_location/index.tsx:140
 msgid "Error getting clipboard data"
@@ -362,7 +358,7 @@ msgstr "عرض جغرافیایی بالا"
 msgid "Home"
 msgstr "خانه"
 
-#: src/screens/qibla_finder/index.tsx:117
+#: src/screens/qibla_finder/index.tsx:104
 msgid "I Understand"
 msgstr "متوجه ام"
 
@@ -378,11 +374,11 @@ msgstr "اگر پس از مدتی همچنان با توقف برنامه مشک
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "اگر می‌خواهید مطمئن شوید که برنامه بتواند قابل اعتماد کار کند، باید بهینه‌سازی نیرو را برای این برنامه غیرفعال کنید. می توانید تنظیمات مربوطه را با استفاده از دکمه زیر باز کنید."
 
-#: src/screens/qibla_finder/index.tsx:67
+#: src/screens/qibla_finder/index.tsx:54
 msgid "Internet connection"
 msgstr "اتصال اینترنت"
 
-#: src/screens/qibla_finder/index.tsx:68
+#: src/screens/qibla_finder/index.tsx:55
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "اتصال به اینترنت برای کارکرد نقشه قبله ضروری است. لطفاً wifi یا اینترنت موبایل خود را فعال کنید و دوباره امتحان کنید."
 
@@ -474,7 +470,7 @@ msgstr "متوسط"
 msgid "Middle of the Night"
 msgstr "نیمه شب شرعی"
 
-#: src/screens/qibla_finder/index.tsx:76
+#: src/screens/qibla_finder/index.tsx:63
 msgid "Mobile Data"
 msgstr "اینترنت موبایل"
 
@@ -532,7 +528,7 @@ msgstr "هیچکدام (اتوماتیک)"
 msgid "Not now"
 msgstr "الان نه"
 
-#: src/screens/qibla_finder/index.tsx:109
+#: src/screens/qibla_finder/index.tsx:96
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "توجه داشته باشید که به دلیل خطاهای نرم افزاری و سخت افزاری، جهت قبله نشان داده شده توسط این برنامه، به خصوص در حالت قطب نما، می تواند اشتباه باشد."
 
@@ -556,8 +552,7 @@ msgid "Numbering system"
 msgstr "سیستم شماره گذاری"
 
 #: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:55
-#: src/screens/qibla_finder/index.tsx:71
+#: src/screens/qibla_finder/index.tsx:58
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -635,10 +630,6 @@ msgstr "قبله"
 #: src/screens/qibla_finder/index.tsx:28
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "قبله یاب به خدمات موقعیت یابی نیاز دارد. اگر فعال نباشد، موقعیت مکانی از تنظیمات برنامه استفاده خواهد شد."
-
-#: src/screens/qibla_finder/index.tsx:52
-msgid "Qibla map is only available on Android 6.0 and above"
-msgstr "نقشه قبله فقط در اندروید 6.0 و بالاتر موجود است"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -726,8 +717,8 @@ msgstr "نمایش گزینه های اذان"
 msgid "Show Today"
 msgstr "نمایش امروز"
 
-#: src/screens/settings_widget/index.tsx:68
-#: src/screens/settings_widget/index.tsx:83
+#: src/screens/settings_widget/index.tsx:62
+#: src/screens/settings_widget/index.tsx:77
 msgid "Show countdown?"
 msgstr "شمارش معکوس نشان داده شود؟"
 
@@ -735,7 +726,7 @@ msgstr "شمارش معکوس نشان داده شود؟"
 msgid "Show next in notification?"
 msgstr "بعدی در اعلان نشان داده شود؟"
 
-#: src/screens/settings_widget/index.tsx:45
+#: src/screens/settings_widget/index.tsx:40
 msgid "Show notification widget?"
 msgstr "ابزارک اعلان نمایش داده شود؟"
 
@@ -903,16 +894,16 @@ msgstr "در حال به روزرسانی ویجت ها"
 msgid "Use 24-Hour format"
 msgstr "استفاده از قالب 24 ساعته"
 
-#: src/screens/qibla_finder/index.tsx:114
+#: src/screens/qibla_finder/index.tsx:101
 msgid "Use Compass"
 msgstr "استفاده از قطب نما"
 
-#: src/screens/qibla_finder/index.tsx:113
+#: src/screens/qibla_finder/index.tsx:100
 msgid "Use Map"
 msgstr "استفاده از نقشه"
 
-#: src/screens/settings_widget/index.tsx:92
-#: src/screens/settings_widget/index.tsx:107
+#: src/screens/settings_widget/index.tsx:85
+#: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
 msgstr "استفاده از تم تطبیقی؟"
 
@@ -952,7 +943,7 @@ msgstr "چهار شنبه"
 msgid "Welcome"
 msgstr "خوش آمدید"
 
-#: src/screens/qibla_finder/index.tsx:83
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Wifi"
 msgstr "Wifi"
 
@@ -1133,7 +1124,7 @@ msgstr "یادآوری ها"
 msgid "settings"
 msgstr "تنظیمات"
 
-#: src/screens/settings_widget/index.tsx:60
+#: src/screens/settings_widget/index.tsx:55
 msgid "should notification widget be shown?"
 msgstr "آیا ابزارک اعلان نشان داده شود؟"
 

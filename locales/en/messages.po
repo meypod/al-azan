@@ -248,7 +248,7 @@ msgstr "Device sounds"
 msgid "Disabled"
 msgstr "Disabled"
 
-#: src/screens/qibla_finder/index.tsx:106
+#: src/screens/qibla_finder/index.tsx:93
 msgid "Disclaimer"
 msgstr "Disclaimer"
 
@@ -282,10 +282,6 @@ msgstr "Egyptian General Survey Authority"
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Enabled"
 msgstr "Enabled"
-
-#: src/screens/qibla_finder/index.tsx:51
-msgid "Error"
-msgstr "Error"
 
 #: src/screens/settings_location/index.tsx:140
 msgid "Error getting clipboard data"
@@ -368,7 +364,7 @@ msgstr "High Latitude"
 msgid "Home"
 msgstr "Home"
 
-#: src/screens/qibla_finder/index.tsx:117
+#: src/screens/qibla_finder/index.tsx:104
 msgid "I Understand"
 msgstr "I Understand"
 
@@ -384,11 +380,11 @@ msgstr "If you still had problem with app stopping after some time, please visit
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 
-#: src/screens/qibla_finder/index.tsx:67
+#: src/screens/qibla_finder/index.tsx:54
 msgid "Internet connection"
 msgstr "Internet connection"
 
-#: src/screens/qibla_finder/index.tsx:68
+#: src/screens/qibla_finder/index.tsx:55
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 
@@ -480,7 +476,7 @@ msgstr "Medium"
 msgid "Middle of the Night"
 msgstr "Middle of the Night"
 
-#: src/screens/qibla_finder/index.tsx:76
+#: src/screens/qibla_finder/index.tsx:63
 msgid "Mobile Data"
 msgstr "Mobile Data"
 
@@ -538,7 +534,7 @@ msgstr "None (Automatic)"
 msgid "Not now"
 msgstr "Not now"
 
-#: src/screens/qibla_finder/index.tsx:109
+#: src/screens/qibla_finder/index.tsx:96
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 
@@ -562,8 +558,7 @@ msgid "Numbering system"
 msgstr "Numbering system"
 
 #: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:55
-#: src/screens/qibla_finder/index.tsx:71
+#: src/screens/qibla_finder/index.tsx:58
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -641,10 +636,6 @@ msgstr "Qibla"
 #: src/screens/qibla_finder/index.tsx:28
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "Qibla finder needs location service. If not enabled, location from app settings will be used."
-
-#: src/screens/qibla_finder/index.tsx:52
-msgid "Qibla map is only available on Android 6.0 and above"
-msgstr "Qibla map is only available on Android 6.0 and above"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -739,8 +730,8 @@ msgstr "Show Adhan Options"
 msgid "Show Today"
 msgstr "Show Today"
 
-#: src/screens/settings_widget/index.tsx:68
-#: src/screens/settings_widget/index.tsx:83
+#: src/screens/settings_widget/index.tsx:62
+#: src/screens/settings_widget/index.tsx:77
 msgid "Show countdown?"
 msgstr "Show countdown?"
 
@@ -748,7 +739,7 @@ msgstr "Show countdown?"
 msgid "Show next in notification?"
 msgstr "Show next in notification?"
 
-#: src/screens/settings_widget/index.tsx:45
+#: src/screens/settings_widget/index.tsx:40
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
@@ -921,16 +912,16 @@ msgstr "Updating widgets"
 msgid "Use 24-Hour format"
 msgstr "Use 24-Hour format"
 
-#: src/screens/qibla_finder/index.tsx:114
+#: src/screens/qibla_finder/index.tsx:101
 msgid "Use Compass"
 msgstr "Use Compass"
 
-#: src/screens/qibla_finder/index.tsx:113
+#: src/screens/qibla_finder/index.tsx:100
 msgid "Use Map"
 msgstr "Use Map"
 
-#: src/screens/settings_widget/index.tsx:92
-#: src/screens/settings_widget/index.tsx:107
+#: src/screens/settings_widget/index.tsx:85
+#: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
 msgstr "Use adaptive theme?"
 
@@ -970,7 +961,7 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/screens/qibla_finder/index.tsx:83
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Wifi"
 msgstr "Wifi"
 
@@ -1151,7 +1142,7 @@ msgstr "Reminders"
 msgid "settings"
 msgstr "Settings"
 
-#: src/screens/settings_widget/index.tsx:60
+#: src/screens/settings_widget/index.tsx:55
 msgid "should notification widget be shown?"
 msgstr "should notification widget be shown?"
 
