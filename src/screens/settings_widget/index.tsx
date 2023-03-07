@@ -25,11 +25,6 @@ export function WidgetSettings(props: IScrollViewProps) {
     updateWidgets();
   }, [showWidget, hiddenPrayers, adaptiveWidget, showWidgetCountdown]);
 
-  const isCountdownSupported = useMemo(
-    () => Platform.OS === 'android' && Platform.Version >= 24,
-    [],
-  );
-
   const isAdaptiveThemeSupported = useMemo(
     () => Platform.OS === 'android' && Platform.Version >= 31,
     [],
@@ -63,29 +58,27 @@ export function WidgetSettings(props: IScrollViewProps) {
         </Stack>
       </HStack>
 
-      {isCountdownSupported && (
-        <HStack justifyContent="space-between" mb="4">
-          <Text flex="1">{t`Show countdown?`}</Text>
+      <HStack justifyContent="space-between" mb="4">
+        <Text flex="1">{t`Show countdown?`}</Text>
 
-          <Stack flexShrink="1" justifyContent="center" alignItems="center">
-            <Checkbox.Group
-              value={showWidgetCountdown ? ['enabled'] : []}
-              onChange={values => {
-                if (values && values.length) {
-                  setShowWidgetCountdown(true);
-                } else {
-                  setShowWidgetCountdown(false);
-                }
-              }}>
-              <Checkbox
-                value="enabled"
-                size="md"
-                accessibilityLabel={t`Show countdown?`}
-              />
-            </Checkbox.Group>
-          </Stack>
-        </HStack>
-      )}
+        <Stack flexShrink="1" justifyContent="center" alignItems="center">
+          <Checkbox.Group
+            value={showWidgetCountdown ? ['enabled'] : []}
+            onChange={values => {
+              if (values && values.length) {
+                setShowWidgetCountdown(true);
+              } else {
+                setShowWidgetCountdown(false);
+              }
+            }}>
+            <Checkbox
+              value="enabled"
+              size="md"
+              accessibilityLabel={t`Show countdown?`}
+            />
+          </Checkbox.Group>
+        </Stack>
+      </HStack>
 
       {isAdaptiveThemeSupported && (
         <HStack justifyContent="space-between" mb="4">

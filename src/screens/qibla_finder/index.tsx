@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {Box, Button, HStack, Text} from 'native-base';
 import {useCallback} from 'react';
-import {Alert, Platform} from 'react-native';
+import {Alert} from 'react-native';
 import {
   isLocationEnabled,
   isNetworkAvailable,
@@ -46,19 +46,6 @@ export function QiblaFinder() {
   }, []);
 
   const navigateToQiblaMap = useCallback(async () => {
-    if (Platform.OS === 'android' && Platform.Version < 23) {
-      Alert.alert(
-        t`Error`,
-        t`Qibla map is only available on Android 6.0 and above`,
-        [
-          {
-            text: t`Okay`,
-            style: 'cancel',
-          },
-        ],
-      );
-      return;
-    }
     const networkAvailable = await isNetworkAvailable();
 
     if (!networkAvailable) {
