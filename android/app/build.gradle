@@ -186,6 +186,12 @@ android {
             enable = false
         }
     }
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
