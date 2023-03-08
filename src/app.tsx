@@ -7,7 +7,7 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, useColorMode} from 'native-base';
 import {useEffect} from 'react';
-import {OrientationLock} from './components/orientation_lock';
+import {OrientationLock} from '@/components/orientation_lock';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
@@ -18,6 +18,7 @@ import {
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
+import {QadaCounter} from '@/screens/qada_counter';
 import {QiblaFinder} from '@/screens/qibla_finder';
 import {QiblaCompass} from '@/screens/qibla_finder_compass';
 import {QiblaMap} from '@/screens/qibla_finder_map';
@@ -101,6 +102,7 @@ export function App(): JSX.Element {
           <Stack.Screen name="Home" component={Home} />
         </Stack.Group>
         <Stack.Group>
+          <Stack.Screen name="QadaCounter" component={QadaCounter} />
           <Stack.Screen name="QiblaFinder" component={QiblaFinder} />
           <Stack.Screen name="QiblaMap" component={QiblaMap} />
           <Stack.Screen name="QiblaCompass" component={QiblaCompass} />

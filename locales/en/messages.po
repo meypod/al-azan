@@ -508,7 +508,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:156
+#: src/screens/home/index.tsx:167
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -621,7 +621,7 @@ msgstr "Polar Resolution"
 msgid "Power Manager"
 msgstr "Power Manager"
 
-#: src/screens/home/index.tsx:127
+#: src/screens/home/index.tsx:138
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -726,7 +726,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:150
+#: src/screens/home/index.tsx:161
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -1006,7 +1006,7 @@ msgid "about.credits.google"
 msgstr "Most of icons used in this app are from google material icons."
 
 #. screen title
-#: src/navigation/types.ts:83
+#: src/navigation/types.ts:84
 msgid "about_settings"
 msgstr "About"
 
@@ -1024,7 +1024,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:68
+#: src/navigation/types.ts:69
 msgid "battery_optimization_settings"
 msgstr "Battery Optimization"
 
@@ -1033,12 +1033,17 @@ msgid "before"
 msgstr "before"
 
 #. screen title
-#: src/navigation/types.ts:63
+#: src/navigation/types.ts:64
 msgid "calculation_settings"
 msgstr "Calculation"
 
+#. in religious context
+#: src/screens/qada_counter/counter_view.tsx:11
+msgid "counter.fast"
+msgstr "Fast"
+
 #. screen title
-#: src/navigation/types.ts:88
+#: src/navigation/types.ts:89
 msgid "dev_settings"
 msgstr "Developer"
 
@@ -1047,7 +1052,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:43
+#: src/navigation/types.ts:44
 msgid "display_settings"
 msgstr "Display"
 
@@ -1068,11 +1073,11 @@ msgid "from settings"
 msgstr "from settings"
 
 #. screen title
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:39
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
-#: src/navigation/types.ts:30
+#: src/navigation/types.ts:31
 msgid "home"
 msgstr "Home"
 
@@ -1090,7 +1095,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:48
+#: src/navigation/types.ts:49
 msgid "location_settings"
 msgstr "Location"
 
@@ -1108,24 +1113,29 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:58
+#: src/navigation/types.ts:59
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:53
+#: src/navigation/types.ts:54
 msgid "notification_settings"
 msgstr "Notification & Sound"
 
-#: src/navigation/types.ts:101
+#. Title of the page where you can count your Qada prayers and fast
+#: src/navigation/types.ts:106
+msgid "qada_counter"
+msgstr "Qada Counter"
+
+#: src/navigation/types.ts:102
 msgid "qibla_compass"
 msgstr "Qibla Compass"
 
-#: src/navigation/types.ts:93
+#: src/navigation/types.ts:94
 msgid "qibla_finder"
 msgstr "Qibla Finder"
 
-#: src/navigation/types.ts:97
+#: src/navigation/types.ts:98
 msgid "qibla_map"
 msgstr "Qibla Map"
 
@@ -1134,11 +1144,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:78
+#: src/navigation/types.ts:79
 msgid "reminders_settings"
 msgstr "Reminders"
 
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:35
 msgid "settings"
 msgstr "Settings"
 
@@ -1168,7 +1178,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:73
+#: src/navigation/types.ts:74
 msgid "widget_settings"
 msgstr "Widget Settings"
 

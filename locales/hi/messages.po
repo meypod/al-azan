@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-07 06:20+0330\n"
+"POT-Creation-Date: 2023-03-08 16:04+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -502,7 +502,7 @@ msgstr "नया अनुस्मारक"
 msgid "Next"
 msgstr "अगला"
 
-#: src/screens/home/index.tsx:156
+#: src/screens/home/index.tsx:167
 msgid "Next Day"
 msgstr "अगले दिन"
 
@@ -615,7 +615,7 @@ msgstr "ध्रुवीय रेज़ोल्यूशन "
 msgid "Power Manager"
 msgstr "पावर मैनेजर"
 
-#: src/screens/home/index.tsx:127
+#: src/screens/home/index.tsx:138
 msgid "Prev Day"
 msgstr "पिछला दिन"
 
@@ -713,7 +713,7 @@ msgstr "शिया, भूभौतिकी संस्थान, तेह�
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
-#: src/screens/home/index.tsx:150
+#: src/screens/home/index.tsx:161
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 
@@ -985,7 +985,7 @@ msgid "about.credits.google"
 msgstr "इस ऐप में इस्तेमाल होने वाले ज्यादातर आइकन गूगल मटेरियल आइकन के हैं।"
 
 #. screen title
-#: src/navigation/types.ts:83
+#: src/navigation/types.ts:84
 msgid "about_settings"
 msgstr "के बारे में"
 
@@ -1003,7 +1003,7 @@ msgid "asr.prayer"
 msgstr "असर "
 
 #. screen title
-#: src/navigation/types.ts:68
+#: src/navigation/types.ts:69
 msgid "battery_optimization_settings"
 msgstr "बैटरी अनुकूलन"
 
@@ -1012,12 +1012,17 @@ msgid "before"
 msgstr "इस से पहले"
 
 #. screen title
-#: src/navigation/types.ts:63
+#: src/navigation/types.ts:64
 msgid "calculation_settings"
 msgstr "गणना"
 
+#. in religious context
+#: src/screens/qada_counter/counter_view.tsx:11
+msgid "counter.fast"
+msgstr "उपवास"
+
 #. screen title
-#: src/navigation/types.ts:88
+#: src/navigation/types.ts:89
 msgid "dev_settings"
 msgstr "डेवलपर"
 
@@ -1026,7 +1031,7 @@ msgid "dhuhr.prayer"
 msgstr "ज़ुहर "
 
 #. screen title
-#: src/navigation/types.ts:43
+#: src/navigation/types.ts:44
 msgid "display_settings"
 msgstr "डिस्प्ले"
 
@@ -1047,11 +1052,11 @@ msgid "from settings"
 msgstr "सेटिंग्स से"
 
 #. screen title
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:39
 msgid "fullscreen_alarm"
 msgstr "अज़ान प्ले हो रही है"
 
-#: src/navigation/types.ts:30
+#: src/navigation/types.ts:31
 msgid "home"
 msgstr "घर"
 
@@ -1069,7 +1074,7 @@ msgid "isha.prayer"
 msgstr "इशां "
 
 #. screen title
-#: src/navigation/types.ts:48
+#: src/navigation/types.ts:49
 msgid "location_settings"
 msgstr "स्थान"
 
@@ -1087,24 +1092,29 @@ msgstr "मोअज़न ज़ादे"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:58
+#: src/navigation/types.ts:59
 msgid "muezzin_settings"
 msgstr "मुअज़्ज़िन"
 
 #. screen title
-#: src/navigation/types.ts:53
+#: src/navigation/types.ts:54
 msgid "notification_settings"
 msgstr "सूचना और ध्वनि"
 
-#: src/navigation/types.ts:101
+#. Title of the page where you can count your Qada prayers and fast
+#: src/navigation/types.ts:106
+msgid "qada_counter"
+msgstr "कड़ा काउंटर"
+
+#: src/navigation/types.ts:102
 msgid "qibla_compass"
 msgstr "किबला कम्पास"
 
-#: src/navigation/types.ts:93
+#: src/navigation/types.ts:94
 msgid "qibla_finder"
 msgstr "किबला खोजक"
 
-#: src/navigation/types.ts:97
+#: src/navigation/types.ts:98
 msgid "qibla_map"
 msgstr "किबला नक्शा"
 
@@ -1113,11 +1123,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "राघेब मुस्तफा गलवाश"
 
 #. screen title
-#: src/navigation/types.ts:78
+#: src/navigation/types.ts:79
 msgid "reminders_settings"
 msgstr "अनुस्मारक"
 
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:35
 msgid "settings"
 msgstr "समायोजन"
 
@@ -1147,7 +1157,7 @@ msgid "sunset"
 msgstr "सूर्यास्त"
 
 #. screen title
-#: src/navigation/types.ts:73
+#: src/navigation/types.ts:74
 msgid "widget_settings"
 msgstr "विजेट सेटिंग्स"
 

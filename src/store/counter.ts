@@ -1,0 +1,77 @@
+import {produce} from 'immer';
+import {createJSONStorage, persist} from 'zustand/middleware';
+import {createStore} from 'zustand/vanilla';
+import {zustandStorage} from './mmkv';
+import {Prayer} from '@/adhan';
+
+const COUNTER_STORAGE_KEY = 'COUNTER_STORAGE';
+
+export type Counter = {
+  id: string;
+  label?: string;
+  count: number;
+};
+
+export type CounterStore = {
+  counters: Array<Counter>;
+
+  updateCounter: (key: string, value: Counter) => void;
+  removeCounter: (key: string) => void;
+};
+
+const invalidKeys = ['updateCounter', 'removeCounter'];
+
+export const counterStore = createStore<CounterStore>()(
+  persist(
+    set => ({
+      counters: [
+        {id: Prayer.Fajr, count: 0},
+        {id: Prayer.Dhuhr, count: 0},
+        {id: Prayer.Asr, count: 0},
+        {id: Prayer.Maghrib, count: 0},
+        {id: Prayer.Isha, count: 0},
+        {id: 'fast', count: 0},
+      ],
+
+      // general
+      updateCounter: (id: string, val: Counter) =>
+        set(
+          produce<CounterStore>(draft => {
+            let fIndex = draft.counters.findIndex(e => e.id === id);
+            if (fIndex !== -1) {
+              draft.counters[fIndex] = val;
+            }
+          }),
+        ),
+      removeCounter: (id: string) =>
+        set(
+          produce<CounterStore>(draft => {
+            let fIndex = draft.counters.findIndex(e => e.id === id);
+            if (fIndex !== -1) {
+              draft.counters.splice(fIndex, 1);
+            }
+          }),
+        ),
+    }),
+    {
+      name: COUNTER_STORAGE_KEY,
+      storage: createJSONStorage(() => zustandStorage),
+      partialize: state =>
+        Object.fromEntries(
+          Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
+        ),
+      version: 0,
+      migrate: (persistedState, version) => {
+        /* eslint-disable no-fallthrough */
+        // fall through cases is exactly the use case for migration.
+        switch (version) {
+          case 0:
+            // this will be run when storage version is changed to 1
+            break;
+        }
+        /* eslint-enable no-fallthrough */
+        return persistedState as CounterStore;
+      },
+    },
+  ),
+);

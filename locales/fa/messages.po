@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-07 06:20+0330\n"
+"POT-Creation-Date: 2023-03-08 16:04+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -502,7 +502,7 @@ msgstr "یادآوری جدید"
 msgid "Next"
 msgstr "بعدی"
 
-#: src/screens/home/index.tsx:156
+#: src/screens/home/index.tsx:167
 msgid "Next Day"
 msgstr "روز بعد"
 
@@ -615,7 +615,7 @@ msgstr "محاسبه مناطق قطبی"
 msgid "Power Manager"
 msgstr "مدیریت انرژی"
 
-#: src/screens/home/index.tsx:127
+#: src/screens/home/index.tsx:138
 msgid "Prev Day"
 msgstr "روز قبل"
 
@@ -713,7 +713,7 @@ msgstr "شیعه، موسسه ژئوفیزیک دانشگاه تهران"
 msgid "Show Adhan Options"
 msgstr "نمایش گزینه های اذان"
 
-#: src/screens/home/index.tsx:150
+#: src/screens/home/index.tsx:161
 msgid "Show Today"
 msgstr "نمایش امروز"
 
@@ -988,7 +988,7 @@ msgid "about.credits.google"
 msgstr "اکثر آیکون های استفاده شده در این برنامه از آیکون های متریال گوگل هستند."
 
 #. screen title
-#: src/navigation/types.ts:83
+#: src/navigation/types.ts:84
 msgid "about_settings"
 msgstr "درباره"
 
@@ -1006,7 +1006,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:68
+#: src/navigation/types.ts:69
 msgid "battery_optimization_settings"
 msgstr "بهینه سازی باتری"
 
@@ -1015,12 +1015,17 @@ msgid "before"
 msgstr "قبل از"
 
 #. screen title
-#: src/navigation/types.ts:63
+#: src/navigation/types.ts:64
 msgid "calculation_settings"
 msgstr "محاسبه"
 
+#. in religious context
+#: src/screens/qada_counter/counter_view.tsx:11
+msgid "counter.fast"
+msgstr "روزه"
+
 #. screen title
-#: src/navigation/types.ts:88
+#: src/navigation/types.ts:89
 msgid "dev_settings"
 msgstr "توسعه دهنده"
 
@@ -1029,7 +1034,7 @@ msgid "dhuhr.prayer"
 msgstr "ظهر"
 
 #. screen title
-#: src/navigation/types.ts:43
+#: src/navigation/types.ts:44
 msgid "display_settings"
 msgstr "نمایش"
 
@@ -1050,11 +1055,11 @@ msgid "from settings"
 msgstr "از تنظیمات"
 
 #. screen title
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:39
 msgid "fullscreen_alarm"
 msgstr "در حال پخش اذان"
 
-#: src/navigation/types.ts:30
+#: src/navigation/types.ts:31
 msgid "home"
 msgstr "خانه"
 
@@ -1072,7 +1077,7 @@ msgid "isha.prayer"
 msgstr "عشاء"
 
 #. screen title
-#: src/navigation/types.ts:48
+#: src/navigation/types.ts:49
 msgid "location_settings"
 msgstr "موقعیت"
 
@@ -1090,24 +1095,29 @@ msgstr "موذن زاده"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:58
+#: src/navigation/types.ts:59
 msgid "muezzin_settings"
 msgstr "مؤذن"
 
 #. screen title
-#: src/navigation/types.ts:53
+#: src/navigation/types.ts:54
 msgid "notification_settings"
 msgstr "اعلان و صدا"
 
-#: src/navigation/types.ts:101
+#. Title of the page where you can count your Qada prayers and fast
+#: src/navigation/types.ts:106
+msgid "qada_counter"
+msgstr "شمارنده قضا"
+
+#: src/navigation/types.ts:102
 msgid "qibla_compass"
 msgstr "قبله نما"
 
-#: src/navigation/types.ts:93
+#: src/navigation/types.ts:94
 msgid "qibla_finder"
 msgstr "قبله یاب"
 
-#: src/navigation/types.ts:97
+#: src/navigation/types.ts:98
 msgid "qibla_map"
 msgstr "نقشه قبله"
 
@@ -1116,11 +1126,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفی غلوش"
 
 #. screen title
-#: src/navigation/types.ts:78
+#: src/navigation/types.ts:79
 msgid "reminders_settings"
 msgstr "یادآوری ها"
 
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:35
 msgid "settings"
 msgstr "تنظیمات"
 
@@ -1150,7 +1160,7 @@ msgid "sunset"
 msgstr "غروب"
 
 #. screen title
-#: src/navigation/types.ts:73
+#: src/navigation/types.ts:74
 msgid "widget_settings"
 msgstr "تنظیمات ابزارک"
 

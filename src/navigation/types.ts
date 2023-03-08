@@ -18,6 +18,7 @@ export type RootStackParamList = {
   QiblaFinder: undefined;
   QiblaMap: undefined;
   QiblaCompass: undefined;
+  QadaCounter: undefined;
 };
 
 declare global {
@@ -101,6 +102,11 @@ const routeTranslations = {
   QiblaCompass: defineMessage({
     id: 'qibla_compass',
     message: 'Qibla Compass',
+  }),
+  QadaCounter: defineMessage({
+    id: 'qada_counter',
+    message: 'Qada Counter',
+    comment: 'Title of the page where you can count your Qada prayers and fast',
   }),
 } as Record<string, MessageDescriptor>;
 

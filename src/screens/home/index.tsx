@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {getPrayerTimes} from '@/adhan';
+import {AddCircleIcon} from '@/assets/icons/material_icons/add_circle';
 import {ExploreIcon} from '@/assets/icons/material_icons/explore';
 import {RestoreIcon} from '@/assets/icons/material_icons/restore';
 import {SettingsSharpIcon} from '@/assets/icons/material_icons/settings_sharp';
@@ -93,7 +94,16 @@ export function Home() {
 
           <HStack alignItems="center">
             <Button
+              p="2"
               marginLeft="3"
+              variant="ghost"
+              onPress={() => {
+                navigate('QadaCounter');
+              }}>
+              <AddCircleIcon size="2xl" />
+            </Button>
+            <Button
+              p="2"
               variant="ghost"
               onPress={() => {
                 navigate('QiblaFinder');
@@ -101,6 +111,7 @@ export function Home() {
               <ExploreIcon size="2xl" />
             </Button>
             <Button
+              p="2"
               marginRight="-3"
               variant="ghost"
               onPress={() => {
