@@ -80,5 +80,5 @@ export function translatePrayer(prayer: Prayer | String) {
   if (lowerCase in prayerTranslations) {
     return i18n._(prayerTranslations[lowerCase]);
   }
-  return undefined;
+  return '';
 }

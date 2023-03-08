@@ -19,7 +19,7 @@ function translateCommonIds(counterId: string) {
   if (counterId in commonIdsTranslation) {
     return i18n._(commonIdsTranslation[counterId]);
   }
-  return undefined;
+  return '';
 }
 
 export function CounterView({
