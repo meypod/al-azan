@@ -37,7 +37,6 @@ export function CounterView({
   drag: () => void;
   dragging: boolean;
 } & Pick<CounterStore, 'increaseCounter' | 'decreaseCounter'>) {
-  // todo: translate default counters
   return (
     <ScaleDecorator activeScale={1.05}>
       <HStack
