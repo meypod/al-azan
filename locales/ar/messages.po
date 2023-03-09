@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-08 16:04+0330\n"
+"POT-Creation-Date: 2023-03-09 12:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "أبيض"
 msgid "Accuracy"
 msgstr "صحة"
 
-#: src/components/audio_picker.tsx:387
+#: src/components/audio_picker.tsx:367
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "إضافة"
@@ -93,10 +93,17 @@ msgstr "عربي"
 msgid "Arabic/Persian"
 msgstr "عربي / فارسي"
 
-#: src/components/audio_picker.tsx:147
 #: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "هل أنت متأكد من أنك تريد حذف \"{0}\"؟"
+
+#: src/utils/dialogs.ts:9
+msgid "Are you sure you want to delete \"{itemName}\" ?"
+msgstr "هل أنت متأكد من أنك تريد حذف \"{itemName}\"؟"
+
+#: src/utils/dialogs.ts:10
+msgid "Are you sure you want to delete this?"
+msgstr "هل أنت متأكد من أنك تريد حذف هذا؟"
 
 #: src/screens/settings_calculation/index.tsx:126
 msgid "Asr Calculation"
@@ -131,6 +138,7 @@ msgstr "طريقة حساب"
 msgid "Calendar"
 msgstr "التقويم"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:159
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,6 +203,7 @@ msgstr "قفل البوصلة"
 msgid "Compass sensor unavailable"
 msgstr "مستشعر البوصلة غير متوفر"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:158
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "أكّد"
@@ -202,6 +211,10 @@ msgstr "أكّد"
 #: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "تم تحديث الإحداثيات"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
+msgid "Count"
+msgstr "عدد"
 
 #: src/screens/settings_location/index.tsx:220
 #: src/screens/settings_location/index.tsx:222
@@ -219,10 +232,10 @@ msgstr "داکن"
 msgid "Default"
 msgstr "افتراضي"
 
-#: src/components/audio_picker.tsx:146
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:100
 #: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "احذف"
 
@@ -264,6 +277,10 @@ msgstr "لا تسأل مرة أخرى"
 #: src/intro/intro.tsx:99
 msgid "Done"
 msgstr "تم"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "Edit Counter"
+msgstr "تحرير العداد"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "Edit Reminder"
@@ -410,6 +427,7 @@ msgstr "وزارة الدين بجمهورية إندونيسيا"
 msgid "Kuwait"
 msgstr "الكويت"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:113
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "مُلصَق"
@@ -491,6 +509,10 @@ msgstr "رابطة العالم الإسلامي"
 msgid "Name"
 msgstr "اسم"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "New Counter"
+msgstr "عداد جديد"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "New Reminder"
 msgstr "تذكير جديد"
@@ -506,8 +528,8 @@ msgstr "التالي"
 msgid "Next Day"
 msgstr "اليوم التالي"
 
-#: src/components/audio_picker.tsx:154
 #: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "لا"
 
@@ -515,7 +537,7 @@ msgstr "لا"
 msgid "No Data"
 msgstr "لايوجد بيانات"
 
-#: src/components/audio_picker.tsx:403
+#: src/components/audio_picker.tsx:383
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "دون نتائج"
@@ -669,7 +691,7 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Saturday"
 msgstr "السبت"
 
-#: src/components/audio_picker.tsx:381
+#: src/components/audio_picker.tsx:361
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "بحث"
@@ -947,8 +969,8 @@ msgstr "مرحبا"
 msgid "Wifi"
 msgstr "wifi"
 
-#: src/components/audio_picker.tsx:159
 #: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "نعم"
 
@@ -1022,7 +1044,7 @@ msgid "calculation_settings"
 msgstr "حساب"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:11
+#: src/screens/qada_counter/counter_view.tsx:12
 msgid "counter.fast"
 msgstr "صيام"
 

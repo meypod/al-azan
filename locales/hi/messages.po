@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-08 16:04+0330\n"
+"POT-Creation-Date: 2023-03-09 12:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "अब्यद"
 msgid "Accuracy"
 msgstr "शुद्धता"
 
-#: src/components/audio_picker.tsx:387
+#: src/components/audio_picker.tsx:367
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "जोड़ें"
@@ -93,10 +93,17 @@ msgstr "अरबी"
 msgid "Arabic/Persian"
 msgstr "अरबी/फारसी"
 
-#: src/components/audio_picker.tsx:147
 #: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "क्या आप वाकई \"{0}\" हटाना चाहते हैं?"
+
+#: src/utils/dialogs.ts:9
+msgid "Are you sure you want to delete \"{itemName}\" ?"
+msgstr "क्या आप वाकई \"{itemName}\" हटाना चाहते हैं?"
+
+#: src/utils/dialogs.ts:10
+msgid "Are you sure you want to delete this?"
+msgstr "क्या आप वाकई इसे हटाना चाहते हैं?"
 
 #: src/screens/settings_calculation/index.tsx:126
 msgid "Asr Calculation"
@@ -131,6 +138,7 @@ msgstr "गणना विधि"
 msgid "Calendar"
 msgstr "पंचांग"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:159
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,6 +203,7 @@ msgstr "कम्पास लॉक"
 msgid "Compass sensor unavailable"
 msgstr "कम्पास सेंसर अनुपलब्ध"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:158
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "पुष्टि करें "
@@ -202,6 +211,10 @@ msgstr "पुष्टि करें "
 #: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "निर्देशांक अपडेट किए गए"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
+msgid "Count"
+msgstr "गिनती करना"
 
 #: src/screens/settings_location/index.tsx:220
 #: src/screens/settings_location/index.tsx:222
@@ -219,10 +232,10 @@ msgstr "अँधेरा"
 msgid "Default"
 msgstr "डिफॉल्ट "
 
-#: src/components/audio_picker.tsx:146
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:100
 #: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "मिटाना"
 
@@ -264,6 +277,10 @@ msgstr "दोबारा मत पूछो"
 #: src/intro/intro.tsx:99
 msgid "Done"
 msgstr "कर दिया"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "Edit Counter"
+msgstr "काउंटर संपादित करें"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "Edit Reminder"
@@ -410,6 +427,7 @@ msgstr "केमेंट्रियन अगामा रिपब्लि�
 msgid "Kuwait"
 msgstr "कुवैट"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:113
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "लेबल"
@@ -491,6 +509,10 @@ msgstr "मुस्लिम वर्ल्ड लीग"
 msgid "Name"
 msgstr "नाम"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "New Counter"
+msgstr "नया काउंटर"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "New Reminder"
 msgstr "नया अनुस्मारक"
@@ -506,8 +528,8 @@ msgstr "अगला"
 msgid "Next Day"
 msgstr "अगले दिन"
 
-#: src/components/audio_picker.tsx:154
 #: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "नहीं"
 
@@ -515,7 +537,7 @@ msgstr "नहीं"
 msgid "No Data"
 msgstr "कोई आकड़ा उपलब्ध नहीं है"
 
-#: src/components/audio_picker.tsx:403
+#: src/components/audio_picker.tsx:383
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "कोई परिणाम नहीं"
@@ -669,7 +691,7 @@ msgstr "सैमसंग उपकरणों का अपना खुद �
 msgid "Saturday"
 msgstr "शनिवार"
 
-#: src/components/audio_picker.tsx:381
+#: src/components/audio_picker.tsx:361
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "खोज"
@@ -947,8 +969,8 @@ msgstr "स्वागत"
 msgid "Wifi"
 msgstr "Wifi"
 
-#: src/components/audio_picker.tsx:159
 #: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "हां"
 
@@ -1017,7 +1039,7 @@ msgid "calculation_settings"
 msgstr "गणना"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:11
+#: src/screens/qada_counter/counter_view.tsx:12
 msgid "counter.fast"
 msgstr "उपवास"
 

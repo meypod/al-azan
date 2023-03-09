@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-08 16:04+0330\n"
+"POT-Creation-Date: 2023-03-09 12:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "ابیاد"
 msgid "Accuracy"
 msgstr "درستگی"
 
-#: src/components/audio_picker.tsx:387
+#: src/components/audio_picker.tsx:367
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "شامل کریں۔"
@@ -93,10 +93,17 @@ msgstr "عربی"
 msgid "Arabic/Persian"
 msgstr "عربی/فارسی"
 
-#: src/components/audio_picker.tsx:147
 #: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "کیا آپ واقعی \"{0}\" کو حذف کرنا چاہتے ہیں؟"
+
+#: src/utils/dialogs.ts:9
+msgid "Are you sure you want to delete \"{itemName}\" ?"
+msgstr "کیا آپ واقعی \"{itemName}\" کو حذف کرنا چاہتے ہیں؟"
+
+#: src/utils/dialogs.ts:10
+msgid "Are you sure you want to delete this?"
+msgstr "کیا آپ واقعی اسے حذف کرنا چاہتے ہیں؟"
 
 #: src/screens/settings_calculation/index.tsx:126
 msgid "Asr Calculation"
@@ -131,6 +138,7 @@ msgstr "حساب کتاب کا طریقہ"
 msgid "Calendar"
 msgstr "کیلنڈر"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:159
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,6 +203,7 @@ msgstr "کمپاس لاک"
 msgid "Compass sensor unavailable"
 msgstr "کمپاس سینسر دستیاب نہیں ہے۔"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:158
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "تصدیق کریں۔"
@@ -202,6 +211,10 @@ msgstr "تصدیق کریں۔"
 #: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "کوآرڈینیٹس اپ ڈیٹ ہو گئے۔"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
+msgid "Count"
+msgstr "شمار"
 
 #: src/screens/settings_location/index.tsx:220
 #: src/screens/settings_location/index.tsx:222
@@ -219,10 +232,10 @@ msgstr "اندھیرا"
 msgid "Default"
 msgstr "طے شدہ"
 
-#: src/components/audio_picker.tsx:146
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:100
 #: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "حذف کریں۔"
 
@@ -264,6 +277,10 @@ msgstr "دوبارہ مت پوچھو"
 #: src/intro/intro.tsx:99
 msgid "Done"
 msgstr "ہو گیا"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "Edit Counter"
+msgstr "کاؤنٹر میں ترمیم کریں۔"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "Edit Reminder"
@@ -410,6 +427,7 @@ msgstr "کیمینٹرین اگاما ریپبلک انڈونیشیا (کیمی�
 msgid "Kuwait"
 msgstr "کویت"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:113
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "لیبل"
@@ -491,6 +509,10 @@ msgstr "مسلم ورلڈ لیگ"
 msgid "Name"
 msgstr "نام"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "New Counter"
+msgstr "نیا کاؤنٹر"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "New Reminder"
 msgstr "نئی یاد دہانی"
@@ -506,8 +528,8 @@ msgstr "اگلے"
 msgid "Next Day"
 msgstr "اگلے دن"
 
-#: src/components/audio_picker.tsx:154
 #: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "نہیں"
 
@@ -515,7 +537,7 @@ msgstr "نہیں"
 msgid "No Data"
 msgstr "کوئی مواد نہیں"
 
-#: src/components/audio_picker.tsx:403
+#: src/components/audio_picker.tsx:383
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "کوئی نتیجہ نہیں"
@@ -669,7 +691,7 @@ msgstr "سام سنگ ڈیوائسز کا اپنا حسب ضرورت پاور م
 msgid "Saturday"
 msgstr "ہفتہ"
 
-#: src/components/audio_picker.tsx:381
+#: src/components/audio_picker.tsx:361
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "تلاش کریں۔"
@@ -947,8 +969,8 @@ msgstr "خوش آمدید"
 msgid "Wifi"
 msgstr "وائی فائی"
 
-#: src/components/audio_picker.tsx:159
 #: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "جی ہاں"
 
@@ -1017,7 +1039,7 @@ msgid "calculation_settings"
 msgstr "حساب کتاب"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:11
+#: src/screens/qada_counter/counter_view.tsx:12
 msgid "counter.fast"
 msgstr "روزہ"
 

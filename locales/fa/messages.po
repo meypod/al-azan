@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-08 16:04+0330\n"
+"POT-Creation-Date: 2023-03-09 12:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "سفید"
 msgid "Accuracy"
 msgstr "دقت"
 
-#: src/components/audio_picker.tsx:387
+#: src/components/audio_picker.tsx:367
 #: src/screens/settings_adhan/index.tsx:186
 msgid "Add"
 msgstr "اضافه کردن"
@@ -93,10 +93,17 @@ msgstr "عربی"
 msgid "Arabic/Persian"
 msgstr "عربی/فارسی"
 
-#: src/components/audio_picker.tsx:147
 #: src/screens/settings_adhan/adhan_list_item.tsx:101
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "آیا مطمئن هستید که می خواهید \"{0}\" را حذف کنید؟"
+
+#: src/utils/dialogs.ts:9
+msgid "Are you sure you want to delete \"{itemName}\" ?"
+msgstr "آیا مطمئن هستید که می خواهید \"{itemName}\" را حذف کنید؟"
+
+#: src/utils/dialogs.ts:10
+msgid "Are you sure you want to delete this?"
+msgstr "آیا مطمئن هستید که می خواهید این را حذف کنید؟"
 
 #: src/screens/settings_calculation/index.tsx:126
 msgid "Asr Calculation"
@@ -131,6 +138,7 @@ msgstr "نحوه محاسبه"
 msgid "Calendar"
 msgstr "تقویم"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:159
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,6 +203,7 @@ msgstr "قفل قطب نما"
 msgid "Compass sensor unavailable"
 msgstr "سنسور قطب نما در دسترس نیست"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:158
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "تایید"
@@ -202,6 +211,10 @@ msgstr "تایید"
 #: src/screens/settings_location/index.tsx:154
 msgid "Coordinates updated"
 msgstr "مختصات به روز شد"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
+msgid "Count"
+msgstr "تعداد"
 
 #: src/screens/settings_location/index.tsx:220
 #: src/screens/settings_location/index.tsx:222
@@ -219,10 +232,10 @@ msgstr "تاریک"
 msgid "Default"
 msgstr "پیش فرض"
 
-#: src/components/audio_picker.tsx:146
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:100
 #: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "حذف"
 
@@ -264,6 +277,10 @@ msgstr "دیگه نپرس"
 #: src/intro/intro.tsx:99
 msgid "Done"
 msgstr "اتمام"
+
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "Edit Counter"
+msgstr "ویرایش شمارنده"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "Edit Reminder"
@@ -410,6 +427,7 @@ msgstr "وزارت دین جمهوری اندونزی (KEMENAG)"
 msgid "Kuwait"
 msgstr "کویت"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:113
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "برچسب"
@@ -491,6 +509,10 @@ msgstr "لیگ جهانی مسلمانان"
 msgid "Name"
 msgstr "نام"
 
+#: src/screens/qada_counter/edit_counter_modal.tsx:97
+msgid "New Counter"
+msgstr "شمارنده جدید"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "New Reminder"
 msgstr "یادآوری جدید"
@@ -506,8 +528,8 @@ msgstr "بعدی"
 msgid "Next Day"
 msgstr "روز بعد"
 
-#: src/components/audio_picker.tsx:154
 #: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "خیر"
 
@@ -515,7 +537,7 @@ msgstr "خیر"
 msgid "No Data"
 msgstr "بدون اطلاعات"
 
-#: src/components/audio_picker.tsx:403
+#: src/components/audio_picker.tsx:383
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "نتیجه ای یافت نشد"
@@ -669,7 +691,7 @@ msgstr "دستگاه های سامسونگ دارای «مدیریت انرژی�
 msgid "Saturday"
 msgstr "شنبه"
 
-#: src/components/audio_picker.tsx:381
+#: src/components/audio_picker.tsx:361
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "جستجو"
@@ -947,8 +969,8 @@ msgstr "خوش آمدید"
 msgid "Wifi"
 msgstr "Wifi"
 
-#: src/components/audio_picker.tsx:159
 #: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "بله"
 
@@ -1020,7 +1042,7 @@ msgid "calculation_settings"
 msgstr "محاسبه"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:11
+#: src/screens/qada_counter/counter_view.tsx:12
 msgid "counter.fast"
 msgstr "روزه"
 
