@@ -43,9 +43,9 @@ export function EditCounterModal({
       const eMode = !!Object.keys(counterState).length;
       setEditMode(eMode);
       setDraftCounterState({
+        count: 0,
         ...counterState,
         id: eMode ? counterState.id : 'counter_' + Date.now().toString(),
-        count: 0,
       });
     } else {
       setDraftCounterState(null);
