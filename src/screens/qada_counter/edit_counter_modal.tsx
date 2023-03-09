@@ -15,6 +15,7 @@ import {translateCommonIds} from './counter_view';
 import {PrayersInOrder, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {DeleteIcon} from '@/assets/icons/material_icons/delete';
+import NumericInput from '@/components/numeric_input';
 import {Counter} from '@/store/counter';
 import {showDeleteDialog} from '@/utils/dialogs';
 
@@ -130,15 +131,14 @@ export function EditCounterModal({
             {editMode && (
               <FormControl>
                 <FormControl.Label>{t`Count`}:</FormControl.Label>
-                <Input
-                  value={draftCounterState?.count?.toString()}
-                  onChangeText={text =>
+                <NumericInput
+                  value={draftCounterState?.count}
+                  onChange={num =>
                     setDraftCounterState({
                       ...draftCounterState,
-                      count: parseInt(text, 10),
+                      count: num,
                     })
                   }
-                  keyboardType="number-pad"
                 />
               </FormControl>
             )}

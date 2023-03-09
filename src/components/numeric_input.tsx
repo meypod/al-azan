@@ -12,8 +12,16 @@ function NumericInput(
     invalidLabel?: string;
   },
 ) {
-  const {value, onChange, invalidLabel, invalidValue, ...otherProps} = props;
-  const [tmpText, setTmpText] = useState<string>((value || '').toString());
+  const {
+    value,
+    onChange,
+    invalidLabel = '0',
+    invalidValue = 0,
+    ...otherProps
+  } = props;
+  const [tmpText, setTmpText] = useState<string>(
+    (value || invalidLabel).toString(),
+  );
 
   const onEndEditing = useCallback(
     (e: NativeSyntheticEvent<TextInputEndEditingEventData>) => {
@@ -22,20 +30,24 @@ function NumericInput(
         setTmpText(parsedValue.toString());
         onChange && onChange(parsedValue);
       } else {
-        setTmpText(invalidLabel || '0');
-        onChange && onChange(invalidValue || 0);
+        setTmpText(invalidLabel);
+        onChange && onChange(invalidValue);
       }
     },
     [invalidLabel, invalidValue, onChange],
   );
 
   useEffect(() => {
-    onEndEditing({
-      nativeEvent: {
-        text: (value || '').toString(),
-      },
-    } as NativeSyntheticEvent<TextInputEndEditingEventData>);
-  }, [onEndEditing, value]);
+    if (typeof value === 'string') {
+      onEndEditing({
+        nativeEvent: {
+          text: value,
+        },
+      } as NativeSyntheticEvent<TextInputEndEditingEventData>);
+    } else {
+      setTmpText((value || invalidLabel).toString());
+    }
+  }, [invalidLabel, onEndEditing, value]);
 
   return (
     <Input
