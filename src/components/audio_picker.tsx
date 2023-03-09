@@ -17,7 +17,6 @@ import {
 } from 'native-base';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {
-  Alert,
   ListRenderItemInfo,
   ToastAndroid,
   FlatList as FlatListType,
@@ -38,6 +37,7 @@ import {
 } from '@/modules/media_player';
 import {play, stop} from '@/services/play_sound';
 import {settings} from '@/store/settings';
+import {showDeleteDialog} from '@/utils/dialogs';
 import useFuse from '@/utils/hooks/use_fuse';
 
 function useData() {
@@ -140,38 +140,6 @@ function useData() {
   return {sections, data};
 }
 
-function showDeleteDialog(item: AudioEntry) {
-  return new Promise(resolve => {
-    Alert.alert(
-      t`Delete`,
-      t`Are you sure you want to delete "${
-        (item as any).internal
-          ? i18n._(adhanEntryTranslations[item.id])
-          : item.label
-      }" ?`,
-      [
-        {
-          text: t`No`,
-          style: 'cancel',
-          onPress: () => resolve(false),
-        },
-        {
-          text: t`Yes`,
-          onPress: () => {
-            if ((item as any).a) {
-              settings.getState().deleteAdhanEntry(item);
-            } else {
-              settings.getState().deleteAudioEntry(item);
-            }
-            resolve(true);
-          },
-          style: 'destructive',
-        },
-      ],
-    );
-  });
-}
-
 export const AudioPicker = (props: AudioPickerProps) => {
   const {
     label,
@@ -249,7 +217,19 @@ export const AudioPicker = (props: AudioPickerProps) => {
 
   const onDeletePress = useCallback(
     async (item: AudioEntry) => {
-      if ((await showDeleteDialog(item)) && item.id === memoSelectedItem?.id) {
+      const agreedToDelete = await showDeleteDialog(
+        (item as any).internal
+          ? i18n._(adhanEntryTranslations[item.id])
+          : item.label,
+      );
+      if (agreedToDelete) {
+        if ((item as any).a) {
+          settings.getState().deleteAdhanEntry(item);
+        } else {
+          settings.getState().deleteAudioEntry(item);
+        }
+      }
+      if (agreedToDelete && item.id === memoSelectedItem?.id) {
         onItemSelected && onItemSelected(data.deviceEntries[0]);
       }
     },
