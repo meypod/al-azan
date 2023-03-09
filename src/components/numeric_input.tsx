@@ -10,6 +10,8 @@ function NumericInput(
     invalidValue?: any;
     /** the value that is shown when entered text is not a number */
     invalidLabel?: string;
+    /** parse as integer? */
+    int?: boolean;
   },
 ) {
   const {
@@ -17,6 +19,7 @@ function NumericInput(
     onChange,
     invalidLabel = '0',
     invalidValue = 0,
+    int = false,
     ...otherProps
   } = props;
   const [tmpText, setTmpText] = useState<string>(
@@ -25,7 +28,9 @@ function NumericInput(
 
   const onEndEditing = useCallback(
     (e: NativeSyntheticEvent<TextInputEndEditingEventData>) => {
-      const parsedValue = parseFloat(e.nativeEvent.text);
+      const parsedValue = int
+        ? parseInt(e.nativeEvent.text, 10)
+        : parseFloat(e.nativeEvent.text);
       if (!isNaN(parsedValue)) {
         setTmpText(parsedValue.toString());
         onChange && onChange(parsedValue);
@@ -34,7 +39,7 @@ function NumericInput(
         onChange && onChange(invalidValue);
       }
     },
-    [invalidLabel, invalidValue, onChange],
+    [int, invalidLabel, invalidValue, onChange],
   );
 
   useEffect(() => {
