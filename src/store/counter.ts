@@ -19,6 +19,7 @@ export type CounterStore = {
   removeCounter: (id: string) => void;
   increaseCounter: (id: string) => void;
   decreaseCounter: (id: string) => void;
+  setCounters: (counters: Array<Counter>) => void;
 };
 
 const invalidKeys = [
@@ -26,6 +27,7 @@ const invalidKeys = [
   'removeCounter',
   'increaseCounter',
   'decreaseCounter',
+  'setCounters',
 ];
 
 export const counterStore = createStore<CounterStore>()(
@@ -77,6 +79,12 @@ export const counterStore = createStore<CounterStore>()(
             if (fIndex !== -1) {
               draft.counters[fIndex].count--;
             }
+          }),
+        ),
+      setCounters: (counters: Array<Counter>) =>
+        set(
+          produce<CounterStore>(draft => {
+            draft.counters = counters;
           }),
         ),
     }),

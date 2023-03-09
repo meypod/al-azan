@@ -1,6 +1,7 @@
-import {Box, Button, FlatList} from 'native-base';
+import {Box, Button} from 'native-base';
 import {useCallback, useState} from 'react';
-import {ListRenderItemInfo} from 'react-native';
+import DraggableFlatList, {RenderItem} from 'react-native-draggable-flatlist';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {CounterView} from './counter_view';
@@ -22,10 +23,17 @@ export function QadaCounter() {
     setCreatingCounter({});
   };
 
-  const {counters, decreaseCounter, increaseCounter, removeCounter} = useStore(
+  const {
+    counters,
+    setCounters,
+    decreaseCounter,
+    increaseCounter,
+    removeCounter,
+  } = useStore(
     counterStore,
     state => ({
       counters: state.counters,
+      setCounters: state.setCounters,
       decreaseCounter: state.decreaseCounter,
       increaseCounter: state.increaseCounter,
       removeCounter: state.removeCounter,
@@ -33,10 +41,12 @@ export function QadaCounter() {
     shallow,
   );
 
-  const renderItem = useCallback(
-    ({item}: ListRenderItemInfo<Counter>) => {
+  const renderItem: RenderItem<Counter> = useCallback(
+    ({item, drag, isActive}) => {
       return (
         <CounterView
+          drag={drag}
+          dragging={isActive}
           onEditPress={setCreatingCounter}
           counter={item}
           key={item.id}
@@ -53,35 +63,45 @@ export function QadaCounter() {
   }, []);
 
   return (
-    <Box safeArea flex={1}>
-      <FlatList data={counters} renderItem={renderItem} p="2" />
-      <Button
-        bgColor="primary.600"
-        _dark={{
-          bgColor: 'coolGray.700',
-        }}
-        _pressed={{
-          bgColor: 'primary.700',
-          _dark: {
-            bgColor: 'coolGray.800',
-          },
-        }}
-        position="absolute"
-        right={2}
-        bottom={2}
-        height={16}
-        width={16}
-        shadow="2"
-        borderRadius={1000}
-        onPress={onAddCounterPressed}>
-        <AddIcon size="2xl" color="gray.100" _dark={{color: 'gray.400'}} />
-      </Button>
-      <EditCounterModal
-        counterState={creatingCounter}
-        onCancel={cancelCounterCreation}
-        onConfirm={onCounterChanged}
-        onDelete={removeCounter}
-      />
-    </Box>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <Box safeArea flex={1}>
+        <DraggableFlatList
+          data={counters}
+          onDragEnd={({data}) => setCounters(data)}
+          renderItem={renderItem as RenderItem<unknown>}
+          keyExtractor={counter => counter.id}
+          style={{
+            padding: 8,
+          }}
+        />
+        <Button
+          bgColor="primary.600"
+          _dark={{
+            bgColor: 'coolGray.700',
+          }}
+          _pressed={{
+            bgColor: 'primary.700',
+            _dark: {
+              bgColor: 'coolGray.800',
+            },
+          }}
+          position="absolute"
+          right={2}
+          bottom={2}
+          height={16}
+          width={16}
+          shadow="2"
+          borderRadius={1000}
+          onPress={onAddCounterPressed}>
+          <AddIcon size="2xl" color="gray.100" _dark={{color: 'gray.400'}} />
+        </Button>
+        <EditCounterModal
+          counterState={creatingCounter}
+          onCancel={cancelCounterCreation}
+          onConfirm={onCounterChanged}
+          onDelete={removeCounter}
+        />
+      </Box>
+    </GestureHandlerRootView>
   );
 }
