@@ -25,7 +25,7 @@ import CompassMod, {
   setUpdateRate,
   useCompassAccuracy,
 } from '@/modules/compass';
-import AccuracyIndicator from '@/screens/qibla_finder/accuracy_indicator';
+import AccuracyIndicator from '@/screens/qibla_finder_compass/accuracy_indicator';
 import {calcSettings} from '@/store/calculation';
 
 export function QiblaCompass() {
