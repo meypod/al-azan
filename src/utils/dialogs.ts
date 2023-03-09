@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {Alert} from 'react-native';
 
-export function showDeleteDialog(itemName: string) {
+export function showDeleteDialog(itemName?: string) {
   return new Promise(resolve => {
     Alert.alert(
       t`Delete`,

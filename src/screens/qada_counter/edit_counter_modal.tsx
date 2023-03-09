@@ -62,7 +62,7 @@ export function EditCounterModal({
   }, [draftCounterState, onConfirm]);
 
   const onDeleteCounter = useCallback(() => {
-    showDeleteDialog(counterState?.label || '').then(agreed => {
+    showDeleteDialog(counterState?.label).then(agreed => {
       if (agreed && counterState?.id) {
         onDelete(counterState.id);
         setDraftCounterState(null);
@@ -116,11 +116,10 @@ export function EditCounterModal({
                 isDisabled={isDefaultCounter}
                 isReadOnly={isDefaultCounter}
                 value={
-                  counterState?.label ||
+                  draftCounterState?.label ||
                   (counterState?.id &&
                     (translatePrayer(counterState.id) ||
-                      translateCommonIds(counterState.id))) ||
-                  '-'
+                      translateCommonIds(counterState.id)))
                 }
                 onChangeText={text =>
                   setDraftCounterState({...draftCounterState, label: text})
