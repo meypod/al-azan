@@ -52,7 +52,7 @@ export function EditCounterModal({
     }
   }, [counterState]);
 
-  const isDefaultCounter = useMemo(() => {
+  const isDefaultCounter: boolean = useMemo(() => {
     return defaultIds.includes(counterState?.id || '');
   }, [counterState]);
 
