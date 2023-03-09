@@ -10,7 +10,7 @@ import {
   Input,
 } from 'native-base';
 import {useCallback, useEffect, useMemo, useState} from 'react';
-import {Modal} from 'react-native';
+import {Modal, Keyboard} from 'react-native';
 import {translateCommonIds} from './counter_view';
 import {PrayersInOrder, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
@@ -155,7 +155,9 @@ export function EditCounterModal({
             }}
             borderTopWidth={1}
             justifyContent="space-between">
-            <Button onPress={onConfirmProxy}>{t`Confirm`}</Button>
+            <Button
+              onPress={onConfirmProxy}
+              onTouchStart={Keyboard.dismiss}>{t`Confirm`}</Button>
             <Button onPress={onCancel}>{t`Cancel`}</Button>
           </HStack>
         </Box>
