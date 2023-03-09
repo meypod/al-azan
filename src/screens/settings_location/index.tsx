@@ -313,7 +313,7 @@ export function LocationSettings(props: IScrollViewProps) {
           </FormControl.ErrorMessage>
         </FormControl>
 
-        {(lat || long) && (
+        {lat || long ? (
           <FormControl flexShrink={1} flexGrow={0} width="10" pl="1">
             <FormControl.Label> </FormControl.Label>
             <Button
@@ -325,7 +325,7 @@ export function LocationSettings(props: IScrollViewProps) {
               <CloseIcon />
             </Button>
           </FormControl>
-        )}
+        ) : undefined}
       </HStack>
       <HStack mt="5">
         <FormControl alignItems="center" justifyContent="center">
