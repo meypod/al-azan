@@ -70,6 +70,9 @@ export function QadaCounter() {
           onDragEnd={({data}) => setCounters(data)}
           renderItem={renderItem as RenderItem<unknown>}
           keyExtractor={counter => counter.id}
+          contentContainerStyle={{
+            paddingBottom: 80,
+          }}
           style={{
             padding: 8,
           }}
