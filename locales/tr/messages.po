@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 12:10+0330\n"
+"POT-Creation-Date: 2023-03-09 14:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -178,12 +178,12 @@ msgstr "Takvim türünü seçin"
 msgid "Choose numbering system"
 msgstr "Numaralandırma sistemini seçin"
 
-#: src/screens/settings_location/index.tsx:243
-#: src/screens/settings_location/index.tsx:245
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:233
 msgid "City/Area"
 msgstr "Şehir/Bölge"
 
-#: src/screens/settings_location/index.tsx:134
+#: src/screens/settings_location/index.tsx:122
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
 
@@ -208,16 +208,16 @@ msgstr "Pusula sensörü kullanılamıyor"
 msgid "Confirm"
 msgstr "Onayla"
 
-#: src/screens/settings_location/index.tsx:154
+#: src/screens/settings_location/index.tsx:142
 msgid "Coordinates updated"
 msgstr "Koordinatlar güncellendi"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:133
 msgid "Count"
 msgstr "Saymak"
 
-#: src/screens/settings_location/index.tsx:220
-#: src/screens/settings_location/index.tsx:222
+#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:210
 msgid "Country"
 msgstr "Ülke"
 
@@ -278,7 +278,7 @@ msgstr "Bir daha sorma"
 msgid "Done"
 msgstr "Tamamlandı"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:97
+#: src/screens/qada_counter/edit_counter_modal.tsx:98
 msgid "Edit Counter"
 msgstr "Sayacı Düzenle"
 
@@ -294,15 +294,15 @@ msgstr "Mısır Genel Araştırma Kurumu"
 msgid "Enabled"
 msgstr "Etkinleştir"
 
-#: src/screens/settings_location/index.tsx:140
+#: src/screens/settings_location/index.tsx:128
 msgid "Error getting clipboard data"
 msgstr "Kopyalanan veriler alınırken hata oluştu"
 
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:221
 msgid "Error in loading countries"
 msgstr "Ülkeler yüklenirken hata oluştu"
 
-#: src/screens/settings_location/index.tsx:259
+#: src/screens/settings_location/index.tsx:247
 msgid "Error in loading search results"
 msgstr "Arama sonuçları yüklenirken hata oluştu"
 
@@ -311,7 +311,7 @@ msgid "Error while downloading audio"
 msgstr "Sesler indirilirken hata"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:158
+#: src/screens/settings_location/index.tsx:146
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
@@ -319,7 +319,7 @@ msgstr "Koordinatlar alınırken hata oluştu"
 msgid "Ethiopic"
 msgstr "Etiyopya"
 
-#: src/screens/settings_location/index.tsx:205
+#: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
 msgstr "Konumumu Bul"
 
@@ -333,7 +333,7 @@ msgstr "Genel (varsayılan)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:209
+#: src/screens/settings_location/index.tsx:197
 msgid "Getting coordinates"
 msgstr "Koordinatları alma"
 
@@ -427,7 +427,7 @@ msgstr "Endonezya Diyanet İşleri Bakanlığı (KEMENAG)"
 msgid "Kuwait"
 msgstr "Kuveyt"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:113
+#: src/screens/qada_counter/edit_counter_modal.tsx:114
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Etiket"
@@ -440,12 +440,12 @@ msgstr "Dil"
 msgid "Latin"
 msgstr "Latin"
 
-#: src/screens/settings_location/index.tsx:284
-#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:277
 msgid "Latitude"
 msgstr "Enlem"
 
-#: src/screens/settings_location/index.tsx:296
+#: src/screens/settings_location/index.tsx:284
 msgid "Latitude is invalid"
 msgstr "Enlem geçersiz"
 
@@ -467,12 +467,12 @@ msgstr "Konum"
 msgid "Location settings"
 msgstr "Konum ayarları"
 
-#: src/screens/settings_location/index.tsx:300
-#: src/screens/settings_location/index.tsx:305
+#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:293
 msgid "Longitude"
 msgstr "Boylam"
 
-#: src/screens/settings_location/index.tsx:312
+#: src/screens/settings_location/index.tsx:300
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
@@ -509,7 +509,7 @@ msgstr "Muslim World League"
 msgid "Name"
 msgstr "Ad"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:97
+#: src/screens/qada_counter/edit_counter_modal.tsx:98
 msgid "New Counter"
 msgstr "Yeni Sayaç"
 
@@ -621,7 +621,7 @@ msgstr "Yaklaşan ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Yaklaşan hatırlatma"
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:328
 msgid "Paste"
 msgstr "Yapıştır"
 
@@ -851,7 +851,7 @@ msgstr "Zaman"
 msgid "Time format"
 msgstr "Zaman formatı"
 
-#: src/screens/settings_location/index.tsx:195
+#: src/screens/settings_location/index.tsx:183
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
@@ -929,15 +929,15 @@ msgstr "Kullanım Haritası"
 msgid "Use adaptive theme?"
 msgstr "Uyarlanabilir tema mı kullanıyorsunuz?"
 
-#: src/screens/settings_location/index.tsx:280
+#: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
 msgstr "Koordinatları Kullan"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:185
 msgid "Using GPS"
 msgstr "GPS kullan"
 
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/index.tsx:204
 msgid "Using Search"
 msgstr "Aramayı Kullan"
 
@@ -978,7 +978,7 @@ msgstr "Evet"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 
-#: src/screens/settings_location/index.tsx:334
+#: src/screens/settings_location/index.tsx:322
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kodları yapıştırabilirsiniz"
 
@@ -1039,7 +1039,7 @@ msgid "calculation_settings"
 msgstr "Hesaplama"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:12
+#: src/screens/qada_counter/counter_view.tsx:13
 msgid "counter.fast"
 msgstr "oruç"
 

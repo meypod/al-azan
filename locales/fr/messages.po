@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 12:10+0330\n"
+"POT-Creation-Date: 2023-03-09 14:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -178,12 +178,12 @@ msgstr "Choisissez le type de calendrier"
 msgid "Choose numbering system"
 msgstr "Choisir le système de numérotation"
 
-#: src/screens/settings_location/index.tsx:243
-#: src/screens/settings_location/index.tsx:245
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:233
 msgid "City/Area"
 msgstr "Ville/Zone"
 
-#: src/screens/settings_location/index.tsx:134
+#: src/screens/settings_location/index.tsx:122
 msgid "Clipboard data does not contain coordinates"
 msgstr "Les données du presse-papiers ne contiennent pas de coordonnées"
 
@@ -208,16 +208,16 @@ msgstr "Boussole non disponible"
 msgid "Confirm"
 msgstr "Confirmer"
 
-#: src/screens/settings_location/index.tsx:154
+#: src/screens/settings_location/index.tsx:142
 msgid "Coordinates updated"
 msgstr "Coordonnées mises à jour"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:133
 msgid "Count"
 msgstr "Comte"
 
-#: src/screens/settings_location/index.tsx:220
-#: src/screens/settings_location/index.tsx:222
+#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:210
 msgid "Country"
 msgstr "Pays"
 
@@ -278,7 +278,7 @@ msgstr "Ne pas demander à nouveau"
 msgid "Done"
 msgstr "Terminé"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:97
+#: src/screens/qada_counter/edit_counter_modal.tsx:98
 msgid "Edit Counter"
 msgstr "Modifier le compteur"
 
@@ -294,15 +294,15 @@ msgstr "Autorité égyptienne d'études générales"
 msgid "Enabled"
 msgstr "Activé"
 
-#: src/screens/settings_location/index.tsx:140
+#: src/screens/settings_location/index.tsx:128
 msgid "Error getting clipboard data"
 msgstr "Erreur dans la récupération des données du presse-papiers"
 
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:221
 msgid "Error in loading countries"
 msgstr "Erreur dans le chargement des pays"
 
-#: src/screens/settings_location/index.tsx:259
+#: src/screens/settings_location/index.tsx:247
 msgid "Error in loading search results"
 msgstr "Erreur dans le chargement des résultats de recherche"
 
@@ -311,7 +311,7 @@ msgid "Error while downloading audio"
 msgstr "Erreur lors du téléchargement d'un fichier audio"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:158
+#: src/screens/settings_location/index.tsx:146
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
 
@@ -319,7 +319,7 @@ msgstr "Erreur lors de l'obtention des coordonnées"
 msgid "Ethiopic"
 msgstr "Éthiopique"
 
-#: src/screens/settings_location/index.tsx:205
+#: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
 msgstr "Trouver ma position"
 
@@ -333,7 +333,7 @@ msgstr "Général (par défaut)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:209
+#: src/screens/settings_location/index.tsx:197
 msgid "Getting coordinates"
 msgstr "Obtenir des coordonnées"
 
@@ -427,7 +427,7 @@ msgstr "Kementrian Agama République d'Indonésie (KEMENAG)"
 msgid "Kuwait"
 msgstr "Koweït"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:113
+#: src/screens/qada_counter/edit_counter_modal.tsx:114
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Intitulé"
@@ -440,12 +440,12 @@ msgstr "Langue"
 msgid "Latin"
 msgstr "Latin"
 
-#: src/screens/settings_location/index.tsx:284
-#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:277
 msgid "Latitude"
 msgstr "Latitude"
 
-#: src/screens/settings_location/index.tsx:296
+#: src/screens/settings_location/index.tsx:284
 msgid "Latitude is invalid"
 msgstr "La latitude n'est pas valide"
 
@@ -467,12 +467,12 @@ msgstr "Localisation"
 msgid "Location settings"
 msgstr "Paramètres de localisation"
 
-#: src/screens/settings_location/index.tsx:300
-#: src/screens/settings_location/index.tsx:305
+#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:293
 msgid "Longitude"
 msgstr "Longitude"
 
-#: src/screens/settings_location/index.tsx:312
+#: src/screens/settings_location/index.tsx:300
 msgid "Longitude is invalid"
 msgstr "La longitude n'est pas valide"
 
@@ -509,7 +509,7 @@ msgstr "Ligue islamique mondiale"
 msgid "Name"
 msgstr "Nom"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:97
+#: src/screens/qada_counter/edit_counter_modal.tsx:98
 msgid "New Counter"
 msgstr "Nouveau compteur"
 
@@ -621,7 +621,7 @@ msgstr "Adhan à venir"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Prochain rappel"
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:328
 msgid "Paste"
 msgstr "Coller"
 
@@ -863,7 +863,7 @@ msgstr "Temps"
 msgid "Time format"
 msgstr "Format de l'heure"
 
-#: src/screens/settings_location/index.tsx:195
+#: src/screens/settings_location/index.tsx:183
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez utiliser le bouton \"Trouver ma position\", ou utiliser la recherche par pays et ville/région, ou encore entrer vos coordonnées manuellement."
 
@@ -941,15 +941,15 @@ msgstr "Utiliser la carte"
 msgid "Use adaptive theme?"
 msgstr "Utiliser un thème adaptatif ?"
 
-#: src/screens/settings_location/index.tsx:280
+#: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
 msgstr "Utilisation des coordonnées"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:185
 msgid "Using GPS"
 msgstr "Utilisation du GPS"
 
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/index.tsx:204
 msgid "Using Search"
 msgstr "Utilisation de la recherche"
 
@@ -990,7 +990,7 @@ msgstr "Oui"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Vous pouvez accéder au gestionnaire d'énergie de votre appareil en utilisant le bouton ci-dessous."
 
-#: src/screens/settings_location/index.tsx:334
+#: src/screens/settings_location/index.tsx:322
 msgid "You can also paste coords from clipboard"
 msgstr "Vous pouvez également coller les coordonnées à partir du presse-papiers"
 
@@ -1054,7 +1054,7 @@ msgid "calculation_settings"
 msgstr "Calcul"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:12
+#: src/screens/qada_counter/counter_view.tsx:13
 msgid "counter.fast"
 msgstr "jeûne"
 

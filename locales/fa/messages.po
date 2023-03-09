@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 12:10+0330\n"
+"POT-Creation-Date: 2023-03-09 14:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -178,12 +178,12 @@ msgstr "نوع تقویم را انتخاب کنید"
 msgid "Choose numbering system"
 msgstr "سیستم شماره گذاری را انتخاب کنید"
 
-#: src/screens/settings_location/index.tsx:243
-#: src/screens/settings_location/index.tsx:245
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:233
 msgid "City/Area"
 msgstr "شهر/ناحیه"
 
-#: src/screens/settings_location/index.tsx:134
+#: src/screens/settings_location/index.tsx:122
 msgid "Clipboard data does not contain coordinates"
 msgstr "داده های کلیپ بورد حاوی مختصات نیستند"
 
@@ -208,16 +208,16 @@ msgstr "سنسور قطب نما در دسترس نیست"
 msgid "Confirm"
 msgstr "تایید"
 
-#: src/screens/settings_location/index.tsx:154
+#: src/screens/settings_location/index.tsx:142
 msgid "Coordinates updated"
 msgstr "مختصات به روز شد"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:133
 msgid "Count"
 msgstr "تعداد"
 
-#: src/screens/settings_location/index.tsx:220
-#: src/screens/settings_location/index.tsx:222
+#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:210
 msgid "Country"
 msgstr "کشور"
 
@@ -278,7 +278,7 @@ msgstr "دیگه نپرس"
 msgid "Done"
 msgstr "اتمام"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:97
+#: src/screens/qada_counter/edit_counter_modal.tsx:98
 msgid "Edit Counter"
 msgstr "ویرایش شمارنده"
 
@@ -294,15 +294,15 @@ msgstr "اداره کل بررسی مصر"
 msgid "Enabled"
 msgstr "فعال"
 
-#: src/screens/settings_location/index.tsx:140
+#: src/screens/settings_location/index.tsx:128
 msgid "Error getting clipboard data"
 msgstr "خطا در دریافت داده های کلیپ بورد"
 
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:221
 msgid "Error in loading countries"
 msgstr "خطا در بارگیری کشورها"
 
-#: src/screens/settings_location/index.tsx:259
+#: src/screens/settings_location/index.tsx:247
 msgid "Error in loading search results"
 msgstr "خطا در بارگیری نتایج جستجو"
 
@@ -311,7 +311,7 @@ msgid "Error while downloading audio"
 msgstr "خطا هنگام دانلود صوت"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:158
+#: src/screens/settings_location/index.tsx:146
 msgid "Error while getting coordinates"
 msgstr "خطا هنگام گرفتن مختصات"
 
@@ -319,7 +319,7 @@ msgstr "خطا هنگام گرفتن مختصات"
 msgid "Ethiopic"
 msgstr "اتیوپیایی"
 
-#: src/screens/settings_location/index.tsx:205
+#: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
 msgstr "پیدا کردن مکان من"
 
@@ -333,7 +333,7 @@ msgstr "عمومی (پیش فرض)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:209
+#: src/screens/settings_location/index.tsx:197
 msgid "Getting coordinates"
 msgstr "درحال گرفتن مختصات"
 
@@ -427,7 +427,7 @@ msgstr "وزارت دین جمهوری اندونزی (KEMENAG)"
 msgid "Kuwait"
 msgstr "کویت"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:113
+#: src/screens/qada_counter/edit_counter_modal.tsx:114
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "برچسب"
@@ -440,12 +440,12 @@ msgstr "زبان"
 msgid "Latin"
 msgstr "لاتین"
 
-#: src/screens/settings_location/index.tsx:284
-#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:277
 msgid "Latitude"
 msgstr "عرض جغرافیایی"
 
-#: src/screens/settings_location/index.tsx:296
+#: src/screens/settings_location/index.tsx:284
 msgid "Latitude is invalid"
 msgstr "عرض جغرافیایی نامعتبر است"
 
@@ -467,12 +467,12 @@ msgstr "موقعیت"
 msgid "Location settings"
 msgstr "تنظیمات مکان"
 
-#: src/screens/settings_location/index.tsx:300
-#: src/screens/settings_location/index.tsx:305
+#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:293
 msgid "Longitude"
 msgstr "طول جغرافیایی"
 
-#: src/screens/settings_location/index.tsx:312
+#: src/screens/settings_location/index.tsx:300
 msgid "Longitude is invalid"
 msgstr "طول جغرافیایی نامعتبر است"
 
@@ -509,7 +509,7 @@ msgstr "لیگ جهانی مسلمانان"
 msgid "Name"
 msgstr "نام"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:97
+#: src/screens/qada_counter/edit_counter_modal.tsx:98
 msgid "New Counter"
 msgstr "شمارنده جدید"
 
@@ -621,7 +621,7 @@ msgstr "هشدار بعدی"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "یادآوری بعدی"
 
-#: src/screens/settings_location/index.tsx:340
+#: src/screens/settings_location/index.tsx:328
 msgid "Paste"
 msgstr "چسباندن"
 
@@ -851,7 +851,7 @@ msgstr "وقت"
 msgid "Time format"
 msgstr "قالب زمان"
 
-#: src/screens/settings_location/index.tsx:195
+#: src/screens/settings_location/index.tsx:183
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "برای محاسبه اذان، به موقعیت مکانی شما نیاز داریم. می‌توانید از دکمه «پیدا کردن مکان من» استفاده کنید یا از جستجوی کشور و شهر/منطقه استفاده کنید یا مختصات خود را به صورت دستی وارد کنید."
 
@@ -929,15 +929,15 @@ msgstr "استفاده از نقشه"
 msgid "Use adaptive theme?"
 msgstr "استفاده از تم تطبیقی؟"
 
-#: src/screens/settings_location/index.tsx:280
+#: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
 msgstr "با استفاده از مختصات"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:185
 msgid "Using GPS"
 msgstr "با استفاده از GPS"
 
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/index.tsx:204
 msgid "Using Search"
 msgstr "با استفاده از جستجو"
 
@@ -978,7 +978,7 @@ msgstr "بله"
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
 
-#: src/screens/settings_location/index.tsx:334
+#: src/screens/settings_location/index.tsx:322
 msgid "You can also paste coords from clipboard"
 msgstr "همچنین می توانید مختصات را از کلیپ بورد بچسبانید"
 
@@ -1042,7 +1042,7 @@ msgid "calculation_settings"
 msgstr "محاسبه"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:12
+#: src/screens/qada_counter/counter_view.tsx:13
 msgid "counter.fast"
 msgstr "روزه"
 
