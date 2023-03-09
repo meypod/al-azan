@@ -15,11 +15,18 @@ export type Counter = {
 export type CounterStore = {
   counters: Array<Counter>;
 
-  updateCounter: (key: string, value: Counter) => void;
-  removeCounter: (key: string) => void;
+  updateCounter: (id: string, value: Counter) => void;
+  removeCounter: (id: string) => void;
+  increaseCounter: (id: string) => void;
+  decreaseCounter: (id: string) => void;
 };
 
-const invalidKeys = ['updateCounter', 'removeCounter'];
+const invalidKeys = [
+  'updateCounter',
+  'removeCounter',
+  'increaseCounter',
+  'decreaseCounter',
+];
 
 export const counterStore = createStore<CounterStore>()(
   persist(
@@ -40,6 +47,8 @@ export const counterStore = createStore<CounterStore>()(
             let fIndex = draft.counters.findIndex(e => e.id === id);
             if (fIndex !== -1) {
               draft.counters[fIndex] = val;
+            } else {
+              draft.counters.push(val);
             }
           }),
         ),
@@ -49,6 +58,24 @@ export const counterStore = createStore<CounterStore>()(
             let fIndex = draft.counters.findIndex(e => e.id === id);
             if (fIndex !== -1) {
               draft.counters.splice(fIndex, 1);
+            }
+          }),
+        ),
+      increaseCounter: (id: string) =>
+        set(
+          produce<CounterStore>(draft => {
+            let fIndex = draft.counters.findIndex(e => e.id === id);
+            if (fIndex !== -1) {
+              draft.counters[fIndex].count++;
+            }
+          }),
+        ),
+      decreaseCounter: (id: string) =>
+        set(
+          produce<CounterStore>(draft => {
+            let fIndex = draft.counters.findIndex(e => e.id === id);
+            if (fIndex !== -1) {
+              draft.counters[fIndex].count--;
             }
           }),
         ),

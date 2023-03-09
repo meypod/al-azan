@@ -1,7 +1,8 @@
 import {i18n, MessageDescriptor} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 import {HStack, Text, VStack, Button} from 'native-base';
-import {memo, useCallback} from 'react';
+import {memo} from 'react';
+import {TouchableNativeFeedback} from 'react-native';
 import {translatePrayer} from '@/adhan';
 import {Add400Icon} from '@/assets/icons/material_icons/add_400';
 import {Minus400Icon} from '@/assets/icons/material_icons/minus_400';
@@ -15,7 +16,7 @@ const commonIdsTranslation = {
   }),
 } as Record<string, MessageDescriptor>;
 
-function translateCommonIds(counterId: string) {
+export function translateCommonIds(counterId: string) {
   if (counterId in commonIdsTranslation) {
     return i18n._(commonIdsTranslation[counterId]);
   }
@@ -24,21 +25,13 @@ function translateCommonIds(counterId: string) {
 
 export function CounterView({
   counter,
-  updateCounter,
-}: {counter: Counter} & Pick<CounterStore, 'updateCounter'>) {
-  const onDecrease = useCallback(() => {
-    updateCounter(counter.id, {
-      ...counter,
-      count: counter.count - 1,
-    });
-  }, [counter, updateCounter]);
-  const onIncrease = useCallback(() => {
-    updateCounter(counter.id, {
-      ...counter,
-      count: counter.count + 1,
-    });
-  }, [counter, updateCounter]);
-
+  increaseCounter,
+  decreaseCounter,
+  onEditPress,
+}: {counter: Counter; onEditPress: (reminderState: Counter) => void} & Pick<
+  CounterStore,
+  'increaseCounter' | 'decreaseCounter'
+>) {
   // todo: translate default counters
   return (
     <HStack
@@ -53,7 +46,7 @@ export function CounterView({
       borderRadius={4}>
       <Button
         height="100%"
-        onPress={onDecrease}
+        onPress={decreaseCounter.bind(null, counter.id)}
         variant="ghost"
         borderRightWidth={3}
         borderColor="gray.100"
@@ -63,20 +56,23 @@ export function CounterView({
         borderRadius={0}>
         <Minus400Icon color="gray.900" _dark={{color: 'gray.400'}} size="2xl" />
       </Button>
-      <VStack>
-        <Text fontSize="lg" textAlign="center">
-          {counter.label ||
-            translatePrayer(counter.id) ||
-            translateCommonIds(counter.id) ||
-            '-'}
-        </Text>
-        <Text fontSize="lg" textAlign="center">
-          {counter.count}
-        </Text>
-      </VStack>
+      <TouchableNativeFeedback onPress={onEditPress.bind(null, counter)}>
+        <VStack flex="1">
+          <Text fontSize="lg" textAlign="center">
+            {counter.label ||
+              translatePrayer(counter.id) ||
+              translateCommonIds(counter.id) ||
+              '-'}
+          </Text>
+          <Text fontSize="lg" textAlign="center">
+            {counter.count}
+          </Text>
+        </VStack>
+      </TouchableNativeFeedback>
+
       <Button
         height="100%"
-        onPress={onIncrease}
+        onPress={increaseCounter.bind(null, counter.id)}
         variant="ghost"
         borderLeftWidth={3}
         borderColor="gray.100"
