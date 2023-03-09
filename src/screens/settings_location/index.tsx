@@ -3,7 +3,6 @@ import Clipboard from '@react-native-clipboard/clipboard';
 import {debounce} from 'lodash';
 import {
   HStack,
-  Input,
   ScrollView,
   IScrollViewProps,
   Spinner,
@@ -14,11 +13,12 @@ import {
   WarningOutlineIcon,
   Spacer,
 } from 'native-base';
-import {useCallback, useLayoutEffect, useState} from 'react';
+import {useCallback, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import LocationProvider from 'react-native-get-location';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import Divider from '@/components/Divider';
+import NumericInput from '@/components/numeric_input';
 import {useCalcSettings} from '@/store/calculation';
 import {useSettings} from '@/store/settings';
 import {getCached} from '@/utils/cached';
@@ -39,16 +39,9 @@ const clipboardCoordsRegex = /\s*([-\d.]+)[\s°NS]*[,| ]{1}\s*([-\d.]+)[\s°EW]*
 export function LocationSettings(props: IScrollViewProps) {
   const [lat, setLat] = useCalcSettings('LOCATION_LAT');
   const [long, setLong] = useCalcSettings('LOCATION_LONG');
-  const [tempLat, setTempLat] = useState<string>('-');
-  const [tempLong, setTempLong] = useState<string>('-');
   const [gettingLocation, setGettingLocation] = useState<boolean>(false);
   const [selectedCountry, setSelectedCountry] = useSettings('LOCATION_COUNTRY');
   const [locale] = useSettings('SELECTED_LOCALE');
-
-  useLayoutEffect(() => {
-    setTempLat(lat?.toString() || '-');
-    setTempLong(long?.toString() || '-');
-  }, [lat, long]);
 
   const [selectedCity, setSelectedCity] = useSettings('LOCATION_CITY');
 
@@ -92,31 +85,17 @@ export function LocationSettings(props: IScrollViewProps) {
     [searchCitiesAction],
   );
 
-  const onLatChangeText = useCallback(
-    (str: string) => {
-      const parsedValue = parseFloat(str);
-      if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
-        setLat(parsedValue);
-        setTempLat(parsedValue.toString());
-      } else {
-        setLat(undefined);
-        setTempLat('-');
-      }
+  const onLatChange = useCallback(
+    (num: number | undefined) => {
+      setLat(num);
       clearCountryAndCity();
     },
     [clearCountryAndCity, setLat],
   );
 
-  const onLongChangeText = useCallback(
-    (str: string) => {
-      let parsedValue = parseFloat(str);
-      if (!isNaN(parsedValue) && isValidCoords(parsedValue)) {
-        setLong(parsedValue);
-        setTempLong(parsedValue.toString());
-      } else {
-        setLong(undefined);
-        setTempLong('-');
-      }
+  const onLongChange = useCallback(
+    (num: number | undefined) => {
+      setLong(num);
       clearCountryAndCity();
     },
     [clearCountryAndCity, setLong],
@@ -127,8 +106,17 @@ export function LocationSettings(props: IScrollViewProps) {
       .then(str => {
         const match = str.match(clipboardCoordsRegex);
         if (match && match.length === 3) {
-          onLatChangeText(match[1]);
-          onLongChangeText(match[2]);
+          const parsedLat = parseFloat(match[1]);
+          const parsedLong = parseFloat(match[2]);
+          if (
+            !isNaN(parsedLat) &&
+            !isNaN(parsedLong) &&
+            isValidCoords(parsedLat) &&
+            isValidCoords(parsedLong)
+          ) {
+            onLatChange(parsedLat);
+            onLongChange(parsedLong);
+          }
         } else {
           ToastAndroid.show(
             t`Clipboard data does not contain coordinates`,
@@ -139,7 +127,7 @@ export function LocationSettings(props: IScrollViewProps) {
       .catch(() => {
         ToastAndroid.show(t`Error getting clipboard data`, ToastAndroid.SHORT);
       });
-  }, [onLatChangeText, onLongChangeText]);
+  }, [onLatChange, onLongChange]);
 
   const getCoordinatesFromLocationProvider = useCallback(() => {
     setGettingLocation(true);
@@ -282,15 +270,15 @@ export function LocationSettings(props: IScrollViewProps) {
       <HStack>
         <FormControl flex={1} flexGrow={1} pr="1" mb="1">
           <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
-          <Input
+          <NumericInput
             py="0"
             fontSize="lg"
             textAlign="center"
             placeholder={t`Latitude`}
-            value={tempLat?.toString()}
-            keyboardType="number-pad"
-            onChangeText={str => setTempLat(str)}
-            onEndEditing={e => onLatChangeText(e.nativeEvent.text)}
+            value={lat}
+            onChange={onLatChange}
+            invalidLabel="-"
+            invalidValue={undefined}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Latitude is invalid`}
@@ -298,15 +286,15 @@ export function LocationSettings(props: IScrollViewProps) {
         </FormControl>
         <FormControl flex={1} flexGrow={1} pl="1">
           <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
-          <Input
+          <NumericInput
             py="0"
             fontSize="lg"
             textAlign="center"
             placeholder={t`Longitude`}
-            value={tempLong?.toString()}
-            onChangeText={str => setTempLong(str)}
-            keyboardType="number-pad"
-            onEndEditing={e => onLongChangeText(e.nativeEvent.text)}
+            value={long}
+            onChange={onLongChange}
+            invalidLabel="-"
+            invalidValue={undefined}
           />
           <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
             {t`Longitude is invalid`}
