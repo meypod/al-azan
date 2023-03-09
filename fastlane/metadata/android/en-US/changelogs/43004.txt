@@ -1,3 +1,4 @@
 - added countdown support to widget
 - added adaptive theme support to widget (Android 12+)
 - added qada counter
+- make widgets a little bit more compact
