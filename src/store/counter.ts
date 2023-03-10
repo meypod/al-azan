@@ -4,7 +4,7 @@ import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 
-const COUNTER_STORAGE_KEY = 'COUNTER_STORAGE';
+export const COUNTER_STORAGE_KEY = 'COUNTER_STORAGE';
 
 export type Counter = {
   id: string;

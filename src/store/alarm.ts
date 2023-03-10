@@ -9,7 +9,7 @@ import {reminderSettings} from './reminder';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {WeekDayIndex} from '@/utils/date';
 
-const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
+export const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
 
 export const ADHAN_NOTIFICATION_SUFFIX = '_NOTIFY';
 export const ADHAN_SOUND_SUFFIX = '_SOUND';

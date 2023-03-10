@@ -20,7 +20,7 @@ import type {AudioEntry} from '@/modules/media_player';
 import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
-const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
+export const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
 
 export type SettingsStore = {
   /** an object that keeps track of dismissed alarms timestamp by their notification id */

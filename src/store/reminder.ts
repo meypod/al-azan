@@ -8,7 +8,7 @@ import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
 import type {AudioEntry} from '@/modules/media_player';
 
-const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
+export const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
 
 export type Reminder = {
   id: string;
