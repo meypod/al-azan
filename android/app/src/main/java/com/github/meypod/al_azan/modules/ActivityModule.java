@@ -10,7 +10,6 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
-import android.net.NetworkRequest;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
@@ -23,6 +22,9 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 public class ActivityModule extends ReactContextBaseJavaModule {
     private static final int REQUEST_ENABLE_LOCATION_SERVICES = 1000;
@@ -170,7 +172,8 @@ public class ActivityModule extends ReactContextBaseJavaModule {
                 }
 
                 @Override
-                public void onNewIntent(Intent intent) { }
+                public void onNewIntent(Intent intent) {
+                }
             });
             activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_LOCATION_SERVICES);
 
@@ -194,7 +197,8 @@ public class ActivityModule extends ReactContextBaseJavaModule {
                 }
 
                 @Override
-                public void onNewIntent(Intent intent) { }
+                public void onNewIntent(Intent intent) {
+                }
             });
             activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_DATA_ROAMING);
         } else {
@@ -217,11 +221,76 @@ public class ActivityModule extends ReactContextBaseJavaModule {
                 }
 
                 @Override
-                public void onNewIntent(Intent intent) { }
+                public void onNewIntent(Intent intent) {
+                }
             });
             activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_WIFI);
         } else {
             promise.resolve(false);
+        }
+    }
+
+    private static int SAVE_REQUEST = 1;
+
+    @ReactMethod
+    public void saveTextDocument(
+            final String data,
+            final String initialName,
+            final Promise promise) {
+        try {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_CREATE_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            if (initialName != null) {
+                intent.putExtra(Intent.EXTRA_TITLE, initialName);
+            }
+            intent.setType("*/*");
+
+            ReactApplicationContext context = getReactApplicationContext();
+            ActivityEventListener activityEventListener =
+                    new ActivityEventListener() {
+                        @Override
+                        public void onActivityResult(
+                                Activity activity, int requestCode, int resultCode, Intent intent) {
+                            if (requestCode == SAVE_REQUEST) {
+                                try {
+                                    if (resultCode == Activity.RESULT_OK) {
+                                        if (intent != null) {
+                                            final Uri uri = intent.getData();
+                                            byte[] bytes = data.getBytes(StandardCharsets.UTF_8);
+                                            try (OutputStream os = context.getContentResolver().openOutputStream(uri)) {
+                                                os.write(bytes);
+                                            }
+                                            promise.resolve(true);
+                                        }
+                                    }
+                                } catch (Exception e) {
+                                    promise.reject(e);
+                                } finally {
+                                    promise.resolve(false);
+                                    context.removeActivityEventListener(this);
+                                }
+                            }
+
+
+                        }
+
+                        @Override
+                        public void onNewIntent(Intent intent) {
+                        }
+                    };
+
+            context.addActivityEventListener(activityEventListener);
+
+            Activity activity = context.getCurrentActivity();
+            if (activity != null) {
+                activity.startActivityForResult(intent, SAVE_REQUEST);
+            } else {
+                context.removeActivityEventListener(activityEventListener);
+                throw new Exception("activity not found");
+            }
+        } catch (Exception e) {
+            promise.reject(e);
         }
     }
 

@@ -30,6 +30,7 @@ interface ActivityModuleInterface {
   openMobileWifiSettings(): Promise<boolean>;
   /** resolve true if internet became available */
   openMobileDataSettings(): Promise<boolean>;
+  saveTextDocument(data: string, initialName: string): Promise<boolean>;
 }
 
 export const restart = ActivityModule.restart;
@@ -43,5 +44,6 @@ export const isLocationEnabled = ActivityModule.isLocationEnabled;
 export const openLocationSettings = ActivityModule.openLocationSettings;
 export const openMobileWifiSettings = ActivityModule.openMobileWifiSettings;
 export const openMobileDataSettings = ActivityModule.openMobileDataSettings;
+export const saveTextDocument = ActivityModule.saveTextDocument;
 
 export default ActivityModule;
