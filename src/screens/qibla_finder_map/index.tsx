@@ -11,9 +11,11 @@ import {ExploreIcon} from '@/assets/icons/material_icons/explore';
 import Compass, {setUpdateRate} from '@/modules/compass';
 import {calcSettings} from '@/store/calculation';
 
-// Will be null for most users (only Mapbox authenticates this way).
-// Required on Android. See Android installation notes.
-MapLibreGL.setAccessToken(null);
+if (MapLibreGL) {
+  // Will be null for most users (only Mapbox authenticates this way).
+  // Required on Android. See Android installation notes.
+  MapLibreGL.setAccessToken(null);
+}
 
 const styles = StyleSheet.create({
   page: {
@@ -189,6 +191,10 @@ export function QiblaMap() {
     }, 150),
     [],
   );
+
+  if (!MapLibreGL) {
+    return <View></View>;
+  }
 
   return (
     <View style={styles.page}>

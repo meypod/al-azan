@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import MapLibreGL from '@maplibre/maplibre-react-native';
 import {Box, Button, HStack, Text} from 'native-base';
 import {useCallback} from 'react';
 import {Alert} from 'react-native';
@@ -46,6 +47,20 @@ export function QiblaFinder() {
   }, []);
 
   const navigateToQiblaMap = useCallback(async () => {
+    if (!MapLibreGL) {
+      Alert.alert(
+        t`Info`,
+        t`Qibla map is currently unavailable in F-Droid builds. It may become available in future updates.`,
+        [
+          {
+            text: t`Okay`,
+            style: 'cancel',
+          },
+        ],
+      );
+      return;
+    }
+
     const networkAvailable = await isNetworkAvailable();
 
     if (!networkAvailable) {
