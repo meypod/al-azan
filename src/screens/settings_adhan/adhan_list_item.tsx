@@ -11,11 +11,8 @@ import {
 } from 'native-base';
 import {useCallback, useState} from 'react';
 import {Alert, ToastAndroid} from 'react-native';
-// eslint-disable-next-line import/no-named-as-default
-import ReactNativeBlobUtil, {
-  FetchBlobResponse,
-  StatefulPromise,
-} from 'react-native-blob-util';
+import {FileSystem, Dirs} from 'react-native-file-access';
+import type {ManagedFetchResult} from 'react-native-file-access/lib/typescript/types';
 import {AdhanEntry, adhanEntryTranslations} from '@/assets/adhan_entries';
 import {CheckIcon} from '@/assets/icons/material_icons/check';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
@@ -48,8 +45,7 @@ export function AdhanListItem({
   onFajrAdhanSelected,
 }: AdhanListItemProps) {
   const [dlProgress, setDlProgress] = useState<number | null>(null);
-  const [dlTask, setDlTask] =
-    useState<StatefulPromise<FetchBlobResponse> | null>(null);
+  const [dlTask, setDlTask] = useState<ManagedFetchResult | null>(null);
 
   const toggleDownload = useCallback(
     (uri: string) => {
@@ -58,29 +54,33 @@ export function AdhanListItem({
         return;
       }
       setDlProgress(0);
-      const task = ReactNativeBlobUtil.config({
-        path: ReactNativeBlobUtil.fs.dirs.DocumentDir + '/' + item.id + '.mp3',
-      }).fetch('GET', uri, {
-        'Content-Type': 'octet-stream',
-      });
+      const savePath = Dirs.DocumentDir + '/' + item.id + '.mp3';
+      const task = FileSystem.fetchManaged(
+        uri,
+        {
+          path: savePath,
+          network: 'any',
+          headers: {
+            'Content-Type': 'octet-stream',
+          },
+        },
+        (bytesRead, contentLength) => {
+          setDlProgress((bytesRead / contentLength) * 100);
+        },
+      );
 
-      setDlTask(task);
-
-      task
-        .progress((received, total) => {
-          setDlProgress((received / total) * 100);
-        })
-        .then(resp => {
-          return settings.getState().saveAdhanEntry({
+      task.result
+        .then(() => {
+          settings.getState().saveAdhanEntry({
             ...item,
             label: '',
             internal: true,
-            filepath: resp.path(),
+            filepath: savePath,
           });
         })
-        .catch((err: Error) => {
+        .catch(err => {
           console.error(err);
-          if (!err?.message.includes('cancel')) {
+          if (!err?.message.toLowerCase().includes('cancel')) {
             ToastAndroid.show(
               t`Error while downloading audio`,
               ToastAndroid.SHORT,
@@ -91,6 +91,8 @@ export function AdhanListItem({
           setDlTask(null);
           setDlProgress(null);
         });
+
+      setDlTask(task);
     },
     [dlTask, item],
   );

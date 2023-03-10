@@ -212,8 +212,6 @@ dependencies {
         implementation jscFlavor
     }
 
-    implementation project(':react-native-blob-util')
-
     // debugImplementation because LeakCanary should only run in debug builds.
     // debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
 }

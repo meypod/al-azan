@@ -1,8 +1,7 @@
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
-// eslint-disable-next-line import/no-named-as-default
-import ReactNativeBlobUtil from 'react-native-blob-util';
+import {FileSystem} from 'react-native-file-access';
 import {useStore} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
@@ -154,7 +153,7 @@ export const settings = createStore<SettingsStore>()(
             if (fIndex !== -1) {
               draft.SAVED_ADHAN_AUDIO_ENTRIES.splice(fIndex, 1);
               if (typeof entry.filepath === 'string') {
-                ReactNativeBlobUtil.fs.unlink(entry.filepath).catch(err => {
+                FileSystem.unlink(entry.filepath).catch(err => {
                   console.error(err);
                 });
               }
@@ -198,7 +197,7 @@ export const settings = createStore<SettingsStore>()(
             if (fIndex !== -1) {
               draft.SAVED_USER_AUDIO_ENTRIES.splice(fIndex, 1);
               if (typeof entry.filepath === 'string') {
-                ReactNativeBlobUtil.fs.unlink(entry.filepath).catch(err => {
+                FileSystem.unlink(entry.filepath).catch(err => {
                   console.error(err);
                 });
               }
