@@ -76,7 +76,12 @@ export function EditCounterModal({
       transparent={true}
       visible={!!draftCounterState}
       onRequestClose={onCancel}>
-      <Box p="2" bg="black:alpha.40" flex={1} justifyContent="center">
+      <Box
+        p="2"
+        bg="black:alpha.40"
+        flex={1}
+        justifyContent="center"
+        onTouchStart={Keyboard.dismiss}>
         <Box
           m="5"
           rounded="lg"
@@ -155,9 +160,7 @@ export function EditCounterModal({
             }}
             borderTopWidth={1}
             justifyContent="space-between">
-            <Button
-              onPress={onConfirmProxy}
-              onTouchStart={Keyboard.dismiss}>{t`Confirm`}</Button>
+            <Button onPress={onConfirmProxy}>{t`Confirm`}</Button>
             <Button onPress={onCancel}>{t`Cancel`}</Button>
           </HStack>
         </Box>
