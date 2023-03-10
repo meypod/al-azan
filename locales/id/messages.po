@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 14:24+0330\n"
+"POT-Creation-Date: 2023-03-10 23:35+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +39,7 @@ msgstr "Adzan"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:37
 msgid "Accuracy"
 msgstr "Akurasi"
 
@@ -138,7 +138,7 @@ msgstr "Metode Perhitungan"
 msgid "Calendar"
 msgstr "Kalender"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:159
+#: src/screens/qada_counter/edit_counter_modal.tsx:161
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -199,11 +199,11 @@ msgstr "Tanggal terdekat"
 msgid "Compass Lock"
 msgstr "Kunci Kompas"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "Sensor kompas tidak tersedia"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:158
+#: src/screens/qada_counter/edit_counter_modal.tsx:160
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Selesai"
@@ -212,7 +212,7 @@ msgstr "Selesai"
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:133
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
 msgid "Count"
 msgstr "Menghitung"
 
@@ -315,9 +315,21 @@ msgstr "Kesalahan saat mengunduh audio"
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
+#: src/screens/general/import_settings.tsx:33
+msgid "Error: failed to open file"
+msgstr "Kesalahan: gagal membuka file"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:32
 msgid "Ethiopic"
 msgstr "Etiopia"
+
+#: src/screens/general/export_settings.tsx:25
+msgid "Export app data"
+msgstr "Mengekspor data aplikasi"
+
+#: src/screens/general/export_settings.tsx:26
+msgid "Export data"
+msgstr "Ekspor data"
 
 #: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
@@ -363,7 +375,7 @@ msgstr "Sembunyikan?"
 msgid "Hide Prayer Times"
 msgstr "Sembunyikan Waktu Sholat"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
 msgstr "Tinggi"
 
@@ -390,6 +402,18 @@ msgstr "Jika Anda masih memiliki masalah dengan aplikasi yang berhenti setelah b
 #: src/screens/settings_battery_optimizations/index.tsx:47
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Untuk memastikan aplikasi berjalan dengan lancar, Anda perlu menonaktifkan pengoptimalan daya untuk aplikasi ini. Buka halaman pengaturan daya dengan tombol berikut."
+
+#: src/screens/general/import_settings.tsx:41
+msgid "Import"
+msgstr "Impor"
+
+#: src/screens/general/import_settings.tsx:40
+msgid "Import app data"
+msgstr "Mengimpor data aplikasi"
+
+#: src/screens/general/import_settings.tsx:29
+msgid "Import successful"
+msgstr "Impor berhasil"
 
 #: src/screens/qibla_finder/index.tsx:54
 msgid "Internet connection"
@@ -476,11 +500,11 @@ msgstr "Longitud"
 msgid "Longitude is invalid"
 msgstr "Longitud tidak valid"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Rendah"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
 msgstr "Sedang"
 
@@ -733,6 +757,10 @@ msgstr ""
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
+#: src/screens/general/volume_button_setting.tsx:30
+msgid "Should app stop playing adhan when the volume button is pressed?"
+msgstr "Haruskah aplikasi berhenti memutar adzan ketika tombol volume ditekan?"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
@@ -893,7 +921,7 @@ msgstr "Universitas Ilmu Islam, Karachi"
 msgid "Unknown Error"
 msgstr "Kesalahan Tidak Dikenal"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:30
 msgid "Unreliable"
 msgstr "Tidak dapat diandalkan"
 
@@ -946,6 +974,10 @@ msgstr "Menggunakan Pencarian"
 #: src/screens/settings_about/index.tsx:29
 msgid "Version"
 msgstr "Versi"
+
+#: src/screens/general/volume_button_setting.tsx:22
+msgid "Volume button stops adhan"
+msgstr "Tombol volume menghentikan adzan"
 
 #: src/constants/notification.ts:28
 msgid "WIDGET_CHANNEL_NAME"
@@ -1009,7 +1041,7 @@ msgid "about.credits.google"
 msgstr "Sebagian besar ikon yang digunakan dalam aplikasi ini berasal dari ikon material Google."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:90
 msgid "about_settings"
 msgstr "Tentang"
 
@@ -1027,7 +1059,7 @@ msgid "asr.prayer"
 msgstr "Ashar"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:75
 msgid "battery_optimization_settings"
 msgstr "Optimasi Baterai"
 
@@ -1036,7 +1068,7 @@ msgid "before"
 msgstr "sebelum"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:70
 msgid "calculation_settings"
 msgstr "Perhitungan"
 
@@ -1046,7 +1078,7 @@ msgid "counter.fast"
 msgstr "puasa"
 
 #. screen title
-#: src/navigation/types.ts:89
+#: src/navigation/types.ts:95
 msgid "dev_settings"
 msgstr "Pengembang"
 
@@ -1055,7 +1087,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhur"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:50
 msgid "display_settings"
 msgstr "Tampilan"
 
@@ -1076,11 +1108,16 @@ msgid "from settings"
 msgstr "dari pengaturan"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "Putar Adzan"
 
-#: src/navigation/types.ts:31
+#. screen title
+#: src/navigation/types.ts:45
+msgid "general_settings"
+msgstr "Umum"
+
+#: src/navigation/types.ts:32
 msgid "home"
 msgstr "Situs"
 
@@ -1098,7 +1135,7 @@ msgid "isha.prayer"
 msgstr "Isya'"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:55
 msgid "location_settings"
 msgstr "Lokasi"
 
@@ -1116,29 +1153,29 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "Muazin"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:60
 msgid "notification_settings"
 msgstr "Notifikasi & Suara"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:106
+#: src/navigation/types.ts:112
 msgid "qada_counter"
 msgstr "Penghitung Qada"
 
-#: src/navigation/types.ts:102
+#: src/navigation/types.ts:108
 msgid "qibla_compass"
 msgstr "Kompas Kiblat"
 
-#: src/navigation/types.ts:94
+#: src/navigation/types.ts:100
 msgid "qibla_finder"
 msgstr "Penunjuk Arah Kiblat"
 
-#: src/navigation/types.ts:98
+#: src/navigation/types.ts:104
 msgid "qibla_map"
 msgstr "Peta Kiblat"
 
@@ -1147,11 +1184,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:85
 msgid "reminders_settings"
 msgstr "Pengingat"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "Pengaturan"
 
@@ -1181,7 +1218,7 @@ msgid "sunset"
 msgstr "Terbenam"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:80
 msgid "widget_settings"
 msgstr "Pengaturan Widget"
 

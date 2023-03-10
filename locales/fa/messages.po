@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 14:24+0330\n"
+"POT-Creation-Date: 2023-03-10 23:35+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +39,7 @@ msgstr "اذان"
 msgid "Abyad"
 msgstr "سفید"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:37
 msgid "Accuracy"
 msgstr "دقت"
 
@@ -138,7 +138,7 @@ msgstr "نحوه محاسبه"
 msgid "Calendar"
 msgstr "تقویم"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:159
+#: src/screens/qada_counter/edit_counter_modal.tsx:161
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -199,11 +199,11 @@ msgstr "نزدیک ترین تاریخ"
 msgid "Compass Lock"
 msgstr "قفل قطب نما"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "سنسور قطب نما در دسترس نیست"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:158
+#: src/screens/qada_counter/edit_counter_modal.tsx:160
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "تایید"
@@ -212,7 +212,7 @@ msgstr "تایید"
 msgid "Coordinates updated"
 msgstr "مختصات به روز شد"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:133
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
 msgid "Count"
 msgstr "تعداد"
 
@@ -315,9 +315,21 @@ msgstr "خطا هنگام دانلود صوت"
 msgid "Error while getting coordinates"
 msgstr "خطا هنگام گرفتن مختصات"
 
+#: src/screens/general/import_settings.tsx:33
+msgid "Error: failed to open file"
+msgstr "خطا: فایل باز نشد"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:32
 msgid "Ethiopic"
 msgstr "اتیوپیایی"
+
+#: src/screens/general/export_settings.tsx:25
+msgid "Export app data"
+msgstr "خروجی داده های برنامه"
+
+#: src/screens/general/export_settings.tsx:26
+msgid "Export data"
+msgstr "خروجی داده ها"
 
 #: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
@@ -363,7 +375,7 @@ msgstr "پنهان؟"
 msgid "Hide Prayer Times"
 msgstr "مخفی کردن اوقات شرعی"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
 msgstr "بالا"
 
@@ -390,6 +402,18 @@ msgstr "اگر پس از مدتی همچنان با توقف برنامه مشک
 #: src/screens/settings_battery_optimizations/index.tsx:47
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "اگر می‌خواهید مطمئن شوید که برنامه بتواند قابل اعتماد کار کند، باید بهینه‌سازی نیرو را برای این برنامه غیرفعال کنید. می توانید تنظیمات مربوطه را با استفاده از دکمه زیر باز کنید."
+
+#: src/screens/general/import_settings.tsx:41
+msgid "Import"
+msgstr "وارد كردن"
+
+#: src/screens/general/import_settings.tsx:40
+msgid "Import app data"
+msgstr "داده های برنامه را وارد کنید"
+
+#: src/screens/general/import_settings.tsx:29
+msgid "Import successful"
+msgstr "وارد کردن با موفقیت انجام شد"
 
 #: src/screens/qibla_finder/index.tsx:54
 msgid "Internet connection"
@@ -476,11 +500,11 @@ msgstr "طول جغرافیایی"
 msgid "Longitude is invalid"
 msgstr "طول جغرافیایی نامعتبر است"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "کم"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
 msgstr "متوسط"
 
@@ -731,6 +755,10 @@ msgstr "شیعه اثنا عشری، مؤسسه لوا، قم"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "شیعه، موسسه ژئوفیزیک دانشگاه تهران"
 
+#: src/screens/general/volume_button_setting.tsx:30
+msgid "Should app stop playing adhan when the volume button is pressed?"
+msgstr "آیا با فشار دادن دکمه صدا، برنامه باید پخش اذان را متوقف کند؟"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "نمایش گزینه های اذان"
@@ -891,7 +919,7 @@ msgstr "دانشگاه علوم اسلامی کراچی"
 msgid "Unknown Error"
 msgstr "خطای نامشخص"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:30
 msgid "Unreliable"
 msgstr "غیر قابل اعتماد"
 
@@ -944,6 +972,10 @@ msgstr "با استفاده از جستجو"
 #: src/screens/settings_about/index.tsx:29
 msgid "Version"
 msgstr "نسخه"
+
+#: src/screens/general/volume_button_setting.tsx:22
+msgid "Volume button stops adhan"
+msgstr "دکمه صدا اذان را متوقف می کند"
 
 #: src/constants/notification.ts:28
 msgid "WIDGET_CHANNEL_NAME"
@@ -1010,7 +1042,7 @@ msgid "about.credits.google"
 msgstr "اکثر آیکون های استفاده شده در این برنامه از آیکون های متریال گوگل هستند."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:90
 msgid "about_settings"
 msgstr "درباره"
 
@@ -1028,7 +1060,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:75
 msgid "battery_optimization_settings"
 msgstr "بهینه سازی باتری"
 
@@ -1037,7 +1069,7 @@ msgid "before"
 msgstr "قبل از"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:70
 msgid "calculation_settings"
 msgstr "محاسبه"
 
@@ -1047,7 +1079,7 @@ msgid "counter.fast"
 msgstr "روزه"
 
 #. screen title
-#: src/navigation/types.ts:89
+#: src/navigation/types.ts:95
 msgid "dev_settings"
 msgstr "توسعه دهنده"
 
@@ -1056,7 +1088,7 @@ msgid "dhuhr.prayer"
 msgstr "ظهر"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:50
 msgid "display_settings"
 msgstr "نمایش"
 
@@ -1077,11 +1109,16 @@ msgid "from settings"
 msgstr "از تنظیمات"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "در حال پخش اذان"
 
-#: src/navigation/types.ts:31
+#. screen title
+#: src/navigation/types.ts:45
+msgid "general_settings"
+msgstr "عمومی"
+
+#: src/navigation/types.ts:32
 msgid "home"
 msgstr "خانه"
 
@@ -1099,7 +1136,7 @@ msgid "isha.prayer"
 msgstr "عشاء"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:55
 msgid "location_settings"
 msgstr "موقعیت"
 
@@ -1117,29 +1154,29 @@ msgstr "موذن زاده"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "مؤذن"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:60
 msgid "notification_settings"
 msgstr "اعلان و صدا"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:106
+#: src/navigation/types.ts:112
 msgid "qada_counter"
 msgstr "شمارنده قضا"
 
-#: src/navigation/types.ts:102
+#: src/navigation/types.ts:108
 msgid "qibla_compass"
 msgstr "قبله نما"
 
-#: src/navigation/types.ts:94
+#: src/navigation/types.ts:100
 msgid "qibla_finder"
 msgstr "قبله یاب"
 
-#: src/navigation/types.ts:98
+#: src/navigation/types.ts:104
 msgid "qibla_map"
 msgstr "نقشه قبله"
 
@@ -1148,11 +1185,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفی غلوش"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:85
 msgid "reminders_settings"
 msgstr "یادآوری ها"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "تنظیمات"
 
@@ -1182,7 +1219,7 @@ msgid "sunset"
 msgstr "غروب"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:80
 msgid "widget_settings"
 msgstr "تنظیمات ابزارک"
 

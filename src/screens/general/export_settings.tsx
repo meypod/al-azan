@@ -22,8 +22,8 @@ export function ExportSettings(props: IFormControlProps) {
 
   return (
     <FormControl fontSize="md" {...props}>
-      <FormControl.Label>{t`Export all data`}</FormControl.Label>
-      <Button onPress={exportSettings}>{t`Export`}</Button>
+      <FormControl.Label>{t`Export app data`}</FormControl.Label>
+      <Button onPress={exportSettings}>{t`Export data`}</Button>
     </FormControl>
   );
 }

@@ -30,14 +30,14 @@ export function ImportSettings(props: IFormControlProps) {
       setTimeout(restart, 200);
     } catch (e: any) {
       if (!e?.message?.includes('canceled')) {
-        ToastAndroid.show(t`Failed to open file`, ToastAndroid.SHORT);
+        ToastAndroid.show(t`Error: failed to open file`, ToastAndroid.SHORT);
       }
     }
   }, []);
 
   return (
     <FormControl fontSize="md" {...props}>
-      <FormControl.Label>{t`Import data`}</FormControl.Label>
+      <FormControl.Label>{t`Import app data`}</FormControl.Label>
       <Button onPress={importSettings}>{t`Import`}</Button>
     </FormControl>
   );

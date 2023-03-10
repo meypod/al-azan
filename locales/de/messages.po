@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 14:24+0330\n"
+"POT-Creation-Date: 2023-03-10 23:35+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +39,7 @@ msgstr "Adhan"
 msgid "Abyad"
 msgstr "Abyad"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:37
 msgid "Accuracy"
 msgstr "Genauigkeit"
 
@@ -138,7 +138,7 @@ msgstr "Berechnungsmethode"
 msgid "Calendar"
 msgstr "Kalender"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:159
+#: src/screens/qada_counter/edit_counter_modal.tsx:161
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -199,11 +199,11 @@ msgstr "Nächstes Datum"
 msgid "Compass Lock"
 msgstr "Kompass-Sperre"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "Kompass-Sensor nicht verfügbar"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:158
+#: src/screens/qada_counter/edit_counter_modal.tsx:160
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Bestätigen"
@@ -212,7 +212,7 @@ msgstr "Bestätigen"
 msgid "Coordinates updated"
 msgstr "Die Koordinaten wurden aktualisiert"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:133
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
 msgid "Count"
 msgstr "Zählen Sie"
 
@@ -315,9 +315,21 @@ msgstr "Fehler beim Herunterladen der Audio-Dateien"
 msgid "Error while getting coordinates"
 msgstr "Fehler beim Abrufen der Koordinaten"
 
+#: src/screens/general/import_settings.tsx:33
+msgid "Error: failed to open file"
+msgstr "Fehler: Datei kann nicht geöffnet werden"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:32
 msgid "Ethiopic"
 msgstr "Äthiopisch"
+
+#: src/screens/general/export_settings.tsx:25
+msgid "Export app data"
+msgstr "App-Daten exportieren"
+
+#: src/screens/general/export_settings.tsx:26
+msgid "Export data"
+msgstr "Daten exportieren"
 
 #: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
@@ -363,7 +375,7 @@ msgstr "Versteckt?"
 msgid "Hide Prayer Times"
 msgstr "Gebetszeiten ausblenden"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
 msgstr "Hoch"
 
@@ -390,6 +402,18 @@ msgstr "Wenn Sie immer noch das Problem haben, dass die App nach einiger Zeit st
 #: src/screens/settings_battery_optimizations/index.tsx:47
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Wenn Sie sicherstellen möchten, dass die App zuverlässig funktioniert, müssen Sie die Energieoptimierung für diese App deaktivieren. Sie können die entsprechenden Einstellungen über die untere Schaltfläche öffnen."
+
+#: src/screens/general/import_settings.tsx:41
+msgid "Import"
+msgstr "Importieren"
+
+#: src/screens/general/import_settings.tsx:40
+msgid "Import app data"
+msgstr "App-Daten importieren"
+
+#: src/screens/general/import_settings.tsx:29
+msgid "Import successful"
+msgstr "Import erfolgreich"
 
 #: src/screens/qibla_finder/index.tsx:54
 msgid "Internet connection"
@@ -476,11 +500,11 @@ msgstr "Längengrad"
 msgid "Longitude is invalid"
 msgstr "Der Längengrad ist ungültig"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Niedrig"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
 msgstr "Mittel"
 
@@ -736,6 +760,10 @@ msgstr "Shia Ithna Ashari, Leva-Institut, Qom"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institut für Geophysik, Universität von Teheran"
 
+#: src/screens/general/volume_button_setting.tsx:30
+msgid "Should app stop playing adhan when the volume button is pressed?"
+msgstr "Soll die App das Abspielen des Adhan beenden, wenn die Lautstärketaste gedrückt wird?"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "Adhan-Optionen anzeigen"
@@ -896,7 +924,7 @@ msgstr "Universität für Islamische Wissenschaften, Karatschi"
 msgid "Unknown Error"
 msgstr "Unbekannter Fehler"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:30
 msgid "Unreliable"
 msgstr "Unzuverlässig"
 
@@ -949,6 +977,10 @@ msgstr "Suche verwenden"
 #: src/screens/settings_about/index.tsx:29
 msgid "Version"
 msgstr "Version"
+
+#: src/screens/general/volume_button_setting.tsx:22
+msgid "Volume button stops adhan"
+msgstr "Lautstärketaste stoppt Adhan"
 
 #: src/constants/notification.ts:28
 msgid "WIDGET_CHANNEL_NAME"
@@ -1015,7 +1047,7 @@ msgid "about.credits.google"
 msgstr "Die meisten in der App verwendeten Icons stammen von Google Material Icons."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:90
 msgid "about_settings"
 msgstr "Über"
 
@@ -1033,7 +1065,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:75
 msgid "battery_optimization_settings"
 msgstr "Akku-Optimierung"
 
@@ -1042,7 +1074,7 @@ msgid "before"
 msgstr "vor"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:70
 msgid "calculation_settings"
 msgstr "Berechnung"
 
@@ -1052,7 +1084,7 @@ msgid "counter.fast"
 msgstr "Fasten"
 
 #. screen title
-#: src/navigation/types.ts:89
+#: src/navigation/types.ts:95
 msgid "dev_settings"
 msgstr "Entwickler"
 
@@ -1061,7 +1093,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:50
 msgid "display_settings"
 msgstr "Anzeige"
 
@@ -1082,11 +1114,16 @@ msgid "from settings"
 msgstr "aus den Einstellungen"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "Adhan abspielen"
 
-#: src/navigation/types.ts:31
+#. screen title
+#: src/navigation/types.ts:45
+msgid "general_settings"
+msgstr "Allgemein"
+
+#: src/navigation/types.ts:32
 msgid "home"
 msgstr "Startseite"
 
@@ -1104,7 +1141,7 @@ msgid "isha.prayer"
 msgstr "Isha"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:55
 msgid "location_settings"
 msgstr "Standort"
 
@@ -1122,29 +1159,29 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:60
 msgid "notification_settings"
 msgstr "Benachrichtigung & Ton"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:106
+#: src/navigation/types.ts:112
 msgid "qada_counter"
 msgstr "Qada-Zähler"
 
-#: src/navigation/types.ts:102
+#: src/navigation/types.ts:108
 msgid "qibla_compass"
 msgstr "Qibla-Kompass"
 
-#: src/navigation/types.ts:94
+#: src/navigation/types.ts:100
 msgid "qibla_finder"
 msgstr "Qibla-Finder"
 
-#: src/navigation/types.ts:98
+#: src/navigation/types.ts:104
 msgid "qibla_map"
 msgstr "Qibla-Karte"
 
@@ -1153,11 +1190,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:85
 msgid "reminders_settings"
 msgstr "Erinnerungen"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "Einstellungen"
 
@@ -1187,7 +1224,7 @@ msgid "sunset"
 msgstr "Sonnenuntergang"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:80
 msgid "widget_settings"
 msgstr "Widget-Einstellungen"
 

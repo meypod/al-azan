@@ -6,7 +6,7 @@ import {VolumeButtonSetting} from './volume_button_setting';
 export function GeneralSettings() {
   return (
     <Box safeArea p="3">
-      <VolumeButtonSetting mb="5" />
+      <VolumeButtonSetting mb="8" />
       <ImportSettings mb="4" />
       <ExportSettings mb="4" />
     </Box>

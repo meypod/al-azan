@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-09 14:24+0330\n"
+"POT-Creation-Date: 2023-03-10 23:35+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +39,7 @@ msgstr "Ezan"
 msgid "Abyad"
 msgstr "Abyad (Beyazlık)"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:37
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:37
 msgid "Accuracy"
 msgstr "Doğruluk"
 
@@ -138,7 +138,7 @@ msgstr "Hesaplama yöntemi"
 msgid "Calendar"
 msgstr "Takvim"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:159
+#: src/screens/qada_counter/edit_counter_modal.tsx:161
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -199,11 +199,11 @@ msgstr "En yakın tarih"
 msgid "Compass Lock"
 msgstr "Pusula Kilidi"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:14
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
 msgstr "Pusula sensörü kullanılamıyor"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:158
+#: src/screens/qada_counter/edit_counter_modal.tsx:160
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Onayla"
@@ -212,7 +212,7 @@ msgstr "Onayla"
 msgid "Coordinates updated"
 msgstr "Koordinatlar güncellendi"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:133
+#: src/screens/qada_counter/edit_counter_modal.tsx:132
 msgid "Count"
 msgstr "Saymak"
 
@@ -315,9 +315,21 @@ msgstr "Sesler indirilirken hata"
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
+#: src/screens/general/import_settings.tsx:33
+msgid "Error: failed to open file"
+msgstr "Hata: dosya açılamadı"
+
 #: src/screens/settings_display/calendar_secondary_settings.tsx:32
 msgid "Ethiopic"
 msgstr "Etiyopya"
+
+#: src/screens/general/export_settings.tsx:25
+msgid "Export app data"
+msgstr "Uygulama verilerini dışa aktarma"
+
+#: src/screens/general/export_settings.tsx:26
+msgid "Export data"
+msgstr "Verileri dışa aktar"
 
 #: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
@@ -363,7 +375,7 @@ msgstr "Gizli mi?"
 msgid "Hide Prayer Times"
 msgstr "Namaz Vakitlerini Gizle"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:26
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
 msgstr "Yüksek"
 
@@ -390,6 +402,18 @@ msgstr "Bir süre sonra uygulamanın durmasıyla ilgili hala sorun yaşıyorsan�
 #: src/screens/settings_battery_optimizations/index.tsx:47
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Uygulamanın güvenilir bir şekilde çalışabileceğinden emin olmak istiyorsanız, bu uygulama için güç optimizasyonunu devre dışı bırakmanız gerekir. Aşağıdaki düğmeyi kullanarak ilgili ayarları açabilirsiniz."
+
+#: src/screens/general/import_settings.tsx:41
+msgid "Import"
+msgstr "İthalat"
+
+#: src/screens/general/import_settings.tsx:40
+msgid "Import app data"
+msgstr "Uygulama verilerini içe aktarma"
+
+#: src/screens/general/import_settings.tsx:29
+msgid "Import successful"
+msgstr "İçe aktarma başarılı"
 
 #: src/screens/qibla_finder/index.tsx:54
 msgid "Internet connection"
@@ -476,11 +500,11 @@ msgstr "Boylam"
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:18
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Düşük"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:22
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
 msgstr "Orta"
 
@@ -731,6 +755,10 @@ msgstr "Şii Ithna Ashari, Leva Enstitüsü, Kum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 
+#: src/screens/general/volume_button_setting.tsx:30
+msgid "Should app stop playing adhan when the volume button is pressed?"
+msgstr "Ses düğmesine basıldığında uygulama ezan çalmayı durdurmalı mı?"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:184
 msgid "Show Adhan Options"
 msgstr "Ezan Seçeneklerini Göster"
@@ -891,7 +919,7 @@ msgstr "İslami İlimler Üniversitesi, Karaçi"
 msgid "Unknown Error"
 msgstr "Bilinmeyen Hata"
 
-#: src/screens/qibla_finder/accuracy_indicator.tsx:30
+#: src/screens/qibla_finder_compass/accuracy_indicator.tsx:30
 msgid "Unreliable"
 msgstr "Güvenilmez"
 
@@ -944,6 +972,10 @@ msgstr "Aramayı Kullan"
 #: src/screens/settings_about/index.tsx:29
 msgid "Version"
 msgstr "Sürüm"
+
+#: src/screens/general/volume_button_setting.tsx:22
+msgid "Volume button stops adhan"
+msgstr "Ses düğmesi ezanı durdurur"
 
 #: src/constants/notification.ts:28
 msgid "WIDGET_CHANNEL_NAME"
@@ -1007,7 +1039,7 @@ msgid "about.credits.google"
 msgstr "Bu uygulamada kullanılan simgelerin çoğu google material simgelerinden alınmıştır."
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:90
 msgid "about_settings"
 msgstr "Hakkında"
 
@@ -1025,7 +1057,7 @@ msgid "asr.prayer"
 msgstr "İkindi"
 
 #. screen title
-#: src/navigation/types.ts:69
+#: src/navigation/types.ts:75
 msgid "battery_optimization_settings"
 msgstr "Pil iyileştirmesi"
 
@@ -1034,7 +1066,7 @@ msgid "before"
 msgstr "önce"
 
 #. screen title
-#: src/navigation/types.ts:64
+#: src/navigation/types.ts:70
 msgid "calculation_settings"
 msgstr "Hesaplama"
 
@@ -1044,7 +1076,7 @@ msgid "counter.fast"
 msgstr "oruç"
 
 #. screen title
-#: src/navigation/types.ts:89
+#: src/navigation/types.ts:95
 msgid "dev_settings"
 msgstr "Geliştirici"
 
@@ -1053,7 +1085,7 @@ msgid "dhuhr.prayer"
 msgstr "Öğle"
 
 #. screen title
-#: src/navigation/types.ts:44
+#: src/navigation/types.ts:50
 msgid "display_settings"
 msgstr "Görüntüle"
 
@@ -1074,11 +1106,16 @@ msgid "from settings"
 msgstr "ayarlardan"
 
 #. screen title
-#: src/navigation/types.ts:39
+#: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
 msgstr "Ezanı dinle"
 
-#: src/navigation/types.ts:31
+#. screen title
+#: src/navigation/types.ts:45
+msgid "general_settings"
+msgstr "Genel"
+
+#: src/navigation/types.ts:32
 msgid "home"
 msgstr "Anasayfa"
 
@@ -1096,7 +1133,7 @@ msgid "isha.prayer"
 msgstr "Yatsı"
 
 #. screen title
-#: src/navigation/types.ts:49
+#: src/navigation/types.ts:55
 msgid "location_settings"
 msgstr "Konum"
 
@@ -1114,29 +1151,29 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
-#: src/navigation/types.ts:59
+#: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "Müezzin"
 
 #. screen title
-#: src/navigation/types.ts:54
+#: src/navigation/types.ts:60
 msgid "notification_settings"
 msgstr "Bildirim & Ses"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:106
+#: src/navigation/types.ts:112
 msgid "qada_counter"
 msgstr "Kaza Sayaç"
 
-#: src/navigation/types.ts:102
+#: src/navigation/types.ts:108
 msgid "qibla_compass"
 msgstr "Kıble Pusulası"
 
-#: src/navigation/types.ts:94
+#: src/navigation/types.ts:100
 msgid "qibla_finder"
 msgstr "Kıble Bulucu"
 
-#: src/navigation/types.ts:98
+#: src/navigation/types.ts:104
 msgid "qibla_map"
 msgstr "Kıble Haritası"
 
@@ -1145,11 +1182,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:85
 msgid "reminders_settings"
 msgstr "Hatırlatıcılar"
 
-#: src/navigation/types.ts:35
+#: src/navigation/types.ts:36
 msgid "settings"
 msgstr "Ayarlar"
 
@@ -1179,7 +1216,7 @@ msgid "sunset"
 msgstr "Gün batımı"
 
 #. screen title
-#: src/navigation/types.ts:74
+#: src/navigation/types.ts:80
 msgid "widget_settings"
 msgstr "Widget Ayarları"
 
