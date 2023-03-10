@@ -36,7 +36,7 @@
     "react": "18.2.0",
     "react-native": "0.71.4",
     "react-native-app-intro-slider": "^4.0.4",
-    "react-native-blob-util": "^0.17.1",
+    "react-native-blob-util": "^0.17.2",
     "react-native-codegen": "^0.71.3",
     "react-native-document-picker": "^8.1.1",
     "react-native-draggable-flatlist": "^4.0.1",
