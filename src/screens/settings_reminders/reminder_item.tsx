@@ -9,11 +9,12 @@ import {
   Button,
   Switch,
 } from 'native-base';
-import {memo} from 'react';
+import {memo, useCallback} from 'react';
 import {translatePrayer} from '@/adhan';
 import {DeleteIcon} from '@/assets/icons/material_icons/delete';
 import {EditIcon} from '@/assets/icons/material_icons/edit';
 import {Reminder} from '@/store/reminder';
+import {showDeleteDialog} from '@/utils/dialogs';
 
 export type ReminderItemProps = {
   onEditPress: (reminderState: Reminder) => void;
@@ -44,10 +45,20 @@ function ReminderItem({
   onChange,
   onEditPress,
 }: ReminderItemProps) {
-  const onToggle = (state: boolean) => {
-    const newReminderState = {...item, enabled: state};
-    onChange(newReminderState);
-  };
+  const onToggle = useCallback(
+    (state: boolean) => {
+      const newReminderState = {...item, enabled: state};
+      onChange(newReminderState);
+    },
+    [item, onChange],
+  );
+
+  const onDeletePress = useCallback(async () => {
+    const agreed = await showDeleteDialog(item.label);
+    if (agreed) {
+      onDelete(item);
+    }
+  }, [item, onDelete]);
 
   return (
     <Pressable onPress={onEditPress.bind(null, item)}>
@@ -96,7 +107,7 @@ function ReminderItem({
                   _light={{color: 'coolGray.600'}}
                 />
               </Button>
-              <Button onPress={onDelete.bind(null, item)} variant="ghost">
+              <Button onPress={onDeletePress} variant="ghost">
                 <DeleteIcon color="red.500" size="xl" />
               </Button>
             </HStack>
