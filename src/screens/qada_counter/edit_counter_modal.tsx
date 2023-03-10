@@ -10,7 +10,7 @@ import {
   Input,
 } from 'native-base';
 import {useCallback, useEffect, useMemo, useState} from 'react';
-import {Modal, Keyboard} from 'react-native';
+import {Modal} from 'react-native';
 import {translateCommonIds} from './counter_view';
 import {PrayersInOrder, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
@@ -70,18 +70,22 @@ export function EditCounterModal({
     });
   }, [counterState, onDelete]);
 
+  const onCountChanged = useCallback(
+    (num: number) =>
+      setDraftCounterState({
+        ...draftCounterState,
+        count: num,
+      }),
+    [draftCounterState],
+  );
+
   return (
     <Modal
       animationType="fade"
       transparent={true}
       visible={!!draftCounterState}
       onRequestClose={onCancel}>
-      <Box
-        p="2"
-        bg="black:alpha.40"
-        flex={1}
-        justifyContent="center"
-        onTouchStart={Keyboard.dismiss}>
+      <Box p="2" bg="black:alpha.40" flex={1} justifyContent="center">
         <Box
           m="5"
           rounded="lg"
@@ -137,13 +141,9 @@ export function EditCounterModal({
                 <FormControl.Label>{t`Count`}:</FormControl.Label>
                 <NumericInput
                   int
+                  strict
                   value={draftCounterState?.count}
-                  onChange={num =>
-                    setDraftCounterState({
-                      ...draftCounterState,
-                      count: num,
-                    })
-                  }
+                  onChange={onCountChanged}
                 />
               </FormControl>
             )}

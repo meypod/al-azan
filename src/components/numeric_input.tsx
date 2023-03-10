@@ -12,6 +12,8 @@ function NumericInput(
     invalidLabel?: string;
     /** parse as integer? */
     int?: boolean;
+    /** should the input striction be immediate? */
+    strict?: boolean;
   },
 ) {
   const {
@@ -20,6 +22,7 @@ function NumericInput(
     invalidLabel = '0',
     invalidValue = 0,
     int = false,
+    strict = false,
     ...otherProps
   } = props;
   const [tmpText, setTmpText] = useState<string>(
@@ -54,15 +57,27 @@ function NumericInput(
     }
   }, [invalidLabel, onEndEditing, value]);
 
-  return (
-    <Input
-      {...otherProps}
-      keyboardType="number-pad"
-      onEndEditing={onEndEditing}
-      onChangeText={setTmpText}
-      value={tmpText}
-    />
-  );
+  if (strict) {
+    return (
+      <Input
+        {...otherProps}
+        keyboardType="number-pad"
+        onChange={onEndEditing}
+        onChangeText={setTmpText}
+        value={tmpText}
+      />
+    );
+  } else {
+    return (
+      <Input
+        {...otherProps}
+        keyboardType="number-pad"
+        onEndEditing={onEndEditing}
+        onChangeText={setTmpText}
+        value={tmpText}
+      />
+    );
+  }
 }
 
 export default memo(NumericInput);
