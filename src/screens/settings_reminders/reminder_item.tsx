@@ -50,7 +50,7 @@ function ReminderItem({
   };
 
   return (
-    <Pressable>
+    <Pressable onPress={onEditPress.bind(null, item)}>
       {({isPressed}) => (
         <Box
           m="2"
