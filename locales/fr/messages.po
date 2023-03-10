@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-10 23:35+0330\n"
+"POT-Creation-Date: 2023-03-11 00:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +93,7 @@ msgstr "Arabe"
 msgid "Arabic/Persian"
 msgstr "Arabe/Persan"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Etes-vous sûr de vouloir supprimer \"{0}\" ?"
 
@@ -221,6 +221,10 @@ msgstr "Compte"
 msgid "Country"
 msgstr "Pays"
 
+#: src/screens/general/export_settings.tsx:27
+msgid "Custom sounds and muezzins will not be exported"
+msgstr "Les sons et les muezzins personnalisés ne seront pas exportés"
+
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "Sombre"
@@ -233,8 +237,8 @@ msgid "Default"
 msgstr "Défaut"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/settings_adhan/adhan_list_item.tsx:100
-#: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/screens/settings_adhan/adhan_list_item.tsx:102
+#: src/screens/settings_adhan/adhan_list_item.tsx:200
 #: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "Supprimer"
@@ -243,7 +247,7 @@ msgstr "Supprimer"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "En fonction de votre appareil et de la version d'Android, il peut arriver que votre appareil arrête l'application en arrière-plan pour économiser la batterie. Cela peut empêcher le fonctionnement des alarmes et notifications."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:193
+#: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Deselect as Fajr Adhan"
 msgstr "Désélectionner comme Adhan du Fajr"
 
@@ -552,7 +556,7 @@ msgstr "Suivant"
 msgid "Next Day"
 msgstr "Jour suivant"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "Non"
@@ -728,7 +732,7 @@ msgstr "Recherche"
 msgid "Secondary Calendar"
 msgstr "Calendrier secondaire"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:196
 msgid "Select as Fajr Adhan"
 msgstr "Sélectionner comme Adhan du Fajr"
 
@@ -766,7 +770,7 @@ msgstr "Shia, Institut de géophysique, Université de Téhéran"
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "L'application doit-elle arrêter la lecture de l'adhan lorsque l'on appuie sur le bouton de volume ?"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:184
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
 msgstr "Afficher les options pour l'Adhan"
 
@@ -1013,7 +1017,7 @@ msgstr "Bienvenue"
 msgid "Wifi"
 msgstr "Wifi"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/screens/settings_adhan/adhan_list_item.tsx:112
 #: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "Oui"

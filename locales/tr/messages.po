@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-10 23:35+0330\n"
+"POT-Creation-Date: 2023-03-11 00:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +93,7 @@ msgstr "Arapça"
 msgid "Arabic/Persian"
 msgstr "Arapça/Farsça"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "\"{0}\" dosyasını silmek istediğinizden emin misiniz?"
 
@@ -221,6 +221,10 @@ msgstr "Saymak"
 msgid "Country"
 msgstr "Ülke"
 
+#: src/screens/general/export_settings.tsx:27
+msgid "Custom sounds and muezzins will not be exported"
+msgstr "Özel sesler ve müezzinler dışa aktarılmayacaktır"
+
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "Koyu"
@@ -233,8 +237,8 @@ msgid "Default"
 msgstr "Varsayılan"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/settings_adhan/adhan_list_item.tsx:100
-#: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/screens/settings_adhan/adhan_list_item.tsx:102
+#: src/screens/settings_adhan/adhan_list_item.tsx:200
 #: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "Sil"
@@ -243,7 +247,7 @@ msgstr "Sil"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Cihazınıza ve android sürümünüze bağlı olarak, bazen cihazınız pilden tasarruf etmek için uygulamayı arka planda kalpatabilir. Bu durum, alarmların/bildirimlerin iletilmesini engelleyebilir."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:193
+#: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Deselect as Fajr Adhan"
 msgstr "Fecr Ezanı olarak seçimi kaldır"
 
@@ -552,7 +556,7 @@ msgstr "Sonraki"
 msgid "Next Day"
 msgstr "Ertesi gün"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "No"
@@ -724,7 +728,7 @@ msgstr "Arama"
 msgid "Secondary Calendar"
 msgstr "İkincil Takvim"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:196
 msgid "Select as Fajr Adhan"
 msgstr "Fecr Ezanı olarak seçin"
 
@@ -759,7 +763,7 @@ msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Ses düğmesine basıldığında uygulama ezan çalmayı durdurmalı mı?"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:184
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
 msgstr "Ezan Seçeneklerini Göster"
 
@@ -1001,7 +1005,7 @@ msgstr "Hoş geldiniz"
 msgid "Wifi"
 msgstr "Wifi"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/screens/settings_adhan/adhan_list_item.tsx:112
 #: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "Evet"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-10 23:35+0330\n"
+"POT-Creation-Date: 2023-03-11 00:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +93,7 @@ msgstr "Arab"
 msgid "Arabic/Persian"
 msgstr "Arab/Persia"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
 
@@ -221,6 +221,10 @@ msgstr "Menghitung"
 msgid "Country"
 msgstr "Negara"
 
+#: src/screens/general/export_settings.tsx:27
+msgid "Custom sounds and muezzins will not be exported"
+msgstr "Suara dan muazin khusus tidak akan diekspor"
+
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "Gelap"
@@ -233,8 +237,8 @@ msgid "Default"
 msgstr "Bawaan"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/settings_adhan/adhan_list_item.tsx:100
-#: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/screens/settings_adhan/adhan_list_item.tsx:102
+#: src/screens/settings_adhan/adhan_list_item.tsx:200
 #: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "Hapus"
@@ -243,7 +247,7 @@ msgstr "Hapus"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa perangkat mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:193
+#: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Deselect as Fajr Adhan"
 msgstr "Batalkan pilihan sebagai Adzan Subuh"
 
@@ -552,7 +556,7 @@ msgstr "Lanjut"
 msgid "Next Day"
 msgstr "Hari Brkut"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "Tidak"
@@ -724,7 +728,7 @@ msgstr "Pencarian"
 msgid "Secondary Calendar"
 msgstr "Kalender Sekunder"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:196
 msgid "Select as Fajr Adhan"
 msgstr "Pilih sebagai Adzan Subuh"
 
@@ -761,7 +765,7 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Haruskah aplikasi berhenti memutar adzan ketika tombol volume ditekan?"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:184
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
@@ -1003,7 +1007,7 @@ msgstr "Selamat Datang!"
 msgid "Wifi"
 msgstr "Wifi"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/screens/settings_adhan/adhan_list_item.tsx:112
 #: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "Ya"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-10 23:35+0330\n"
+"POT-Creation-Date: 2023-03-11 00:10+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +93,7 @@ msgstr "عربی"
 msgid "Arabic/Persian"
 msgstr "عربی/فارسی"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:101
+#: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "کیا آپ واقعی \"{0}\" کو حذف کرنا چاہتے ہیں؟"
 
@@ -221,6 +221,10 @@ msgstr "شمار"
 msgid "Country"
 msgstr "ملک"
 
+#: src/screens/general/export_settings.tsx:27
+msgid "Custom sounds and muezzins will not be exported"
+msgstr "اپنی مرضی کے مطابق آوازیں اور موزنز برآمد نہیں کیے جائیں گے۔"
+
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "اندھیرا"
@@ -233,8 +237,8 @@ msgid "Default"
 msgstr "طے شدہ"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/settings_adhan/adhan_list_item.tsx:100
-#: src/screens/settings_adhan/adhan_list_item.tsx:198
+#: src/screens/settings_adhan/adhan_list_item.tsx:102
+#: src/screens/settings_adhan/adhan_list_item.tsx:200
 #: src/utils/dialogs.ts:7
 msgid "Delete"
 msgstr "حذف کریں۔"
@@ -243,7 +247,7 @@ msgstr "حذف کریں۔"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "آپ کے آلے اور android ورژن پر منحصر ہے، بعض اوقات آپ کا آلہ بیٹری بچانے کے لیے پس منظر میں موجود ایپ کو ختم کر سکتا ہے۔ یہ الارم/اطلاعات کو ڈیلیور ہونے سے روک سکتا ہے۔"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:193
+#: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Deselect as Fajr Adhan"
 msgstr "فجر کی اذان کے طور پر غیر منتخب کریں۔"
 
@@ -552,7 +556,7 @@ msgstr "اگلے"
 msgid "Next Day"
 msgstr "اگلے دن"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:106
+#: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:13
 msgid "No"
 msgstr "نہیں"
@@ -724,7 +728,7 @@ msgstr "تلاش کریں۔"
 msgid "Secondary Calendar"
 msgstr "ثانوی کیلنڈر"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:194
+#: src/screens/settings_adhan/adhan_list_item.tsx:196
 msgid "Select as Fajr Adhan"
 msgstr "فجر کی اذان کے طور پر منتخب کریں۔"
 
@@ -759,7 +763,7 @@ msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "کیا والیوم بٹن دبانے پر ایپ کو اذان بجانا بند کر دینا چاہیے؟"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:184
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
@@ -1001,7 +1005,7 @@ msgstr "خوش آمدید"
 msgid "Wifi"
 msgstr "وائی فائی"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:110
+#: src/screens/settings_adhan/adhan_list_item.tsx:112
 #: src/utils/dialogs.ts:18
 msgid "Yes"
 msgstr "جی ہاں"

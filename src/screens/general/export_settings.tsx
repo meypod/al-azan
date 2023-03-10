@@ -24,6 +24,7 @@ export function ExportSettings(props: IFormControlProps) {
     <FormControl fontSize="md" {...props}>
       <FormControl.Label>{t`Export app data`}</FormControl.Label>
       <Button onPress={exportSettings}>{t`Export data`}</Button>
+      <FormControl.HelperText>{t`Custom sounds and muezzins will not be exported`}</FormControl.HelperText>
     </FormControl>
   );
 }
