@@ -233,7 +233,7 @@ public class ActivityModule extends ReactContextBaseJavaModule {
     private static int SAVE_REQUEST = 1;
 
     @ReactMethod
-    public void saveTextDocument(
+    public void saveJsonDocument(
             final String data,
             final String initialName,
             final Promise promise) {
@@ -244,7 +244,7 @@ public class ActivityModule extends ReactContextBaseJavaModule {
             if (initialName != null) {
                 intent.putExtra(Intent.EXTRA_TITLE, initialName);
             }
-            intent.setType("*/*");
+            intent.setType("application/json");
 
             ReactApplicationContext context = getReactApplicationContext();
             ActivityEventListener activityEventListener =

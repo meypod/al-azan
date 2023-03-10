@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {FormControl, IFormControlProps, Button} from 'native-base';
 import {useCallback} from 'react';
-import {saveTextDocument} from '@/modules/activity';
+import {saveJsonDocument} from '@/modules/activity';
 import {storage} from '@/store/mmkv';
 
 export function ExportSettings(props: IFormControlProps) {
@@ -17,7 +17,7 @@ export function ExportSettings(props: IFormControlProps) {
       }
     }
     const jsonData = JSON.stringify(data);
-    saveTextDocument(jsonData, 'al_azan_settings.json');
+    saveJsonDocument(jsonData, 'al_azan_settings.json');
   }, []);
 
   return (
