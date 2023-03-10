@@ -3,11 +3,13 @@ import SystemSetting from 'react-native-system-setting';
 import MediaPlayer, {AudioEntry} from '@/modules/media_player';
 
 /** returns `true` if interrupted during play, `false` otherwise */
-export async function play(audioEntry: AudioEntry) {
-  const volumeListener = SystemSetting.addVolumeListener(data => {
-    MediaPlayer.setVolume(data.value);
-  });
-
+export async function play({
+  audioEntry,
+  volumeBtnInterrupts,
+}: {
+  audioEntry: AudioEntry;
+  volumeBtnInterrupts?: boolean;
+}) {
   try {
     await MediaPlayer.setupPlayer();
   } catch (e) {
@@ -32,6 +34,13 @@ export async function play(audioEntry: AudioEntry) {
     errorSub.remove();
     console.error('MediaPlayer Error: ', err);
     onFinally(true);
+  });
+  const volumeListener = SystemSetting.addVolumeListener(data => {
+    if (volumeBtnInterrupts) {
+      stop();
+    } else {
+      MediaPlayer.setVolume(data.value);
+    }
   });
 
   const removeListeners = () => {

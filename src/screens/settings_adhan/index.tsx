@@ -81,7 +81,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
         setPlayingAdhanEntry(item);
         await stop();
         if (item.filepath) {
-          await play(item as AudioEntry);
+          await play({audioEntry: item as AudioEntry});
         }
       }
     } catch (e) {

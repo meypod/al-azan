@@ -10,6 +10,7 @@ import {DevModeIcon} from '@/assets/icons/material_icons/dev_mode';
 import {ExploreIcon} from '@/assets/icons/material_icons/explore';
 import {InfoIcon} from '@/assets/icons/material_icons/info';
 import {NotificationsActiveIcon} from '@/assets/icons/material_icons/notifications_active';
+import {TuneIcon} from '@/assets/icons/material_icons/tune';
 import {VolumeUpIcon} from '@/assets/icons/material_icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/material_icons/widget';
 import {RootStackParamList} from '@/navigation/types';
@@ -31,6 +32,10 @@ type ScreenListItem = {
 };
 
 const settingsScreenList: ScreenListItem[] = [
+  {
+    name: 'GeneralSettings',
+    icon: TuneIcon,
+  },
   {
     name: 'DisplaySettings',
     icon: BrightnessMediumIcon,

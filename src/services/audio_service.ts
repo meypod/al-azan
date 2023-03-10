@@ -10,7 +10,10 @@ export async function playAudio(audio: AudioEntry) {
     await stop();
   }
   settings.setState({IS_PLAYING_AUDIO: true});
-  const result = await play(audio);
+  const result = await play({
+    audioEntry: audio,
+    volumeBtnInterrupts: settingsState.VOLUME_BUTTON_STOPS_ADHAN,
+  });
   settings.setState({IS_PLAYING_AUDIO: false});
 
   await destroy();

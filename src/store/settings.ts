@@ -46,6 +46,8 @@ export type SettingsStore = {
   HIDDEN_PRAYERS: Array<Prayer>;
   HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
   ADHAN_VOLUME: number;
+  // behavior related
+  VOLUME_BUTTON_STOPS_ADHAN: boolean;
   // widget
   SHOW_WIDGET: boolean;
   SHOW_WIDGET_COUNTDOWN: boolean;
@@ -126,6 +128,7 @@ export const settings = createStore<SettingsStore>()(
       DEV_MODE: false,
       QIBLA_FINDER_UNDERSTOOD: false,
       QIBLA_FINDER_ORIENTATION_LOCKED: true,
+      VOLUME_BUTTON_STOPS_ADHAN: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

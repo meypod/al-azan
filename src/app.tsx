@@ -17,6 +17,7 @@ import {
 } from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
+import {GeneralSettings} from '@/screens/general';
 import {Home} from '@/screens/home';
 import {QadaCounter} from '@/screens/qada_counter';
 import {QiblaFinder} from '@/screens/qibla_finder';
@@ -107,6 +108,7 @@ export function App(): JSX.Element {
           <Stack.Screen name="QiblaMap" component={QiblaMap} />
           <Stack.Screen name="QiblaCompass" component={QiblaCompass} />
           <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen name="GeneralSettings" component={GeneralSettings} />
           <Stack.Screen name="DisplaySettings" component={DisplaySettings} />
           <Stack.Screen name="LocationSettings" component={LocationSettings} />
           <Stack.Screen
