@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">الأذان</string>
-    <string name="classic_widget_description">سمة كلاسيكية</string>
-    <string name="adaptive_widget_description">سمة متكيفة</string>
 </resources>
