@@ -35,3 +35,7 @@ The `keystore` password.
 ### ANDROID_KEY_PASSWORD
 
 The `key` password. This will be same as `keystore` password since using `PKCS12` store type.
+
+## screenshots
+
+screenshots are made using "pixel 3" on android 13
