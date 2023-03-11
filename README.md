@@ -38,6 +38,8 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Qibla finder
 
+* Qada counter
+
 * Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
 
 ## Screenshots

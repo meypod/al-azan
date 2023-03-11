@@ -28,6 +28,8 @@ App features:
 
 * Qibla finder
 
+* Qada counter
+
 * Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
 
 Open source repository:
