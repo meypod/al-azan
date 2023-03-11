@@ -121,8 +121,6 @@ React-native community members.
 
 [Translation.io](https://translation.io/) (Lingui.js) for providing free translation services for open source projects.
 
-[Weblate](https://weblate.org/) for providing free translation services for open source projects.
-
 [Geonames.org](https://www.geonames.org/) for providing search api for geocoding.
 
 [Openstreetmap.org](https://www.openstreetmap.org/copyright) and [Libremap](https://github.com/maplibre/maplibre-react-native) for providing the map.
