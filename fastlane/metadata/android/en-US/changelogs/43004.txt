@@ -1,4 +1,4 @@
-- added qibla finder
+- added Qibla finder
 - added countdown support to widget
 - added adaptive theme support to widget (Android 12+)
 - added Qada counter
