@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 00:10+0330\n"
+"POT-Creation-Date: 2023-03-11 03:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "गणना विधि"
 msgid "Calendar"
 msgstr "पंचांग"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:161
+#: src/screens/qada_counter/edit_counter_modal.tsx:164
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,7 +195,7 @@ msgstr "निकटतम शहर"
 msgid "Closest Date"
 msgstr "निकटतम तारीख "
 
-#: src/screens/qibla_finder_map/index.tsx:219
+#: src/screens/qibla_finder_map/index.tsx:225
 msgid "Compass Lock"
 msgstr "कम्पास लॉक"
 
@@ -203,7 +203,7 @@ msgstr "कम्पास लॉक"
 msgid "Compass sensor unavailable"
 msgstr "कम्पास सेंसर अनुपलब्ध"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:160
+#: src/screens/qada_counter/edit_counter_modal.tsx:163
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "पुष्टि करें "
@@ -212,7 +212,7 @@ msgstr "पुष्टि करें "
 msgid "Coordinates updated"
 msgstr "निर्देशांक अपडेट किए गए"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:141
 msgid "Count"
 msgstr "गिनती करना"
 
@@ -231,6 +231,7 @@ msgstr "अँधेरा"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -259,7 +260,7 @@ msgstr "डिवाइस लगता है"
 msgid "Disabled"
 msgstr "अक्षम"
 
-#: src/screens/qibla_finder/index.tsx:93
+#: src/screens/qibla_finder/index.tsx:108
 msgid "Disclaimer"
 msgstr "अस्वीकरण"
 
@@ -282,7 +283,7 @@ msgstr "दोबारा मत पूछो"
 msgid "Done"
 msgstr "कर दिया"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "Edit Counter"
 msgstr "काउंटर संपादित करें"
 
@@ -319,7 +320,7 @@ msgstr "ऑडियो डाउनलोड करते समय गलत�
 msgid "Error while getting coordinates"
 msgstr "निर्देशांक प्राप्त करने में गलती"
 
-#: src/screens/general/import_settings.tsx:33
+#: src/screens/general/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "त्रुटि: फ़ाइल खोलने में विफल"
 
@@ -391,7 +392,7 @@ msgstr "उच्च अक्षांश"
 msgid "Home"
 msgstr "घर"
 
-#: src/screens/qibla_finder/index.tsx:104
+#: src/screens/qibla_finder/index.tsx:119
 msgid "I Understand"
 msgstr "मैं समझता हूँ"
 
@@ -407,23 +408,27 @@ msgstr "यदि आपको कुछ समय बाद भी ऐप क�
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "यदि आप ये सुनिश्चित करना चाहते हैं कि ऐप सही तरीके से काम करे, तो आप को इस ऐप के लिए पावर ऑप्टिमाइजेशन को अक्षम करना होगा। आप नीचे दिए गए बटन का उपयोग कर के संबंधित सेटिंग्स खोल सकते हैं।"
 
-#: src/screens/general/import_settings.tsx:41
+#: src/screens/general/import_settings.tsx:82
 msgid "Import"
 msgstr "आयात"
 
-#: src/screens/general/import_settings.tsx:40
+#: src/screens/general/import_settings.tsx:80
 msgid "Import app data"
 msgstr "ऐप डेटा आयात करें"
 
-#: src/screens/general/import_settings.tsx:29
+#: src/screens/general/import_settings.tsx:66
 msgid "Import successful"
 msgstr "आयात सफल रहा"
 
-#: src/screens/qibla_finder/index.tsx:54
+#: src/screens/qibla_finder/index.tsx:52
+msgid "Info"
+msgstr "जानकारी"
+
+#: src/screens/qibla_finder/index.tsx:69
 msgid "Internet connection"
 msgstr "इंटरनेट कनेक्शन"
 
-#: src/screens/qibla_finder/index.tsx:55
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "किबला मैप के काम करने के लिए इंटरनेट कनेक्शन आवश्यक है। कृपया अपना वाईफाई या मोबाइल डेटा सक्षम करें और पुनः प्रयास करें।"
 
@@ -455,7 +460,7 @@ msgstr "केमेंट्रियन अगामा रिपब्लि�
 msgid "Kuwait"
 msgstr "कुवैट"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:114
+#: src/screens/qada_counter/edit_counter_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "लेबल"
@@ -486,12 +491,12 @@ msgid "Light"
 msgstr "रोशनी"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:27
+#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "स्थान"
 
-#: src/screens/qibla_finder/index.tsx:36
+#: src/screens/qibla_finder/index.tsx:37
 msgid "Location settings"
 msgstr "स्थान सेटिंग्स"
 
@@ -516,7 +521,7 @@ msgstr "मध्यम"
 msgid "Middle of the Night"
 msgstr "आधी रात में"
 
-#: src/screens/qibla_finder/index.tsx:63
+#: src/screens/qibla_finder/index.tsx:78
 msgid "Mobile Data"
 msgstr "मोबाइल सामग्री"
 
@@ -537,7 +542,7 @@ msgstr "मुस्लिम वर्ल्ड लीग"
 msgid "Name"
 msgstr "नाम"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "New Counter"
 msgstr "नया काउंटर"
 
@@ -578,12 +583,13 @@ msgstr "कोई नहीं (स्वचालित)"
 msgid "Not now"
 msgstr "अभी नहीं"
 
-#: src/screens/qibla_finder/index.tsx:96
+#: src/screens/qibla_finder/index.tsx:111
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "ध्यान दें कि सॉफ़्टवेयर और हार्डवेयर त्रुटियों के कारण, इस ऐप द्वारा दिखाया गया किबला दिशा, विशेष रूप से कंपास मोड में, गलत हो सकता है।"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -601,8 +607,9 @@ msgstr "सूचनाएं अनुमति"
 msgid "Numbering system"
 msgstr "नंबरिंग सिस्टम"
 
-#: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:58
+#: src/screens/qibla_finder/index.tsx:32
+#: src/screens/qibla_finder/index.tsx:56
+#: src/screens/qibla_finder/index.tsx:73
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -612,7 +619,7 @@ msgstr "ठीक"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "एंड्रॉइड 12 और नए पर, ऐप को ठीक से काम करने के लिए अलार्म की अनुमति की भी आवश्यकता होती है, इसलिए आपको इसे भी अनुमति देनी होगी।"
 
-#: src/screens/settings_reminders/reminder_item.tsx:35
+#: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
 msgstr "एक बार"
 
@@ -677,9 +684,13 @@ msgstr "कतर"
 msgid "Qibla"
 msgstr "किबला"
 
-#: src/screens/qibla_finder/index.tsx:28
+#: src/screens/qibla_finder/index.tsx:29
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "किबला खोजक को स्थान सेवा की आवश्यकता है। यदि सक्षम नहीं है, तो ऐप सेटिंग से स्थान का उपयोग किया जाएगा।"
+
+#: src/screens/qibla_finder/index.tsx:53
+msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
+msgstr "Qibla नक्शा वर्तमान में F-Droid बिल्ड में उपलब्ध नहीं है। यह भविष्य के अपडेट में उपलब्ध हो सकता है।"
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -948,11 +959,11 @@ msgstr "विजेट अपडेट कर रहा है"
 msgid "Use 24-Hour format"
 msgstr "24 घंटे के प्रारूप का प्रयोग करें"
 
-#: src/screens/qibla_finder/index.tsx:101
+#: src/screens/qibla_finder/index.tsx:116
 msgid "Use Compass"
 msgstr "कम्पास का प्रयोग करें"
 
-#: src/screens/qibla_finder/index.tsx:100
+#: src/screens/qibla_finder/index.tsx:115
 msgid "Use Map"
 msgstr "मानचित्र का प्रयोग करें"
 
@@ -1001,7 +1012,7 @@ msgstr "बुधवार"
 msgid "Welcome"
 msgstr "स्वागत"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
 msgstr "Wifi"
 
@@ -1224,11 +1235,11 @@ msgstr "सूर्यास्त"
 msgid "widget_settings"
 msgstr "विजेट सेटिंग्स"
 
-#: src/screens/settings_reminders/reminder_item.tsx:32
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} मिनट के बाद {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:31
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} मिनट पहले {prayer}"
 

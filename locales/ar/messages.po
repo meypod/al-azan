@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 00:10+0330\n"
+"POT-Creation-Date: 2023-03-11 03:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "طريقة حساب"
 msgid "Calendar"
 msgstr "التقويم"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:161
+#: src/screens/qada_counter/edit_counter_modal.tsx:164
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,7 +195,7 @@ msgstr "أقرب مدينة"
 msgid "Closest Date"
 msgstr "أقرب تاريخ"
 
-#: src/screens/qibla_finder_map/index.tsx:219
+#: src/screens/qibla_finder_map/index.tsx:225
 msgid "Compass Lock"
 msgstr "قفل البوصلة"
 
@@ -203,7 +203,7 @@ msgstr "قفل البوصلة"
 msgid "Compass sensor unavailable"
 msgstr "مستشعر البوصلة غير متوفر"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:160
+#: src/screens/qada_counter/edit_counter_modal.tsx:163
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "أكّد"
@@ -212,7 +212,7 @@ msgstr "أكّد"
 msgid "Coordinates updated"
 msgstr "تم تحديث الإحداثيات"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:141
 msgid "Count"
 msgstr "عدد"
 
@@ -231,6 +231,7 @@ msgstr "داکن"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -259,7 +260,7 @@ msgstr "نغمات الجهاز"
 msgid "Disabled"
 msgstr "غير مفعّل"
 
-#: src/screens/qibla_finder/index.tsx:93
+#: src/screens/qibla_finder/index.tsx:108
 msgid "Disclaimer"
 msgstr "تنصل"
 
@@ -282,7 +283,7 @@ msgstr "لا تسأل مرة أخرى"
 msgid "Done"
 msgstr "تم"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "Edit Counter"
 msgstr "تحرير العداد"
 
@@ -319,7 +320,7 @@ msgstr "خطأ أثناء تنزيل الصوت"
 msgid "Error while getting coordinates"
 msgstr "خطأ أثناء الحصول على الإحداثيات"
 
-#: src/screens/general/import_settings.tsx:33
+#: src/screens/general/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "خطأ: فشل في فتح الملف"
 
@@ -391,7 +392,7 @@ msgstr "خط العرض العالي"
 msgid "Home"
 msgstr "الرئيسية"
 
-#: src/screens/qibla_finder/index.tsx:104
+#: src/screens/qibla_finder/index.tsx:119
 msgid "I Understand"
 msgstr "أفهم"
 
@@ -407,23 +408,27 @@ msgstr "إذا كنت لا تزال تواجه مشكلة في إيقاف الت
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "إذا كنت تريد التأكد من أن التطبيق يمكن أن يعمل بشكل موثوق، فعليك تعطيل تحسين الطاقة لهذا التطبيق. يمكنك فتح الإعدادات ذات الصلة باستخدام الزر أدناه."
 
-#: src/screens/general/import_settings.tsx:41
+#: src/screens/general/import_settings.tsx:82
 msgid "Import"
 msgstr "يستورد"
 
-#: src/screens/general/import_settings.tsx:40
+#: src/screens/general/import_settings.tsx:80
 msgid "Import app data"
 msgstr "استيراد بيانات التطبيق"
 
-#: src/screens/general/import_settings.tsx:29
+#: src/screens/general/import_settings.tsx:66
 msgid "Import successful"
 msgstr "نجح الاستيراد"
 
-#: src/screens/qibla_finder/index.tsx:54
+#: src/screens/qibla_finder/index.tsx:52
+msgid "Info"
+msgstr "معلومات"
+
+#: src/screens/qibla_finder/index.tsx:69
 msgid "Internet connection"
 msgstr "اتصال بالإنترنت"
 
-#: src/screens/qibla_finder/index.tsx:55
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "الاتصال بالإنترنت ضروري لعمل خريطة القبلة. يرجى تمكين wifi أو بيانات الجوال وحاول مرة أخرى."
 
@@ -455,7 +460,7 @@ msgstr "وزارة الدين بجمهورية إندونيسيا"
 msgid "Kuwait"
 msgstr "الكويت"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:114
+#: src/screens/qada_counter/edit_counter_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "مُلصَق"
@@ -486,12 +491,12 @@ msgid "Light"
 msgstr "فاتح"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:27
+#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "موقع"
 
-#: src/screens/qibla_finder/index.tsx:36
+#: src/screens/qibla_finder/index.tsx:37
 msgid "Location settings"
 msgstr "إعدادات الموقع"
 
@@ -516,7 +521,7 @@ msgstr "واسطة"
 msgid "Middle of the Night"
 msgstr "منتصف الليل"
 
-#: src/screens/qibla_finder/index.tsx:63
+#: src/screens/qibla_finder/index.tsx:78
 msgid "Mobile Data"
 msgstr "بيانات الجوال"
 
@@ -537,7 +542,7 @@ msgstr "رابطة العالم الإسلامي"
 msgid "Name"
 msgstr "اسم"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "New Counter"
 msgstr "عداد جديد"
 
@@ -578,12 +583,13 @@ msgstr "لا شيء (تلقائي)"
 msgid "Not now"
 msgstr "ليس الان"
 
-#: src/screens/qibla_finder/index.tsx:96
+#: src/screens/qibla_finder/index.tsx:111
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "لاحظ أنه نظرًا لوجود أخطاء في البرامج والأجهزة ، قد يكون اتجاه القبلة الذي يظهره هذا التطبيق خاطئًا ، خاصة في وضع البوصلة."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -601,8 +607,9 @@ msgstr "إذن الإشعارات"
 msgid "Numbering system"
 msgstr "نظام الترقيم"
 
-#: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:58
+#: src/screens/qibla_finder/index.tsx:32
+#: src/screens/qibla_finder/index.tsx:56
+#: src/screens/qibla_finder/index.tsx:73
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -612,7 +619,7 @@ msgstr "تمام"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "في نظام Android 12 والإصدارات الأحدث ، يحتاج التطبيق أيضًا إلى إذن المنبّهات للعمل بشكل صحيح ، لذلك يجب أن تسمح بذلك أيضًا."
 
-#: src/screens/settings_reminders/reminder_item.tsx:35
+#: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
 msgstr "مرة واحدة"
 
@@ -677,9 +684,13 @@ msgstr "دولة قطر"
 msgid "Qibla"
 msgstr "القبلة"
 
-#: src/screens/qibla_finder/index.tsx:28
+#: src/screens/qibla_finder/index.tsx:29
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "مكتشف القبلة يحتاج إلى خدمة الموقع. إذا لم يتم التمكين، فسيتم استخدام الموقع من إعدادات التطبيق."
+
+#: src/screens/qibla_finder/index.tsx:53
+msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
+msgstr "خريطة القبلة غير متوفرة حاليًا في تصميمات F-Droid. قد تصبح متاحة في التحديثات المستقبلية."
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -948,11 +959,11 @@ msgstr "تحدیث التطبيقات المصغّر"
 msgid "Use 24-Hour format"
 msgstr "استخدام تنسيق 24 ساعة"
 
-#: src/screens/qibla_finder/index.tsx:101
+#: src/screens/qibla_finder/index.tsx:116
 msgid "Use Compass"
 msgstr "استخدم البوصلة"
 
-#: src/screens/qibla_finder/index.tsx:100
+#: src/screens/qibla_finder/index.tsx:115
 msgid "Use Map"
 msgstr "استخدم الخريطة"
 
@@ -1001,7 +1012,7 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
 msgstr "wifi"
 
@@ -1229,11 +1240,11 @@ msgstr "غروب الشمس"
 msgid "widget_settings"
 msgstr "إعدادات التطبيق المصغر"
 
-#: src/screens/settings_reminders/reminder_item.tsx:32
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} دقيقة بعد ال{prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:31
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} دقيقة قبل ال{prayer}"
 

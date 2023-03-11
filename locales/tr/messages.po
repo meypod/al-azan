@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 00:10+0330\n"
+"POT-Creation-Date: 2023-03-11 03:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "Hesaplama yöntemi"
 msgid "Calendar"
 msgstr "Takvim"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:161
+#: src/screens/qada_counter/edit_counter_modal.tsx:164
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,7 +195,7 @@ msgstr "En yakın şehir"
 msgid "Closest Date"
 msgstr "En yakın tarih"
 
-#: src/screens/qibla_finder_map/index.tsx:219
+#: src/screens/qibla_finder_map/index.tsx:225
 msgid "Compass Lock"
 msgstr "Pusula Kilidi"
 
@@ -203,7 +203,7 @@ msgstr "Pusula Kilidi"
 msgid "Compass sensor unavailable"
 msgstr "Pusula sensörü kullanılamıyor"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:160
+#: src/screens/qada_counter/edit_counter_modal.tsx:163
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Onayla"
@@ -212,7 +212,7 @@ msgstr "Onayla"
 msgid "Coordinates updated"
 msgstr "Koordinatlar güncellendi"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:141
 msgid "Count"
 msgstr "Saymak"
 
@@ -231,6 +231,7 @@ msgstr "Koyu"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -259,7 +260,7 @@ msgstr "Cihaz sesleri"
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
-#: src/screens/qibla_finder/index.tsx:93
+#: src/screens/qibla_finder/index.tsx:108
 msgid "Disclaimer"
 msgstr "Sorumluluk Reddi"
 
@@ -282,7 +283,7 @@ msgstr "Bir daha sorma"
 msgid "Done"
 msgstr "Tamamlandı"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "Edit Counter"
 msgstr "Sayacı Düzenle"
 
@@ -319,7 +320,7 @@ msgstr "Sesler indirilirken hata"
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
-#: src/screens/general/import_settings.tsx:33
+#: src/screens/general/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "Hata: dosya açılamadı"
 
@@ -391,7 +392,7 @@ msgstr "Yüksek Enlem"
 msgid "Home"
 msgstr "Anasayfa"
 
-#: src/screens/qibla_finder/index.tsx:104
+#: src/screens/qibla_finder/index.tsx:119
 msgid "I Understand"
 msgstr "Anlıyorum"
 
@@ -407,23 +408,27 @@ msgstr "Bir süre sonra uygulamanın durmasıyla ilgili hala sorun yaşıyorsan�
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Uygulamanın güvenilir bir şekilde çalışabileceğinden emin olmak istiyorsanız, bu uygulama için güç optimizasyonunu devre dışı bırakmanız gerekir. Aşağıdaki düğmeyi kullanarak ilgili ayarları açabilirsiniz."
 
-#: src/screens/general/import_settings.tsx:41
+#: src/screens/general/import_settings.tsx:82
 msgid "Import"
 msgstr "İthalat"
 
-#: src/screens/general/import_settings.tsx:40
+#: src/screens/general/import_settings.tsx:80
 msgid "Import app data"
 msgstr "Uygulama verilerini içe aktarma"
 
-#: src/screens/general/import_settings.tsx:29
+#: src/screens/general/import_settings.tsx:66
 msgid "Import successful"
 msgstr "İçe aktarma başarılı"
 
-#: src/screens/qibla_finder/index.tsx:54
+#: src/screens/qibla_finder/index.tsx:52
+msgid "Info"
+msgstr "Bilgi"
+
+#: src/screens/qibla_finder/index.tsx:69
 msgid "Internet connection"
 msgstr "İnternet bağlantısı"
 
-#: src/screens/qibla_finder/index.tsx:55
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Kıble haritasının çalışması için internet bağlantısı gereklidir. Lütfen wifi veya mobil verinizi etkinleştirin ve tekrar deneyin."
 
@@ -455,7 +460,7 @@ msgstr "Endonezya Diyanet İşleri Bakanlığı (KEMENAG)"
 msgid "Kuwait"
 msgstr "Kuveyt"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:114
+#: src/screens/qada_counter/edit_counter_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Etiket"
@@ -486,12 +491,12 @@ msgid "Light"
 msgstr "Aydınlık"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:27
+#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "Konum"
 
-#: src/screens/qibla_finder/index.tsx:36
+#: src/screens/qibla_finder/index.tsx:37
 msgid "Location settings"
 msgstr "Konum ayarları"
 
@@ -516,7 +521,7 @@ msgstr "Orta"
 msgid "Middle of the Night"
 msgstr "Gece yarısı"
 
-#: src/screens/qibla_finder/index.tsx:63
+#: src/screens/qibla_finder/index.tsx:78
 msgid "Mobile Data"
 msgstr "Mobil Veri"
 
@@ -537,7 +542,7 @@ msgstr "Muslim World League"
 msgid "Name"
 msgstr "Ad"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "New Counter"
 msgstr "Yeni Sayaç"
 
@@ -578,12 +583,13 @@ msgstr "Yok (Otomatik)"
 msgid "Not now"
 msgstr "Şimdi olmaz"
 
-#: src/screens/qibla_finder/index.tsx:96
+#: src/screens/qibla_finder/index.tsx:111
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Yazılım ve donanım hataları nedeniyle, bu uygulama tarafından özellikle pusula modunda gösterilen kıble yönünün yanlış olabileceğini unutmayın."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -601,8 +607,9 @@ msgstr "Bildirim İzni"
 msgid "Numbering system"
 msgstr "Numaralandırma sistemi"
 
-#: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:58
+#: src/screens/qibla_finder/index.tsx:32
+#: src/screens/qibla_finder/index.tsx:56
+#: src/screens/qibla_finder/index.tsx:73
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -612,7 +619,7 @@ msgstr "Tamam"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Android 12 ve daha yeni sürümlerde, uygulamanın düzgün çalışması için alarm iznine de ihtiyacı vardır, bu nedenle buna da izin vermelisiniz."
 
-#: src/screens/settings_reminders/reminder_item.tsx:35
+#: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
 msgstr "Bir kez"
 
@@ -677,9 +684,13 @@ msgstr "Katar"
 msgid "Qibla"
 msgstr "Kıble"
 
-#: src/screens/qibla_finder/index.tsx:28
+#: src/screens/qibla_finder/index.tsx:29
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "Kıble bulucu konum servisine ihtiyaç duyar. Etkinleştirilmezse, uygulama ayarlarından konum kullanılacaktır."
+
+#: src/screens/qibla_finder/index.tsx:53
+msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
+msgstr "Kıble haritası şu anda F-Droid sürümlerinde kullanılamamaktadır. Gelecekteki güncellemelerde kullanılabilir hale gelebilir."
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -948,11 +959,11 @@ msgstr "Widget'ları güncelleme"
 msgid "Use 24-Hour format"
 msgstr "24 Saat biçimini kullan"
 
-#: src/screens/qibla_finder/index.tsx:101
+#: src/screens/qibla_finder/index.tsx:116
 msgid "Use Compass"
 msgstr "Pusula Kullanın"
 
-#: src/screens/qibla_finder/index.tsx:100
+#: src/screens/qibla_finder/index.tsx:115
 msgid "Use Map"
 msgstr "Kullanım Haritası"
 
@@ -1001,7 +1012,7 @@ msgstr "Çarşamba"
 msgid "Welcome"
 msgstr "Hoş geldiniz"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
 msgstr "Wifi"
 
@@ -1224,11 +1235,11 @@ msgstr "Gün batımı"
 msgid "widget_settings"
 msgstr "Widget Ayarları"
 
-#: src/screens/settings_reminders/reminder_item.tsx:32
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} dakika sonra {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:31
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} dakika önce {prayer}"
 

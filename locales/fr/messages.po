@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 00:10+0330\n"
+"POT-Creation-Date: 2023-03-11 03:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "Méthode de calcul"
 msgid "Calendar"
 msgstr "Calendrier"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:161
+#: src/screens/qada_counter/edit_counter_modal.tsx:164
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,7 +195,7 @@ msgstr "Ville la plus proche"
 msgid "Closest Date"
 msgstr "Date la plus proche"
 
-#: src/screens/qibla_finder_map/index.tsx:219
+#: src/screens/qibla_finder_map/index.tsx:225
 msgid "Compass Lock"
 msgstr "Verrouillage Boussole"
 
@@ -203,7 +203,7 @@ msgstr "Verrouillage Boussole"
 msgid "Compass sensor unavailable"
 msgstr "Boussole non disponible"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:160
+#: src/screens/qada_counter/edit_counter_modal.tsx:163
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Confirmer"
@@ -212,7 +212,7 @@ msgstr "Confirmer"
 msgid "Coordinates updated"
 msgstr "Coordonnées mises à jour"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:141
 msgid "Count"
 msgstr "Compte"
 
@@ -231,6 +231,7 @@ msgstr "Sombre"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -259,7 +260,7 @@ msgstr "Sons de l'appareil"
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: src/screens/qibla_finder/index.tsx:93
+#: src/screens/qibla_finder/index.tsx:108
 msgid "Disclaimer"
 msgstr "Avis de non-responsabilité"
 
@@ -282,7 +283,7 @@ msgstr "Ne pas demander à nouveau"
 msgid "Done"
 msgstr "Terminé"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "Edit Counter"
 msgstr "Modifier le compteur"
 
@@ -319,7 +320,7 @@ msgstr "Erreur lors du téléchargement d'un fichier audio"
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
 
-#: src/screens/general/import_settings.tsx:33
+#: src/screens/general/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "Erreur : le fichier n'a pas pu être ouvert"
 
@@ -391,7 +392,7 @@ msgstr "Latitude élevée"
 msgid "Home"
 msgstr "Accueil"
 
-#: src/screens/qibla_finder/index.tsx:104
+#: src/screens/qibla_finder/index.tsx:119
 msgid "I Understand"
 msgstr "Je comprends"
 
@@ -407,23 +408,27 @@ msgstr "Si vous avez toujours un problème avec l'application qui s'arrête apr�
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Si vous voulez vous assurer que l'application fonctionne de manière fiable, vous devez désactiver l'optimisation de l'alimentation pour cette application. Vous pouvez ouvrir les paramètres associés en utilisant le bouton ci-dessous."
 
-#: src/screens/general/import_settings.tsx:41
+#: src/screens/general/import_settings.tsx:82
 msgid "Import"
 msgstr "Importation"
 
-#: src/screens/general/import_settings.tsx:40
+#: src/screens/general/import_settings.tsx:80
 msgid "Import app data"
 msgstr "Importer les données de l'application"
 
-#: src/screens/general/import_settings.tsx:29
+#: src/screens/general/import_settings.tsx:66
 msgid "Import successful"
 msgstr "Importation réussie"
 
-#: src/screens/qibla_finder/index.tsx:54
+#: src/screens/qibla_finder/index.tsx:52
+msgid "Info"
+msgstr "Info"
+
+#: src/screens/qibla_finder/index.tsx:69
 msgid "Internet connection"
 msgstr "Connexion Internet"
 
-#: src/screens/qibla_finder/index.tsx:55
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Une connexion Internet est nécessaire pour que la carte de la qibla fonctionne. Veuillez activer votre wifi ou vos données mobiles et réessayer."
 
@@ -455,7 +460,7 @@ msgstr "Kementrian Agama République d'Indonésie (KEMENAG)"
 msgid "Kuwait"
 msgstr "Koweït"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:114
+#: src/screens/qada_counter/edit_counter_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Intitulé"
@@ -486,12 +491,12 @@ msgid "Light"
 msgstr "Clair"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:27
+#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "Localisation"
 
-#: src/screens/qibla_finder/index.tsx:36
+#: src/screens/qibla_finder/index.tsx:37
 msgid "Location settings"
 msgstr "Paramètres de localisation"
 
@@ -516,7 +521,7 @@ msgstr "Moyen"
 msgid "Middle of the Night"
 msgstr "Le milieu de la nuit"
 
-#: src/screens/qibla_finder/index.tsx:63
+#: src/screens/qibla_finder/index.tsx:78
 msgid "Mobile Data"
 msgstr "Données mobiles"
 
@@ -537,7 +542,7 @@ msgstr "Ligue islamique mondiale"
 msgid "Name"
 msgstr "Nom"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "New Counter"
 msgstr "Nouveau compteur"
 
@@ -578,12 +583,13 @@ msgstr "Aucun (automatique)"
 msgid "Not now"
 msgstr "Pas maintenant"
 
-#: src/screens/qibla_finder/index.tsx:96
+#: src/screens/qibla_finder/index.tsx:111
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Notez qu'en raison d'erreurs logicielles et matérielles, la direction de la Qibla indiquée par cette application, en particulier en mode boussole, peut être erronée."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -601,8 +607,9 @@ msgstr "Permission de notifications"
 msgid "Numbering system"
 msgstr "Système de numérotation"
 
-#: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:58
+#: src/screens/qibla_finder/index.tsx:32
+#: src/screens/qibla_finder/index.tsx:56
+#: src/screens/qibla_finder/index.tsx:73
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -612,7 +619,7 @@ msgstr "D'accord"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Sur Android 12 et plus récent, l'application a également besoin de l'autorisation des alarmes pour fonctionner correctement, vous devez donc l'autoriser également."
 
-#: src/screens/settings_reminders/reminder_item.tsx:35
+#: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
 msgstr "Une fois"
 
@@ -677,9 +684,13 @@ msgstr "Qatar"
 msgid "Qibla"
 msgstr "Qibla"
 
-#: src/screens/qibla_finder/index.tsx:28
+#: src/screens/qibla_finder/index.tsx:29
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "La recherche de Qibla nécessite un service de localisation. S'il n'est pas activé, la localisation provenant des paramètres de l'application sera utilisée."
+
+#: src/screens/qibla_finder/index.tsx:53
+msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
+msgstr "La carte Qibla n'est actuellement pas disponible dans les versions de F-Droid. Elle pourrait être disponible dans les prochaines mises à jour."
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -960,11 +971,11 @@ msgstr "Mise à jour des widgets"
 msgid "Use 24-Hour format"
 msgstr "Utiliser le format 24 heures"
 
-#: src/screens/qibla_finder/index.tsx:101
+#: src/screens/qibla_finder/index.tsx:116
 msgid "Use Compass"
 msgstr "Utiliser la boussole"
 
-#: src/screens/qibla_finder/index.tsx:100
+#: src/screens/qibla_finder/index.tsx:115
 msgid "Use Map"
 msgstr "Utiliser la carte"
 
@@ -1013,7 +1024,7 @@ msgstr "Mercredi"
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
 msgstr "Wifi"
 
@@ -1239,11 +1250,11 @@ msgstr "Coucher de soleil"
 msgid "widget_settings"
 msgstr "Paramètres des widgets"
 
-#: src/screens/settings_reminders/reminder_item.tsx:32
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} min après {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:31
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} min avant {prayer}"
 

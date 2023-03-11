@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 00:10+0330\n"
+"POT-Creation-Date: 2023-03-11 03:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "Metode Perhitungan"
 msgid "Calendar"
 msgstr "Kalender"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:161
+#: src/screens/qada_counter/edit_counter_modal.tsx:164
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -195,7 +195,7 @@ msgstr "Kota terdekat"
 msgid "Closest Date"
 msgstr "Tanggal terdekat"
 
-#: src/screens/qibla_finder_map/index.tsx:219
+#: src/screens/qibla_finder_map/index.tsx:225
 msgid "Compass Lock"
 msgstr "Kunci Kompas"
 
@@ -203,7 +203,7 @@ msgstr "Kunci Kompas"
 msgid "Compass sensor unavailable"
 msgstr "Sensor kompas tidak tersedia"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:160
+#: src/screens/qada_counter/edit_counter_modal.tsx:163
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Selesai"
@@ -212,7 +212,7 @@ msgstr "Selesai"
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:132
+#: src/screens/qada_counter/edit_counter_modal.tsx:141
 msgid "Count"
 msgstr "Menghitung"
 
@@ -231,6 +231,7 @@ msgstr "Gelap"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -259,7 +260,7 @@ msgstr "Suara perangkat"
 msgid "Disabled"
 msgstr "Tidak Aktif"
 
-#: src/screens/qibla_finder/index.tsx:93
+#: src/screens/qibla_finder/index.tsx:108
 msgid "Disclaimer"
 msgstr "Penafian"
 
@@ -282,7 +283,7 @@ msgstr "Jangan tanya lagi"
 msgid "Done"
 msgstr "Selesai"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "Edit Counter"
 msgstr "Edit Penghitung"
 
@@ -319,7 +320,7 @@ msgstr "Kesalahan saat mengunduh audio"
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
-#: src/screens/general/import_settings.tsx:33
+#: src/screens/general/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "Kesalahan: gagal membuka file"
 
@@ -391,7 +392,7 @@ msgstr "Lintang Tinggi"
 msgid "Home"
 msgstr "Situs"
 
-#: src/screens/qibla_finder/index.tsx:104
+#: src/screens/qibla_finder/index.tsx:119
 msgid "I Understand"
 msgstr "Aku mengerti"
 
@@ -407,23 +408,27 @@ msgstr "Jika Anda masih memiliki masalah dengan aplikasi yang berhenti setelah b
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Untuk memastikan aplikasi berjalan dengan lancar, Anda perlu menonaktifkan pengoptimalan daya untuk aplikasi ini. Buka halaman pengaturan daya dengan tombol berikut."
 
-#: src/screens/general/import_settings.tsx:41
+#: src/screens/general/import_settings.tsx:82
 msgid "Import"
 msgstr "Impor"
 
-#: src/screens/general/import_settings.tsx:40
+#: src/screens/general/import_settings.tsx:80
 msgid "Import app data"
 msgstr "Mengimpor data aplikasi"
 
-#: src/screens/general/import_settings.tsx:29
+#: src/screens/general/import_settings.tsx:66
 msgid "Import successful"
 msgstr "Impor berhasil"
 
-#: src/screens/qibla_finder/index.tsx:54
+#: src/screens/qibla_finder/index.tsx:52
+msgid "Info"
+msgstr "Info"
+
+#: src/screens/qibla_finder/index.tsx:69
 msgid "Internet connection"
 msgstr "Koneksi internet"
 
-#: src/screens/qibla_finder/index.tsx:55
+#: src/screens/qibla_finder/index.tsx:70
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Koneksi internet diperlukan agar peta kiblat dapat berfungsi. Aktifkan wifi atau data seluler Anda dan coba lagi."
 
@@ -455,7 +460,7 @@ msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:114
+#: src/screens/qada_counter/edit_counter_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Judul"
@@ -486,12 +491,12 @@ msgid "Light"
 msgstr "Terang"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:27
+#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
 msgid "Location"
 msgstr "Lokasi"
 
-#: src/screens/qibla_finder/index.tsx:36
+#: src/screens/qibla_finder/index.tsx:37
 msgid "Location settings"
 msgstr "Pengaturan lokasi"
 
@@ -516,7 +521,7 @@ msgstr "Sedang"
 msgid "Middle of the Night"
 msgstr "Pertengahan malam"
 
-#: src/screens/qibla_finder/index.tsx:63
+#: src/screens/qibla_finder/index.tsx:78
 msgid "Mobile Data"
 msgstr "Data Seluler"
 
@@ -537,7 +542,7 @@ msgstr "Liga Muslim Dunia"
 msgid "Name"
 msgstr "Nama"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:98
+#: src/screens/qada_counter/edit_counter_modal.tsx:107
 msgid "New Counter"
 msgstr "Penghitung Baru"
 
@@ -578,12 +583,13 @@ msgstr "Tidak ada (Otomatis)"
 msgid "Not now"
 msgstr "Tidak sekarang"
 
-#: src/screens/qibla_finder/index.tsx:96
+#: src/screens/qibla_finder/index.tsx:111
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Harap diperhatikan bahwa karena kesalahan perangkat lunak dan perangkat keras, arah kiblat yang ditunjukkan oleh aplikasi ini, khususnya dalam mode kompas, bisa saja salah."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
+#: src/screens/general/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -601,8 +607,9 @@ msgstr "Izin Pemberitahuan"
 msgid "Numbering system"
 msgstr "Sistem penomoran"
 
-#: src/screens/qibla_finder/index.tsx:31
-#: src/screens/qibla_finder/index.tsx:58
+#: src/screens/qibla_finder/index.tsx:32
+#: src/screens/qibla_finder/index.tsx:56
+#: src/screens/qibla_finder/index.tsx:73
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -612,7 +619,7 @@ msgstr "Oke"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Pada Android 12 dan yang lebih baru, aplikasi ini juga memerlukan izin alarm agar berfungsi dengan baik, jadi Anda harus mengizinkannya juga."
 
-#: src/screens/settings_reminders/reminder_item.tsx:35
+#: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
 msgstr "Sekali"
 
@@ -677,9 +684,13 @@ msgstr "Qatar"
 msgid "Qibla"
 msgstr "Kiblat"
 
-#: src/screens/qibla_finder/index.tsx:28
+#: src/screens/qibla_finder/index.tsx:29
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "Pencari kiblat membutuhkan layanan lokasi. Jika tidak diaktifkan, lokasi dari pengaturan aplikasi akan digunakan."
+
+#: src/screens/qibla_finder/index.tsx:53
+msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
+msgstr "Peta kiblat saat ini tidak tersedia dalam versi F-Droid. Peta ini mungkin akan tersedia dalam pembaruan di masa yang akan datang."
 
 #: src/constants/notification.ts:36
 msgid "REMINDER_CHANNEL_NAME"
@@ -950,11 +961,11 @@ msgstr "Memperbarui widget"
 msgid "Use 24-Hour format"
 msgstr "Gunakan format 24 Jam"
 
-#: src/screens/qibla_finder/index.tsx:101
+#: src/screens/qibla_finder/index.tsx:116
 msgid "Use Compass"
 msgstr "Gunakan Kompas"
 
-#: src/screens/qibla_finder/index.tsx:100
+#: src/screens/qibla_finder/index.tsx:115
 msgid "Use Map"
 msgstr "Gunakan Peta"
 
@@ -1003,7 +1014,7 @@ msgstr "Rabu"
 msgid "Welcome"
 msgstr "Selamat Datang!"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
 msgstr "Wifi"
 
@@ -1226,11 +1237,11 @@ msgstr "Terbenam"
 msgid "widget_settings"
 msgstr "Pengaturan Widget"
 
-#: src/screens/settings_reminders/reminder_item.tsx:32
+#: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "{durationInMinutes} min after {prayer}"
 msgstr "{durationInMinutes} menit setelah {prayer}"
 
-#: src/screens/settings_reminders/reminder_item.tsx:31
+#: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} menit sebelum {prayer}"
 
