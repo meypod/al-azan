@@ -1,5 +1,4 @@
-import {t} from '@lingui/macro';
-import {Button, HStack, IButtonProps, IIconProps, Text} from 'native-base';
+import {Button, HStack, IButtonProps, IIconProps} from 'native-base';
 import {useCallback} from 'react';
 import {ScheduleIcon} from '@/assets/icons/material_icons/schedule';
 import {useSettings} from '@/store/settings';
@@ -32,13 +31,6 @@ export function QadaHistoryToggle(props: IButtonProps & IIconProps) {
             color: historyVisible ? 'primary.400' : 'light.300',
           }}
         />
-        <Text
-          color={historyVisible ? 'primary.600' : 'dark.200'}
-          _dark={{
-            color: historyVisible ? 'primary.400' : 'light.300',
-          }}>
-          {t`History`}
-        </Text>
       </HStack>
     </Button>
   );
