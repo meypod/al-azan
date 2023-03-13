@@ -65,6 +65,8 @@ export type SettingsStore = {
   // qibla finder related
   QIBLA_FINDER_UNDERSTOOD: boolean;
   QIBLA_FINDER_ORIENTATION_LOCKED: boolean;
+  // qada counter
+  COUNTER_HISTORY_VISIBLE: boolean;
 
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
@@ -128,6 +130,7 @@ export const settings = createStore<SettingsStore>()(
       QIBLA_FINDER_UNDERSTOOD: false,
       QIBLA_FINDER_ORIENTATION_LOCKED: true,
       VOLUME_BUTTON_STOPS_ADHAN: false,
+      COUNTER_HISTORY_VISIBLE: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

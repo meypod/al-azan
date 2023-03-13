@@ -10,6 +10,8 @@ export type Counter = {
   id: string;
   label?: string;
   count: number;
+  lastModified?: number;
+  lastCount?: number;
 };
 
 export type CounterStore = {
@@ -68,6 +70,8 @@ export const counterStore = createStore<CounterStore>()(
           produce<CounterStore>(draft => {
             let fIndex = draft.counters.findIndex(e => e.id === id);
             if (fIndex !== -1) {
+              draft.counters[fIndex].lastCount = draft.counters[fIndex].count;
+              draft.counters[fIndex].lastModified = Date.now();
               draft.counters[fIndex].count++;
             }
           }),
@@ -77,6 +81,8 @@ export const counterStore = createStore<CounterStore>()(
           produce<CounterStore>(draft => {
             let fIndex = draft.counters.findIndex(e => e.id === id);
             if (fIndex !== -1) {
+              draft.counters[fIndex].lastCount = draft.counters[fIndex].count;
+              draft.counters[fIndex].lastModified = Date.now();
               draft.counters[fIndex].count--;
             }
           }),

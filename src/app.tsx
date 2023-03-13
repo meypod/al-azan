@@ -7,6 +7,7 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, useColorMode} from 'native-base';
 import {useEffect} from 'react';
+import {QadaHistoryToggle} from './components/qada_history_toggle';
 import {OrientationLock} from '@/components/orientation_lock';
 import {Intro} from '@/intro';
 import {
@@ -52,16 +53,19 @@ const TranslatedHeaderTitle = function TranslatedHeaderTitle({...props}: any) {
 };
 
 const QiblaFinderHeaderRight = function QiblaFinderHeaderRight() {
-  const routeName = getCurrentRoute().name;
-  if (routeName === 'QiblaCompass' || routeName === 'QiblaMap') {
-    return (
-      <HStack>
-        <OrientationLock p="2" mr="-2" size="xl"></OrientationLock>
-      </HStack>
-    );
-  } else {
-    return <></>;
-  }
+  return (
+    <HStack>
+      <OrientationLock p="2" mr="-2" size="xl"></OrientationLock>
+    </HStack>
+  );
+};
+
+const QadaCounterHeaderRight = function QadaCounterHeaderRight() {
+  return (
+    <HStack>
+      <QadaHistoryToggle p="2" mr="-2" size="xl"></QadaHistoryToggle>
+    </HStack>
+  );
 };
 
 export function App(): JSX.Element {
@@ -97,16 +101,27 @@ export function App(): JSX.Element {
       <Stack.Navigator
         screenOptions={{
           headerTitle: TranslatedHeaderTitle,
-          headerRight: QiblaFinderHeaderRight,
         }}>
         <Stack.Group screenOptions={{headerShown: false}}>
           <Stack.Screen name="Home" component={Home} />
         </Stack.Group>
         <Stack.Group>
-          <Stack.Screen name="QadaCounter" component={QadaCounter} />
+          <Stack.Screen
+            name="QadaCounter"
+            component={QadaCounter}
+            options={{headerRight: QadaCounterHeaderRight}}
+          />
           <Stack.Screen name="QiblaFinder" component={QiblaFinder} />
-          <Stack.Screen name="QiblaMap" component={QiblaMap} />
-          <Stack.Screen name="QiblaCompass" component={QiblaCompass} />
+          <Stack.Screen
+            name="QiblaMap"
+            component={QiblaMap}
+            options={{headerRight: QiblaFinderHeaderRight}}
+          />
+          <Stack.Screen
+            name="QiblaCompass"
+            component={QiblaCompass}
+            options={{headerRight: QiblaFinderHeaderRight}}
+          />
           <Stack.Screen name="Settings" component={Settings} />
           <Stack.Screen name="GeneralSettings" component={GeneralSettings} />
           <Stack.Screen name="DisplaySettings" component={DisplaySettings} />

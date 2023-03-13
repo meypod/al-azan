@@ -1,6 +1,27 @@
+import {MessageDescriptor, i18n} from '@lingui/core';
+import {defineMessage, t} from '@lingui/macro';
 import {Platform} from 'react-native';
 import {settings, SettingsStore} from '@/store/settings';
 import {PREFERRED_LOCALE} from '@/utils/locale';
+
+const timeTranslations = {
+  day: defineMessage({
+    id: 'date.day',
+    message: 'day',
+  }),
+  hour: defineMessage({
+    id: 'date.hour',
+    message: 'hour',
+  }),
+  minute: defineMessage({
+    id: 'date.minute',
+    message: 'minute',
+  }),
+  second: defineMessage({
+    id: 'date.second',
+    message: 'second',
+  }),
+} as Record<string, MessageDescriptor>;
 
 function getDeterminedLocale(state: SettingsStore) {
   let numberingSystem = state.NUMBERING_SYSTEM
@@ -24,7 +45,9 @@ settings.subscribe(state => {
   SELECTED_SECONDARY_CALENDAR = state.SELECTED_SECONDARY_CALENDAR;
 });
 
-const oneDayInMs = 86400 * 1000;
+const oneMinuteInMs = 60 * 1000;
+const oneHourInMs = oneMinuteInMs * 60;
+const oneDayInMs = 24 * oneHourInMs;
 
 export function addDays(date: Date, days: number) {
   return new Date(date.valueOf() + days * oneDayInMs);
@@ -187,6 +210,46 @@ export function getArabicDate(date: Date) {
     year: 'numeric',
     weekday: 'long',
   }).format(date);
+}
+
+export type DateDiff = {
+  days: number;
+  hours: number;
+  minutes: number;
+  future: boolean;
+};
+
+export function getDateDiff(from: Date | number, to: Date | number): DateDiff {
+  const diff = from.valueOf() - to.valueOf();
+  const dayDiffMod = diff % oneDayInMs;
+  const dayDiff = (diff - dayDiffMod) / oneDayInMs;
+  const hourDiffMod = dayDiffMod % oneHourInMs;
+  const hourDiff = Math.floor((dayDiffMod - hourDiffMod) / oneHourInMs);
+  const minDiffMod = hourDiffMod % 1000;
+  const minDiff = Math.floor((hourDiffMod - minDiffMod) / oneMinuteInMs);
+  return {
+    days: Math.abs(dayDiff),
+    hours: Math.abs(hourDiff),
+    minutes: Math.abs(minDiff),
+    future: diff.valueOf() < 0,
+  };
+}
+
+export function getFormattedDateDiff(diff: DateDiff) {
+  if (!(diff.days || diff.hours || diff.minutes)) return t`Just now`;
+  const d = i18n._(timeTranslations['day']).charAt(0);
+  const h = i18n._(timeTranslations['hour']).charAt(0);
+  const m = i18n._(timeTranslations['minute']).charAt(0);
+
+  const tense = diff.future ? t`later` : t`ago`;
+
+  if (!diff.hours && !diff.days) {
+    return `${diff.minutes}${m} ${tense}`;
+  } else if (!diff.days) {
+    return `${diff.hours}${h} ${diff.minutes}${m} ${tense}`;
+  } else {
+    return `${diff.days}${d} ${diff.hours}${h} ${tense}`;
+  }
 }
 
 export type WeekDayName =

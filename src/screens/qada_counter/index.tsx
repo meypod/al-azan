@@ -8,8 +8,10 @@ import {CounterView} from './counter_view';
 import {EditCounterModal} from './edit_counter_modal';
 import {AddIcon} from '@/assets/icons/material_icons/add';
 import {Counter, counterStore} from '@/store/counter';
+import {useSettings} from '@/store/settings';
 
 export function QadaCounter() {
+  const [historyVisible] = useSettings('COUNTER_HISTORY_VISIBLE');
   const [creatingCounter, setCreatingCounter] =
     useState<Partial<Counter> | null>(null);
 
@@ -52,10 +54,11 @@ export function QadaCounter() {
           key={item.id}
           increaseCounter={increaseCounter}
           decreaseCounter={decreaseCounter}
+          historyVisible={historyVisible}
         />
       );
     },
-    [decreaseCounter, increaseCounter],
+    [decreaseCounter, historyVisible, increaseCounter],
   );
 
   const onCounterChanged = useCallback((state: Counter) => {

@@ -8,6 +8,7 @@ import {translatePrayer} from '@/adhan';
 import {Add400Icon} from '@/assets/icons/material_icons/add_400';
 import {Minus400Icon} from '@/assets/icons/material_icons/minus_400';
 import {Counter, CounterStore} from '@/store/counter';
+import {getDateDiff, getFormattedDateDiff} from '@/utils/date';
 
 const commonIdsTranslation = {
   fast: defineMessage({
@@ -31,11 +32,13 @@ export function CounterView({
   onEditPress,
   drag,
   dragging,
+  historyVisible,
 }: {
   counter: Counter;
   onEditPress: (reminderState: Counter) => void;
   drag: () => void;
   dragging: boolean;
+  historyVisible?: boolean;
 } & Pick<CounterStore, 'increaseCounter' | 'decreaseCounter'>) {
   return (
     <ScaleDecorator activeScale={1.05}>
@@ -68,16 +71,29 @@ export function CounterView({
         <TouchableNativeFeedback
           onPress={onEditPress.bind(null, counter)}
           onLongPress={drag}>
-          <VStack flex="1">
-            <Text fontSize="lg" textAlign="center">
+          <VStack flex="1" alignItems="center">
+            <Text fontSize="md">
               {counter.label ||
                 translatePrayer(counter.id) ||
                 translateCommonIds(counter.id) ||
                 '-'}
             </Text>
-            <Text fontSize="lg" textAlign="center">
-              {counter.count}
-            </Text>
+            <Text fontSize="md">{counter.count}</Text>
+            {historyVisible &&
+              (counter.lastModified ? (
+                <Text fontSize="xs" noOfLines={1}>
+                  {getFormattedDateDiff(
+                    getDateDiff(Date.now(), counter.lastModified),
+                  )}
+                  , {counter.lastCount}
+                  <Text fontSize="lg">&rarr;</Text>
+                  {counter.count}
+                </Text>
+              ) : (
+                <Text fontSize="xs" noOfLines={1}>
+                  -
+                </Text>
+              ))}
           </VStack>
         </TouchableNativeFeedback>
 
