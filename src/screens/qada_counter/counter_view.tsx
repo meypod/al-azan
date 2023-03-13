@@ -7,8 +7,9 @@ import {ScaleDecorator} from 'react-native-draggable-flatlist';
 import {translatePrayer} from '@/adhan';
 import {Add400Icon} from '@/assets/icons/material_icons/add_400';
 import {Minus400Icon} from '@/assets/icons/material_icons/minus_400';
+import {isRTL} from '@/i18n';
 import {Counter, CounterStore} from '@/store/counter';
-import {getDateDiff, getFormattedDateDiff} from '@/utils/date';
+import {formatNu, getDateDiff, getFormattedDateDiff} from '@/utils/date';
 
 const commonIdsTranslation = {
   fast: defineMessage({
@@ -78,16 +79,24 @@ export function CounterView({
                 translateCommonIds(counter.id) ||
                 '-'}
             </Text>
-            <Text fontSize="md">{counter.count}</Text>
+            <Text fontSize="md">{formatNu(counter.count)}</Text>
             {historyVisible &&
               (counter.lastModified ? (
-                <Text fontSize="xs" noOfLines={1}>
+                <Text
+                  fontSize="xs"
+                  noOfLines={1}
+                  style={{writingDirection: 'ltr'}}>
                   {getFormattedDateDiff(
                     getDateDiff(Date.now(), counter.lastModified),
                   )}
-                  , {counter.lastCount}
+                  ,{' '}
+                  {isRTL
+                    ? formatNu(counter.count)
+                    : formatNu(counter.lastCount!)}
                   <Text fontSize="lg">&rarr;</Text>
-                  {counter.count}
+                  {isRTL
+                    ? formatNu(counter.lastCount!)
+                    : formatNu(counter.count)}
                 </Text>
               ) : (
                 <Text fontSize="xs" noOfLines={1}>

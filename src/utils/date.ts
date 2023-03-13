@@ -33,6 +33,7 @@ function getDeterminedLocale(state: SettingsStore) {
 let IS_24_HOUR_FORMAT = settings.getState().IS_24_HOUR_FORMAT;
 let NUMBERING_SYSTEM = settings.getState().NUMBERING_SYSTEM;
 let SELECTED_LOCALE = getDeterminedLocale(settings.getState());
+export let formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
 let SELECTED_ARABIC_CALENDAR = settings.getState().SELECTED_ARABIC_CALENDAR;
 let SELECTED_SECONDARY_CALENDAR =
   settings.getState().SELECTED_SECONDARY_CALENDAR || 'gregory';
@@ -41,6 +42,7 @@ settings.subscribe(state => {
   IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
   NUMBERING_SYSTEM = state.NUMBERING_SYSTEM;
   SELECTED_LOCALE = getDeterminedLocale(state);
+  formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
   SELECTED_ARABIC_CALENDAR = state.SELECTED_ARABIC_CALENDAR;
   SELECTED_SECONDARY_CALENDAR = state.SELECTED_SECONDARY_CALENDAR;
 });
@@ -244,11 +246,11 @@ export function getFormattedDateDiff(diff: DateDiff) {
   const tense = diff.future ? t`later` : t`ago`;
 
   if (!diff.hours && !diff.days) {
-    return `${diff.minutes}${m} ${tense}`;
+    return `${formatNu(diff.minutes)}${m} ${tense}`;
   } else if (!diff.days) {
-    return `${diff.hours}${h} ${diff.minutes}${m} ${tense}`;
+    return `${formatNu(diff.hours)}${h} ${formatNu(diff.minutes)}${m} ${tense}`;
   } else {
-    return `${diff.days}${d} ${diff.hours}${h} ${tense}`;
+    return `${formatNu(diff.days)}${d} ${formatNu(diff.hours)}${h} ${tense}`;
   }
 }
 
