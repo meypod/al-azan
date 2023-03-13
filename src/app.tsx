@@ -7,8 +7,8 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, useColorMode} from 'native-base';
 import {useEffect} from 'react';
-import {QadaHistoryToggle} from './components/qada_history_toggle';
 import {OrientationLock} from '@/components/orientation_lock';
+import {QadaHistoryToggle} from '@/components/qada_history_toggle';
 import {Intro} from '@/intro';
 import {
   getCurrentRoute,
