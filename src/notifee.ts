@@ -244,7 +244,7 @@ async function handleNotification({
       if (triggerDate) {
         settings.getState().saveTimestamp(notifId, triggerDate);
       }
-      await notifee.cancelNotification(notifId).catch(console.error);
+      await notifee.cancelDisplayedNotification(notifId).catch(console.error);
       await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
     }
   }
