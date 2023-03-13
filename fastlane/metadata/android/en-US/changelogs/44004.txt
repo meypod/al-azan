@@ -1,0 +1,6 @@
+- added Qibla finder
+- added countdown support to widget
+- added adaptive theme support to widget (Android 12+)
+- added Qada counter
+- you can now export and import app data
+- small fixes and improvements
