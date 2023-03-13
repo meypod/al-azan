@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 23:51+0330\n"
+"POT-Creation-Date: 2023-03-13 19:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -451,6 +451,10 @@ msgstr "إسلامي (مدني)"
 #: src/screens/settings_display/calendar_settings.tsx:36
 msgid "Islamic (tabular)"
 msgstr "إسلامي (جدولي)"
+
+#: src/utils/date.ts:239
+msgid "Just now"
+msgstr "الآن"
 
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
@@ -1072,6 +1076,10 @@ msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوق
 msgid "after"
 msgstr "بعد"
 
+#: src/utils/date.ts:244
+msgid "ago"
+msgstr "منذ"
+
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "عصر"
@@ -1091,9 +1099,25 @@ msgid "calculation_settings"
 msgstr "حساب"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:13
+#: src/screens/qada_counter/counter_view.tsx:14
 msgid "counter.fast"
 msgstr "صيام"
+
+#: src/utils/date.ts:8
+msgid "date.day"
+msgstr "يوم"
+
+#: src/utils/date.ts:12
+msgid "date.hour"
+msgstr "ساعة"
+
+#: src/utils/date.ts:16
+msgid "date.minute"
+msgstr "دقيقة"
+
+#: src/utils/date.ts:20
+msgid "date.second"
+msgstr "ثانية"
 
 #. screen title
 #: src/navigation/types.ts:95
@@ -1151,6 +1175,10 @@ msgstr "هل وقت الصلاة مخفي؟"
 #: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "عشاء"
+
+#: src/utils/date.ts:244
+msgid "later"
+msgstr "لاحقاً"
 
 #. screen title
 #: src/navigation/types.ts:55

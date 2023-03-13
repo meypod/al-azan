@@ -458,6 +458,10 @@ msgstr "Islamic (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamic (tabular)"
 
+#: src/utils/date.ts:239
+msgid "Just now"
+msgstr "Just now"
+
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
@@ -1088,6 +1092,10 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
+#: src/utils/date.ts:244
+msgid "ago"
+msgstr "ago"
+
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "Asr"
@@ -1107,9 +1115,25 @@ msgid "calculation_settings"
 msgstr "Calculation"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:13
+#: src/screens/qada_counter/counter_view.tsx:14
 msgid "counter.fast"
 msgstr "Fast"
+
+#: src/utils/date.ts:8
+msgid "date.day"
+msgstr "day"
+
+#: src/utils/date.ts:12
+msgid "date.hour"
+msgstr "hour"
+
+#: src/utils/date.ts:16
+msgid "date.minute"
+msgstr "minute"
+
+#: src/utils/date.ts:20
+msgid "date.second"
+msgstr "second"
 
 #. screen title
 #: src/navigation/types.ts:95
@@ -1167,6 +1191,10 @@ msgstr "is prayer time hidden?"
 #: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "Isha"
+
+#: src/utils/date.ts:244
+msgid "later"
+msgstr "later"
 
 #. screen title
 #: src/navigation/types.ts:55

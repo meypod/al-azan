@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 23:51+0330\n"
+"POT-Creation-Date: 2023-03-13 19:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -262,7 +262,7 @@ msgstr "Désactivé"
 
 #: src/screens/qibla_finder/index.tsx:108
 msgid "Disclaimer"
-msgstr "Avis de non-responsabilité"
+msgstr "Clause de non-responsabilité"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:83
@@ -334,7 +334,7 @@ msgstr "Exporter les données de l'application"
 
 #: src/screens/general/export_settings.tsx:26
 msgid "Export data"
-msgstr "Exporter des données"
+msgstr "Exporter les données"
 
 #: src/screens/settings_location/index.tsx:193
 msgid "Find My Location"
@@ -356,7 +356,7 @@ msgstr "Obtenir des coordonnées"
 
 #: src/intro/intro.tsx:122
 msgid "Got it"
-msgstr "Obtenu"
+msgstr "Bien réçu"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:30
 msgid "Gregorian"
@@ -373,16 +373,16 @@ msgstr "Hanafi"
 #: src/screens/settings_display/hide_prayer_settings.tsx:41
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
-msgstr "Caché?"
+msgstr "Masqué?"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:37
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
 msgid "Hide Prayer Times"
-msgstr "Cacher les heures de prière"
+msgstr "Masquer des temps de prière"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
-msgstr "Haut"
+msgstr "Haute Précision"
 
 #: src/screens/settings_calculation/index.tsx:104
 msgid "High Latitude"
@@ -398,7 +398,7 @@ msgstr "Je comprends"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
-msgstr "Si cette option est activée, lorsqu'une notification est affichée, elle contient des informations sur la prochaine heure de prière"
+msgstr "Si cette option est activée, lorsqu'une notification est affichée, elle contiendra des informations sur la prochaine heure de prière"
 
 #: src/screens/settings_battery_optimizations/index.tsx:100
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
@@ -410,7 +410,7 @@ msgstr "Si vous voulez vous assurer que l'application fonctionne de manière fia
 
 #: src/screens/general/import_settings.tsx:82
 msgid "Import"
-msgstr "Importation"
+msgstr "Importer"
 
 #: src/screens/general/import_settings.tsx:80
 msgid "Import app data"
@@ -451,6 +451,10 @@ msgstr "Islamique (civil)"
 #: src/screens/settings_display/calendar_settings.tsx:36
 msgid "Islamic (tabular)"
 msgstr "Islamique (tabulaire)"
+
+#: src/utils/date.ts:239
+msgid "Just now"
+msgstr "A l'instant"
 
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
@@ -511,11 +515,11 @@ msgstr "La longitude n'est pas valide"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
-msgstr "Faible"
+msgstr "Faible précison"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
-msgstr "Moyen"
+msgstr "Précision moyenne"
 
 #: src/screens/settings_calculation/index.tsx:112
 msgid "Middle of the Night"
@@ -531,7 +535,7 @@ msgstr "Lundi"
 
 #: src/adhan/calculation_methods.ts:22
 msgid "Moonsighting Committee"
-msgstr "Comité d'observation des lunes"
+msgstr "Comité d'observation de la lune"
 
 #: src/adhan/calculation_methods.ts:28
 msgid "Muslim World League"
@@ -613,7 +617,7 @@ msgstr "Système de numérotation"
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
-msgstr "D'accord"
+msgstr "Ok"
 
 #: src/utils/permission.ts:125
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
@@ -630,7 +634,7 @@ msgstr "Un septième de la nuit"
 #. shown in add/edit reminder dialog
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Only once?"
-msgstr "Une seule fois ?"
+msgstr "Une seule fois?"
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:44
 msgid "Only six items can be shown at the same time"
@@ -726,7 +730,7 @@ msgid ""
 "and add this app to the list."
 msgstr ""
 "Les appareils Samsung ont leur propre gestionnaire d'alimentation personnalisé appelé \"Device Care\".\n"
-"Après avoir appuyé sur le bouton ci-dessous, vous serez dirigé vers le menu Batterie de Device Care.\n"
+"Après avoir appuyé sur le bouton ci-dessous, vous serez dirigé vers le menu Batterie Device Care.\n"
 "Dans le menu Batterie, appuyez sur \"Gestion de l'alimentation des applications\", puis sur \"Application à ne pas mettre en veille\",\n"
 "et ajoutez cette application à la liste."
 
@@ -761,7 +765,7 @@ msgid ""
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr ""
-"Le Shafaq est utilisé par la méthode du MoonsightingCommittee pour \n"
+"Le Shafaq est utilisé par la méthode du Comité d'observation de la lune pour \n"
 "déterminer quel type de crépuscule utiliser afin de\n"
 "déterminer l'heure d'Isha"
 
@@ -779,7 +783,7 @@ msgstr "Shia, Institut de géophysique, Université de Téhéran"
 
 #: src/screens/general/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
-msgstr "L'application doit-elle arrêter la lecture de l'adhan lorsque l'on appuie sur le bouton de volume ?"
+msgstr "L'application doit-elle arrêter la lecture de l'Adhan lorsque l'on appuie sur le bouton de volume ?"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
@@ -787,7 +791,7 @@ msgstr "Afficher les options pour l'Adhan"
 
 #: src/screens/home/index.tsx:161
 msgid "Show Today"
-msgstr "Montrer aujourd'hui"
+msgstr "Montrer le jour d'aujourd'hui"
 
 #: src/screens/settings_widget/index.tsx:62
 #: src/screens/settings_widget/index.tsx:77
@@ -796,7 +800,7 @@ msgstr "Montrer le compte à rebours?"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
-msgstr "Montrer la prochaine dans la notification?"
+msgstr "Montrer la prochaine prière dans la notification?"
 
 #: src/screens/settings_widget/index.tsx:40
 msgid "Show notification widget?"
@@ -872,7 +876,7 @@ msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
 "can start using this app."
 msgstr ""
-"Merci d'avoir choisi cette application ! Il y a des choses que vous devez faire avant de\n"
+"Merci d'avoir choisi cette application! Il y a des choses que vous devez faire avant de\n"
 "de commencer à utiliser cette application."
 
 #: src/adhan/calculation_methods.ts:64
@@ -912,11 +916,11 @@ msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez 
 
 #: src/utils/permission.ts:38
 msgid "To see notifications about adhan, we need your permission."
-msgstr "Pour voir les notifications concernant l'adhan, nous avons besoin de votre permission."
+msgstr "Pour voir les notifications concernant l'Adhan, nous avons besoin de votre permission."
 
 #: src/utils/permission.ts:157
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
-msgstr "Pour arrêter la lecture de l'adhan lorsque vous recevez un appel, nous devons lire l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
+msgstr "Pour arrêter la lecture de l'Adhan lorsque vous recevez un appel, nous devons lire l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
 
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"
@@ -948,7 +952,7 @@ msgstr "Erreur inconnue"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:30
 msgid "Unreliable"
-msgstr "Peu fiable"
+msgstr "Précision peu fiable"
 
 #: src/screens/settings_calculation/index.tsx:151
 msgid "Unresolved (default)"
@@ -1043,11 +1047,11 @@ msgstr "Vous pouvez également coller les coordonnées à partir du presse-papie
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
-msgstr "Vous pouvez masquer ici les heures de prière que vous ne souhaitez pas voir apparaître sur l'écran principal :"
+msgstr "Vous pouvez masquer ici les temps de prière que vous ne souhaitez pas voir apparaître sur l'écran principal:"
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
-msgstr "Vous pouvez masquer les heures de prière que vous ne voulez pas voir dans le widget ici :"
+msgstr "Vous pouvez masquer les temps de prière que vous ne voulez pas voir dans le widget ici:"
 
 #: src/components/audio_picker.tsx:118
 msgid "Your sounds"
@@ -1066,7 +1070,7 @@ msgstr ""
 
 #: src/screens/settings_about/index.tsx:54
 msgid "about.credits.google"
-msgstr "La plupart des icônes utilisées dans cette application proviennent de google material icons."
+msgstr "La plupart des icônes utilisées dans cette application proviennent des icônes google material."
 
 #. screen title
 #: src/navigation/types.ts:90
@@ -1081,6 +1085,10 @@ msgstr "Nombre de minutes qui seront ajoutées aux temps calculés"
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "after"
 msgstr "après"
+
+#: src/utils/date.ts:244
+msgid "ago"
+msgstr "il y a un an"
 
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
@@ -1101,9 +1109,25 @@ msgid "calculation_settings"
 msgstr "Calcul"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:13
+#: src/screens/qada_counter/counter_view.tsx:14
 msgid "counter.fast"
 msgstr "Jeûne"
+
+#: src/utils/date.ts:8
+msgid "date.day"
+msgstr "jour"
+
+#: src/utils/date.ts:12
+msgid "date.hour"
+msgstr "heure"
+
+#: src/utils/date.ts:16
+msgid "date.minute"
+msgstr "minute"
+
+#: src/utils/date.ts:20
+msgid "date.second"
+msgstr "deuxième"
 
 #. screen title
 #: src/navigation/types.ts:95
@@ -1162,6 +1186,10 @@ msgstr "Le temps de prière est-il caché?"
 msgid "isha.prayer"
 msgstr "Isha"
 
+#: src/utils/date.ts:244
+msgid "later"
+msgstr "plus tard"
+
 #. screen title
 #: src/navigation/types.ts:55
 msgid "location_settings"
@@ -1197,7 +1225,7 @@ msgstr "Compteur Qada"
 
 #: src/navigation/types.ts:108
 msgid "qibla_compass"
-msgstr "Boussole Qibla"
+msgstr "Boussole pour la Qibla"
 
 #: src/navigation/types.ts:100
 msgid "qibla_finder"
@@ -1205,7 +1233,7 @@ msgstr "Chercheur de Qibla"
 
 #: src/navigation/types.ts:104
 msgid "qibla_map"
-msgstr "Carte de Qibla"
+msgstr "Carte pour la Qibla"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
@@ -1264,4 +1292,4 @@ msgstr "La notification du {prayerName} sera affichée"
 
 #: src/screens/settings_notifications/notification_setting.tsx:299
 msgid "{prayerName} sound will be played"
-msgstr "le son {prayerName} sera joué"
+msgstr "le son du {prayerName} sera joué"

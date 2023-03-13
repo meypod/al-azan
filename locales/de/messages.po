@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-11 23:51+0330\n"
+"POT-Creation-Date: 2023-03-13 19:51+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -451,6 +451,10 @@ msgstr "Islamisch (zivil)"
 #: src/screens/settings_display/calendar_settings.tsx:36
 msgid "Islamic (tabular)"
 msgstr "Islamisch (tabellarisch)"
+
+#: src/utils/date.ts:239
+msgid "Just now"
+msgstr "Gerade jetzt"
 
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
@@ -1075,6 +1079,10 @@ msgstr "Anzahl der Minuten, die zu den berechneten Zeiten hinzugefügt werden"
 msgid "after"
 msgstr "nach"
 
+#: src/utils/date.ts:244
+msgid "ago"
+msgstr "vor"
+
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "Asr"
@@ -1094,9 +1102,25 @@ msgid "calculation_settings"
 msgstr "Berechnung"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:13
+#: src/screens/qada_counter/counter_view.tsx:14
 msgid "counter.fast"
 msgstr "Fasten"
+
+#: src/utils/date.ts:8
+msgid "date.day"
+msgstr "tag"
+
+#: src/utils/date.ts:12
+msgid "date.hour"
+msgstr "stunde"
+
+#: src/utils/date.ts:16
+msgid "date.minute"
+msgstr "minute"
+
+#: src/utils/date.ts:20
+msgid "date.second"
+msgstr "zweite"
 
 #. screen title
 #: src/navigation/types.ts:95
@@ -1154,6 +1178,10 @@ msgstr "Ist die Gebetszeit versteckt?"
 #: src/adhan/prayer.ts:64
 msgid "isha.prayer"
 msgstr "Isha"
+
+#: src/utils/date.ts:244
+msgid "later"
+msgstr "später"
 
 #. screen title
 #: src/navigation/types.ts:55
