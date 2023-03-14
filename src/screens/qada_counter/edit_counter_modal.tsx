@@ -74,7 +74,10 @@ export function EditCounterModal({
     (num: number) =>
       setDraftCounterState({
         ...draftCounterState,
-        lastCount: draftCounterState?.count || num,
+        lastCount:
+          typeof draftCounterState?.count === 'undefined'
+            ? num
+            : draftCounterState.count,
         count: num,
         lastModified: Date.now(),
       }),
