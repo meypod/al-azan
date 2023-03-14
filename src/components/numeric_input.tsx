@@ -53,7 +53,11 @@ function NumericInput(
         },
       } as NativeSyntheticEvent<TextInputEndEditingEventData>);
     } else {
-      setTmpText((value || invalidLabel).toString());
+      if (typeof value === 'number') {
+        setTmpText(value.toString());
+      } else {
+        setTmpText(invalidLabel.toString());
+      }
     }
   }, [invalidLabel, onEndEditing, value]);
 
