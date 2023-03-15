@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-13 20:00+0330\n"
+"POT-Creation-Date: 2023-03-15 15:20+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "गणना विधि"
 msgid "Calendar"
 msgstr "पंचांग"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:164
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -203,7 +203,7 @@ msgstr "कम्पास लॉक"
 msgid "Compass sensor unavailable"
 msgstr "कम्पास सेंसर अनुपलब्ध"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:163
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "पुष्टि करें "
@@ -212,7 +212,7 @@ msgstr "पुष्टि करें "
 msgid "Coordinates updated"
 msgstr "निर्देशांक अपडेट किए गए"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:141
+#: src/screens/qada_counter/edit_counter_modal.tsx:144
 msgid "Count"
 msgstr "गिनती करना"
 
@@ -283,7 +283,7 @@ msgstr "दोबारा मत पूछो"
 msgid "Done"
 msgstr "कर दिया"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "Edit Counter"
 msgstr "काउंटर संपादित करें"
 
@@ -452,7 +452,7 @@ msgstr "इस्लामी (सिविल)"
 msgid "Islamic (tabular)"
 msgstr "इस्लामी (सारणीबद्ध)"
 
-#: src/utils/date.ts:239
+#: src/utils/date.ts:241
 msgid "Just now"
 msgstr "बस अब"
 
@@ -464,7 +464,7 @@ msgstr "केमेंट्रियन अगामा रिपब्लि�
 msgid "Kuwait"
 msgstr "कुवैट"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:123
+#: src/screens/qada_counter/edit_counter_modal.tsx:126
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "लेबल"
@@ -546,7 +546,7 @@ msgstr "मुस्लिम वर्ल्ड लीग"
 msgid "Name"
 msgstr "नाम"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "New Counter"
 msgstr "नया काउंटर"
 
@@ -1071,7 +1071,7 @@ msgstr "गणना किए गए समय में जोड़े जा
 msgid "after"
 msgstr "बाद में"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "ago"
 msgstr "पहले"
 
@@ -1094,7 +1094,7 @@ msgid "calculation_settings"
 msgstr "गणना"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:14
+#: src/screens/qada_counter/counter_view.tsx:15
 msgid "counter.fast"
 msgstr "उपवास"
 
@@ -1171,7 +1171,7 @@ msgstr "क्या नमाज़ का वक्त छिपा हुआ 
 msgid "isha.prayer"
 msgstr "इशां "
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "later"
 msgstr "बाद में"
 

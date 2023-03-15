@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-13 20:00+0330\n"
+"POT-Creation-Date: 2023-03-15 15:20+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "Méthode de calcul"
 msgid "Calendar"
 msgstr "Calendrier"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:164
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -203,7 +203,7 @@ msgstr "Verrouillage Boussole"
 msgid "Compass sensor unavailable"
 msgstr "Boussole non disponible"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:163
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Confirmer"
@@ -212,7 +212,7 @@ msgstr "Confirmer"
 msgid "Coordinates updated"
 msgstr "Coordonnées mises à jour"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:141
+#: src/screens/qada_counter/edit_counter_modal.tsx:144
 msgid "Count"
 msgstr "Compte"
 
@@ -283,7 +283,7 @@ msgstr "Ne pas demander à nouveau"
 msgid "Done"
 msgstr "Terminé"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "Edit Counter"
 msgstr "Modifier le compteur"
 
@@ -452,9 +452,9 @@ msgstr "Islamique (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamique (tabulaire)"
 
-#: src/utils/date.ts:239
+#: src/utils/date.ts:241
 msgid "Just now"
-msgstr "A l'instant"
+msgstr "À l'instant"
 
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
@@ -464,7 +464,7 @@ msgstr "Kementrian Agama République d'Indonésie (KEMENAG)"
 msgid "Kuwait"
 msgstr "Koweït"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:123
+#: src/screens/qada_counter/edit_counter_modal.tsx:126
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Intitulé"
@@ -546,7 +546,7 @@ msgstr "Ligue islamique mondiale"
 msgid "Name"
 msgstr "Nom"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "New Counter"
 msgstr "Nouveau compteur"
 
@@ -1086,9 +1086,9 @@ msgstr "Nombre de minutes qui seront ajoutées aux temps calculés"
 msgid "after"
 msgstr "après"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "ago"
-msgstr "il y a un an"
+msgstr "auparavant"
 
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
@@ -1109,7 +1109,7 @@ msgid "calculation_settings"
 msgstr "Calcul"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:14
+#: src/screens/qada_counter/counter_view.tsx:15
 msgid "counter.fast"
 msgstr "Jeûne"
 
@@ -1186,7 +1186,7 @@ msgstr "Le temps de prière est-il caché?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "later"
 msgstr "plus tard"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-13 20:00+0330\n"
+"POT-Creation-Date: 2023-03-15 15:20+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -138,7 +138,7 @@ msgstr "Metode Perhitungan"
 msgid "Calendar"
 msgstr "Kalender"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:164
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -203,7 +203,7 @@ msgstr "Kunci Kompas"
 msgid "Compass sensor unavailable"
 msgstr "Sensor kompas tidak tersedia"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:163
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Selesai"
@@ -212,7 +212,7 @@ msgstr "Selesai"
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:141
+#: src/screens/qada_counter/edit_counter_modal.tsx:144
 msgid "Count"
 msgstr "Menghitung"
 
@@ -283,7 +283,7 @@ msgstr "Jangan tanya lagi"
 msgid "Done"
 msgstr "Selesai"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "Edit Counter"
 msgstr "Edit Penghitung"
 
@@ -452,7 +452,7 @@ msgstr "Islam (sipil)"
 msgid "Islamic (tabular)"
 msgstr "Islam (tabular)"
 
-#: src/utils/date.ts:239
+#: src/utils/date.ts:241
 msgid "Just now"
 msgstr "Baru saja"
 
@@ -464,7 +464,7 @@ msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:123
+#: src/screens/qada_counter/edit_counter_modal.tsx:126
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Judul"
@@ -546,7 +546,7 @@ msgstr "Liga Muslim Dunia"
 msgid "Name"
 msgstr "Nama"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "New Counter"
 msgstr "Penghitung Baru"
 
@@ -1073,7 +1073,7 @@ msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 msgid "after"
 msgstr "setelah"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "ago"
 msgstr "yang lalu"
 
@@ -1096,7 +1096,7 @@ msgid "calculation_settings"
 msgstr "Perhitungan"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:14
+#: src/screens/qada_counter/counter_view.tsx:15
 msgid "counter.fast"
 msgstr "puasa"
 
@@ -1173,7 +1173,7 @@ msgstr "apakah waktu sholat tersembunyi?"
 msgid "isha.prayer"
 msgstr "Isya'"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "later"
 msgstr "nanti"
 

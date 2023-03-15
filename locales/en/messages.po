@@ -144,7 +144,7 @@ msgstr "Calculation Method"
 msgid "Calendar"
 msgstr "Calendar"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:164
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:183
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
@@ -209,7 +209,7 @@ msgstr "Compass Lock"
 msgid "Compass sensor unavailable"
 msgstr "Compass sensor unavailable"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:163
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
 msgstr "Confirm"
@@ -218,7 +218,7 @@ msgstr "Confirm"
 msgid "Coordinates updated"
 msgstr "Coordinates updated"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:141
+#: src/screens/qada_counter/edit_counter_modal.tsx:144
 msgid "Count"
 msgstr "Count"
 
@@ -289,7 +289,7 @@ msgstr "Don't ask again"
 msgid "Done"
 msgstr "Done"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "Edit Counter"
 msgstr "Edit Counter"
 
@@ -458,7 +458,7 @@ msgstr "Islamic (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamic (tabular)"
 
-#: src/utils/date.ts:239
+#: src/utils/date.ts:241
 msgid "Just now"
 msgstr "Just now"
 
@@ -470,7 +470,7 @@ msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:123
+#: src/screens/qada_counter/edit_counter_modal.tsx:126
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
 msgstr "Label"
@@ -552,7 +552,7 @@ msgstr "Muslim World League"
 msgid "Name"
 msgstr "Name"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:107
+#: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "New Counter"
 msgstr "New Counter"
 
@@ -1092,7 +1092,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "ago"
 msgstr "ago"
 
@@ -1115,7 +1115,7 @@ msgid "calculation_settings"
 msgstr "Calculation"
 
 #. in religious context
-#: src/screens/qada_counter/counter_view.tsx:14
+#: src/screens/qada_counter/counter_view.tsx:15
 msgid "counter.fast"
 msgstr "Fast"
 
@@ -1192,7 +1192,7 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:244
+#: src/utils/date.ts:246
 msgid "later"
 msgstr "later"
 
