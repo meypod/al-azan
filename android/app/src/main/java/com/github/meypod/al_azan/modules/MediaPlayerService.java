@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.media.AudioAttributes;
+import android.media.AudioDeviceInfo;
 import android.media.AudioManager;
 import android.media.AudioManager.OnAudioFocusChangeListener;
 import android.media.MediaPlayer;
@@ -29,7 +30,6 @@ import androidx.core.content.ContextCompat;
 import com.facebook.react.HeadlessJsTaskService;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
-import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
@@ -59,7 +59,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private PhoneStateListener phoneStateListener;
   private int currentState = TelephonyManager.CALL_STATE_IDLE;
 
-  private boolean playAsMedia = false;
+  private boolean preferExternalDevice = false;
 
   @Nullable
   @Override
@@ -225,18 +225,43 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     }
   }
 
+  private boolean isExternalDeviceConnected(Context context) {
+    AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+
+    if (am == null)
+      return false;
+
+    AudioDeviceInfo[] devices = am.getDevices(AudioManager.GET_DEVICES_OUTPUTS);
+
+    for (AudioDeviceInfo device : devices) {
+      switch(device.getType()) {
+        case AudioDeviceInfo.TYPE_WIRED_HEADSET:
+        case AudioDeviceInfo.TYPE_WIRED_HEADPHONES:
+        case AudioDeviceInfo.TYPE_BLUETOOTH_A2DP:
+        case AudioDeviceInfo.TYPE_BLUETOOTH_SCO:
+        case AudioDeviceInfo.TYPE_AUX_LINE:
+        case AudioDeviceInfo.TYPE_BLE_HEADSET:
+        case AudioDeviceInfo.TYPE_BLE_BROADCAST:
+        case AudioDeviceInfo.TYPE_BLE_SPEAKER:
+        case AudioDeviceInfo.TYPE_USB_HEADSET:
+          return true;
+      }
+    }
+    return false;
+  }
+
   public void setupPlayer() {
     releasePlayer();
     setupCallStateListener();
 
     player = new MediaPlayer();
     player.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
-    player.setAudioAttributes(
-        new AudioAttributes.Builder()
+
+    AudioAttributes audioAttributes = new AudioAttributes.Builder()
             .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-            .setUsage(playAsMedia ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
-            .build()
-    );
+            .setUsage(preferExternalDevice && isExternalDeviceConnected(getApplicationContext()) ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
+            .build();
+    player.setAudioAttributes(audioAttributes);
     player.setOnErrorListener(this);
     player.setOnPreparedListener(this);
     player.setOnCompletionListener(this);
@@ -245,7 +270,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   @Nullable
   @Override
   public IBinder onBind(Intent intent) {
-    this.playAsMedia = intent.getBooleanExtra("playAsMedia", false);
+    this.preferExternalDevice = intent.getBooleanExtra("preferExternalDevice", false);
     return new MusicBinder();
   }
 

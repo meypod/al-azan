@@ -44,7 +44,7 @@ export function isIntrusive(entry: AudioEntry | undefined) {
   return !isSilent(entry) && !entry?.notif;
 }
 
-export type SetupPlayerOptions = {playAsMedia?: boolean};
+export type SetupPlayerOptions = {preferExternalDevice?: boolean};
 
 interface MediaPlayerModuleInterface {
   start(): Promise<void>;

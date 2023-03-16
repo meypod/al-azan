@@ -105,7 +105,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
 
     Intent mediaPlayerServiceIntent = new Intent(ctx, MediaPlayerService.class);
     if (args != null) {
-      mediaPlayerServiceIntent.putExtra("playAsMedia", args.getBoolean("playAsMedia"));
+      mediaPlayerServiceIntent.putExtra("preferExternalDevice", args.getBoolean("preferExternalDevice"));
     }
     ctx.bindService(mediaPlayerServiceIntent, this, Context.BIND_AUTO_CREATE);
   }

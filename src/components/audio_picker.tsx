@@ -288,7 +288,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
       if (playbackState === PlaybackState.started) {
         await stop();
       } else {
-        await play({audioEntry: memoSelectedItem, playAsMedia: true});
+        await play({audioEntry: memoSelectedItem, preferExternalDevice: true});
       }
     } catch (e) {
       console.error(e);

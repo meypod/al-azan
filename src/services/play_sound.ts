@@ -9,13 +9,13 @@ import MediaPlayer, {
 export async function play({
   audioEntry,
   volumeBtnInterrupts,
-  playAsMedia,
+  preferExternalDevice,
 }: {
   audioEntry: AudioEntry;
   volumeBtnInterrupts?: boolean;
 } & SetupPlayerOptions) {
   try {
-    await MediaPlayer.setupPlayer({playAsMedia});
+    await MediaPlayer.setupPlayer({preferExternalDevice});
   } catch (e) {
     console.error(e);
   }
