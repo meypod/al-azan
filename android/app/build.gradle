@@ -127,7 +127,7 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-            //applicationIdSuffix ".preview"
+            applicationIdSuffix ".preview"
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
