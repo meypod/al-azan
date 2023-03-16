@@ -44,11 +44,13 @@ export function isIntrusive(entry: AudioEntry | undefined) {
   return !isSilent(entry) && !entry?.notif;
 }
 
+export type SetupPlayerOptions = {playAsMedia?: boolean};
+
 interface MediaPlayerModuleInterface {
   start(): Promise<void>;
   stop(): Promise<void>;
   pause(): Promise<void>;
-  setupPlayer(): Promise<void>;
+  setupPlayer(options?: SetupPlayerOptions): Promise<void>;
   destroy(): Promise<void>;
   setVolume(value: number): Promise<void>;
   setDataSource(options: {uri: string | number; loop: boolean}): Promise<void>;

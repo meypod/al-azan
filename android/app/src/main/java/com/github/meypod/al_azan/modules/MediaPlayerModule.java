@@ -92,7 +92,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   }
 
   @ReactMethod
-  public void setupPlayer(Promise promise) {
+  public void setupPlayer(ReadableMap args, Promise promise) {
     if (isServiceBound) {
       promise.resolve(null);
       return;
@@ -104,6 +104,9 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     playerSetupPromise = promise;
 
     Intent mediaPlayerServiceIntent = new Intent(ctx, MediaPlayerService.class);
+    if (args != null) {
+      mediaPlayerServiceIntent.putExtra("playAsMedia", args.getBoolean("playAsMedia"));
+    }
     ctx.bindService(mediaPlayerServiceIntent, this, Context.BIND_AUTO_CREATE);
   }
 

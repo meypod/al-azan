@@ -59,6 +59,8 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private PhoneStateListener phoneStateListener;
   private int currentState = TelephonyManager.CALL_STATE_IDLE;
 
+  private boolean playAsMedia = false;
+
   @Nullable
   @Override
   protected HeadlessJsTaskConfig getTaskConfig(Intent intent) {
@@ -232,7 +234,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     player.setAudioAttributes(
         new AudioAttributes.Builder()
             .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-            .setUsage(AudioAttributes.USAGE_ALARM)
+            .setUsage(playAsMedia ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
             .build()
     );
     player.setOnErrorListener(this);
@@ -243,6 +245,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   @Nullable
   @Override
   public IBinder onBind(Intent intent) {
+    this.playAsMedia = intent.getBooleanExtra("playAsMedia", false);
     return new MusicBinder();
   }
 

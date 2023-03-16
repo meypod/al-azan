@@ -1,17 +1,21 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
-import MediaPlayer, {AudioEntry} from '@/modules/media_player';
+import MediaPlayer, {
+  AudioEntry,
+  SetupPlayerOptions,
+} from '@/modules/media_player';
 
 /** returns `true` if interrupted during play, `false` otherwise */
 export async function play({
   audioEntry,
   volumeBtnInterrupts,
+  playAsMedia,
 }: {
   audioEntry: AudioEntry;
   volumeBtnInterrupts?: boolean;
-}) {
+} & SetupPlayerOptions) {
   try {
-    await MediaPlayer.setupPlayer();
+    await MediaPlayer.setupPlayer({playAsMedia});
   } catch (e) {
     console.error(e);
   }
