@@ -92,6 +92,16 @@ const tests = timezone =>
         delete pt5.date;
         expect(pt5).not.toStrictEqual(pt1);
       });
+
+      it('passes the two year stress test', () => {
+        // we dont include the timezone deliberately, to use the timezone defined in the beginning of test
+        const testDate = new Date('2022-01-01 00:00:00');
+        for (let i = 0; i < 1470; i++) {
+          // 1470 = 4 years + 10 days to test the leap years as well
+          getPrayerTimes(addDays(testDate, i));
+          // if this test is not working, it will loop infinitely, or throw.
+        }
+      });
     });
   });
 

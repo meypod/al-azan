@@ -52,12 +52,28 @@ const oneHourInMs = oneMinuteInMs * 60;
 const oneDayInMs = 24 * oneHourInMs;
 
 export function addDays(date: Date, days: number) {
-  return new Date(date.valueOf() + days * oneDayInMs);
+  if (!days) return new Date(date.getTime());
+  let result = new Date(date.getTime());
+  result.setDate(date.getDate() + days);
+  while (result.toDateString() === date.toDateString()) {
+    // this is for tricky daylight savings
+    result = new Date(result.valueOf() + (days / Math.abs(days)) * oneHourInMs);
+  }
+  return result;
 }
 
 export function getDayBeginning(date: Date) {
   const beginningOfDay = new Date(date.valueOf());
-  beginningOfDay.setHours(0, 0, 0, 0);
+  let hours = 0;
+  beginningOfDay.setHours(hours, 0, 0, 0);
+  while (beginningOfDay.toDateString() !== date.toDateString()) {
+    if (date.getDate() > beginningOfDay.getDate()) {
+      hours += 1;
+    } else {
+      hours -= 1;
+    }
+    beginningOfDay.setHours(hours, 0, 0, 0);
+  }
 
   return beginningOfDay;
 }
