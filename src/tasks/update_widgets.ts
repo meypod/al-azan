@@ -25,6 +25,8 @@ export async function updateWidgets() {
 
   const prayerTimes = getPrayerTimes(now);
 
+  if (!prayerTimes) return;
+
   const {
     HIDDEN_WIDGET_PRAYERS: hiddenPrayers,
     ADAPTIVE_WIDGETS: adaptiveTheme,
