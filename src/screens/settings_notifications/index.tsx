@@ -10,6 +10,7 @@ import {useCallback, useState} from 'react';
 import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
 import {PreferHeadphoneSetting} from './prefer_headphone_setting';
+import {VolumeButtonSetting} from './volume_button_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import NotificationSetting from '@/screens/settings_notifications/notification_setting';
 
@@ -65,6 +66,7 @@ export function NotificationSettings(props: IScrollViewProps) {
       <NotifyNextAdhanSetting mb="6" />
       <DontNotifyUpcomingSetting mb="6" />
       <PreferHeadphoneSetting mb="4" />
+      <VolumeButtonSetting mb="8" />
     </ScrollView>
   );
 }

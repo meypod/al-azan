@@ -18,7 +18,6 @@ import {
 } from '@/navigation/root_navigation';
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import FullscreenAlarm from '@/screens/fullscreen_alarm';
-import {GeneralSettings} from '@/screens/general';
 import {Home} from '@/screens/home';
 import {QadaCounter} from '@/screens/qada_counter';
 import {QiblaFinder} from '@/screens/qibla_finder';
@@ -27,6 +26,7 @@ import {QiblaMap} from '@/screens/qibla_finder_map';
 import Settings from '@/screens/settings';
 import {AboutSettings} from '@/screens/settings_about';
 import {AdhanSettings} from '@/screens/settings_adhan';
+import {BackupSettings} from '@/screens/settings_backup';
 import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
 import {CalculationSettings} from '@/screens/settings_calculation';
 import {DevSettings} from '@/screens/settings_dev';
@@ -123,7 +123,7 @@ export function App(): JSX.Element {
             options={{headerRight: QiblaFinderHeaderRight}}
           />
           <Stack.Screen name="Settings" component={Settings} />
-          <Stack.Screen name="GeneralSettings" component={GeneralSettings} />
+          <Stack.Screen name="BackupSettings" component={BackupSettings} />
           <Stack.Screen name="DisplaySettings" component={DisplaySettings} />
           <Stack.Screen name="LocationSettings" component={LocationSettings} />
           <Stack.Screen

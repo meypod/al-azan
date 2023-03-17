@@ -5,7 +5,7 @@ export type RootStackParamList = {
   Home: undefined;
   Settings: undefined;
   FullscreenAlarm: {options: string};
-  GeneralSettings: undefined;
+  BackupSettings: undefined;
   DisplaySettings: undefined;
   LocationSettings: undefined;
   NotificationSettings: undefined;
@@ -42,9 +42,9 @@ const routeTranslations = {
     message: 'Playing Adhan',
     comment: 'screen title',
   }),
-  GeneralSettings: defineMessage({
-    id: 'general_settings',
-    message: 'General',
+  BackupSettings: defineMessage({
+    id: 'backup_settings',
+    message: 'Backup',
     comment: 'screen title',
   }),
   DisplaySettings: defineMessage({
