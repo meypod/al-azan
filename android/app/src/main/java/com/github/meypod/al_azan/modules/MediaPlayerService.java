@@ -128,6 +128,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
 
   public void start(boolean skipCheck) {
+    updateAudioAttributes();
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     if (!skipCheck) {
       if (currentState != TelephonyManager.CALL_STATE_IDLE) {
@@ -250,18 +251,21 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     return false;
   }
 
+  private void updateAudioAttributes() {
+    if (player != null) {
+      player.setAudioAttributes(new AudioAttributes.Builder()
+              .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+              .setUsage(preferExternalDevice && isExternalDeviceConnected(getApplicationContext()) ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
+              .build());
+    }
+  }
+
   public void setupPlayer() {
     releasePlayer();
     setupCallStateListener();
 
     player = new MediaPlayer();
     player.setWakeMode(getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
-
-    AudioAttributes audioAttributes = new AudioAttributes.Builder()
-            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-            .setUsage(preferExternalDevice && isExternalDeviceConnected(getApplicationContext()) ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
-            .build();
-    player.setAudioAttributes(audioAttributes);
     player.setOnErrorListener(this);
     player.setOnPreparedListener(this);
     player.setOnCompletionListener(this);
