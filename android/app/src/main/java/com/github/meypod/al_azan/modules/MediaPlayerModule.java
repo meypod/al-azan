@@ -92,7 +92,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   }
 
   @ReactMethod
-  public void setupPlayer(ReadableMap args, Promise promise) {
+  public void setupPlayer(Promise promise) {
     if (isServiceBound) {
       promise.resolve(null);
       return;
@@ -104,9 +104,6 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
     playerSetupPromise = promise;
 
     Intent mediaPlayerServiceIntent = new Intent(ctx, MediaPlayerService.class);
-    if (args != null) {
-      mediaPlayerServiceIntent.putExtra("preferExternalDevice", args.getBoolean("preferExternalDevice"));
-    }
     ctx.bindService(mediaPlayerServiceIntent, this, Context.BIND_AUTO_CREATE);
   }
 
@@ -160,8 +157,11 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   }
 
   @ReactMethod
-  public void start(Promise promise) {
+  public void start(ReadableMap args, Promise promise) {
     if (mediaPlayerService != null) {
+      if (args != null) {
+        mediaPlayerService.setPreferExternalDevice(args.getBoolean("preferExternalDevice"));
+      }
       mediaPlayerService.start(false);
     }
     promise.resolve(null);

@@ -271,10 +271,13 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     player.setOnCompletionListener(this);
   }
 
+  public void setPreferExternalDevice(boolean preferred) {
+    this.preferExternalDevice = preferred;
+  }
+
   @Nullable
   @Override
   public IBinder onBind(Intent intent) {
-    this.preferExternalDevice = intent.getBooleanExtra("preferExternalDevice", false);
     return new MusicBinder();
   }
 
