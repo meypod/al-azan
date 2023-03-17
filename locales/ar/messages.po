@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-15 15:20+0330\n"
+"POT-Creation-Date: 2023-03-17 16:40+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,12 +44,12 @@ msgid "Accuracy"
 msgstr "صحة"
 
 #: src/components/audio_picker.tsx:367
-#: src/screens/settings_adhan/index.tsx:186
+#: src/screens/settings_adhan/index.tsx:189
 msgid "Add"
 msgstr "إضافة"
 
-#: src/screens/settings_adhan/index.tsx:159
-#: src/screens/settings_adhan/index.tsx:164
+#: src/screens/settings_adhan/index.tsx:162
+#: src/screens/settings_adhan/index.tsx:167
 msgid "Add Custom Adhan"
 msgstr "إضافة أذان مخصص"
 
@@ -61,7 +61,7 @@ msgstr "إضافة تذكير"
 msgid "Adhan"
 msgstr "أذان"
 
-#: src/screens/settings_adhan/index.tsx:97
+#: src/screens/settings_adhan/index.tsx:100
 msgid "Adhan audio file is not downloaded yet"
 msgstr "لم يتم تنزيل ملف صوت الأذان بعد"
 
@@ -139,7 +139,7 @@ msgid "Calendar"
 msgstr "التقويم"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:183
+#: src/screens/settings_adhan/index.tsx:186
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -221,7 +221,7 @@ msgstr "عدد"
 msgid "Country"
 msgstr "دولة"
 
-#: src/screens/general/export_settings.tsx:27
+#: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "لن يتم تصدير الأصوات والمؤذنين المخصصة"
 
@@ -231,7 +231,7 @@ msgstr "داکن"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
-#: src/screens/general/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -320,7 +320,7 @@ msgstr "خطأ أثناء تنزيل الصوت"
 msgid "Error while getting coordinates"
 msgstr "خطأ أثناء الحصول على الإحداثيات"
 
-#: src/screens/general/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "خطأ: فشل في فتح الملف"
 
@@ -328,11 +328,11 @@ msgstr "خطأ: فشل في فتح الملف"
 msgid "Ethiopic"
 msgstr "إثيوبي"
 
-#: src/screens/general/export_settings.tsx:25
+#: src/screens/settings_backup/export_settings.tsx:25
 msgid "Export app data"
 msgstr "تصدير بيانات التطبيق"
 
-#: src/screens/general/export_settings.tsx:26
+#: src/screens/settings_backup/export_settings.tsx:26
 msgid "Export data"
 msgstr "تصدير البيانات"
 
@@ -408,15 +408,15 @@ msgstr "إذا كنت لا تزال تواجه مشكلة في إيقاف الت
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "إذا كنت تريد التأكد من أن التطبيق يمكن أن يعمل بشكل موثوق، فعليك تعطيل تحسين الطاقة لهذا التطبيق. يمكنك فتح الإعدادات ذات الصلة باستخدام الزر أدناه."
 
-#: src/screens/general/import_settings.tsx:82
+#: src/screens/settings_backup/import_settings.tsx:82
 msgid "Import"
 msgstr "يستورد"
 
-#: src/screens/general/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:80
 msgid "Import app data"
 msgstr "استيراد بيانات التطبيق"
 
-#: src/screens/general/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:66
 msgid "Import successful"
 msgstr "نجح الاستيراد"
 
@@ -452,7 +452,7 @@ msgstr "إسلامي (مدني)"
 msgid "Islamic (tabular)"
 msgstr "إسلامي (جدولي)"
 
-#: src/utils/date.ts:241
+#: src/utils/date.ts:257
 msgid "Just now"
 msgstr "الآن"
 
@@ -541,8 +541,8 @@ msgstr "لجنة رؤية الهلال"
 msgid "Muslim World League"
 msgstr "رابطة العالم الإسلامي"
 
-#: src/screens/settings_adhan/index.tsx:167
 #: src/screens/settings_adhan/index.tsx:170
+#: src/screens/settings_adhan/index.tsx:173
 msgid "Name"
 msgstr "اسم"
 
@@ -593,7 +593,7 @@ msgstr "لاحظ أنه نظرًا لوجود أخطاء في البرامج و�
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
-#: src/screens/general/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -747,7 +747,7 @@ msgstr "التقويم الثانوي"
 msgid "Select as Fajr Adhan"
 msgstr "اختر أذان الفجر"
 
-#: src/screens/settings_adhan/index.tsx:176
+#: src/screens/settings_adhan/index.tsx:179
 msgid "Selecting a name is required"
 msgstr "اختيار الاسم مطلوب"
 
@@ -774,7 +774,7 @@ msgstr "الشيعة اثنا عشري ، معهد ليفا ، قم"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "الشيعة ، معهد الجيوفيزياء ، جامعة طهران"
 
-#: src/screens/general/volume_button_setting.tsx:30
+#: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "هل يجب أن يتوقف التطبيق عن تشغيل الأذان عند الضغط على زر الصوت؟"
 
@@ -853,7 +853,7 @@ msgstr "الأحد"
 msgid "System Default"
 msgstr "افتراضي النظام"
 
-#: src/screens/settings_notifications/index.tsx:61
+#: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "وقت التهجد المذكور في التطبيق هو الثلث الأخير من الليل"
 
@@ -976,6 +976,10 @@ msgstr "استخدم الخريطة"
 msgid "Use adaptive theme?"
 msgstr "استخدم السمة المتكيفة؟"
 
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+msgid "Use headphones when available?"
+msgstr "هل تستخدم سماعات الرأس عند توفرها؟"
+
 #: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
 msgstr "باستخدام الإحداثيات"
@@ -992,7 +996,7 @@ msgstr "باستخدام البحث"
 msgid "Version"
 msgstr "إصدار"
 
-#: src/screens/general/volume_button_setting.tsx:22
+#: src/screens/settings_notifications/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "يتوقف زر الصوت عند الأذان"
 
@@ -1015,6 +1019,10 @@ msgstr "الأربعاء"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "مرحبا"
+
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+msgid "When enabled, when using headphones, all audio will play only on headphones."
+msgstr "عند التمكين، عند استخدام سماعات الرأس، سيتم تشغيل كل الصوت على سماعات الرأس فقط."
 
 #: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
@@ -1076,13 +1084,18 @@ msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوق
 msgid "after"
 msgstr "بعد"
 
-#: src/utils/date.ts:246
+#: src/utils/date.ts:262
 msgid "ago"
 msgstr "منذ"
 
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "عصر"
+
+#. screen title
+#: src/navigation/types.ts:45
+msgid "backup_settings"
+msgstr "دعم"
 
 #. screen title
 #: src/navigation/types.ts:75
@@ -1154,11 +1167,6 @@ msgstr "من الإعدادات"
 msgid "fullscreen_alarm"
 msgstr "تشغيل الأذان"
 
-#. screen title
-#: src/navigation/types.ts:45
-msgid "general_settings"
-msgstr "عام"
-
 #: src/navigation/types.ts:32
 msgid "home"
 msgstr "الرئيسية"
@@ -1176,7 +1184,7 @@ msgstr "هل وقت الصلاة مخفي؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:246
+#: src/utils/date.ts:262
 msgid "later"
 msgstr "لاحقاً"
 

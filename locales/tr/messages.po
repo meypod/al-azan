@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-15 15:20+0330\n"
+"POT-Creation-Date: 2023-03-17 16:40+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,12 +44,12 @@ msgid "Accuracy"
 msgstr "Doğruluk"
 
 #: src/components/audio_picker.tsx:367
-#: src/screens/settings_adhan/index.tsx:186
+#: src/screens/settings_adhan/index.tsx:189
 msgid "Add"
 msgstr "Ekle"
 
-#: src/screens/settings_adhan/index.tsx:159
-#: src/screens/settings_adhan/index.tsx:164
+#: src/screens/settings_adhan/index.tsx:162
+#: src/screens/settings_adhan/index.tsx:167
 msgid "Add Custom Adhan"
 msgstr "Ezan sesini kişiselleştir"
 
@@ -61,7 +61,7 @@ msgstr "Hatırlatıcı Ekle"
 msgid "Adhan"
 msgstr "Ezan"
 
-#: src/screens/settings_adhan/index.tsx:97
+#: src/screens/settings_adhan/index.tsx:100
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Ezan sesleri henüz indirilmedi"
 
@@ -139,7 +139,7 @@ msgid "Calendar"
 msgstr "Takvim"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:183
+#: src/screens/settings_adhan/index.tsx:186
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -221,7 +221,7 @@ msgstr "Saymak"
 msgid "Country"
 msgstr "Ülke"
 
-#: src/screens/general/export_settings.tsx:27
+#: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "Özel sesler ve müezzinler dışa aktarılmayacaktır"
 
@@ -231,7 +231,7 @@ msgstr "Koyu"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
-#: src/screens/general/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -320,7 +320,7 @@ msgstr "Sesler indirilirken hata"
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
-#: src/screens/general/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "Hata: dosya açılamadı"
 
@@ -328,11 +328,11 @@ msgstr "Hata: dosya açılamadı"
 msgid "Ethiopic"
 msgstr "Etiyopya"
 
-#: src/screens/general/export_settings.tsx:25
+#: src/screens/settings_backup/export_settings.tsx:25
 msgid "Export app data"
 msgstr "Uygulama verilerini dışa aktarma"
 
-#: src/screens/general/export_settings.tsx:26
+#: src/screens/settings_backup/export_settings.tsx:26
 msgid "Export data"
 msgstr "Verileri dışa aktar"
 
@@ -408,15 +408,15 @@ msgstr "Bir süre sonra uygulamanın durmasıyla ilgili hala sorun yaşıyorsan�
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Uygulamanın güvenilir bir şekilde çalışabileceğinden emin olmak istiyorsanız, bu uygulama için güç optimizasyonunu devre dışı bırakmanız gerekir. Aşağıdaki düğmeyi kullanarak ilgili ayarları açabilirsiniz."
 
-#: src/screens/general/import_settings.tsx:82
+#: src/screens/settings_backup/import_settings.tsx:82
 msgid "Import"
 msgstr "İthalat"
 
-#: src/screens/general/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:80
 msgid "Import app data"
 msgstr "Uygulama verilerini içe aktarma"
 
-#: src/screens/general/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:66
 msgid "Import successful"
 msgstr "İçe aktarma başarılı"
 
@@ -452,7 +452,7 @@ msgstr "İslami (Sivil)"
 msgid "Islamic (tabular)"
 msgstr "İslami (Cetvele göre hesaplanmış)"
 
-#: src/utils/date.ts:241
+#: src/utils/date.ts:257
 msgid "Just now"
 msgstr "Hemen şimdi"
 
@@ -541,8 +541,8 @@ msgstr "Moonsighting Komitesi"
 msgid "Muslim World League"
 msgstr "Muslim World League"
 
-#: src/screens/settings_adhan/index.tsx:167
 #: src/screens/settings_adhan/index.tsx:170
+#: src/screens/settings_adhan/index.tsx:173
 msgid "Name"
 msgstr "Ad"
 
@@ -593,7 +593,7 @@ msgstr "Yazılım ve donanım hataları nedeniyle, bu uygulama tarafından özel
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
-#: src/screens/general/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -747,7 +747,7 @@ msgstr "İkincil Takvim"
 msgid "Select as Fajr Adhan"
 msgstr "Fecr Ezanı olarak seçin"
 
-#: src/screens/settings_adhan/index.tsx:176
+#: src/screens/settings_adhan/index.tsx:179
 msgid "Selecting a name is required"
 msgstr "Bir ad seçmek gereklidir"
 
@@ -774,7 +774,7 @@ msgstr "Şii Ithna Ashari, Leva Enstitüsü, Kum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 
-#: src/screens/general/volume_button_setting.tsx:30
+#: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Ses düğmesine basıldığında uygulama ezan çalmayı durdurmalı mı?"
 
@@ -853,7 +853,7 @@ msgstr "Pazar"
 msgid "System Default"
 msgstr "Sistem varsayılanı"
 
-#: src/screens/settings_notifications/index.tsx:61
+#: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Uygulamada belirtilen teheccüd vakti gecenin son üçte biridir"
 
@@ -976,6 +976,10 @@ msgstr "Kullanım Haritası"
 msgid "Use adaptive theme?"
 msgstr "Uyarlanabilir tema mı kullanıyorsunuz?"
 
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+msgid "Use headphones when available?"
+msgstr "Mümkün olduğunda kulaklık kullanıyor musunuz?"
+
 #: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
 msgstr "Koordinatları Kullan"
@@ -992,7 +996,7 @@ msgstr "Aramayı Kullan"
 msgid "Version"
 msgstr "Sürüm"
 
-#: src/screens/general/volume_button_setting.tsx:22
+#: src/screens/settings_notifications/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "Ses düğmesi ezanı durdurur"
 
@@ -1015,6 +1019,10 @@ msgstr "Çarşamba"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Hoş geldiniz"
+
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+msgid "When enabled, when using headphones, all audio will play only on headphones."
+msgstr "Etkinleştirildiğinde, kulaklık kullanırken tüm ses yalnızca kulaklıkta çalınır."
 
 #: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
@@ -1071,13 +1079,18 @@ msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 msgid "after"
 msgstr "sonra"
 
-#: src/utils/date.ts:246
+#: src/utils/date.ts:262
 msgid "ago"
 msgstr "önce"
 
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "İkindi"
+
+#. screen title
+#: src/navigation/types.ts:45
+msgid "backup_settings"
+msgstr "Yedekleme"
 
 #. screen title
 #: src/navigation/types.ts:75
@@ -1149,11 +1162,6 @@ msgstr "ayarlardan"
 msgid "fullscreen_alarm"
 msgstr "Ezanı dinle"
 
-#. screen title
-#: src/navigation/types.ts:45
-msgid "general_settings"
-msgstr "Genel"
-
 #: src/navigation/types.ts:32
 msgid "home"
 msgstr "Anasayfa"
@@ -1171,7 +1179,7 @@ msgstr "namaz vakti gizli mi?"
 msgid "isha.prayer"
 msgstr "Yatsı"
 
-#: src/utils/date.ts:246
+#: src/utils/date.ts:262
 msgid "later"
 msgstr "daha sonra"
 

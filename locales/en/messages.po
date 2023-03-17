@@ -50,12 +50,12 @@ msgid "Accuracy"
 msgstr "Accuracy"
 
 #: src/components/audio_picker.tsx:367
-#: src/screens/settings_adhan/index.tsx:186
+#: src/screens/settings_adhan/index.tsx:189
 msgid "Add"
 msgstr "Add"
 
-#: src/screens/settings_adhan/index.tsx:159
-#: src/screens/settings_adhan/index.tsx:164
+#: src/screens/settings_adhan/index.tsx:162
+#: src/screens/settings_adhan/index.tsx:167
 msgid "Add Custom Adhan"
 msgstr "Add Custom Adhan"
 
@@ -67,7 +67,7 @@ msgstr "Add Reminder"
 msgid "Adhan"
 msgstr "Adhan"
 
-#: src/screens/settings_adhan/index.tsx:97
+#: src/screens/settings_adhan/index.tsx:100
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Adhan audio file is not downloaded yet"
 
@@ -145,7 +145,7 @@ msgid "Calendar"
 msgstr "Calendar"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:183
+#: src/screens/settings_adhan/index.tsx:186
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -227,7 +227,7 @@ msgstr "Count"
 msgid "Country"
 msgstr "Country"
 
-#: src/screens/general/export_settings.tsx:27
+#: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "Custom sounds and muezzins will not be exported"
 
@@ -237,7 +237,7 @@ msgstr "Dark"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
-#: src/screens/general/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_display/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -326,7 +326,7 @@ msgstr "Error while downloading audio"
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
 
-#: src/screens/general/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:71
 msgid "Error: failed to open file"
 msgstr "Error: failed to open file"
 
@@ -334,11 +334,11 @@ msgstr "Error: failed to open file"
 msgid "Ethiopic"
 msgstr "Ethiopic"
 
-#: src/screens/general/export_settings.tsx:25
+#: src/screens/settings_backup/export_settings.tsx:25
 msgid "Export app data"
 msgstr "Export app data"
 
-#: src/screens/general/export_settings.tsx:26
+#: src/screens/settings_backup/export_settings.tsx:26
 msgid "Export data"
 msgstr "Export data"
 
@@ -414,15 +414,15 @@ msgstr "If you still had problem with app stopping after some time, please visit
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 
-#: src/screens/general/import_settings.tsx:82
+#: src/screens/settings_backup/import_settings.tsx:82
 msgid "Import"
 msgstr "Import"
 
-#: src/screens/general/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:80
 msgid "Import app data"
 msgstr "Import app data"
 
-#: src/screens/general/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:66
 msgid "Import successful"
 msgstr "Import successful"
 
@@ -458,7 +458,7 @@ msgstr "Islamic (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamic (tabular)"
 
-#: src/utils/date.ts:241
+#: src/utils/date.ts:257
 msgid "Just now"
 msgstr "Just now"
 
@@ -547,8 +547,8 @@ msgstr "Moonsighting Committee"
 msgid "Muslim World League"
 msgstr "Muslim World League"
 
-#: src/screens/settings_adhan/index.tsx:167
 #: src/screens/settings_adhan/index.tsx:170
+#: src/screens/settings_adhan/index.tsx:173
 msgid "Name"
 msgstr "Name"
 
@@ -599,7 +599,7 @@ msgstr "Note that due to software and hardware errors, Qibla direction shown by 
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
-#: src/screens/general/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -757,7 +757,7 @@ msgstr "Secondary Calendar"
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
 
-#: src/screens/settings_adhan/index.tsx:176
+#: src/screens/settings_adhan/index.tsx:179
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
@@ -787,7 +787,7 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
-#: src/screens/general/volume_button_setting.tsx:30
+#: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Should app stop playing adhan when the volume button is pressed?"
 
@@ -869,7 +869,7 @@ msgstr "Sunday"
 msgid "System Default"
 msgstr "System Default"
 
-#: src/screens/settings_notifications/index.tsx:61
+#: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Tahajjud time mentioned in the app is the last third of the night"
 
@@ -994,6 +994,10 @@ msgstr "Use Map"
 msgid "Use adaptive theme?"
 msgstr "Use adaptive theme?"
 
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+msgid "Use headphones when available?"
+msgstr "Use headphones when available?"
+
 #: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
 msgstr "Using Coordinates"
@@ -1010,7 +1014,7 @@ msgstr "Using Search"
 msgid "Version"
 msgstr "Version"
 
-#: src/screens/general/volume_button_setting.tsx:22
+#: src/screens/settings_notifications/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "Volume button stops adhan"
 
@@ -1033,6 +1037,10 @@ msgstr "Wednesday"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Welcome"
+
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+msgid "When enabled, when using headphones, all audio will play only on headphones."
+msgstr "When enabled, when using headphones, all audio will play only on headphones."
 
 #: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
@@ -1092,13 +1100,18 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:246
+#: src/utils/date.ts:262
 msgid "ago"
 msgstr "ago"
 
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
 msgstr "Asr"
+
+#. screen title
+#: src/navigation/types.ts:45
+msgid "backup_settings"
+msgstr "Backup"
 
 #. screen title
 #: src/navigation/types.ts:75
@@ -1170,11 +1183,6 @@ msgstr "from settings"
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
-#. screen title
-#: src/navigation/types.ts:45
-msgid "general_settings"
-msgstr "General"
-
 #: src/navigation/types.ts:32
 msgid "home"
 msgstr "Home"
@@ -1192,7 +1200,7 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:246
+#: src/utils/date.ts:262
 msgid "later"
 msgstr "later"
 
