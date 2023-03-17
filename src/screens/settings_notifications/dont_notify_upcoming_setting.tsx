@@ -25,7 +25,7 @@ export function DontNotifyUpcomingSetting(props: IStackProps) {
             size="lg"
           />
         </HStack>
-        <FormControl.HelperText>
+        <FormControl.HelperText mt="-1">
           {t`if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound`}
         </FormControl.HelperText>
       </FormControl>

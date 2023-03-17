@@ -18,7 +18,7 @@ export function NotifyNextAdhanSetting(props: IStackProps) {
             size="lg"
           />
         </HStack>
-        <FormControl.HelperText>
+        <FormControl.HelperText mt="-1">
           {t`If enabled, when a notification is shown, it will contain info for the next prayer time`}
         </FormControl.HelperText>
       </FormControl>

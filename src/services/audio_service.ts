@@ -13,6 +13,7 @@ export async function playAudio(audio: AudioEntry) {
   const result = await play({
     audioEntry: audio,
     volumeBtnInterrupts: settingsState.VOLUME_BUTTON_STOPS_ADHAN,
+    preferExternalDevice: settingsState.PREFER_EXTERNAL_AUDIO_DEVICE,
   });
   settings.setState({IS_PLAYING_AUDIO: false});
 

@@ -9,6 +9,7 @@ import {
 import {useCallback, useState} from 'react';
 import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
+import {PreferHeadphoneSetting} from './prefer_headphone_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import NotificationSetting from '@/screens/settings_notifications/notification_setting';
 
@@ -40,7 +41,7 @@ export function NotificationSettings(props: IScrollViewProps) {
           expanded={expandedPrayer === p}
         />
       ))}
-      <HStack p="1" alignItems="flex-start">
+      <HStack p="1" alignItems="flex-start" mb="6">
         <Text
           fontSize="xs"
           _dark={{
@@ -61,8 +62,9 @@ export function NotificationSettings(props: IScrollViewProps) {
           {t`Tahajjud time mentioned in the app is the last third of the night`}
         </Text>
       </HStack>
-      <NotifyNextAdhanSetting mt="4" />
-      <DontNotifyUpcomingSetting mt="4" mb="3" />
+      <NotifyNextAdhanSetting mb="6" />
+      <DontNotifyUpcomingSetting mb="6" />
+      <PreferHeadphoneSetting mb="4" />
     </ScrollView>
   );
 }

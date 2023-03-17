@@ -47,6 +47,7 @@ export type SettingsStore = {
   ADHAN_VOLUME: number;
   // behavior related
   VOLUME_BUTTON_STOPS_ADHAN: boolean;
+  PREFER_EXTERNAL_AUDIO_DEVICE: boolean;
   // widget
   SHOW_WIDGET: boolean;
   SHOW_WIDGET_COUNTDOWN: boolean;
@@ -130,6 +131,7 @@ export const settings = createStore<SettingsStore>()(
       QIBLA_FINDER_UNDERSTOOD: false,
       QIBLA_FINDER_ORIENTATION_LOCKED: true,
       VOLUME_BUTTON_STOPS_ADHAN: false,
+      PREFER_EXTERNAL_AUDIO_DEVICE: false,
       COUNTER_HISTORY_VISIBLE: false,
 
       // adhan entry helper
