@@ -1,9 +1,6 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
-import MediaPlayer, {
-  AudioEntry,
-  StartPlayerOptions,
-} from '@/modules/media_player';
+import MediaPlayer, {AudioEntry} from '@/modules/media_player';
 
 /** returns `true` if interrupted during play, `false` otherwise */
 export async function play({
@@ -13,7 +10,8 @@ export async function play({
 }: {
   audioEntry: AudioEntry;
   volumeBtnInterrupts?: boolean;
-} & StartPlayerOptions) {
+  preferExternalDevice?: boolean;
+}) {
   try {
     await MediaPlayer.setupPlayer();
   } catch (e) {
@@ -57,8 +55,9 @@ export async function play({
     await MediaPlayer.setDataSource({
       uri: audioEntry.filepath,
       loop: !!audioEntry.loop,
+      preferExternalDevice,
     });
-    await MediaPlayer.start({preferExternalDevice});
+    await MediaPlayer.start();
     const playbackResult = await playbackFinishedDefer;
     return playbackResult;
   } catch (e) {

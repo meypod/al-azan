@@ -44,16 +44,20 @@ export function isIntrusive(entry: AudioEntry | undefined) {
   return !isSilent(entry) && !entry?.notif;
 }
 
-export type StartPlayerOptions = {preferExternalDevice?: boolean};
+export type SetDataSourceOptions = {
+  uri: string | number;
+  loop: boolean;
+  preferExternalDevice?: boolean;
+};
 
 interface MediaPlayerModuleInterface {
-  start(options?: StartPlayerOptions): Promise<void>;
+  start(): Promise<void>;
   stop(): Promise<void>;
   pause(): Promise<void>;
   setupPlayer(): Promise<void>;
   destroy(): Promise<void>;
   setVolume(value: number): Promise<void>;
-  setDataSource(options: {uri: string | number; loop: boolean}): Promise<void>;
+  setDataSource(options?: SetDataSourceOptions): Promise<void>;
   getState(): Promise<PlaybackState>;
   getRingtones(): Promise<AudioEntry[]>;
   addListener(eventName: string): void;
@@ -71,16 +75,13 @@ const pause = MediaPlayerModule.pause;
 const setupPlayer = MediaPlayerModule.setupPlayer;
 const destroy = MediaPlayerModule.destroy;
 const setVolume = MediaPlayerModule.setVolume;
-const setDataSource = async (options: {
-  uri: string | number;
-  loop: boolean;
-}) => {
-  let {uri, loop} = options;
+const setDataSource = async (options: SetDataSourceOptions) => {
+  let {uri, loop, preferExternalDevice = false} = options;
   if (typeof options.uri === 'number') {
     const resolved = Image.resolveAssetSource(options.uri);
     uri = resolved.uri;
   }
-  return MediaPlayerModule.setDataSource({uri, loop});
+  return MediaPlayerModule.setDataSource({uri, loop, preferExternalDevice});
 };
 const getState = MediaPlayerModule.getState;
 const addEventListener = eventEmitter.addListener.bind(

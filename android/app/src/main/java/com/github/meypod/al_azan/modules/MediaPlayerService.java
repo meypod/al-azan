@@ -59,8 +59,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private PhoneStateListener phoneStateListener;
   private int currentState = TelephonyManager.CALL_STATE_IDLE;
 
-  private boolean preferExternalDevice = false;
-
   @Nullable
   @Override
   protected HeadlessJsTaskConfig getTaskConfig(Intent intent) {
@@ -128,7 +126,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
 
   public void start(boolean skipCheck) {
-    updateAudioAttributes();
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     if (!skipCheck) {
       if (currentState != TelephonyManager.CALL_STATE_IDLE) {
@@ -187,7 +184,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
 
   /** plays default notification sound if uri is null */
-  public void setDataSource(@Nullable Uri uri, boolean isLoopUri, Promise promise) {
+  public void setDataSource(@Nullable Uri uri, boolean isLoopUri, boolean preferExternalDevice, Promise promise) {
     if (setDataSourcePromise != null) {
       promise.reject("ERROR", "A setDataSource Call is already pending");
       return;
@@ -217,7 +214,10 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
       } else {
         player.setDataSource(ctx, uri);
       }
-
+      player.setAudioAttributes(new AudioAttributes.Builder()
+              .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+              .setUsage(preferExternalDevice && isExternalDeviceConnected(getApplicationContext()) ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
+              .build());
       player.prepareAsync();
     } catch (Exception e) {
       promise.reject("ERROR", "setDataSource: " + e.getLocalizedMessage());
@@ -251,15 +251,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     return false;
   }
 
-  private void updateAudioAttributes() {
-    if (player != null) {
-      player.setAudioAttributes(new AudioAttributes.Builder()
-              .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-              .setUsage(preferExternalDevice && isExternalDeviceConnected(getApplicationContext()) ? AudioAttributes.USAGE_MEDIA : AudioAttributes.USAGE_ALARM)
-              .build());
-    }
-  }
-
   public void setupPlayer() {
     releasePlayer();
     setupCallStateListener();
@@ -269,10 +260,6 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     player.setOnErrorListener(this);
     player.setOnPreparedListener(this);
     player.setOnCompletionListener(this);
-  }
-
-  public void setPreferExternalDevice(boolean preferred) {
-    this.preferExternalDevice = preferred;
   }
 
   @Nullable

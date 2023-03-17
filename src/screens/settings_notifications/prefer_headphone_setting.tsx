@@ -1,7 +1,6 @@
 import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Switch, Text} from 'native-base';
 import {useCallback} from 'react';
-import {stopAudio} from '@/services/audio_service';
 import {useSettings} from '@/store/settings';
 
 export function PreferHeadphoneSetting(props: IStackProps) {
@@ -12,7 +11,6 @@ export function PreferHeadphoneSetting(props: IStackProps) {
   const onToggle = useCallback(
     (value: boolean) => {
       setPreference(value);
-      stopAudio();
     },
     [setPreference],
   );

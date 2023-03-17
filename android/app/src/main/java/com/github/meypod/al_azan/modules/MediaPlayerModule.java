@@ -140,8 +140,9 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
         uri = Uri.parse(RAW_RESOURCE_PREFIX + resourceId);
       }
       boolean isLoopUri = bundle.getBoolean("loop", false);
+      boolean preferExternalDevice = bundle.getBoolean("preferExternalDevice", false);
       // uri can be null
-      mediaPlayerService.setDataSource(uri, isLoopUri, promise);
+      mediaPlayerService.setDataSource(uri, isLoopUri, preferExternalDevice, promise);
     } else {
       promise.reject("ERROR", "MediaPlayer is not set up yet.");
     }
@@ -159,9 +160,6 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   @ReactMethod
   public void start(ReadableMap args, Promise promise) {
     if (mediaPlayerService != null) {
-      if (args != null) {
-        mediaPlayerService.setPreferExternalDevice(args.getBoolean("preferExternalDevice"));
-      }
       mediaPlayerService.start(false);
     }
     promise.resolve(null);
