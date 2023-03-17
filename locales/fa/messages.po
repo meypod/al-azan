@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-17 16:40+0330\n"
+"POT-Creation-Date: 2023-03-17 17:12+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -978,7 +978,7 @@ msgstr "استفاده از تم تطبیقی؟"
 
 #: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
 msgid "Use headphones when available?"
-msgstr "استفاده از هدفون در صورت امکان؟"
+msgstr "استفاده از هدفون در صورت وجود؟"
 
 #: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
