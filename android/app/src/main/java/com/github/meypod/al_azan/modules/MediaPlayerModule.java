@@ -158,7 +158,7 @@ public class MediaPlayerModule extends ReactContextBaseJavaModule implements Ser
   }
 
   @ReactMethod
-  public void start(ReadableMap args, Promise promise) {
+  public void start(Promise promise) {
     if (mediaPlayerService != null) {
       mediaPlayerService.start(false);
     }
