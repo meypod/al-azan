@@ -1,1 +1,0 @@
-- Unlock screen orientation so the app can be used in landscape mode

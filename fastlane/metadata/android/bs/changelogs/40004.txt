@@ -1,1 +1,0 @@
-- fix: keep adhan notification after It's finished when It's not dismissed
