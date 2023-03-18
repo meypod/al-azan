@@ -113,6 +113,10 @@ Translation to other languages has been done by these awesome people:
 
 * [@b3r4t](https://github.com/b3r4t)
 
+#### Bosnian
+
+* [@SecularSteve](https://github.com/SecularSteve)
+
 ## Thanks to
 
 All of people who have helped this project grow.
