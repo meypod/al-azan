@@ -1275,11 +1275,11 @@ msgstr "Noćni Namaz"
 
 #: src/adhan/prayer.ts:44
 msgid "sunrise"
-msgstr "Zalazak"
+msgstr "Izlazak"
 
 #: src/adhan/prayer.ts:56
 msgid "sunset"
-msgstr "Sumrak"
+msgstr "Zalazak"
 
 #. screen title
 #: src/navigation/types.ts:80
