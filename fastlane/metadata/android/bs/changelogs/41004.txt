@@ -1,0 +1,2 @@
+- add translation for notification channels
+- make all notification channels all at once

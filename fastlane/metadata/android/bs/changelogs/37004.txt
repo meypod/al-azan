@@ -1,0 +1,6 @@
+- Added Tahajjud (Night Prayer) time. Hidden by default, now available in notification settings.
+- Added option to display next prayer time in adhan notification
+- There's a change to settings internally, no problem should occur during the update, but if you decided to use an older version after updating, you will lose your reminders and notification settings
+- Fix home screen not highlighting next prayer time correctly in some cases
+- Changed settings title of "Adhan" to "Muezzin"
+- Improved battery usage

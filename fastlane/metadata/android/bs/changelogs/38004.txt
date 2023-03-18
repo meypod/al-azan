@@ -1,0 +1,7 @@
+- Added settings to play adhan only on certain days (like play Dhuhr on Sundays and not the other days)
+- Improved reminders
+- App respects DnD settings now
+- Lots of tweaks and improvements
+
+for full changelog visit:
+https://github.com/meypod/al-azan/releases

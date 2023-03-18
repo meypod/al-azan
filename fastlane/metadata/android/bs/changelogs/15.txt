@@ -1,0 +1,1 @@
+- Add option to force all numbers to be Arabic or Latin
