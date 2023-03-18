@@ -155,7 +155,7 @@ msgstr "Odaberite Metodu Kalkulacije"
 
 #: src/screens/settings_calculation/index.tsx:106
 msgid "Choose High Latitude Setting"
-msgstr "Odaberite Postavku Velike Nadmorske Visine"
+msgstr "Odaberite Postavku Velike Geografske Širine"
 
 #: src/screens/settings_display/language_settings.tsx:82
 msgid "Choose Language"
@@ -386,7 +386,7 @@ msgstr "Visoka"
 
 #: src/screens/settings_calculation/index.tsx:104
 msgid "High Latitude"
-msgstr "Visoka Nadmorska Visina"
+msgstr "Visoka Geografska Širina"
 
 #: src/screens/settings_about/index.tsx:34
 msgid "Home"
@@ -480,11 +480,11 @@ msgstr "Latinski"
 #: src/screens/settings_location/index.tsx:272
 #: src/screens/settings_location/index.tsx:277
 msgid "Latitude"
-msgstr "Nadmorska Visina"
+msgstr "Geografska Širina"
 
 #: src/screens/settings_location/index.tsx:284
 msgid "Latitude is invalid"
-msgstr "Nadmorska Visina ne važi"
+msgstr "Geografska Širina ne važi"
 
 #: src/screens/settings_about/index.tsx:40
 msgid "License"
@@ -507,11 +507,11 @@ msgstr "Postavke za lokaciju"
 #: src/screens/settings_location/index.tsx:288
 #: src/screens/settings_location/index.tsx:293
 msgid "Longitude"
-msgstr "Nadmorska Širina"
+msgstr "Geografska Dužina"
 
 #: src/screens/settings_location/index.tsx:300
 msgid "Longitude is invalid"
-msgstr "Nadmorska Širina ne važi"
+msgstr "Geografska Dužina ne važi"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
