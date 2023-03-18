@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-17 17:12+0330\n"
+"POT-Creation-Date: 2023-03-19 01:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -976,7 +976,7 @@ msgstr "استفاده از نقشه"
 msgid "Use adaptive theme?"
 msgstr "استفاده از تم تطبیقی؟"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
 msgstr "استفاده از هدفون در صورت وجود؟"
 
@@ -1020,7 +1020,7 @@ msgstr "چهار شنبه"
 msgid "Welcome"
 msgstr "خوش آمدید"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "وقتی فعال باشد، هنگام استفاده از هدفون، تمام صداها فقط روی هدفون پخش می شود."
 

@@ -994,7 +994,7 @@ msgstr "Use Map"
 msgid "Use adaptive theme?"
 msgstr "Use adaptive theme?"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
 msgstr "Use headphones when available?"
 
@@ -1038,7 +1038,7 @@ msgstr "Wednesday"
 msgid "Welcome"
 msgstr "Welcome"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "When enabled, when using headphones, all audio will play only on headphones."
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-17 17:12+0330\n"
+"POT-Creation-Date: 2023-03-19 01:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -976,7 +976,7 @@ msgstr "استخدم الخريطة"
 msgid "Use adaptive theme?"
 msgstr "استخدم السمة المتكيفة؟"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
 msgstr "هل تستخدم سماعات الرأس عند توفرها؟"
 
@@ -1020,7 +1020,7 @@ msgstr "الأربعاء"
 msgid "Welcome"
 msgstr "مرحبا"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "عند التمكين، عند استخدام سماعات الرأس، سيتم تشغيل كل الصوت على سماعات الرأس فقط."
 

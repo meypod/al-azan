@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-17 17:12+0330\n"
+"POT-Creation-Date: 2023-03-19 01:39+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,7 +99,7 @@ msgstr "Etes-vous sûr de vouloir supprimer \"{0}\" ?"
 
 #: src/utils/dialogs.ts:9
 msgid "Are you sure you want to delete \"{itemName}\" ?"
-msgstr "Etes-vous sûr de vouloir supprimer \"{itemName}\" ? ?"
+msgstr "Etes-vous sûr de vouloir supprimer \"{itemName}\" ?"
 
 #: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete this?"
@@ -147,7 +147,7 @@ msgstr "Annuler"
 
 #: src/screens/settings_calculation/index.tsx:128
 msgid "Choose Asr Calculation Madhab"
-msgstr "Choisir le madhab de calcul du Asr"
+msgstr "Choisir le madhab pour le calcul du Asr"
 
 #: src/screens/settings_calculation/index.tsx:74
 msgid "Choose Calculation Method"
@@ -167,12 +167,12 @@ msgstr "Choisir la résolution polaire"
 
 #: src/screens/settings_calculation/index.tsx:173
 msgid "Choose Shafaq method"
-msgstr "Choisissez la méthode Shafaq"
+msgstr "Choisir la méthode Shafaq"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:26
 #: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
-msgstr "Choisissez le type de calendrier"
+msgstr "Choisir le type de calendrier"
 
 #: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
@@ -223,7 +223,7 @@ msgstr "Pays"
 
 #: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
-msgstr "Les sons et les muezzins personnalisés ne seront pas exportés"
+msgstr "Les sons et les Adhan personnalisés ne seront pas exportés"
 
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
@@ -373,7 +373,7 @@ msgstr "Hanafi"
 #: src/screens/settings_display/hide_prayer_settings.tsx:41
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
-msgstr "Masqué?"
+msgstr "Masqué"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:37
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
@@ -398,7 +398,7 @@ msgstr "Je comprends"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
-msgstr "Si cette option est activée, lorsqu'une notification est affichée, elle contiendra des informations sur la prochaine heure de prière"
+msgstr "En activant cette option, une notification affichée contiendra des informations sur la prochaine heure de prière"
 
 #: src/screens/settings_battery_optimizations/index.tsx:100
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
@@ -634,7 +634,7 @@ msgstr "Un septième de la nuit"
 #. shown in add/edit reminder dialog
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Only once?"
-msgstr "Une seule fois?"
+msgstr "Une seule fois"
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:44
 msgid "Only six items can be shown at the same time"
@@ -706,7 +706,7 @@ msgstr "Appelée la méthode ISNA"
 
 #: src/tasks/update_widgets.ts:20
 msgid "Remaining till"
-msgstr "Restant jusqu'à"
+msgstr "Restant jusqu'au"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -783,7 +783,7 @@ msgstr "Shia, Institut de géophysique, Université de Téhéran"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
-msgstr "L'application doit-elle arrêter la lecture de l'Adhan lorsque l'on appuie sur le bouton de volume ?"
+msgstr "Arrêter la lecture de l'Adhan en appuyant sur le bouton de volume"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
@@ -796,15 +796,15 @@ msgstr "Montrer le jour d'aujourd'hui"
 #: src/screens/settings_widget/index.tsx:62
 #: src/screens/settings_widget/index.tsx:77
 msgid "Show countdown?"
-msgstr "Montrer le compte à rebours?"
+msgstr "Montrer le compte à rebours"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
-msgstr "Montrer la prochaine prière dans la notification?"
+msgstr "Montrer la prochaine prière dans la notification"
 
 #: src/screens/settings_widget/index.tsx:40
 msgid "Show notification widget?"
-msgstr "Afficher le widget de notification?"
+msgstr "Afficher le widget dans les notifications"
 
 #: src/utils/permission.ts:137
 msgid "Show settings"
@@ -812,7 +812,7 @@ msgstr "Afficher les paramètres"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:21
 msgid "Show upcoming alarm notification?"
-msgstr "Afficher la notification d'alarme à venir?"
+msgstr "Afficher la notification d'alarme à venir"
 
 #: src/components/audio_picker.tsx:101
 msgid "Silent"
@@ -916,11 +916,11 @@ msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez 
 
 #: src/utils/permission.ts:38
 msgid "To see notifications about adhan, we need your permission."
-msgstr "Pour voir les notifications concernant l'Adhan, nous avons besoin de votre permission."
+msgstr "Nous avons besoin de votre permission pour voir les notifications de l'Adhan."
 
 #: src/utils/permission.ts:157
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
-msgstr "Pour arrêter la lecture de l'Adhan lorsque vous recevez un appel, nous devons lire l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
+msgstr "Pour arrêter la lecture de l'Adhan lorsque vous recevez un appel, nous devons avoir accès à l'état de votre téléphone. Ne pas autoriser cette permission désactive simplement la fonction."
 
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"
@@ -986,11 +986,11 @@ msgstr "Utiliser la carte"
 #: src/screens/settings_widget/index.tsx:85
 #: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
-msgstr "Utiliser un thème adaptatif?"
+msgstr "Utiliser un thème adaptatif"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
-msgstr "Utiliser des écouteurs lorsqu'ils sont disponibles ?"
+msgstr "Utiliser les écouteurs lorsqu'ils sont disponibles"
 
 #: src/screens/settings_location/index.tsx:268
 msgid "Using Coordinates"
@@ -1010,7 +1010,7 @@ msgstr "Version"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
-msgstr "Le bouton de volume arrête l'adhan"
+msgstr "Le bouton de volume arrête l'Adhan"
 
 #: src/constants/notification.ts:28
 msgid "WIDGET_CHANNEL_NAME"
@@ -1032,9 +1032,9 @@ msgstr "Mercredi"
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
-msgstr "Si cette option est activée, lorsque vous utilisez un casque, toutes les données audio sont lues uniquement sur le casque."
+msgstr "En activant cette option, tous les sons seront joués uniquement sur le casque lorsque vous utilisez un casque."
 
 #: src/screens/qibla_finder/index.tsx:85
 msgid "Wifi"
@@ -1055,7 +1055,7 @@ msgstr "Vous pouvez également coller les coordonnées à partir du presse-papie
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
-msgstr "Vous pouvez masquer ici les temps de prière que vous ne souhaitez pas voir apparaître sur l'écran principal:"
+msgstr "Vous pouvez masquer les temps de prière que vous ne souhaitez pas voir apparaître sur l'écran principal ici:"
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
@@ -1183,7 +1183,7 @@ msgstr "Accueil"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
-msgstr "si cette option est activée, une notification sera affichée environ une heure avant l'heure de la prière ou le rappel sonore"
+msgstr "En activant cette option, une notification sera affichée environ une heure avant l'heure de la prière ou le rappel sonore"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
@@ -1219,7 +1219,7 @@ msgstr "Moazen Zade"
 #: src/components/audio_picker.tsx:124
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
-msgstr "Muezzin"
+msgstr "Adhan"
 
 #. screen title
 #: src/navigation/types.ts:60
@@ -1263,7 +1263,7 @@ msgstr "Le widget de notification doit-il être affiché?"
 #: src/screens/settings_display/hide_prayer_setting.tsx:16
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
-msgstr "{prayerName} doit-il être caché?"
+msgstr "{prayerName} doit-elle être cachée?"
 
 #: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
@@ -1300,4 +1300,4 @@ msgstr "La notification du {prayerName} sera affichée"
 
 #: src/screens/settings_notifications/notification_setting.tsx:299
 msgid "{prayerName} sound will be played"
-msgstr "le son du {prayerName} sera joué"
+msgstr "Le son du {prayerName} sera joué"
