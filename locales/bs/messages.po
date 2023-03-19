@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-18 20:42+0330\n"
+"POT-Creation-Date: 2023-03-19 03:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -765,7 +765,7 @@ msgid ""
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr ""
-"Šafak koristi metode Odbora za Promatranje Mjeseca da \n"
+"Šafak koristi metode Odbora za Promatranje Mjeseca da\n"
 "odredi koju vrstu sumraka da koristi kako biste\n"
 "odredili vrijeme za Jaciju"
 
@@ -836,7 +836,7 @@ msgid ""
 "to prevent the app from getting killed in the background.\n"
 "In that case disable any power saving option for the app."
 msgstr ""
-"Nekim uređajima trebaju dodatne postavke unutar svog \n"
+"Nekim uređajima trebaju dodatne postavke unutar svog\n"
 "Napojnog Menadžera da spriječite uništenje aplikacije u pozadini.\n"
 "U tom slučaju onemogućite bilo koju opciju uštede energije za aplikaciju."
 
@@ -869,7 +869,7 @@ msgstr "Noćni Namaz naveden u aplikaciji je zadnja trećina noći"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
 msgid "Thai Solar"
-msgstr "Tajlandski Solarni Kalendar,"
+msgstr "Tajlandski Solarni Kalendar"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
@@ -988,7 +988,7 @@ msgstr "Koristite Kartu"
 msgid "Use adaptive theme?"
 msgstr "Koristite adaptivnu temu?"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:24
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
 msgstr "Koristite slušalice kad je dostupno?"
 
@@ -1032,7 +1032,7 @@ msgstr "Srijeda"
 msgid "Welcome"
 msgstr "Dobrodošli"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:28
+#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "Kada je omogućeno, kada koristite slušalice, sav zvuk će se pokretati samo na slušalicama."
 
