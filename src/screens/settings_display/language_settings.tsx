@@ -52,7 +52,7 @@ export function LanguageSettings(props: IStackProps) {
       value: 'de',
     },
     {
-      label: `bosanski`,
+      label: `Bosanski`,
       value: 'bs',
     },
   ];
