@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-19 03:36+0330\n"
+"POT-Creation-Date: 2023-03-19 20:59+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -157,7 +157,7 @@ msgstr "Odaberite Metodu Kalkulacije"
 msgid "Choose High Latitude Setting"
 msgstr "Odaberite Postavku Velike Geografske Širine"
 
-#: src/screens/settings_display/language_settings.tsx:82
+#: src/screens/settings_display/language_settings.tsx:88
 msgid "Choose Language"
 msgstr "Odaberite Jezik"
 
@@ -227,7 +227,7 @@ msgstr "Prilagođeni zvukovi i mujezini neće biti izvezeni"
 
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
-msgstr "Mračno"
+msgstr "Mračna"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -430,7 +430,7 @@ msgstr "Internet veza"
 
 #: src/screens/qibla_finder/index.tsx:70
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
-msgstr "Internet veza je neophodna da bi kibla mapa radila. Molimo vas da omogućite WiFi ili mobilnu mrežu i probajte ponovo."
+msgstr "Internet veza je neophodna da bi karta kible radila. Molimo vas da omogućite WiFi ili mobilnu mrežu i probajte ponovo."
 
 #: src/screens/settings_display/calendar_settings.tsx:31
 msgid "Islamic"
@@ -469,7 +469,7 @@ msgstr "Kuvajt"
 msgid "Label"
 msgstr "Oznaka"
 
-#: src/screens/settings_display/language_settings.tsx:79
+#: src/screens/settings_display/language_settings.tsx:85
 msgid "Language"
 msgstr "Jezik"
 
@@ -492,7 +492,7 @@ msgstr "Dozvola"
 
 #: src/screens/settings_display/theme_settings.tsx:37
 msgid "Light"
-msgstr "Svjetlo"
+msgstr "Svjetla"
 
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder/index.tsx:28
@@ -621,7 +621,7 @@ msgstr "U redu"
 
 #: src/utils/permission.ts:125
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
-msgstr "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
+msgstr "Na Androidu 12 i novijem, aplikaciji je potrebna i dozvola za alarme da bi ispravno radila, pa bi trebali i ovo dozvoliti."
 
 #: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
@@ -861,7 +861,7 @@ msgstr "Nedelja"
 
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
-msgstr "Sistemski Zadano"
+msgstr "Sistemski Zadana"
 
 #: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
@@ -876,7 +876,8 @@ msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
 "can start using this app."
 msgstr ""
-"Hvala van što ste odabrali ovu aplikaciju! Postoje stvari koje morate učiniti prije\n"
+"Hvala vam što ste odabrali ovu aplikaciju!\n"
+"Postoje stvari koje morate učiniti prije\n"
 "nego što možete početi koristiti ovu aplikaciju."
 
 #: src/adhan/calculation_methods.ts:64
@@ -958,7 +959,7 @@ msgstr "Nepouzdano"
 msgid "Unresolved (default)"
 msgstr "Neriješeno (zadano)"
 
-#: src/screens/settings_display/language_settings.tsx:58
+#: src/screens/settings_display/language_settings.tsx:64
 msgid "Unsupported"
 msgstr "Nepodržano"
 
@@ -1083,7 +1084,7 @@ msgstr "Većina ikona koje se koriste u ovoj aplikaciji su iz ikona google mater
 #. screen title
 #: src/navigation/types.ts:90
 msgid "about_settings"
-msgstr "O"
+msgstr "O Aplikaciji"
 
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:16
@@ -1229,7 +1230,7 @@ msgstr "Obavijesti i Zvuk"
 #. Title of the page where you can count your Qada prayers and fast
 #: src/navigation/types.ts:112
 msgid "qada_counter"
-msgstr "Kada Brojač"
+msgstr "Kadski Brojač"
 
 #: src/navigation/types.ts:108
 msgid "qibla_compass"
