@@ -85,6 +85,10 @@ adb shell cmd package uninstall -k com.github.meypod.al_azan
 
 All translations are synced with [translation.io](https://translation.io/) with source code as single source of translation keys. It is only compiled during CI build for releases. Syncing is done manually when `lingui.config.js` file is configured and `yarn sync_and_purge` command is run.
 
+### Contributing your language
+
+Please follow instructions commented [here](https://github.com/meypod/al-azan/issues/9#issuecomment-1260365126).
+
 ### Translators
 
 Translation to other languages has been done by these awesome people:
