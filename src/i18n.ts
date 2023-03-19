@@ -1,9 +1,10 @@
 import {i18n} from '@lingui/core';
-import {en, ar, fa, id, ur, de, fr, hi, tr} from 'make-plural/plurals';
+import {en, ar, fa, id, ur, de, fr, hi, tr, bs} from 'make-plural/plurals';
 import {I18nManager} from 'react-native';
 import {isRtlLang} from 'rtl-detect';
 
 import {messages as arMessages} from '../locales/ar/messages.mjs';
+import {messages as bsMessages} from '../locales/bs/messages.mjs';
 import {messages as deMessages} from '../locales/de/messages.mjs';
 import {messages as enMessages} from '../locales/en/messages.mjs';
 import {messages as faMessages} from '../locales/fa/messages.mjs';
@@ -23,6 +24,7 @@ i18n.loadLocaleData({
   id: {plurals: id},
   tr: {plurals: tr},
   ur: {plurals: ur},
+  bs: {plurals: bs},
 });
 
 export let isRTL = false;
@@ -74,6 +76,11 @@ const localeFallbacks = [
     base: 'ur',
     fallback: 'ur',
     messages: urMessages,
+  },
+  {
+    base: 'bs',
+    fallback: 'bs',
+    messages: bsMessages,
   },
 ];
 
