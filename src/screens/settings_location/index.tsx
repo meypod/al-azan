@@ -22,6 +22,7 @@ import NumericInput from '@/components/numeric_input';
 import {useCalcSettings} from '@/store/calculation';
 import {useSettings} from '@/store/settings';
 import {getCached} from '@/utils/cached';
+import {askForLocationService} from '@/utils/dialogs';
 import {
   CountryInfo,
   getCountries,
@@ -129,7 +130,10 @@ export function LocationSettings(props: IScrollViewProps) {
       });
   }, [onLatChange, onLongChange]);
 
-  const getCoordinatesFromLocationProvider = useCallback(() => {
+  const getCoordinatesFromLocationProvider = useCallback(async () => {
+    if (!(await askForLocationService())) {
+      return;
+    }
     setGettingLocation(true);
     LocationProvider.getCurrentPosition({
       enableHighAccuracy: true,

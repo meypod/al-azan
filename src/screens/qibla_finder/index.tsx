@@ -4,14 +4,13 @@ import {Box, Button, HStack, Text} from 'native-base';
 import {useCallback} from 'react';
 import {Alert} from 'react-native';
 import {
-  isLocationEnabled,
   isNetworkAvailable,
-  openLocationSettings,
   openMobileDataSettings,
   openMobileWifiSettings,
 } from '@/modules/activity';
 import {navigate} from '@/navigation/root_navigation';
 import {useSettings} from '@/store/settings';
+import {askForLocationService} from '@/utils/dialogs';
 
 export function QiblaFinder() {
   const [understood, setUnderstood] = useSettings('QIBLA_FINDER_UNDERSTOOD');
@@ -20,30 +19,10 @@ export function QiblaFinder() {
     setUnderstood(true);
   }, [setUnderstood]);
 
-  const askForLocationService = useCallback(async () => {
-    const locationEnabled = await isLocationEnabled();
-    if (!locationEnabled) {
-      await new Promise(resolve => {
-        Alert.alert(
-          t`Location`,
-          t`Qibla finder needs location service. If not enabled, location from app settings will be used.`,
-          [
-            {
-              text: t`Okay`,
-              style: 'cancel',
-              onPress: () => resolve(false),
-            },
-            {
-              text: t`Location settings`,
-              onPress: () => {
-                openLocationSettings().then(resolve);
-              },
-              style: 'default',
-            },
-          ],
-        );
-      });
-    }
+  const askForGps = useCallback(async () => {
+    await askForLocationService(
+      t`Qibla finder needs location service. If not enabled, location from app settings will be used.`,
+    );
   }, []);
 
   const navigateToQiblaMap = useCallback(async () => {
@@ -93,14 +72,14 @@ export function QiblaFinder() {
       });
       if (!networkResult) return;
     }
-    await askForLocationService();
+    await askForGps();
     navigate('QiblaMap');
-  }, [askForLocationService]);
+  }, [askForGps]);
 
   const navigateToQiblaCompass = useCallback(async () => {
-    await askForLocationService();
+    await askForGps();
     navigate('QiblaCompass');
-  }, [askForLocationService]);
+  }, [askForGps]);
 
   return (
     <Box safeArea p="3">
