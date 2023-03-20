@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-19 20:59+0330\n"
+"POT-Creation-Date: 2023-03-20 06:07+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,11 +97,11 @@ msgstr "Arab/Persia"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
 
-#: src/utils/dialogs.ts:9
+#: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete \"{itemName}\" ?"
 msgstr "Apakah Anda yakin ingin menghapus \"{itemName}\" ?"
 
-#: src/utils/dialogs.ts:10
+#: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete this?"
 msgstr "Apakah Anda yakin ingin menghapus ini?"
 
@@ -178,12 +178,12 @@ msgstr "Pilih jenis kalender"
 msgid "Choose numbering system"
 msgstr "Pilih sistem penomoran"
 
-#: src/screens/settings_location/index.tsx:231
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:237
 msgid "City/Area"
 msgstr "Kota/Daerah"
 
-#: src/screens/settings_location/index.tsx:122
+#: src/screens/settings_location/index.tsx:123
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
@@ -208,7 +208,7 @@ msgstr "Sensor kompas tidak tersedia"
 msgid "Confirm"
 msgstr "Selesai"
 
-#: src/screens/settings_location/index.tsx:142
+#: src/screens/settings_location/index.tsx:146
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
@@ -216,8 +216,8 @@ msgstr "Koordinat diperbarui"
 msgid "Count"
 msgstr "Menghitung"
 
-#: src/screens/settings_location/index.tsx:208
-#: src/screens/settings_location/index.tsx:210
+#: src/screens/settings_location/index.tsx:212
+#: src/screens/settings_location/index.tsx:214
 msgid "Country"
 msgstr "Negara"
 
@@ -240,7 +240,7 @@ msgstr "Bawaan"
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:200
-#: src/utils/dialogs.ts:7
+#: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Hapus"
 
@@ -260,7 +260,7 @@ msgstr "Suara perangkat"
 msgid "Disabled"
 msgstr "Tidak Aktif"
 
-#: src/screens/qibla_finder/index.tsx:108
+#: src/screens/qibla_finder/index.tsx:87
 msgid "Disclaimer"
 msgstr "Penafian"
 
@@ -299,15 +299,15 @@ msgstr "Otoritas Umum Mesir"
 msgid "Enabled"
 msgstr "Aktif"
 
-#: src/screens/settings_location/index.tsx:128
+#: src/screens/settings_location/index.tsx:129
 msgid "Error getting clipboard data"
 msgstr "Tidak mendapatkan data clipboard"
 
-#: src/screens/settings_location/index.tsx:221
+#: src/screens/settings_location/index.tsx:225
 msgid "Error in loading countries"
 msgstr "Kesalahan dalam memuat daftar negara"
 
-#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:251
 msgid "Error in loading search results"
 msgstr "Kesalahan dalam memuat hasil pencarian"
 
@@ -316,7 +316,7 @@ msgid "Error while downloading audio"
 msgstr "Kesalahan saat mengunduh audio"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
@@ -336,7 +336,7 @@ msgstr "Mengekspor data aplikasi"
 msgid "Export data"
 msgstr "Ekspor data"
 
-#: src/screens/settings_location/index.tsx:193
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
 
@@ -350,7 +350,7 @@ msgstr "Umum (default)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "Mendapatkan Koordinat"
 
@@ -392,7 +392,7 @@ msgstr "Lintang Tinggi"
 msgid "Home"
 msgstr "Situs"
 
-#: src/screens/qibla_finder/index.tsx:119
+#: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
 msgstr "Aku mengerti"
 
@@ -420,15 +420,15 @@ msgstr "Mengimpor data aplikasi"
 msgid "Import successful"
 msgstr "Impor berhasil"
 
-#: src/screens/qibla_finder/index.tsx:52
+#: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
 msgstr "Info"
 
-#: src/screens/qibla_finder/index.tsx:69
+#: src/screens/qibla_finder/index.tsx:48
 msgid "Internet connection"
 msgstr "Koneksi internet"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Koneksi internet diperlukan agar peta kiblat dapat berfungsi. Aktifkan wifi atau data seluler Anda dan coba lagi."
 
@@ -477,12 +477,12 @@ msgstr "Bahasa"
 msgid "Latin"
 msgstr "Latin"
 
-#: src/screens/settings_location/index.tsx:272
-#: src/screens/settings_location/index.tsx:277
+#: src/screens/settings_location/index.tsx:276
+#: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
 msgstr "Latitud"
 
-#: src/screens/settings_location/index.tsx:284
+#: src/screens/settings_location/index.tsx:288
 msgid "Latitude is invalid"
 msgstr "Latitud tidak valid"
 
@@ -495,21 +495,21 @@ msgid "Light"
 msgstr "Terang"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
+#: src/utils/dialogs.ts:35
 msgid "Location"
 msgstr "Lokasi"
 
-#: src/screens/qibla_finder/index.tsx:37
+#: src/utils/dialogs.ts:44
 msgid "Location settings"
 msgstr "Pengaturan lokasi"
 
-#: src/screens/settings_location/index.tsx:288
-#: src/screens/settings_location/index.tsx:293
+#: src/screens/settings_location/index.tsx:292
+#: src/screens/settings_location/index.tsx:297
 msgid "Longitude"
 msgstr "Longitud"
 
-#: src/screens/settings_location/index.tsx:300
+#: src/screens/settings_location/index.tsx:304
 msgid "Longitude is invalid"
 msgstr "Longitud tidak valid"
 
@@ -525,7 +525,7 @@ msgstr "Sedang"
 msgid "Middle of the Night"
 msgstr "Pertengahan malam"
 
-#: src/screens/qibla_finder/index.tsx:78
+#: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
 msgstr "Data Seluler"
 
@@ -566,7 +566,7 @@ msgid "Next Day"
 msgstr "Hari Brkut"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
-#: src/utils/dialogs.ts:13
+#: src/utils/dialogs.ts:14
 msgid "No"
 msgstr "Tidak"
 
@@ -587,7 +587,7 @@ msgstr "Tidak ada (Otomatis)"
 msgid "Not now"
 msgstr "Tidak sekarang"
 
-#: src/screens/qibla_finder/index.tsx:111
+#: src/screens/qibla_finder/index.tsx:90
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Harap diperhatikan bahwa karena kesalahan perangkat lunak dan perangkat keras, arah kiblat yang ditunjukkan oleh aplikasi ini, khususnya dalam mode kompas, bisa saja salah."
 
@@ -611,9 +611,9 @@ msgstr "Izin Pemberitahuan"
 msgid "Numbering system"
 msgstr "Sistem penomoran"
 
-#: src/screens/qibla_finder/index.tsx:32
-#: src/screens/qibla_finder/index.tsx:56
-#: src/screens/qibla_finder/index.tsx:73
+#: src/screens/qibla_finder/index.tsx:35
+#: src/screens/qibla_finder/index.tsx:52
+#: src/utils/dialogs.ts:39
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -660,13 +660,17 @@ msgstr "Adzan yang akan datang"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Pengingat yang akan datang"
 
-#: src/screens/settings_location/index.tsx:328
+#: src/screens/settings_location/index.tsx:332
 msgid "Paste"
 msgstr "Tempel"
 
 #: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "Izin Status Telepon"
+
+#: src/utils/dialogs.ts:36
+msgid "Please enable location service"
+msgstr "Harap aktifkan layanan lokasi"
 
 #: src/screens/settings_calculation/index.tsx:141
 msgid "Polar Resolution"
@@ -688,11 +692,11 @@ msgstr "Qatar"
 msgid "Qibla"
 msgstr "Kiblat"
 
-#: src/screens/qibla_finder/index.tsx:29
+#: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "Pencari kiblat membutuhkan layanan lokasi. Jika tidak diaktifkan, lokasi dari pengaturan aplikasi akan digunakan."
 
-#: src/screens/qibla_finder/index.tsx:53
+#: src/screens/qibla_finder/index.tsx:32
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Peta kiblat saat ini tidak tersedia dalam versi F-Droid. Peta ini mungkin akan tersedia dalam pembaruan di masa yang akan datang."
 
@@ -900,7 +904,7 @@ msgstr "Waktu"
 msgid "Time format"
 msgstr "Format waktu"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
@@ -965,11 +969,11 @@ msgstr "Memperbarui widget"
 msgid "Use 24-Hour format"
 msgstr "Gunakan format 24 Jam"
 
-#: src/screens/qibla_finder/index.tsx:116
+#: src/screens/qibla_finder/index.tsx:95
 msgid "Use Compass"
 msgstr "Gunakan Kompas"
 
-#: src/screens/qibla_finder/index.tsx:115
+#: src/screens/qibla_finder/index.tsx:94
 msgid "Use Map"
 msgstr "Gunakan Peta"
 
@@ -982,15 +986,15 @@ msgstr "Gunakan tema adaptif?"
 msgid "Use headphones when available?"
 msgstr "Gunakan headphone jika tersedia?"
 
-#: src/screens/settings_location/index.tsx:268
+#: src/screens/settings_location/index.tsx:272
 msgid "Using Coordinates"
 msgstr "Menggunakan Koordinat"
 
-#: src/screens/settings_location/index.tsx:185
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "Menggunakan GPS"
 
-#: src/screens/settings_location/index.tsx:204
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "Menggunakan Pencarian"
 
@@ -1026,12 +1030,12 @@ msgstr "Selamat Datang!"
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "Apabila diaktifkan, ketika menggunakan headphone, semua audio hanya akan diputar pada headphone."
 
-#: src/screens/qibla_finder/index.tsx:85
+#: src/screens/qibla_finder/index.tsx:64
 msgid "Wifi"
 msgstr "Wifi"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
-#: src/utils/dialogs.ts:18
+#: src/utils/dialogs.ts:19
 msgid "Yes"
 msgstr "Ya"
 
@@ -1039,7 +1043,7 @@ msgstr "Ya"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
-#: src/screens/settings_location/index.tsx:322
+#: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-19 20:59+0330\n"
+"POT-Creation-Date: 2023-03-20 06:07+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,11 +97,11 @@ msgstr "Arabe/Persan"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Etes-vous sûr de vouloir supprimer \"{0}\" ?"
 
-#: src/utils/dialogs.ts:9
+#: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete \"{itemName}\" ?"
 msgstr "Etes-vous sûr de vouloir supprimer \"{itemName}\" ?"
 
-#: src/utils/dialogs.ts:10
+#: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete this?"
 msgstr "Êtes-vous sûr de vouloir le supprimer ?"
 
@@ -178,12 +178,12 @@ msgstr "Choisir le type de calendrier"
 msgid "Choose numbering system"
 msgstr "Choisir le système de numérotation"
 
-#: src/screens/settings_location/index.tsx:231
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:237
 msgid "City/Area"
 msgstr "Ville/Zone"
 
-#: src/screens/settings_location/index.tsx:122
+#: src/screens/settings_location/index.tsx:123
 msgid "Clipboard data does not contain coordinates"
 msgstr "Les données du presse-papiers ne contiennent pas de coordonnées"
 
@@ -208,7 +208,7 @@ msgstr "Boussole non disponible"
 msgid "Confirm"
 msgstr "Confirmer"
 
-#: src/screens/settings_location/index.tsx:142
+#: src/screens/settings_location/index.tsx:146
 msgid "Coordinates updated"
 msgstr "Coordonnées mises à jour"
 
@@ -216,8 +216,8 @@ msgstr "Coordonnées mises à jour"
 msgid "Count"
 msgstr "Compte"
 
-#: src/screens/settings_location/index.tsx:208
-#: src/screens/settings_location/index.tsx:210
+#: src/screens/settings_location/index.tsx:212
+#: src/screens/settings_location/index.tsx:214
 msgid "Country"
 msgstr "Pays"
 
@@ -240,7 +240,7 @@ msgstr "Défaut"
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:200
-#: src/utils/dialogs.ts:7
+#: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -260,7 +260,7 @@ msgstr "Sons de l'appareil"
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: src/screens/qibla_finder/index.tsx:108
+#: src/screens/qibla_finder/index.tsx:87
 msgid "Disclaimer"
 msgstr "Clause de non-responsabilité"
 
@@ -299,15 +299,15 @@ msgstr "Autorité égyptienne d'études générales"
 msgid "Enabled"
 msgstr "Activé"
 
-#: src/screens/settings_location/index.tsx:128
+#: src/screens/settings_location/index.tsx:129
 msgid "Error getting clipboard data"
 msgstr "Erreur dans la récupération des données du presse-papiers"
 
-#: src/screens/settings_location/index.tsx:221
+#: src/screens/settings_location/index.tsx:225
 msgid "Error in loading countries"
 msgstr "Erreur dans le chargement des pays"
 
-#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:251
 msgid "Error in loading search results"
 msgstr "Erreur dans le chargement des résultats de recherche"
 
@@ -316,7 +316,7 @@ msgid "Error while downloading audio"
 msgstr "Erreur lors du téléchargement d'un fichier audio"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
 
@@ -336,7 +336,7 @@ msgstr "Exporter les données de l'application"
 msgid "Export data"
 msgstr "Exporter les données"
 
-#: src/screens/settings_location/index.tsx:193
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Trouver ma position"
 
@@ -350,7 +350,7 @@ msgstr "Général (par défaut)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "Obtenir des coordonnées"
 
@@ -392,7 +392,7 @@ msgstr "Latitude élevée"
 msgid "Home"
 msgstr "Accueil"
 
-#: src/screens/qibla_finder/index.tsx:119
+#: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
 msgstr "Je comprends"
 
@@ -420,15 +420,15 @@ msgstr "Importer les données de l'application"
 msgid "Import successful"
 msgstr "Importation réussie"
 
-#: src/screens/qibla_finder/index.tsx:52
+#: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
 msgstr "Info"
 
-#: src/screens/qibla_finder/index.tsx:69
+#: src/screens/qibla_finder/index.tsx:48
 msgid "Internet connection"
 msgstr "Connexion Internet"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Une connexion Internet est nécessaire pour que la carte de la qibla fonctionne. Veuillez activer votre wifi ou vos données mobiles et réessayer."
 
@@ -477,12 +477,12 @@ msgstr "Langue"
 msgid "Latin"
 msgstr "Latin"
 
-#: src/screens/settings_location/index.tsx:272
-#: src/screens/settings_location/index.tsx:277
+#: src/screens/settings_location/index.tsx:276
+#: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
 msgstr "Latitude"
 
-#: src/screens/settings_location/index.tsx:284
+#: src/screens/settings_location/index.tsx:288
 msgid "Latitude is invalid"
 msgstr "La latitude n'est pas valide"
 
@@ -495,21 +495,21 @@ msgid "Light"
 msgstr "Clair"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
+#: src/utils/dialogs.ts:35
 msgid "Location"
 msgstr "Localisation"
 
-#: src/screens/qibla_finder/index.tsx:37
+#: src/utils/dialogs.ts:44
 msgid "Location settings"
 msgstr "Paramètres de localisation"
 
-#: src/screens/settings_location/index.tsx:288
-#: src/screens/settings_location/index.tsx:293
+#: src/screens/settings_location/index.tsx:292
+#: src/screens/settings_location/index.tsx:297
 msgid "Longitude"
 msgstr "Longitude"
 
-#: src/screens/settings_location/index.tsx:300
+#: src/screens/settings_location/index.tsx:304
 msgid "Longitude is invalid"
 msgstr "La longitude n'est pas valide"
 
@@ -525,7 +525,7 @@ msgstr "Précision moyenne"
 msgid "Middle of the Night"
 msgstr "Le milieu de la nuit"
 
-#: src/screens/qibla_finder/index.tsx:78
+#: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
 msgstr "Données mobiles"
 
@@ -566,7 +566,7 @@ msgid "Next Day"
 msgstr "Jour suivant"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
-#: src/utils/dialogs.ts:13
+#: src/utils/dialogs.ts:14
 msgid "No"
 msgstr "Non"
 
@@ -587,7 +587,7 @@ msgstr "Aucun (automatique)"
 msgid "Not now"
 msgstr "Pas maintenant"
 
-#: src/screens/qibla_finder/index.tsx:111
+#: src/screens/qibla_finder/index.tsx:90
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Notez qu'en raison d'erreurs logicielles et matérielles, la direction de la Qibla indiquée par cette application, en particulier en mode boussole, peut être erronée."
 
@@ -611,9 +611,9 @@ msgstr "Permission de notifications"
 msgid "Numbering system"
 msgstr "Système de numérotation"
 
-#: src/screens/qibla_finder/index.tsx:32
-#: src/screens/qibla_finder/index.tsx:56
-#: src/screens/qibla_finder/index.tsx:73
+#: src/screens/qibla_finder/index.tsx:35
+#: src/screens/qibla_finder/index.tsx:52
+#: src/utils/dialogs.ts:39
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -660,13 +660,17 @@ msgstr "Adhan à venir"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Prochain rappel"
 
-#: src/screens/settings_location/index.tsx:328
+#: src/screens/settings_location/index.tsx:332
 msgid "Paste"
 msgstr "Coller"
 
 #: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "Permission d'accès à l'état du téléphone"
+
+#: src/utils/dialogs.ts:36
+msgid "Please enable location service"
+msgstr "Veuillez activer le service de localisation"
 
 #: src/screens/settings_calculation/index.tsx:141
 msgid "Polar Resolution"
@@ -688,11 +692,11 @@ msgstr "Qatar"
 msgid "Qibla"
 msgstr "Qibla"
 
-#: src/screens/qibla_finder/index.tsx:29
+#: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "La recherche de Qibla nécessite un service de localisation. S'il n'est pas activé, la localisation provenant des paramètres de l'application sera utilisée."
 
-#: src/screens/qibla_finder/index.tsx:53
+#: src/screens/qibla_finder/index.tsx:32
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "La carte Qibla n'est actuellement pas disponible dans les versions de F-Droid. Elle pourrait être disponible dans les prochaines mises à jour."
 
@@ -910,7 +914,7 @@ msgstr "Temps"
 msgid "Time format"
 msgstr "Format de l'heure"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Pour calculer l'Adhan, nous avons besoin de votre position. Vous pouvez utiliser le bouton \"Trouver ma position\", ou utiliser la recherche par pays et ville/région, ou encore entrer vos coordonnées manuellement."
 
@@ -975,11 +979,11 @@ msgstr "Mise à jour des widgets"
 msgid "Use 24-Hour format"
 msgstr "Utiliser le format 24 heures"
 
-#: src/screens/qibla_finder/index.tsx:116
+#: src/screens/qibla_finder/index.tsx:95
 msgid "Use Compass"
 msgstr "Utiliser la boussole"
 
-#: src/screens/qibla_finder/index.tsx:115
+#: src/screens/qibla_finder/index.tsx:94
 msgid "Use Map"
 msgstr "Utiliser la carte"
 
@@ -992,15 +996,15 @@ msgstr "Utiliser un thème adaptatif"
 msgid "Use headphones when available?"
 msgstr "Utiliser les écouteurs lorsqu'ils sont disponibles"
 
-#: src/screens/settings_location/index.tsx:268
+#: src/screens/settings_location/index.tsx:272
 msgid "Using Coordinates"
 msgstr "Utilisation des coordonnées"
 
-#: src/screens/settings_location/index.tsx:185
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "Utilisation du GPS"
 
-#: src/screens/settings_location/index.tsx:204
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "Utilisation de la recherche"
 
@@ -1036,12 +1040,12 @@ msgstr "Bienvenue"
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "En activant cette option, tous les sons seront joués uniquement sur le casque lorsque vous utilisez un casque."
 
-#: src/screens/qibla_finder/index.tsx:85
+#: src/screens/qibla_finder/index.tsx:64
 msgid "Wifi"
 msgstr "Wifi"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
-#: src/utils/dialogs.ts:18
+#: src/utils/dialogs.ts:19
 msgid "Yes"
 msgstr "Oui"
 
@@ -1049,7 +1053,7 @@ msgstr "Oui"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Vous pouvez accéder au gestionnaire d'énergie de votre appareil en utilisant le bouton ci-dessous."
 
-#: src/screens/settings_location/index.tsx:322
+#: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
 msgstr "Vous pouvez également coller les coordonnées à partir du presse-papiers"
 

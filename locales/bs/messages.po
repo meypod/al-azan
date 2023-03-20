@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-19 20:59+0330\n"
+"POT-Creation-Date: 2023-03-20 06:07+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,11 +97,11 @@ msgstr "Arapsko-Perzijski"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Jeste li sigurni da želite izbrisati \"{0}\" ?"
 
-#: src/utils/dialogs.ts:9
+#: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete \"{itemName}\" ?"
 msgstr "Jeste li sigurni da želite izbrisati \"{itemName}\" ?"
 
-#: src/utils/dialogs.ts:10
+#: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete this?"
 msgstr "Jeste li sigurni da želite ovo izbrisati?"
 
@@ -178,12 +178,12 @@ msgstr "Odaberite tip kalndara"
 msgid "Choose numbering system"
 msgstr "Odaberite brojni sistem"
 
-#: src/screens/settings_location/index.tsx:231
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:237
 msgid "City/Area"
 msgstr "Grad/Okruženje"
 
-#: src/screens/settings_location/index.tsx:122
+#: src/screens/settings_location/index.tsx:123
 msgid "Clipboard data does not contain coordinates"
 msgstr "Podaci međuspremnika ne sadrže koordinate"
 
@@ -208,7 +208,7 @@ msgstr "Senzor kompasa je nedostupan"
 msgid "Confirm"
 msgstr "Potvrdite"
 
-#: src/screens/settings_location/index.tsx:142
+#: src/screens/settings_location/index.tsx:146
 msgid "Coordinates updated"
 msgstr "Koordinati su ažurirani"
 
@@ -216,8 +216,8 @@ msgstr "Koordinati su ažurirani"
 msgid "Count"
 msgstr "Zbroj"
 
-#: src/screens/settings_location/index.tsx:208
-#: src/screens/settings_location/index.tsx:210
+#: src/screens/settings_location/index.tsx:212
+#: src/screens/settings_location/index.tsx:214
 msgid "Country"
 msgstr "Zemlja"
 
@@ -240,7 +240,7 @@ msgstr "Zadano"
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:200
-#: src/utils/dialogs.ts:7
+#: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Izbrišite"
 
@@ -260,7 +260,7 @@ msgstr "Zvukovi uređaja"
 msgid "Disabled"
 msgstr "Isključeno"
 
-#: src/screens/qibla_finder/index.tsx:108
+#: src/screens/qibla_finder/index.tsx:87
 msgid "Disclaimer"
 msgstr "Odricanje"
 
@@ -299,15 +299,15 @@ msgstr "Egipatska Generalna Geodetska Uprava"
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: src/screens/settings_location/index.tsx:128
+#: src/screens/settings_location/index.tsx:129
 msgid "Error getting clipboard data"
 msgstr "Greška pri preuzimanju podataka međuspremnika"
 
-#: src/screens/settings_location/index.tsx:221
+#: src/screens/settings_location/index.tsx:225
 msgid "Error in loading countries"
 msgstr "Greška pri učitavanju zemalja"
 
-#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:251
 msgid "Error in loading search results"
 msgstr "Greška pri učitavanju rezultata pretraživanja"
 
@@ -316,7 +316,7 @@ msgid "Error while downloading audio"
 msgstr "Greška pri skidanju audia"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
 msgstr "Greška pri dobivanju koordinata"
 
@@ -336,7 +336,7 @@ msgstr "Izvezite podatke aplikacije"
 msgid "Export data"
 msgstr "Izvezite podatke"
 
-#: src/screens/settings_location/index.tsx:193
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Nađite Moju Lokaciju"
 
@@ -350,7 +350,7 @@ msgstr "Općenito (zadano)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "Koordinate se preuzimaju"
 
@@ -392,7 +392,7 @@ msgstr "Visoka Geografska Širina"
 msgid "Home"
 msgstr "Početna"
 
-#: src/screens/qibla_finder/index.tsx:119
+#: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
 msgstr "Ja Razumijem"
 
@@ -420,15 +420,15 @@ msgstr "Uvezite podatke aplikacije"
 msgid "Import successful"
 msgstr "Uvoz je uspješan"
 
-#: src/screens/qibla_finder/index.tsx:52
+#: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
 msgstr "Info"
 
-#: src/screens/qibla_finder/index.tsx:69
+#: src/screens/qibla_finder/index.tsx:48
 msgid "Internet connection"
 msgstr "Internet veza"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Internet veza je neophodna da bi karta kible radila. Molimo vas da omogućite WiFi ili mobilnu mrežu i probajte ponovo."
 
@@ -477,12 +477,12 @@ msgstr "Jezik"
 msgid "Latin"
 msgstr "Latinski"
 
-#: src/screens/settings_location/index.tsx:272
-#: src/screens/settings_location/index.tsx:277
+#: src/screens/settings_location/index.tsx:276
+#: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
 msgstr "Geografska Širina"
 
-#: src/screens/settings_location/index.tsx:284
+#: src/screens/settings_location/index.tsx:288
 msgid "Latitude is invalid"
 msgstr "Geografska Širina ne važi"
 
@@ -495,21 +495,21 @@ msgid "Light"
 msgstr "Svjetla"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
+#: src/utils/dialogs.ts:35
 msgid "Location"
 msgstr "Lokacija"
 
-#: src/screens/qibla_finder/index.tsx:37
+#: src/utils/dialogs.ts:44
 msgid "Location settings"
 msgstr "Postavke za lokaciju"
 
-#: src/screens/settings_location/index.tsx:288
-#: src/screens/settings_location/index.tsx:293
+#: src/screens/settings_location/index.tsx:292
+#: src/screens/settings_location/index.tsx:297
 msgid "Longitude"
 msgstr "Geografska Dužina"
 
-#: src/screens/settings_location/index.tsx:300
+#: src/screens/settings_location/index.tsx:304
 msgid "Longitude is invalid"
 msgstr "Geografska Dužina ne važi"
 
@@ -525,7 +525,7 @@ msgstr "Srednja"
 msgid "Middle of the Night"
 msgstr "Usred Noći"
 
-#: src/screens/qibla_finder/index.tsx:78
+#: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
 msgstr "Mobilna Mreža"
 
@@ -566,7 +566,7 @@ msgid "Next Day"
 msgstr "Sljedeći Dan"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
-#: src/utils/dialogs.ts:13
+#: src/utils/dialogs.ts:14
 msgid "No"
 msgstr "Ne"
 
@@ -587,7 +587,7 @@ msgstr "Ništa (Automatski)"
 msgid "Not now"
 msgstr "Ne sad"
 
-#: src/screens/qibla_finder/index.tsx:111
+#: src/screens/qibla_finder/index.tsx:90
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Čuvajte na umu da zbog softverskih i hardverskih grešaka, smjer Kabe koji pokazuje ova aplikacija, posebno u kompas modu, može biti pogrešan."
 
@@ -611,9 +611,9 @@ msgstr "Dozvole za Obavijesti"
 msgid "Numbering system"
 msgstr "Sistem Numerisanja"
 
-#: src/screens/qibla_finder/index.tsx:32
-#: src/screens/qibla_finder/index.tsx:56
-#: src/screens/qibla_finder/index.tsx:73
+#: src/screens/qibla_finder/index.tsx:35
+#: src/screens/qibla_finder/index.tsx:52
+#: src/utils/dialogs.ts:39
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -660,13 +660,17 @@ msgstr "Nadolazeći ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Nadolazeća podsjeta"
 
-#: src/screens/settings_location/index.tsx:328
+#: src/screens/settings_location/index.tsx:332
 msgid "Paste"
 msgstr "Zalijepi"
 
 #: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "Dozvola Stanja Telefona"
+
+#: src/utils/dialogs.ts:36
+msgid "Please enable location service"
+msgstr "Omogućite uslugu lokacije"
 
 #: src/screens/settings_calculation/index.tsx:141
 msgid "Polar Resolution"
@@ -688,11 +692,11 @@ msgstr "Katar"
 msgid "Qibla"
 msgstr "Kibla"
 
-#: src/screens/qibla_finder/index.tsx:29
+#: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "Pronalazniku Kible treba usluga lokacije. Ako nije omogućena, koristit će se lokacija iz postavkih aplikacije."
 
-#: src/screens/qibla_finder/index.tsx:53
+#: src/screens/qibla_finder/index.tsx:32
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Mapa Kible trenutno nije dostupna u F-Droid verzijama aplikacije. Možda će postati dostupna u budućim ažuriranjima."
 
@@ -911,7 +915,7 @@ msgstr "Vrijeme"
 msgid "Time format"
 msgstr "Vremenski format"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Za izračunavanje ezana, potrebna nam je vaša lokacija. Možete koristiti dugme \"Pronađi moju lokaciju\", ili pretragu zemlje i grada/područja, ili ručno unesite svoje koordinate."
 
@@ -976,11 +980,11 @@ msgstr "Ažuriraju je vidžeti"
 msgid "Use 24-Hour format"
 msgstr "Koristite 24-satni format"
 
-#: src/screens/qibla_finder/index.tsx:116
+#: src/screens/qibla_finder/index.tsx:95
 msgid "Use Compass"
 msgstr "Koristite Kompas"
 
-#: src/screens/qibla_finder/index.tsx:115
+#: src/screens/qibla_finder/index.tsx:94
 msgid "Use Map"
 msgstr "Koristite Kartu"
 
@@ -993,15 +997,15 @@ msgstr "Koristite adaptivnu temu?"
 msgid "Use headphones when available?"
 msgstr "Koristite slušalice kad je dostupno?"
 
-#: src/screens/settings_location/index.tsx:268
+#: src/screens/settings_location/index.tsx:272
 msgid "Using Coordinates"
 msgstr "Koordinati su u Koristi"
 
-#: src/screens/settings_location/index.tsx:185
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "GPS je u Koristi"
 
-#: src/screens/settings_location/index.tsx:204
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "Pretraga je u Koristi"
 
@@ -1037,12 +1041,12 @@ msgstr "Dobrodošli"
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "Kada je omogućeno, kada koristite slušalice, sav zvuk će se pokretati samo na slušalicama."
 
-#: src/screens/qibla_finder/index.tsx:85
+#: src/screens/qibla_finder/index.tsx:64
 msgid "Wifi"
 msgstr "WiFi"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
-#: src/utils/dialogs.ts:18
+#: src/utils/dialogs.ts:19
 msgid "Yes"
 msgstr "Da"
 
@@ -1050,7 +1054,7 @@ msgstr "Da"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme ispod."
 
-#: src/screens/settings_location/index.tsx:322
+#: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
 msgstr "Možete također zalijepiti koordinate iz međuspremnika"
 

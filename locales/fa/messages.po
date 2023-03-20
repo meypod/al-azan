@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-19 20:59+0330\n"
+"POT-Creation-Date: 2023-03-20 06:07+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,11 +97,11 @@ msgstr "عربی/فارسی"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "آیا مطمئن هستید که می خواهید \"{0}\" را حذف کنید؟"
 
-#: src/utils/dialogs.ts:9
+#: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete \"{itemName}\" ?"
 msgstr "آیا مطمئن هستید که می خواهید \"{itemName}\" را حذف کنید؟"
 
-#: src/utils/dialogs.ts:10
+#: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete this?"
 msgstr "آیا مطمئن هستید که می خواهید این را حذف کنید؟"
 
@@ -178,12 +178,12 @@ msgstr "نوع تقویم را انتخاب کنید"
 msgid "Choose numbering system"
 msgstr "سیستم شماره گذاری را انتخاب کنید"
 
-#: src/screens/settings_location/index.tsx:231
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:237
 msgid "City/Area"
 msgstr "شهر/ناحیه"
 
-#: src/screens/settings_location/index.tsx:122
+#: src/screens/settings_location/index.tsx:123
 msgid "Clipboard data does not contain coordinates"
 msgstr "داده های کلیپ بورد حاوی مختصات نیستند"
 
@@ -208,7 +208,7 @@ msgstr "سنسور قطب نما در دسترس نیست"
 msgid "Confirm"
 msgstr "تایید"
 
-#: src/screens/settings_location/index.tsx:142
+#: src/screens/settings_location/index.tsx:146
 msgid "Coordinates updated"
 msgstr "مختصات به روز شد"
 
@@ -216,8 +216,8 @@ msgstr "مختصات به روز شد"
 msgid "Count"
 msgstr "تعداد"
 
-#: src/screens/settings_location/index.tsx:208
-#: src/screens/settings_location/index.tsx:210
+#: src/screens/settings_location/index.tsx:212
+#: src/screens/settings_location/index.tsx:214
 msgid "Country"
 msgstr "کشور"
 
@@ -240,7 +240,7 @@ msgstr "پیش فرض"
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:200
-#: src/utils/dialogs.ts:7
+#: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "حذف"
 
@@ -260,7 +260,7 @@ msgstr "صداهای دستگاه"
 msgid "Disabled"
 msgstr "غیرفعال"
 
-#: src/screens/qibla_finder/index.tsx:108
+#: src/screens/qibla_finder/index.tsx:87
 msgid "Disclaimer"
 msgstr "سلب مسئولیت"
 
@@ -299,15 +299,15 @@ msgstr "اداره کل بررسی مصر"
 msgid "Enabled"
 msgstr "فعال"
 
-#: src/screens/settings_location/index.tsx:128
+#: src/screens/settings_location/index.tsx:129
 msgid "Error getting clipboard data"
 msgstr "خطا در دریافت داده های کلیپ بورد"
 
-#: src/screens/settings_location/index.tsx:221
+#: src/screens/settings_location/index.tsx:225
 msgid "Error in loading countries"
 msgstr "خطا در بارگیری کشورها"
 
-#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:251
 msgid "Error in loading search results"
 msgstr "خطا در بارگیری نتایج جستجو"
 
@@ -316,7 +316,7 @@ msgid "Error while downloading audio"
 msgstr "خطا هنگام دانلود صوت"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
 msgstr "خطا هنگام گرفتن مختصات"
 
@@ -336,7 +336,7 @@ msgstr "خروجی داده های برنامه"
 msgid "Export data"
 msgstr "خروجی داده ها"
 
-#: src/screens/settings_location/index.tsx:193
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "پیدا کردن مکان من"
 
@@ -350,7 +350,7 @@ msgstr "عمومی (پیش فرض)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "درحال گرفتن مختصات"
 
@@ -392,7 +392,7 @@ msgstr "عرض جغرافیایی بالا"
 msgid "Home"
 msgstr "خانه"
 
-#: src/screens/qibla_finder/index.tsx:119
+#: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
 msgstr "متوجه ام"
 
@@ -420,15 +420,15 @@ msgstr "داده های برنامه را وارد کنید"
 msgid "Import successful"
 msgstr "وارد کردن با موفقیت انجام شد"
 
-#: src/screens/qibla_finder/index.tsx:52
+#: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
 msgstr "اطلاعات"
 
-#: src/screens/qibla_finder/index.tsx:69
+#: src/screens/qibla_finder/index.tsx:48
 msgid "Internet connection"
 msgstr "اتصال اینترنت"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "اتصال به اینترنت برای کارکرد نقشه قبله ضروری است. لطفاً wifi یا اینترنت موبایل خود را فعال کنید و دوباره امتحان کنید."
 
@@ -477,12 +477,12 @@ msgstr "زبان"
 msgid "Latin"
 msgstr "لاتین"
 
-#: src/screens/settings_location/index.tsx:272
-#: src/screens/settings_location/index.tsx:277
+#: src/screens/settings_location/index.tsx:276
+#: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
 msgstr "عرض جغرافیایی"
 
-#: src/screens/settings_location/index.tsx:284
+#: src/screens/settings_location/index.tsx:288
 msgid "Latitude is invalid"
 msgstr "عرض جغرافیایی نامعتبر است"
 
@@ -495,21 +495,21 @@ msgid "Light"
 msgstr "روشن"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
+#: src/utils/dialogs.ts:35
 msgid "Location"
 msgstr "موقعیت"
 
-#: src/screens/qibla_finder/index.tsx:37
+#: src/utils/dialogs.ts:44
 msgid "Location settings"
 msgstr "تنظیمات مکان"
 
-#: src/screens/settings_location/index.tsx:288
-#: src/screens/settings_location/index.tsx:293
+#: src/screens/settings_location/index.tsx:292
+#: src/screens/settings_location/index.tsx:297
 msgid "Longitude"
 msgstr "طول جغرافیایی"
 
-#: src/screens/settings_location/index.tsx:300
+#: src/screens/settings_location/index.tsx:304
 msgid "Longitude is invalid"
 msgstr "طول جغرافیایی نامعتبر است"
 
@@ -525,7 +525,7 @@ msgstr "متوسط"
 msgid "Middle of the Night"
 msgstr "نیمه شب شرعی"
 
-#: src/screens/qibla_finder/index.tsx:78
+#: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
 msgstr "اینترنت موبایل"
 
@@ -566,7 +566,7 @@ msgid "Next Day"
 msgstr "روز بعد"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
-#: src/utils/dialogs.ts:13
+#: src/utils/dialogs.ts:14
 msgid "No"
 msgstr "خیر"
 
@@ -587,7 +587,7 @@ msgstr "هیچکدام (اتوماتیک)"
 msgid "Not now"
 msgstr "الان نه"
 
-#: src/screens/qibla_finder/index.tsx:111
+#: src/screens/qibla_finder/index.tsx:90
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "توجه داشته باشید که به دلیل خطاهای نرم افزاری و سخت افزاری، جهت قبله نشان داده شده توسط این برنامه، به خصوص در حالت قطب نما، می تواند اشتباه باشد."
 
@@ -611,9 +611,9 @@ msgstr "مجوز اعلان"
 msgid "Numbering system"
 msgstr "سیستم شماره گذاری"
 
-#: src/screens/qibla_finder/index.tsx:32
-#: src/screens/qibla_finder/index.tsx:56
-#: src/screens/qibla_finder/index.tsx:73
+#: src/screens/qibla_finder/index.tsx:35
+#: src/screens/qibla_finder/index.tsx:52
+#: src/utils/dialogs.ts:39
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -660,13 +660,17 @@ msgstr "هشدار بعدی"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "یادآوری بعدی"
 
-#: src/screens/settings_location/index.tsx:328
+#: src/screens/settings_location/index.tsx:332
 msgid "Paste"
 msgstr "چسباندن"
 
 #: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "مجوز وضعیت تلفن"
+
+#: src/utils/dialogs.ts:36
+msgid "Please enable location service"
+msgstr "لطفاً سرویس موقعیت مکانی را فعال کنید"
 
 #: src/screens/settings_calculation/index.tsx:141
 msgid "Polar Resolution"
@@ -688,11 +692,11 @@ msgstr "قطر"
 msgid "Qibla"
 msgstr "قبله"
 
-#: src/screens/qibla_finder/index.tsx:29
+#: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "قبله یاب به خدمات موقعیت یابی نیاز دارد. اگر فعال نباشد، موقعیت مکانی از تنظیمات برنامه استفاده خواهد شد."
 
-#: src/screens/qibla_finder/index.tsx:53
+#: src/screens/qibla_finder/index.tsx:32
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "نقشه قبله در حال حاضر در نسخه های F-Droid در دسترس نیست. ممکن است در به روز رسانی های آینده در دسترس قرار گیرد."
 
@@ -898,7 +902,7 @@ msgstr "وقت"
 msgid "Time format"
 msgstr "قالب زمان"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "برای محاسبه اذان، به موقعیت مکانی شما نیاز داریم. می‌توانید از دکمه «پیدا کردن مکان من» استفاده کنید یا از جستجوی کشور و شهر/منطقه استفاده کنید یا مختصات خود را به صورت دستی وارد کنید."
 
@@ -963,11 +967,11 @@ msgstr "در حال به روزرسانی ویجت ها"
 msgid "Use 24-Hour format"
 msgstr "استفاده از قالب 24 ساعته"
 
-#: src/screens/qibla_finder/index.tsx:116
+#: src/screens/qibla_finder/index.tsx:95
 msgid "Use Compass"
 msgstr "استفاده از قطب نما"
 
-#: src/screens/qibla_finder/index.tsx:115
+#: src/screens/qibla_finder/index.tsx:94
 msgid "Use Map"
 msgstr "استفاده از نقشه"
 
@@ -980,15 +984,15 @@ msgstr "استفاده از تم تطبیقی؟"
 msgid "Use headphones when available?"
 msgstr "استفاده از هدفون در صورت وجود؟"
 
-#: src/screens/settings_location/index.tsx:268
+#: src/screens/settings_location/index.tsx:272
 msgid "Using Coordinates"
 msgstr "با استفاده از مختصات"
 
-#: src/screens/settings_location/index.tsx:185
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "با استفاده از GPS"
 
-#: src/screens/settings_location/index.tsx:204
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "با استفاده از جستجو"
 
@@ -1024,12 +1028,12 @@ msgstr "خوش آمدید"
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "وقتی فعال باشد، هنگام استفاده از هدفون، تمام صداها فقط روی هدفون پخش می شود."
 
-#: src/screens/qibla_finder/index.tsx:85
+#: src/screens/qibla_finder/index.tsx:64
 msgid "Wifi"
 msgstr "Wifi"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
-#: src/utils/dialogs.ts:18
+#: src/utils/dialogs.ts:19
 msgid "Yes"
 msgstr "بله"
 
@@ -1037,7 +1041,7 @@ msgstr "بله"
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
 
-#: src/screens/settings_location/index.tsx:322
+#: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
 msgstr "همچنین می توانید مختصات را از کلیپ بورد بچسبانید"
 

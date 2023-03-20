@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-19 20:59+0330\n"
+"POT-Creation-Date: 2023-03-20 06:07+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -97,11 +97,11 @@ msgstr "Arapça/Farsça"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "\"{0}\" dosyasını silmek istediğinizden emin misiniz?"
 
-#: src/utils/dialogs.ts:9
+#: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete \"{itemName}\" ?"
 msgstr "\"{itemName}\" öğesini silmek istediğinizden emin misiniz? ?"
 
-#: src/utils/dialogs.ts:10
+#: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete this?"
 msgstr "Bunu silmek istediğinizden emin misiniz?"
 
@@ -178,12 +178,12 @@ msgstr "Takvim türünü seçin"
 msgid "Choose numbering system"
 msgstr "Numaralandırma sistemini seçin"
 
-#: src/screens/settings_location/index.tsx:231
-#: src/screens/settings_location/index.tsx:233
+#: src/screens/settings_location/index.tsx:235
+#: src/screens/settings_location/index.tsx:237
 msgid "City/Area"
 msgstr "Şehir/Bölge"
 
-#: src/screens/settings_location/index.tsx:122
+#: src/screens/settings_location/index.tsx:123
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
 
@@ -208,7 +208,7 @@ msgstr "Pusula sensörü kullanılamıyor"
 msgid "Confirm"
 msgstr "Onayla"
 
-#: src/screens/settings_location/index.tsx:142
+#: src/screens/settings_location/index.tsx:146
 msgid "Coordinates updated"
 msgstr "Koordinatlar güncellendi"
 
@@ -216,8 +216,8 @@ msgstr "Koordinatlar güncellendi"
 msgid "Count"
 msgstr "Saymak"
 
-#: src/screens/settings_location/index.tsx:208
-#: src/screens/settings_location/index.tsx:210
+#: src/screens/settings_location/index.tsx:212
+#: src/screens/settings_location/index.tsx:214
 msgid "Country"
 msgstr "Ülke"
 
@@ -240,7 +240,7 @@ msgstr "Varsayılan"
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:200
-#: src/utils/dialogs.ts:7
+#: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Sil"
 
@@ -260,7 +260,7 @@ msgstr "Cihaz sesleri"
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
-#: src/screens/qibla_finder/index.tsx:108
+#: src/screens/qibla_finder/index.tsx:87
 msgid "Disclaimer"
 msgstr "Sorumluluk Reddi"
 
@@ -299,15 +299,15 @@ msgstr "Mısır Genel Araştırma Kurumu"
 msgid "Enabled"
 msgstr "Etkinleştir"
 
-#: src/screens/settings_location/index.tsx:128
+#: src/screens/settings_location/index.tsx:129
 msgid "Error getting clipboard data"
 msgstr "Kopyalanan veriler alınırken hata oluştu"
 
-#: src/screens/settings_location/index.tsx:221
+#: src/screens/settings_location/index.tsx:225
 msgid "Error in loading countries"
 msgstr "Ülkeler yüklenirken hata oluştu"
 
-#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:251
 msgid "Error in loading search results"
 msgstr "Arama sonuçları yüklenirken hata oluştu"
 
@@ -316,7 +316,7 @@ msgid "Error while downloading audio"
 msgstr "Sesler indirilirken hata"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
@@ -336,7 +336,7 @@ msgstr "Uygulama verilerini dışa aktarma"
 msgid "Export data"
 msgstr "Verileri dışa aktar"
 
-#: src/screens/settings_location/index.tsx:193
+#: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Konumumu Bul"
 
@@ -350,7 +350,7 @@ msgstr "Genel (varsayılan)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "Koordinatları alma"
 
@@ -392,7 +392,7 @@ msgstr "Yüksek Enlem"
 msgid "Home"
 msgstr "Anasayfa"
 
-#: src/screens/qibla_finder/index.tsx:119
+#: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
 msgstr "Anlıyorum"
 
@@ -420,15 +420,15 @@ msgstr "Uygulama verilerini içe aktarma"
 msgid "Import successful"
 msgstr "İçe aktarma başarılı"
 
-#: src/screens/qibla_finder/index.tsx:52
+#: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
 msgstr "Bilgi"
 
-#: src/screens/qibla_finder/index.tsx:69
+#: src/screens/qibla_finder/index.tsx:48
 msgid "Internet connection"
 msgstr "İnternet bağlantısı"
 
-#: src/screens/qibla_finder/index.tsx:70
+#: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Kıble haritasının çalışması için internet bağlantısı gereklidir. Lütfen wifi veya mobil verinizi etkinleştirin ve tekrar deneyin."
 
@@ -477,12 +477,12 @@ msgstr "Dil"
 msgid "Latin"
 msgstr "Latin"
 
-#: src/screens/settings_location/index.tsx:272
-#: src/screens/settings_location/index.tsx:277
+#: src/screens/settings_location/index.tsx:276
+#: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
 msgstr "Enlem"
 
-#: src/screens/settings_location/index.tsx:284
+#: src/screens/settings_location/index.tsx:288
 msgid "Latitude is invalid"
 msgstr "Enlem geçersiz"
 
@@ -495,21 +495,21 @@ msgid "Light"
 msgstr "Aydınlık"
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder/index.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:148
+#: src/utils/dialogs.ts:35
 msgid "Location"
 msgstr "Konum"
 
-#: src/screens/qibla_finder/index.tsx:37
+#: src/utils/dialogs.ts:44
 msgid "Location settings"
 msgstr "Konum ayarları"
 
-#: src/screens/settings_location/index.tsx:288
-#: src/screens/settings_location/index.tsx:293
+#: src/screens/settings_location/index.tsx:292
+#: src/screens/settings_location/index.tsx:297
 msgid "Longitude"
 msgstr "Boylam"
 
-#: src/screens/settings_location/index.tsx:300
+#: src/screens/settings_location/index.tsx:304
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
@@ -525,7 +525,7 @@ msgstr "Orta"
 msgid "Middle of the Night"
 msgstr "Gece yarısı"
 
-#: src/screens/qibla_finder/index.tsx:78
+#: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
 msgstr "Mobil Veri"
 
@@ -566,7 +566,7 @@ msgid "Next Day"
 msgstr "Ertesi gün"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
-#: src/utils/dialogs.ts:13
+#: src/utils/dialogs.ts:14
 msgid "No"
 msgstr "No"
 
@@ -587,7 +587,7 @@ msgstr "Yok (Otomatik)"
 msgid "Not now"
 msgstr "Şimdi olmaz"
 
-#: src/screens/qibla_finder/index.tsx:111
+#: src/screens/qibla_finder/index.tsx:90
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Yazılım ve donanım hataları nedeniyle, bu uygulama tarafından özellikle pusula modunda gösterilen kıble yönünün yanlış olabileceğini unutmayın."
 
@@ -611,9 +611,9 @@ msgstr "Bildirim İzni"
 msgid "Numbering system"
 msgstr "Numaralandırma sistemi"
 
-#: src/screens/qibla_finder/index.tsx:32
-#: src/screens/qibla_finder/index.tsx:56
-#: src/screens/qibla_finder/index.tsx:73
+#: src/screens/qibla_finder/index.tsx:35
+#: src/screens/qibla_finder/index.tsx:52
+#: src/utils/dialogs.ts:39
 #: src/utils/permission.ts:47
 #: src/utils/permission.ts:166
 msgid "Okay"
@@ -660,13 +660,17 @@ msgstr "Yaklaşan ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Yaklaşan hatırlatma"
 
-#: src/screens/settings_location/index.tsx:328
+#: src/screens/settings_location/index.tsx:332
 msgid "Paste"
 msgstr "Yapıştır"
 
 #: src/utils/permission.ts:156
 msgid "Phone State Permission"
 msgstr "Telefon Durumu İzni"
+
+#: src/utils/dialogs.ts:36
+msgid "Please enable location service"
+msgstr "Lütfen konum hizmetini etkinleştirin"
 
 #: src/screens/settings_calculation/index.tsx:141
 msgid "Polar Resolution"
@@ -688,11 +692,11 @@ msgstr "Katar"
 msgid "Qibla"
 msgstr "Kıble"
 
-#: src/screens/qibla_finder/index.tsx:29
+#: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
 msgstr "Kıble bulucu konum servisine ihtiyaç duyar. Etkinleştirilmezse, uygulama ayarlarından konum kullanılacaktır."
 
-#: src/screens/qibla_finder/index.tsx:53
+#: src/screens/qibla_finder/index.tsx:32
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Kıble haritası şu anda F-Droid sürümlerinde kullanılamamaktadır. Gelecekteki güncellemelerde kullanılabilir hale gelebilir."
 
@@ -898,7 +902,7 @@ msgstr "Zaman"
 msgid "Time format"
 msgstr "Zaman formatı"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir veya ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
@@ -963,11 +967,11 @@ msgstr "Widget'ları güncelleme"
 msgid "Use 24-Hour format"
 msgstr "24 Saat biçimini kullan"
 
-#: src/screens/qibla_finder/index.tsx:116
+#: src/screens/qibla_finder/index.tsx:95
 msgid "Use Compass"
 msgstr "Pusula Kullanın"
 
-#: src/screens/qibla_finder/index.tsx:115
+#: src/screens/qibla_finder/index.tsx:94
 msgid "Use Map"
 msgstr "Kullanım Haritası"
 
@@ -980,15 +984,15 @@ msgstr "Uyarlanabilir tema mı kullanıyorsunuz?"
 msgid "Use headphones when available?"
 msgstr "Mümkün olduğunda kulaklık kullanıyor musunuz?"
 
-#: src/screens/settings_location/index.tsx:268
+#: src/screens/settings_location/index.tsx:272
 msgid "Using Coordinates"
 msgstr "Koordinatları Kullan"
 
-#: src/screens/settings_location/index.tsx:185
+#: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
 msgstr "GPS kullan"
 
-#: src/screens/settings_location/index.tsx:204
+#: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
 msgstr "Aramayı Kullan"
 
@@ -1024,12 +1028,12 @@ msgstr "Hoş geldiniz"
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "Etkinleştirildiğinde, kulaklık kullanırken tüm ses yalnızca kulaklıkta çalınır."
 
-#: src/screens/qibla_finder/index.tsx:85
+#: src/screens/qibla_finder/index.tsx:64
 msgid "Wifi"
 msgstr "Wifi"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
-#: src/utils/dialogs.ts:18
+#: src/utils/dialogs.ts:19
 msgid "Yes"
 msgstr "Evet"
 
@@ -1037,7 +1041,7 @@ msgstr "Evet"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 
-#: src/screens/settings_location/index.tsx:322
+#: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kodları yapıştırabilirsiniz"
 
