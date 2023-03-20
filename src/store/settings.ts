@@ -6,6 +6,7 @@ import {useStore} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
+import {clearCache} from './adhan_calc_cache';
 import {alarmSettings} from './alarm';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
@@ -259,7 +260,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 8,
+      version: 9,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -322,6 +323,9 @@ export const settings = createStore<SettingsStore>()(
             delete (persistedState as any)['LAST_WIDGET_UPDATE'];
           case 7:
             (persistedState as any).QIBLA_FINDER_ORIENTATION_LOCKED = true;
+          case 8:
+            // a cache reset force for the incorrect times fix
+            clearCache();
             break;
         }
         /* eslint-enable no-fallthrough */
