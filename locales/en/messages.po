@@ -458,7 +458,7 @@ msgstr "Islamic (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamic (tabular)"
 
-#: src/utils/date.ts:257
+#: src/utils/date.ts:256
 msgid "Just now"
 msgstr "Just now"
 
@@ -1104,7 +1104,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "ago"
 msgstr "ago"
 
@@ -1136,19 +1136,19 @@ msgstr "Calculation"
 msgid "counter.fast"
 msgstr "Fast"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:7
 msgid "date.day"
 msgstr "day"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:11
 msgid "date.hour"
 msgstr "hour"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:15
 msgid "date.minute"
 msgstr "minute"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:19
 msgid "date.second"
 msgstr "second"
 
@@ -1204,7 +1204,7 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "later"
 msgstr "later"
 

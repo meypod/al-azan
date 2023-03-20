@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-20 06:07+0330\n"
+"POT-Creation-Date: 2023-03-21 03:17+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -452,7 +452,7 @@ msgstr "İslami (Sivil)"
 msgid "Islamic (tabular)"
 msgstr "İslami (Cetvele göre hesaplanmış)"
 
-#: src/utils/date.ts:257
+#: src/utils/date.ts:256
 msgid "Just now"
 msgstr "Hemen şimdi"
 
@@ -1083,7 +1083,7 @@ msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 msgid "after"
 msgstr "sonra"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "ago"
 msgstr "önce"
 
@@ -1115,19 +1115,19 @@ msgstr "Hesaplama"
 msgid "counter.fast"
 msgstr "oruç"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:7
 msgid "date.day"
 msgstr "gün"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:11
 msgid "date.hour"
 msgstr "saat"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:15
 msgid "date.minute"
 msgstr "dakika"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:19
 msgid "date.second"
 msgstr "saniye"
 
@@ -1183,7 +1183,7 @@ msgstr "namaz vakti gizli mi?"
 msgid "isha.prayer"
 msgstr "Yatsı"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "later"
 msgstr "daha sonra"
 

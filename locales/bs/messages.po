@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-20 06:07+0330\n"
+"POT-Creation-Date: 2023-03-21 03:17+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -452,7 +452,7 @@ msgstr "Islamski (civilni)"
 msgid "Islamic (tabular)"
 msgstr "Islamski (tabelarni)"
 
-#: src/utils/date.ts:257
+#: src/utils/date.ts:256
 msgid "Just now"
 msgstr "Tek sad"
 
@@ -1099,7 +1099,7 @@ msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 msgid "after"
 msgstr "nakon"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "ago"
 msgstr "prije"
 
@@ -1131,19 +1131,19 @@ msgstr "Kalkulacija"
 msgid "counter.fast"
 msgstr "Brzo"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:7
 msgid "date.day"
 msgstr "dan"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:11
 msgid "date.hour"
 msgstr "sat"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:15
 msgid "date.minute"
 msgstr "minuta"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:19
 msgid "date.second"
 msgstr "sekunda"
 
@@ -1199,7 +1199,7 @@ msgstr "da li je vrijeme molitve skriveno?"
 msgid "isha.prayer"
 msgstr "Jacija"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "later"
 msgstr "poslije"
 

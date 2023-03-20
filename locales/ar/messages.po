@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-20 06:07+0330\n"
+"POT-Creation-Date: 2023-03-21 03:17+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -452,7 +452,7 @@ msgstr "إسلامي (مدني)"
 msgid "Islamic (tabular)"
 msgstr "إسلامي (جدولي)"
 
-#: src/utils/date.ts:257
+#: src/utils/date.ts:256
 msgid "Just now"
 msgstr "الآن"
 
@@ -1088,7 +1088,7 @@ msgstr "عدد الدقائق التي ستتم إضافتها إلى الأوق
 msgid "after"
 msgstr "بعد"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "ago"
 msgstr "منذ"
 
@@ -1120,19 +1120,19 @@ msgstr "حساب"
 msgid "counter.fast"
 msgstr "صيام"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:7
 msgid "date.day"
 msgstr "يوم"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:11
 msgid "date.hour"
 msgstr "ساعة"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:15
 msgid "date.minute"
 msgstr "دقيقة"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:19
 msgid "date.second"
 msgstr "ثانية"
 
@@ -1188,7 +1188,7 @@ msgstr "هل وقت الصلاة مخفي؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "later"
 msgstr "لاحقاً"
 

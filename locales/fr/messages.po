@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-20 06:07+0330\n"
+"POT-Creation-Date: 2023-03-21 03:17+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -452,7 +452,7 @@ msgstr "Islamique (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamique (tabulaire)"
 
-#: src/utils/date.ts:257
+#: src/utils/date.ts:256
 msgid "Just now"
 msgstr "À l'instant"
 
@@ -1098,7 +1098,7 @@ msgstr "Nombre de minutes qui seront ajoutées aux temps calculés"
 msgid "after"
 msgstr "après"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "ago"
 msgstr "auparavant"
 
@@ -1130,19 +1130,19 @@ msgstr "Calcul"
 msgid "counter.fast"
 msgstr "Jeûne"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:7
 msgid "date.day"
 msgstr "jour"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:11
 msgid "date.hour"
 msgstr "heure"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:15
 msgid "date.minute"
 msgstr "minute"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:19
 msgid "date.second"
 msgstr "seconde"
 
@@ -1198,7 +1198,7 @@ msgstr "Le temps de prière est-il caché?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:262
+#: src/utils/date.ts:261
 msgid "later"
 msgstr "plus tard"
 
