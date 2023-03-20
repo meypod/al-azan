@@ -80,7 +80,7 @@ export function DevSettings(props: IScrollViewProps) {
       </HStack>
       <HStack alignItems="center" justifyContent="space-between">
         <Text>Clear Calculation Cache: </Text>
-        <Button onPress={clearCache}>Schedule</Button>
+        <Button onPress={clearCache}>Clear</Button>
       </HStack>
     </ScrollView>
   );
