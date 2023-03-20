@@ -64,6 +64,11 @@ export function DevSettings(props: IScrollViewProps) {
     });
   }, []);
 
+  const onClearPressed = () => {
+    clearCache();
+    ToastAndroid.show('Cache cleared', ToastAndroid.SHORT);
+  };
+
   return (
     <ScrollView
       p="4"
@@ -80,7 +85,7 @@ export function DevSettings(props: IScrollViewProps) {
       </HStack>
       <HStack alignItems="center" justifyContent="space-between">
         <Text>Clear Calculation Cache: </Text>
-        <Button onPress={clearCache}>Clear</Button>
+        <Button onPress={onClearPressed}>Clear</Button>
       </HStack>
     </ScrollView>
   );
