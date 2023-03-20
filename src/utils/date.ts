@@ -2,7 +2,6 @@ import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage, t} from '@lingui/macro';
 import {Platform} from 'react-native';
 import {settings, SettingsStore} from '@/store/settings';
-import {PREFERRED_LOCALE} from '@/utils/locale';
 
 const timeTranslations = {
   day: defineMessage({
@@ -215,7 +214,7 @@ export function getArabicDate(date: Date) {
   if (SELECTED_ARABIC_CALENDAR) {
     calendar = SELECTED_ARABIC_CALENDAR;
   } else {
-    calendar = PREFERRED_LOCALE.startsWith('fa') ? 'islamic-civil' : 'islamic';
+    calendar = SELECTED_LOCALE.startsWith('fa') ? 'islamic-civil' : 'islamic';
   }
 
   let numbering = '-nu-arab';
