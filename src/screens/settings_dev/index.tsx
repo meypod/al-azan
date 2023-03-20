@@ -8,6 +8,7 @@ import {
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {AudioEntry} from '@/modules/media_player';
+import {clearCache} from '@/store/adhan_calc_cache';
 import {alarmSettings} from '@/store/alarm';
 import {settings} from '@/store/settings';
 import {setAlarmTask} from '@/tasks/set_alarm';
@@ -73,9 +74,13 @@ export function DevSettings(props: IScrollViewProps) {
         <Text>Play adhan in 10 seconds: </Text>
         <Button onPress={scheduleAdhanInTen.bind(null, true)}>Schedule</Button>
       </HStack>
-      <HStack alignItems="center" justifyContent="space-between">
+      <HStack alignItems="center" justifyContent="space-between" mb="5">
         <Text>Show adhan notif in 10 seconds: </Text>
         <Button onPress={scheduleAdhanInTen.bind(null, false)}>Schedule</Button>
+      </HStack>
+      <HStack alignItems="center" justifyContent="space-between">
+        <Text>Clear Calculation Cache: </Text>
+        <Button onPress={clearCache}>Schedule</Button>
       </HStack>
     </ScrollView>
   );
