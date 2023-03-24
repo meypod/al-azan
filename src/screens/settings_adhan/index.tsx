@@ -106,7 +106,13 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
   const onAddCustomAdhanPressed = () => {
     pickSingle({
       copyTo: 'documentDirectory',
-      type: ['audio/mpeg', 'audio/ogg', 'application/ogg'],
+      type: [
+        'audio/mpeg',
+        'audio/ogg',
+        'application/ogg',
+        'audio/opus',
+        'audio/x-wav',
+      ],
     })
       .then(val => {
         if (val.copyError) {
