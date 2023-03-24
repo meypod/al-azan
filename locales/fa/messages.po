@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-21 03:17+0330\n"
+"POT-Creation-Date: 2023-03-25 00:00+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +19,10 @@ msgstr "15 دقیقه"
 msgid "30 min"
 msgstr "30 دقیقه"
 
+#: src/screens/settings_calculation/index.tsx:85
+msgid "30 minutes is added to Isha time during Ramadan in this method"
+msgstr "در این روش 30 دقیقه به زمان عشا در ماه رمضان اضافه می شود"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
 msgstr "5 دقیقه"
@@ -35,7 +39,7 @@ msgstr "90 دقیقه"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "اذان"
 
-#: src/screens/settings_calculation/index.tsx:182
+#: src/screens/settings_calculation/index.tsx:185
 msgid "Abyad"
 msgstr "سفید"
 
@@ -65,15 +69,15 @@ msgstr "اذان"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "فایل صوتی اذان هنوز دانلود نشده است"
 
-#: src/screens/settings_calculation/index.tsx:88
+#: src/screens/settings_calculation/index.tsx:91
 msgid "Adjustments"
 msgstr "تنظیمات زمان"
 
-#: src/screens/settings_calculation/index.tsx:99
+#: src/screens/settings_calculation/index.tsx:102
 msgid "Advanced Calculation Settings"
 msgstr "تنظیمات پیشرفته محاسبه"
 
-#: src/screens/settings_calculation/index.tsx:181
+#: src/screens/settings_calculation/index.tsx:184
 msgid "Ahmer"
 msgstr "قرمز"
 
@@ -105,7 +109,7 @@ msgstr "آیا مطمئن هستید که می خواهید \"{itemName}\" را 
 msgid "Are you sure you want to delete this?"
 msgstr "آیا مطمئن هستید که می خواهید این را حذف کنید؟"
 
-#: src/screens/settings_calculation/index.tsx:126
+#: src/screens/settings_calculation/index.tsx:129
 msgid "Asr Calculation"
 msgstr "محاسبه عصر"
 
@@ -145,7 +149,7 @@ msgstr "تقویم"
 msgid "Cancel"
 msgstr "لغو"
 
-#: src/screens/settings_calculation/index.tsx:128
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Choose Asr Calculation Madhab"
 msgstr "مذهب محاسبه عصر را انتخاب کنید"
 
@@ -153,7 +157,7 @@ msgstr "مذهب محاسبه عصر را انتخاب کنید"
 msgid "Choose Calculation Method"
 msgstr "روش محاسبه را انتخاب کنید"
 
-#: src/screens/settings_calculation/index.tsx:106
+#: src/screens/settings_calculation/index.tsx:109
 msgid "Choose High Latitude Setting"
 msgstr "تنظیمات عرض جغرافیایی بالا را انتخاب کنید"
 
@@ -161,11 +165,11 @@ msgstr "تنظیمات عرض جغرافیایی بالا را انتخاب کن
 msgid "Choose Language"
 msgstr "انتخاب زبان"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:147
 msgid "Choose Polar Resolution"
 msgstr "نحوه محاسبه مناطق قطبی را انتخاب کنید"
 
-#: src/screens/settings_calculation/index.tsx:173
+#: src/screens/settings_calculation/index.tsx:176
 msgid "Choose Shafaq method"
 msgstr "روش \"شفق\" را انتخاب کنید"
 
@@ -187,11 +191,11 @@ msgstr "شهر/ناحیه"
 msgid "Clipboard data does not contain coordinates"
 msgstr "داده های کلیپ بورد حاوی مختصات نیستند"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation/index.tsx:158
 msgid "Closest City"
 msgstr "نزدیک ترین شهر"
 
-#: src/screens/settings_calculation/index.tsx:159
+#: src/screens/settings_calculation/index.tsx:162
 msgid "Closest Date"
 msgstr "نزدیک ترین تاریخ"
 
@@ -344,7 +348,7 @@ msgstr "پیدا کردن مکان من"
 msgid "Friday"
 msgstr "جمعه"
 
-#: src/screens/settings_calculation/index.tsx:178
+#: src/screens/settings_calculation/index.tsx:181
 msgid "General (default)"
 msgstr "عمومی (پیش فرض)"
 
@@ -366,7 +370,7 @@ msgstr "میلادی"
 msgid "Gulf region"
 msgstr "منطقه خلیج"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:139
 msgid "Hanafi"
 msgstr "حنفی"
 
@@ -384,7 +388,7 @@ msgstr "مخفی کردن اوقات شرعی"
 msgid "High"
 msgstr "بالا"
 
-#: src/screens/settings_calculation/index.tsx:104
+#: src/screens/settings_calculation/index.tsx:107
 msgid "High Latitude"
 msgstr "عرض جغرافیایی بالا"
 
@@ -452,7 +456,7 @@ msgstr "اسلامی (مدنی)"
 msgid "Islamic (tabular)"
 msgstr "اسلامی (جدولی)"
 
-#: src/utils/date.ts:256
+#: src/utils/date.ts:268
 msgid "Just now"
 msgstr "همین الان"
 
@@ -521,7 +525,7 @@ msgstr "کم"
 msgid "Medium"
 msgstr "متوسط"
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:115
 msgid "Middle of the Night"
 msgstr "نیمه شب شرعی"
 
@@ -555,7 +559,7 @@ msgid "New Reminder"
 msgstr "یادآوری جدید"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:33
+#: src/screens/settings_dev/index.tsx:34
 #: src/tasks/set_next_adhan.ts:81
 #: src/tasks/set_next_adhan.ts:121
 msgid "Next"
@@ -579,7 +583,7 @@ msgstr "بدون اطلاعات"
 msgid "No Results"
 msgstr "نتیجه ای یافت نشد"
 
-#: src/screens/settings_calculation/index.tsx:110
+#: src/screens/settings_calculation/index.tsx:113
 msgid "None (Automatic)"
 msgstr "هیچکدام (اتوماتیک)"
 
@@ -627,7 +631,7 @@ msgstr "در اندروید 12 و جدیدتر، برنامه برای درست 
 msgid "Once"
 msgstr "یک بار"
 
-#: src/screens/settings_calculation/index.tsx:116
+#: src/screens/settings_calculation/index.tsx:119
 msgid "One-Seventh of the Night"
 msgstr "یک هفتم شب"
 
@@ -672,7 +676,7 @@ msgstr "مجوز وضعیت تلفن"
 msgid "Please enable location service"
 msgstr "لطفاً سرویس موقعیت مکانی را فعال کنید"
 
-#: src/screens/settings_calculation/index.tsx:141
+#: src/screens/settings_calculation/index.tsx:144
 msgid "Polar Resolution"
 msgstr "محاسبه مناطق قطبی"
 
@@ -755,18 +759,18 @@ msgstr "به عنوان اذان فجر انتخاب کنید"
 msgid "Selecting a name is required"
 msgstr "انتخاب نام الزامی است"
 
-#: src/screens/settings_calculation/index.tsx:165
+#: src/screens/settings_calculation/index.tsx:168
 msgid "Shafaq"
 msgstr "شفق"
 
-#: src/screens/settings_calculation/index.tsx:167
+#: src/screens/settings_calculation/index.tsx:170
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "\"شفق\" در روش محاسبه \"کمیته رویت هلال ماه\" برای تعیین نوع گرگ و میش برای تعیین زمان عشا استفاده می شود."
 
-#: src/screens/settings_calculation/index.tsx:133
+#: src/screens/settings_calculation/index.tsx:136
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "شافعی، مالکی، حنبلی (پیش‌فرض)"
 
@@ -922,7 +926,7 @@ msgstr "فردا"
 msgid "Tuesday"
 msgstr "سه شنبه"
 
-#: src/screens/settings_calculation/index.tsx:120
+#: src/screens/settings_calculation/index.tsx:123
 msgid "Twilight Angle"
 msgstr "زاویه گرگ و میش"
 
@@ -946,7 +950,7 @@ msgstr "خطای نامشخص"
 msgid "Unreliable"
 msgstr "غیر قابل اعتماد"
 
-#: src/screens/settings_calculation/index.tsx:151
+#: src/screens/settings_calculation/index.tsx:154
 msgid "Unresolved (default)"
 msgstr "حل نشده (پیش فرض)"
 
@@ -1086,7 +1090,7 @@ msgstr "تعداد دقیقه هایی که به زمان های محاسبه ش
 msgid "after"
 msgstr "بعد از"
 
-#: src/utils/date.ts:261
+#: src/utils/date.ts:273
 msgid "ago"
 msgstr "پیش"
 
@@ -1186,7 +1190,7 @@ msgstr "آیا وقت نماز پنهان است؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:261
+#: src/utils/date.ts:273
 msgid "later"
 msgstr "بعد"
 

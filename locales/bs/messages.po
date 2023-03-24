@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-21 03:17+0330\n"
+"POT-Creation-Date: 2023-03-25 00:00+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,6 +19,10 @@ msgstr "15 min"
 msgid "30 min"
 msgstr "Pola Sata"
 
+#: src/screens/settings_calculation/index.tsx:85
+msgid "30 minutes is added to Isha time during Ramadan in this method"
+msgstr "30 minuta se dodaje na Isha vrijeme tokom Ramazana u ovoj metodi"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
 msgstr "5 min"
@@ -35,7 +39,7 @@ msgstr "Sat i Po"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Ezan"
 
-#: src/screens/settings_calculation/index.tsx:182
+#: src/screens/settings_calculation/index.tsx:185
 msgid "Abyad"
 msgstr "Ebdžed"
 
@@ -65,15 +69,15 @@ msgstr "Ezan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Zvučni snimak za Ezan još nije skinut"
 
-#: src/screens/settings_calculation/index.tsx:88
+#: src/screens/settings_calculation/index.tsx:91
 msgid "Adjustments"
 msgstr "Prilagođenja"
 
-#: src/screens/settings_calculation/index.tsx:99
+#: src/screens/settings_calculation/index.tsx:102
 msgid "Advanced Calculation Settings"
 msgstr "Napredne Postavke Kalkulacije"
 
-#: src/screens/settings_calculation/index.tsx:181
+#: src/screens/settings_calculation/index.tsx:184
 msgid "Ahmer"
 msgstr "Amar"
 
@@ -105,7 +109,7 @@ msgstr "Jeste li sigurni da želite izbrisati \"{itemName}\" ?"
 msgid "Are you sure you want to delete this?"
 msgstr "Jeste li sigurni da želite ovo izbrisati?"
 
-#: src/screens/settings_calculation/index.tsx:126
+#: src/screens/settings_calculation/index.tsx:129
 msgid "Asr Calculation"
 msgstr "Kalkulacija Ikindije"
 
@@ -145,7 +149,7 @@ msgstr "Kalendar"
 msgid "Cancel"
 msgstr "Otkažite"
 
-#: src/screens/settings_calculation/index.tsx:128
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Choose Asr Calculation Madhab"
 msgstr "Odaberite Mezheb Kalkulaciju Ikindije"
 
@@ -153,7 +157,7 @@ msgstr "Odaberite Mezheb Kalkulaciju Ikindije"
 msgid "Choose Calculation Method"
 msgstr "Odaberite Metodu Kalkulacije"
 
-#: src/screens/settings_calculation/index.tsx:106
+#: src/screens/settings_calculation/index.tsx:109
 msgid "Choose High Latitude Setting"
 msgstr "Odaberite Postavku Velike Geografske Širine"
 
@@ -161,11 +165,11 @@ msgstr "Odaberite Postavku Velike Geografske Širine"
 msgid "Choose Language"
 msgstr "Odaberite Jezik"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:147
 msgid "Choose Polar Resolution"
 msgstr "Odaberite Polarnu Procjenu Razmaka"
 
-#: src/screens/settings_calculation/index.tsx:173
+#: src/screens/settings_calculation/index.tsx:176
 msgid "Choose Shafaq method"
 msgstr "Odaberite Šafak metodu"
 
@@ -187,11 +191,11 @@ msgstr "Grad/Okruženje"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Podaci međuspremnika ne sadrže koordinate"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation/index.tsx:158
 msgid "Closest City"
 msgstr "Najbliži Grad"
 
-#: src/screens/settings_calculation/index.tsx:159
+#: src/screens/settings_calculation/index.tsx:162
 msgid "Closest Date"
 msgstr "Najbliži Datum"
 
@@ -344,7 +348,7 @@ msgstr "Nađite Moju Lokaciju"
 msgid "Friday"
 msgstr "Petak"
 
-#: src/screens/settings_calculation/index.tsx:178
+#: src/screens/settings_calculation/index.tsx:181
 msgid "General (default)"
 msgstr "Općenito (zadano)"
 
@@ -366,7 +370,7 @@ msgstr "Gregorijanski"
 msgid "Gulf region"
 msgstr "Zaljevsko područje"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:139
 msgid "Hanafi"
 msgstr "Hanefijski"
 
@@ -384,7 +388,7 @@ msgstr "Sakrij Vremena Molitve"
 msgid "High"
 msgstr "Visoka"
 
-#: src/screens/settings_calculation/index.tsx:104
+#: src/screens/settings_calculation/index.tsx:107
 msgid "High Latitude"
 msgstr "Visoka Geografska Širina"
 
@@ -452,7 +456,7 @@ msgstr "Islamski (civilni)"
 msgid "Islamic (tabular)"
 msgstr "Islamski (tabelarni)"
 
-#: src/utils/date.ts:256
+#: src/utils/date.ts:268
 msgid "Just now"
 msgstr "Tek sad"
 
@@ -521,7 +525,7 @@ msgstr "Niska"
 msgid "Medium"
 msgstr "Srednja"
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:115
 msgid "Middle of the Night"
 msgstr "Usred Noći"
 
@@ -555,7 +559,7 @@ msgid "New Reminder"
 msgstr "Novi Podsjetnik"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:33
+#: src/screens/settings_dev/index.tsx:34
 #: src/tasks/set_next_adhan.ts:81
 #: src/tasks/set_next_adhan.ts:121
 msgid "Next"
@@ -579,7 +583,7 @@ msgstr "Nema Date"
 msgid "No Results"
 msgstr "Nema Rezultata"
 
-#: src/screens/settings_calculation/index.tsx:110
+#: src/screens/settings_calculation/index.tsx:113
 msgid "None (Automatic)"
 msgstr "Ništa (Automatski)"
 
@@ -627,7 +631,7 @@ msgstr "Na Androidu 12 i novijem, aplikaciji je potrebna i dozvola za alarme da 
 msgid "Once"
 msgstr "Jednom"
 
-#: src/screens/settings_calculation/index.tsx:116
+#: src/screens/settings_calculation/index.tsx:119
 msgid "One-Seventh of the Night"
 msgstr "Jedna Sedmina Večeri"
 
@@ -672,7 +676,7 @@ msgstr "Dozvola Stanja Telefona"
 msgid "Please enable location service"
 msgstr "Omogućite uslugu lokacije"
 
-#: src/screens/settings_calculation/index.tsx:141
+#: src/screens/settings_calculation/index.tsx:144
 msgid "Polar Resolution"
 msgstr "Polarna Procjena Razmaka"
 
@@ -759,11 +763,11 @@ msgstr "Odaberite ko Sabah Ezan"
 msgid "Selecting a name is required"
 msgstr "Odabir imena je potrebno"
 
-#: src/screens/settings_calculation/index.tsx:165
+#: src/screens/settings_calculation/index.tsx:168
 msgid "Shafaq"
 msgstr "Šafak"
 
-#: src/screens/settings_calculation/index.tsx:167
+#: src/screens/settings_calculation/index.tsx:170
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
@@ -773,7 +777,7 @@ msgstr ""
 "odredi koju vrstu sumraka da koristi kako biste\n"
 "odredili vrijeme za Jaciju"
 
-#: src/screens/settings_calculation/index.tsx:133
+#: src/screens/settings_calculation/index.tsx:136
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Šafija, Malikija, Hanbelija (Zadano)"
 
@@ -935,7 +939,7 @@ msgstr "Sutra"
 msgid "Tuesday"
 msgstr "Utorak"
 
-#: src/screens/settings_calculation/index.tsx:120
+#: src/screens/settings_calculation/index.tsx:123
 msgid "Twilight Angle"
 msgstr "Ugao Sumraka"
 
@@ -959,7 +963,7 @@ msgstr "Nepoznata Greška"
 msgid "Unreliable"
 msgstr "Nepouzdano"
 
-#: src/screens/settings_calculation/index.tsx:151
+#: src/screens/settings_calculation/index.tsx:154
 msgid "Unresolved (default)"
 msgstr "Neriješeno (zadano)"
 
@@ -1099,7 +1103,7 @@ msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 msgid "after"
 msgstr "nakon"
 
-#: src/utils/date.ts:261
+#: src/utils/date.ts:273
 msgid "ago"
 msgstr "prije"
 
@@ -1199,7 +1203,7 @@ msgstr "da li je vrijeme molitve skriveno?"
 msgid "isha.prayer"
 msgstr "Jacija"
 
-#: src/utils/date.ts:261
+#: src/utils/date.ts:273
 msgid "later"
 msgstr "poslije"
 
