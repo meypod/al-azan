@@ -208,14 +208,26 @@ export function getTime(date: Date) {
   }
 }
 
-export function getArabicDate(date: Date) {
+function getArabicCalendarType() {
   let calendar;
-
   if (SELECTED_ARABIC_CALENDAR) {
     calendar = SELECTED_ARABIC_CALENDAR;
   } else {
     calendar = SELECTED_LOCALE.startsWith('fa') ? 'islamic-civil' : 'islamic';
   }
+  return calendar;
+}
+
+export function getArabicMonthName(date: Date) {
+  const calendar = getArabicCalendarType();
+
+  return new Intl.DateTimeFormat(`ar-u-ca-${calendar}`, {
+    month: 'long',
+  }).format(date);
+}
+
+export function getArabicDate(date: Date) {
+  const calendar = getArabicCalendarType();
 
   let numbering = '-nu-arab';
   if (NUMBERING_SYSTEM) {

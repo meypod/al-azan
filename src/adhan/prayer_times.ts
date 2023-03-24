@@ -11,6 +11,7 @@ import {
 import intersection from 'lodash/intersection';
 import {CalculationMethods} from './calculation_methods';
 import {PrayersInOrder, Prayer} from './prayer';
+import {isRamadan} from './utils';
 import {
   CachedPrayerTimes,
   getCachedPrayerTimes,
@@ -26,6 +27,7 @@ import {addDays, getDayBeginning, WeekDayIndex} from '@/utils/date';
 export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
   coordinates: Coordinates;
+  calcMethodKey: string;
 };
 
 export function isMinimumSettingsAvailable(calcState?: CalcSettingsStore) {
@@ -59,6 +61,7 @@ function getPrayerTimesOptionsFromSettings() {
   const prayerTimeOptions: PrayerTimesOptions = {
     calculationParameters: CalculationMethods[calcMethodKey!].get(),
     coordinates: new Coordinates(lat, long),
+    calcMethodKey: calcMethodKey!,
   };
 
   prayerTimeOptions.calculationParameters.adjustments = {
@@ -133,6 +136,10 @@ function getPrayerTimesOptionsFromSettings() {
 export function calculatePrayerTimes(date: Date) {
   const options = getPrayerTimesOptionsFromSettings();
   if (!options) return;
+
+  if (options.calcMethodKey === 'UmmAlQura' && isRamadan(date)) {
+    options.calculationParameters.ishaInterval = 120;
+  }
 
   const prayerTimes: Partial<CachedPrayerTimes> = new PrayerTimes(
     options.coordinates,

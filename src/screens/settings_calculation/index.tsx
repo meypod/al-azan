@@ -81,6 +81,9 @@ export function CalculationSettings(props: IScrollViewProps) {
             />
           ))}
         </Select>
+        {calculationMethodKey === 'UmmAlQura' && (
+          <FormControl.HelperText>{t`30 minutes is added to Isha time during Ramadan in this method`}</FormControl.HelperText>
+        )}
       </FormControl>
       <Accordion mb="3" borderRadius={0}>
         <Accordion.Item>
