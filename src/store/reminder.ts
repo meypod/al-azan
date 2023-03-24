@@ -1,4 +1,5 @@
 import {produce} from 'immer';
+import {WritableDraft} from 'immer/dist/internal';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
@@ -9,6 +10,27 @@ import {Prayer, PrayersInOrder} from '@/adhan';
 import type {AudioEntry} from '@/modules/media_player';
 
 export const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
+
+function sortReminders(a: WritableDraft<Reminder>, b: WritableDraft<Reminder>) {
+  let aIndex = PrayersInOrder.indexOf(a.prayer);
+  let bIndex = PrayersInOrder.indexOf(b.prayer);
+  if (aIndex === bIndex) {
+    if (a.durationModifier === b.durationModifier) {
+      if (a.durationModifier === -1) {
+        // one of a or b suffice here to know the modifier
+        return b.duration - a.duration;
+      }
+      return a.duration - b.duration;
+    }
+
+    if (a.durationModifier === -1) {
+      return -1;
+    }
+    return 1;
+  } else {
+    return aIndex - bIndex;
+  }
+}
 
 export type Reminder = {
   id: string;
@@ -65,18 +87,7 @@ export const reminderSettings = createStore<ReminderStore>()(
             } else {
               draft.REMINDERS.push(reminder);
             }
-            draft.REMINDERS.sort((a, b) => {
-              let aIndex = PrayersInOrder.indexOf(a.prayer);
-              let bIndex = PrayersInOrder.indexOf(b.prayer);
-              if (aIndex === bIndex) {
-                return (
-                  a.durationModifier * a.duration -
-                  b.durationModifier * b.durationModifier
-                );
-              } else {
-                return aIndex - bIndex;
-              }
-            });
+            draft.REMINDERS.sort(sortReminders);
           }),
         ),
 
@@ -87,6 +98,7 @@ export const reminderSettings = createStore<ReminderStore>()(
             if (fIndex !== -1) {
               draft.REMINDERS.splice(fIndex, 1);
             }
+            draft.REMINDERS.sort(sortReminders);
           }),
         ),
 
