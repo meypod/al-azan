@@ -5,6 +5,7 @@ import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
+import {clearCache} from './adhan_calc_cache';
 import {alarmSettings, AlarmSettingsStore} from './alarm';
 import {zustandStorage} from './mmkv';
 import {Prayer} from '@/adhan';
@@ -108,7 +109,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 2,
+      version: 3,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -134,6 +135,14 @@ export const calcSettings = createStore<CalcSettingsStore>()(
                 });
                 delete (persistedState as any)[key];
               }
+            }
+          case 2:
+            // a cache reset force for Radaman fix for Umm al-Qura University method
+            if (
+              (persistedState as CalcSettingsStore).CALCULATION_METHOD_KEY ===
+              'UmmAlQura'
+            ) {
+              clearCache();
             }
             break;
         }
