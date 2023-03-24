@@ -5,7 +5,7 @@ import {createJSONStorage, persist} from 'zustand/middleware';
 import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
-import {Prayer} from '@/adhan';
+import {Prayer, PrayersInOrder} from '@/adhan';
 import type {AudioEntry} from '@/modules/media_player';
 
 export const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
@@ -65,6 +65,18 @@ export const reminderSettings = createStore<ReminderStore>()(
             } else {
               draft.REMINDERS.push(reminder);
             }
+            draft.REMINDERS.sort((a, b) => {
+              let aIndex = PrayersInOrder.indexOf(a.prayer);
+              let bIndex = PrayersInOrder.indexOf(b.prayer);
+              if (aIndex === bIndex) {
+                return (
+                  a.durationModifier * a.duration -
+                  b.durationModifier * b.durationModifier
+                );
+              } else {
+                return aIndex - bIndex;
+              }
+            });
           }),
         ),
 
