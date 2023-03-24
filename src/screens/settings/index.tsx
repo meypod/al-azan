@@ -82,6 +82,10 @@ if (settings.getState().DEV_MODE) {
 }
 
 function Settings() {
+  const calendarType = useStore(
+    settings,
+    state => state.SELECTED_ARABIC_CALENDAR,
+  );
   const calcSettingsState = useStore(calcSettings, state => state);
   const alarmSettingsState = useStore(alarmSettings, state => state);
   const reminderSettingsState = useStore(reminderSettings, state => state);
@@ -95,20 +99,17 @@ function Settings() {
   );
 
   useEffect(() => {
-    const stateHash = sha256(JSON.stringify(calcSettingsState));
+    const stateHash = sha256(JSON.stringify(calcSettingsState) + calendarType);
     if (calcSettingsHash !== stateHash) {
-      setCalcSettingsHash(stateHash);
-      settings.setState({DELIVERED_ALARM_TIMESTAMPS: {}});
-      clearCache();
+      setCalcSettingsHash(stateHash + calendarType);
     }
-  }, [calcSettingsState, calcSettingsHash, setCalcSettingsHash]);
+  }, [calcSettingsState, calcSettingsHash, setCalcSettingsHash, calendarType]);
 
   useEffect(() => {
     const stateHash = sha256(JSON.stringify(alarmSettingsState));
     if (alarmSettingsHash !== stateHash) {
       askPermissions().then(() => {
         setAlarmSettingsHash(stateHash);
-        settings.setState({DELIVERED_ALARM_TIMESTAMPS: {}});
       });
     }
   }, [alarmSettingsState, alarmSettingsHash, setAlarmSettingsHash]);
@@ -120,14 +121,13 @@ function Settings() {
     }
   }, [reminderSettingsHash, reminderSettingsState, setReminderSettingsHash]);
 
-  useEffect(() => {
-    updateWidgets();
-    setNextAdhan();
-  }, [calcSettingsHash, alarmSettingsHash]);
-
   useNoInitialEffect(() => {
+    settings.setState({DELIVERED_ALARM_TIMESTAMPS: {}});
+    clearCache();
+    setNextAdhan();
     setReminders({noToast: true, force: true});
-  }, [calcSettingsHash]);
+    updateWidgets();
+  }, [calcSettingsHash, alarmSettingsHash]);
 
   const renderItem = useCallback(
     ({item}: {item: ScreenListItem}) => <SettingsListItem item={item} />,
