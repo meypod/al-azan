@@ -263,7 +263,10 @@ export const AudioPicker = (props: AudioPickerProps) => {
   );
 
   const onAddPressed = useCallback(() => {
-    pickSingle({copyTo: 'documentDirectory', type: 'audio/mpeg'})
+    pickSingle({
+      copyTo: 'documentDirectory',
+      type: ['audio/mpeg', 'audio/ogg', 'application/ogg'],
+    })
       .then(val => {
         if (val.copyError) {
           console.error(val.copyError);
