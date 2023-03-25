@@ -7,10 +7,23 @@ import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
 import {colors} from '@/theme/colors';
 
+let width;
+{
+  const dimensions = Dimensions.get('screen');
+  width = Math.min(dimensions.width, dimensions.height);
+}
+
 let pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
 
-if (Dimensions.get('screen').width < 420) {
+if (width < 420) {
   pixelRatio = pixelRatio * 0.85;
+}
+
+if (width >= 800) {
+  pixelRatio = pixelRatio * 1.55;
+  if (pixelRatio > 4) {
+    pixelRatio = 4;
+  }
 }
 
 const extendedTheme = extendTheme({
