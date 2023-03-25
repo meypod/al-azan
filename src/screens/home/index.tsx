@@ -170,7 +170,6 @@ export function Home() {
         </HStack>
         <PrayerTimesBox
           prayerTimes={prayerTimes}
-          date={currentDate}
           settings={impactfulSettings}
         />
         <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="3">

@@ -15,7 +15,6 @@ type PrayerTimesBoxProps = {
     SettingsStore,
     'HIDDEN_PRAYERS' | 'DELIVERED_ALARM_TIMESTAMPS'
   >;
-  date: Date;
 };
 
 function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
