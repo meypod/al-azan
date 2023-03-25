@@ -17,9 +17,12 @@ let pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
 
 if (width < 420) {
   pixelRatio = pixelRatio * 0.85;
-}
-
-if (width >= 800) {
+} else if (width >= 600 && width < 800) {
+  pixelRatio = pixelRatio * 1.5;
+  if (pixelRatio > 3) {
+    pixelRatio = 3;
+  }
+} else if (width >= 800) {
   pixelRatio = pixelRatio * 1.55;
   if (pixelRatio > 4) {
     pixelRatio = 4;
