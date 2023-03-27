@@ -78,15 +78,20 @@ const localeFallbacks = [
   },
 ];
 
-export function loadLocale(targetLocale: string) {
+/**
+ * @param targetLocale defaults to 'en'
+ */
+export function loadLocale(targetLocale?: string) {
   let locale;
   let messages;
 
-  for (const lf of localeFallbacks) {
-    if (targetLocale.startsWith(lf.base)) {
-      locale = lf.fallback;
-      messages = lf.messages;
-      break;
+  if (targetLocale) {
+    for (const lf of localeFallbacks) {
+      if (targetLocale.startsWith(lf.base)) {
+        locale = lf.fallback;
+        messages = lf.messages;
+        break;
+      }
     }
   }
 
