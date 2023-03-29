@@ -1,16 +1,16 @@
 import {i18n} from '@lingui/core';
 import {en, ar, fa, id, ur, de, fr, hi, tr, bs} from 'make-plural/plurals';
 
-import {messages as arMessages} from '../locales/ar/messages.mjs';
-import {messages as bsMessages} from '../locales/bs/messages.mjs';
-import {messages as deMessages} from '../locales/de/messages.mjs';
-import {messages as enMessages} from '../locales/en/messages.mjs';
-import {messages as faMessages} from '../locales/fa/messages.mjs';
-import {messages as frMessages} from '../locales/fr/messages.mjs';
-import {messages as hiMessages} from '../locales/hi/messages.mjs';
-import {messages as idMessages} from '../locales/id/messages.mjs';
-import {messages as trMessages} from '../locales/tr/messages.mjs';
-import {messages as urMessages} from '../locales/ur/messages.mjs';
+import {messages as arMessages} from '../locales/ar/messages';
+import {messages as bsMessages} from '../locales/bs/messages';
+import {messages as deMessages} from '../locales/de/messages';
+import {messages as enMessages} from '../locales/en/messages';
+import {messages as faMessages} from '../locales/fa/messages';
+import {messages as frMessages} from '../locales/fr/messages';
+import {messages as hiMessages} from '../locales/hi/messages';
+import {messages as idMessages} from '../locales/id/messages';
+import {messages as trMessages} from '../locales/tr/messages';
+import {messages as urMessages} from '../locales/ur/messages';
 
 i18n.loadLocaleData({
   en: {plurals: en},
@@ -105,3 +105,5 @@ export function loadLocale(targetLocale?: string) {
 
   return locale;
 }
+
+export {i18n};

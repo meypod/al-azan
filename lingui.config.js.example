@@ -4,7 +4,7 @@ module.exports = {
   catalogs: [
     {
       path: '<rootDir>/locales/{locale}/messages',
-      include: ['<rootDir>/src'],
+      include: ['<rootDir>/src', '<rootDir>/website/src'],
       exclude: ['**/node_modules/**'],
     },
   ],
@@ -14,7 +14,7 @@ module.exports = {
   fallbackLocales: {
     default: 'en',
   },
-  compileNamespace: 'es',
+  compileNamespace: 'ts',
   service: {
     name: 'TranslationIO',
     apiKey: '<TRANSLATION_IO_APIKEY>',
