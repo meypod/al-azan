@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-03-25 00:00+0330\n"
+"POT-Creation-Date: 2023-04-02 02:20+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,13 +47,17 @@ msgstr "Ebdžed"
 msgid "Accuracy"
 msgstr "Preciznost"
 
-#: src/components/audio_picker.tsx:367
-#: src/screens/settings_adhan/index.tsx:189
+#: website/src/_includes/home.tsx:68
+msgid "Ad-Free"
+msgstr "Bez oglasa"
+
+#: src/components/audio_picker.tsx:376
+#: src/screens/settings_adhan/index.tsx:198
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/screens/settings_adhan/index.tsx:162
-#: src/screens/settings_adhan/index.tsx:167
+#: src/screens/settings_adhan/index.tsx:171
+#: src/screens/settings_adhan/index.tsx:176
 msgid "Add Custom Adhan"
 msgstr "Dodajte Prilagođeni Ezan"
 
@@ -81,13 +85,38 @@ msgstr "Napredne Postavke Kalkulacije"
 msgid "Ahmer"
 msgstr "Amar"
 
+#: website/src/_includes/home.tsx:34
+#: website/src/_includes/privacy-policy.tsx:11
+msgid "Al-Azan"
+msgstr "Al-Azan"
+
+#: website/src/_includes/home.tsx:11
+msgid "Al-Azan - Prayer Times"
+msgstr "Al-Ezan - Vremena Molitve"
+
+#: website/src/_includes/privacy-policy.tsx:52
+msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
+msgstr "Al-Azan se distribuira u nadi da će biti koristan, ali BEZ IKAKVE GARANCIJE; čak i bez implicitne garancije o PRODAJNOSTI ili PRIKLADNOSTI ZA ODREĐENU NAMJENU. Za više detalja pogledajte GNU Affero General Public License."
+
+#: website/src/_includes/privacy-policy.tsx:47
+msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
+msgstr "Al-Azan je slobodan softver: možete ga redistribuirati i/ili modificirati pod uslovima GNU Affero Opće javne licence (v3.0) koju je objavila Fondacija za slobodni softver."
+
 #: src/utils/permission.ts:124
 msgid "Alarms Permission"
 msgstr "Dozvole za Alarm"
 
+#: website/src/_includes/privacy-policy.tsx:30
+msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
+msgstr "Svi podaci dostavljeni Al-Azanu pohranjuju se samo lokalno na vašem uređaju. Vaši podaci se nigdje ne učitavaju. Programeri Al-Azana nemaju pristup njemu. Vaši podaci se ne dijele s trećim licima. Al-Azan ne uključuje biblioteke oglasa ili bilo koji kod za praćenje (analitički) treće strane, kao što je Google Analytics ili Facebook SDK."
+
 #: src/screens/settings_adhan/index.tsx:56
 msgid "An error occured while playing the current track"
 msgstr "Došlo je do greške prilikom pokretanja trenutnog snimka"
+
+#: website/src/_includes/home.tsx:66
+msgid "App features"
+msgstr "Funkcije aplikacije"
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Arabic"
@@ -118,6 +147,7 @@ msgid "At least one prayer time must be shown"
 msgstr "Mora biti prikazano najmanje jedno vrijeme namaza"
 
 #: src/intro/intro.tsx:116
+#: website/src/_includes/privacy-policy.tsx:39
 msgid "Attention"
 msgstr "Pažnja"
 
@@ -143,7 +173,7 @@ msgid "Calendar"
 msgstr "Kalendar"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:186
+#: src/screens/settings_adhan/index.tsx:195
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -277,6 +307,10 @@ msgstr "Odbaci"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Predsjedništvo za vjerska pitanja, Turska"
 
+#: website/src/_includes/home.tsx:69
+msgid "Doesn't use any kind of trackers"
+msgstr "Ne koristi nikakvu vrstu tragača"
+
 #: src/utils/permission.ts:41
 #: src/utils/permission.ts:128
 #: src/utils/permission.ts:160
@@ -384,6 +418,10 @@ msgstr "Skriveno?"
 msgid "Hide Prayer Times"
 msgstr "Sakrij Vremena Molitve"
 
+#: website/src/_includes/home.tsx:85
+msgid "Hide times you don't need"
+msgstr "Sakrijte vremena koja vam nisu potrebna"
+
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
 msgstr "Visoka"
@@ -393,8 +431,17 @@ msgid "High Latitude"
 msgstr "Visoka Geografska Širina"
 
 #: src/screens/settings_about/index.tsx:34
+#: website/src/_data/navigation.ts:2
 msgid "Home"
 msgstr "Početna"
+
+#: website/src/_includes/home.tsx:87
+msgid "Homescreen and notification Widgets"
+msgstr "Početni ekran i vidžeti za obaveštenja"
+
+#: website/src/_includes/privacy-policy.tsx:34
+msgid "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
+msgstr "Međutim, kada koristite usluge na mreži, kao što je traženje koordinata lokacije po imenu ili Qibla mapi, aplikacija može prenijeti minimalne potrebne podatke koji vas mogu ili ne moraju jedinstveno identificirati. Imajte to na umu dok koristite aplikaciju."
 
 #: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
@@ -403,6 +450,10 @@ msgstr "Ja Razumijem"
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Ako je omogućeno, kada se prikaže obavijest, sadržavat će informacije za sljedeće vrijeme molitve"
+
+#: website/src/_includes/privacy-policy.tsx:40
+msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
+msgstr "Ako ste aktivirali “Backup & Reset” u postavkama svog telefona (Postavke / Sigurnosna kopija i resetiranje / Sigurnosna kopija mojih podataka), treba da budete svjesni da će sam Android (ne Al-Azan) povremeno spremati kopiju podataka vašeg telefona u Googleovu serveri. Ovo omogućava Androidu da povrati vaše podatke u slučaju da se vaš uređaj ošteti ili da kupite novi uređaj. Programeri Al-Azana nemaju pristup ovim podacima."
 
 #: src/screens/settings_battery_optimizations/index.tsx:100
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
@@ -424,6 +475,10 @@ msgstr "Uvezite podatke aplikacije"
 msgid "Import successful"
 msgstr "Uvoz je uspješan"
 
+#: website/src/_includes/home.tsx:79
+msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
+msgstr "Pored pet dnevnih namaza, ima postavke za izlazak sunca, zalazak sunca, ponoć i noćni namaz (tahadžud)"
+
 #: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
 msgstr "Info"
@@ -435,6 +490,10 @@ msgstr "Internet veza"
 #: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Internet veza je neophodna da bi karta kible radila. Molimo vas da omogućite WiFi ili mobilnu mrežu i probajte ponovo."
+
+#: website/src/_includes/home.tsx:91
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
+msgstr "Lokaliziran je na engleski, perzijski, arapski, turski, indonezijski, francuski, urdu, hindi, njemački, bosanski"
 
 #: src/screens/settings_display/calendar_settings.tsx:31
 msgid "Islamic"
@@ -498,6 +557,10 @@ msgstr "Dozvola"
 msgid "Light"
 msgstr "Svjetla"
 
+#: website/src/_includes/home.tsx:84
+msgid "Light/Dark theme"
+msgstr "Svjetla/mračna tema"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:148
 #: src/utils/dialogs.ts:35
@@ -520,6 +583,10 @@ msgstr "Geografska Dužina ne važi"
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Niska"
+
+#: website/src/_includes/home.tsx:83
+msgid "Many options for Adhan (اذان) calculation"
+msgstr "Mnogo opcija za izračunavanje ezana (اذان)"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
@@ -545,8 +612,8 @@ msgstr "Odbor za Promatranje Mjeseca"
 msgid "Muslim World League"
 msgstr "Svjetska Liga Muslimana"
 
-#: src/screens/settings_adhan/index.tsx:170
-#: src/screens/settings_adhan/index.tsx:173
+#: src/screens/settings_adhan/index.tsx:179
+#: src/screens/settings_adhan/index.tsx:182
 msgid "Name"
 msgstr "Naziv"
 
@@ -578,7 +645,7 @@ msgstr "Ne"
 msgid "No Data"
 msgstr "Nema Date"
 
-#: src/components/audio_picker.tsx:383
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Nema Rezultata"
@@ -652,6 +719,14 @@ msgstr "Otvorite Postavke za Optimizaciju Baterije"
 msgid "Open Power Manager Settings"
 msgstr "Otvorite Postavke Napojnog Menadžera"
 
+#: website/src/_includes/home.tsx:96
+msgid "Open source repository"
+msgstr "Otvoreno spremište"
+
+#: website/src/_includes/home.tsx:70
+msgid "Open-source"
+msgstr "Otvorenog izvora"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:210
 msgid "Options"
 msgstr "Postavke"
@@ -684,17 +759,41 @@ msgstr "Polarna Procjena Razmaka"
 msgid "Power Manager"
 msgstr "Napojni Menadžer"
 
+#: website/src/_includes/home.tsx:36
+msgid "Prayer Times"
+msgstr "Vremena Molitve"
+
 #: src/screens/home/index.tsx:138
 msgid "Prev Day"
 msgstr "Prošli Dan"
+
+#: website/src/_data/navigation.ts:5
+#: website/src/_includes/privacy-policy.tsx:11
+#: website/src/_includes/privacy-policy.tsx:28
+msgid "Privacy Policy"
+msgstr "Politika privatnosti"
+
+#: website/src/_includes/home.tsx:15
+#: website/src/_includes/privacy-policy.tsx:15
+msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
+msgstr "Prva privatna-bezoglasna otvorena muslimanska aplikacija za Ezan i kiblu"
+
+#: website/src/_includes/home.tsx:89
+msgid "Qada counter"
+msgstr "Kada brojač"
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
 msgstr "Katar"
 
 #: src/screens/qibla_finder_compass/index.tsx:139
+#: website/src/_includes/home.tsx:36
 msgid "Qibla"
 msgstr "Kibla"
+
+#: website/src/_includes/home.tsx:88
+msgid "Qibla finder"
+msgstr "Kibla pronalaznik"
 
 #: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
@@ -746,7 +845,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Subota"
 
-#: src/components/audio_picker.tsx:361
+#: src/components/audio_picker.tsx:370
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Tražite"
@@ -759,9 +858,21 @@ msgstr "Sekundarni Kalendar"
 msgid "Select as Fajr Adhan"
 msgstr "Odaberite ko Sabah Ezan"
 
-#: src/screens/settings_adhan/index.tsx:179
+#: website/src/_includes/home.tsx:77
+msgid "Select different Adhan audio for Fajr namaz"
+msgstr "Odaberite različite zvuke ezana za Sabah"
+
+#: src/screens/settings_adhan/index.tsx:188
 msgid "Selecting a name is required"
 msgstr "Odabir imena je potrebno"
+
+#: website/src/_includes/home.tsx:76
+msgid "Set custom Adhan audio"
+msgstr "Postavite prilagođeni zvuk za Ezan"
+
+#: website/src/_includes/home.tsx:86
+msgid "Set reminders before or after a prayer time"
+msgstr "Postavite podsjetnike prije ili poslije molitvenog vremena"
 
 #: src/screens/settings_calculation/index.tsx:168
 msgid "Shafaq"
@@ -826,6 +937,10 @@ msgstr "Prikažite nadolazeća obavještenja o alarmu?"
 msgid "Silent"
 msgstr "Tiho"
 
+#: website/src/_includes/home.tsx:101
+msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
+msgstr "Budući da ne koristimo nikakvu vrstu tragača ili analitiku rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repo"
+
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
 msgstr "Singapur"
@@ -833,6 +948,10 @@ msgstr "Singapur"
 #: src/intro/intro.tsx:100
 msgid "Skip"
 msgstr "Preskoči"
+
+#: website/src/_includes/privacy-policy.tsx:45
+msgid "Software License"
+msgstr "Softverska licenca"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:31
 msgid "Solar Hijri"
@@ -891,6 +1010,10 @@ msgstr ""
 #: src/adhan/calculation_methods.ts:64
 msgid "The Gulf Region (Dubai)"
 msgstr "Zaljevsko područje (Dubaj)"
+
+#: website/src/_includes/privacy-policy.tsx:62
+msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
+msgstr "Tekst koji se nalazi na ovoj web stranici i u aplikaciji možda nije tačan na drugim jezicima, tako da u svakom slučaju treba uzeti u obzir samo englesku verziju."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
 msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
@@ -1069,6 +1192,14 @@ msgstr "Možete ovdje sakriti molitvena vremena koja ne želite da vidite na gla
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Možete sakriti vremena molitve koja ne želite da vidite u vidžetu ovdje:"
+
+#: website/src/_includes/home.tsx:72
+msgid "You can search for your location online Or use GPS offline"
+msgstr "Možete tražiti svoju lokaciju na mreži ili koristiti GPS van mreže"
+
+#: website/src/_includes/privacy-policy.tsx:57
+msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
+msgstr "Trebali ste dobiti kopiju GNU Affero General Public License zajedno s ovim programom. Ako ne, pogledajte https://www.gnu.org/licenses/."
 
 #: src/components/audio_picker.tsx:118
 msgid "Your sounds"
