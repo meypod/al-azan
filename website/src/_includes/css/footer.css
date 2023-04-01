@@ -1,0 +1,26 @@
+footer {
+  background-color: var(--bs-secondary-bg);
+}
+
+nav.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+nav.footer > span {
+  margin-top: 8px;
+}
+
+nav.footer > a:not(:last-child) {
+  margin: 8px 12px 0px 0px;
+  text-decoration: none;
+}
+
+nav.footer > a {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #bbb;
+}

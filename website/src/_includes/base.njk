@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ title }}</title>
+
+    <link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}" />
+
+    {% for link in page.url | locale_links %}
+    <link
+      rel="alternate"
+      hreflang="{{ link.lang }}"
+      href="{{ meta.url }}{{ link.url }}"
+    />
+    {% endfor %}
+
+    <link rel="canonical" href="{{ meta.url }}{{ page.url }}" />
+    <meta name="description" content="{{ description }}" />
+
+    {% set css %}
+      {% include "css/normalize.css" %}
+      {% include "css/base.css" %}
+      {% include "css/header.css" %}
+      {% include "css/footer.css" %}
+      {% for item in includeCss %}
+        {% include item %}
+      {% endfor %}
+    {% endset %}
+
+    <style>
+      {{ css | postcss | safe }}
+    </style>
+
+    {# {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400&display=swap' %}
+    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400&display=swap' %} #}
+  </head>
+
+  <body>
+    {% include "header.njk" %}
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+  </body>
+</html>

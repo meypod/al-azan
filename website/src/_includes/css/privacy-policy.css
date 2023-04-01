@@ -1,0 +1,12 @@
+
+h1, h2 {
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+

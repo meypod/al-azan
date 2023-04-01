@@ -1,0 +1,11 @@
+<footer>
+  <nav id="footer" class="footer container" aria-label="{{ languages[page.lang].ariaLang }}">
+    <span>{{ languages[page.lang].availableText }}</span>
+    {% for link in page.url | locale_links %}
+
+    <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{
+      link.label
+    }}</a>
+    {% endfor %}
+  </nav>
+</footer>

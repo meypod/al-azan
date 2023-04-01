@@ -1,0 +1,19 @@
+{% set activePage = page.url %}
+
+<header>
+  <nav class="navbar container" aria-label="Primary">
+
+      <a class="logo-link" href="{{ '/' | locale_url }}">
+        <img src="/images/logo_square.png" width="40" height="40" alt="logo">
+        <span>{{ 'Al-Azan' | lingui }}<span>
+      </a>
+
+      <ul>
+        {% for item in navigation %}
+        <li>
+          <a class="navlink{%if item.url | locale_url == activePage %} active{% endif %}" href="{{ item.url | locale_url }}">{{ item.t | lingui }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+</header>

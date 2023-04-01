@@ -1,0 +1,28 @@
+{
+  "name": "al-azan-website",
+  "version": "1.0.0",
+  "description": "a website for al-azan app",
+  "repository": "https://github.com/meypod/al-azan/website",
+  "author": "meypod",
+  "scripts": {
+    "dev": "node --require esbuild-register node_modules/@11ty/eleventy/cmd.js --config=.eleventy.ts --serve",
+    "build": "node --require esbuild-register node_modules/@11ty/eleventy/cmd.js --config=.eleventy.ts",
+    "lingui": "lingui"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-server-browsersync": "^1.0.2",
+    "@lingui/cli": "^3.16.0",
+    "@lingui/core": "^3.16.0",
+    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+    "@types/vhtml": "^2.2.4",
+    "autoprefixer": "^10.4.14",
+    "clean-css": "^5.3.2",
+    "eleventy-google-fonts": "^0.1.0",
+    "esbuild": "^0.17.14",
+    "esbuild-register": "^3.4.2",
+    "postcss": "^8.4.21",
+    "postcss-rtl": "^2.0.0",
+    "vhtml": "^2.2.0"
+  }
+}
