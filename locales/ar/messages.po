@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-02 02:20+0330\n"
+"POT-Creation-Date: 2023-04-02 03:11+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,7 +88,7 @@ msgstr "أحمر"
 #: website/src/_includes/home.tsx:34
 #: website/src/_includes/privacy-policy.tsx:11
 msgid "Al-Azan"
-msgstr "الاذان"
+msgstr "الأذان"
 
 #: website/src/_includes/home.tsx:11
 msgid "Al-Azan - Prayer Times"
@@ -96,7 +96,7 @@ msgstr "الأذان - أوقات الصلاة"
 
 #: website/src/_includes/privacy-policy.tsx:52
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
-msgstr "الآذان يوزع على أمل أن يكون مفيدا ولكن دون أي ضمان. حتى بدون الضمان الضمني لقابلية التسويق أو الملاءمة لغرض معين. راجع رخصة جنو أفيرو العمومية لمزيد من التفاصيل."
+msgstr "الاذان يوزع على أمل أن يكون مفيدا ولكن دون أي ضمان. حتى بدون الضمان الضمني لقابلية التسويق أو الملاءمة لغرض معين. راجع رخصة جنو أفيرو العمومية لمزيد من التفاصيل."
 
 #: website/src/_includes/privacy-policy.tsx:47
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
