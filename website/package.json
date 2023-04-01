@@ -12,6 +12,7 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-server-browsersync": "^1.0.2",
+    "@babel/core": "^7.20.0",
     "@lingui/cli": "^3.16.0",
     "@lingui/core": "^3.16.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
