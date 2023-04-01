@@ -28,6 +28,7 @@ jobs:
         run: |
           cd website
           yarn install --frozen-lockfile
+          ln -s node_modules ../node_modules
 
       - name: Compile lingui.js locales
         run: |
