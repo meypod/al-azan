@@ -13,7 +13,12 @@ let width;
   width = Math.min(dimensions.width, dimensions.height);
 }
 
-let pixelRatio = PixelRatio.get() >= 2 ? PixelRatio.get() * 0.5 : 1;
+let pixelRatio = 1;
+if (PixelRatio.get() >= 4) {
+  pixelRatio = PixelRatio.get() * 0.25;
+} else if (PixelRatio.get() >= 2) {
+  pixelRatio = PixelRatio.get() * 0.5;
+}
 
 if (width < 420) {
   pixelRatio = pixelRatio * 0.85;
