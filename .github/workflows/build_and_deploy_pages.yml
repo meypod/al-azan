@@ -37,8 +37,8 @@ jobs:
 
       - name: Build
         run: |
+          cp ./src/i18n_base.ts ./website/
           cd website
-          ln -s ./node_modules ../node_modules
           yarn build
           touch out/.nojekyll
 

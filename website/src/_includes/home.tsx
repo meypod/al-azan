@@ -1,5 +1,5 @@
 import h from 'vhtml';
-import {loadLocale, i18n} from '../../../src/i18n_base';
+import {loadLocale, i18n} from '../../i18n_base';
 import type {Page} from '../_type/page';
 
 export function data() {

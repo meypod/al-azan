@@ -3,7 +3,7 @@ import CleanCSS from "clean-css";
 import postcss from "postcss";
 import rtl from 'postcss-rtl';
 import autoprefixer from "autoprefixer";
-import {loadLocale, i18n} from '../src/i18n_base';
+import {loadLocale, i18n} from './i18n_base';
 import type EleventyConfig from "@11ty/eleventy/src/UserConfig";
 import type EleventyDefaultConfig from "@11ty/eleventy/src/defaultConfig";
 
