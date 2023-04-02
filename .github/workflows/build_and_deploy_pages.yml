@@ -33,12 +33,12 @@ jobs:
         run: |
           sed -e "s/<TRANSLATION_IO_APIKEY>//" -e "s|<rootDir>/locales|<rootDir>/../locales|" lingui.config.js.example > ./website/lingui.config.js
           cd website
-          cat lingui.config.js
           yarn lingui compile
 
       - name: Build
         run: |
           cd website
+          ln -s ./node_modules ../node_modules
           yarn build
           touch out/.nojekyll
 
