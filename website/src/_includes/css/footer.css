@@ -17,10 +17,10 @@ nav.footer > span {
 
 nav.footer > a:not(:last-child) {
   margin: 8px 12px 0px 0px;
-  text-decoration: none;
 }
 
 nav.footer > a {
   padding-bottom: 3px;
   border-bottom: 1px solid #bbb;
+  text-decoration: none;
 }
