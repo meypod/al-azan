@@ -72,14 +72,28 @@ jobs:
 
     - name: build
       run: |
-        cd android && ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true;
+        cd android
+        ./gradlew --no-daemon :app:bundleRelease -PnoSign
+        ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true
 
-    - name: Sign App Bundle
+    - name: Sign App Apk
       if: ${{ github.event_name == 'release'}}
-      id: sign_app
       uses: r0adkll/sign-android-release@v1
       with:
         releaseDirectory: android/app/build/outputs/apk/release
+        signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
+        alias: ${{ secrets.ANDROID_ALIAS }}
+        keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      env: 
+        # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
+        BUILD_TOOLS_VERSION: "33.0.0" 
+
+    - name: Sign App Bundle
+      if: ${{ github.event_name == 'release'}}
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: android/app/build/outputs/bundle/release
         signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
         alias: ${{ secrets.ANDROID_ALIAS }}
         keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
@@ -99,5 +113,5 @@ jobs:
         allowUpdates: true
         replacesArtifacts: true
         updateOnlyUnreleased: true
-        artifacts: android/app/build/outputs/apk/release/*signed.apk
+        artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*signed.aab
 
