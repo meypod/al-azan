@@ -1,3 +1,0 @@
-- fix icons not showing in android N and probably older versions
-- split apks to reduce app size
-- add time to adhan notification

@@ -1,1 +1,0 @@
-- fix azan not playing sometimes 

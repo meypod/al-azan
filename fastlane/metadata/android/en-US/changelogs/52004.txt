@@ -1,3 +1,0 @@
-- added support for opus (ogg) and wav audio file format in custom audio selection
-- added Isha adjustments for Ramadan for Umm al-Qura University calculation method
-- now sorting reminders based on the order of prayers and their relative times 
