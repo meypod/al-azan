@@ -96,6 +96,7 @@ Translation to other languages has been done by these awesome people:
 #### Turkish
 
 * [@Serince](https://github.com/Serince)
+* [Muha Aliss](https://github.com/muhaaliss)
 
 #### Indonesian
 
