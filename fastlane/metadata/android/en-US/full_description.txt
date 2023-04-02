@@ -1,4 +1,4 @@
-Privacy-first ad-free open-source muslim Adhan (islamic prayer times) and qibla app
+Privacy-first ad-free open-source muslim Adhan (islamic prayer times) and Qibla app
 
 App features:
 
@@ -18,7 +18,7 @@ App features:
 
 * Many options for Adhan (اذان) calculation
 
-* Light/Dark theme
+* Light and Dark theme
 
 * Hide times you don't need
 
@@ -32,8 +32,8 @@ App features:
 
 * Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian
 
-Open source repository:
+Open-Source repository:
 https://github.com/meypod/al-azan/
 
-Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo:
+Since we don't use any kind of tracker or crash analytics, Please report any problem or suggestion you have on our GitHub repo:
 https://github.com/meypod/al-azan/issues
