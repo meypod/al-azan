@@ -61,6 +61,9 @@ def enableSeparateBuildPerCPUArchitecture = true
 /** should we build a universal apk as well ? */
 def buildUniversalApk = project.getProperties().get("buildUniversalApk", false) == "true";
 
+// for package size on github
+def legacyPackaging = project.getProperties().get("useLegacyPackaging", false) == "true";
+
 /**
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
@@ -189,7 +192,8 @@ android {
 
     packagingOptions {
         jniLibs {
-            useLegacyPackaging = true
+            // Change this to false on releases other than github
+            useLegacyPackaging = legacyPackaging
         }
     }
 }

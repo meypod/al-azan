@@ -72,7 +72,7 @@ jobs:
 
     - name: build
       run: |
-        cd android && ./gradlew --no-daemon :app:assembleRelease -PnoSign;
+        cd android && ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true;
 
     - name: Sign App Bundle
       if: ${{ github.event_name == 'release'}}
