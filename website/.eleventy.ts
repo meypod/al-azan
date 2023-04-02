@@ -8,7 +8,7 @@ import type EleventyConfig from "@11ty/eleventy/src/UserConfig";
 import type EleventyDefaultConfig from "@11ty/eleventy/src/defaultConfig";
 
 const eleventyGoogleFonts = require("eleventy-google-fonts");
-const { EleventyI18nPlugin  } = require("@11ty/eleventy"); 
+const { EleventyI18nPlugin, EleventyHtmlBasePlugin  } = require("@11ty/eleventy"); 
 
 const dir = {
   input: 'src',
@@ -40,6 +40,9 @@ module.exports = function (eleventyConfig: EleventyConfig): typeof EleventyDefau
     // When to throw errors for missing localized content files
     errorMode: "allow-fallback", 
   });
+  
+  // for github pages
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   // for minification: 
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier);

@@ -40,7 +40,7 @@ jobs:
         run: |
           cp ./src/i18n_base.ts ./website/
           cd website
-          yarn build
+          yarn build --pathprefix="/al-azan/"
           touch dist/.nojekyll
 
       - name: Deploy
