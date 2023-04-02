@@ -34,6 +34,7 @@ jobs:
           sed -e "s/<TRANSLATION_IO_APIKEY>//" -e "s|<rootDir>/locales|<rootDir>/../locales|" lingui.config.js.example > ./website/lingui.config.js
           cd website
           yarn lingui compile
+          ls -la ../locales/en/
 
       - name: Build
         run: |
