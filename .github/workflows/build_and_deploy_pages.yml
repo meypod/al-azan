@@ -41,7 +41,7 @@ jobs:
           cp ./src/i18n_base.ts ./website/
           cd website
           yarn build
-          touch out/.nojekyll
+          touch dist/.nojekyll
 
       - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action
