@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-02 03:11+0330\n"
+"POT-Creation-Date: 2023-04-03 04:11+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr "15 dk."
 msgid "30 min"
 msgstr "30 dk."
 
-#: src/screens/settings_calculation/index.tsx:85
+#: src/screens/settings_calculation/index.tsx:86
 msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "Bu yöntemde ramazan boyunca yatsı vaktine 30 dakika eklenir"
 
@@ -39,7 +39,7 @@ msgstr "90 dk."
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Ezan"
 
-#: src/screens/settings_calculation/index.tsx:185
+#: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad (Beyazlık)"
 
@@ -73,15 +73,15 @@ msgstr "Ezan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Ezan sesleri henüz indirilmedi"
 
-#: src/screens/settings_calculation/index.tsx:91
+#: src/screens/settings_calculation/index.tsx:93
 msgid "Adjustments"
 msgstr "Ayarlamalar"
 
-#: src/screens/settings_calculation/index.tsx:102
+#: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
 msgstr "Gelişmiş hesaplama ayarları"
 
-#: src/screens/settings_calculation/index.tsx:184
+#: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
 msgstr "Ahmer (Kızıllık)"
 
@@ -138,7 +138,7 @@ msgstr "\"{itemName}\" silmek istediğinizden emin misiniz?"
 msgid "Are you sure you want to delete this?"
 msgstr "Silmek istediğinizden emin misiniz?"
 
-#: src/screens/settings_calculation/index.tsx:129
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Asr Calculation"
 msgstr "İkindi hesaplama"
 
@@ -147,6 +147,7 @@ msgid "At least one prayer time must be shown"
 msgstr "En az bir namaz vakti gösterilmelidir"
 
 #: src/intro/intro.tsx:116
+#: src/screens/settings_calculation/calendar_settings.tsx:44
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "Attention"
 msgstr "Dikkat"
@@ -156,7 +157,7 @@ msgstr "Dikkat"
 msgid "Battery Optimization"
 msgstr "Pil optimizasyonu"
 
-#: src/screens/settings_calculation/index.tsx:69
+#: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı sonuçlar verir. Doğru yöntemi bulmak ve kullanmak sizin sorumluluğunuzdadır."
 
@@ -164,11 +165,11 @@ msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı
 msgid "Calculation"
 msgstr "Hesaplama"
 
-#: src/screens/settings_calculation/index.tsx:71
+#: src/screens/settings_calculation/index.tsx:72
 msgid "Calculation Method"
 msgstr "Hesaplama yöntemi"
 
-#: src/screens/settings_display/calendar_settings.tsx:21
+#: src/screens/settings_calculation/calendar_settings.tsx:21
 msgid "Calendar"
 msgstr "Takvim"
 
@@ -179,15 +180,15 @@ msgstr "Takvim"
 msgid "Cancel"
 msgstr "İptal"
 
-#: src/screens/settings_calculation/index.tsx:131
+#: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
 msgstr "İkindi hesaplama mezhebini seçin"
 
-#: src/screens/settings_calculation/index.tsx:74
+#: src/screens/settings_calculation/index.tsx:75
 msgid "Choose Calculation Method"
 msgstr "Hesaplama yöntemini seçin"
 
-#: src/screens/settings_calculation/index.tsx:109
+#: src/screens/settings_calculation/index.tsx:111
 msgid "Choose High Latitude Setting"
 msgstr "Yüksek enlem ayarını seçin"
 
@@ -195,16 +196,16 @@ msgstr "Yüksek enlem ayarını seçin"
 msgid "Choose Language"
 msgstr "Dil seçiniz"
 
-#: src/screens/settings_calculation/index.tsx:147
+#: src/screens/settings_calculation/index.tsx:149
 msgid "Choose Polar Resolution"
 msgstr "Kutuplar için çözüm"
 
-#: src/screens/settings_calculation/index.tsx:176
+#: src/screens/settings_calculation/index.tsx:178
 msgid "Choose Shafaq method"
 msgstr "Şafak hesaplama methodu"
 
+#: src/screens/settings_calculation/calendar_settings.tsx:26
 #: src/screens/settings_display/calendar_secondary_settings.tsx:26
-#: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "Takvim türünü seçin"
 
@@ -221,11 +222,11 @@ msgstr "Şehir/Bölge"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
 
-#: src/screens/settings_calculation/index.tsx:158
+#: src/screens/settings_calculation/index.tsx:160
 msgid "Closest City"
 msgstr "En yakın şehir"
 
-#: src/screens/settings_calculation/index.tsx:162
+#: src/screens/settings_calculation/index.tsx:164
 msgid "Closest Date"
 msgstr "En yakın tarih"
 
@@ -266,7 +267,7 @@ msgstr "Koyu"
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
 #: src/screens/settings_backup/import_settings.tsx:54
-#: src/screens/settings_display/calendar_settings.tsx:30
+#: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Varsayılan"
@@ -382,7 +383,7 @@ msgstr "Konumumu bul"
 msgid "Friday"
 msgstr "Cuma"
 
-#: src/screens/settings_calculation/index.tsx:181
+#: src/screens/settings_calculation/index.tsx:183
 msgid "General (default)"
 msgstr "Genel (varsayılan)"
 
@@ -404,7 +405,7 @@ msgstr "Gregoryen"
 msgid "Gulf region"
 msgstr "Körfez bölgesi"
 
-#: src/screens/settings_calculation/index.tsx:139
+#: src/screens/settings_calculation/index.tsx:141
 msgid "Hanafi"
 msgstr "Hanefi"
 
@@ -426,7 +427,7 @@ msgstr "İhtiyacınız olmayan zamanları gizleme"
 msgid "High"
 msgstr "Yüksek"
 
-#: src/screens/settings_calculation/index.tsx:107
+#: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "Yüksek enlem"
 
@@ -495,23 +496,23 @@ msgstr "Kıble haritasının çalışması için internet bağlantısı gereklid
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
 msgstr "İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça dili seçenekleri"
 
-#: src/screens/settings_display/calendar_settings.tsx:31
+#: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
 msgstr "İslami"
 
-#: src/screens/settings_display/calendar_settings.tsx:39
+#: src/screens/settings_calculation/calendar_settings.tsx:39
 msgid "Islamic (Saudi Arabia sighting)"
 msgstr "İslami (Suudi Arabistan'a göre görünüm)"
 
-#: src/screens/settings_display/calendar_settings.tsx:33
+#: src/screens/settings_calculation/calendar_settings.tsx:33
 msgid "Islamic (Umm al-Qura)"
 msgstr "İslami (Umm al-Qura)"
 
-#: src/screens/settings_display/calendar_settings.tsx:37
+#: src/screens/settings_calculation/calendar_settings.tsx:37
 msgid "Islamic (civil)"
 msgstr "İslami (Sivil)"
 
-#: src/screens/settings_display/calendar_settings.tsx:36
+#: src/screens/settings_calculation/calendar_settings.tsx:36
 msgid "Islamic (tabular)"
 msgstr "İslami (Cetvele göre hesaplanmış)"
 
@@ -592,7 +593,7 @@ msgstr "Ezan hesaplaması için birçok seçenek"
 msgid "Medium"
 msgstr "Orta"
 
-#: src/screens/settings_calculation/index.tsx:115
+#: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Gece yarısı"
 
@@ -650,7 +651,7 @@ msgstr "Veri yok"
 msgid "No Results"
 msgstr "Sonuç yok"
 
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
 
@@ -698,7 +699,7 @@ msgstr "Android 12 ve daha yeni sürümlerde, uygulamanın düzgün çalışmas�
 msgid "Once"
 msgstr "Bir kez"
 
-#: src/screens/settings_calculation/index.tsx:119
+#: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
 msgstr "Gecenin yedide biri"
 
@@ -751,7 +752,7 @@ msgstr "Telefon durumu izni"
 msgid "Please enable location service"
 msgstr "Lütfen konum hizmetini etkinleştirin"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Kutuplar için hesaplama yöntemi"
 
@@ -870,18 +871,18 @@ msgstr "Özel Ezan sesi ayarlama"
 msgid "Set reminders before or after a prayer time"
 msgstr "Dua zamanından önce veya sonra hatırlatıcı ayarlama"
 
-#: src/screens/settings_calculation/index.tsx:168
+#: src/screens/settings_calculation/index.tsx:170
 msgid "Shafaq"
 msgstr "Şafak"
 
-#: src/screens/settings_calculation/index.tsx:170
+#: src/screens/settings_calculation/index.tsx:172
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "Şafak tipi seçimi, sabah namazının zamanını belirlemek için MoonsightingCommittee'nin hesap yönteminde kullanılır."
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:138
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Şafi, Maliki, Hanbeli (Varsayılan)"
 
@@ -998,6 +999,10 @@ msgstr "Uygulamamızı seçtiğiniz için teşekkürler! Uygulamamızı kullanma
 msgid "The Gulf Region (Dubai)"
 msgstr "Körfez Bölgesi (Dubai)"
 
+#: src/screens/settings_calculation/calendar_settings.tsx:45
+msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
+msgstr "Uygulamanın ay takvimi önceden hesaplanmıştır ve ay gözlemlerine dayanmadığı için doğru olmayabilir. Bu özellikle Ramazan'ın başlangıcı ve bitişi için önemlidir."
+
 #: website/src/_includes/privacy-policy.tsx:62
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 msgstr "Bu web sitesinde ve uygulamada bulunan metin diğer dillerde doğru olmayabilir, bu nedenle her durumda yalnızca İngilizce sürüm dikkate alınmalıdır."
@@ -1006,7 +1011,7 @@ msgstr "Bu web sitesinde ve uygulamada bulunan metin diğer dillerde doğru olma
 msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
 msgstr "Ana ekranın üstünde ve widget'larda ay tarihinin yanında gösterilen takvim türü"
 
-#: src/screens/settings_display/calendar_settings.tsx:23
+#: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
 msgstr "Ana ekranda ve widget'larda gösterilen ay takvimi türü"
 
@@ -1049,7 +1054,7 @@ msgstr "Yarın"
 msgid "Tuesday"
 msgstr "Salı"
 
-#: src/screens/settings_calculation/index.tsx:123
+#: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
 msgstr "Güneş ufuk açısı"
 
@@ -1073,7 +1078,7 @@ msgstr "Bilinmeyen hata"
 msgid "Unreliable"
 msgstr "Güvenilmez"
 
-#: src/screens/settings_calculation/index.tsx:154
+#: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Çözümlenmemiş (varsayılan)"
 

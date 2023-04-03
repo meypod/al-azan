@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-02 03:11+0330\n"
+"POT-Creation-Date: 2023-04-03 04:11+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr "15 menit"
 msgid "30 min"
 msgstr "30 menit"
 
-#: src/screens/settings_calculation/index.tsx:85
+#: src/screens/settings_calculation/index.tsx:86
 msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 menit ditambahkan pada waktu Isya selama bulan Ramadan dalam metode ini"
 
@@ -39,7 +39,7 @@ msgstr "90 menit"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Adzan"
 
-#: src/screens/settings_calculation/index.tsx:185
+#: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
 msgstr "Abyad"
 
@@ -73,15 +73,15 @@ msgstr "Adzan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Berkas audio adzan belum diunduh"
 
-#: src/screens/settings_calculation/index.tsx:91
+#: src/screens/settings_calculation/index.tsx:93
 msgid "Adjustments"
 msgstr "Penyesuaian"
 
-#: src/screens/settings_calculation/index.tsx:102
+#: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
 msgstr "Pengaturan Lanjutan"
 
-#: src/screens/settings_calculation/index.tsx:184
+#: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
 msgstr "Ahmer"
 
@@ -138,7 +138,7 @@ msgstr "Apakah Anda yakin ingin menghapus \"{itemName}\" ?"
 msgid "Are you sure you want to delete this?"
 msgstr "Apakah Anda yakin ingin menghapus ini?"
 
-#: src/screens/settings_calculation/index.tsx:129
+#: src/screens/settings_calculation/index.tsx:131
 msgid "Asr Calculation"
 msgstr "Perhitungan Waktu Ashar"
 
@@ -147,6 +147,7 @@ msgid "At least one prayer time must be shown"
 msgstr "Setidaknya satu waktu sholat harus ditampilkan"
 
 #: src/intro/intro.tsx:116
+#: src/screens/settings_calculation/calendar_settings.tsx:44
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "Attention"
 msgstr "Perhatian"
@@ -156,7 +157,7 @@ msgstr "Perhatian"
 msgid "Battery Optimization"
 msgstr "Optimasi Baterai"
 
-#: src/screens/settings_calculation/index.tsx:69
+#: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Perhitungan Adzan memiliki banyak metode yang berbeda. Setiap metode menghasilkan waktu azan yang berbeda. Pilih motode perhitungan yang sesuai."
 
@@ -164,11 +165,11 @@ msgstr "Perhitungan Adzan memiliki banyak metode yang berbeda. Setiap metode men
 msgid "Calculation"
 msgstr "Perhitungan"
 
-#: src/screens/settings_calculation/index.tsx:71
+#: src/screens/settings_calculation/index.tsx:72
 msgid "Calculation Method"
 msgstr "Metode Perhitungan"
 
-#: src/screens/settings_display/calendar_settings.tsx:21
+#: src/screens/settings_calculation/calendar_settings.tsx:21
 msgid "Calendar"
 msgstr "Kalender"
 
@@ -179,15 +180,15 @@ msgstr "Kalender"
 msgid "Cancel"
 msgstr "Batal"
 
-#: src/screens/settings_calculation/index.tsx:131
+#: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
 msgstr "Pilih Madzhab Perhitungan Waktu Ashar"
 
-#: src/screens/settings_calculation/index.tsx:74
+#: src/screens/settings_calculation/index.tsx:75
 msgid "Choose Calculation Method"
 msgstr "Pilih Metode Perhitungan"
 
-#: src/screens/settings_calculation/index.tsx:109
+#: src/screens/settings_calculation/index.tsx:111
 msgid "Choose High Latitude Setting"
 msgstr "Pilih Pengaturan Lintang Tinggi"
 
@@ -195,16 +196,16 @@ msgstr "Pilih Pengaturan Lintang Tinggi"
 msgid "Choose Language"
 msgstr "Pilih Bahasa"
 
-#: src/screens/settings_calculation/index.tsx:147
+#: src/screens/settings_calculation/index.tsx:149
 msgid "Choose Polar Resolution"
 msgstr "Pilih Resolusi Kutub"
 
-#: src/screens/settings_calculation/index.tsx:176
+#: src/screens/settings_calculation/index.tsx:178
 msgid "Choose Shafaq method"
 msgstr "Pilih metode Shafaq"
 
+#: src/screens/settings_calculation/calendar_settings.tsx:26
 #: src/screens/settings_display/calendar_secondary_settings.tsx:26
-#: src/screens/settings_display/calendar_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "Pilih jenis kalender"
 
@@ -221,11 +222,11 @@ msgstr "Kota/Daerah"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
-#: src/screens/settings_calculation/index.tsx:158
+#: src/screens/settings_calculation/index.tsx:160
 msgid "Closest City"
 msgstr "Kota terdekat"
 
-#: src/screens/settings_calculation/index.tsx:162
+#: src/screens/settings_calculation/index.tsx:164
 msgid "Closest Date"
 msgstr "Tanggal terdekat"
 
@@ -266,7 +267,7 @@ msgstr "Gelap"
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
 #: src/screens/settings_backup/import_settings.tsx:54
-#: src/screens/settings_display/calendar_settings.tsx:30
+#: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Bawaan"
@@ -382,7 +383,7 @@ msgstr "Temukan Lokasi Saya"
 msgid "Friday"
 msgstr "Jumat"
 
-#: src/screens/settings_calculation/index.tsx:181
+#: src/screens/settings_calculation/index.tsx:183
 msgid "General (default)"
 msgstr "Umum (default)"
 
@@ -404,7 +405,7 @@ msgstr "Gregorian"
 msgid "Gulf region"
 msgstr "Wilayah Gulf"
 
-#: src/screens/settings_calculation/index.tsx:139
+#: src/screens/settings_calculation/index.tsx:141
 msgid "Hanafi"
 msgstr "Hanafi"
 
@@ -426,7 +427,7 @@ msgstr "Sembunyikan waktu yang tidak Anda perlukan"
 msgid "High"
 msgstr "Tinggi"
 
-#: src/screens/settings_calculation/index.tsx:107
+#: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
 msgstr "Lintang Tinggi"
 
@@ -495,23 +496,23 @@ msgstr "Koneksi internet diperlukan agar peta kiblat dapat berfungsi. Aktifkan w
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
 msgstr "Dilokalkan dalam bahasa Inggris, Persia, Arab, Turki, Indonesia, Prancis, Urdu, Hindi, Jerman, Bosnia"
 
-#: src/screens/settings_display/calendar_settings.tsx:31
+#: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
 msgstr "Islam"
 
-#: src/screens/settings_display/calendar_settings.tsx:39
+#: src/screens/settings_calculation/calendar_settings.tsx:39
 msgid "Islamic (Saudi Arabia sighting)"
 msgstr "Islam (penampakan Arab Saudi)"
 
-#: src/screens/settings_display/calendar_settings.tsx:33
+#: src/screens/settings_calculation/calendar_settings.tsx:33
 msgid "Islamic (Umm al-Qura)"
 msgstr "Islam (Umm al-Qura)"
 
-#: src/screens/settings_display/calendar_settings.tsx:37
+#: src/screens/settings_calculation/calendar_settings.tsx:37
 msgid "Islamic (civil)"
 msgstr "Islam (sipil)"
 
-#: src/screens/settings_display/calendar_settings.tsx:36
+#: src/screens/settings_calculation/calendar_settings.tsx:36
 msgid "Islamic (tabular)"
 msgstr "Islam (tabular)"
 
@@ -592,7 +593,7 @@ msgstr "Banyak pilihan untuk perhitungan Adzan (اذان)"
 msgid "Medium"
 msgstr "Sedang"
 
-#: src/screens/settings_calculation/index.tsx:115
+#: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
 msgstr "Pertengahan malam"
 
@@ -650,7 +651,7 @@ msgstr "Tidak ada data"
 msgid "No Results"
 msgstr "Tidak ada hasil"
 
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
 msgstr "Tidak ada (Otomatis)"
 
@@ -698,7 +699,7 @@ msgstr "Pada Android 12 dan yang lebih baru, aplikasi ini juga memerlukan izin a
 msgid "Once"
 msgstr "Sekali"
 
-#: src/screens/settings_calculation/index.tsx:119
+#: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
 msgstr "Sepertujuh Malam"
 
@@ -751,7 +752,7 @@ msgstr "Izin Status Telepon"
 msgid "Please enable location service"
 msgstr "Harap aktifkan layanan lokasi"
 
-#: src/screens/settings_calculation/index.tsx:144
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Resolusi Kutub"
 
@@ -870,18 +871,18 @@ msgstr "Mengatur audio Adzan khusus"
 msgid "Set reminders before or after a prayer time"
 msgstr "Mengatur pengingat sebelum atau sesudah waktu salat"
 
-#: src/screens/settings_calculation/index.tsx:168
+#: src/screens/settings_calculation/index.tsx:170
 msgid "Shafaq"
 msgstr "Shafaq"
 
-#: src/screens/settings_calculation/index.tsx:170
+#: src/screens/settings_calculation/index.tsx:172
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "Shafaq digunakan metode Komite Moonsighting untuk menentukan jenis senja yang digunakan untuk menentukan waktu Isya'"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:138
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Syafi'i, Maliki, Hanbali (Default)"
 
@@ -1000,6 +1001,10 @@ msgstr "Terima kasih telah memilih Al-Azan! Lakukan pengaturan awal sebelum mula
 msgid "The Gulf Region (Dubai)"
 msgstr "The Gulf Region (Dubai)"
 
+#: src/screens/settings_calculation/calendar_settings.tsx:45
+msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
+msgstr "Kalender lunar aplikasi ini telah dihitung sebelumnya dan mungkin tidak akurat karena tidak berdasarkan penampakan bulan. Hal ini sangat penting untuk diperhatikan terutama untuk awal dan akhir Ramadan."
+
 #: website/src/_includes/privacy-policy.tsx:62
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 msgstr "Teks yang terdapat di situs web dan aplikasi ini mungkin tidak akurat dalam bahasa lain, jadi dalam hal apa pun, hanya versi bahasa Inggris yang harus dipertimbangkan."
@@ -1008,7 +1013,7 @@ msgstr "Teks yang terdapat di situs web dan aplikasi ini mungkin tidak akurat da
 msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
 msgstr "Jenis kalender yang ditampilkan di bagian atas layar beranda dan di samping tanggal lunar di widget"
 
-#: src/screens/settings_display/calendar_settings.tsx:23
+#: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
 msgstr "Jenis kalender lunar yang ditampilkan di layar utama dan widget"
 
@@ -1051,7 +1056,7 @@ msgstr "Besok"
 msgid "Tuesday"
 msgstr "Selasa"
 
-#: src/screens/settings_calculation/index.tsx:123
+#: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
 msgstr "Sudut Senja"
 
@@ -1075,7 +1080,7 @@ msgstr "Kesalahan Tidak Dikenal"
 msgid "Unreliable"
 msgstr "Tidak dapat diandalkan"
 
-#: src/screens/settings_calculation/index.tsx:154
+#: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
 msgstr "Tidak ada (default)"
 
