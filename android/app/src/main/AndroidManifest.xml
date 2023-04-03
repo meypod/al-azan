@@ -61,7 +61,6 @@
     <service
       android:exported="false"
       android:name=".modules.MediaPlayerService" />
-    <service android:exported="false" android:name=".UniversalTaskService" />
     <!-- for allowing app to start the foreground service -->
     <service android:name="app.notifee.core.ForegroundService" android:foregroundServiceType="mediaPlayback" />
   </application>

@@ -1,5 +1,6 @@
 package com.github.meypod.al_azan.modules;
 
+import static com.github.meypod.al_azan.ReactUtils.sendEvent;
 import static com.github.meypod.al_azan.modules.MediaPlayerModule.ctx;
 import static com.github.meypod.al_azan.utils.Utils.getIdFromRawResourceUri;
 
@@ -32,6 +33,7 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
+import com.github.meypod.al_azan.ReactUtils;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -72,8 +74,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
 
   @Override
   public void onAudioFocusChange(int focusChange) {
-    ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-        .emit("audio_focus_change", focusChange);
+    sendEvent("audio_focus_change", focusChange);
     if (focusChange > 0) {
       if (wasPlaying) {
         start(true);
@@ -101,8 +102,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
         wasPlaying = true;
       }
       isPaused = true;
-      ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-          .emit("state", STATE_PAUSED);
+      sendEvent("state", STATE_PAUSED);
     }
   }
 
@@ -119,8 +119,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     } catch (Exception ignored) {
     } finally {
       onCompletion(wasInterrupted);
-      ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-          .emit("state", STATE_STOPPED);
+      sendEvent("state", STATE_STOPPED);
     }
   }
 
@@ -142,8 +141,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
         isStarted = true;
         isPaused = false;
         wasPlaying = false;
-        ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-            .emit("state", STATE_STARTED);
+        sendEvent("state", STATE_STARTED);
         if (isLoopUri) {
           timer= new Timer();
           timer.schedule(new TimerTask() {
@@ -292,8 +290,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
         error = "UNKNOWN";
         break;
     }
-    ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-        .emit("error", error);
+    sendEvent("error", error);
     return true;
   }
 
@@ -316,10 +313,8 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     wasPlaying = false;
     AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
     audioManager.abandonAudioFocus(this);
-    ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-            .emit("completed", wasInterrupted);
-    ctx.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-            .emit("state", STATE_STOPPED);
+    sendEvent("completed", wasInterrupted);
+    sendEvent("state", STATE_STOPPED);
   }
 
   class MusicBinder extends Binder {

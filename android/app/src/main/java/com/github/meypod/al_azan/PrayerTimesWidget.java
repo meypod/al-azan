@@ -3,8 +3,6 @@ package com.github.meypod.al_azan;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 
 /**
  * Implementation of App Widget functionality.
@@ -12,15 +10,10 @@ import android.os.Bundle;
 public class PrayerTimesWidget extends AppWidgetProvider {
 
   public static void requestWidgetUpdate(Context context) {
-    Intent service = new Intent(context, UniversalTaskService.class);
-    Bundle bundle = new Bundle();
-
-    bundle.putLong("timeout", 30000);
-    bundle.putBoolean("allowedInForeground", true);
-    bundle.putString("taskName", "update_screen_widget_task");
-    service.putExtras(bundle);
-
-    context.startService(service);
+    ReactUtils.startHeadlessTask("update_screen_widget_task",
+            null,
+            30000,
+            null);
   }
 
   @Override
