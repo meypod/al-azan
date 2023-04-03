@@ -10,6 +10,7 @@ import {
   Text,
 } from 'native-base';
 
+import {CalendarSettings} from './calendar_settings';
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/material_icons/menu';
 import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
@@ -85,6 +86,7 @@ export function CalculationSettings(props: IScrollViewProps) {
           <FormControl.HelperText>{t`30 minutes is added to Isha time during Ramadan in this method`}</FormControl.HelperText>
         )}
       </FormControl>
+      <CalendarSettings mb="6" />
       <Accordion mb="3" borderRadius={0}>
         <Accordion.Item>
           <Accordion.Summary>

@@ -20,7 +20,7 @@ export function CalendarSettings(props: IStackProps) {
       <FormControl fontSize="md">
         <FormControl.Label>{t`Calendar`}:</FormControl.Label>
         <FormControl.HelperText>
-          {t`The type of lunar calendar shown in main screen and widgets`}
+          {t`The type of lunar calendar shown in main screen and widgets` + '.'}{' '}
         </FormControl.HelperText>
         <Select
           accessibilityLabel={t`Choose calendar type`}
@@ -40,6 +40,10 @@ export function CalendarSettings(props: IStackProps) {
             value="islamic-rgsa"
           />
         </Select>
+        <FormControl.HelperText>
+          {t`Attention` + ':'}
+          {t`The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan.`}
+        </FormControl.HelperText>
       </FormControl>
     </HStack>
   );
