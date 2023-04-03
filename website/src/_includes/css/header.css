@@ -47,6 +47,7 @@ nav.navbar ul li:not(:last-child) {
 .logo-link {
   color: var(--bs-secondary-color);
   text-decoration: none;
+  font-family: 'Noto Naskh Arabic';
   font-size: 20px;
   display: flex;
   justify-content: center;
