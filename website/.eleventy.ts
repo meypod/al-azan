@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig: EleventyConfig): typeof EleventyDefau
   // for minification: 
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
   // for fonts
-  // eleventyConfig.addPlugin(eleventyGoogleFonts);
+  eleventyConfig.addPlugin(eleventyGoogleFonts);
 
   async function processCSS(content, inputPath) {
     let output = await postcss([
