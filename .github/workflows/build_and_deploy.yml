@@ -113,5 +113,5 @@ jobs:
         allowUpdates: true
         replacesArtifacts: true
         updateOnlyUnreleased: true
-        artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*signed.aab
+        artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*.aab
 
