@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: bug
+labels: bug, enhancement
 assignees: ''
 
 ---
@@ -22,6 +22,9 @@ If applicable, add screenshots to help explain your problem. -->
 **Device Info <!--(please complete the following information)-->:**
  - Device: [e.g. Samsung S20]
  - OS: [e.g. Android 13] 
+
+**App Version:**
+**F-Droid:** Yes/No
 
 **Additional context**
 <!--Add any other context about the problem here.-->
