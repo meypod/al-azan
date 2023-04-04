@@ -102,7 +102,7 @@ jobs:
         # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
         BUILD_TOOLS_VERSION: "33.0.0" 
        
-    - name: Release
+    - name: Release on GitHub
       if: ${{ github.event_name == 'release'}}
       uses: ncipollo/release-action@v1
       with:
@@ -113,5 +113,14 @@ jobs:
         allowUpdates: true
         replacesArtifacts: true
         updateOnlyUnreleased: true
-        artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*.aab
+        artifacts: android/app/build/outputs/apk/release/*signed.apk
+
+    - name: Push to Play Store
+      uses: r0adkll/upload-google-play@v1
+      with:
+        serviceAccountJsonPlainText: ${{ SERVICE_ACCOUNT_JSON }}
+        packageName: com.github.meypod.al_azan
+        releaseFiles: android/app/build/outputs/bundle/release/*.aab
+        track: internal
+        status: inProgress
 
