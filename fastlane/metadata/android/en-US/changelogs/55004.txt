@@ -1,1 +1,2 @@
-- fixed a very rare crash
+- Fixed a very rare crash
+- Added an important notice for Ramadan that will be shown near the start and end of Ramadan
