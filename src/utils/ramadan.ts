@@ -71,7 +71,7 @@ export function dismissRamadanNoticeForThisYear() {
 
 export function showRamadanAlert() {
   Alert.alert(
-    t`Notice`,
+    t`Attention`,
     isRamadanNear() ? getRamadanStartingMsg() : getRamadanEndingMsg(),
     [
       {
@@ -92,7 +92,7 @@ export async function notifyRamadanNotice() {
   await notifee
     .displayNotification({
       id: RAMADAN_NOTICE_NOTIFICATION_ID,
-      title: t`Notice`,
+      title: t`Attention`,
       body: isRamadanNear() ? getRamadanStartingMsg() : getRamadanEndingMsg(),
       android: {
         channelId: IMPORTANT_CHANNEL_ID,
