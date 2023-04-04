@@ -1,2 +1,2 @@
 - Fixed a very rare crash
-- Added an important notice for Ramadan that will be shown near the start and end of Ramadan
+- Added an important notice for Ramadan about the calendar that will be shown near the start and end of Ramadan
