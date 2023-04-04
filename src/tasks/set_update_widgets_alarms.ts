@@ -18,6 +18,13 @@ async function createNotificationTrigger(options: {
   timestamp: number;
   notificationId: string;
 }) {
+  await notifee
+    .cancelDisplayedNotifications([
+      WIDGET_UPDATE_NOTIFICATION_ID + '-nextday',
+      WIDGET_UPDATE_NOTIFICATION_ID,
+    ])
+    .catch(console.error);
+
   const {channelId, notificationId, timestamp} = options;
   // for 00:00 updates
   const trigger: TimestampTrigger = {
