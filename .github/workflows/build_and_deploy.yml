@@ -113,7 +113,7 @@ jobs:
         allowUpdates: true
         replacesArtifacts: true
         updateOnlyUnreleased: true
-        artifacts: android/app/build/outputs/apk/release/*signed.apk
+        artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*.aab
 
     - name: Push to Play Store
       uses: r0adkll/upload-google-play@v1
