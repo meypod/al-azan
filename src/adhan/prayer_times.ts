@@ -11,7 +11,6 @@ import {
 import intersection from 'lodash/intersection';
 import {CalculationMethods} from './calculation_methods';
 import {PrayersInOrder, Prayer} from './prayer';
-import {isRamadan} from './utils';
 import {
   CachedPrayerTimes,
   getCachedPrayerTimes,
@@ -23,6 +22,7 @@ import {
 } from '@/store/alarm';
 import {calcSettings, CalcSettingsStore} from '@/store/calculation';
 import {addDays, getDayBeginning, WeekDayIndex} from '@/utils/date';
+import {isRamadan} from '@/utils/ramadan';
 
 export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;

@@ -16,6 +16,9 @@ export const WIDGET_UPDATE_NOTIFICATION_ID = 'widget-update-notification';
 export const REMINDER_CHANNEL_ID = 'reminder-channel';
 export const PRE_REMINDER_CHANNEL_ID = 'pre-reminder-channel';
 
+export const IMPORTANT_CHANNEL_ID = 'important-channel';
+export const RAMADAN_NOTICE_NOTIFICATION_ID = 'ramadan-notice-notification';
+
 export const channelNameTranslations = {
   ADHAN_CHANNEL_NAME: defineMessage({
     id: 'ADHAN_CHANNEL_NAME',
@@ -40,5 +43,9 @@ export const channelNameTranslations = {
   PRE_REMINDER_CHANNEL_NAME: defineMessage({
     id: 'PRE_REMINDER_CHANNEL_NAME',
     message: 'Upcoming reminder',
+  }),
+  IMPORTANT_CHANNEL_ID: defineMessage({
+    id: 'IMPORTANT_CHANNEL_ID',
+    message: 'Important',
   }),
 } as Record<string, MessageDescriptor>;

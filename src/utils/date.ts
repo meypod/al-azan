@@ -155,7 +155,11 @@ const persianMonthNames: Record<string, Record<string | number, string>> = {
 };
 
 export function getFormattedDate(date: Date) {
-  if (Platform.Version < 30 && SELECTED_SECONDARY_CALENDAR === 'persian') {
+  if (
+    Platform.OS === 'android' &&
+    Platform.Version < 30 &&
+    SELECTED_SECONDARY_CALENDAR === 'persian'
+  ) {
     // polyfill for older androids not showing persian calendar properly
     const month = new Intl.DateTimeFormat('en-US', {
       month: 'numeric',
@@ -238,6 +242,53 @@ export function getArabicDate(date: Date) {
     month: 'long',
     year: 'numeric',
     weekday: 'long',
+  }).format(date);
+}
+
+export function getHijriYear(date: Date, formatted?: boolean) {
+  const calendar = getArabicCalendarType();
+
+  let numbering = '-nu-latn';
+  if (formatted) {
+    numbering = '-nu-arab';
+    if (NUMBERING_SYSTEM) {
+      numbering = `-nu-${NUMBERING_SYSTEM}`;
+    }
+  }
+
+  return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
+    year: 'numeric',
+  }).format(date);
+}
+
+export function getHijriMonth(date: Date, formatted?: boolean) {
+  const calendar = getArabicCalendarType();
+
+  let numbering = '-nu-latn';
+  if (formatted) {
+    numbering = '-nu-arab';
+    if (NUMBERING_SYSTEM) {
+      numbering = `-nu-${NUMBERING_SYSTEM}`;
+    }
+  }
+
+  return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
+    month: 'numeric',
+  }).format(date);
+}
+
+export function getHijriDay(date: Date, formatted?: boolean) {
+  const calendar = getArabicCalendarType();
+
+  let numbering = '-nu-latn';
+  if (formatted) {
+    numbering = '-nu-arab';
+    if (NUMBERING_SYSTEM) {
+      numbering = `-nu-${NUMBERING_SYSTEM}`;
+    }
+  }
+  return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
+    day: 'numeric',
   }).format(date);
 }
 

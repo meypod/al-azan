@@ -10,11 +10,19 @@ import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
 import {setReminders} from './tasks/set_reminder';
+import {
+  dismissRamadanNoticeForThisYear,
+  dontShowRamadanNoticeAgain,
+  notifyRamadanNotice,
+  shouldShowRamadanNotice,
+} from './utils/ramadan';
 import {bootstrap} from '@/bootstrap';
 import {
   ADHAN_CHANNEL_ID,
+  IMPORTANT_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_ID,
   PRE_REMINDER_CHANNEL_ID,
+  RAMADAN_NOTICE_NOTIFICATION_ID,
   REMINDER_CHANNEL_ID,
   WIDGET_CHANNEL_ID,
   WIDGET_NOTIFICATION_ID,
@@ -238,7 +246,14 @@ async function handleNotification({
       }
     }
   } else if (channelId === WIDGET_UPDATE_CHANNEL_ID) {
-    if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
+    if (
+      ![
+        EventType.TRIGGER_NOTIFICATION_CREATED,
+        EventType.ACTION_PRESS,
+        EventType.DISMISSED,
+        EventType.PRESS,
+      ].includes(type)
+    ) {
       const notifId = notification!.id!;
       const triggerDate = notification?.data?.timestamp as number | undefined;
       if (triggerDate) {
@@ -246,6 +261,22 @@ async function handleNotification({
       }
       await notifee.cancelDisplayedNotification(notifId).catch(console.error);
       await Promise.all([updateWidgets(), setUpdateWidgetsAlarms()]);
+      if (!notifId.includes('nextday')) {
+        if (shouldShowRamadanNotice()) {
+          await notifyRamadanNotice();
+        }
+      }
+    }
+  } else if (channelId === IMPORTANT_CHANNEL_ID) {
+    if (type === EventType.ACTION_PRESS) {
+      if (notification?.id === RAMADAN_NOTICE_NOTIFICATION_ID) {
+        const {pressAction} = detail;
+        if (pressAction?.id === 'remind_next_year') {
+          dismissRamadanNoticeForThisYear();
+        } else if (pressAction?.id === 'dont_show_again') {
+          dontShowRamadanNoticeAgain();
+        }
+      }
     }
   }
 }

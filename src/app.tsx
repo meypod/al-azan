@@ -7,6 +7,7 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, useColorMode} from 'native-base';
 import {useEffect} from 'react';
+import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
 import {Intro} from '@/intro';
@@ -88,6 +89,12 @@ export function App(): JSX.Element {
       replace('FullscreenAlarm');
     }
   }, [isPlayingAudio]);
+
+  useEffect(() => {
+    if (appIntroDone && shouldShowRamadanNotice()) {
+      showRamadanAlert();
+    }
+  }, [appIntroDone]);
 
   if (!appIntroDone) {
     return <Intro></Intro>;

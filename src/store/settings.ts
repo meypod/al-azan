@@ -70,6 +70,10 @@ export type SettingsStore = {
   // qada counter
   COUNTER_HISTORY_VISIBLE: boolean;
 
+  // Ramadan related, HIJRI YEAR
+  RAMADAN_REMINDED_YEAR: string;
+  RAMADAN_REMINDER_DONT_SHOW: boolean;
+
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
@@ -134,6 +138,8 @@ export const settings = createStore<SettingsStore>()(
       VOLUME_BUTTON_STOPS_ADHAN: false,
       PREFER_EXTERNAL_AUDIO_DEVICE: false,
       COUNTER_HISTORY_VISIBLE: false,
+      RAMADAN_REMINDED_YEAR: '',
+      RAMADAN_REMINDER_DONT_SHOW: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

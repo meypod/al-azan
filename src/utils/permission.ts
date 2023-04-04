@@ -10,6 +10,7 @@ import {Alert, PermissionsAndroid, Platform} from 'react-native';
 import {
   ADHAN_CHANNEL_ID,
   channelNameTranslations,
+  IMPORTANT_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_ID,
   PRE_REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
@@ -23,7 +24,7 @@ import {setNextAdhan} from '@/tasks/set_next_adhan';
 /** returns `true` if we can schedule notifications and expect them to trigger */
 async function askNotificationPermission() {
   let permissionGiven = true;
-  if (Platform.Version >= 33) {
+  if (Platform.OS === 'android' && Platform.Version >= 33) {
     const notifySettings = await notifee.getNotificationSettings();
     // notification permissions do not exist before android 13 (api 33)
     permissionGiven =
@@ -111,6 +112,17 @@ async function askNotificationPermission() {
       badge: false,
       vibration: false,
     });
+    // for important notifications
+    await notifee.createChannel({
+      id: IMPORTANT_CHANNEL_ID,
+      name: i18n._(channelNameTranslations['IMPORTANT_CHANNEL_ID']),
+      importance: AndroidImportance.HIGH,
+      visibility: AndroidVisibility.PUBLIC,
+      lights: true,
+      badge: true,
+      vibration: true,
+      sound: 'default',
+    });
   }
 }
 
@@ -187,7 +199,7 @@ async function askPhoneStatePermission() {
 export async function askPermissions() {
   await askNotificationPermission();
   await askAlarmPermission();
-  if (Platform.Version >= 31) {
+  if (Platform.OS === 'android' && Platform.Version >= 31) {
     // we only need this permission to react to incomming calls on android 12 (api 31) and later
     await askPhoneStatePermission();
   }

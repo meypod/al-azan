@@ -1,5 +1,4 @@
 import {Prayer, PrayerTime, getNextPrayer} from '@/adhan';
-import {getArabicMonthName} from '@/utils/date';
 
 export function getActivePrayer(
   lookingAtDay: Date,
@@ -29,11 +28,4 @@ export function getActivePrayer(
   }
 
   return;
-}
-
-export function isRamadan(date: Date) {
-  if (getArabicMonthName(date).includes('رمضان')) {
-    return true;
-  }
-  return false;
 }
