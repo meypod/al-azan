@@ -122,5 +122,5 @@ jobs:
         packageName: com.github.meypod.al_azan
         releaseFiles: android/app/build/outputs/bundle/release/*.aab
         track: internal
-        status: inProgress
+        
 
