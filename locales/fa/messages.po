@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-03 17:30+0330\n"
+"POT-Creation-Date: 2023-04-04 23:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "60 دقیقه"
 msgid "90 min"
 msgstr "90 دقیقه"
 
-#: src/constants/notification.ts:20
+#: src/constants/notification.ts:23
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "اذان"
 
@@ -102,7 +102,7 @@ msgstr "الاذان به این امید که مفید باشد، اما بدو
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "الأذان نرم افزار رایگان است: می توانید آن را مجدداً توزیع کنید و/یا تحت شرایط مجوز عمومی GNU Affero (v3.0) که توسط بنیاد نرم افزار آزاد منتشر شده است، آن را تغییر دهید."
 
-#: src/utils/permission.ts:124
+#: src/utils/permission.ts:136
 msgid "Alarms Permission"
 msgstr "مجوز هشدارها"
 
@@ -148,6 +148,8 @@ msgstr "حداقل یک وقت شرعی باید نشان داده شود"
 
 #: src/intro/intro.tsx:116
 #: src/screens/settings_calculation/calendar_settings.tsx:44
+#: src/utils/ramadan.ts:74
+#: src/utils/ramadan.ts:95
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "Attention"
 msgstr "توجه"
@@ -312,11 +314,16 @@ msgstr "ریاست امور مذهبی، ترکیه"
 msgid "Doesn't use any kind of trackers"
 msgstr "از هیچ نوع ردیابی استفاده نمی کند"
 
-#: src/utils/permission.ts:41
-#: src/utils/permission.ts:128
-#: src/utils/permission.ts:160
+#: src/utils/permission.ts:42
+#: src/utils/permission.ts:140
+#: src/utils/permission.ts:172
 msgid "Don't ask again"
 msgstr "دیگه نپرس"
+
+#: src/utils/ramadan.ts:83
+#: src/utils/ramadan.ts:110
+msgid "Don't show again"
+msgstr "دیگر نشان نده"
 
 #: src/intro/intro.tsx:99
 msgid "Done"
@@ -448,6 +455,10 @@ msgstr "با این حال، هنگام استفاده از سرویس‌های 
 msgid "I Understand"
 msgstr "متوجه ام"
 
+#: src/constants/notification.ts:47
+msgid "IMPORTANT_CHANNEL_ID"
+msgstr "مهم"
+
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "در صورت فعال بودن، هنگامی که اعلان نشان داده می شود، حاوی اطلاعاتی برای وقت نماز بعدی خواهد بود"
@@ -516,7 +527,7 @@ msgstr "اسلامی (مدنی)"
 msgid "Islamic (tabular)"
 msgstr "اسلامی (جدولی)"
 
-#: src/utils/date.ts:268
+#: src/utils/date.ts:319
 msgid "Just now"
 msgstr "همین الان"
 
@@ -659,7 +670,7 @@ msgstr "نتیجه ای یافت نشد"
 msgid "None (Automatic)"
 msgstr "هیچکدام (اتوماتیک)"
 
-#: src/utils/permission.ts:133
+#: src/utils/permission.ts:145
 msgid "Not now"
 msgstr "الان نه"
 
@@ -679,7 +690,7 @@ msgstr "اعلان"
 msgid "Notification & Sound"
 msgstr "اعلان و صدا"
 
-#: src/utils/permission.ts:37
+#: src/utils/permission.ts:38
 msgid "Notifications Permission"
 msgstr "مجوز اعلان"
 
@@ -690,12 +701,12 @@ msgstr "سیستم شماره گذاری"
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
 #: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:47
-#: src/utils/permission.ts:166
+#: src/utils/permission.ts:48
+#: src/utils/permission.ts:178
 msgid "Okay"
 msgstr "باشه"
 
-#: src/utils/permission.ts:125
+#: src/utils/permission.ts:137
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "در اندروید 12 و جدیدتر، برنامه برای درست کار کردن به مجوز زنگ هشدار نیز نیاز دارد، بنابراین باید این اجازه را نیز بدهید."
 
@@ -736,11 +747,11 @@ msgstr "اوپن سورس یا متن باز"
 msgid "Options"
 msgstr "گزینه ها"
 
-#: src/constants/notification.ts:24
+#: src/constants/notification.ts:27
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "هشدار بعدی"
 
-#: src/constants/notification.ts:40
+#: src/constants/notification.ts:43
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "یادآوری بعدی"
 
@@ -748,7 +759,7 @@ msgstr "یادآوری بعدی"
 msgid "Paste"
 msgstr "چسباندن"
 
-#: src/utils/permission.ts:156
+#: src/utils/permission.ts:168
 msgid "Phone State Permission"
 msgstr "مجوز وضعیت تلفن"
 
@@ -808,9 +819,17 @@ msgstr "قبله یاب به خدمات موقعیت یابی نیاز دارد.
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "نقشه قبله در حال حاضر در نسخه های F-Droid در دسترس نیست. ممکن است در به روز رسانی های آینده در دسترس قرار گیرد."
 
-#: src/constants/notification.ts:36
+#: src/constants/notification.ts:39
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "یادآوری"
+
+#: src/utils/ramadan.ts:61
+msgid "Ramadan is ending,"
+msgstr "ماه مبارک رمضان رو به اتمام است،"
+
+#: src/utils/ramadan.ts:57
+msgid "Ramadan is near,"
+msgstr "ماه مبارک رمضان نزدیک است،"
 
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
@@ -819,6 +838,11 @@ msgstr "معروف به روش ایسنا"
 #: src/tasks/update_widgets.ts:20
 msgid "Remaining till"
 msgstr "مانده تا"
+
+#: src/utils/ramadan.ts:78
+#: src/utils/ramadan.ts:104
+msgid "Remind me next year"
+msgstr "سال بعد به من یادآوری کن"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -923,7 +947,7 @@ msgstr "بعدی در اعلان نشان داده شود؟"
 msgid "Show notification widget?"
 msgstr "ابزارک اعلان نمایش داده شود؟"
 
-#: src/utils/permission.ts:137
+#: src/utils/permission.ts:149
 msgid "Show settings"
 msgstr "نمایش تنظیمات"
 
@@ -1042,11 +1066,11 @@ msgstr "قالب زمان"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "برای محاسبه اذان، به موقعیت مکانی شما نیاز داریم. می‌توانید از دکمه «پیدا کردن مکان من» استفاده کنید یا از جستجوی کشور و شهر/منطقه استفاده کنید یا مختصات خود را به صورت دستی وارد کنید."
 
-#: src/utils/permission.ts:38
+#: src/utils/permission.ts:39
 msgid "To see notifications about adhan, we need your permission."
 msgstr "برای دیدن اعلان‌های اذان، به اجازه شما نیاز داریم."
 
-#: src/utils/permission.ts:157
+#: src/utils/permission.ts:169
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "برای توقف پخش اذان هنگام دریافت تماس، باید وضعیت تلفن شما را بخوانیم. اجازه ندادن به این مجوز به سادگی این ویژگی را غیرفعال می کند."
 
@@ -1095,7 +1119,7 @@ msgstr "پشتیبانی نشده"
 msgid "Upcoming alarm"
 msgstr "هشدار بعدی"
 
-#: src/tasks/set_update_widgets_alarms.ts:33
+#: src/tasks/set_update_widgets_alarms.ts:40
 msgid "Updating widgets"
 msgstr "در حال به روزرسانی ویجت ها"
 
@@ -1140,11 +1164,11 @@ msgstr "نسخه"
 msgid "Volume button stops adhan"
 msgstr "دکمه صدا اذان را متوقف می کند"
 
-#: src/constants/notification.ts:28
+#: src/constants/notification.ts:31
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "ویجت"
 
-#: src/constants/notification.ts:32
+#: src/constants/notification.ts:35
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "به روز رسانی ویجت"
 
@@ -1230,7 +1254,7 @@ msgstr "تعداد دقیقه هایی که به زمان های محاسبه ش
 msgid "after"
 msgstr "بعد از"
 
-#: src/utils/date.ts:273
+#: src/utils/date.ts:324
 msgid "ago"
 msgstr "پیش"
 
@@ -1330,7 +1354,7 @@ msgstr "آیا وقت نماز پنهان است؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:273
+#: src/utils/date.ts:324
 msgid "later"
 msgstr "بعد"
 
@@ -1400,6 +1424,10 @@ msgstr "آیا ابزارک اعلان نشان داده شود؟"
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
 msgstr "آیا {prayerName} باید پنهان شود؟"
+
+#: src/utils/ramadan.ts:53
+msgid "since the app's calendar is pre-calculated and not based on moon sightings, it may show incorrect date for the start and the end of Ramadan."
+msgstr "از آنجایی که تقویم برنامه از قبل محاسبه شده است و بر اساس رؤیت ماه نیست، ممکن است تاریخ شروع و پایان ماه رمضان را نادرست نشان دهد."
 
 #: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"

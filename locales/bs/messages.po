@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-03 17:30+0330\n"
+"POT-Creation-Date: 2023-04-04 23:49+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "Sat Vremena"
 msgid "90 min"
 msgstr "Sat i Po"
 
-#: src/constants/notification.ts:20
+#: src/constants/notification.ts:23
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Ezan"
 
@@ -102,7 +102,7 @@ msgstr "Al-Azan se distribuira u nadi da će biti koristan, ali BEZ IKAKVE GARAN
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "Al-Azan je slobodan softver: možete ga redistribuirati i/ili modificirati pod uslovima GNU Affero Opće javne licence (v3.0) koju je objavila Fondacija za slobodni softver."
 
-#: src/utils/permission.ts:124
+#: src/utils/permission.ts:136
 msgid "Alarms Permission"
 msgstr "Dozvole za Alarm"
 
@@ -148,6 +148,8 @@ msgstr "Mora biti prikazano najmanje jedno vrijeme namaza"
 
 #: src/intro/intro.tsx:116
 #: src/screens/settings_calculation/calendar_settings.tsx:44
+#: src/utils/ramadan.ts:74
+#: src/utils/ramadan.ts:95
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "Attention"
 msgstr "Pažnja"
@@ -312,11 +314,16 @@ msgstr "Predsjedništvo za vjerska pitanja, Turska"
 msgid "Doesn't use any kind of trackers"
 msgstr "Ne koristi nikakvu vrstu tragača"
 
-#: src/utils/permission.ts:41
-#: src/utils/permission.ts:128
-#: src/utils/permission.ts:160
+#: src/utils/permission.ts:42
+#: src/utils/permission.ts:140
+#: src/utils/permission.ts:172
 msgid "Don't ask again"
 msgstr "Ne pitaj opet"
+
+#: src/utils/ramadan.ts:83
+#: src/utils/ramadan.ts:110
+msgid "Don't show again"
+msgstr "Ne prikazuj ponovo"
 
 #: src/intro/intro.tsx:99
 msgid "Done"
@@ -448,6 +455,10 @@ msgstr "Međutim, kada koristite usluge na mreži, kao što je traženje koordin
 msgid "I Understand"
 msgstr "Ja Razumijem"
 
+#: src/constants/notification.ts:47
+msgid "IMPORTANT_CHANNEL_ID"
+msgstr "Bitan"
+
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Ako je omogućeno, kada se prikaže obavijest, sadržavat će informacije za sljedeće vrijeme molitve"
@@ -516,7 +527,7 @@ msgstr "Islamski (civilni)"
 msgid "Islamic (tabular)"
 msgstr "Islamski (tabelarni)"
 
-#: src/utils/date.ts:268
+#: src/utils/date.ts:319
 msgid "Just now"
 msgstr "Tek sad"
 
@@ -655,7 +666,7 @@ msgstr "Nema Rezultata"
 msgid "None (Automatic)"
 msgstr "Ništa (Automatski)"
 
-#: src/utils/permission.ts:133
+#: src/utils/permission.ts:145
 msgid "Not now"
 msgstr "Ne sad"
 
@@ -675,7 +686,7 @@ msgstr "Obavijest"
 msgid "Notification & Sound"
 msgstr "Obavijest i Zvuk"
 
-#: src/utils/permission.ts:37
+#: src/utils/permission.ts:38
 msgid "Notifications Permission"
 msgstr "Dozvole za Obavijesti"
 
@@ -686,12 +697,12 @@ msgstr "Sistem Numerisanja"
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
 #: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:47
-#: src/utils/permission.ts:166
+#: src/utils/permission.ts:48
+#: src/utils/permission.ts:178
 msgid "Okay"
 msgstr "U redu"
 
-#: src/utils/permission.ts:125
+#: src/utils/permission.ts:137
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Na Androidu 12 i novijem, aplikaciji je potrebna i dozvola za alarme da bi ispravno radila, pa bi trebali i ovo dozvoliti."
 
@@ -732,11 +743,11 @@ msgstr "Otvorenog izvora"
 msgid "Options"
 msgstr "Postavke"
 
-#: src/constants/notification.ts:24
+#: src/constants/notification.ts:27
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "Nadolazeći ezan"
 
-#: src/constants/notification.ts:40
+#: src/constants/notification.ts:43
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Nadolazeća podsjeta"
 
@@ -744,7 +755,7 @@ msgstr "Nadolazeća podsjeta"
 msgid "Paste"
 msgstr "Zalijepi"
 
-#: src/utils/permission.ts:156
+#: src/utils/permission.ts:168
 msgid "Phone State Permission"
 msgstr "Dozvola Stanja Telefona"
 
@@ -804,9 +815,17 @@ msgstr "Pronalazniku Kible treba usluga lokacije. Ako nije omogućena, koristit 
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Mapa Kible trenutno nije dostupna u F-Droid verzijama aplikacije. Možda će postati dostupna u budućim ažuriranjima."
 
-#: src/constants/notification.ts:36
+#: src/constants/notification.ts:39
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "Podsjetnik"
+
+#: src/utils/ramadan.ts:61
+msgid "Ramadan is ending,"
+msgstr "Ramazan se završava,"
+
+#: src/utils/ramadan.ts:57
+msgid "Ramadan is near,"
+msgstr "Ramazan je blizu,"
 
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
@@ -815,6 +834,11 @@ msgstr "Pominje se kao ISNA metoda"
 #: src/tasks/update_widgets.ts:20
 msgid "Remaining till"
 msgstr "Ostaje do"
+
+#: src/utils/ramadan.ts:78
+#: src/utils/ramadan.ts:104
+msgid "Remind me next year"
+msgstr "Podsjeti me sljedeće godine"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
@@ -926,7 +950,7 @@ msgstr "Prikažite sljedeće u obavještenju?"
 msgid "Show notification widget?"
 msgstr "Prikažite vidžet za obavještenje?"
 
-#: src/utils/permission.ts:137
+#: src/utils/permission.ts:149
 msgid "Show settings"
 msgstr "Prikažite Postavke"
 
@@ -1051,11 +1075,11 @@ msgstr "Vremenski format"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Za izračunavanje ezana, potrebna nam je vaša lokacija. Možete koristiti dugme \"Pronađi moju lokaciju\", ili pretragu zemlje i grada/područja, ili ručno unesite svoje koordinate."
 
-#: src/utils/permission.ts:38
+#: src/utils/permission.ts:39
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Da vidimo obavještenja o ezanu, potrebna nam je vaša dozvola."
 
-#: src/utils/permission.ts:157
+#: src/utils/permission.ts:169
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Da prestanemo da sviramo ezan kada primite poziv, moramo pročitati stanje vašeg telefona. Nedopuštanje ove dozvole jednostavno onemogućava funkciju."
 
@@ -1104,7 +1128,7 @@ msgstr "Nepodržano"
 msgid "Upcoming alarm"
 msgstr "Predstojeći alarm"
 
-#: src/tasks/set_update_widgets_alarms.ts:33
+#: src/tasks/set_update_widgets_alarms.ts:40
 msgid "Updating widgets"
 msgstr "Ažuriraju je vidžeti"
 
@@ -1149,11 +1173,11 @@ msgstr "Verzija"
 msgid "Volume button stops adhan"
 msgstr "Dugme za jačinu zvuka zaustavlja ezan"
 
-#: src/constants/notification.ts:28
+#: src/constants/notification.ts:31
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "Vidžet"
 
-#: src/constants/notification.ts:32
+#: src/constants/notification.ts:35
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "Vidžet za Ažuriranje"
 
@@ -1239,7 +1263,7 @@ msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 msgid "after"
 msgstr "nakon"
 
-#: src/utils/date.ts:273
+#: src/utils/date.ts:324
 msgid "ago"
 msgstr "prije"
 
@@ -1339,7 +1363,7 @@ msgstr "da li je vrijeme molitve skriveno?"
 msgid "isha.prayer"
 msgstr "Jacija"
 
-#: src/utils/date.ts:273
+#: src/utils/date.ts:324
 msgid "later"
 msgstr "poslije"
 
@@ -1409,6 +1433,10 @@ msgstr "bi li vidžet za obavještenje trebao biti prikazan?"
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
 msgstr "bi li {prayerName} trebalo biti sakriveno?"
+
+#: src/utils/ramadan.ts:53
+msgid "since the app's calendar is pre-calculated and not based on moon sightings, it may show incorrect date for the start and the end of Ramadan."
+msgstr "budući da je kalendar aplikacije unaprijed izračunat i nije zasnovan na viđanjima Mjeseca, može prikazati netačan datum početka i kraja Ramazana."
 
 #: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
