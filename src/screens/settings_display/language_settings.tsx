@@ -55,10 +55,26 @@ export function LanguageSettings(props: IStackProps) {
       label: `Bosanski`,
       value: 'bs',
     },
+    {
+      label: `Tiếng Việt`,
+      value: 'vi',
+    },
   ];
 
   if (
-    !['en', 'fa', 'ar', 'tr', 'id', 'fr', 'ur', 'hi', 'de', 'bs'].includes(lang)
+    ![
+      'en',
+      'fa',
+      'ar',
+      'tr',
+      'id',
+      'fr',
+      'ur',
+      'hi',
+      'de',
+      'bs',
+      'vi',
+    ].includes(lang)
   ) {
     languageEntries.push({
       label: lang + ' (' + t`Unsupported` + ')',

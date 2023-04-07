@@ -1,5 +1,5 @@
 import {i18n} from '@lingui/core';
-import {en, ar, fa, id, ur, de, fr, hi, tr, bs} from 'make-plural/plurals';
+import {en, ar, fa, id, ur, de, fr, hi, tr, bs, vi} from 'make-plural/plurals';
 
 import {messages as arMessages} from '../locales/ar/messages';
 import {messages as bsMessages} from '../locales/bs/messages';
@@ -11,6 +11,7 @@ import {messages as hiMessages} from '../locales/hi/messages';
 import {messages as idMessages} from '../locales/id/messages';
 import {messages as trMessages} from '../locales/tr/messages';
 import {messages as urMessages} from '../locales/ur/messages';
+import {messages as viMessages} from '../locales/vi/messages';
 
 i18n.loadLocaleData({
   en: {plurals: en},
@@ -23,6 +24,7 @@ i18n.loadLocaleData({
   tr: {plurals: tr},
   ur: {plurals: ur},
   bs: {plurals: bs},
+  vi: {plurals: vi},
 });
 
 const localeFallbacks = [
@@ -75,6 +77,11 @@ const localeFallbacks = [
     base: 'bs',
     fallback: 'bs',
     messages: bsMessages,
+  },
+  {
+    base: 'vi',
+    fallback: 'vi',
+    messages: viMessages,
   },
 ];
 
