@@ -103,7 +103,7 @@ jobs:
         BUILD_TOOLS_VERSION: "33.0.0" 
        
     - name: Release on GitHub
-      if: ${{ github.event_name == 'release'}}
+      if: ${{ contains(github.ref, 'main') }}
       uses: ncipollo/release-action@v1
       with:
         prerelease: true
