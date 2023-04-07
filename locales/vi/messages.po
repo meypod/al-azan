@@ -5,146 +5,146 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: bs\n"
+"Language: vi\n"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "10 min"
-msgstr "10 min"
+msgstr "10 phút"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "15 min"
-msgstr "15 min"
+msgstr "15 phút"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 msgid "30 min"
-msgstr "Pola Sata"
+msgstr "30 phút"
 
 #: src/screens/settings_calculation/index.tsx:86
 msgid "30 minutes is added to Isha time during Ramadan in this method"
-msgstr "30 minuta se dodaje na Isha vrijeme tokom Ramazana u ovoj metodi"
+msgstr "30 phút được thêm vào thời gian Isha trong tháng Ramadan theo phương pháp này"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
-msgstr "5 min"
+msgstr "5 phút"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "60 min"
-msgstr "Sat Vremena"
+msgstr "60 phút"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
-msgstr "Sat i Po"
+msgstr "90 phút"
 
 #: src/constants/notification.ts:23
 msgid "ADHAN_CHANNEL_NAME"
-msgstr "Ezan"
+msgstr "Azan"
 
 #: src/screens/settings_calculation/index.tsx:187
 msgid "Abyad"
-msgstr "Ebdžed"
+msgstr "Abyad"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:37
 msgid "Accuracy"
-msgstr "Preciznost"
+msgstr "Độ chính xác"
 
 #: website/src/_includes/home.tsx:68
 msgid "Ad-Free"
-msgstr "Bez oglasa"
+msgstr "Không quảng cáo"
 
 #: src/components/audio_picker.tsx:376
 #: src/screens/settings_adhan/index.tsx:198
 msgid "Add"
-msgstr "Dodaj"
+msgstr "Thêm"
 
 #: src/screens/settings_adhan/index.tsx:171
 #: src/screens/settings_adhan/index.tsx:176
 msgid "Add Custom Adhan"
-msgstr "Dodajte Prilagođeni Ezan"
+msgstr "Thêm Azan tùy chỉnh"
 
 #: src/screens/settings_reminders/index.tsx:66
 msgid "Add Reminder"
-msgstr "Dodajte Podsjetnik"
+msgstr "Thêm Lời nhắc"
 
 #: src/screens/fullscreen_alarm/index.tsx:67
 msgid "Adhan"
-msgstr "Ezan"
+msgstr "Azan"
 
 #: src/screens/settings_adhan/index.tsx:100
 msgid "Adhan audio file is not downloaded yet"
-msgstr "Zvučni snimak za Ezan još nije skinut"
+msgstr "Tệp âm thanh Azan chưa được tải xuống"
 
 #: src/screens/settings_calculation/index.tsx:93
 msgid "Adjustments"
-msgstr "Prilagođenja"
+msgstr "Điều chỉnh"
 
 #: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
-msgstr "Napredne Postavke Kalkulacije"
+msgstr "Cài đặt Tính toán Nâng cao"
 
 #: src/screens/settings_calculation/index.tsx:186
 msgid "Ahmer"
-msgstr "Amar"
+msgstr "Ahmer"
 
 #: website/src/_includes/home.tsx:34
 #: website/src/_includes/privacy-policy.tsx:11
 msgid "Al-Azan"
-msgstr "Al-Azan"
+msgstr "Azan - Giờ Cầu Nguyện"
 
 #: website/src/_includes/home.tsx:11
 msgid "Al-Azan - Prayer Times"
-msgstr "Al-Ezan - Vremena Molitve"
+msgstr "Azan - Giờ Cầu nguyện Hồi giáo"
 
 #: website/src/_includes/privacy-policy.tsx:52
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
-msgstr "Al-Azan se distribuira u nadi da će biti koristan, ali BEZ IKAKVE GARANCIJE; čak i bez implicitne garancije o PRODAJNOSTI ili PRIKLADNOSTI ZA ODREĐENU NAMJENU. Za više detalja pogledajte GNU Affero General Public License."
+msgstr "Al-Azan được phân phối với hy vọng rằng nó sẽ hữu ích, nhưng KHÔNG CÓ BẤT KỲ BẢO HÀNH NÀO; thậm chí không có bảo hành ngụ ý về KHẢ NĂNG BÁN ĐƯỢC hoặc SỰ PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ. Xem Giấy phép Công cộng GNU Affero để biết thêm chi tiết."
 
 #: website/src/_includes/privacy-policy.tsx:47
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
-msgstr "Al-Azan je slobodan softver: možete ga redistribuirati i/ili modificirati pod uslovima GNU Affero Opće javne licence (v3.0) koju je objavila Fondacija za slobodni softver."
+msgstr "Al-Azan là phần mềm miễn phí: bạn có thể phân phối lại và/hoặc sửa đổi nó theo các điều khoản của Giấy phép Công cộng Chung GNU Affero (v3.0) do Tổ chức Phần mềm Miễn phí xuất bản."
 
 #: src/utils/permission.ts:136
 msgid "Alarms Permission"
-msgstr "Dozvole za Alarm"
+msgstr "Quyền Báo Thức"
 
 #: website/src/_includes/privacy-policy.tsx:30
 msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
-msgstr "Svi podaci dostavljeni Al-Azanu pohranjuju se samo lokalno na vašem uređaju. Vaši podaci se nigdje ne učitavaju. Programeri Al-Azana nemaju pristup njemu. Vaši podaci se ne dijele s trećim licima. Al-Azan ne uključuje biblioteke oglasa ili bilo koji kod za praćenje (analitički) treće strane, kao što je Google Analytics ili Facebook SDK."
+msgstr "Tất cả dữ liệu được cung cấp cho Azan chỉ được lưu trữ cục bộ trong thiết bị của bạn. Dữ liệu của bạn không được đăng lên bất cứ đâu. Các nhà phát triển của Azan không có quyền truy cập vào nó. Dữ liệu của bạn không được chia sẻ với bất kỳ bên thứ ba nào. Azan không bao gồm bất kỳ thư viện quảng cáo hoặc mã theo dõi (phân tích) nào của bên thứ ba, chẳng hạn như Google Analytics hoặc Facebook SDK."
 
 #: src/screens/settings_adhan/index.tsx:56
 msgid "An error occured while playing the current track"
-msgstr "Došlo je do greške prilikom pokretanja trenutnog snimka"
+msgstr "Đã xảy ra lỗi khi phát bài nhạc hiện tại"
 
 #: website/src/_includes/home.tsx:66
 msgid "App features"
-msgstr "Funkcije aplikacije"
+msgstr "Tính năng ứng dụng"
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Arabic"
-msgstr "Arapski"
+msgstr "Tiếng Ả Rập"
 
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic/Persian"
-msgstr "Arapsko-Perzijski"
+msgstr "Tiếng Ả Rập/Tiếng Ba Tư"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
-msgstr "Jeste li sigurni da želite izbrisati \"{0}\" ?"
+msgstr "Bạn có chắc chắn muốn xóa \"{0}\" không?"
 
 #: src/utils/dialogs.ts:10
 msgid "Are you sure you want to delete \"{itemName}\" ?"
-msgstr "Jeste li sigurni da želite izbrisati \"{itemName}\" ?"
+msgstr "Bạn có chắc chắn muốn xóa \"{itemName}\" không?"
 
 #: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete this?"
-msgstr "Jeste li sigurni da želite ovo izbrisati?"
+msgstr "Bạn có chắc chắn muốn xóa cái này không?"
 
 #: src/screens/settings_calculation/index.tsx:131
 msgid "Asr Calculation"
-msgstr "Kalkulacija Ikindije"
+msgstr "Tính Asr"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:22
 msgid "At least one prayer time must be shown"
-msgstr "Mora biti prikazano najmanje jedno vrijeme namaza"
+msgstr "Ít nhất một lần cầu nguyện phải được hiển thị"
 
 #: src/intro/intro.tsx:116
 #: src/screens/settings_calculation/calendar_settings.tsx:44
@@ -152,119 +152,119 @@ msgstr "Mora biti prikazano najmanje jedno vrijeme namaza"
 #: src/utils/ramadan.ts:95
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "Attention"
-msgstr "Pažnja"
+msgstr "Chú ý"
 
 #: src/intro/intro.tsx:39
 #: src/screens/settings_battery_optimizations/index.tsx:41
 msgid "Battery Optimization"
-msgstr "Optimizacija Baterije"
+msgstr "Tối ưu hóa Pin"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
-msgstr "Kalkulacija Ezana ima mnogo različitih metoda. Svaka metoda daje različite rezultate. Vaša je odgovornost da nađete i iskoristite pravu metodu."
+msgstr "Tính toán Azan có nhiều phương pháp khác nhau. Mỗi phương pháp cung cấp kết quả khác nhau. Bạn có trách nhiệm tìm kiếm và sử dụng đúng phương pháp."
 
 #: src/intro/intro.tsx:31
 msgid "Calculation"
-msgstr "Kalkulacija"
+msgstr "Phép tính"
 
 #: src/screens/settings_calculation/index.tsx:72
 msgid "Calculation Method"
-msgstr "Metoda Kalkulacije"
+msgstr "Phương pháp Tính"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:21
 msgid "Calendar"
-msgstr "Kalendar"
+msgstr "Lịch"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:195
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
-msgstr "Otkažite"
+msgstr "Hủy"
 
 #: src/screens/settings_calculation/index.tsx:133
 msgid "Choose Asr Calculation Madhab"
-msgstr "Odaberite Mezheb Kalkulaciju Ikindije"
+msgstr "Chọn tính toán Asr Madhab"
 
 #: src/screens/settings_calculation/index.tsx:75
 msgid "Choose Calculation Method"
-msgstr "Odaberite Metodu Kalkulacije"
+msgstr "Chọn phương pháp tính toán"
 
 #: src/screens/settings_calculation/index.tsx:111
 msgid "Choose High Latitude Setting"
-msgstr "Odaberite Postavku Velike Geografske Širine"
+msgstr "Chọn Cài đặt Vĩ độ Cao"
 
 #: src/screens/settings_display/language_settings.tsx:88
 msgid "Choose Language"
-msgstr "Odaberite Jezik"
+msgstr "Chọn ngôn ngữ"
 
 #: src/screens/settings_calculation/index.tsx:149
 msgid "Choose Polar Resolution"
-msgstr "Odaberite Polarnu Procjenu Razmaka"
+msgstr "Chọn Độ phân giải Cực"
 
 #: src/screens/settings_calculation/index.tsx:178
 msgid "Choose Shafaq method"
-msgstr "Odaberite Šafak metodu"
+msgstr "Chọn phương pháp Shafaq"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:26
 #: src/screens/settings_display/calendar_secondary_settings.tsx:26
 msgid "Choose calendar type"
-msgstr "Odaberite tip kalndara"
+msgstr "Chọn loại lịch"
 
 #: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
-msgstr "Odaberite brojni sistem"
+msgstr "Chọn hệ thống đánh số"
 
 #: src/screens/settings_location/index.tsx:235
 #: src/screens/settings_location/index.tsx:237
 msgid "City/Area"
-msgstr "Grad/Okruženje"
+msgstr "Khu vực thành phố"
 
 #: src/screens/settings_location/index.tsx:123
 msgid "Clipboard data does not contain coordinates"
-msgstr "Podaci međuspremnika ne sadrže koordinate"
+msgstr "Dữ liệu nhớ tạm không chứa tọa độ"
 
 #: src/screens/settings_calculation/index.tsx:160
 msgid "Closest City"
-msgstr "Najbliži Grad"
+msgstr "Thành phố gần nhất"
 
 #: src/screens/settings_calculation/index.tsx:164
 msgid "Closest Date"
-msgstr "Najbliži Datum"
+msgstr "Ngày gần nhất"
 
 #: src/screens/qibla_finder_map/index.tsx:225
 msgid "Compass Lock"
-msgstr "Ključnica Kompas"
+msgstr "Khóa La Bàn"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:14
 msgid "Compass sensor unavailable"
-msgstr "Senzor kompasa je nedostupan"
+msgstr "Cảm biến la bàn không khả dụng"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Confirm"
-msgstr "Potvrdite"
+msgstr "Xác nhận"
 
 #: src/screens/settings_location/index.tsx:146
 msgid "Coordinates updated"
-msgstr "Koordinati su ažurirani"
+msgstr "Đã cập nhật tọa độ"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:144
 msgid "Count"
-msgstr "Zbroj"
+msgstr "Đếm"
 
 #: src/screens/settings_location/index.tsx:212
 #: src/screens/settings_location/index.tsx:214
 msgid "Country"
-msgstr "Zemlja"
+msgstr "Quốc gia"
 
 #: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
-msgstr "Prilagođeni zvukovi i mujezini neće biti izvezeni"
+msgstr "Âm thanh và muezzin tùy chỉnh sẽ không được xuất"
 
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
-msgstr "Mračna"
+msgstr "Tối"
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -272,407 +272,407 @@ msgstr "Mračna"
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
-msgstr "Zadano"
+msgstr "Mặc định"
 
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:200
 #: src/utils/dialogs.ts:8
 msgid "Delete"
-msgstr "Izbrišite"
+msgstr "Xóa"
 
 #: src/screens/settings_battery_optimizations/index.tsx:44
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
-msgstr "Ovisno o vašem uređaju i verziji Androida, ponekad vaš uređaj može ugasiti aplikaciju u pozadini kako bi uštedio bateriju. Ovo može spriječiti isporuku alarma/obavještenja."
+msgstr "Tùy thuộc vào thiết bị và phiên bản Android của bạn, Đôi khi thiết bị của bạn có thể tắt ứng dụng chạy nền để tiết kiệm pin. Điều này có thể ngăn việc hiện báo thức/thông báo."
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Deselect as Fajr Adhan"
-msgstr "Poništite odabir kao Sabah Ezan"
+msgstr "Bỏ chọn là Fajr Azan"
 
 #: src/components/audio_picker.tsx:133
 msgid "Device sounds"
-msgstr "Zvukovi uređaja"
+msgstr "Âm thanh thiết bị"
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Disabled"
-msgstr "Isključeno"
+msgstr "Đã tắt"
 
 #: src/screens/qibla_finder/index.tsx:87
 msgid "Disclaimer"
-msgstr "Odricanje"
+msgstr "Lưu ý"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
 #: src/tasks/set_alarm.ts:83
 msgid "Dismiss"
-msgstr "Odbaci"
+msgstr "Bỏ qua"
 
 #: src/adhan/calculation_methods.ts:94
 msgid "Diyanet İşleri Başkanlığı, Turkey"
-msgstr "Predsjedništvo za vjerska pitanja, Turska"
+msgstr "Diyanet İşleri Başkanlığı, Thổ Nhĩ Kỳ"
 
 #: website/src/_includes/home.tsx:69
 msgid "Doesn't use any kind of trackers"
-msgstr "Ne koristi nikakvu vrstu tragača"
+msgstr "Không sử dụng bất kỳ trình theo dõi nào"
 
 #: src/utils/permission.ts:42
 #: src/utils/permission.ts:140
 #: src/utils/permission.ts:172
 msgid "Don't ask again"
-msgstr "Ne pitaj opet"
+msgstr "Đừng hỏi lại"
 
 #: src/utils/ramadan.ts:83
 #: src/utils/ramadan.ts:110
 msgid "Don't show again"
-msgstr "Ne prikazuj ponovo"
+msgstr "Không hiển thị lại"
 
 #: src/intro/intro.tsx:99
 msgid "Done"
-msgstr "Gotovo"
+msgstr "Xong"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "Edit Counter"
-msgstr "Uredite Brojač"
+msgstr "Chỉnh sửa Bộ đếm"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "Edit Reminder"
-msgstr "Uredite Podsjetnik"
+msgstr "Chỉnh sửa Lời nhắc"
 
 #: src/adhan/calculation_methods.ts:34
 msgid "Egyptian General Survey Authority"
-msgstr "Egipatska Generalna Geodetska Uprava"
+msgstr "Tổng cục Khảo sát Ai Cập"
 
 #: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Enabled"
-msgstr "Uključeno"
+msgstr "Đã bật"
 
 #: src/screens/settings_location/index.tsx:129
 msgid "Error getting clipboard data"
-msgstr "Greška pri preuzimanju podataka međuspremnika"
+msgstr "Lỗi khi nhận dữ liệu khay nhớ tạm"
 
 #: src/screens/settings_location/index.tsx:225
 msgid "Error in loading countries"
-msgstr "Greška pri učitavanju zemalja"
+msgstr "Lỗi khi tải quốc gia"
 
 #: src/screens/settings_location/index.tsx:251
 msgid "Error in loading search results"
-msgstr "Greška pri učitavanju rezultata pretraživanja"
+msgstr "Lỗi khi tải kết quả tìm kiếm"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:85
 msgid "Error while downloading audio"
-msgstr "Greška pri skidanju audia"
+msgstr "Lỗi khi tải âm thanh"
 
 #: src/screens/qibla_finder_compass/index.tsx:78
 #: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
-msgstr "Greška pri dobivanju koordinata"
+msgstr "Lỗi khi lấy tọa độ"
 
 #: src/screens/settings_backup/import_settings.tsx:71
 msgid "Error: failed to open file"
-msgstr "Greška: nije se mogla datoteka otvoriti"
+msgstr "Lỗi: không mở được tệp"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:32
 msgid "Ethiopic"
-msgstr "Etiopski"
+msgstr "Ê-ti-ô-pi-a"
 
 #: src/screens/settings_backup/export_settings.tsx:25
 msgid "Export app data"
-msgstr "Izvezite podatke aplikacije"
+msgstr "Xuất dữ liệu ứng dụng"
 
 #: src/screens/settings_backup/export_settings.tsx:26
 msgid "Export data"
-msgstr "Izvezite podatke"
+msgstr "Xuất dữ liệu"
 
 #: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
-msgstr "Nađite Moju Lokaciju"
+msgstr "Tìm Vị trí của Tôi"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
-msgstr "Petak"
+msgstr "Thứ 6"
 
 #: src/screens/settings_calculation/index.tsx:183
 msgid "General (default)"
-msgstr "Općenito (zadano)"
+msgstr "Chung (mặc định)"
 
 #: src/screens/qibla_finder_compass/index.tsx:97
 #: src/screens/qibla_finder_compass/index.tsx:163
 #: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
-msgstr "Koordinate se preuzimaju"
+msgstr "Lấy tọa độ"
 
 #: src/intro/intro.tsx:122
 msgid "Got it"
-msgstr "Uspjelo je"
+msgstr "Hiểu rồi"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:30
 msgid "Gregorian"
-msgstr "Gregorijanski"
+msgstr "Grêgôriô"
 
 #: src/adhan/calculation_methods.ts:58
 msgid "Gulf region"
-msgstr "Zaljevsko područje"
+msgstr "vùng Vịnh"
 
 #: src/screens/settings_calculation/index.tsx:141
 msgid "Hanafi"
-msgstr "Hanefijski"
+msgstr "Hanafi"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:41
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:63
 msgid "Hidden?"
-msgstr "Skriveno?"
+msgstr "Ẩn?"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:37
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:59
 msgid "Hide Prayer Times"
-msgstr "Sakrij Vremena Molitve"
+msgstr "Ẩn Lần Cầu nguyện"
 
 #: website/src/_includes/home.tsx:85
 msgid "Hide times you don't need"
-msgstr "Sakrijte vremena koja vam nisu potrebna"
+msgstr "Ẩn lần bạn không cần"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:26
 msgid "High"
-msgstr "Visoka"
+msgstr "Cao"
 
 #: src/screens/settings_calculation/index.tsx:109
 msgid "High Latitude"
-msgstr "Visoka Geografska Širina"
+msgstr "Vĩ độ cao"
 
 #: src/screens/settings_about/index.tsx:34
 #: website/src/_data/navigation.ts:2
 msgid "Home"
-msgstr "Početna"
+msgstr "Trang chủ"
 
 #: website/src/_includes/home.tsx:87
 msgid "Homescreen and notification Widgets"
-msgstr "Početni ekran i vidžeti za obaveštenja"
+msgstr "Màn hình chính và Tiện Ích thông báo"
 
 #: website/src/_includes/privacy-policy.tsx:34
 msgid "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
-msgstr "Međutim, kada koristite usluge na mreži, kao što je traženje koordinata lokacije po imenu ili Qibla mapi, aplikacija može prenijeti minimalne potrebne podatke koji vas mogu ili ne moraju jedinstveno identificirati. Imajte to na umu dok koristite aplikaciju."
+msgstr "Tuy nhiên, khi sử dụng các dịch vụ trực tuyến, chẳng hạn như tìm kiếm tọa độ vị trí theo tên hoặc bản đồ Qibla, ứng dụng có thể truyền dữ liệu cần thiết tối thiểu có thể hoặc không thể nhận dạng duy nhất bạn. Hãy ghi nhớ điều này trong khi sử dụng ứng dụng."
 
 #: src/screens/qibla_finder/index.tsx:98
 msgid "I Understand"
-msgstr "Ja Razumijem"
+msgstr "Tôi hiểu"
 
 #: src/constants/notification.ts:47
 msgid "IMPORTANT_CHANNEL_ID"
-msgstr "Bitan"
+msgstr "Quan trọng"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
-msgstr "Ako je omogućeno, kada se prikaže obavijest, sadržavat će informacije za sljedeće vrijeme molitve"
+msgstr "Nếu được bật, khi một thông báo được hiển thị, nó sẽ chứa thông tin cho lần cầu nguyện tiếp theo"
 
 #: website/src/_includes/privacy-policy.tsx:40
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
-msgstr "Ako ste aktivirali “Backup & Reset” u postavkama svog telefona (Postavke / Sigurnosna kopija i resetiranje / Sigurnosna kopija mojih podataka), treba da budete svjesni da će sam Android (ne Al-Azan) povremeno spremati kopiju podataka vašeg telefona u Googleovu serveri. Ovo omogućava Androidu da povrati vaše podatke u slučaju da se vaš uređaj ošteti ili da kupite novi uređaj. Programeri Al-Azana nemaju pristup ovim podacima."
+msgstr "Nếu bạn đã kích hoạt “Sao lưu & Khôi phục” trong cài đặt điện thoại của mình (Cài đặt / Sao lưu & Khôi phục / Sao lưu dữ liệu của tôi), bạn nên lưu ý rằng chính Android (không phải Azan) sẽ lưu định kỳ một bản sao dữ liệu điện thoại của bạn trong máy chủ của Google. Điều này cho phép Android khôi phục dữ liệu của bạn trong trường hợp thiết bị của bạn bị hỏng hoặc bạn mua một thiết bị mới. Các nhà phát triển của Azan không có quyền truy cập vào dữ liệu này."
 
 #: src/screens/settings_battery_optimizations/index.tsx:100
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
-msgstr "Ako ste i dalje imali problema sa zaustavljanjem aplikacije nakon nekog vremena, molim vas da posjetite dontkillmyapp.com za više rješenja."
+msgstr "Nếu bạn vẫn gặp sự cố dừng ứng dụng sau một thời gian, vui lòng truy cập dontkillmyapp.com để biết thêm giải pháp."
 
 #: src/screens/settings_battery_optimizations/index.tsx:47
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
-msgstr "Ako želite biti sigurni da aplikacija može raditi pouzdano, morate onemogućiti optimizaciju napajanja za ovu aplikaciju. Povezane postavke možete otvoriti koristeći dugme ispod."
+msgstr "Nếu bạn muốn đảm bảo ứng dụng có thể hoạt động ổn định, Bạn phải tắt tính năng tối ưu hóa pin cho ứng dụng này. Bạn có thể mở các cài đặt liên quan bằng cách sử dụng nút bên dưới."
 
 #: src/screens/settings_backup/import_settings.tsx:82
 msgid "Import"
-msgstr "Uvezite"
+msgstr "Nhập"
 
 #: src/screens/settings_backup/import_settings.tsx:80
 msgid "Import app data"
-msgstr "Uvezite podatke aplikacije"
+msgstr "Nhập dữ liệu ứng dụng"
 
 #: src/screens/settings_backup/import_settings.tsx:66
 msgid "Import successful"
-msgstr "Uvoz je uspješan"
+msgstr "Nhập thành công"
 
 #: website/src/_includes/home.tsx:79
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
-msgstr "Pored pet dnevnih namaza, ima postavke za izlazak sunca, zalazak sunca, ponoć i noćni namaz (tahadžud)"
+msgstr "Ngoài 5 lần cầu nguyện hàng ngày, nó còn có các cài đặt cho các lần cầu nguyện lúc Bình Minh, Hoàng Hôn, Nửa Đêm và Ban Đêm (Tahajjud)"
 
 #: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
-msgstr "Info"
+msgstr "Thông tin"
 
 #: src/screens/qibla_finder/index.tsx:48
 msgid "Internet connection"
-msgstr "Internet veza"
+msgstr "Kết nối Internet"
 
 #: src/screens/qibla_finder/index.tsx:49
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
-msgstr "Internet veza je neophodna da bi karta kible radila. Molimo vas da omogućite WiFi ili mobilnu mrežu i probajte ponovo."
+msgstr "Kết nối Internet là cần thiết để bản đồ qibla hoạt động. Vui lòng bật wifi hoặc dữ liệu di động của bạn và thử lại."
 
 #: website/src/_includes/home.tsx:91
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
-msgstr "Lokaliziran je na engleski, perzijski, arapski, turski, indonezijski, francuski, urdu, hindi, njemački, bosanski"
+msgstr "Được bản địa hóa bằng tiếng Anh, tiếng Ba Tư, tiếng Ả Rập, tiếng Thổ Nhĩ Kỳ, tiếng Indonesia, tiếng Pháp, tiếng Urdu, tiếng Hindi, tiếng Đức, tiếng Bosnia"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
-msgstr "Islamski"
+msgstr "Hồi giáo"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:39
 msgid "Islamic (Saudi Arabia sighting)"
-msgstr "Islamski (Saudijsko posmatranje)"
+msgstr "Hồi giáo (Ngắm tại Ả Rập Saudi)"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:33
 msgid "Islamic (Umm al-Qura)"
-msgstr "Islamski (Um al-Kura)"
+msgstr "Hồi giáo (Umm al-Qura)"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:37
 msgid "Islamic (civil)"
-msgstr "Islamski (civilni)"
+msgstr "Hồi giáo (dân sự)"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:36
 msgid "Islamic (tabular)"
-msgstr "Islamski (tabelarni)"
+msgstr "Hồi giáo (bảng)"
 
 #: src/utils/date.ts:319
 msgid "Just now"
-msgstr "Tek sad"
+msgstr "Vừa nãy"
 
 #: src/adhan/calculation_methods.ts:118
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
-msgstr "Ministarstvo Vjera Republike Indonezije (KEMENAG)"
+msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 
 #: src/adhan/calculation_methods.ts:70
 msgid "Kuwait"
-msgstr "Kuvajt"
+msgstr "Cô-oét"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:126
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:105
 msgid "Label"
-msgstr "Oznaka"
+msgstr "Tên"
 
 #: src/screens/settings_display/language_settings.tsx:85
 msgid "Language"
-msgstr "Jezik"
+msgstr "Ngôn ngữ"
 
 #: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Latin"
-msgstr "Latinski"
+msgstr "Latin"
 
 #: src/screens/settings_location/index.tsx:276
 #: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
-msgstr "Geografska Širina"
+msgstr "Vĩ độ"
 
 #: src/screens/settings_location/index.tsx:288
 msgid "Latitude is invalid"
-msgstr "Geografska Širina ne važi"
+msgstr "Vĩ độ không hợp lệ"
 
 #: src/screens/settings_about/index.tsx:40
 msgid "License"
-msgstr "Dozvola"
+msgstr "Giấy phép"
 
 #: src/screens/settings_display/theme_settings.tsx:37
 msgid "Light"
-msgstr "Svjetla"
+msgstr "Sáng"
 
 #: website/src/_includes/home.tsx:84
 msgid "Light/Dark theme"
-msgstr "Svjetla/mračna tema"
+msgstr "Chủ đề Sáng/Tối"
 
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:148
 #: src/utils/dialogs.ts:35
 msgid "Location"
-msgstr "Lokacija"
+msgstr "Vị trí"
 
 #: src/utils/dialogs.ts:44
 msgid "Location settings"
-msgstr "Postavke za lokaciju"
+msgstr "Cài đặt vị trí"
 
 #: src/screens/settings_location/index.tsx:292
 #: src/screens/settings_location/index.tsx:297
 msgid "Longitude"
-msgstr "Geografska Dužina"
+msgstr "Kinh độ"
 
 #: src/screens/settings_location/index.tsx:304
 msgid "Longitude is invalid"
-msgstr "Geografska Dužina ne važi"
+msgstr "Kinh độ không hợp lệ"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
-msgstr "Niska"
+msgstr "Thấp"
 
 #: website/src/_includes/home.tsx:83
 msgid "Many options for Adhan (اذان) calculation"
-msgstr "Mnogo opcija za izračunavanje ezana (اذان)"
+msgstr "Nhiều tùy chọn để tính toán Azan (اذان)"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:22
 msgid "Medium"
-msgstr "Srednja"
+msgstr "Trung bình"
 
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Middle of the Night"
-msgstr "Usred Noći"
+msgstr "Nửa đêm"
 
 #: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
-msgstr "Mobilna Mreža"
+msgstr "Dữ liệu di động"
 
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
-msgstr "Ponedjeljak"
+msgstr "Thứ 2"
 
 #: src/adhan/calculation_methods.ts:22
 msgid "Moonsighting Committee"
-msgstr "Odbor za Promatranje Mjeseca"
+msgstr "Ủy ban Ngắm trăng"
 
 #: src/adhan/calculation_methods.ts:28
 msgid "Muslim World League"
-msgstr "Svjetska Liga Muslimana"
+msgstr "Liên đoàn Hồi giáo Thế giới"
 
 #: src/screens/settings_adhan/index.tsx:179
 #: src/screens/settings_adhan/index.tsx:182
 msgid "Name"
-msgstr "Naziv"
+msgstr "Tên"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "New Counter"
-msgstr "Novi Brojač"
+msgstr "Bộ đếm mới"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:97
 msgid "New Reminder"
-msgstr "Novi Podsjetnik"
+msgstr "Lời nhắc Mới"
 
 #: src/intro/intro.tsx:98
 #: src/screens/settings_dev/index.tsx:34
 #: src/tasks/set_next_adhan.ts:81
 #: src/tasks/set_next_adhan.ts:121
 msgid "Next"
-msgstr "Sljedeći"
+msgstr "Tiếp"
 
 #: src/screens/home/index.tsx:167
 msgid "Next Day"
-msgstr "Sljedeći Dan"
+msgstr "Ngày Sau"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:14
 msgid "No"
-msgstr "Ne"
+msgstr "Không"
 
 #: src/components/AutocompleteInput.tsx:136
 msgid "No Data"
-msgstr "Nema Date"
+msgstr "Không có dữ liệu"
 
 #: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
-msgstr "Nema Rezultata"
+msgstr "Ko có kết quả"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
-msgstr "Ništa (Automatski)"
+msgstr "Không có (Tự động)"
 
 #: src/utils/permission.ts:145
 msgid "Not now"
-msgstr "Ne sad"
+msgstr "Không phải bây giờ"
 
 #: src/screens/qibla_finder/index.tsx:90
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
-msgstr "Čuvajte na umu da zbog softverskih i hardverskih grešaka, smjer Kabe koji pokazuje ova aplikacija, posebno u kompas modu, može biti pogrešan."
+msgstr "Lưu ý rằng do lỗi phần mềm và phần cứng, hướng Qibla do ứng dụng này hiển thị, đặc biệt là ở chế độ la bàn, có thể bị sai."
 
 #: src/components/audio_picker.tsx:58
 #: src/components/audio_picker.tsx:87
@@ -680,19 +680,19 @@ msgstr "Čuvajte na umu da zbog softverskih i hardverskih grešaka, smjer Kabe k
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
-msgstr "Obavijest"
+msgstr "Thông báo"
 
 #: src/intro/intro.tsx:35
 msgid "Notification & Sound"
-msgstr "Obavijest i Zvuk"
+msgstr "Thông báo & Âm thanh"
 
 #: src/utils/permission.ts:38
 msgid "Notifications Permission"
-msgstr "Dozvole za Obavijesti"
+msgstr "Quyền thông báo"
 
 #: src/screens/settings_display/number_format_settings.tsx:19
 msgid "Numbering system"
-msgstr "Sistem Numerisanja"
+msgstr "Hệ thống số đếm"
 
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
@@ -700,159 +700,159 @@ msgstr "Sistem Numerisanja"
 #: src/utils/permission.ts:48
 #: src/utils/permission.ts:178
 msgid "Okay"
-msgstr "U redu"
+msgstr "OK"
 
 #: src/utils/permission.ts:137
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
-msgstr "Na Androidu 12 i novijem, aplikaciji je potrebna i dozvola za alarme da bi ispravno radila, pa bi trebali i ovo dozvoliti."
+msgstr "Trên Android 12 trở lên, ứng dụng cũng cần có quyền báo thức để hoạt động bình thường, vì vậy bạn cũng phải cho phép điều này."
 
 #: src/screens/settings_reminders/reminder_item.tsx:36
 msgid "Once"
-msgstr "Jednom"
+msgstr "Một lần"
 
 #: src/screens/settings_calculation/index.tsx:121
 msgid "One-Seventh of the Night"
-msgstr "Jedna Sedmina Večeri"
+msgstr "Một phần bảy đêm"
 
 #. shown in add/edit reminder dialog
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Only once?"
-msgstr "Samo jednom?"
+msgstr "Chỉ một lần?"
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:44
 msgid "Only six items can be shown at the same time"
-msgstr "Samo šest stvari može biti pokazano istovremeno"
+msgstr "Chỉ có sáu mục có thể được hiển thị cùng một lúc"
 
 #: src/screens/settings_battery_optimizations/index.tsx:60
 msgid "Open Battery Optimization Settings"
-msgstr "Otvorite Postavke za Optimizaciju Baterije"
+msgstr "Mở cài đặt Tối ưu hóa Pin"
 
 #: src/screens/settings_battery_optimizations/index.tsx:91
 msgid "Open Power Manager Settings"
-msgstr "Otvorite Postavke Napojnog Menadžera"
+msgstr "Mở cài đặt Trình quản lý Pin"
 
 #: website/src/_includes/home.tsx:96
 msgid "Open source repository"
-msgstr "Otvoreno spremište"
+msgstr "Kho mã nguồn mở"
 
 #: website/src/_includes/home.tsx:70
 msgid "Open-source"
-msgstr "Otvorenog izvora"
+msgstr "Mã nguồn mở"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:210
 msgid "Options"
-msgstr "Postavke"
+msgstr "Tùy chọn"
 
 #: src/constants/notification.ts:27
 msgid "PRE_ADHAN_CHANNEL_NAME"
-msgstr "Nadolazeći ezan"
+msgstr "Azan sắp tới"
 
 #: src/constants/notification.ts:43
 msgid "PRE_REMINDER_CHANNEL_NAME"
-msgstr "Nadolazeća podsjeta"
+msgstr "Lời nhắc sắp tới"
 
 #: src/screens/settings_location/index.tsx:332
 msgid "Paste"
-msgstr "Zalijepi"
+msgstr "Dán"
 
 #: src/utils/permission.ts:168
 msgid "Phone State Permission"
-msgstr "Dozvola Stanja Telefona"
+msgstr "Điện thoại Nhà nước cho phép"
 
 #: src/utils/dialogs.ts:36
 msgid "Please enable location service"
-msgstr "Omogućite uslugu lokacije"
+msgstr "Vui lòng bật dịch vụ định vị"
 
 #: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
-msgstr "Polarna Procjena Razmaka"
+msgstr "Độ Phân giải Cực"
 
 #: src/screens/settings_battery_optimizations/index.tsx:65
 msgid "Power Manager"
-msgstr "Napojni Menadžer"
+msgstr "Quản lý Pin"
 
 #: website/src/_includes/home.tsx:36
 msgid "Prayer Times"
-msgstr "Vremena Molitve"
+msgstr "Giờ cầu nguyện"
 
 #: src/screens/home/index.tsx:138
 msgid "Prev Day"
-msgstr "Prošli Dan"
+msgstr "Ngày Trước"
 
 #: website/src/_data/navigation.ts:5
 #: website/src/_includes/privacy-policy.tsx:11
 #: website/src/_includes/privacy-policy.tsx:28
 msgid "Privacy Policy"
-msgstr "Politika privatnosti"
+msgstr "Chính sách bảo mật"
 
 #: website/src/_includes/home.tsx:15
 #: website/src/_includes/privacy-policy.tsx:15
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
-msgstr "Prva privatna-bezoglasna otvorena muslimanska aplikacija za Ezan i kiblu"
+msgstr "Ứng dụng Azan và qibla đạo Hồi mã nguồn mở ưu tiên quyền riêng tư (thời gian cầu nguyện theo đạo Hồi)"
 
 #: website/src/_includes/home.tsx:89
 msgid "Qada counter"
-msgstr "Kada brojač"
+msgstr "Bộ đếm Qada"
 
 #: src/adhan/calculation_methods.ts:76
 msgid "Qatar"
-msgstr "Katar"
+msgstr "Ca-ta"
 
 #: src/screens/qibla_finder_compass/index.tsx:139
 #: website/src/_includes/home.tsx:36
 msgid "Qibla"
-msgstr "Kibla"
+msgstr "Qibla"
 
 #: website/src/_includes/home.tsx:88
 msgid "Qibla finder"
-msgstr "Kibla pronalaznik"
+msgstr "Tìm Qibla"
 
 #: src/screens/qibla_finder/index.tsx:24
 msgid "Qibla finder needs location service. If not enabled, location from app settings will be used."
-msgstr "Pronalazniku Kible treba usluga lokacije. Ako nije omogućena, koristit će se lokacija iz postavkih aplikacije."
+msgstr "Công cụ tìm Qibla cần dịch vụ định vị. Nếu không được bật, vị trí từ cài đặt ứng dụng sẽ được sử dụng."
 
 #: src/screens/qibla_finder/index.tsx:32
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
-msgstr "Mapa Kible trenutno nije dostupna u F-Droid verzijama aplikacije. Možda će postati dostupna u budućim ažuriranjima."
+msgstr "Bản đồ Qibla hiện không khả dụng trong các bản dựng F-Droid. Nó có thể trở nên khả dụng trong các bản cập nhật trong tương lai."
 
 #: src/constants/notification.ts:39
 msgid "REMINDER_CHANNEL_NAME"
-msgstr "Podsjetnik"
+msgstr "Lời nhắc"
 
 #: src/utils/ramadan.ts:61
 msgid "Ramadan is ending,"
-msgstr "Ramazan se završava,"
+msgstr "Ramadan sắp kết thúc,"
 
 #: src/utils/ramadan.ts:57
 msgid "Ramadan is near,"
-msgstr "Ramazan je blizu,"
+msgstr "Lễ Ramadan đã gần kề,"
 
 #: src/adhan/calculation_methods.ts:52
 msgid "Referred to as the ISNA method"
-msgstr "Pominje se kao ISNA metoda"
+msgstr "Được gọi là phương pháp ISNA"
 
 #: src/tasks/update_widgets.ts:20
 msgid "Remaining till"
-msgstr "Ostaje do"
+msgstr "Còn lại tới khi"
 
 #: src/utils/ramadan.ts:78
 #: src/utils/ramadan.ts:104
 msgid "Remind me next year"
-msgstr "Podsjeti me sljedeće godine"
+msgstr "Nhắc tôi năm sau"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
 #: src/tasks/set_reminder.ts:106
 msgid "Reminder"
-msgstr "Podsjetnik"
+msgstr "Lời nhắc"
 
 #: src/components/audio_picker.tsx:92
 msgid "Repeat"
-msgstr "Ponovite"
+msgstr "Lặp lại"
 
 #: src/intro/intro.tsx:118
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
-msgstr "Potrebne postavke su nepotpune. Da bi aplikacija prikazivala vremena molitve, morate je kasnije konfigurirati iz postavkih."
+msgstr "Cài đặt bắt buộc chưa hoàn tất. Để ứng dụng hiển thị thời gian cầu nguyện, Bạn phải   cấu hình nó sau trong cài đặt."
 
 #: src/screens/settings_battery_optimizations/index.tsx:81
 msgid ""
@@ -860,379 +860,366 @@ msgid ""
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
 "In the Battery menu tap \"App power management\", and then tap \"Apps that won't be put to sleep\",\n"
 "and add this app to the list."
-msgstr ""
-"Samsung uređaji imaju vlastiti prilagođeni Napojni Menadžer pod nazivom \"Njega Uređaja\".\n"
-"Nakon što pritisnete dugme ispod, bićete usmjereni prema Baterijskom meniju u Njezi Uređaja.\n"
-"U Baterijskom meniju tapnite \"Upravljanje napajanjem aplikacija\", a zatim dodirnite \"Aplikacije koje se neće staviti u stanje mirovanja\",\n"
-"i dodajte ovu aplikaciju u listu."
+msgstr "Các thiết bị Samsung có Trình quản lý nguồn tùy chỉnh của riêng chúng được gọi là \"Chăm sóc thiết bị\". Sau khi nhấn nút bên dưới, Bạn sẽ được điều hướng đến menu Pin của Chăm sóc thiết bị. Trong menu Pin, hãy nhấn vào \"Quản lý nguồn ứng dụng\", sau đó nhấn vào \"Ứng dụng sẽ không chuyển sang chế độ ngủ\" và thêm ứng dụng này vào danh sách."
 
 #: src/components/week_day_selector.tsx:29
 msgid "Saturday"
-msgstr "Subota"
+msgstr "Thứ 7"
 
 #: src/components/audio_picker.tsx:370
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
-msgstr "Tražite"
+msgstr "Tìm kiếm"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
 msgid "Secondary Calendar"
-msgstr "Sekundarni Kalendar"
+msgstr "Lịch phụ"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:196
 msgid "Select as Fajr Adhan"
-msgstr "Odaberite ko Sabah Ezan"
+msgstr "Chọn là Fajr Azan"
 
 #: website/src/_includes/home.tsx:77
 msgid "Select different Adhan audio for Fajr namaz"
-msgstr "Odaberite različite zvuke ezana za Sabah"
+msgstr "Chọn âm thanh Azan khác nhau cho Fajr namaz"
 
 #: src/screens/settings_adhan/index.tsx:188
 msgid "Selecting a name is required"
-msgstr "Odabir imena je potrebno"
+msgstr "Chọn tên là bắt buộc"
 
 #: website/src/_includes/home.tsx:76
 msgid "Set custom Adhan audio"
-msgstr "Postavite prilagođeni zvuk za Ezan"
+msgstr "Đặt âm thanh Azan tùy chỉnh"
 
 #: website/src/_includes/home.tsx:86
 msgid "Set reminders before or after a prayer time"
-msgstr "Postavite podsjetnike prije ili poslije molitvenog vremena"
+msgstr "Đặt lời nhắc trước hoặc sau giờ cầu nguyện"
 
 #: src/screens/settings_calculation/index.tsx:170
 msgid "Shafaq"
-msgstr "Šafak"
+msgstr "Shafaq"
 
 #: src/screens/settings_calculation/index.tsx:172
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
-msgstr ""
-"Šafak koristi metode Odbora za Promatranje Mjeseca da\n"
-"odredi koju vrstu sumraka da koristi kako biste\n"
-"odredili vrijeme za Jaciju"
+msgstr "Shafaq được sử dụng bởi phương pháp Uỷ ban Ngắm trăng để xác định loại hoàng hôn sẽ sử dụng để xác định thời gian cho Isha"
 
 #: src/screens/settings_calculation/index.tsx:138
 msgid "Shafi, Maliki, Hanbali (Default)"
-msgstr "Šafija, Malikija, Hanbelija (Zadano)"
+msgstr "Shafi, Maliki, Hanbali (Mặc định)"
 
 #: src/adhan/calculation_methods.ts:106
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
-msgstr "Šiizam Itna Ašari, Leva Institut, Kom"
+msgstr "Shia Ithna Ashari, Viện Leva, Qum"
 
 #: src/adhan/calculation_methods.ts:112
 msgid "Shia, Institute of Geophysics, University of Tehran"
-msgstr "Šiizam, Institut za Geofiziku, Univerzitet u Teheranu"
+msgstr "Shia, Viện Địa vật lý, Đại học Tehran"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
-msgstr "Da li aplikacija treba da prestane da pušta ezan kada se pritisne dugme za jačinu zvuka?"
+msgstr "Ứng dụng có nên dừng phát Azan khi nhấn nút âm lượng không?"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
-msgstr "Prikažite Postavke za Ezan"
+msgstr "Tùy chọn Hiển thị Azan"
 
 #: src/screens/home/index.tsx:161
 msgid "Show Today"
-msgstr "Prikažite Danas"
+msgstr "Hôm nay"
 
 #: src/screens/settings_widget/index.tsx:62
 #: src/screens/settings_widget/index.tsx:77
 msgid "Show countdown?"
-msgstr "Prikažite odbrojavanje?"
+msgstr "Hiện đếm ngược?"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
-msgstr "Prikažite sljedeće u obavještenju?"
+msgstr "Hiện \"tiếp\" trong thông báo?"
 
 #: src/screens/settings_widget/index.tsx:40
 msgid "Show notification widget?"
-msgstr "Prikažite vidžet za obavještenje?"
+msgstr "Hiện tiện ích thông báo?"
 
 #: src/utils/permission.ts:149
 msgid "Show settings"
-msgstr "Prikažite Postavke"
+msgstr "Hiện cài đặt"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:21
 msgid "Show upcoming alarm notification?"
-msgstr "Prikažite nadolazeća obavještenja o alarmu?"
+msgstr "Hiện thông báo báo thức sắp tới?"
 
 #: src/components/audio_picker.tsx:101
 msgid "Silent"
-msgstr "Tiho"
+msgstr "Im lặng"
 
 #: website/src/_includes/home.tsx:101
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
-msgstr "Budući da ne koristimo nikakvu vrstu tragača ili analitiku rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repo"
+msgstr "Vì chúng tôi không sử dụng bất kỳ loại trình theo dõi hoặc phân tích sự cố nào, vui lòng báo cáo bất kỳ sự cố hoặc đề xuất nào bạn có trên repo github của chúng tôi"
 
 #: src/adhan/calculation_methods.ts:82
 msgid "Singapore"
-msgstr "Singapur"
+msgstr "Singapore"
 
 #: src/intro/intro.tsx:100
 msgid "Skip"
-msgstr "Preskoči"
+msgstr "Bỏ qua"
 
 #: website/src/_includes/privacy-policy.tsx:45
 msgid "Software License"
-msgstr "Softverska licenca"
+msgstr "Bản quyền phần mềm"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:31
 msgid "Solar Hijri"
-msgstr "Iranski Kalendar"
+msgstr "Hijri mặt trời"
 
 #: src/screens/settings_battery_optimizations/index.tsx:69
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
 "In that case disable any power saving option for the app."
-msgstr ""
-"Nekim uređajima trebaju dodatne postavke unutar svog\n"
-"Napojnog Menadžera da spriječite uništenje aplikacije u pozadini.\n"
-"U tom slučaju onemogućite bilo koju opciju uštede energije za aplikaciju."
+msgstr "Một số thiết bị cần cài đặt bổ sung bên trong Trình quản lý nguồn để ngăn ứng dụng bị tắt trong nền. Trong trường hợp đó, hãy tắt mọi tùy chọn tiết kiệm năng lượng cho ứng dụng này."
 
 #: src/screens/settings_notifications/notification_setting.tsx:290
 #: src/screens/settings_notifications/notification_setting.tsx:330
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:197
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:199
 msgid "Sound"
-msgstr "Zvuk"
+msgstr "Âm thanh"
 
 #: src/adhan/calculation_methods.ts:100
 msgid "Spiritual Administration of Muslims of Russia"
-msgstr "Duhovna Uprava Muslimana Rusije"
+msgstr "Cơ quan Quản lý Tinh thần của người Hồi giáo ở Nga"
 
 #: src/screens/settings_battery_optimizations/index.tsx:50
 msgid "Status"
-msgstr "Stanje"
+msgstr "Trạng thái"
 
 #: src/components/week_day_selector.tsx:11
 msgid "Sunday"
-msgstr "Nedelja"
+msgstr "Chủ Nhật"
 
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
-msgstr "Sistemski Zadana"
+msgstr "Theo điện thoại"
 
 #: src/screens/settings_notifications/index.tsx:63
 msgid "Tahajjud time mentioned in the app is the last third of the night"
-msgstr "Noćni Namaz naveden u aplikaciji je zadnja trećina noći"
+msgstr "Thời gian Tahajjud được đề cập trong ứng dụng là một phần ba cuối cùng của đêm"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:33
 msgid "Thai Solar"
-msgstr "Tajlandski Solarni Kalendar"
+msgstr "Mặt trời Thái Lan"
 
 #: src/intro/slides/welcome.tsx:9
 msgid ""
 "Thanks for choosing this app! There are things you need to do before you\n"
 "can start using this app."
-msgstr ""
-"Hvala vam što ste odabrali ovu aplikaciju!\n"
-"Postoje stvari koje morate učiniti prije\n"
-"nego što možete početi koristiti ovu aplikaciju."
+msgstr "Cảm ơn bạn đã chọn ứng dụng này! Có những việc bạn cần làm trước khi có thể bắt đầu sử dụng ứng dụng này."
 
 #: src/adhan/calculation_methods.ts:64
 msgid "The Gulf Region (Dubai)"
-msgstr "Zaljevsko područje (Dubaj)"
+msgstr "Vùng Vịnh (Dubai)"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:45
 msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
-msgstr "Lunarni kalendar aplikacije je unaprijed izračunat i možda neće biti tačan jer nije zasnovan na viđenjima mjeseca. Ovo je posebno važno napomenuti za početak i kraj Ramazana."
+msgstr "Lịch âm của ứng dụng được tính toán trước và có thể không chính xác vì nó không dựa trên các lần nhìn thấy mặt trăng. Điều này đặc biệt quan trọng cần lưu ý khi bắt đầu và kết thúc tháng Ramadan."
 
 #: website/src/_includes/privacy-policy.tsx:62
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
-msgstr "Tekst koji se nalazi na ovoj web stranici i u aplikaciji možda nije tačan na drugim jezicima, tako da u svakom slučaju treba uzeti u obzir samo englesku verziju."
+msgstr "Văn bản tìm thấy trên trang web này và trong ứng dụng có thể không chính xác bằng các ngôn ngữ khác, vì vậy trong mọi trường hợp, chỉ nên xem xét phiên bản tiếng Anh."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
 msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "Vrsta kalendara koja se prikazuje na vrhu početnog ekrana i pored lunarnog datuma u vidžetima"
+msgstr "Loại lịch được hiển thị trên đầu màn hình chính và bên cạnh ngày âm lịch trong các tiện ích"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
-msgstr "Tip lunarnog kalendara prikazanog na glavnom ekranu i vidžetima"
+msgstr "Loại âm lịch hiển thị trên màn hình chính và tiện ích"
 
 #: src/screens/settings_display/theme_settings.tsx:28
 #: src/screens/settings_display/theme_settings.tsx:33
 msgid "Theme Color"
-msgstr "Boja Teme"
+msgstr "Màu Chủ đề"
 
 #: src/components/week_day_selector.tsx:23
 msgid "Thursday"
-msgstr "Četvrtak"
+msgstr "Thứ 5"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:115
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
-msgstr "Vrijeme"
+msgstr "Giờ"
 
 #: src/screens/settings_display/time_format_settings.tsx:11
 msgid "Time format"
-msgstr "Vremenski format"
+msgstr "Định dạng giờ"
 
 #: src/screens/settings_location/index.tsx:187
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
-msgstr "Za izračunavanje ezana, potrebna nam je vaša lokacija. Možete koristiti dugme \"Pronađi moju lokaciju\", ili pretragu zemlje i grada/područja, ili ručno unesite svoje koordinate."
+msgstr "Để tính toán Azan, chúng tôi cần vị trí của bạn. Bạn có thể sử dụng nút \"Tìm Vị trí của Tôi\" hoặc sử dụng tìm kiếm quốc gia và thành phố/khu vực hoặc nhập tọa độ của bạn theo cách thủ công."
 
 #: src/utils/permission.ts:39
 msgid "To see notifications about adhan, we need your permission."
-msgstr "Da vidimo obavještenja o ezanu, potrebna nam je vaša dozvola."
+msgstr "Để xem thông báo về Azan, chúng tôi cần sự cho phép của bạn."
 
 #: src/utils/permission.ts:169
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
-msgstr "Da prestanemo da sviramo ezan kada primite poziv, moramo pročitati stanje vašeg telefona. Nedopuštanje ove dozvole jednostavno onemogućava funkciju."
+msgstr "Để ngừng phát Azan khi bạn nhận được cuộc gọi, chúng tôi cần đọc trạng thái điện thoại của bạn. Không cho phép quyền này chỉ đơn giản là vô hiệu hóa tính năng."
 
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"
-msgstr "Sutra"
+msgstr "Ngày mai"
 
 #: src/components/week_day_selector.tsx:17
 msgid "Tuesday"
-msgstr "Utorak"
+msgstr "Thứ 3"
 
 #: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
-msgstr "Ugao Sumraka"
+msgstr "Góc chạng vạng"
 
 #: src/adhan/calculation_methods.ts:46
 msgid "Umm al-Qura University, Makkah"
-msgstr "Um al-Kura Univerzitet, Mekka"
+msgstr "Đại học Umm al-Qura, Makkah"
 
 #: src/adhan/calculation_methods.ts:88
 msgid "Union Organization Islamic de France"
-msgstr "Islamska Organizacija Francuske"
+msgstr "Tổ chức Liên minh Hồi giáo de France"
 
 #: src/adhan/calculation_methods.ts:40
 msgid "University of Islamic Sciences, Karachi"
-msgstr "Univerzitet Islamskih Nauka, Karači"
+msgstr "Đại học Khoa học Hồi giáo, Karachi"
 
 #: src/components/AutocompleteInput.tsx:131
 msgid "Unknown Error"
-msgstr "Nepoznata Greška"
+msgstr "Lỗi không rõ"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:30
 msgid "Unreliable"
-msgstr "Nepouzdano"
+msgstr "Không tin cậy"
 
 #: src/screens/settings_calculation/index.tsx:156
 msgid "Unresolved (default)"
-msgstr "Neriješeno (zadano)"
+msgstr "Chưa giải quyết (mặc định)"
 
 #: src/screens/settings_display/language_settings.tsx:64
 msgid "Unsupported"
-msgstr "Nepodržano"
+msgstr "Không hỗ trợ"
 
 #. notification title
 #: src/tasks/set_pre_alarm.ts:43
 msgid "Upcoming alarm"
-msgstr "Predstojeći alarm"
+msgstr "Báo thức sắp tới"
 
 #: src/tasks/set_update_widgets_alarms.ts:40
 msgid "Updating widgets"
-msgstr "Ažuriraju je vidžeti"
+msgstr "Đang cập nhật tiện ích"
 
 #: src/screens/settings_display/time_format_settings.tsx:13
 msgid "Use 24-Hour format"
-msgstr "Koristite 24-satni format"
+msgstr "Dùng định dạng 24 giờ"
 
 #: src/screens/qibla_finder/index.tsx:95
 msgid "Use Compass"
-msgstr "Koristite Kompas"
+msgstr "Dùng La bàn"
 
 #: src/screens/qibla_finder/index.tsx:94
 msgid "Use Map"
-msgstr "Koristite Kartu"
+msgstr "Dùng Bản đồ"
 
 #: src/screens/settings_widget/index.tsx:85
 #: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
-msgstr "Koristite adaptivnu temu?"
+msgstr "Sử dụng chủ đề thích ứng?"
 
 #: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
-msgstr "Koristite slušalice kad je dostupno?"
+msgstr "Sử dụng tai nghe khi cắm?"
 
 #: src/screens/settings_location/index.tsx:272
 msgid "Using Coordinates"
-msgstr "Koordinati su u Koristi"
+msgstr "Dùng Tọa độ"
 
 #: src/screens/settings_location/index.tsx:189
 msgid "Using GPS"
-msgstr "GPS je u Koristi"
+msgstr "Dùng GPS"
 
 #: src/screens/settings_location/index.tsx:208
 msgid "Using Search"
-msgstr "Pretraga je u Koristi"
+msgstr "Dùng Tìm kiếm"
 
 #: src/screens/settings_about/index.tsx:29
 msgid "Version"
-msgstr "Verzija"
+msgstr "Phiên bản"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
-msgstr "Dugme za jačinu zvuka zaustavlja ezan"
+msgstr "Nút âm lượng dừng Azan"
 
 #: src/constants/notification.ts:31
 msgid "WIDGET_CHANNEL_NAME"
-msgstr "Vidžet"
+msgstr "Tiện ích"
 
 #: src/constants/notification.ts:35
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
-msgstr "Vidžet za Ažuriranje"
+msgstr "Cập nhật Tiện ích"
 
 #: src/intro/slides/welcome.tsx:14
 msgid "We'll help you do them quickly."
-msgstr "Pomoći ćemo vam da ih brzo obavite."
+msgstr "Chúng tôi sẽ giúp bạn thực hiện chúng nhanh thôi."
 
 #: src/components/week_day_selector.tsx:20
 msgid "Wednesday"
-msgstr "Srijeda"
+msgstr "Thứ 4"
 
 #: src/intro/intro.tsx:23
 msgid "Welcome"
-msgstr "Dobrodošli"
+msgstr "Chào mừng"
 
 #: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
-msgstr "Kada je omogućeno, kada koristite slušalice, sav zvuk će se pokretati samo na slušalicama."
+msgstr "Khi được bật, khi sử dụng tai nghe, tất cả âm thanh sẽ chỉ phát trên tai nghe."
 
 #: src/screens/qibla_finder/index.tsx:64
 msgid "Wifi"
-msgstr "WiFi"
+msgstr "Wifi"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
 #: src/utils/dialogs.ts:19
 msgid "Yes"
-msgstr "Da"
+msgstr "Được"
 
 #: src/screens/settings_battery_optimizations/index.tsx:74
 msgid "You can access your device Power Manager using the button below."
-msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme ispod."
+msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết bị bằng cách ấn nút bên dưới."
 
 #: src/screens/settings_location/index.tsx:326
 msgid "You can also paste coords from clipboard"
-msgstr "Možete također zalijepiti koordinate iz međuspremnika"
+msgstr "Bạn cũng có thể dán toạ độ từ clipboard"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
-msgstr "Možete ovdje sakriti molitvena vremena koja ne želite da vidite na glavnom ekranu:"
+msgstr "Bạn có thể ẩn lần cầu nguyện không muốn thấy ở màn hình chính tại đây:"
 
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:60
 msgid "You can hide prayer times you don't want to see in the widget here:"
-msgstr "Možete sakriti vremena molitve koja ne želite da vidite u vidžetu ovdje:"
+msgstr "Bạn có thể ẩn lần cầu nguyện mà bạn không muốn thấy trong tiện ích tại đây:"
 
 #: website/src/_includes/home.tsx:72
 msgid "You can search for your location online Or use GPS offline"
-msgstr "Možete tražiti svoju lokaciju na mreži ili koristiti GPS van mreže"
+msgstr "Bạn có thể tìm kiếm vị trí của mình trực tuyến Hoặc sử dụng GPS ngoại tuyến"
 
 #: website/src/_includes/privacy-policy.tsx:57
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "Trebali ste dobiti kopiju GNU Affero General Public License zajedno s ovim programom. Ako ne, pogledajte https://www.gnu.org/licenses/."
+msgstr "Bạn sẽ nhận được một bản sao Giấy phép Công cộng GNU Affero cùng với chương trình này. Nếu không, hãy xem https://www.gnu.org/licenses/."
 
 #: src/components/audio_picker.tsx:118
 msgid "Your sounds"
-msgstr "Vaši zvukovi"
+msgstr "Âm thanh của bạn"
 
 #: src/assets/adhan_entries.ts:22
 msgid "abdul_basit_abdus_samad"
@@ -1240,237 +1227,234 @@ msgstr "Abdul-Basit Abdus-Samad"
 
 #: src/screens/settings_about/index.tsx:46
 msgid "about.credits"
-msgstr ""
-"Sva autorska prava za glasove ezana pripadaju njihovim vlasnicima.\n"
-"Posebno zahvaljujemo translation.io (lingui.js) za njihovim divnim uslugama.\n"
-"Hvala svim članovima zajednice otvorenog izvora koji su napravili sve ove divne biblioteke koje su omogućile stvaranje ove aplikacije."
+msgstr "Tất cả bản quyền cho giọng nói azan thuộc về chủ sở hữu tương ứng của họ. Xin gửi lời cảm ơn đặc biệt đến translation.io (lingui.js) vì những dịch vụ tuyệt vời của họ. Cảm ơn tất cả các thành viên cộng đồng mã nguồn mở, những người đã tạo ra tất cả các thư viện tuyệt vời này giúp ứng dụng này trở nên khả thi."
 
 #: src/screens/settings_about/index.tsx:54
 msgid "about.credits.google"
-msgstr "Većina ikona koje se koriste u ovoj aplikaciji su iz ikona google materijala."
+msgstr "Hầu hết các biểu tượng được sử dụng trong ứng dụng này là từ các biểu tượng material của google."
 
 #. screen title
 #: src/navigation/types.ts:90
 msgid "about_settings"
-msgstr "O Aplikaciji"
+msgstr "Về Ứng Dụng"
 
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:16
 msgid "adjustment.hint"
-msgstr "Broj minuta koji će se dodati izračunatim vremenima"
+msgstr "Số phút sẽ được thêm vào thời gian tính toán"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "after"
-msgstr "nakon"
+msgstr "sau"
 
 #: src/utils/date.ts:324
 msgid "ago"
-msgstr "prije"
+msgstr "trước kia"
 
 #: src/adhan/prayer.ts:52
 msgid "asr.prayer"
-msgstr "Ikindija"
+msgstr "Asr"
 
 #. screen title
 #: src/navigation/types.ts:45
 msgid "backup_settings"
-msgstr "Rezerva"
+msgstr "Sao lưu"
 
 #. screen title
 #: src/navigation/types.ts:75
 msgid "battery_optimization_settings"
-msgstr "Optimizacija Baterije"
+msgstr "Tối ưu hóa Pin"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
-msgstr "prije"
+msgstr "trước"
 
 #. screen title
 #: src/navigation/types.ts:70
 msgid "calculation_settings"
-msgstr "Kalkulacija"
+msgstr "Phép tính"
 
 #. in religious context
 #: src/screens/qada_counter/counter_view.tsx:15
 msgid "counter.fast"
-msgstr "Brzo"
+msgstr "Nhanh"
 
 #: src/utils/date.ts:7
 msgid "date.day"
-msgstr "dan"
+msgstr "ngày"
 
 #: src/utils/date.ts:11
 msgid "date.hour"
-msgstr "sat"
+msgstr "giờ"
 
 #: src/utils/date.ts:15
 msgid "date.minute"
-msgstr "minuta"
+msgstr "phút"
 
 #: src/utils/date.ts:19
 msgid "date.second"
-msgstr "sekunda"
+msgstr "giây"
 
 #. screen title
 #: src/navigation/types.ts:95
 msgid "dev_settings"
-msgstr "Razvodničke Postavke"
+msgstr "Nhà phát triển"
 
 #: src/adhan/prayer.ts:48
 msgid "dhuhr.prayer"
-msgstr "Podne"
+msgstr "Dhuhr"
 
 #. screen title
 #: src/navigation/types.ts:50
 msgid "display_settings"
-msgstr "Prikaz"
+msgstr "Hiển thị"
 
 #: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
-msgstr "Sabah"
+msgstr "Fajr"
 
 #: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
-msgstr "prisiljava sve brojeve da budu u odabranom sistemu"
+msgstr "buộc tất cả các số phải nằm trong hệ thống đã chọn"
 
 #: src/screens/qibla_finder_compass/index.tsx:143
 msgid "from North"
-msgstr "sa Sjevera"
+msgstr "từ hướng Bắc"
 
 #: src/screens/qibla_finder_compass/index.tsx:154
 msgid "from settings"
-msgstr "iz postavkih"
+msgstr "từ cài đặt"
 
 #. screen title
 #: src/navigation/types.ts:40
 msgid "fullscreen_alarm"
-msgstr "Ezan je u toku"
+msgstr "Đang phát Azan"
 
 #: src/navigation/types.ts:32
 msgid "home"
-msgstr "Početna"
+msgstr "Trang chủ"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
-msgstr "ako je omogućeno, obavijest će se prikazati oko jedan sat prije vremena molitve ili podsjetnika koji ima zvuk"
+msgstr "nếu được bật, một thông báo sẽ được hiển thị khoảng một giờ trước mỗi lần cầu nguyện hoặc lời nhắc nào có âm thanh"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
 msgid "is prayer time hidden?"
-msgstr "da li je vrijeme molitve skriveno?"
+msgstr "giờ cầu nguyện bị ẩn?"
 
 #: src/adhan/prayer.ts:64
 msgid "isha.prayer"
-msgstr "Jacija"
+msgstr "Isha"
 
 #: src/utils/date.ts:324
 msgid "later"
-msgstr "poslije"
+msgstr "sau đó"
 
 #. screen title
 #: src/navigation/types.ts:55
 msgid "location_settings"
-msgstr "Lokacija"
+msgstr "Vị trí"
 
 #: src/adhan/prayer.ts:60
 msgid "maghrib.prayer"
-msgstr "Akšam"
+msgstr "Maghrib"
 
 #: src/assets/adhan_entries.ts:18
 msgid "masjid_an_nabawi"
-msgstr "Poslanikova Džamija"
+msgstr "Masjid An Nabawi"
 
 #: src/assets/adhan_entries.ts:30
 msgid "moazen_zade"
-msgstr "Mujezin Zade"
+msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:124
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
-msgstr "Mujezin"
+msgstr "Muezzin"
 
 #. screen title
 #: src/navigation/types.ts:60
 msgid "notification_settings"
-msgstr "Obavijesti i Zvuk"
+msgstr "Thông báo & Âm thanh"
 
 #. Title of the page where you can count your Qada prayers and fast
 #: src/navigation/types.ts:112
 msgid "qada_counter"
-msgstr "Kadski Brojač"
+msgstr "Bộ đếm Qada"
 
 #: src/navigation/types.ts:108
 msgid "qibla_compass"
-msgstr "Kibla Kompas"
+msgstr "La bàn Qibla"
 
 #: src/navigation/types.ts:100
 msgid "qibla_finder"
-msgstr "Kibla Pronalaznik"
+msgstr "Trình Tìm Qibla"
 
 #: src/navigation/types.ts:104
 msgid "qibla_map"
-msgstr "Kibla Karta"
+msgstr "Bản đồ Qibla"
 
 #: src/assets/adhan_entries.ts:26
 msgid "ragheb_mustafa_ghalwash"
-msgstr "Rahib Mustafa Galvaš"
+msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
 #: src/navigation/types.ts:85
 msgid "reminders_settings"
-msgstr "Podsjetnici"
+msgstr "Lời nhắc"
 
 #: src/navigation/types.ts:36
 msgid "settings"
-msgstr "Postavke"
+msgstr "Cài đặt"
 
 #: src/screens/settings_widget/index.tsx:55
 msgid "should notification widget be shown?"
-msgstr "bi li vidžet za obavještenje trebao biti prikazan?"
+msgstr "tiện ích thông báo có nên được hiển thị không?"
 
 #: src/screens/settings_display/hide_prayer_setting.tsx:16
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:29
 msgid "should {prayerName} be hidden?"
-msgstr "bi li {prayerName} trebalo biti sakriveno?"
+msgstr "có nên ẩn {prayerName} không?"
 
 #: src/utils/ramadan.ts:53
 msgid "since the app's calendar is pre-calculated and not based on moon sightings, it may show incorrect date for the start and the end of Ramadan."
-msgstr "budući da je kalendar aplikacije unaprijed izračunat i nije zasnovan na viđanjima Mjeseca, može prikazati netačan datum početka i kraja Ramazana."
+msgstr "vì lịch của ứng dụng được tính toán trước và không dựa trên việc nhìn thấy mặt trăng nên nó có thể hiển thị ngày bắt đầu và kết thúc tháng Ramadan không chính xác."
 
 #: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
-msgstr "Ponoć"
+msgstr "Nửa đêm"
 
 #: src/adhan/prayer.ts:72
 msgid "sunnah.tahajjud"
-msgstr "Noćni Namaz"
+msgstr "Tahajjud"
 
 #: src/adhan/prayer.ts:44
 msgid "sunrise"
-msgstr "Izlazak"
+msgstr "Bình Minh"
 
 #: src/adhan/prayer.ts:56
 msgid "sunset"
-msgstr "Zalazak"
+msgstr "Hoàng Hôn"
 
 #. screen title
 #: src/navigation/types.ts:80
 msgid "widget_settings"
-msgstr "Postavke za Vidžete"
+msgstr "Cài đặt Tiện ích"
 
 #: src/screens/settings_reminders/reminder_item.tsx:33
 msgid "{durationInMinutes} min after {prayer}"
-msgstr "{durationInMinutes} minuta poslije {prayer}"
+msgstr "{durationInMinutes} phút sau {prayer}"
 
 #: src/screens/settings_reminders/reminder_item.tsx:32
 msgid "{durationInMinutes} min before {prayer}"
-msgstr "{durationInMinutes} minuta prije {prayer}"
+msgstr "{durationInMinutes} phút trước {prayer}"
 
 #: src/screens/settings_notifications/notification_setting.tsx:247
 msgid "{prayerName} notification will be shown"
-msgstr "{prayerName} obavijest će biti prikazana"
+msgstr "Thông báo {prayerName} sẽ được hiển thị"
 
 #: src/screens/settings_notifications/notification_setting.tsx:299
 msgid "{prayerName} sound will be played"
-msgstr "{prayerName} zvuk će biti pokrenut"
+msgstr "Âm thanh {prayerName} sẽ được phát"
