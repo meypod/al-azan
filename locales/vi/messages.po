@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-08 10:40+0330\n"
+"POT-Creation-Date: 2023-04-08 18:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,11 +88,11 @@ msgstr "Ahmer"
 #: website/src/_includes/home.tsx:34
 #: website/src/_includes/privacy-policy.tsx:11
 msgid "Al-Azan"
-msgstr "Azan - Giờ Cầu Nguyện"
+msgstr "Al-Azan"
 
 #: website/src/_includes/home.tsx:11
 msgid "Al-Azan - Prayer Times"
-msgstr "Azan - Giờ lễ nguyện Salah Hồi giáo"
+msgstr "Al-Azan - Giờ Cầu Nguyện"
 
 #: website/src/_includes/privacy-policy.tsx:52
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
