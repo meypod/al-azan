@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-07 04:39+0330\n"
+"POT-Creation-Date: 2023-04-08 09:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -194,7 +194,7 @@ msgstr "गणना विधि चुनें"
 msgid "Choose High Latitude Setting"
 msgstr "उच्च अक्षांश सेटिंग चुनें"
 
-#: src/screens/settings_display/language_settings.tsx:88
+#: src/screens/settings_display/language_settings.tsx:104
 msgid "Choose Language"
 msgstr "भाषा चुनें"
 
@@ -544,7 +544,7 @@ msgstr "कुवैट"
 msgid "Label"
 msgstr "लेबल"
 
-#: src/screens/settings_display/language_settings.tsx:85
+#: src/screens/settings_display/language_settings.tsx:101
 msgid "Language"
 msgstr "भाषा"
 
@@ -1106,7 +1106,7 @@ msgstr "अविश्वसनीय"
 msgid "Unresolved (default)"
 msgstr "अनसुलझा (डिफ़ॉल्ट)"
 
-#: src/screens/settings_display/language_settings.tsx:64
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Unsupported"
 msgstr "असमर्थित"
 
