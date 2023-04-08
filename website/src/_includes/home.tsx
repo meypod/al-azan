@@ -98,7 +98,7 @@ export async function render({page}: ReturnType<typeof data> & {page: Page}) {
               <li>{i18n._('Qada counter')}</li>
               <li>
                 {i18n._(
-                  'Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian',
+                  'Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese',
                 )}
               </li>
             </ul>
