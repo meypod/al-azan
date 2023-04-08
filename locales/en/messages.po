@@ -53,7 +53,7 @@ msgstr "Abyad"
 msgid "Accuracy"
 msgstr "Accuracy"
 
-#: website/src/_includes/home.tsx:68
+#: website/src/_includes/home.tsx:77
 msgid "Ad-Free"
 msgstr "Ad-Free"
 
@@ -120,7 +120,7 @@ msgstr "All data provided to Al-Azan is only stored locally in your device. Your
 msgid "An error occured while playing the current track"
 msgstr "An error occured while playing the current track"
 
-#: website/src/_includes/home.tsx:66
+#: website/src/_includes/home.tsx:75
 msgid "App features"
 msgstr "App features"
 
@@ -316,7 +316,7 @@ msgstr "Dismiss"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
-#: website/src/_includes/home.tsx:69
+#: website/src/_includes/home.tsx:78
 msgid "Doesn't use any kind of trackers"
 msgstr "Doesn't use any kind of trackers"
 
@@ -432,7 +432,7 @@ msgstr "Hidden?"
 msgid "Hide Prayer Times"
 msgstr "Hide Prayer Times"
 
-#: website/src/_includes/home.tsx:85
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "Hide times you don't need"
 
@@ -449,7 +449,7 @@ msgstr "High Latitude"
 msgid "Home"
 msgstr "Home"
 
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "Homescreen and notification Widgets"
 
@@ -493,7 +493,7 @@ msgstr "Import app data"
 msgid "Import successful"
 msgstr "Import successful"
 
-#: website/src/_includes/home.tsx:79
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 
@@ -509,9 +509,9 @@ msgstr "Internet connection"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 
-#: website/src/_includes/home.tsx:91
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
-msgstr "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
+#: website/src/_includes/home.tsx:100
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
+msgstr "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -575,7 +575,7 @@ msgstr "License"
 msgid "Light"
 msgstr "Light"
 
-#: website/src/_includes/home.tsx:84
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Light/Dark theme"
 
@@ -602,7 +602,7 @@ msgstr "Longitude is invalid"
 msgid "Low"
 msgstr "Low"
 
-#: website/src/_includes/home.tsx:83
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "Many options for Adhan (اذان) calculation"
 
@@ -737,11 +737,11 @@ msgstr "Open Battery Optimization Settings"
 msgid "Open Power Manager Settings"
 msgstr "Open Power Manager Settings"
 
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "Open source repository"
 
-#: website/src/_includes/home.tsx:70
+#: website/src/_includes/home.tsx:79
 msgid "Open-source"
 msgstr "Open-source"
 
@@ -796,7 +796,7 @@ msgstr "Privacy Policy"
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 
-#: website/src/_includes/home.tsx:89
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "Qada counter"
 
@@ -809,7 +809,7 @@ msgstr "Qatar"
 msgid "Qibla"
 msgstr "Qibla"
 
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "Qibla finder"
 
@@ -889,7 +889,7 @@ msgstr "Secondary Calendar"
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
 
-#: website/src/_includes/home.tsx:77
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Select different Adhan audio for Fajr namaz"
 
@@ -897,11 +897,11 @@ msgstr "Select different Adhan audio for Fajr namaz"
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
-#: website/src/_includes/home.tsx:76
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "Set custom Adhan audio"
 
-#: website/src/_includes/home.tsx:86
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "Set reminders before or after a prayer time"
 
@@ -968,7 +968,7 @@ msgstr "Show upcoming alarm notification?"
 msgid "Silent"
 msgstr "Silent"
 
-#: website/src/_includes/home.tsx:101
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 
@@ -1227,7 +1227,7 @@ msgstr "You can hide prayer times you don't want to see in the main screen here:
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "You can hide prayer times you don't want to see in the widget here:"
 
-#: website/src/_includes/home.tsx:72
+#: website/src/_includes/home.tsx:81
 msgid "You can search for your location online Or use GPS offline"
 msgstr "You can search for your location online Or use GPS offline"
 

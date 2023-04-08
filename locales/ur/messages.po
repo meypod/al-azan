@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-08 09:24+0330\n"
+"POT-Creation-Date: 2023-04-08 10:11+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr "ابیاد"
 msgid "Accuracy"
 msgstr "درستگی"
 
-#: website/src/_includes/home.tsx:68
+#: website/src/_includes/home.tsx:77
 msgid "Ad-Free"
 msgstr "اشتہار سے پاک"
 
@@ -114,7 +114,7 @@ msgstr "الاذان کو فراہم کردہ تمام ڈیٹا صرف مقام�
 msgid "An error occured while playing the current track"
 msgstr "ٹریک کو چلانے کے دوران ایک خرابی پیش آگئی"
 
-#: website/src/_includes/home.tsx:66
+#: website/src/_includes/home.tsx:75
 msgid "App features"
 msgstr "ایپ کی خصوصیات"
 
@@ -310,7 +310,7 @@ msgstr "برطرف کرنا"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı، ترکی"
 
-#: website/src/_includes/home.tsx:69
+#: website/src/_includes/home.tsx:78
 msgid "Doesn't use any kind of trackers"
 msgstr "کسی بھی قسم کے ٹریکرز کا استعمال نہیں کرتا ہے۔"
 
@@ -426,7 +426,7 @@ msgstr "چھپا ہوا؟"
 msgid "Hide Prayer Times"
 msgstr "نماز کے اوقات چھپائیں۔"
 
-#: website/src/_includes/home.tsx:85
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "ایسے اوقات چھپائیں جن کی آپ کو ضرورت نہیں ہے۔"
 
@@ -443,7 +443,7 @@ msgstr "ہائی عرض بلد"
 msgid "Home"
 msgstr "گھر"
 
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "ہوم اسکرین اور نوٹیفکیشن وجیٹس"
 
@@ -487,7 +487,7 @@ msgstr "ایپ ڈیٹا درآمد کریں۔"
 msgid "Import successful"
 msgstr "درآمد کامیاب"
 
-#: website/src/_includes/home.tsx:79
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "روزانہ پانچ نمازوں کے علاوہ، اس میں طلوع آفتاب، غروب آفتاب، آدھی رات اور رات کی نماز (تہجد) کی ترتیب ہے۔"
 
@@ -503,9 +503,9 @@ msgstr "انٹرنیٹ کنکشن"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "قبلہ نقشہ کے کام کرنے کے لیے انٹرنیٹ کنکشن ضروری ہے۔ براہ کرم اپنا وائی فائی یا موبائل ڈیٹا فعال کریں اور دوبارہ کوشش کریں۔"
 
-#: website/src/_includes/home.tsx:91
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
-msgstr "انگریزی، فارسی، عربی، ترکی، انڈونیشی، فرانسیسی، اردو، ہندی، جرمن، بوسنیائی میں مقامی ہے"
+#: website/src/_includes/home.tsx:100
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
+msgstr "انگریزی، فارسی، عربی، ترکی، انڈونیشی، فرانسیسی، اردو، ہندی، جرمن، بوسنیائی، ویتنامی میں مقامی ہے"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -569,7 +569,7 @@ msgstr "لائسنس"
 msgid "Light"
 msgstr "روشنی"
 
-#: website/src/_includes/home.tsx:84
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "ہلکی/گہرا تھیم"
 
@@ -596,7 +596,7 @@ msgstr "طول البلد غلط ہے۔"
 msgid "Low"
 msgstr "کم"
 
-#: website/src/_includes/home.tsx:83
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "اذان (اذان) کے حساب کتاب کے بہت سے اختیارات"
 
@@ -731,11 +731,11 @@ msgstr "بیٹری آپٹیمائزیشن کی ترتیبات کھولیں۔"
 msgid "Open Power Manager Settings"
 msgstr "پاور مینیجر کی ترتیبات کھولیں۔"
 
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "اوپن سورس ریپوزٹری"
 
-#: website/src/_includes/home.tsx:70
+#: website/src/_includes/home.tsx:79
 msgid "Open-source"
 msgstr "آزاد مصدر"
 
@@ -790,7 +790,7 @@ msgstr "رازداری کی پالیسی"
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "پرائیویسی پہلا اوپن سورس مسلم اذان (نماز کے اسلامی اوقات) اور قبلہ ایپ"
 
-#: website/src/_includes/home.tsx:89
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "قضا کاؤنٹر"
 
@@ -803,7 +803,7 @@ msgstr "قطر"
 msgid "Qibla"
 msgstr "قبلہ"
 
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "قبلہ تلاش کرنے والا"
 
@@ -879,7 +879,7 @@ msgstr "ثانوی کیلنڈر"
 msgid "Select as Fajr Adhan"
 msgstr "فجر کی اذان کے طور پر منتخب کریں۔"
 
-#: website/src/_includes/home.tsx:77
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "فجر کی نماز کے لیے مختلف اذان آڈیو منتخب کریں۔"
 
@@ -887,11 +887,11 @@ msgstr "فجر کی نماز کے لیے مختلف اذان آڈیو منتخب
 msgid "Selecting a name is required"
 msgstr "نام کا انتخاب ضروری ہے۔"
 
-#: website/src/_includes/home.tsx:76
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "اپنی مرضی کے مطابق اذان آڈیو سیٹ کریں۔"
 
-#: website/src/_includes/home.tsx:86
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "نماز کے وقت سے پہلے یا بعد میں یاد دہانیاں ترتیب دیں۔"
 
@@ -955,7 +955,7 @@ msgstr "آنے والے الارم کی اطلاع دکھائیں؟"
 msgid "Silent"
 msgstr "خاموش"
 
-#: website/src/_includes/home.tsx:101
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "چونکہ ہم کسی بھی قسم کا ٹریکر یا کریش اینالیٹکس استعمال نہیں کرتے ہیں، اس لیے براہ کرم ہمارے گیتھب ریپو پر کسی بھی مسئلے یا تجویز کی اطلاع دیں۔"
 
@@ -1209,7 +1209,7 @@ msgstr "آپ نماز کے وہ اوقات چھپا سکتے ہیں جنہیں �
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "آپ نماز کے وہ اوقات چھپا سکتے ہیں جنہیں آپ ویجیٹ میں نہیں دیکھنا چاہتے ہیں۔"
 
-#: website/src/_includes/home.tsx:72
+#: website/src/_includes/home.tsx:81
 msgid "You can search for your location online Or use GPS offline"
 msgstr "آپ اپنا مقام آن لائن تلاش کر سکتے ہیں یا GPS آف لائن استعمال کر سکتے ہیں۔"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-08 09:24+0330\n"
+"POT-Creation-Date: 2023-04-08 10:11+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr "Abyad (Beyazlık)"
 msgid "Accuracy"
 msgstr "Doğruluk"
 
-#: website/src/_includes/home.tsx:68
+#: website/src/_includes/home.tsx:77
 msgid "Ad-Free"
 msgstr "Reklamsız"
 
@@ -114,7 +114,7 @@ msgstr "Al-Azan'a sağlanan tüm veriler yalnızca cihazınızda yerel olarak sa
 msgid "An error occured while playing the current track"
 msgstr "Geçerli ses çalınırken bir hata oluştu"
 
-#: website/src/_includes/home.tsx:66
+#: website/src/_includes/home.tsx:75
 msgid "App features"
 msgstr "Uygulama özellikleri"
 
@@ -310,7 +310,7 @@ msgstr "Reddet"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkiye"
 
-#: website/src/_includes/home.tsx:69
+#: website/src/_includes/home.tsx:78
 msgid "Doesn't use any kind of trackers"
 msgstr "Herhangi bir izleyici kullanmaz"
 
@@ -426,7 +426,7 @@ msgstr "Gizlensin mi?"
 msgid "Hide Prayer Times"
 msgstr "Namaz vakitlerini gizle"
 
-#: website/src/_includes/home.tsx:85
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "İhtiyacınız olmayan zamanları gizleme"
 
@@ -443,7 +443,7 @@ msgstr "Yüksek enlem"
 msgid "Home"
 msgstr "Anasayfa"
 
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "Ana ekran ve bildirim Widget'lerı"
 
@@ -487,7 +487,7 @@ msgstr "Uygulama verilerini içe aktar"
 msgid "Import successful"
 msgstr "İçe aktarma başarılı"
 
-#: website/src/_includes/home.tsx:79
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "Beş vakit namaza ek olarak Gün Doğumu, Gün Batımı, Gece Yarısı ve Gece Namazı (Teheccüd) ayarları vardır"
 
@@ -503,9 +503,9 @@ msgstr "İnternet bağlantısı"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Kıble haritasının çalışması için internet bağlantısı gereklidir. Lütfen kablosuz ağı veya mobil verinizi etkinleştirin ve tekrar deneyin."
 
-#: website/src/_includes/home.tsx:91
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
-msgstr "İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça dili seçenekleri"
+#: website/src/_includes/home.tsx:100
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
+msgstr "İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça, Vietnamca dillerinde yerelleştirilmiştir"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -569,7 +569,7 @@ msgstr "Lisans"
 msgid "Light"
 msgstr "Aydınlık"
 
-#: website/src/_includes/home.tsx:84
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Açık/Koyu tema"
 
@@ -596,7 +596,7 @@ msgstr "Boylam geçersiz"
 msgid "Low"
 msgstr "Düşük"
 
-#: website/src/_includes/home.tsx:83
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "Ezan hesaplaması için birçok seçenek"
 
@@ -731,11 +731,11 @@ msgstr "Pil optimizasyon ayarlarını aç"
 msgid "Open Power Manager Settings"
 msgstr "Güç yönetimi ayarlarını aç"
 
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "Açık kaynak deposu"
 
-#: website/src/_includes/home.tsx:70
+#: website/src/_includes/home.tsx:79
 msgid "Open-source"
 msgstr "Açık kaynak"
 
@@ -790,7 +790,7 @@ msgstr "Gizlilik Politikası"
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "Mahremiyete saygılı açık kaynak Ezan (İslami namaz vakitleri) ve kıble uygulaması"
 
-#: website/src/_includes/home.tsx:89
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "Kaza namazı sayacı"
 
@@ -803,7 +803,7 @@ msgstr "Katar"
 msgid "Qibla"
 msgstr "Kıble"
 
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "Kıble bulucu"
 
@@ -879,7 +879,7 @@ msgstr "İkincil takvim"
 msgid "Select as Fajr Adhan"
 msgstr "Fecr ezanı olarak seç"
 
-#: website/src/_includes/home.tsx:77
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Sabah namazı için farklı Ezan sesi seçme"
 
@@ -887,11 +887,11 @@ msgstr "Sabah namazı için farklı Ezan sesi seçme"
 msgid "Selecting a name is required"
 msgstr "Bir isim gerekli"
 
-#: website/src/_includes/home.tsx:76
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "Özel Ezan sesi ayarlama"
 
-#: website/src/_includes/home.tsx:86
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "Dua zamanından önce veya sonra hatırlatıcı ayarlama"
 
@@ -955,7 +955,7 @@ msgstr "Yaklaşan alarm bildirimi gösterilsin mi?"
 msgid "Silent"
 msgstr "Sessiz"
 
-#: website/src/_includes/home.tsx:101
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Herhangi bir izleyici veya çökme analizi kullanmadığımız için, lütfen yaşadığınız herhangi bir sorunu veya önerilerinizi github repomuza bildirin"
 
@@ -1209,7 +1209,7 @@ msgstr "Ana ekranda görünmesini istemediğiniz vakitleri buradan gizleyebilirs
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Widget'ta görünmesini istemediğiniz vakitleri buradan gizleyebilirsiniz:"
 
-#: website/src/_includes/home.tsx:72
+#: website/src/_includes/home.tsx:81
 msgid "You can search for your location online Or use GPS offline"
 msgstr "Konumunuzu çevrimiçi arayabilir veya GPS'i çevrimdışı kullanabilirsiniz"
 

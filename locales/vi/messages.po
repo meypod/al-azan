@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-08 09:24+0330\n"
+"POT-Creation-Date: 2023-04-08 10:11+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr "Abyad"
 msgid "Accuracy"
 msgstr "Độ chính xác"
 
-#: website/src/_includes/home.tsx:68
+#: website/src/_includes/home.tsx:77
 msgid "Ad-Free"
 msgstr "Không quảng cáo"
 
@@ -114,7 +114,7 @@ msgstr "Tất cả dữ liệu được cung cấp cho Azan chỉ được lưu 
 msgid "An error occured while playing the current track"
 msgstr "Đã xảy ra lỗi khi phát bài nhạc hiện tại"
 
-#: website/src/_includes/home.tsx:66
+#: website/src/_includes/home.tsx:75
 msgid "App features"
 msgstr "Tính năng ứng dụng"
 
@@ -310,7 +310,7 @@ msgstr "Bỏ qua"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Thổ Nhĩ Kỳ"
 
-#: website/src/_includes/home.tsx:69
+#: website/src/_includes/home.tsx:78
 msgid "Doesn't use any kind of trackers"
 msgstr "Không sử dụng bất kỳ trình theo dõi nào"
 
@@ -426,7 +426,7 @@ msgstr "Ẩn?"
 msgid "Hide Prayer Times"
 msgstr "Ẩn Lần Cầu nguyện"
 
-#: website/src/_includes/home.tsx:85
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "Ẩn lần bạn không cần"
 
@@ -443,7 +443,7 @@ msgstr "Vĩ độ cao"
 msgid "Home"
 msgstr "Trang chủ"
 
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "Màn hình chính và Tiện Ích thông báo"
 
@@ -487,7 +487,7 @@ msgstr "Nhập dữ liệu ứng dụng"
 msgid "Import successful"
 msgstr "Nhập thành công"
 
-#: website/src/_includes/home.tsx:79
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "Ngoài 5 lần cầu nguyện hàng ngày, nó còn có các cài đặt cho các lần cầu nguyện lúc Bình Minh, Hoàng Hôn, Nửa Đêm và Ban Đêm (Tahajjud)"
 
@@ -503,9 +503,9 @@ msgstr "Kết nối Internet"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Kết nối Internet là cần thiết để bản đồ qibla hoạt động. Vui lòng bật wifi hoặc dữ liệu di động của bạn và thử lại."
 
-#: website/src/_includes/home.tsx:91
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian"
-msgstr "Được bản địa hóa bằng tiếng Anh, tiếng Ba Tư, tiếng Ả Rập, tiếng Thổ Nhĩ Kỳ, tiếng Indonesia, tiếng Pháp, tiếng Urdu, tiếng Hindi, tiếng Đức, tiếng Bosnia"
+#: website/src/_includes/home.tsx:100
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
+msgstr "Được bản địa hóa bằng tiếng Anh, tiếng Ba Tư, tiếng Ả Rập, tiếng Thổ Nhĩ Kỳ, tiếng Indonesia, tiếng Pháp, tiếng Urdu, tiếng Hindi, tiếng Đức, tiếng Bosnia, tiếng Việt"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -569,7 +569,7 @@ msgstr "Giấy phép"
 msgid "Light"
 msgstr "Sáng"
 
-#: website/src/_includes/home.tsx:84
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Chủ đề Sáng/Tối"
 
@@ -596,7 +596,7 @@ msgstr "Kinh độ không hợp lệ"
 msgid "Low"
 msgstr "Thấp"
 
-#: website/src/_includes/home.tsx:83
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "Nhiều tùy chọn để tính toán Azan (اذان)"
 
@@ -731,11 +731,11 @@ msgstr "Mở cài đặt Tối ưu hóa Pin"
 msgid "Open Power Manager Settings"
 msgstr "Mở cài đặt Trình quản lý Pin"
 
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "Kho mã nguồn mở"
 
-#: website/src/_includes/home.tsx:70
+#: website/src/_includes/home.tsx:79
 msgid "Open-source"
 msgstr "Mã nguồn mở"
 
@@ -790,7 +790,7 @@ msgstr "Chính sách bảo mật"
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "Ứng dụng Azan và qibla đạo Hồi mã nguồn mở ưu tiên quyền riêng tư (thời gian cầu nguyện theo đạo Hồi)"
 
-#: website/src/_includes/home.tsx:89
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "Bộ đếm Qada"
 
@@ -803,7 +803,7 @@ msgstr "Ca-ta"
 msgid "Qibla"
 msgstr "Qibla"
 
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "Tìm Qibla"
 
@@ -879,7 +879,7 @@ msgstr "Lịch phụ"
 msgid "Select as Fajr Adhan"
 msgstr "Chọn là Fajr Azan"
 
-#: website/src/_includes/home.tsx:77
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Chọn âm thanh Azan khác nhau cho Fajr namaz"
 
@@ -887,11 +887,11 @@ msgstr "Chọn âm thanh Azan khác nhau cho Fajr namaz"
 msgid "Selecting a name is required"
 msgstr "Chọn tên là bắt buộc"
 
-#: website/src/_includes/home.tsx:76
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "Đặt âm thanh Azan tùy chỉnh"
 
-#: website/src/_includes/home.tsx:86
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "Đặt lời nhắc trước hoặc sau giờ cầu nguyện"
 
@@ -955,7 +955,7 @@ msgstr "Hiện thông báo báo thức sắp tới?"
 msgid "Silent"
 msgstr "Im lặng"
 
-#: website/src/_includes/home.tsx:101
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Vì chúng tôi không sử dụng bất kỳ loại trình theo dõi hoặc phân tích sự cố nào, vui lòng báo cáo bất kỳ sự cố hoặc đề xuất nào bạn có trên repo github của chúng tôi"
 
@@ -1209,7 +1209,7 @@ msgstr "Bạn có thể ẩn lần cầu nguyện không muốn thấy ở màn 
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Bạn có thể ẩn lần cầu nguyện mà bạn không muốn thấy trong tiện ích tại đây:"
 
-#: website/src/_includes/home.tsx:72
+#: website/src/_includes/home.tsx:81
 msgid "You can search for your location online Or use GPS offline"
 msgstr "Bạn có thể tìm kiếm vị trí của mình trực tuyến Hoặc sử dụng GPS ngoại tuyến"
 
