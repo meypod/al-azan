@@ -5,6 +5,9 @@ an open-source Adhan (أذان) - prayer times application built using react-nat
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="80">](https://f-droid.org/packages/com.github.meypod.al_azan/)
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+     alt='Get it on Google Play'
+     height="80">](https://play.google.com/store/apps/details?id=com.github.meypod.al_azan)
 
 or get the APK from [the Releases section](https://github.com/meypod/al-azan/releases/latest).
 
