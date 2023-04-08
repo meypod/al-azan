@@ -1,0 +1,39 @@
+Ứng dụng Azan và qibla đạo Hồi mã nguồn mở ưu tiên quyền riêng tư (thời gian cầu nguyện theo đạo Hồi)
+
+Tính năng ứng dụng:
+
+* Không quảng cáo
+
+* Không sử dụng bất kỳ trình theo dõi nào
+
+* Mã nguồn mở
+
+* Bạn có thể tìm kiếm vị trí của mình trực tuyến Hoặc sử dụng GPS ngoại tuyến
+
+* Đặt âm thanh Azan tùy chỉnh
+
+* Chọn âm thanh Azan khác nhau cho Fajr namaz
+
+* Ngoài 5 lần cầu nguyện hàng ngày, nó còn có các cài đặt cho các lần cầu nguyện lúc Bình Minh, Hoàng Hôn, Nửa Đêm và Ban Đêm (Tahajjud)
+
+* Nhiều tùy chọn để tính toán Azan (اذان)
+
+* Chủ đề Sáng/Tối
+
+* Ẩn lần bạn không cần
+
+* Đặt lời nhắc trước hoặc sau giờ cầu nguyện
+
+* Màn hình chính và Tiện Ích thông báo
+
+* Tìm Qibla
+
+* Bộ đếm Qada
+
+* Được bản địa hóa bằng tiếng Anh, tiếng Ba Tư, tiếng Ả Rập, tiếng Thổ Nhĩ Kỳ, tiếng Indonesia, tiếng Pháp, tiếng Urdu, tiếng Hindi, tiếng Đức, tiếng Bosnia, tiếng Việt
+
+Kho mã nguồn mở:
+https://github.com/meypod/al-azan/
+
+Vì chúng tôi không sử dụng bất kỳ loại trình theo dõi hoặc phân tích sự cố nào, vui lòng báo cáo bất kỳ sự cố hoặc đề xuất nào bạn có trên repo github của chúng tôi:
+https://github.com/meypod/al-azan/issues
