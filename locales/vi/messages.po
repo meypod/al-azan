@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-07 04:39+0330\n"
+"POT-Creation-Date: 2023-04-08 09:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,7 +92,7 @@ msgstr "Azan - Giờ Cầu Nguyện"
 
 #: website/src/_includes/home.tsx:11
 msgid "Al-Azan - Prayer Times"
-msgstr "Azan - Giờ Cầu nguyện Hồi giáo"
+msgstr "Azan - Giờ lễ nguyện Salah Hồi giáo"
 
 #: website/src/_includes/privacy-policy.tsx:52
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
@@ -194,7 +194,7 @@ msgstr "Chọn phương pháp tính toán"
 msgid "Choose High Latitude Setting"
 msgstr "Chọn Cài đặt Vĩ độ Cao"
 
-#: src/screens/settings_display/language_settings.tsx:88
+#: src/screens/settings_display/language_settings.tsx:104
 msgid "Choose Language"
 msgstr "Chọn ngôn ngữ"
 
@@ -544,7 +544,7 @@ msgstr "Cô-oét"
 msgid "Label"
 msgstr "Tên"
 
-#: src/screens/settings_display/language_settings.tsx:85
+#: src/screens/settings_display/language_settings.tsx:101
 msgid "Language"
 msgstr "Ngôn ngữ"
 
@@ -1106,7 +1106,7 @@ msgstr "Không tin cậy"
 msgid "Unresolved (default)"
 msgstr "Chưa giải quyết (mặc định)"
 
-#: src/screens/settings_display/language_settings.tsx:64
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Unsupported"
 msgstr "Không hỗ trợ"
 

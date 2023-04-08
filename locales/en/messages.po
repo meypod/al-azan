@@ -200,7 +200,7 @@ msgstr "Choose Calculation Method"
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
-#: src/screens/settings_display/language_settings.tsx:88
+#: src/screens/settings_display/language_settings.tsx:104
 msgid "Choose Language"
 msgstr "Choose Language"
 
@@ -550,7 +550,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Label"
 
-#: src/screens/settings_display/language_settings.tsx:85
+#: src/screens/settings_display/language_settings.tsx:101
 msgid "Language"
 msgstr "Language"
 
@@ -1124,7 +1124,7 @@ msgstr "Unreliable"
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
-#: src/screens/settings_display/language_settings.tsx:64
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Unsupported"
 msgstr "Unsupported"
 

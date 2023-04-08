@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-07 04:39+0330\n"
+"POT-Creation-Date: 2023-04-08 09:24+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -194,7 +194,7 @@ msgstr "Choisir la méthode de calcul"
 msgid "Choose High Latitude Setting"
 msgstr "Choisir le réglage de la latitude élevée"
 
-#: src/screens/settings_display/language_settings.tsx:88
+#: src/screens/settings_display/language_settings.tsx:104
 msgid "Choose Language"
 msgstr "Choisir la langue"
 
@@ -544,7 +544,7 @@ msgstr "Koweït"
 msgid "Label"
 msgstr "Intitulé"
 
-#: src/screens/settings_display/language_settings.tsx:85
+#: src/screens/settings_display/language_settings.tsx:101
 msgid "Language"
 msgstr "Langue"
 
@@ -1118,7 +1118,7 @@ msgstr "Précision peu fiable"
 msgid "Unresolved (default)"
 msgstr "Non résolu (par défaut)"
 
-#: src/screens/settings_display/language_settings.tsx:64
+#: src/screens/settings_display/language_settings.tsx:80
 msgid "Unsupported"
 msgstr "Non pris en charge"
 
