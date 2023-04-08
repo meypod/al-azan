@@ -32,4 +32,7 @@ module.exports = {
     availableText: 'یہ صفحہ اس میں بھی دستیاب ہے:',
     dir: 'rtl',
   },
+  vi: {
+    availableText: 'Trang này cũng có sẵn trong:',
+  },
 };

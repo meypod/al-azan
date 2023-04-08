@@ -118,6 +118,7 @@
 .badge-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 0px 10px;
 }
 
 .badge-btn {

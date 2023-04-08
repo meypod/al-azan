@@ -45,6 +45,15 @@ export async function render({page}: ReturnType<typeof data> & {page: Page}) {
                       height="250"
                     />
                   </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.github.meypod.al_azan">
+                    <img
+                      className="badge-btn"
+                      src={`/images/gplay/get-it-on-${page.lang}.png`}
+                      alt="download"
+                      width="646"
+                      height="250"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

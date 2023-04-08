@@ -30,7 +30,8 @@ module.exports = function (eleventyConfig: EleventyConfig): typeof EleventyDefau
   eleventyConfig.addPassthroughCopy({
     'src/assets/favicon/*': '/',
     'src/assets/images/*.png': '/images/',
-    'src/assets/images/f-droid/*.png': '/images/f-droid/'
+    'src/assets/images/f-droid/*.png': '/images/f-droid/',
+    'src/assets/images/gplay/*.png': '/images/gplay/'
   });
   
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -47,7 +48,7 @@ module.exports = function (eleventyConfig: EleventyConfig): typeof EleventyDefau
   // for minification: 
   eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
   // for fonts
-  eleventyConfig.addPlugin(eleventyGoogleFonts);
+  // eleventyConfig.addPlugin(eleventyGoogleFonts);
 
   async function processCSS(content, inputPath) {
     let output = await postcss([
