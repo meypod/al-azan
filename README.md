@@ -31,7 +31,7 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Many options for Adhan (اذان) calculation
 
-* Light/Dark theme
+* Light and Dark theme
 
 * Hide times you don't need
 
@@ -43,7 +43,7 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Qada counter
 
-* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German
+* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese
 
 ## Screenshots
 
