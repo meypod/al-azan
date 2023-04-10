@@ -146,3 +146,25 @@ React-native community members.
 [Google Material Icons](https://fonts.google.com/icons) for the icons.
 
 and many other library maintainers that I can't list them all.
+
+## Donation
+
+Donations are appreciated. But I can only accept in crypto, here are my wallet addresses:
+
+Bitcoin:
+bc1q2y6fng33tzhc8qefsy2pht057q2rmfx09qyx6v
+
+Ethereum:
+0x1a1407f549cb52658a3ed6Eac9C5e850dED4DB2b
+
+Solana:
+CBK8ySxbVWrCkb1CQYoR1jYa4hEiMgpnVfJjGLCfBSJ1
+
+Litecoin:
+Lbgz2X6TG9ANLGamNpdmhyoMc4q4wBHaVQ
+
+Tron:
+THjtLAdihH57mbeaVmBfx3wAAXkpxAnqmJ
+
+Bitcoin cash:
+qqgjknfejs4zf4udsalsej2qkwt5es5ym5fwusgvx3
