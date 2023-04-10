@@ -147,7 +147,7 @@ React-native community members.
 
 and many other library maintainers that I can't list them all.
 
-## Donation
+## Donate
 
 Donations are appreciated. But I can only accept in crypto, here are my wallet addresses:
 
