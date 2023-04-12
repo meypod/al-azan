@@ -8,7 +8,14 @@ export function data() {
     eleventyComputed: {
       title: ({page}: {page: Page}) => {
         loadLocale(page.lang);
-        return i18n._('Al-Azan') + ' | ' + i18n._('Privacy Policy');
+        return (
+          i18n._({
+            id: 'Al-Azan',
+            comment: "Don't translate Al-Azan name",
+          }) +
+          ' | ' +
+          i18n._('Privacy Policy')
+        );
       },
       description: ({page}: {page: Page}) => {
         loadLocale(page.lang);
