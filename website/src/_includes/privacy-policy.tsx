@@ -9,10 +9,12 @@ export function data() {
       title: ({page}: {page: Page}) => {
         loadLocale(page.lang);
         return (
-          i18n._({
-            id: 'Al-Azan',
-            comment: "Don't translate Al-Azan name",
-          }) +
+          i18n._(
+            /*i18n*/ {
+              id: 'Al-Azan',
+              comment: "Don't translate Al-Azan name",
+            },
+          ) +
           ' | ' +
           i18n._('Privacy Policy')
         );

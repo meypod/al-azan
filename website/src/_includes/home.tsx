@@ -8,17 +8,21 @@ export function data() {
     eleventyComputed: {
       title: ({page}: {page: Page}) => {
         loadLocale(page.lang);
-        return i18n._({
-          id: 'Al-Azan - Prayer Times',
-          comment: 'Max. 30 characters',
-        });
+        return i18n._(
+          /*i18n*/ {
+            id: 'Al-Azan - Prayer Times',
+            comment: 'Max. 30 characters',
+          },
+        );
       },
       description: ({page}: {page: Page}) => {
         loadLocale(page.lang);
-        return i18n._({
-          id: 'Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app',
-          comment: 'Max. 80 characters',
-        });
+        return i18n._(
+          /*i18n*/ {
+            id: 'Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app',
+            comment: 'Max. 80 characters',
+          },
+        );
       },
     },
   };
