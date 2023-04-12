@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-12 14:17+0330\n"
+"POT-Creation-Date: 2023-04-12 14:46+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr "Abyad"
 msgid "Accuracy"
 msgstr "Genauigkeit"
 
-#: website/src/_includes/home.tsx:77
+#: website/src/_includes/home.tsx:85
 msgid "Ad-Free"
 msgstr "Frei von Werbung"
 
@@ -85,20 +85,22 @@ msgstr "Erweiterte Berechnungseinstellungen"
 msgid "Ahmer"
 msgstr "Ahmer"
 
-#: website/src/_includes/home.tsx:34
-#: website/src/_includes/privacy-policy.tsx:11
+#. Don't translate Al-Azan name
+#: website/src/_includes/home.tsx:42
+#: website/src/_includes/privacy-policy.tsx:13
 msgid "Al-Azan"
 msgstr "Al-Azan"
 
-#: website/src/_includes/home.tsx:11
+#. Max. 30 characters
+#: website/src/_includes/home.tsx:12
 msgid "Al-Azan - Prayer Times"
 msgstr "Al-Azan - Gebetszeiten"
 
-#: website/src/_includes/privacy-policy.tsx:52
+#: website/src/_includes/privacy-policy.tsx:61
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
 msgstr "Al-Azan wird in der Hoffnung verteilt, dass es nützlich ist, aber OHNE JEGLICHE GARANTIE; sogar ohne die implizite Garantie der MARKTREIFE oder der EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Siehe die GNU Affero General Public License für weitere Einzelheiten."
 
-#: website/src/_includes/privacy-policy.tsx:47
+#: website/src/_includes/privacy-policy.tsx:56
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "Al-Azan ist freie Software: Sie können sie unter den Bedingungen der GNU Affero General Public License (v3.0), wie von der Free Software Foundation veröffentlicht, weitergeben und/oder verändern."
 
@@ -106,7 +108,7 @@ msgstr "Al-Azan ist freie Software: Sie können sie unter den Bedingungen der GN
 msgid "Alarms Permission"
 msgstr "Erlaubnis für Alarme"
 
-#: website/src/_includes/privacy-policy.tsx:30
+#: website/src/_includes/privacy-policy.tsx:39
 msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
 msgstr "Alle an Al-Azan übermittelten Daten werden nur lokal auf Ihrem Gerät gespeichert. Ihre Daten werden nirgendwo hochgeladen. Die Entwickler von Al-Azan haben keinen Zugang zu ihnen. Ihre Daten werden nicht an Dritte weitergegeben. Al-Azan enthält keine Werbebibliotheken oder Tracking- (Analyse-) Codes von Drittanbietern, wie z. B. Google Analytics oder Facebook SDK."
 
@@ -114,7 +116,7 @@ msgstr "Alle an Al-Azan übermittelten Daten werden nur lokal auf Ihrem Gerät g
 msgid "An error occured while playing the current track"
 msgstr "Bei der Wiedergabe des aktuellen Titels ist ein Fehler aufgetreten"
 
-#: website/src/_includes/home.tsx:75
+#: website/src/_includes/home.tsx:83
 msgid "App features"
 msgstr "Features der App"
 
@@ -150,7 +152,7 @@ msgstr "Mindestens eine Gebetszeit muss angezeigt werden"
 #: src/screens/settings_calculation/calendar_settings.tsx:44
 #: src/utils/ramadan.ts:74
 #: src/utils/ramadan.ts:95
-#: website/src/_includes/privacy-policy.tsx:39
+#: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "Achtung"
 
@@ -310,7 +312,7 @@ msgstr "Ablehnen"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkei"
 
-#: website/src/_includes/home.tsx:78
+#: website/src/_includes/home.tsx:86
 msgid "Doesn't use any kind of trackers"
 msgstr "Verwendet keine Tracking-Methoden"
 
@@ -426,7 +428,7 @@ msgstr "Versteckt?"
 msgid "Hide Prayer Times"
 msgstr "Gebetszeiten ausblenden"
 
-#: website/src/_includes/home.tsx:94
+#: website/src/_includes/home.tsx:102
 msgid "Hide times you don't need"
 msgstr "Ausblenden nicht benötigter Gebetszeiten möglich"
 
@@ -443,11 +445,11 @@ msgstr "Hoher Breitengrad"
 msgid "Home"
 msgstr "Startseite"
 
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:104
 msgid "Homescreen and notification Widgets"
 msgstr "Startbildschirm- und Benachrichtigungs-Widgets"
 
-#: website/src/_includes/privacy-policy.tsx:34
+#: website/src/_includes/privacy-policy.tsx:43
 msgid "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 msgstr "Bei der Nutzung von Online-Diensten, wie z. B. der Suche nach Ortskoordinaten nach Namen oder der Qibla-Karte, kann die App jedoch ein Minimum an notwendigen Daten übertragen, die Sie möglicherweise nicht eindeutig identifizieren. Bitte bedenken Sie dies bei der Nutzung der App."
 
@@ -463,7 +465,7 @@ msgstr "Wichtig"
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Wenn diese Option aktiviert ist, enthält die Benachrichtigung Informationen über die nächste Gebetszeit"
 
-#: website/src/_includes/privacy-policy.tsx:40
+#: website/src/_includes/privacy-policy.tsx:49
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Wenn Sie in den Einstellungen Ihres Telefons \"Sichern & Zurücksetzen\" aktiviert haben (Einstellungen / Sichern & Zurücksetzen / Meine Daten sichern), sollten Sie wissen, dass Android selbst (nicht Al-Azan) regelmäßig eine Kopie der Daten Ihres Telefons auf den Servern von Google speichert. So kann Android Ihre Daten wiederherstellen, falls Ihr Gerät beschädigt wird oder Sie ein neues Gerät kaufen. Die Entwickler von Al-Azan haben keinen Zugriff auf diese Daten."
 
@@ -487,7 +489,7 @@ msgstr "App-Daten importieren"
 msgid "Import successful"
 msgstr "Import erfolgreich"
 
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:96
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "Neben den fünf Gebeten gibt es Einstellungen für den Sonnenaufgang und -untergang, für die Mitternacht und das Abendgebet (Tahajjud)"
 
@@ -503,7 +505,7 @@ msgstr "Internetverbindung"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Damit die Qibla-Karte funktioniert, ist eine Internetverbindung erforderlich. Bitte aktivieren Sie Ihr WLAN oder Ihre mobilen Daten und versuchen Sie es erneut."
 
-#: website/src/_includes/home.tsx:100
+#: website/src/_includes/home.tsx:108
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
 msgstr "Lokalisierung in Englisch, Persisch, Arabisch, Türkisch, Indonesisch, Französisch, Urdu, Hindi, Deutsch, Bosnisch und Vietnamesisch"
 
@@ -569,7 +571,7 @@ msgstr "Lizenz"
 msgid "Light"
 msgstr "Hell"
 
-#: website/src/_includes/home.tsx:93
+#: website/src/_includes/home.tsx:101
 msgid "Light/Dark theme"
 msgstr "Heller und dunkler Farbmodus"
 
@@ -596,7 +598,7 @@ msgstr "Der Längengrad ist ungültig"
 msgid "Low"
 msgstr "Niedrig"
 
-#: website/src/_includes/home.tsx:92
+#: website/src/_includes/home.tsx:100
 msgid "Many options for Adhan (اذان) calculation"
 msgstr ""
 "Mehrere Methoden für die Berechnung des Adhan (اذان)\n"
@@ -733,11 +735,11 @@ msgstr "Einstellungen für die Akku-Optimierung öffnen"
 msgid "Open Power Manager Settings"
 msgstr "Einstellungen für die Energieverwaltung öffnen"
 
-#: website/src/_includes/home.tsx:105
+#: website/src/_includes/home.tsx:113
 msgid "Open source repository"
 msgstr "Open-Source Repository"
 
-#: website/src/_includes/home.tsx:79
+#: website/src/_includes/home.tsx:87
 msgid "Open-source"
 msgstr "Open-Source"
 
@@ -773,7 +775,7 @@ msgstr "Polarauflösung"
 msgid "Power Manager"
 msgstr "Energieverwaltung"
 
-#: website/src/_includes/home.tsx:36
+#: website/src/_includes/home.tsx:44
 msgid "Prayer Times"
 msgstr "Gebetszeiten"
 
@@ -782,17 +784,18 @@ msgid "Prev Day"
 msgstr "Voriger Tag"
 
 #: website/src/_data/navigation.ts:5
-#: website/src/_includes/privacy-policy.tsx:11
-#: website/src/_includes/privacy-policy.tsx:28
+#: website/src/_includes/privacy-policy.tsx:19
+#: website/src/_includes/privacy-policy.tsx:37
 msgid "Privacy Policy"
 msgstr "Datenschutzbestimmungen"
 
-#: website/src/_includes/home.tsx:15
-#: website/src/_includes/privacy-policy.tsx:15
+#. Max. 80 characters
+#: website/src/_includes/home.tsx:21
+#: website/src/_includes/privacy-policy.tsx:24
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "Datenschutzfreundliche Open-Source App für den Adhan (Gebetszeit) und die Qibla"
 
-#: website/src/_includes/home.tsx:98
+#: website/src/_includes/home.tsx:106
 msgid "Qada counter"
 msgstr "Qada-Zähler"
 
@@ -801,11 +804,11 @@ msgid "Qatar"
 msgstr "Katar"
 
 #: src/screens/qibla_finder_compass/index.tsx:139
-#: website/src/_includes/home.tsx:36
+#: website/src/_includes/home.tsx:44
 msgid "Qibla"
 msgstr "Qibla"
 
-#: website/src/_includes/home.tsx:97
+#: website/src/_includes/home.tsx:105
 msgid "Qibla finder"
 msgstr "Ermittlung der Qibla"
 
@@ -883,7 +886,7 @@ msgstr "Sekundärer Kalender"
 msgid "Select as Fajr Adhan"
 msgstr "Als Fajr-Adhan auswählen"
 
-#: website/src/_includes/home.tsx:86
+#: website/src/_includes/home.tsx:94
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Unterstützt unterschiedliche Adhan-Stimmen für das Fajr-Gebet"
 
@@ -891,11 +894,11 @@ msgstr "Unterstützt unterschiedliche Adhan-Stimmen für das Fajr-Gebet"
 msgid "Selecting a name is required"
 msgstr "Die Auswahl eines Namens ist erforderlich"
 
-#: website/src/_includes/home.tsx:85
+#: website/src/_includes/home.tsx:93
 msgid "Set custom Adhan audio"
 msgstr "Benutzerdefinierte Adhan-Stimmen auswählbar"
 
-#: website/src/_includes/home.tsx:95
+#: website/src/_includes/home.tsx:103
 msgid "Set reminders before or after a prayer time"
 msgstr "Erstellung von Erinnerungen vor und nach den Gebetszeiten"
 
@@ -962,7 +965,7 @@ msgstr "Benachrichtigung über den bevorstehenden Alarm anzeigen?"
 msgid "Silent"
 msgstr "Stumm"
 
-#: website/src/_includes/home.tsx:110
+#: website/src/_includes/home.tsx:118
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Da in der App keine Tracker und Analysewerkzeuge eingebaut sind, melden Sie Fehler oder Vorschläge bitte an das folgende GitHub-Repository"
 
@@ -974,7 +977,7 @@ msgstr "Singapur"
 msgid "Skip"
 msgstr "Überspringen"
 
-#: website/src/_includes/privacy-policy.tsx:45
+#: website/src/_includes/privacy-policy.tsx:54
 msgid "Software License"
 msgstr "Software-Lizenz"
 
@@ -1034,7 +1037,7 @@ msgstr "Die Golfregion (Dubai)"
 msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
 msgstr "Der Mondkalender der App ist vorberechnet und möglicherweise nicht genau, da er nicht auf Mondsichtungen basiert. Dies ist vor allem für den Beginn und das Ende des Ramadan wichtig zu beachten."
 
-#: website/src/_includes/privacy-policy.tsx:62
+#: website/src/_includes/privacy-policy.tsx:71
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 msgstr "Der Text auf dieser Website und in der App ist in anderen Sprachen möglicherweise nicht korrekt, daher sollte in jedem Fall nur die englische Version betrachtet werden."
 
@@ -1216,11 +1219,11 @@ msgstr "Hier können Sie die Gebetszeiten ausblenden, die Sie nicht auf dem Haup
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "Sie können die Gebetszeiten, die Sie nicht sehen möchten, hier ausblenden:"
 
-#: website/src/_includes/home.tsx:81
+#: website/src/_includes/home.tsx:89
 msgid "You can search for your location online Or use GPS offline"
 msgstr "Online-Standortsuche und Suche über GPS möglich"
 
-#: website/src/_includes/privacy-policy.tsx:57
+#: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "Sie sollten zusammen mit diesem Programm eine Kopie der GNU Affero General Public License erhalten haben. Falls nicht, siehe https://www.gnu.org/licenses/."
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-12 14:17+0330\n"
+"POT-Creation-Date: 2023-04-12 14:46+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr "अब्यद"
 msgid "Accuracy"
 msgstr "शुद्धता"
 
-#: website/src/_includes/home.tsx:77
+#: website/src/_includes/home.tsx:85
 msgid "Ad-Free"
 msgstr "विज्ञापन मुक्त"
 
@@ -85,20 +85,22 @@ msgstr "उन्नत गणना सेटिंग्स"
 msgid "Ahmer"
 msgstr "अहमर "
 
-#: website/src/_includes/home.tsx:34
-#: website/src/_includes/privacy-policy.tsx:11
+#. Don't translate Al-Azan name
+#: website/src/_includes/home.tsx:42
+#: website/src/_includes/privacy-policy.tsx:13
 msgid "Al-Azan"
 msgstr "अल-अज़ान"
 
-#: website/src/_includes/home.tsx:11
+#. Max. 30 characters
+#: website/src/_includes/home.tsx:12
 msgid "Al-Azan - Prayer Times"
 msgstr "अल-अज़ान - प्रार्थना का समय"
 
-#: website/src/_includes/privacy-policy.tsx:52
+#: website/src/_includes/privacy-policy.tsx:61
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
 msgstr "अल-अज़ान इस उम्मीद में वितरित की जाती है कि यह उपयोगी होगा, लेकिन बिना किसी वारंटी के; व्यापारिकता या किसी विशेष उद्देश्य के लिए उपयुक्तता की निहित वारंटी के बिना भी। अधिक विवरण के लिए जीएनयू एफेरो जनरल पब्लिक लाइसेंस देखें।"
 
-#: website/src/_includes/privacy-policy.tsx:47
+#: website/src/_includes/privacy-policy.tsx:56
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "अल-अज़ान मुफ़्त सॉफ़्टवेयर है: आप इसे फ़्री सॉफ़्टवेयर फ़ाउंडेशन द्वारा प्रकाशित जीएनयू एफ़ेरो जनरल पब्लिक लाइसेंस (v3.0) की शर्तों के तहत पुनर्वितरित और/या संशोधित कर सकते हैं।"
 
@@ -106,7 +108,7 @@ msgstr "अल-अज़ान मुफ़्त सॉफ़्टवेयर
 msgid "Alarms Permission"
 msgstr "अलार्म अनुमति"
 
-#: website/src/_includes/privacy-policy.tsx:30
+#: website/src/_includes/privacy-policy.tsx:39
 msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
 msgstr "अल-अज़ान को प्रदान किया गया सभी डेटा केवल आपके डिवाइस में स्थानीय रूप से संग्रहीत होता है। आपका डेटा कहीं अपलोड नहीं किया गया है। अल-अज़ान के डेवलपर्स के पास इसकी पहुंच नहीं है। आपका डेटा किसी तीसरे पक्ष के साथ साझा नहीं किया जाता है। अल-अज़ान में कोई विज्ञापन लाइब्रेरी या कोई तृतीय पक्ष ट्रैकिंग (एनालिटिक्स) कोड शामिल नहीं है, जैसे कि Google Analytics या Facebook SDK।"
 
@@ -114,7 +116,7 @@ msgstr "अल-अज़ान को प्रदान किया गया 
 msgid "An error occured while playing the current track"
 msgstr "वर्तमान ट्रैक चलाते समय एक गलती हुई"
 
-#: website/src/_includes/home.tsx:75
+#: website/src/_includes/home.tsx:83
 msgid "App features"
 msgstr "ऐप सुविधाएँ"
 
@@ -150,7 +152,7 @@ msgstr "कम से कम एक नमाज़ का समय दिख�
 #: src/screens/settings_calculation/calendar_settings.tsx:44
 #: src/utils/ramadan.ts:74
 #: src/utils/ramadan.ts:95
-#: website/src/_includes/privacy-policy.tsx:39
+#: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "ध्यान"
 
@@ -310,7 +312,7 @@ msgstr "हटा दीजिए"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "दियानेट्ज़ इसलेरी बशकांगलू, तुर्की"
 
-#: website/src/_includes/home.tsx:78
+#: website/src/_includes/home.tsx:86
 msgid "Doesn't use any kind of trackers"
 msgstr "किसी भी प्रकार के ट्रैकर्स का उपयोग नहीं करता है"
 
@@ -426,7 +428,7 @@ msgstr "छुपे हुए?"
 msgid "Hide Prayer Times"
 msgstr "नमाज़ के समय छुपाएं"
 
-#: website/src/_includes/home.tsx:94
+#: website/src/_includes/home.tsx:102
 msgid "Hide times you don't need"
 msgstr "ऐसे समय छुपाएं जिनकी आपको आवश्यकता नहीं है"
 
@@ -443,11 +445,11 @@ msgstr "उच्च अक्षांश"
 msgid "Home"
 msgstr "घर"
 
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:104
 msgid "Homescreen and notification Widgets"
 msgstr "होमस्क्रीन और अधिसूचना विजेट"
 
-#: website/src/_includes/privacy-policy.tsx:34
+#: website/src/_includes/privacy-policy.tsx:43
 msgid "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 msgstr "हालाँकि, ऑनलाइन सेवाओं का उपयोग करते समय, जैसे कि नाम या क़िबला मानचित्र द्वारा स्थान निर्देशांक खोजना, ऐप न्यूनतम आवश्यक डेटा संचारित कर सकता है जो आपकी विशिष्ट पहचान कर सकता है या नहीं। कृपया ऐप का उपयोग करते समय इसे ध्यान में रखें।"
 
@@ -463,7 +465,7 @@ msgstr "महत्वपूर्ण"
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "यदि सक्षम है, जब एक सूचना दिखाई जाती है, तो इसमें अगली प्रार्थना के समय की जानकारी होगी"
 
-#: website/src/_includes/privacy-policy.tsx:40
+#: website/src/_includes/privacy-policy.tsx:49
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "यदि आपने अपनी फ़ोन सेटिंग (सेटिंग / बैकअप और रीसेट / बैकअप मेरे डेटा) में \"बैकअप और रीसेट\" सक्रिय किया है, तो आपको पता होना चाहिए कि Android स्वयं (अल-अज़ान नहीं) समय-समय पर आपके फ़ोन के डेटा की एक प्रति Google में सहेजेगा सर्वर। यदि आपका डिवाइस क्षतिग्रस्त हो जाता है, या आप एक नया डिवाइस खरीदते हैं, तो यह Android को आपके डेटा को पुनर्प्राप्त करने की अनुमति देता है। अल-अज़ान के डेवलपर्स के पास इस डेटा तक पहुंच नहीं है।"
 
@@ -487,7 +489,7 @@ msgstr "ऐप डेटा आयात करें"
 msgid "Import successful"
 msgstr "आयात सफल रहा"
 
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:96
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "पांच दैनिक प्रार्थनाओं के अलावा, इसमें सूर्योदय, सूर्यास्त, मध्यरात्रि और रात की प्रार्थना (तहज्जुद) के लिए सेटिंग्स हैं।"
 
@@ -503,7 +505,7 @@ msgstr "इंटरनेट कनेक्शन"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "किबला मैप के काम करने के लिए इंटरनेट कनेक्शन आवश्यक है। कृपया अपना वाईफाई या मोबाइल डेटा सक्षम करें और पुनः प्रयास करें।"
 
-#: website/src/_includes/home.tsx:100
+#: website/src/_includes/home.tsx:108
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
 msgstr "अंग्रेजी, फारसी, अरबी, तुर्की, इंडोनेशियाई, फ्रेंच, उर्दू, हिंदी, जर्मन, बोस्नियाई, वियतनामी में स्थानीयकृत है"
 
@@ -569,7 +571,7 @@ msgstr "लाइसेंस"
 msgid "Light"
 msgstr "रोशनी"
 
-#: website/src/_includes/home.tsx:93
+#: website/src/_includes/home.tsx:101
 msgid "Light/Dark theme"
 msgstr "लाइट / डार्क थीम"
 
@@ -596,7 +598,7 @@ msgstr "देशांतर अमान्य है"
 msgid "Low"
 msgstr "कम"
 
-#: website/src/_includes/home.tsx:92
+#: website/src/_includes/home.tsx:100
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "अदन (اذان) गणना के लिए कई विकल्प"
 
@@ -731,11 +733,11 @@ msgstr "बैटरी अनुकूलन सेटिंग्स खोल
 msgid "Open Power Manager Settings"
 msgstr "पावर मैनेजर सेटिंग्स खोलें"
 
-#: website/src/_includes/home.tsx:105
+#: website/src/_includes/home.tsx:113
 msgid "Open source repository"
 msgstr "ओपन सोर्स रिपॉजिटरी"
 
-#: website/src/_includes/home.tsx:79
+#: website/src/_includes/home.tsx:87
 msgid "Open-source"
 msgstr "खुला स्त्रोत"
 
@@ -771,7 +773,7 @@ msgstr "ध्रुवीय रेज़ोल्यूशन "
 msgid "Power Manager"
 msgstr "पावर मैनेजर"
 
-#: website/src/_includes/home.tsx:36
+#: website/src/_includes/home.tsx:44
 msgid "Prayer Times"
 msgstr "प्रार्थना का समय"
 
@@ -780,17 +782,18 @@ msgid "Prev Day"
 msgstr "पिछला दिन"
 
 #: website/src/_data/navigation.ts:5
-#: website/src/_includes/privacy-policy.tsx:11
-#: website/src/_includes/privacy-policy.tsx:28
+#: website/src/_includes/privacy-policy.tsx:19
+#: website/src/_includes/privacy-policy.tsx:37
 msgid "Privacy Policy"
 msgstr "गोपनीयता नीति"
 
-#: website/src/_includes/home.tsx:15
-#: website/src/_includes/privacy-policy.tsx:15
+#. Max. 80 characters
+#: website/src/_includes/home.tsx:21
+#: website/src/_includes/privacy-policy.tsx:24
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "गोपनीयता-प्रथम ओपन-सोर्स मुस्लिम अदन (इस्लामिक प्रार्थना समय) और क़िबला ऐप"
 
-#: website/src/_includes/home.tsx:98
+#: website/src/_includes/home.tsx:106
 msgid "Qada counter"
 msgstr "कड़ा काउंटर"
 
@@ -799,11 +802,11 @@ msgid "Qatar"
 msgstr "कतर"
 
 #: src/screens/qibla_finder_compass/index.tsx:139
-#: website/src/_includes/home.tsx:36
+#: website/src/_includes/home.tsx:44
 msgid "Qibla"
 msgstr "किबला"
 
-#: website/src/_includes/home.tsx:97
+#: website/src/_includes/home.tsx:105
 msgid "Qibla finder"
 msgstr "किबला खोजक"
 
@@ -879,7 +882,7 @@ msgstr "माध्यमिक कैलेंडर"
 msgid "Select as Fajr Adhan"
 msgstr "फज्र अज़ान के लिए चुनें"
 
-#: website/src/_includes/home.tsx:86
+#: website/src/_includes/home.tsx:94
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "फज्र नमाज के लिए अलग अदन ऑडियो का चयन करें"
 
@@ -887,11 +890,11 @@ msgstr "फज्र नमाज के लिए अलग अदन ऑडि
 msgid "Selecting a name is required"
 msgstr "नाम चुनना आवश्यक है"
 
-#: website/src/_includes/home.tsx:85
+#: website/src/_includes/home.tsx:93
 msgid "Set custom Adhan audio"
 msgstr "कस्टम अदन ऑडियो सेट करें"
 
-#: website/src/_includes/home.tsx:95
+#: website/src/_includes/home.tsx:103
 msgid "Set reminders before or after a prayer time"
 msgstr "प्रार्थना के समय से पहले या बाद में रिमाइंडर सेट करें"
 
@@ -955,7 +958,7 @@ msgstr "आगामी अलार्म सूचना दिखाएं?"
 msgid "Silent"
 msgstr "चुपचाप"
 
-#: website/src/_includes/home.tsx:110
+#: website/src/_includes/home.tsx:118
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "चूँकि हम किसी भी प्रकार के ट्रैकर या क्रैश एनालिटिक्स का उपयोग नहीं करते हैं, कृपया हमारे जीथब रेपो पर किसी भी समस्या या सुझाव की रिपोर्ट करें"
 
@@ -967,7 +970,7 @@ msgstr "सिंगापुर"
 msgid "Skip"
 msgstr "छोड़ें"
 
-#: website/src/_includes/privacy-policy.tsx:45
+#: website/src/_includes/privacy-policy.tsx:54
 msgid "Software License"
 msgstr "सॉफ़्टवेयर लाइसेंस"
 
@@ -1027,7 +1030,7 @@ msgstr "खाड़ी क्षेत्र (दुबई)"
 msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
 msgstr "ऐप का चंद्र कैलेंडर पूर्व-गणना है और सटीक नहीं हो सकता है क्योंकि यह चंद्रमा के देखे जाने पर आधारित नहीं है। रमजान की शुरुआत और अंत के लिए यह विशेष रूप से महत्वपूर्ण है।"
 
-#: website/src/_includes/privacy-policy.tsx:62
+#: website/src/_includes/privacy-policy.tsx:71
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 msgstr "इस वेबसाइट और ऐप में पाया जाने वाला पाठ अन्य भाषाओं में सटीक नहीं हो सकता है, इसलिए किसी भी स्थिति में केवल अंग्रेजी संस्करण पर विचार किया जाना चाहिए।"
 
@@ -1209,11 +1212,11 @@ msgstr " में जिन नमाज़ के समयों आप म�
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "जिन नमाज़ों के वक्त को आप विजेट में नही देखना चाहते हैं, उन्हें आप यहां छिपा सकते हैं:"
 
-#: website/src/_includes/home.tsx:81
+#: website/src/_includes/home.tsx:89
 msgid "You can search for your location online Or use GPS offline"
 msgstr "आप अपने स्थान को ऑनलाइन खोज सकते हैं या जीपीएस ऑफ़लाइन का उपयोग कर सकते हैं"
 
-#: website/src/_includes/privacy-policy.tsx:57
+#: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "आपको इस कार्यक्रम के साथ जीएनयू एफ़ेरो जनरल पब्लिक लाइसेंस की एक प्रति प्राप्त होनी चाहिए। यदि नहीं, तो https://www.gnu.org/licenses/ देखें।"
 
