@@ -159,7 +159,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
   };
 
   return (
-    <Box flex={1} safeArea py="4" {...props}>
+    <Box flex={1} safeArea pt="4" {...props}>
       <FlatList
         flex={1}
         data={savedAdhanEntries}
