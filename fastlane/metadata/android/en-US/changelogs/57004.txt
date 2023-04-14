@@ -1,1 +1,2 @@
 - Add Vietnamese language
+- You can now set custom muezzin for each prayer time
