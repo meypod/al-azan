@@ -59,7 +59,9 @@ function useData() {
           }),
       ) as AudioEntry[],
       defaultAdhan: produce(s.SELECTED_ADHAN_ENTRIES['default'], e => {
-        e.label = i18n._(adhanEntryTranslations[e.id]);
+        if (e.internal) {
+          e.label = i18n._(adhanEntryTranslations[e.id]);
+        }
       }),
     }),
     shallow,
