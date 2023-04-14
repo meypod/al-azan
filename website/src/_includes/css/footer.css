@@ -15,8 +15,13 @@ nav.footer > span {
   margin-top: 8px;
 }
 
-nav.footer > a:not(:last-child) {
-  margin: 8px 12px 0px 0px;
+nav.footer > a {
+  margin-top: 8px;
+  margin-right: 12px;
+}
+
+nav.footer > a:last-child {
+  margin-right: 0px;
 }
 
 nav.footer > a {
