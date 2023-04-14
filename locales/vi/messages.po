@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-12 14:46+0330\n"
+"POT-Creation-Date: 2023-04-14 18:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,15 +51,20 @@ msgstr "Độ chính xác"
 msgid "Ad-Free"
 msgstr "Không quảng cáo"
 
-#: src/components/audio_picker.tsx:376
-#: src/screens/settings_adhan/index.tsx:198
+#: src/components/audio_picker.tsx:396
+#: src/components/new_audio_dialog.tsx:60
+#: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
 msgstr "Thêm"
 
-#: src/screens/settings_adhan/index.tsx:171
-#: src/screens/settings_adhan/index.tsx:176
+#: src/screens/settings_adhan/index.tsx:208
+#: src/screens/settings_adhan/index.tsx:213
 msgid "Add Custom Adhan"
 msgstr "Thêm Azan tùy chỉnh"
+
+#: src/components/new_audio_dialog.tsx:40
+msgid "Add Custom Audio"
+msgstr "Thêm âm thanh tùy chỉnh"
 
 #: src/screens/settings_reminders/index.tsx:66
 msgid "Add Reminder"
@@ -69,13 +74,17 @@ msgstr "Thêm Lời nhắc"
 msgid "Adhan"
 msgstr "Azan"
 
-#: src/screens/settings_adhan/index.tsx:100
+#: src/screens/settings_adhan/index.tsx:137
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Tệp âm báo Azan chưa được tải xuống"
 
 #: src/screens/settings_calculation/index.tsx:93
 msgid "Adjustments"
 msgstr "Điều chỉnh"
+
+#: src/components/advanced_custom_adhan_toggle.tsx:31
+msgid "Advanced"
+msgstr "Trình độ cao"
 
 #: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
@@ -94,7 +103,7 @@ msgstr "Al-Azan"
 #. Max. 30 characters
 #: website/src/_includes/home.tsx:12
 msgid "Al-Azan - Prayer Times"
-msgstr "Al-Azan - Giờ Cầu Nguyện Salah Hồi giáo"
+msgstr "Al-Azan - Giờ Cầu Nguyện Salah"
 
 #: website/src/_includes/privacy-policy.tsx:61
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
@@ -110,9 +119,9 @@ msgstr "Quyền Báo Thức"
 
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
-msgstr "Tất cả dữ liệu được cung cấp cho Azan chỉ được lưu trữ cục bộ trong thiết bị của bạn. Dữ liệu này không bị đăng lên bất cứ đâu. Các nhà phát triển của Al-Azan không có quyền truy cập vào nó. Dữ liệu của bạn không bị chia sẻ với bên thứ ba nào. Al-Azan không chứa bất kỳ thư viện quảng cáo hay mã theo dõi (phân tích) nào của bên thứ ba, ví dụ như Google Analytics hay Facebook SDK."
+msgstr "Tất cả dữ liệu được cung cấp cho Al-Azan chỉ được lưu trữ cục bộ trong thiết bị của bạn. Dữ liệu này không bị đăng lên bất cứ đâu. Các nhà phát triển của Al-Azan không có quyền truy cập vào nó. Dữ liệu của bạn không bị chia sẻ với bên thứ ba nào. Al-Azan không chứa bất kỳ thư viện quảng cáo hay mã theo dõi (phân tích) nào của bên thứ ba, ví dụ như Google Analytics hay Facebook SDK."
 
-#: src/screens/settings_adhan/index.tsx:56
+#: src/screens/settings_adhan/index.tsx:76
 msgid "An error occured while playing the current track"
 msgstr "Đã xảy ra lỗi khi phát âm báo hiện tại"
 
@@ -122,11 +131,11 @@ msgstr "Tính năng ứng dụng"
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Arabic"
-msgstr "Tiếng Ả Rập"
+msgstr "Ả Rập"
 
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Arabic/Persian"
-msgstr "Tiếng Ả Rập/Tiếng Ba Tư"
+msgstr "Ả Rập/Ba Tư"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
@@ -177,8 +186,9 @@ msgstr "Phương pháp Tính"
 msgid "Calendar"
 msgstr "Lịch"
 
+#: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:195
+#: src/screens/settings_adhan/index.tsx:232
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -268,8 +278,8 @@ msgstr "Âm báo và muezzin tùy chỉnh sẽ không được xuất"
 msgid "Dark"
 msgstr "Tối"
 
-#: src/components/audio_picker.tsx:58
-#: src/components/audio_picker.tsx:87
+#: src/components/audio_picker.tsx:71
+#: src/components/audio_picker.tsx:106
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -291,7 +301,7 @@ msgstr "Tùy thuộc vào thiết bị và phiên bản Android của bạn, Đ�
 msgid "Deselect as Fajr Adhan"
 msgstr "Bỏ chọn làm Fajr Azan"
 
-#: src/components/audio_picker.tsx:133
+#: src/components/audio_picker.tsx:96
 msgid "Device sounds"
 msgstr "Âm thanh thiết bị"
 
@@ -626,8 +636,10 @@ msgstr "Ủy ban Ngắm trăng"
 msgid "Muslim World League"
 msgstr "Liên đoàn Hồi giáo Thế giới"
 
-#: src/screens/settings_adhan/index.tsx:179
-#: src/screens/settings_adhan/index.tsx:182
+#: src/components/new_audio_dialog.tsx:43
+#: src/components/new_audio_dialog.tsx:46
+#: src/screens/settings_adhan/index.tsx:216
+#: src/screens/settings_adhan/index.tsx:219
 msgid "Name"
 msgstr "Tên"
 
@@ -641,8 +653,8 @@ msgstr "Lời nhắc Mới"
 
 #: src/intro/intro.tsx:98
 #: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:81
-#: src/tasks/set_next_adhan.ts:121
+#: src/tasks/set_next_adhan.ts:80
+#: src/tasks/set_next_adhan.ts:117
 msgid "Next"
 msgstr "Tiếp"
 
@@ -659,10 +671,10 @@ msgstr "Không"
 msgid "No Data"
 msgstr "Không có dữ liệu"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:412
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
-msgstr "Ko có kết quả"
+msgstr "Không kết quả"
 
 #: src/screens/settings_calculation/index.tsx:115
 msgid "None (Automatic)"
@@ -676,8 +688,8 @@ msgstr "Không phải bây giờ"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Lưu ý rằng do lỗi phần mềm và phần cứng, hướng Qibla do ứng dụng này hiển thị, đặc biệt là ở chế độ la bàn, có thể bị sai."
 
-#: src/components/audio_picker.tsx:58
-#: src/components/audio_picker.tsx:87
+#: src/components/audio_picker.tsx:71
+#: src/components/audio_picker.tsx:106
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -791,7 +803,7 @@ msgstr "Chính sách bảo mật"
 #: website/src/_includes/home.tsx:21
 #: website/src/_includes/privacy-policy.tsx:24
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
-msgstr "Ứng dụng Azan (giờ lễ nguyện đạo Hồi) và qibla nguồn mở ưu tiên quyền riêng tư"
+msgstr "Ứng dụng Al-Azan (giờ lễ nguyện đạo Hồi) và qibla nguồn mở ưu tiên quyền riêng tư"
 
 #: website/src/_includes/home.tsx:106
 msgid "Qada counter"
@@ -849,7 +861,7 @@ msgstr "Nhắc tôi năm sau"
 msgid "Reminder"
 msgstr "Lời nhắc"
 
-#: src/components/audio_picker.tsx:92
+#: src/components/audio_picker.tsx:111
 msgid "Repeat"
 msgstr "Lặp lại"
 
@@ -869,7 +881,7 @@ msgstr "Các thiết bị Samsung có Trình quản lý nguồn tùy chỉnh c�
 msgid "Saturday"
 msgstr "Thứ 7"
 
-#: src/components/audio_picker.tsx:370
+#: src/components/audio_picker.tsx:390
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Tìm kiếm"
@@ -886,7 +898,8 @@ msgstr "Chọn làm Fajr Azan"
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Chọn âm báo Azan khác nhau cho Fajr namaz"
 
-#: src/screens/settings_adhan/index.tsx:188
+#: src/components/new_audio_dialog.tsx:51
+#: src/screens/settings_adhan/index.tsx:225
 msgid "Selecting a name is required"
 msgstr "Chọn tên là bắt buộc"
 
@@ -957,7 +970,7 @@ msgstr "Hiện cài đặt"
 msgid "Show upcoming alarm notification?"
 msgstr "Hiện thông báo báo thức sắp tới?"
 
-#: src/components/audio_picker.tsx:101
+#: src/components/audio_picker.tsx:117
 msgid "Silent"
 msgstr "Im lặng"
 
@@ -1226,7 +1239,7 @@ msgstr "Bạn có thể tìm kiếm vị trí của mình trực tuyến Hoặc 
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "Bạn sẽ nhận được một bản sao Giấy phép Công cộng GNU Affero cùng với chương trình này. Nếu không, hãy xem https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:118
+#: src/components/audio_picker.tsx:82
 msgid "Your sounds"
 msgstr "Âm báo của bạn"
 
@@ -1378,7 +1391,8 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:124
+#: src/components/audio_picker.tsx:88
+#: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "Muezzin"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-12 14:46+0330\n"
+"POT-Creation-Date: 2023-04-14 18:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,15 +51,20 @@ msgstr "صحة"
 msgid "Ad-Free"
 msgstr "خالية من الاعلانات"
 
-#: src/components/audio_picker.tsx:376
-#: src/screens/settings_adhan/index.tsx:198
+#: src/components/audio_picker.tsx:396
+#: src/components/new_audio_dialog.tsx:60
+#: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
 msgstr "إضافة"
 
-#: src/screens/settings_adhan/index.tsx:171
-#: src/screens/settings_adhan/index.tsx:176
+#: src/screens/settings_adhan/index.tsx:208
+#: src/screens/settings_adhan/index.tsx:213
 msgid "Add Custom Adhan"
 msgstr "إضافة أذان مخصص"
+
+#: src/components/new_audio_dialog.tsx:40
+msgid "Add Custom Audio"
+msgstr "أضف صوتًا مخصصًا"
 
 #: src/screens/settings_reminders/index.tsx:66
 msgid "Add Reminder"
@@ -69,13 +74,17 @@ msgstr "إضافة تذكير"
 msgid "Adhan"
 msgstr "أذان"
 
-#: src/screens/settings_adhan/index.tsx:100
+#: src/screens/settings_adhan/index.tsx:137
 msgid "Adhan audio file is not downloaded yet"
 msgstr "لم يتم تنزيل ملف صوت الأذان بعد"
 
 #: src/screens/settings_calculation/index.tsx:93
 msgid "Adjustments"
 msgstr "التعديلات"
+
+#: src/components/advanced_custom_adhan_toggle.tsx:31
+msgid "Advanced"
+msgstr "متقدم"
 
 #: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
@@ -112,7 +121,7 @@ msgstr "إذن المنبّهات"
 msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
 msgstr "يتم تخزين جميع البيانات المقدمة إلى الأذان محليًا فقط في جهازك. لا يتم تحميل البيانات الخاصة بك في أي مكان. لا يستطيع مطورو الآذان الوصول إليه. لا يتم مشاركة بياناتك مع أي طرف ثالث. لا يتضمن الأذان أي مكتبات إعلانية أو أي كود تتبع (تحليلات) تابع لجهة خارجية ، مثل Google Analytics أو Facebook SDK."
 
-#: src/screens/settings_adhan/index.tsx:56
+#: src/screens/settings_adhan/index.tsx:76
 msgid "An error occured while playing the current track"
 msgstr "حدث خطأ أثناء تشغيل المسار الحالي"
 
@@ -177,8 +186,9 @@ msgstr "طريقة حساب"
 msgid "Calendar"
 msgstr "التقويم"
 
+#: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:195
+#: src/screens/settings_adhan/index.tsx:232
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -268,8 +278,8 @@ msgstr "لن يتم تصدير الأصوات والمؤذنين المخصصة"
 msgid "Dark"
 msgstr "داکن"
 
-#: src/components/audio_picker.tsx:58
-#: src/components/audio_picker.tsx:87
+#: src/components/audio_picker.tsx:71
+#: src/components/audio_picker.tsx:106
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -291,7 +301,7 @@ msgstr "اعتمادًا على جهازك وإصدار الأندروید، ق�
 msgid "Deselect as Fajr Adhan"
 msgstr "إلغاء اختيار أذان الفجر"
 
-#: src/components/audio_picker.tsx:133
+#: src/components/audio_picker.tsx:96
 msgid "Device sounds"
 msgstr "نغمات الجهاز"
 
@@ -626,8 +636,10 @@ msgstr "لجنة رؤية الهلال"
 msgid "Muslim World League"
 msgstr "رابطة العالم الإسلامي"
 
-#: src/screens/settings_adhan/index.tsx:179
-#: src/screens/settings_adhan/index.tsx:182
+#: src/components/new_audio_dialog.tsx:43
+#: src/components/new_audio_dialog.tsx:46
+#: src/screens/settings_adhan/index.tsx:216
+#: src/screens/settings_adhan/index.tsx:219
 msgid "Name"
 msgstr "اسم"
 
@@ -641,8 +653,8 @@ msgstr "تذكير جديد"
 
 #: src/intro/intro.tsx:98
 #: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:81
-#: src/tasks/set_next_adhan.ts:121
+#: src/tasks/set_next_adhan.ts:80
+#: src/tasks/set_next_adhan.ts:117
 msgid "Next"
 msgstr "التالي"
 
@@ -659,7 +671,7 @@ msgstr "لا"
 msgid "No Data"
 msgstr "لايوجد بيانات"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:412
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "دون نتائج"
@@ -676,8 +688,8 @@ msgstr "ليس الان"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "لاحظ أنه نظرًا لوجود أخطاء في البرامج والأجهزة ، قد يكون اتجاه القبلة الذي يظهره هذا التطبيق خاطئًا ، خاصة في وضع البوصلة."
 
-#: src/components/audio_picker.tsx:58
-#: src/components/audio_picker.tsx:87
+#: src/components/audio_picker.tsx:71
+#: src/components/audio_picker.tsx:106
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -849,7 +861,7 @@ msgstr "ذكرني العام المقبل"
 msgid "Reminder"
 msgstr "تذكير"
 
-#: src/components/audio_picker.tsx:92
+#: src/components/audio_picker.tsx:111
 msgid "Repeat"
 msgstr "يكرر"
 
@@ -869,7 +881,7 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Saturday"
 msgstr "السبت"
 
-#: src/components/audio_picker.tsx:370
+#: src/components/audio_picker.tsx:390
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "بحث"
@@ -886,7 +898,8 @@ msgstr "اختر أذان الفجر"
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "حدد صوت أذان مختلف لصلاة الفجر"
 
-#: src/screens/settings_adhan/index.tsx:188
+#: src/components/new_audio_dialog.tsx:51
+#: src/screens/settings_adhan/index.tsx:225
 msgid "Selecting a name is required"
 msgstr "اختيار الاسم مطلوب"
 
@@ -954,7 +967,7 @@ msgstr "اعرض إعدادات"
 msgid "Show upcoming alarm notification?"
 msgstr "إظهار إشعار التنبيه القادم؟"
 
-#: src/components/audio_picker.tsx:101
+#: src/components/audio_picker.tsx:117
 msgid "Silent"
 msgstr "صامتة"
 
@@ -1222,7 +1235,7 @@ msgstr "يمكنك البحث عن موقعك عبر الإنترنت أو اس�
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "يجب أن تكون قد تلقيت نسخة من رخصة جنو أفيرو العمومية مع هذا البرنامج. إذا لم يكن كذلك، راجع https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:118
+#: src/components/audio_picker.tsx:82
 msgid "Your sounds"
 msgstr "نغماتك"
 
@@ -1377,7 +1390,8 @@ msgid "moazen_zade"
 msgstr "مؤذن زاده"
 
 #. screen title
-#: src/components/audio_picker.tsx:124
+#: src/components/audio_picker.tsx:88
+#: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "المؤذن"
