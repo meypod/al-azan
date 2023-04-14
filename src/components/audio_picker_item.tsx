@@ -62,6 +62,7 @@ function AudioPickerItem({
             onPress={onDeletePress.bind(null, item)}
             accessibilityLabel={t`Delete`}
             variant="ghost"
+            m="-1"
             p="1">
             <DeleteIcon size="xl" color="red.400" />
           </Button>

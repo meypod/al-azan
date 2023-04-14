@@ -10,11 +10,16 @@ import {
   WarningOutlineIcon,
   Text,
   IBoxProps,
+  ScrollView,
 } from 'native-base';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import {pickSingle} from 'react-native-document-picker';
+import {useStore} from 'zustand';
+import {shallow} from 'zustand/shallow';
+import {Prayer, PrayersInOrder} from '@/adhan';
 import {AdhanEntry} from '@/assets/adhan_entries';
+import PrayerAdhan from '@/components/prayer_adhan';
 import MediaPlayer, {
   AudioEntry,
   PlaybackState,
@@ -24,7 +29,7 @@ import {RootStackParamList} from '@/navigation/types';
 
 import {AdhanListItem} from '@/screens/settings_adhan/adhan_list_item';
 import {play, stop, destroy} from '@/services/play_sound';
-import {settings, useSettings} from '@/store/settings';
+import {settings} from '@/store/settings';
 
 type AdhanSettingsProps = NativeStackScreenProps<
   RootStackParamList,
@@ -37,14 +42,29 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
     AdhanEntry | undefined
   >();
-  const [selectedAdhanEntry, setSelectedAdhanEntry] = useSettings(
-    'SELECTED_ADHAN_ENTRY',
-  );
-  const [selectedFajrAdhanEntry, setSelectedFajrAdhanEntry] = useSettings(
-    'SELECTED_FAJR_ADHAN_ENTRY',
+
+  const {
+    SELECTED_ADHAN_ENTRIES,
+    setSelectedAdhan,
+    resetPrayerAdhans,
+    SAVED_ADHAN_AUDIO_ENTRIES,
+    ADVANCED_CUSTOM_ADHAN,
+  } = useStore(
+    settings,
+    s => ({
+      SELECTED_ADHAN_ENTRIES: s.SELECTED_ADHAN_ENTRIES,
+      setSelectedAdhan: s.setSelectedAdhan,
+      SAVED_ADHAN_AUDIO_ENTRIES: s.SAVED_ADHAN_AUDIO_ENTRIES,
+      ADVANCED_CUSTOM_ADHAN: s.ADVANCED_CUSTOM_ADHAN,
+      resetPrayerAdhans: s.resetPrayerAdhans,
+    }),
+    shallow,
   );
 
-  const [savedAdhanEntries] = useSettings('SAVED_ADHAN_AUDIO_ENTRIES');
+  const setSelectedFajrAdhan = useCallback(
+    (item: AdhanEntry | undefined) => setSelectedAdhan(Prayer.Fajr, item),
+    [setSelectedAdhan],
+  );
 
   const [selectedFilePath, setSelectedFilePath] = useState<string>();
   const [newAdhanName, setNewAdhanName] = useState<string | null>();
@@ -70,6 +90,23 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
     return unsubscribe;
   });
 
+  if (ADVANCED_CUSTOM_ADHAN) {
+    return (
+      <ScrollView>
+        <Box flex={1} safeArea p="4" {...props}>
+          {PrayersInOrder.map(prayer => (
+            <PrayerAdhan
+              prayer={prayer}
+              key={prayer}
+              selectedEntry={SELECTED_ADHAN_ENTRIES[prayer] as AudioEntry}
+              setSelectedAdhan={setSelectedAdhan}
+            />
+          ))}
+        </Box>
+      </ScrollView>
+    );
+  }
+
   const playAdhanEntry = async (item: AdhanEntry) => {
     try {
       if (
@@ -94,7 +131,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
 
   const onAdhanItemPressed = (item: AdhanEntry) => {
     if (item.filepath) {
-      setSelectedAdhanEntry(item);
+      resetPrayerAdhans(item);
     } else {
       ToastAndroid.show(
         t`Adhan audio file is not downloaded yet`,
@@ -130,13 +167,13 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
     return (
       <AdhanListItem
         onAdhanSelected={onAdhanItemPressed}
-        onFajrAdhanSelected={setSelectedFajrAdhanEntry}
+        onFajrAdhanSelected={setSelectedFajrAdhan}
         key={item.id}
         item={item}
         playAdhanEntry={playAdhanEntry}
         playerState={playerState}
-        selected_item_id={selectedAdhanEntry?.id}
-        selected_fajr_item_id={selectedFajrAdhanEntry?.id}
+        selected_item_id={SELECTED_ADHAN_ENTRIES.default.id}
+        selected_fajr_item_id={SELECTED_ADHAN_ENTRIES.fajr?.id}
         playing_item_id={playingAdhanEntry?.id}
       />
     );
@@ -162,7 +199,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
     <Box flex={1} safeArea pt="4" {...props}>
       <FlatList
         flex={1}
-        data={savedAdhanEntries}
+        data={SAVED_ADHAN_AUDIO_ENTRIES}
         renderItem={renderItem}
         extraData={[playerState]}
       />

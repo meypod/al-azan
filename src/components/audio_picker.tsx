@@ -1,5 +1,6 @@
 import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
+import produce from 'immer';
 import debounce from 'lodash/debounce';
 import {
   FlatList,
@@ -25,6 +26,7 @@ import {pickSingle} from 'react-native-document-picker';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import AudioPickerItem from './audio_picker_item';
+import {NewAudioDialog} from './new_audio_dialog';
 import {adhanEntryTranslations} from '@/assets/adhan_entries';
 import {AddIcon} from '@/assets/icons/material_icons/add';
 import {PlayIcon} from '@/assets/icons/material_icons/play';
@@ -41,103 +43,85 @@ import {showDeleteDialog} from '@/utils/dialogs';
 import useFuse from '@/utils/hooks/use_fuse';
 
 function useData() {
-  const state = useStore(
+  const {adhanEntries, userEntries, defaultAdhan} = useStore(
     settings,
     s => ({
-      audioEntries: s.SAVED_USER_AUDIO_ENTRIES,
-      adhanEntries: s.SAVED_ADHAN_AUDIO_ENTRIES,
+      userEntries: s.SAVED_USER_AUDIO_ENTRIES,
+      adhanEntries: s.SAVED_ADHAN_AUDIO_ENTRIES.filter(e => !!e.filepath).map(
+        ent =>
+          produce(ent, e => {
+            {
+              if (e.internal) {
+                e.label = i18n._(adhanEntryTranslations[e.id]);
+              }
+              (e as any).a = true;
+            }
+          }),
+      ) as AudioEntry[],
+      defaultAdhan: produce(s.SELECTED_ADHAN_ENTRIES['default'], e => {
+        e.label = i18n._(adhanEntryTranslations[e.id]);
+      }),
     }),
     shallow,
   );
-  const [data, setData] = useState({
-    userEntries: [] as AudioEntry[],
-    adhanEntries: [] as AudioEntry[],
-    deviceEntries: [
-      {
-        id: 'default',
-        label: t`Default` + ` (${t`Notification`})`,
-        filepath: null as unknown,
-        notif: true,
-      },
-    ] as AudioEntry[],
-  });
 
-  useEffect(
-    () =>
-      setData(d => ({
-        userEntries: state.audioEntries || ([] as AudioEntry[]),
-        adhanEntries: state.adhanEntries
-          .filter(e => !!e.filepath)
-          .map(e => {
-            const copy = {...e};
-            if (copy.internal) {
-              copy.label = i18n._(adhanEntryTranslations[e.id]);
-            }
-            (copy as any).a = true;
-            return copy;
-          }) as AudioEntry[],
-        deviceEntries: d.deviceEntries,
-      })),
-    [state],
-  );
-
-  useEffect(() => {
-    getRingtones().then(entries => {
-      const [def, ...rest] = entries;
-      if (def) def.label = t`Default` + ` (${t`Notification`})`; // first item is always default;
-
-      if (rest.length) {
-        for (const e of rest) {
-          if (e.loop) {
-            e.label = e.label + ` (${t`Repeat`})`;
-          }
-        }
-      }
-
-      const newEntries = [
-        def,
-        {
-          id: 'silent',
-          label: t`Silent`,
-          filepath: 'silent',
-        },
-        ...rest,
-      ];
-      setData(d => ({
-        userEntries: d.userEntries,
-        adhanEntries: d.adhanEntries,
-        deviceEntries: newEntries,
-      }));
-    });
-  }, []);
+  const [deviceEntries, setDeviceEntries] = useState<AudioEntry[]>([
+    {
+      id: 'default',
+      label: t`Default` + ` (${t`Notification`})`,
+      filepath: null as any,
+      notif: true,
+    },
+  ]);
 
   const sections = useMemo(() => {
-    const s = [];
-    if (data.userEntries.length) {
-      s.push({
+    const arr = [];
+
+    if (userEntries.length) {
+      arr.push({
         title: t`Your sounds`,
-        data: data.userEntries,
+        data: userEntries,
       });
     }
 
-    s.push({
+    arr.push({
       title: t({
         id: 'muezzin_settings',
         message: 'Muezzin',
       }),
-      data: data.adhanEntries,
+      data: adhanEntries,
     });
 
-    if (data.deviceEntries.length) {
-      s.push({
-        title: t`Device sounds`,
-        data: data.deviceEntries,
-      });
-    }
-    return s;
-  }, [data]);
+    arr.push({
+      title: t`Device sounds`,
+      data: deviceEntries,
+    });
 
-  return {sections, data};
+    return arr;
+  }, [adhanEntries, deviceEntries, userEntries]);
+
+  useMemo(() => {
+    getRingtones().then(entries => {
+      if (entries.length)
+        entries[0].label = t`Default` + ` (${t`Notification`})`; // first item is always default;
+
+      if (entries.length > 1) {
+        for (let i = 1; i < entries.length; i++) {
+          if (entries[i].loop) {
+            entries[i].label = entries[i].label + ` (${t`Repeat`})`;
+          }
+        }
+      }
+      entries.splice(1, 0, {
+        id: 'silent',
+        label: t`Silent`,
+        filepath: 'silent',
+      });
+      setDeviceEntries(entries);
+    });
+  }, []);
+
+  return {sections, deviceEntries, defaultAdhan};
 }
 
 export const AudioPicker = (props: AudioPickerProps) => {
@@ -149,22 +133,59 @@ export const AudioPicker = (props: AudioPickerProps) => {
     onItemSelected = () => {},
     actionsheetLabel,
     selectedItem,
+    adhan = false,
     ...inputProps
   } = props;
 
   const {isOpen, onOpen, onClose} = useDisclose();
   const [searchValue, setSearchValue] = useState<string>('');
-  const {data, sections} = useData();
+  const {sections, deviceEntries, defaultAdhan} = useData();
   const playbackState = usePlaybackState();
+  const [localIsPlaying, setLocalIsPlaying] = useState(
+    playbackState === PlaybackState.started,
+  );
+
+  useEffect(() => {
+    if (
+      playbackState === PlaybackState.stopped ||
+      playbackState === PlaybackState.paused
+    ) {
+      setLocalIsPlaying(false);
+    }
+  }, [playbackState]);
+
   const flatlistRef = useRef<FlatListType>(null);
+
+  const [draftAudioEntry, setDraftAudioEntry] = useState<
+    AudioEntry | undefined
+  >();
+
+  const onNewAudioSave = useCallback(
+    (audioName: string) => {
+      if (adhan) {
+        settings.getState().saveAdhanEntry({
+          ...(draftAudioEntry as Required<AudioEntry>),
+          label: audioName,
+        });
+      } else {
+        settings.getState().saveAudioEntry({
+          ...(draftAudioEntry as Required<AudioEntry>),
+          label: audioName,
+        });
+      }
+
+      setDraftAudioEntry(undefined);
+    },
+    [adhan, draftAudioEntry],
+  );
 
   const dataForFuse = useMemo(() => {
     if (searchValue) {
-      return [...data.userEntries, ...data.adhanEntries, ...data.deviceEntries];
+      return [];
     } else {
       return [];
     }
-  }, [data, searchValue]);
+  }, [searchValue]);
 
   const {results, setSearchTerm} = useFuse(dataForFuse, {
     keys: autoCompleteKeys,
@@ -175,11 +196,8 @@ export const AudioPicker = (props: AudioPickerProps) => {
     if (selectedItem) {
       return selectedItem;
     }
-    if (data.deviceEntries.length) {
-      return data.deviceEntries[0];
-    }
-    return undefined;
-  }, [data.deviceEntries, selectedItem]);
+    return adhan ? (defaultAdhan as AudioEntry) : deviceEntries[0];
+  }, [selectedItem, adhan, defaultAdhan, deviceEntries]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateSearchTerm = useCallback(
@@ -205,13 +223,16 @@ export const AudioPicker = (props: AudioPickerProps) => {
       setSearchValue('');
       if (playbackState !== PlaybackState.stopped) {
         stop();
+        setLocalIsPlaying(false);
       }
     },
     [onItemSelected, onClose, playbackState],
   );
 
   const textValue = useMemo(
-    () => (memoSelectedItem && getOptionLabel(memoSelectedItem)) || '',
+    () =>
+      (memoSelectedItem && getOptionLabel(memoSelectedItem as AudioEntry)) ||
+      '',
     [getOptionLabel, memoSelectedItem],
   );
 
@@ -230,10 +251,13 @@ export const AudioPicker = (props: AudioPickerProps) => {
         }
       }
       if (agreedToDelete && item.id === memoSelectedItem?.id) {
-        onItemSelected && onItemSelected(data.deviceEntries[0]);
+        onItemSelected &&
+          onItemSelected(
+            adhan ? (defaultAdhan as AudioEntry) : deviceEntries[0],
+          );
       }
     },
-    [data.deviceEntries, memoSelectedItem?.id, onItemSelected],
+    [memoSelectedItem?.id, onItemSelected, adhan, defaultAdhan, deviceEntries],
   );
 
   const memoizedRenderItem = useCallback(
@@ -279,7 +303,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
           ToastAndroid.show(val.copyError, ToastAndroid.LONG);
         } else {
           const id = 'audio_' + Date.now().toString();
-          settings.getState().saveAudioEntry({
+          setDraftAudioEntry({
             id,
             label: val.name || id,
             filepath: val.fileCopyUri!,
@@ -294,15 +318,15 @@ export const AudioPicker = (props: AudioPickerProps) => {
     try {
       if (!memoSelectedItem) return;
       if (memoSelectedItem.id === 'silent') return;
-      if (playbackState === PlaybackState.started) {
-        await stop();
-      } else {
+      await stop();
+      if (!localIsPlaying) {
+        setLocalIsPlaying(true);
         await play({audioEntry: memoSelectedItem, preferExternalDevice: true});
       }
     } catch (e) {
       console.error(e);
     }
-  }, [memoSelectedItem, playbackState]);
+  }, [memoSelectedItem, localIsPlaying]);
 
   const onOpenProxy = useCallback(async () => {
     try {
@@ -342,11 +366,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
         rightElement={
           memoSelectedItem && memoSelectedItem.id !== 'silent' ? (
             <Button onPress={toggleAudioEntry} p="2" variant="ghost">
-              {playbackState === PlaybackState.started ? (
-                <StopIcon size="xl" />
-              ) : (
-                <PlayIcon size="xl" />
-              )}
+              {localIsPlaying ? <StopIcon size="xl" /> : <PlayIcon size="xl" />}
             </Button>
           ) : undefined
         }
@@ -419,6 +439,12 @@ export const AudioPicker = (props: AudioPickerProps) => {
           </KeyboardAvoidingView>
         </Actionsheet.Content>
       </Actionsheet>
+      <NewAudioDialog
+        initialAudioName={draftAudioEntry?.label}
+        onCancel={setDraftAudioEntry}
+        onSave={onNewAudioSave}
+        selectedFilePath={draftAudioEntry?.filepath as string}
+      />
     </HStack>
   );
 };
@@ -455,6 +481,7 @@ const defaultGetOptionLabel = (label: string) => (option: any) => {
 type AudioPickerProps = IInputProps & {
   label?: string;
   showError?: boolean;
+  adhan?: boolean;
   errorMessage?: string;
   actionsheetLabel?: string;
   selectedItem?: AudioEntry;

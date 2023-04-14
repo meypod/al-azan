@@ -1,6 +1,7 @@
 import {Box, FlatList} from 'native-base';
 import {memo, useCallback, useEffect} from 'react';
 import {useStore} from 'zustand';
+import {shallow} from 'zustand/shallow';
 import SettingsListItem from './settings_list_item';
 import {AlarmIcon} from '@/assets/icons/material_icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/material_icons/battery_charging';
@@ -82,9 +83,13 @@ if (settings.getState().DEV_MODE) {
 }
 
 function Settings() {
-  const calendarType = useStore(
+  const {calendarType, selectedAdhans} = useStore(
     settings,
-    state => state.SELECTED_ARABIC_CALENDAR,
+    s => ({
+      calendarType: s.SELECTED_ARABIC_CALENDAR,
+      selectedAdhans: s.SELECTED_ADHAN_ENTRIES,
+    }),
+    shallow,
   );
   const calcSettingsState = useStore(calcSettings, state => state);
   const alarmSettingsState = useStore(alarmSettings, state => state);
@@ -99,11 +104,21 @@ function Settings() {
   );
 
   useEffect(() => {
-    const stateHash = sha256(JSON.stringify(calcSettingsState) + calendarType);
+    const stateHash = sha256(
+      JSON.stringify(calcSettingsState) +
+        calendarType +
+        JSON.stringify(selectedAdhans),
+    );
     if (calcSettingsHash !== stateHash) {
-      setCalcSettingsHash(stateHash + calendarType);
+      setCalcSettingsHash(stateHash);
     }
-  }, [calcSettingsState, calcSettingsHash, setCalcSettingsHash, calendarType]);
+  }, [
+    calcSettingsState,
+    calcSettingsHash,
+    setCalcSettingsHash,
+    calendarType,
+    selectedAdhans,
+  ]);
 
   useEffect(() => {
     const stateHash = sha256(JSON.stringify(alarmSettingsState));

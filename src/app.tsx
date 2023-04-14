@@ -7,6 +7,7 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, useColorMode} from 'native-base';
 import {useEffect} from 'react';
+import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
@@ -65,6 +66,14 @@ const QadaCounterHeaderRight = function QadaCounterHeaderRight() {
   return (
     <HStack>
       <QadaHistoryToggle p="2" mr="-2" size="xl"></QadaHistoryToggle>
+    </HStack>
+  );
+};
+
+const SettingsAdhanHeaderRight = function SettingsAdhanHeaderRight() {
+  return (
+    <HStack>
+      <AdvancedCustomAdhanToggle fontSize="sm"></AdvancedCustomAdhanToggle>
     </HStack>
   );
 };
@@ -137,7 +146,11 @@ export function App(): JSX.Element {
             name="NotificationSettings"
             component={NotificationSettings}
           />
-          <Stack.Screen name="AdhanSettings" component={AdhanSettings} />
+          <Stack.Screen
+            name="AdhanSettings"
+            component={AdhanSettings}
+            options={{headerRight: SettingsAdhanHeaderRight}}
+          />
           <Stack.Screen
             name="CalculationSettings"
             component={CalculationSettings}

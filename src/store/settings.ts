@@ -9,7 +9,7 @@ import {createStore} from 'zustand/vanilla';
 import {clearCache} from './adhan_calc_cache';
 import {alarmSettings} from './alarm';
 import {zustandStorage} from './mmkv';
-import {Prayer} from '@/adhan';
+import {Prayer, PrayersInOrder} from '@/adhan';
 import {
   AdhanEntry,
   adhanEntryTranslations,
@@ -21,6 +21,10 @@ import {CountryInfo, SearchResult} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
 export const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
+
+type SelectedAdhanEntries = {[key in Prayer]?: AdhanEntry | undefined} & {
+  default: AdhanEntry;
+};
 
 export type SettingsStore = {
   /** an object that keeps track of dismissed alarms timestamp by their notification id */
@@ -38,8 +42,7 @@ export type SettingsStore = {
   APP_INTRO_DONE: boolean;
   SAVED_ADHAN_AUDIO_ENTRIES: AdhanEntry[];
   SAVED_USER_AUDIO_ENTRIES: AudioEntry[];
-  SELECTED_ADHAN_ENTRY: AdhanEntry;
-  SELECTED_FAJR_ADHAN_ENTRY: AdhanEntry | undefined;
+  SELECTED_ADHAN_ENTRIES: SelectedAdhanEntries;
   LOCATION_COUNTRY: CountryInfo | undefined;
   LOCATION_CITY: SearchResult | undefined;
   LAST_APP_FOCUS_TIMESTAMP?: number;
@@ -69,6 +72,8 @@ export type SettingsStore = {
   QIBLA_FINDER_ORIENTATION_LOCKED: boolean;
   // qada counter
   COUNTER_HISTORY_VISIBLE: boolean;
+  // custom adhan screen
+  ADVANCED_CUSTOM_ADHAN: boolean;
 
   // Ramadan related, HIJRI YEAR
   RAMADAN_REMINDED_YEAR: string;
@@ -77,6 +82,11 @@ export type SettingsStore = {
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
+  setSelectedAdhan: (
+    prayer: keyof SelectedAdhanEntries,
+    entry: AdhanEntry | undefined,
+  ) => void;
+  resetPrayerAdhans: (entry: AdhanEntry | undefined) => void;
   saveAudioEntry: (entry: AudioEntry) => void;
   deleteAudioEntry: (entry: AudioEntry) => void;
   saveTimestamp: (alarmId: string, timestamp: number) => void;
@@ -112,8 +122,7 @@ export const settings = createStore<SettingsStore>()(
       APP_INTRO_DONE: false,
       SAVED_ADHAN_AUDIO_ENTRIES: INITIAL_ADHAN_AUDIO_ENTRIES,
       SAVED_USER_AUDIO_ENTRIES: [],
-      SELECTED_ADHAN_ENTRY: INITIAL_ADHAN_AUDIO_ENTRIES[0],
-      SELECTED_FAJR_ADHAN_ENTRY: undefined,
+      SELECTED_ADHAN_ENTRIES: {default: INITIAL_ADHAN_AUDIO_ENTRIES[0]},
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [Prayer.Tahajjud],
@@ -140,6 +149,7 @@ export const settings = createStore<SettingsStore>()(
       COUNTER_HISTORY_VISIBLE: false,
       RAMADAN_REMINDED_YEAR: '',
       RAMADAN_REMINDER_DONT_SHOW: false,
+      ADVANCED_CUSTOM_ADHAN: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>
@@ -170,18 +180,39 @@ export const settings = createStore<SettingsStore>()(
                 });
               }
             }
-            if (
-              draft.SELECTED_ADHAN_ENTRY &&
-              draft.SELECTED_ADHAN_ENTRY.id === entry.id
-            ) {
-              draft.SELECTED_ADHAN_ENTRY = draft.SAVED_ADHAN_AUDIO_ENTRIES[0];
+            if (draft.SELECTED_ADHAN_ENTRIES['default'].id === entry.id) {
+              draft.SELECTED_ADHAN_ENTRIES['default'] =
+                draft.SAVED_ADHAN_AUDIO_ENTRIES[0];
             }
-            if (
-              draft.SELECTED_FAJR_ADHAN_ENTRY &&
-              draft.SELECTED_FAJR_ADHAN_ENTRY.id === entry.id
-            ) {
-              draft.SELECTED_FAJR_ADHAN_ENTRY = undefined;
+
+            for (const prayer of PrayersInOrder) {
+              if (draft.SELECTED_ADHAN_ENTRIES[prayer]?.id === entry.id) {
+                draft.SELECTED_ADHAN_ENTRIES[prayer] =
+                  draft.SELECTED_ADHAN_ENTRIES['default'];
+              }
             }
+          }),
+        ),
+
+      setSelectedAdhan: (prayer, entry) =>
+        set(
+          produce<SettingsStore>(draft => {
+            if (prayer !== 'default') {
+              draft.SELECTED_ADHAN_ENTRIES[prayer] = entry;
+            } else {
+              draft.SELECTED_ADHAN_ENTRIES[prayer] =
+                entry || draft.SAVED_ADHAN_AUDIO_ENTRIES[0];
+            }
+          }),
+        ),
+
+      resetPrayerAdhans: entry =>
+        set(
+          produce<SettingsStore>(draft => {
+            draft.SELECTED_ADHAN_ENTRIES = {
+              default: entry || draft.SAVED_ADHAN_AUDIO_ENTRIES[0],
+              [Prayer.Fajr]: draft.SELECTED_ADHAN_ENTRIES[Prayer.Fajr],
+            };
           }),
         ),
 
@@ -266,7 +297,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 9,
+      version: 10,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -332,6 +363,13 @@ export const settings = createStore<SettingsStore>()(
           case 8:
             // a cache reset force for the incorrect times fix
             clearCache();
+          case 9:
+            (persistedState as SettingsStore).SELECTED_ADHAN_ENTRIES = {
+              default:
+                (persistedState as any).SELECTED_ADHAN_ENTRY ||
+                (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[0],
+              [Prayer.Fajr]: (persistedState as any).SELECTED_FAJR_ADHAN_ENTRY,
+            };
             break;
         }
         /* eslint-enable no-fallthrough */
