@@ -181,11 +181,11 @@ export const AudioPicker = (props: AudioPickerProps) => {
 
   const dataForFuse = useMemo(() => {
     if (searchValue) {
-      return [];
+      return sections.map(s => s.data).flat();
     } else {
       return [];
     }
-  }, [searchValue]);
+  }, [searchValue, sections]);
 
   const {results, setSearchTerm} = useFuse(dataForFuse, {
     keys: autoCompleteKeys,
