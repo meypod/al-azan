@@ -103,7 +103,6 @@ jobs:
         BUILD_TOOLS_VERSION: "33.0.0" 
        
     - name: Release on GitHub
-      if: ${{ contains(github.ref, 'main') }}
       uses: ncipollo/release-action@v1
       with:
         prerelease: true
@@ -116,11 +115,12 @@ jobs:
         artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*.aab
 
     - name: Push to Play Store
+      if: ${{ contains(github.ref, 'main') }}
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
         packageName: com.github.meypod.al_azan
         releaseFiles: android/app/build/outputs/bundle/release/*.aab
         track: internal
+        status: draft
         
-
