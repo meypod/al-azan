@@ -21,7 +21,7 @@ export default function PrayerAdhan({
   );
 
   return (
-    <HStack alignItems="center">
+    <HStack alignItems="center" mb="1">
       <FormControl>
         <FormControl.Label>{translatePrayer(prayer)}</FormControl.Label>
         <AudioPicker

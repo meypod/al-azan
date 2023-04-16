@@ -93,7 +93,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
   if (ADVANCED_CUSTOM_ADHAN) {
     return (
       <ScrollView>
-        <Box flex={1} safeArea p="4" {...props}>
+        <Box flex={1} safeArea px="4" py="2" {...props}>
           {PrayersInOrder.map(prayer => (
             <PrayerAdhan
               prayer={prayer}
