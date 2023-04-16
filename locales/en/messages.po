@@ -57,7 +57,7 @@ msgstr "Accuracy"
 msgid "Ad-Free"
 msgstr "Ad-Free"
 
-#: src/components/audio_picker.tsx:396
+#: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
@@ -284,8 +284,8 @@ msgstr "Custom sounds and muezzins will not be exported"
 msgid "Dark"
 msgstr "Dark"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -307,7 +307,7 @@ msgstr "Depending on your device and android version, Sometimes your device may 
 msgid "Deselect as Fajr Adhan"
 msgstr "Deselect as Fajr Adhan"
 
-#: src/components/audio_picker.tsx:96
+#: src/components/audio_picker.tsx:98
 msgid "Device sounds"
 msgstr "Device sounds"
 
@@ -677,7 +677,7 @@ msgstr "No"
 msgid "No Data"
 msgstr "No Data"
 
-#: src/components/audio_picker.tsx:412
+#: src/components/audio_picker.tsx:414
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "No Results"
@@ -694,8 +694,8 @@ msgstr "Not now"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -867,7 +867,7 @@ msgstr "Remind me next year"
 msgid "Reminder"
 msgstr "Reminder"
 
-#: src/components/audio_picker.tsx:111
+#: src/components/audio_picker.tsx:113
 msgid "Repeat"
 msgstr "Repeat"
 
@@ -891,7 +891,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
-#: src/components/audio_picker.tsx:390
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Search"
@@ -980,7 +980,7 @@ msgstr "Show settings"
 msgid "Show upcoming alarm notification?"
 msgstr "Show upcoming alarm notification?"
 
-#: src/components/audio_picker.tsx:117
+#: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "Silent"
 
@@ -1251,7 +1251,7 @@ msgstr "You can search for your location online Or use GPS offline"
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Your sounds"
 msgstr "Your sounds"
 
@@ -1406,7 +1406,7 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:88
+#: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"

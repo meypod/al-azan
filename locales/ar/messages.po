@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-14 18:05+0330\n"
+"POT-Creation-Date: 2023-04-16 09:03+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr "صحة"
 msgid "Ad-Free"
 msgstr "خالية من الاعلانات"
 
-#: src/components/audio_picker.tsx:396
+#: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
@@ -278,8 +278,8 @@ msgstr "لن يتم تصدير الأصوات والمؤذنين المخصصة"
 msgid "Dark"
 msgstr "داکن"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -301,7 +301,7 @@ msgstr "اعتمادًا على جهازك وإصدار الأندروید، ق�
 msgid "Deselect as Fajr Adhan"
 msgstr "إلغاء اختيار أذان الفجر"
 
-#: src/components/audio_picker.tsx:96
+#: src/components/audio_picker.tsx:98
 msgid "Device sounds"
 msgstr "نغمات الجهاز"
 
@@ -671,7 +671,7 @@ msgstr "لا"
 msgid "No Data"
 msgstr "لايوجد بيانات"
 
-#: src/components/audio_picker.tsx:412
+#: src/components/audio_picker.tsx:414
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "دون نتائج"
@@ -688,8 +688,8 @@ msgstr "ليس الان"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "لاحظ أنه نظرًا لوجود أخطاء في البرامج والأجهزة ، قد يكون اتجاه القبلة الذي يظهره هذا التطبيق خاطئًا ، خاصة في وضع البوصلة."
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -861,7 +861,7 @@ msgstr "ذكرني العام المقبل"
 msgid "Reminder"
 msgstr "تذكير"
 
-#: src/components/audio_picker.tsx:111
+#: src/components/audio_picker.tsx:113
 msgid "Repeat"
 msgstr "يكرر"
 
@@ -881,7 +881,7 @@ msgstr "تحتوي أجهزة سامسونج (Samsung) على مدير الطا�
 msgid "Saturday"
 msgstr "السبت"
 
-#: src/components/audio_picker.tsx:390
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "بحث"
@@ -967,7 +967,7 @@ msgstr "اعرض إعدادات"
 msgid "Show upcoming alarm notification?"
 msgstr "إظهار إشعار التنبيه القادم؟"
 
-#: src/components/audio_picker.tsx:117
+#: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "صامتة"
 
@@ -1235,7 +1235,7 @@ msgstr "يمكنك البحث عن موقعك عبر الإنترنت أو اس�
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "يجب أن تكون قد تلقيت نسخة من رخصة جنو أفيرو العمومية مع هذا البرنامج. إذا لم يكن كذلك، راجع https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Your sounds"
 msgstr "نغماتك"
 
@@ -1390,7 +1390,7 @@ msgid "moazen_zade"
 msgstr "مؤذن زاده"
 
 #. screen title
-#: src/components/audio_picker.tsx:88
+#: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"

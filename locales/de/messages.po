@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-14 18:05+0330\n"
+"POT-Creation-Date: 2023-04-16 09:03+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr "Genauigkeit"
 msgid "Ad-Free"
 msgstr "Frei von Werbung"
 
-#: src/components/audio_picker.tsx:396
+#: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
@@ -84,7 +84,7 @@ msgstr "Einstellungen"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
 msgid "Advanced"
-msgstr "Fortgeschrittene"
+msgstr "Erweitert"
 
 #: src/screens/settings_calculation/index.tsx:104
 msgid "Advanced Calculation Settings"
@@ -278,8 +278,8 @@ msgstr "Benutzerdefinierte Töne und Muezzin-Rufe werden nicht exportiert"
 msgid "Dark"
 msgstr "Dunkel"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -301,7 +301,7 @@ msgstr "Je nach Gerät und Android-Version kann es vorkommen, dass Ihr Gerät di
 msgid "Deselect as Fajr Adhan"
 msgstr "Als Fajr-Adhan abwählen"
 
-#: src/components/audio_picker.tsx:96
+#: src/components/audio_picker.tsx:98
 msgid "Device sounds"
 msgstr "Gerätetöne"
 
@@ -673,7 +673,7 @@ msgstr "Nein"
 msgid "No Data"
 msgstr "Keine Daten"
 
-#: src/components/audio_picker.tsx:412
+#: src/components/audio_picker.tsx:414
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Keine Ergebnisse"
@@ -690,8 +690,8 @@ msgstr "Nicht jetzt"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Beachten Sie, dass aufgrund von Software- und Hardware-Fehlern die von dieser App angezeigte Qibla-Richtung, insbesondere im Kompassmodus, falsch sein kann."
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -863,7 +863,7 @@ msgstr "Erinnern Sie mich nächstes Jahr daran"
 msgid "Reminder"
 msgstr "Erinnerung"
 
-#: src/components/audio_picker.tsx:111
+#: src/components/audio_picker.tsx:113
 msgid "Repeat"
 msgstr "Wiederholen"
 
@@ -885,7 +885,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Samstag"
 
-#: src/components/audio_picker.tsx:390
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Suche"
@@ -974,7 +974,7 @@ msgstr "Einstellungen anzeigen"
 msgid "Show upcoming alarm notification?"
 msgstr "Benachrichtigung über den bevorstehenden Alarm anzeigen?"
 
-#: src/components/audio_picker.tsx:117
+#: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "Stumm"
 
@@ -1240,7 +1240,7 @@ msgstr "Online-Standortsuche und Suche über GPS möglich"
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "Sie sollten zusammen mit diesem Programm eine Kopie der GNU Affero General Public License erhalten haben. Falls nicht, siehe https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Your sounds"
 msgstr "Deine Töne"
 
@@ -1395,7 +1395,7 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:88
+#: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"

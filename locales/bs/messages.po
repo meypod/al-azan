@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-14 18:05+0330\n"
+"POT-Creation-Date: 2023-04-16 09:03+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr "Preciznost"
 msgid "Ad-Free"
 msgstr "Bez oglasa"
 
-#: src/components/audio_picker.tsx:396
+#: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
@@ -278,8 +278,8 @@ msgstr "Prilagođeni zvukovi i mujezini neće biti izvezeni"
 msgid "Dark"
 msgstr "Mračna"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -301,7 +301,7 @@ msgstr "Ovisno o vašem uređaju i verziji Androida, ponekad vaš uređaj može 
 msgid "Deselect as Fajr Adhan"
 msgstr "Poništite odabir kao Sabah Ezan"
 
-#: src/components/audio_picker.tsx:96
+#: src/components/audio_picker.tsx:98
 msgid "Device sounds"
 msgstr "Zvukovi uređaja"
 
@@ -671,7 +671,7 @@ msgstr "Ne"
 msgid "No Data"
 msgstr "Nema Date"
 
-#: src/components/audio_picker.tsx:412
+#: src/components/audio_picker.tsx:414
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Nema Rezultata"
@@ -688,8 +688,8 @@ msgstr "Ne sad"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Čuvajte na umu da zbog softverskih i hardverskih grešaka, smjer Kabe koji pokazuje ova aplikacija, posebno u kompas modu, može biti pogrešan."
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -861,7 +861,7 @@ msgstr "Podsjeti me sljedeće godine"
 msgid "Reminder"
 msgstr "Podsjetnik"
 
-#: src/components/audio_picker.tsx:111
+#: src/components/audio_picker.tsx:113
 msgid "Repeat"
 msgstr "Ponovite"
 
@@ -885,7 +885,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Subota"
 
-#: src/components/audio_picker.tsx:390
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Tražite"
@@ -974,7 +974,7 @@ msgstr "Prikažite Postavke"
 msgid "Show upcoming alarm notification?"
 msgstr "Prikažite nadolazeća obavještenja o alarmu?"
 
-#: src/components/audio_picker.tsx:117
+#: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "Tiho"
 
@@ -1246,7 +1246,7 @@ msgstr "Možete tražiti svoju lokaciju na mreži ili koristiti GPS van mreže"
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "Trebali ste dobiti kopiju GNU Affero General Public License zajedno s ovim programom. Ako ne, pogledajte https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Your sounds"
 msgstr "Vaši zvukovi"
 
@@ -1401,7 +1401,7 @@ msgid "moazen_zade"
 msgstr "Mujezin Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:88
+#: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-14 18:05+0330\n"
+"POT-Creation-Date: 2023-04-16 09:03+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr "शुद्धता"
 msgid "Ad-Free"
 msgstr "विज्ञापन मुक्त"
 
-#: src/components/audio_picker.tsx:396
+#: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
@@ -278,8 +278,8 @@ msgstr "कस्टम ध्वनियाँ और मुअज्जिन
 msgid "Dark"
 msgstr "अँधेरा"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -301,7 +301,7 @@ msgstr "आपके डिवाइस और एंड्रॉइड वर�
 msgid "Deselect as Fajr Adhan"
 msgstr "फज्र अज़ान के लिए चयन हटा दीजिए "
 
-#: src/components/audio_picker.tsx:96
+#: src/components/audio_picker.tsx:98
 msgid "Device sounds"
 msgstr "डिवाइस लगता है"
 
@@ -671,7 +671,7 @@ msgstr "नहीं"
 msgid "No Data"
 msgstr "कोई आकड़ा उपलब्ध नहीं है"
 
-#: src/components/audio_picker.tsx:412
+#: src/components/audio_picker.tsx:414
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "कोई परिणाम नहीं"
@@ -688,8 +688,8 @@ msgstr "अभी नहीं"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "ध्यान दें कि सॉफ़्टवेयर और हार्डवेयर त्रुटियों के कारण, इस ऐप द्वारा दिखाया गया किबला दिशा, विशेष रूप से कंपास मोड में, गलत हो सकता है।"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -861,7 +861,7 @@ msgstr "मुझे अगले साल याद दिलाएं"
 msgid "Reminder"
 msgstr "अनुस्मारक"
 
-#: src/components/audio_picker.tsx:111
+#: src/components/audio_picker.tsx:113
 msgid "Repeat"
 msgstr "दोहराना"
 
@@ -881,7 +881,7 @@ msgstr "सैमसंग उपकरणों का अपना खुद �
 msgid "Saturday"
 msgstr "शनिवार"
 
-#: src/components/audio_picker.tsx:390
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "खोज"
@@ -967,7 +967,7 @@ msgstr "सेटिंग दिखाएँ"
 msgid "Show upcoming alarm notification?"
 msgstr "आगामी अलार्म सूचना दिखाएं?"
 
-#: src/components/audio_picker.tsx:117
+#: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "चुपचाप"
 
@@ -1233,7 +1233,7 @@ msgstr "आप अपने स्थान को ऑनलाइन खोज 
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "आपको इस कार्यक्रम के साथ जीएनयू एफ़ेरो जनरल पब्लिक लाइसेंस की एक प्रति प्राप्त होनी चाहिए। यदि नहीं, तो https://www.gnu.org/licenses/ देखें।"
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Your sounds"
 msgstr "आपकी आवाज़"
 
@@ -1385,7 +1385,7 @@ msgid "moazen_zade"
 msgstr "मोअज़न ज़ादे"
 
 #. screen title
-#: src/components/audio_picker.tsx:88
+#: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-14 18:05+0330\n"
+"POT-Creation-Date: 2023-04-16 09:03+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr "Akurasi"
 msgid "Ad-Free"
 msgstr "Bebas Iklan"
 
-#: src/components/audio_picker.tsx:396
+#: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
 msgid "Add"
@@ -278,8 +278,8 @@ msgstr "Suara dan muazin khusus tidak akan diekspor"
 msgid "Dark"
 msgstr "Gelap"
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
@@ -301,7 +301,7 @@ msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa per
 msgid "Deselect as Fajr Adhan"
 msgstr "Batalkan pilihan sebagai Adzan Subuh"
 
-#: src/components/audio_picker.tsx:96
+#: src/components/audio_picker.tsx:98
 msgid "Device sounds"
 msgstr "Suara perangkat"
 
@@ -671,7 +671,7 @@ msgstr "Tidak"
 msgid "No Data"
 msgstr "Tidak ada data"
 
-#: src/components/audio_picker.tsx:412
+#: src/components/audio_picker.tsx:414
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Tidak ada hasil"
@@ -688,8 +688,8 @@ msgstr "Tidak sekarang"
 msgid "Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong."
 msgstr "Harap diperhatikan bahwa karena kesalahan perangkat lunak dan perangkat keras, arah kiblat yang ditunjukkan oleh aplikasi ini, khususnya dalam mode kompas, bisa saja salah."
 
-#: src/components/audio_picker.tsx:71
-#: src/components/audio_picker.tsx:106
+#: src/components/audio_picker.tsx:73
+#: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:54
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
@@ -861,7 +861,7 @@ msgstr "Ingatkan saya tahun depan"
 msgid "Reminder"
 msgstr "Pengingat"
 
-#: src/components/audio_picker.tsx:111
+#: src/components/audio_picker.tsx:113
 msgid "Repeat"
 msgstr "Ulangi"
 
@@ -881,7 +881,7 @@ msgstr "Perangkat Samsung memiliki Power Manajer kustom mereka sendiri yang dise
 msgid "Saturday"
 msgstr "Sabtu"
 
-#: src/components/audio_picker.tsx:390
+#: src/components/audio_picker.tsx:392
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Pencarian"
@@ -969,7 +969,7 @@ msgstr "Tampilkan pengaturan"
 msgid "Show upcoming alarm notification?"
 msgstr "Tampilkan pemberitahuan alarm yang akan datang?"
 
-#: src/components/audio_picker.tsx:117
+#: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "Diam"
 
@@ -1235,7 +1235,7 @@ msgstr "Anda dapat mencari lokasi Anda secara online Atau menggunakan GPS secara
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "Anda seharusnya telah menerima salinan Lisensi Publik Umum GNU Affero bersama dengan program ini. Jika tidak, lihat https://www.gnu.org/licenses/."
 
-#: src/components/audio_picker.tsx:82
+#: src/components/audio_picker.tsx:84
 msgid "Your sounds"
 msgstr "Suara Anda"
 
@@ -1387,7 +1387,7 @@ msgid "moazen_zade"
 msgstr "Moazen Zade"
 
 #. screen title
-#: src/components/audio_picker.tsx:88
+#: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:28
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
