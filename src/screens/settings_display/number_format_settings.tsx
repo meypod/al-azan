@@ -26,9 +26,9 @@ export function NumberFormatSettings(props: IStackProps) {
           selectedValue={numberingSystem || ''}
           flex="1">
           <Select.Item label={t`Default`} value="" />
-          <Select.Item label={t`Latin`} value="latn" />
-          <Select.Item label={t`Arabic`} value="arab" />
-          <Select.Item label={t`Arabic/Persian`} value="arabext" />
+          <Select.Item label={t`Western Arabic`} value="latn" />
+          <Select.Item label={t`Eastern Arabic`} value="arab" />
+          <Select.Item label={t`Persian`} value="arabext" />
         </Select>
       </FormControl>
     </HStack>
