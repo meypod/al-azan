@@ -1,0 +1,2 @@
+- Add an option for adaptive charging feature of Google Pixel
+- Fix minor issues
