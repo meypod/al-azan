@@ -4,6 +4,7 @@ import notifee, {
   TriggerType,
   AndroidImportance,
   AndroidCategory,
+  AlarmType,
 } from '@notifee/react-native';
 import {Prayer} from '@/adhan';
 import {AudioEntry, isIntrusive, isSilent} from '@/modules/media_player';
@@ -40,7 +41,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     type: TriggerType.TIMESTAMP,
     timestamp: date.getTime(),
     alarmManager: {
-      allowWhileIdle: true,
+      type: AlarmType.SET_ALARM_CLOCK,
     },
   };
 
