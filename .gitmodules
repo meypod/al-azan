@@ -1,0 +1,4 @@
+[submodule "notifee_fork"]
+	path = notifee_fork
+	url = https://github.com/meypod/notifee.git
+	shallow = true
