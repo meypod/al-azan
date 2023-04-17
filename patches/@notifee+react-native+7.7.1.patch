@@ -1,42 +1,74 @@
-diff --git a/node_modules/@notifee/react-native/src/types/Trigger.ts b/node_modules/@notifee/react-native/src/types/Trigger.ts
-index 6c0760a..e386538 100644
---- a/node_modules/@notifee/react-native/src/types/Trigger.ts
-+++ b/node_modules/@notifee/react-native/src/types/Trigger.ts
-@@ -34,6 +34,19 @@ export interface TimestampTrigger {
-   alarmManager?: boolean | TimestampTriggerAlarmManager | undefined;
+diff --git a/node_modules/@notifee/react-native/dist/types/Trigger.d.ts b/node_modules/@notifee/react-native/dist/types/Trigger.d.ts
+index 9907278..01f634f 100644
+--- a/node_modules/@notifee/react-native/dist/types/Trigger.d.ts
++++ b/node_modules/@notifee/react-native/dist/types/Trigger.d.ts
+@@ -31,6 +31,18 @@ export interface TimestampTrigger {
+      */
+     alarmManager?: boolean | TimestampTriggerAlarmManager | undefined;
  }
- 
 +/**
 + * An interface representing the different alarm types which can be used with `TimestampTrigger.alarmManager.type`.
 + *
 + * View the [Triggers](/react-native/docs/triggers) documentation to learn more.
 + */
-+export enum AlarmType {
-+  SET,
-+  SET_AND_ALLOW_WHILE_IDLE,
-+  SET_EXACT,
-+  SET_EXACT_AND_ALLOW_WHILE_IDLE,
-+  SET_ALARM_CLOCK,
++export declare enum AlarmType {
++    SET = 0,
++    SET_AND_ALLOW_WHILE_IDLE = 1,
++    SET_EXACT = 2,
++    SET_EXACT_AND_ALLOW_WHILE_IDLE = 3,
++    SET_ALARM_CLOCK = 4
 +}
-+
  /**
   * Interface to specify additional options for the AlarmManager which can be used with `TimestampTrigger.alarmManager`.
   *
-@@ -43,11 +56,17 @@ export interface TimestampTrigger {
+@@ -40,11 +52,16 @@ export interface TimestampTrigger {
   */
  export interface TimestampTriggerAlarmManager {
-   /**
-+   * @deprecated use `type` instead
-+   * -----
-+   *
-    * Sets whether your trigger notification should be displayed even when the system is in low-power idle modes.
-    *
-    * Defaults to `false`.
-    */
-   allowWhileIdle?: boolean;
-+
-+  /** The type of alarm set by alarm manager of android */
-+  type?: AlarmType;
+     /**
++     * @deprecated use `type` instead
++     * -----
++     *
+      * Sets whether your trigger notification should be displayed even when the system is in low-power idle modes.
+      *
+      * Defaults to `false`.
+      */
+     allowWhileIdle?: boolean;
++    /** The type of alarm set by alarm manager of android */
++    type?: AlarmType;
  }
- 
  /**
+  * An interface representing the different frequencies which can be used with `TimestampTrigger.repeatFrequency`.
+diff --git a/node_modules/@notifee/react-native/dist/types/Trigger.js b/node_modules/@notifee/react-native/dist/types/Trigger.js
+index 6fe5153..dec0831 100644
+--- a/node_modules/@notifee/react-native/dist/types/Trigger.js
++++ b/node_modules/@notifee/react-native/dist/types/Trigger.js
+@@ -1,6 +1,19 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+-exports.TriggerType = exports.TimeUnit = exports.RepeatFrequency = void 0;
++exports.TriggerType = exports.TimeUnit = exports.RepeatFrequency = exports.AlarmType = void 0;
++/**
++ * An interface representing the different alarm types which can be used with `TimestampTrigger.alarmManager.type`.
++ *
++ * View the [Triggers](/react-native/docs/triggers) documentation to learn more.
++ */
++var AlarmType;
++(function (AlarmType) {
++    AlarmType[AlarmType["SET"] = 0] = "SET";
++    AlarmType[AlarmType["SET_AND_ALLOW_WHILE_IDLE"] = 1] = "SET_AND_ALLOW_WHILE_IDLE";
++    AlarmType[AlarmType["SET_EXACT"] = 2] = "SET_EXACT";
++    AlarmType[AlarmType["SET_EXACT_AND_ALLOW_WHILE_IDLE"] = 3] = "SET_EXACT_AND_ALLOW_WHILE_IDLE";
++    AlarmType[AlarmType["SET_ALARM_CLOCK"] = 4] = "SET_ALARM_CLOCK";
++})(AlarmType = exports.AlarmType || (exports.AlarmType = {}));
+ /**
+  * An interface representing the different frequencies which can be used with `TimestampTrigger.repeatFrequency`.
+  *
+diff --git a/node_modules/@notifee/react-native/dist/types/Trigger.js.map b/node_modules/@notifee/react-native/dist/types/Trigger.js.map
+index 3f6d3b8..f396bd6 100644
+--- a/node_modules/@notifee/react-native/dist/types/Trigger.js.map
++++ b/node_modules/@notifee/react-native/dist/types/Trigger.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"Trigger.js","sourceRoot":"","sources":["../../src/types/Trigger.ts"],"names":[],"mappings":";;;AAoDA;;;;GAIG;AACH,IAAY,eAKX;AALD,WAAY,eAAe;IACzB,sDAAS,CAAA;IACT,yDAAU,CAAA;IACV,uDAAS,CAAA;IACT,yDAAU,CAAA;AACZ,CAAC,EALW,eAAe,GAAf,uBAAe,KAAf,uBAAe,QAK1B;AAgCD;;;;GAIG;AACH,IAAY,QAKX;AALD,WAAY,QAAQ;IAClB,+BAAmB,CAAA;IACnB,+BAAmB,CAAA;IACnB,2BAAe,CAAA;IACf,yBAAa,CAAA;AACf,CAAC,EALW,QAAQ,GAAR,gBAAQ,KAAR,gBAAQ,QAKnB;AAED;;;;GAIG;AACH,IAAY,WAGX;AAHD,WAAY,WAAW;IACrB,uDAAa,CAAA;IACb,qDAAY,CAAA;AACd,CAAC,EAHW,WAAW,GAAX,mBAAW,KAAX,mBAAW,QAGtB"}
+\ No newline at end of file
++{"version":3,"file":"Trigger.js","sourceRoot":"","sources":["../../src/types/Trigger.ts"],"names":[],"mappings":";;;AAoCA;;;;GAIG;AACH,IAAY,SAMX;AAND,WAAY,SAAS;IACnB,uCAAG,CAAA;IACH,iFAAwB,CAAA;IACxB,mDAAS,CAAA;IACT,6FAA8B,CAAA;IAC9B,+DAAe,CAAA;AACjB,CAAC,EANW,SAAS,GAAT,iBAAS,KAAT,iBAAS,QAMpB;AAwBD;;;;GAIG;AACH,IAAY,eAKX;AALD,WAAY,eAAe;IACzB,sDAAS,CAAA;IACT,yDAAU,CAAA;IACV,uDAAS,CAAA;IACT,yDAAU,CAAA;AACZ,CAAC,EALW,eAAe,GAAf,uBAAe,KAAf,uBAAe,QAK1B;AAgCD;;;;GAIG;AACH,IAAY,QAKX;AALD,WAAY,QAAQ;IAClB,+BAAmB,CAAA;IACnB,+BAAmB,CAAA;IACnB,2BAAe,CAAA;IACf,yBAAa,CAAA;AACf,CAAC,EALW,QAAQ,GAAR,gBAAQ,KAAR,gBAAQ,QAKnB;AAED;;;;GAIG;AACH,IAAY,WAGX;AAHD,WAAY,WAAW;IACrB,uDAAa,CAAA;IACb,qDAAY,CAAA;AACd,CAAC,EAHW,WAAW,GAAX,mBAAW,KAAX,mBAAW,QAGtB"}
+\ No newline at end of file
