@@ -140,14 +140,6 @@ msgstr "An error occured while playing the current track"
 msgid "App features"
 msgstr "App features"
 
-#: src/screens/settings_display/number_format_settings.tsx:30
-msgid "Arabic"
-msgstr "Arabic"
-
-#: src/screens/settings_display/number_format_settings.tsx:31
-msgid "Arabic/Persian"
-msgstr "Arabic/Persian"
-
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
@@ -350,6 +342,10 @@ msgstr "Don't show again"
 #: src/intro/intro.tsx:99
 msgid "Done"
 msgstr "Done"
+
+#: src/screens/settings_display/number_format_settings.tsx:30
+msgid "Eastern Arabic"
+msgstr "Eastern Arabic"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:110
 msgid "Edit Counter"
@@ -574,10 +570,6 @@ msgstr "Label"
 msgid "Language"
 msgstr "Language"
 
-#: src/screens/settings_display/number_format_settings.tsx:29
-msgid "Latin"
-msgstr "Latin"
-
 #: src/screens/settings_location/index.tsx:276
 #: src/screens/settings_location/index.tsx:281
 msgid "Latitude"
@@ -782,6 +774,10 @@ msgstr "Upcoming reminder"
 #: src/screens/settings_location/index.tsx:332
 msgid "Paste"
 msgstr "Paste"
+
+#: src/screens/settings_display/number_format_settings.tsx:31
+msgid "Persian"
+msgstr "Persian"
 
 #: src/utils/permission.ts:168
 msgid "Phone State Permission"
@@ -1229,6 +1225,10 @@ msgstr "Wednesday"
 #: src/intro/intro.tsx:23
 msgid "Welcome"
 msgstr "Welcome"
+
+#: src/screens/settings_display/number_format_settings.tsx:29
+msgid "Western Arabic"
+msgstr "Western Arabic"
 
 #: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
