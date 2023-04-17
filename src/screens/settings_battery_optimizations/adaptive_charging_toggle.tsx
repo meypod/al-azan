@@ -23,7 +23,7 @@ const AdaptiveChargingToggleView = memo(function AdaptiveChargingToggleView({
       </FormControl.HelperText>
 
       <HStack justifyContent={'space-between'}>
-        <Text>{t`Use different alarm type?`}</Text>
+        <Text>{t`Use a different alarm type?`}</Text>
         <Switch value={value} onToggle={onToggle} size="lg" />
       </HStack>
     </FormControl>
