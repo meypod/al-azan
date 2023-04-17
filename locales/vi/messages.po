@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-16 09:03+0330\n"
+"POT-Creation-Date: 2023-04-17 23:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,10 @@ msgstr "Độ chính xác"
 msgid "Ad-Free"
 msgstr "Không quảng cáo"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+msgid "Adaptive Charging"
+msgstr "Sạc thích ứng"
+
 #: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
@@ -83,6 +87,7 @@ msgid "Adjustments"
 msgstr "Điều chỉnh"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
+#: src/screens/settings_battery_optimizations/index.tsx:108
 msgid "Advanced"
 msgstr "Nâng cao"
 
@@ -166,7 +171,6 @@ msgid "Attention"
 msgstr "Chú ý"
 
 #: src/intro/intro.tsx:39
-#: src/screens/settings_battery_optimizations/index.tsx:41
 msgid "Battery Optimization"
 msgstr "Tối ưu hóa Pin"
 
@@ -280,7 +284,7 @@ msgstr "Tối"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -293,7 +297,7 @@ msgstr "Mặc định"
 msgid "Delete"
 msgstr "Xóa"
 
-#: src/screens/settings_battery_optimizations/index.tsx:44
+#: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tùy thuộc vào thiết bị và phiên bản Android của bạn, Đôi khi thiết bị của bạn có thể tắt ứng dụng chạy nền để tiết kiệm pin. Điều này có thể ngăn việc hiện báo thức/thông báo."
 
@@ -305,7 +309,7 @@ msgstr "Bỏ chọn làm Fajr Azan"
 msgid "Device sounds"
 msgstr "Âm thanh thiết bị"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Disabled"
 msgstr "Đã tắt"
 
@@ -314,7 +318,7 @@ msgid "Disclaimer"
 msgstr "Lưu ý"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:83
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Bỏ qua"
 
@@ -353,7 +357,7 @@ msgstr "Chỉnh sửa Lời nhắc"
 msgid "Egyptian General Survey Authority"
 msgstr "Tổng cục Khảo sát Ai Cập"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Enabled"
 msgstr "Đã bật"
 
@@ -378,7 +382,7 @@ msgstr "Lỗi khi tải âm báo"
 msgid "Error while getting coordinates"
 msgstr "Lỗi khi lấy tọa độ"
 
-#: src/screens/settings_backup/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:72
 msgid "Error: failed to open file"
 msgstr "Lỗi: không mở được tệp"
 
@@ -479,23 +483,27 @@ msgstr "Nếu bật, khi một thông báo được hiển thị, nó sẽ chứ
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Nếu bạn đã kích hoạt “Sao lưu & Khôi phục” trong cài đặt điện thoại của mình (Cài đặt / Sao lưu & Khôi phục / Sao lưu dữ liệu của tôi), bạn nên lưu ý rằng chính Android (không phải Al-Azan) sẽ lưu định kỳ một bản sao dữ liệu điện thoại của bạn trên máy chủ của Google. Điều này cho phép Android khôi phục dữ liệu của bạn nếu thiết bị của bạn bị hỏng hoặc bạn mua một thiết bị mới. Các nhà phát triển của Azan không có quyền truy cập dữ liệu này."
 
-#: src/screens/settings_battery_optimizations/index.tsx:100
+#: src/screens/settings_battery_optimizations/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Nếu bạn vẫn gặp sự cố dừng ứng dụng sau một thời gian, vui lòng truy cập dontkillmyapp.com để biết thêm giải pháp."
 
-#: src/screens/settings_battery_optimizations/index.tsx:47
+#: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Nếu bạn muốn đảm bảo ứng dụng có thể hoạt động ổn định, Bạn phải tắt tính năng tối ưu hóa pin cho ứng dụng này. Bạn có thể mở các cài đặt liên quan bằng cách sử dụng nút bên dưới."
 
-#: src/screens/settings_backup/import_settings.tsx:82
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
+msgstr "Nếu thiết bị của bạn có tính năng sạc thích ứng, chẳng hạn như Google Pixel và bạn không muốn quảng cáo hoặc lời nhắc được nhận dạng là báo thức, thì bạn có thể bật tùy chọn này."
+
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import"
 msgstr "Nhập dữ liệu"
 
-#: src/screens/settings_backup/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:81
 msgid "Import app data"
 msgstr "Nhập dữ liệu ứng dụng"
 
-#: src/screens/settings_backup/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:67
 msgid "Import successful"
 msgstr "Nhập thành công"
 
@@ -652,9 +660,9 @@ msgid "New Reminder"
 msgstr "Lời nhắc Mới"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:80
-#: src/tasks/set_next_adhan.ts:117
+#: src/screens/settings_dev/index.tsx:35
+#: src/tasks/set_next_adhan.ts:82
+#: src/tasks/set_next_adhan.ts:122
 msgid "Next"
 msgstr "Tiếp"
 
@@ -690,7 +698,7 @@ msgstr "Lưu ý rằng do lỗi phần mềm và phần cứng, hướng Qibla d
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -737,11 +745,11 @@ msgstr "Chỉ một lần?"
 msgid "Only six items can be shown at the same time"
 msgstr "Chỉ có sáu mục có thể được hiển thị cùng một lúc"
 
-#: src/screens/settings_battery_optimizations/index.tsx:60
+#: src/screens/settings_battery_optimizations/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "Mở cài đặt Tối ưu hóa Pin"
 
-#: src/screens/settings_battery_optimizations/index.tsx:91
+#: src/screens/settings_battery_optimizations/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "Mở cài đặt Trình quản lý Pin"
 
@@ -777,11 +785,15 @@ msgstr "Quyền Trạng thái Thiết bị"
 msgid "Please enable location service"
 msgstr "Vui lòng bật dịch vụ định vị"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
+msgstr "Xin lưu ý rằng việc bật tùy chọn này có thể khiến adhan và lời nhắc kích hoạt chậm hoặc không kích hoạt trong một số trường hợp. Kích hoạt tính năng này một cách thận trọng."
+
 #: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Độ Phân giải Cực"
 
-#: src/screens/settings_battery_optimizations/index.tsx:65
+#: src/screens/settings_battery_optimizations/index.tsx:67
 msgid "Power Manager"
 msgstr "Quản lý Pin"
 
@@ -857,7 +869,7 @@ msgstr "Nhắc tôi năm sau"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
-#: src/tasks/set_reminder.ts:106
+#: src/tasks/set_reminder.ts:109
 msgid "Reminder"
 msgstr "Lời nhắc"
 
@@ -869,7 +881,7 @@ msgstr "Lặp lại"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Cài đặt bắt buộc chưa hoàn tất. Để ứng dụng hiển thị thời gian cầu nguyện, Bạn phải cấu hình nó sau trong cài đặt."
 
-#: src/screens/settings_battery_optimizations/index.tsx:81
+#: src/screens/settings_battery_optimizations/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -994,7 +1006,7 @@ msgstr "Bản quyền phần mềm"
 msgid "Solar Hijri"
 msgstr "Hijri mặt trời"
 
-#: src/screens/settings_battery_optimizations/index.tsx:69
+#: src/screens/settings_battery_optimizations/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1015,7 +1027,7 @@ msgstr "Âm báo"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Cơ quan Quản lý Tinh thần của người Hồi giáo ở Nga"
 
-#: src/screens/settings_battery_optimizations/index.tsx:50
+#: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Status"
 msgstr "Trạng thái"
 
@@ -1153,6 +1165,10 @@ msgstr "Dùng La bàn"
 msgid "Use Map"
 msgstr "Dùng Bản đồ"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+msgid "Use a different alarm type?"
+msgstr "Sử dụng một loại báo thức khác?"
+
 #: src/screens/settings_widget/index.tsx:85
 #: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
@@ -1215,7 +1231,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "Được"
 
-#: src/screens/settings_battery_optimizations/index.tsx:74
+#: src/screens/settings_battery_optimizations/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết bị bằng cách ấn nút bên dưới."
 

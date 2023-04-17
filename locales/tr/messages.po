@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-16 09:03+0330\n"
+"POT-Creation-Date: 2023-04-17 23:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,10 @@ msgstr "Doğruluk"
 msgid "Ad-Free"
 msgstr "Reklamsız"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+msgid "Adaptive Charging"
+msgstr "Uyarlanabilir Şarj"
+
 #: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
@@ -83,6 +87,7 @@ msgid "Adjustments"
 msgstr "Ayarlamalar"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
+#: src/screens/settings_battery_optimizations/index.tsx:108
 msgid "Advanced"
 msgstr "Gelişmiş"
 
@@ -166,7 +171,6 @@ msgid "Attention"
 msgstr "Dikkat"
 
 #: src/intro/intro.tsx:39
-#: src/screens/settings_battery_optimizations/index.tsx:41
 msgid "Battery Optimization"
 msgstr "Pil optimizasyonu"
 
@@ -280,7 +284,7 @@ msgstr "Koyu"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -293,7 +297,7 @@ msgstr "Varsayılan"
 msgid "Delete"
 msgstr "Sil"
 
-#: src/screens/settings_battery_optimizations/index.tsx:44
+#: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Cihazınıza ve Android sürümünüze bağlı olarak, bazen cihazınız pilden tasarruf etmek için uygulamayı arka planda kapatabilir. Bu durum, alarmların/bildirimlerin iletilmesini engel olabilir."
 
@@ -305,7 +309,7 @@ msgstr "Fecr ezanı seçimini kaldır"
 msgid "Device sounds"
 msgstr "Cihaz sesleri"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Disabled"
 msgstr "Devre dışı bırakıldı"
 
@@ -314,7 +318,7 @@ msgid "Disclaimer"
 msgstr "Sorumluluk reddi"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:83
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Reddet"
 
@@ -353,7 +357,7 @@ msgstr "Hatırlatıcıyı düzenle"
 msgid "Egyptian General Survey Authority"
 msgstr "Mısır Genel Araştırma Kurumu"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Enabled"
 msgstr "Etkinleştir"
 
@@ -378,7 +382,7 @@ msgstr "Sesler indirilirken hata oluştu"
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
-#: src/screens/settings_backup/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:72
 msgid "Error: failed to open file"
 msgstr "Hata: dosya açılamadı"
 
@@ -479,23 +483,27 @@ msgstr "Etkinleştirilirse, bir sonraki namaz vakti bilgisini bildirim ekranınd
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Telefon ayarlarınızda \"Yedekle ve Sıfırla\" seçeneğini etkinleştirdiyseniz (Ayarlar / Yedekle ve Sıfırla / Verilerimi yedekle), Android'in kendisinin (Al-Azan'ın değil) telefonunuzun verilerinin bir kopyasını periyodik olarak Google sunucularına kaydedeceğini bilmelisiniz. Bu, cihazınızın hasar görmesi ya da yeni bir cihaz satın almanız durumunda Android'in verilerinizi kurtarmasını sağlar. Al-Azan geliştiricilerinin bu verilere erişimi yoktur."
 
-#: src/screens/settings_battery_optimizations/index.tsx:100
+#: src/screens/settings_battery_optimizations/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Bir süre sonra uygulamanın durmasıyla ilgili hala sorun yaşıyorsanız, daha fazla çözüm için lütfen dontkillmyapp.com adresini ziyaret edin."
 
-#: src/screens/settings_battery_optimizations/index.tsx:47
+#: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Uygulamanın sağlıklı bir şekilde çalışabilmesi için pil optimizasyonunu devre dışı bırakmanız gerekir. Aşağıdaki düğmeyi kullanarak ilgili ayarları açabilirsiniz."
 
-#: src/screens/settings_backup/import_settings.tsx:82
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
+msgstr "Cihazınız Google Pixel gibi uyarlanabilir şarj özelliğine sahipse ve ezan veya hatırlatıcıların alarm olarak algılanmasını istemiyorsanız bu seçeneği etkinleştirebilirsiniz."
+
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import"
 msgstr "İçe aktarma"
 
-#: src/screens/settings_backup/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:81
 msgid "Import app data"
 msgstr "Uygulama verilerini içe aktar"
 
-#: src/screens/settings_backup/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:67
 msgid "Import successful"
 msgstr "İçe aktarma başarılı"
 
@@ -652,9 +660,9 @@ msgid "New Reminder"
 msgstr "Yeni hatırlatıcı"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:80
-#: src/tasks/set_next_adhan.ts:117
+#: src/screens/settings_dev/index.tsx:35
+#: src/tasks/set_next_adhan.ts:82
+#: src/tasks/set_next_adhan.ts:122
 msgid "Next"
 msgstr "Sonraki"
 
@@ -690,7 +698,7 @@ msgstr "Yazılım ve donanım hataları nedeniyle, bu uygulama tarafından özel
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -737,11 +745,11 @@ msgstr "Sadece bir kez mi?"
 msgid "Only six items can be shown at the same time"
 msgstr "Aynı anda yalnızca altı öğe gösterilebilir"
 
-#: src/screens/settings_battery_optimizations/index.tsx:60
+#: src/screens/settings_battery_optimizations/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "Pil optimizasyon ayarlarını aç"
 
-#: src/screens/settings_battery_optimizations/index.tsx:91
+#: src/screens/settings_battery_optimizations/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "Güç yönetimi ayarlarını aç"
 
@@ -777,11 +785,15 @@ msgstr "Telefon durumu izni"
 msgid "Please enable location service"
 msgstr "Lütfen konum hizmetini etkinleştirin"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
+msgstr "Bu seçeneğin etkinleştirilmesinin ezan ve hatırlatıcıların gecikmeli olarak devreye girmesine veya bazı durumlarda hiç devreye girmemesine neden olabileceğini lütfen unutmayın. Bunu dikkatli bir şekilde etkinleştirin."
+
 #: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Kutuplar için hesaplama yöntemi"
 
-#: src/screens/settings_battery_optimizations/index.tsx:65
+#: src/screens/settings_battery_optimizations/index.tsx:67
 msgid "Power Manager"
 msgstr "Güç yöneticisi"
 
@@ -857,7 +869,7 @@ msgstr "Gelecek yıl hatırlat bana"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
-#: src/tasks/set_reminder.ts:106
+#: src/tasks/set_reminder.ts:109
 msgid "Reminder"
 msgstr "Hatırlatıcı"
 
@@ -869,7 +881,7 @@ msgstr "Tekrarla"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar tamamlanmadı. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
 
-#: src/screens/settings_battery_optimizations/index.tsx:81
+#: src/screens/settings_battery_optimizations/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -991,7 +1003,7 @@ msgstr "Yazılım Lisansı"
 msgid "Solar Hijri"
 msgstr "Güneş Hicri"
 
-#: src/screens/settings_battery_optimizations/index.tsx:69
+#: src/screens/settings_battery_optimizations/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1009,7 +1021,7 @@ msgstr "Ses"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Rusya Müslümanlarının Ruhani Yönetimi"
 
-#: src/screens/settings_battery_optimizations/index.tsx:50
+#: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Status"
 msgstr "Durum"
 
@@ -1147,6 +1159,10 @@ msgstr "Pusulayı kullan"
 msgid "Use Map"
 msgstr "Kullanım haritası"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+msgid "Use a different alarm type?"
+msgstr "Farklı bir alarm türü mü kullanıyorsunuz?"
+
 #: src/screens/settings_widget/index.tsx:85
 #: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
@@ -1209,7 +1225,7 @@ msgstr "Kablosuz ağ"
 msgid "Yes"
 msgstr "Evet"
 
-#: src/screens/settings_battery_optimizations/index.tsx:74
+#: src/screens/settings_battery_optimizations/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 

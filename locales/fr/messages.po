@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-16 09:03+0330\n"
+"POT-Creation-Date: 2023-04-17 23:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,10 @@ msgstr "Précision"
 msgid "Ad-Free"
 msgstr "Sans publicité"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+msgid "Adaptive Charging"
+msgstr "Chargement adaptatif"
+
 #: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
@@ -83,6 +87,7 @@ msgid "Adjustments"
 msgstr "Ajustements"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
+#: src/screens/settings_battery_optimizations/index.tsx:108
 msgid "Advanced"
 msgstr "Avancé"
 
@@ -166,7 +171,6 @@ msgid "Attention"
 msgstr "Attention"
 
 #: src/intro/intro.tsx:39
-#: src/screens/settings_battery_optimizations/index.tsx:41
 msgid "Battery Optimization"
 msgstr "Optimisation de la batterie"
 
@@ -280,7 +284,7 @@ msgstr "Sombre"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -293,7 +297,7 @@ msgstr "Défaut"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: src/screens/settings_battery_optimizations/index.tsx:44
+#: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "En fonction de votre appareil et de la version d'Android, il peut arriver que votre appareil arrête l'application en arrière-plan pour économiser la batterie. Cela peut empêcher le fonctionnement des alarmes et notifications."
 
@@ -305,7 +309,7 @@ msgstr "Désélectionner comme Adhan du Fajr"
 msgid "Device sounds"
 msgstr "Sons de l'appareil"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Disabled"
 msgstr "Désactivé"
 
@@ -314,7 +318,7 @@ msgid "Disclaimer"
 msgstr "Clause de non-responsabilité"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:83
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "Passer"
 
@@ -353,7 +357,7 @@ msgstr "Modifier le rappel"
 msgid "Egyptian General Survey Authority"
 msgstr "Autorité égyptienne d'études générales"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Enabled"
 msgstr "Activé"
 
@@ -378,7 +382,7 @@ msgstr "Erreur lors du téléchargement d'un fichier audio"
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
 
-#: src/screens/settings_backup/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:72
 msgid "Error: failed to open file"
 msgstr "Erreur : le fichier n'a pas pu être ouvert"
 
@@ -479,23 +483,27 @@ msgstr "En activant cette option, une notification affichée contiendra des info
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Si vous avez activé la fonction \"Sauvegarde et réinitialisation\" dans les paramètres de votre téléphone (Paramètres / Sauvegarde et réinitialisation / Sauvegarde de mes données), vous devez savoir qu'Android lui-même (et non Al-Azan) enregistre périodiquement une copie des données de votre téléphone dans les serveurs de Google. Cela permet à Android de récupérer vos données si votre appareil est endommagé ou si vous achetez un nouvel appareil. Les développeurs d'Al-Azan n'ont pas accès à ces données."
 
-#: src/screens/settings_battery_optimizations/index.tsx:100
+#: src/screens/settings_battery_optimizations/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Si vous avez toujours un problème avec l'application qui s'arrête après un certain temps, veuillez visiter le site dontkillmyapp.com pour plus de solutions."
 
-#: src/screens/settings_battery_optimizations/index.tsx:47
+#: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Si vous voulez vous assurer que l'application fonctionne de manière fiable, vous devez désactiver l'optimisation de l'alimentation pour cette application. Vous pouvez ouvrir les paramètres associés en utilisant le bouton ci-dessous."
 
-#: src/screens/settings_backup/import_settings.tsx:82
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
+msgstr "Si votre appareil est doté d'une fonction de charge adaptative, comme le Google Pixel, et que vous ne souhaitez pas que l'adhan ou les rappels soient reconnus comme des alarmes, vous pouvez activer cette option."
+
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import"
 msgstr "Importer"
 
-#: src/screens/settings_backup/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:81
 msgid "Import app data"
 msgstr "Importer les données de l'application"
 
-#: src/screens/settings_backup/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:67
 msgid "Import successful"
 msgstr "Importation réussie"
 
@@ -652,9 +660,9 @@ msgid "New Reminder"
 msgstr "Nouveau rappel"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:80
-#: src/tasks/set_next_adhan.ts:117
+#: src/screens/settings_dev/index.tsx:35
+#: src/tasks/set_next_adhan.ts:82
+#: src/tasks/set_next_adhan.ts:122
 msgid "Next"
 msgstr "Suivant"
 
@@ -690,7 +698,7 @@ msgstr "Notez qu'en raison d'erreurs logicielles et matérielles, la direction d
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -737,11 +745,11 @@ msgstr "Répéter qu'une seule fois"
 msgid "Only six items can be shown at the same time"
 msgstr "Seuls six éléments peuvent être affichés en même temps"
 
-#: src/screens/settings_battery_optimizations/index.tsx:60
+#: src/screens/settings_battery_optimizations/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "Ouvrir les paramètres d'optimisation de la batterie"
 
-#: src/screens/settings_battery_optimizations/index.tsx:91
+#: src/screens/settings_battery_optimizations/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "Ouvrir les paramètres de gestion d'énergie"
 
@@ -777,11 +785,15 @@ msgstr "Permission d'accès à l'état du téléphone"
 msgid "Please enable location service"
 msgstr "Veuillez activer le service de localisation"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
+msgstr "Veuillez noter qu'en activant cette option, l'adhan et les rappels peuvent se déclencher avec un certain retard ou ne pas se déclencher du tout dans certains cas. Activez cette option avec prudence."
+
 #: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "Résolution polaire"
 
-#: src/screens/settings_battery_optimizations/index.tsx:65
+#: src/screens/settings_battery_optimizations/index.tsx:67
 msgid "Power Manager"
 msgstr "Gestionnaire d'énergie"
 
@@ -857,7 +869,7 @@ msgstr "Rappelez-moi l'année prochaine"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
-#: src/tasks/set_reminder.ts:106
+#: src/tasks/set_reminder.ts:109
 msgid "Reminder"
 msgstr "Rappel"
 
@@ -869,7 +881,7 @@ msgstr "Répéter"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Les paramètres requis sont incomplets. Pour que l'application affiche les heures de prière, vous devrez les configurer à partir de paramètres ultérieurement."
 
-#: src/screens/settings_battery_optimizations/index.tsx:81
+#: src/screens/settings_battery_optimizations/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -998,7 +1010,7 @@ msgstr "Licence de logiciel"
 msgid "Solar Hijri"
 msgstr "Hijri solaire"
 
-#: src/screens/settings_battery_optimizations/index.tsx:69
+#: src/screens/settings_battery_optimizations/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1019,7 +1031,7 @@ msgstr "Son"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Administration spirituelle des musulmans de Russie"
 
-#: src/screens/settings_battery_optimizations/index.tsx:50
+#: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Status"
 msgstr "Statut"
 
@@ -1159,6 +1171,10 @@ msgstr "Utiliser la boussole"
 msgid "Use Map"
 msgstr "Utiliser la carte"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+msgid "Use a different alarm type?"
+msgstr "Utiliser un autre type d'alarme ?"
+
 #: src/screens/settings_widget/index.tsx:85
 #: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
@@ -1221,7 +1237,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "Oui"
 
-#: src/screens/settings_battery_optimizations/index.tsx:74
+#: src/screens/settings_battery_optimizations/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "Vous pouvez accéder au gestionnaire d'énergie de votre appareil en utilisant le bouton ci-dessous."
 

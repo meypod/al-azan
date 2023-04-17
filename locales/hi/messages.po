@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-16 09:03+0330\n"
+"POT-Creation-Date: 2023-04-17 23:22+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,10 @@ msgstr "शुद्धता"
 msgid "Ad-Free"
 msgstr "विज्ञापन मुक्त"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+msgid "Adaptive Charging"
+msgstr "अनुकूली चार्जिंग"
+
 #: src/components/audio_picker.tsx:398
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:235
@@ -83,6 +87,7 @@ msgid "Adjustments"
 msgstr "समायोजन"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
+#: src/screens/settings_battery_optimizations/index.tsx:108
 msgid "Advanced"
 msgstr "विकसित"
 
@@ -166,7 +171,6 @@ msgid "Attention"
 msgstr "ध्यान"
 
 #: src/intro/intro.tsx:39
-#: src/screens/settings_battery_optimizations/index.tsx:41
 msgid "Battery Optimization"
 msgstr "बैटरी अनुकूलन"
 
@@ -280,7 +284,7 @@ msgstr "अँधेरा"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -293,7 +297,7 @@ msgstr "डिफॉल्ट "
 msgid "Delete"
 msgstr "मिटाना"
 
-#: src/screens/settings_battery_optimizations/index.tsx:44
+#: src/screens/settings_battery_optimizations/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "आपके डिवाइस और एंड्रॉइड वर्जन के आधार पर, बैटरी बचाने के लिए कभी-कभी आपका डिवाइस बैकग्राउंड में ऐप को बंद कर सकता है। यह अलार्म/सूचनाओं को डिलीवर होने से रोक सकता है।"
 
@@ -305,7 +309,7 @@ msgstr "फज्र अज़ान के लिए चयन हटा दी
 msgid "Device sounds"
 msgstr "डिवाइस लगता है"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Disabled"
 msgstr "अक्षम"
 
@@ -314,7 +318,7 @@ msgid "Disclaimer"
 msgstr "अस्वीकरण"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:83
+#: src/tasks/set_alarm.ts:95
 msgid "Dismiss"
 msgstr "हटा दीजिए"
 
@@ -353,7 +357,7 @@ msgstr "रिमाइंडर संपादित करें"
 msgid "Egyptian General Survey Authority"
 msgstr "मिस्र का सामान्य सर्वेक्षण प्राधिकरण"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_battery_optimizations/index.tsx:54
 msgid "Enabled"
 msgstr "सक्रिय"
 
@@ -378,7 +382,7 @@ msgstr "ऑडियो डाउनलोड करते समय गलत�
 msgid "Error while getting coordinates"
 msgstr "निर्देशांक प्राप्त करने में गलती"
 
-#: src/screens/settings_backup/import_settings.tsx:71
+#: src/screens/settings_backup/import_settings.tsx:72
 msgid "Error: failed to open file"
 msgstr "त्रुटि: फ़ाइल खोलने में विफल"
 
@@ -479,23 +483,27 @@ msgstr "यदि सक्षम है, जब एक सूचना दि�
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "यदि आपने अपनी फ़ोन सेटिंग (सेटिंग / बैकअप और रीसेट / बैकअप मेरे डेटा) में \"बैकअप और रीसेट\" सक्रिय किया है, तो आपको पता होना चाहिए कि Android स्वयं (अल-अज़ान नहीं) समय-समय पर आपके फ़ोन के डेटा की एक प्रति Google में सहेजेगा सर्वर। यदि आपका डिवाइस क्षतिग्रस्त हो जाता है, या आप एक नया डिवाइस खरीदते हैं, तो यह Android को आपके डेटा को पुनर्प्राप्त करने की अनुमति देता है। अल-अज़ान के डेवलपर्स के पास इस डेटा तक पहुंच नहीं है।"
 
-#: src/screens/settings_battery_optimizations/index.tsx:100
+#: src/screens/settings_battery_optimizations/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "यदि आपको कुछ समय बाद भी ऐप के बंद होने की समस्या है, तो अधिक समाधान के लिए कृपया dontkillmyapp.com पर जाएं।"
 
-#: src/screens/settings_battery_optimizations/index.tsx:47
+#: src/screens/settings_battery_optimizations/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "यदि आप ये सुनिश्चित करना चाहते हैं कि ऐप सही तरीके से काम करे, तो आप को इस ऐप के लिए पावर ऑप्टिमाइजेशन को अक्षम करना होगा। आप नीचे दिए गए बटन का उपयोग कर के संबंधित सेटिंग्स खोल सकते हैं।"
 
-#: src/screens/settings_backup/import_settings.tsx:82
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
+msgstr "यदि आपके डिवाइस में अनुकूली चार्जिंग है, जैसे Google पिक्सेल, और आप नहीं चाहते कि एडहान या रिमाइंडर्स को अलार्म के रूप में पहचाना जाए, तो आप इस विकल्प को सक्षम कर सकते हैं।"
+
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import"
 msgstr "आयात"
 
-#: src/screens/settings_backup/import_settings.tsx:80
+#: src/screens/settings_backup/import_settings.tsx:81
 msgid "Import app data"
 msgstr "ऐप डेटा आयात करें"
 
-#: src/screens/settings_backup/import_settings.tsx:66
+#: src/screens/settings_backup/import_settings.tsx:67
 msgid "Import successful"
 msgstr "आयात सफल रहा"
 
@@ -652,9 +660,9 @@ msgid "New Reminder"
 msgstr "नया अनुस्मारक"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:34
-#: src/tasks/set_next_adhan.ts:80
-#: src/tasks/set_next_adhan.ts:117
+#: src/screens/settings_dev/index.tsx:35
+#: src/tasks/set_next_adhan.ts:82
+#: src/tasks/set_next_adhan.ts:122
 msgid "Next"
 msgstr "अगला"
 
@@ -690,7 +698,7 @@ msgstr "ध्यान दें कि सॉफ़्टवेयर और �
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:54
+#: src/screens/settings_backup/import_settings.tsx:55
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -737,11 +745,11 @@ msgstr "सिर्फ एक बार?"
 msgid "Only six items can be shown at the same time"
 msgstr "एक ही समय में केवल छह चीज़ें दिखाए जा सकती हैं"
 
-#: src/screens/settings_battery_optimizations/index.tsx:60
+#: src/screens/settings_battery_optimizations/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "बैटरी अनुकूलन सेटिंग्स खोलें"
 
-#: src/screens/settings_battery_optimizations/index.tsx:91
+#: src/screens/settings_battery_optimizations/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "पावर मैनेजर सेटिंग्स खोलें"
 
@@ -777,11 +785,15 @@ msgstr "फोन राज्य की अनुमति"
 msgid "Please enable location service"
 msgstr "कृपया स्थान सेवा सक्षम करें"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
+msgstr "कृपया ध्यान दें कि इस विकल्प को सक्षम करने से एडहान और रिमाइंडर्स देरी से शुरू हो सकते हैं या कुछ मामलों में बिल्कुल भी नहीं। इसे सावधानी से सक्षम करें।"
+
 #: src/screens/settings_calculation/index.tsx:146
 msgid "Polar Resolution"
 msgstr "ध्रुवीय रेज़ोल्यूशन "
 
-#: src/screens/settings_battery_optimizations/index.tsx:65
+#: src/screens/settings_battery_optimizations/index.tsx:67
 msgid "Power Manager"
 msgstr "पावर मैनेजर"
 
@@ -857,7 +869,7 @@ msgstr "मुझे अगले साल याद दिलाएं"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
 #: src/tasks/set_reminder.ts:80
-#: src/tasks/set_reminder.ts:106
+#: src/tasks/set_reminder.ts:109
 msgid "Reminder"
 msgstr "अनुस्मारक"
 
@@ -869,7 +881,7 @@ msgstr "दोहराना"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "आवश्यक सेटिंग्स अपूर्ण हैं। ऐप में नमाज़ का वक्त दिखाने के लिए, आपको इसे बाद में सेटिंग्स से कॉन्फ़िगर करना होगा।"
 
-#: src/screens/settings_battery_optimizations/index.tsx:81
+#: src/screens/settings_battery_optimizations/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -991,7 +1003,7 @@ msgstr "सॉफ़्टवेयर लाइसेंस"
 msgid "Solar Hijri"
 msgstr "सौर हिजरी"
 
-#: src/screens/settings_battery_optimizations/index.tsx:69
+#: src/screens/settings_battery_optimizations/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1009,7 +1021,7 @@ msgstr "ध्वनि"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "रूस के मुसलमानों का आध्यात्मिक प्रशासन"
 
-#: src/screens/settings_battery_optimizations/index.tsx:50
+#: src/screens/settings_battery_optimizations/index.tsx:52
 msgid "Status"
 msgstr "दर्जा"
 
@@ -1147,6 +1159,10 @@ msgstr "कम्पास का प्रयोग करें"
 msgid "Use Map"
 msgstr "मानचित्र का प्रयोग करें"
 
+#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+msgid "Use a different alarm type?"
+msgstr "किसी भिन्न अलार्म प्रकार का उपयोग करें?"
+
 #: src/screens/settings_widget/index.tsx:85
 #: src/screens/settings_widget/index.tsx:100
 msgid "Use adaptive theme?"
@@ -1209,7 +1225,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "हां"
 
-#: src/screens/settings_battery_optimizations/index.tsx:74
+#: src/screens/settings_battery_optimizations/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "आप नीचे दिए गए बटन का उपयोग करके अपने डिवाइस पावर मैनेजर तक पहुंच सकते हैं।"
 
