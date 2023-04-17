@@ -4,4 +4,4 @@ include ':app'
 includeBuild('../node_modules/react-native-gradle-plugin')
 
 include(":notifee_core")
-project(":notifee_core").projectDir = file('../node_modules/@notifee/core/android')
+project(":notifee_core").projectDir = file('../notifee_fork/android')
