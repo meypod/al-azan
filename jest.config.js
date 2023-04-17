@@ -15,6 +15,8 @@ const config = {
       '<rootDir>/__mocks__/default_require_for_non_js.js',
     '\\.(css|less)$': '<rootDir>/__mocks__/default_require_for_non_js.js',
   },
+  testPathIgnorePatterns: ['notifee_fork/'],
+  coveragePathIgnorePatterns: ['notifee_fork/'],
 };
 
 module.exports = config;
