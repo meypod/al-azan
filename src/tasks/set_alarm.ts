@@ -27,6 +27,8 @@ export type SetAlarmTaskOptions = {
   isReminder?: Boolean;
   /** which prayer this is about */
   prayer: Prayer;
+  /** Alarm type to use with alarm manager */
+  alarmType: AlarmType;
 };
 
 export async function setAlarmTask(options: SetAlarmTaskOptions) {
@@ -35,13 +37,22 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
    *  otherwise all options should have neen checked.
    */
 
-  const {date, title, body, subtitle, sound, notifChannelId, notifId} = options;
+  const {
+    date,
+    title,
+    body,
+    subtitle,
+    sound,
+    notifChannelId,
+    notifId,
+    alarmType,
+  } = options;
 
   const trigger: TimestampTrigger = {
     type: TriggerType.TIMESTAMP,
     timestamp: date.getTime(),
     alarmManager: {
-      type: AlarmType.SET_ALARM_CLOCK,
+      type: alarmType,
     },
   };
 

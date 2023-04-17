@@ -79,6 +79,9 @@ export type SettingsStore = {
   RAMADAN_REMINDED_YEAR: string;
   RAMADAN_REMINDER_DONT_SHOW: boolean;
 
+  // alarm type for adaptive charging compatiblity
+  USE_DIFFERENT_ALARM_TYPE: boolean;
+
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
@@ -150,6 +153,7 @@ export const settings = createStore<SettingsStore>()(
       RAMADAN_REMINDED_YEAR: '',
       RAMADAN_REMINDER_DONT_SHOW: false,
       ADVANCED_CUSTOM_ADHAN: false,
+      USE_DIFFERENT_ALARM_TYPE: false,
 
       // adhan entry helper
       saveAdhanEntry: entry =>

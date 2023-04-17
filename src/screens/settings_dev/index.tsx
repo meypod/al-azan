@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import {AlarmType} from '@notifee/react-native';
 import {HStack, ScrollView, Text, IScrollViewProps, Button} from 'native-base';
 import {useCallback} from 'react';
 import {ToastAndroid} from 'react-native';
@@ -37,12 +38,15 @@ export function DevSettings(props: IScrollViewProps) {
       }
     }
 
-    const {SELECTED_ADHAN_ENTRY, SAVED_ADHAN_AUDIO_ENTRIES} =
-      settings.getState();
+    const {
+      SELECTED_ADHAN_ENTRIES,
+      SAVED_ADHAN_AUDIO_ENTRIES,
+      USE_DIFFERENT_ALARM_TYPE,
+    } = settings.getState();
 
     let sound: AudioEntry | undefined = undefined;
     if (playSound) {
-      sound = SELECTED_ADHAN_ENTRY as AudioEntry;
+      sound = SELECTED_ADHAN_ENTRIES['default'] as AudioEntry;
       if (!sound) {
         sound = SAVED_ADHAN_AUDIO_ENTRIES[0] as AudioEntry;
       }
@@ -57,6 +61,9 @@ export function DevSettings(props: IScrollViewProps) {
       subtitle,
       sound,
       prayer: Prayer.Dhuhr,
+      alarmType: USE_DIFFERENT_ALARM_TYPE
+        ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
+        : AlarmType.SET_ALARM_CLOCK,
     };
 
     setAlarmTask(adhanOptions).then(() => {

@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import {AlarmType} from '@notifee/react-native';
 import {cancelAdhanAlarms} from './cancel_alarms';
 import {translatePrayer} from '@/adhan';
 import {getNextPrayer} from '@/adhan/prayer_times';
@@ -39,6 +40,7 @@ export async function setNextAdhan(
     DELIVERED_ALARM_TIMESTAMPS,
     SELECTED_ADHAN_ENTRIES,
     SAVED_ADHAN_AUDIO_ENTRIES,
+    USE_DIFFERENT_ALARM_TYPE,
   } = settings.getState();
 
   const deliveredTS = DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
@@ -102,6 +104,9 @@ export async function setNextAdhan(
     subtitle,
     sound,
     prayer,
+    alarmType: USE_DIFFERENT_ALARM_TYPE
+      ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
+      : AlarmType.SET_ALARM_CLOCK,
   };
 
   await setAlarmTask(adhanOptions);

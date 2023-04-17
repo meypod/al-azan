@@ -7,8 +7,11 @@ import {
   Button,
   ScrollView,
   IScrollViewProps,
+  Accordion,
 } from 'native-base';
 import {useEffect, useState} from 'react';
+import {AdaptiveChargingToggle} from './adaptive_charging_toggle';
+import {MenuIcon} from '@/assets/icons/material_icons/menu';
 import useInterval from '@/utils/hooks/use_interval';
 
 export function BatteryOptimizationSettings(props: IScrollViewProps) {
@@ -38,7 +41,6 @@ export function BatteryOptimizationSettings(props: IScrollViewProps) {
   return (
     <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
       <FormControl display="flex" pb="8">
-        <FormControl.Label>{t`Battery Optimization`}</FormControl.Label>
         <FormControl.HelperText>
           <Text textAlign="justify" fontSize="xs">
             {t`Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered.`}
@@ -95,9 +97,22 @@ export function BatteryOptimizationSettings(props: IScrollViewProps) {
       <Text
         textAlign="justify"
         fontSize="xs"
+        pb="8"
         dataDetectorType={
           'link'
         }>{t`If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions.`}</Text>
+
+      <Accordion mb="3" borderRadius={0}>
+        <Accordion.Item>
+          <Accordion.Summary>
+            {t`Advanced`}
+            <MenuIcon></MenuIcon>
+          </Accordion.Summary>
+          <Accordion.Details>
+            <AdaptiveChargingToggle />
+          </Accordion.Details>
+        </Accordion.Item>
+      </Accordion>
     </ScrollView>
   );
 }

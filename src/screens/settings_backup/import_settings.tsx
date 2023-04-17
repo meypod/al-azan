@@ -33,9 +33,10 @@ export function ImportSettings(props: IFormControlProps) {
             currentSettings.SAVED_ADHAN_AUDIO_ENTRIES;
           store.SAVED_USER_AUDIO_ENTRIES =
             currentSettings.SAVED_USER_AUDIO_ENTRIES;
-          store.SELECTED_ADHAN_ENTRY = currentSettings.SELECTED_ADHAN_ENTRY;
-          store.SELECTED_FAJR_ADHAN_ENTRY =
-            currentSettings.SELECTED_FAJR_ADHAN_ENTRY;
+          (store as any).SELECTED_ADHAN_ENTRY = (
+            currentSettings as any
+          ).SELECTED_ADHAN_ENTRY;
+          store.SELECTED_ADHAN_ENTRIES = currentSettings.SELECTED_ADHAN_ENTRIES;
         } else if (key === REMINDER_STORAGE_KEY) {
           const store = value.state as ReminderStore;
           const entryIds = currentSettings.SAVED_USER_AUDIO_ENTRIES.map(

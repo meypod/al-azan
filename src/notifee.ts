@@ -92,9 +92,9 @@ export function getAlarmOptions(notification: Notification | undefined) {
 
   let options;
   try {
-    options = JSON.parse(
-      notification.data.options as string,
-    ) as SetAlarmTaskOptions;
+    options = JSON.parse(notification.data.options as string) as
+      | SetAlarmTaskOptions
+      | SetPreAlarmTaskOptions;
   } catch (e) {
     console.error(
       'Faulty options: ',

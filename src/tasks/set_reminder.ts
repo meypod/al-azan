@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import notifee from '@notifee/react-native';
+import notifee, {AlarmType} from '@notifee/react-native';
 import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
 import {setPreAlarmTask} from './set_pre_alarm';
 import {getPrayerTimes} from '@/adhan';
@@ -87,6 +87,9 @@ export async function setReminders(options?: SetReminderOptions) {
       isReminder: true,
       sound: reminder.sound,
       once: reminder.once,
+      alarmType: settings.getState().USE_DIFFERENT_ALARM_TYPE
+        ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
+        : AlarmType.SET_ALARM_CLOCK,
     };
 
     tasks.push(
