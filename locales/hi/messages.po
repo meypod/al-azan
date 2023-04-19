@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-18 02:47+0330\n"
+"POT-Creation-Date: 2023-04-19 20:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,14 +55,14 @@ msgstr "विज्ञापन मुक्त"
 msgid "Adaptive Charging"
 msgstr "अनुकूली चार्जिंग"
 
-#: src/components/audio_picker.tsx:398
+#: src/components/audio_picker.tsx:399
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:235
+#: src/screens/settings_adhan/index.tsx:236
 msgid "Add"
 msgstr "जोड़ें"
 
-#: src/screens/settings_adhan/index.tsx:208
-#: src/screens/settings_adhan/index.tsx:213
+#: src/screens/settings_adhan/index.tsx:209
+#: src/screens/settings_adhan/index.tsx:214
 msgid "Add Custom Adhan"
 msgstr "कस्टम अज़ान जोड़ें"
 
@@ -184,7 +184,7 @@ msgstr "पंचांग"
 
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:232
+#: src/screens/settings_adhan/index.tsx:233
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -638,8 +638,8 @@ msgstr "मुस्लिम वर्ल्ड लीग"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:216
-#: src/screens/settings_adhan/index.tsx:219
+#: src/screens/settings_adhan/index.tsx:217
+#: src/screens/settings_adhan/index.tsx:220
 msgid "Name"
 msgstr "नाम"
 
@@ -671,7 +671,7 @@ msgstr "नहीं"
 msgid "No Data"
 msgstr "कोई आकड़ा उपलब्ध नहीं है"
 
-#: src/components/audio_picker.tsx:414
+#: src/components/audio_picker.tsx:415
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "कोई परिणाम नहीं"
@@ -889,7 +889,7 @@ msgstr "सैमसंग उपकरणों का अपना खुद �
 msgid "Saturday"
 msgstr "शनिवार"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:393
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "खोज"
@@ -907,7 +907,7 @@ msgid "Select different Adhan audio for Fajr namaz"
 msgstr "फज्र नमाज के लिए अलग अदन ऑडियो का चयन करें"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:226
 msgid "Selecting a name is required"
 msgstr "नाम चुनना आवश्यक है"
 
@@ -1271,7 +1271,7 @@ msgid "about_settings"
 msgstr "के बारे में"
 
 #. shown under adjustment accordion in calculation settings
-#: src/screens/settings_calculation/adjustment_settings.tsx:16
+#: src/screens/settings_calculation/adjustment_settings.tsx:17
 msgid "adjustment.hint"
 msgstr "गणना किए गए समय में जोड़े जाने वाले मिनटों की संख्या"
 

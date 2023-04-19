@@ -61,14 +61,14 @@ msgstr "Ad-Free"
 msgid "Adaptive Charging"
 msgstr "Adaptive Charging"
 
-#: src/components/audio_picker.tsx:398
+#: src/components/audio_picker.tsx:399
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:235
+#: src/screens/settings_adhan/index.tsx:236
 msgid "Add"
 msgstr "Add"
 
-#: src/screens/settings_adhan/index.tsx:208
-#: src/screens/settings_adhan/index.tsx:213
+#: src/screens/settings_adhan/index.tsx:209
+#: src/screens/settings_adhan/index.tsx:214
 msgid "Add Custom Adhan"
 msgstr "Add Custom Adhan"
 
@@ -190,7 +190,7 @@ msgstr "Calendar"
 
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:232
+#: src/screens/settings_adhan/index.tsx:233
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -644,8 +644,8 @@ msgstr "Muslim World League"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:216
-#: src/screens/settings_adhan/index.tsx:219
+#: src/screens/settings_adhan/index.tsx:217
+#: src/screens/settings_adhan/index.tsx:220
 msgid "Name"
 msgstr "Name"
 
@@ -677,7 +677,7 @@ msgstr "No"
 msgid "No Data"
 msgstr "No Data"
 
-#: src/components/audio_picker.tsx:414
+#: src/components/audio_picker.tsx:415
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "No Results"
@@ -899,7 +899,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:393
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Search"
@@ -917,7 +917,7 @@ msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Select different Adhan audio for Fajr namaz"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:226
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
@@ -1292,7 +1292,7 @@ msgid "about_settings"
 msgstr "About"
 
 #. shown under adjustment accordion in calculation settings
-#: src/screens/settings_calculation/adjustment_settings.tsx:16
+#: src/screens/settings_calculation/adjustment_settings.tsx:17
 msgid "adjustment.hint"
 msgstr "Number of minutes that will be added to the calculated times"
 

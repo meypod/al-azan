@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-18 02:47+0330\n"
+"POT-Creation-Date: 2023-04-19 20:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,16 +53,16 @@ msgstr "Frei von Werbung"
 
 #: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
-msgstr "Adaptive Aufladung"
+msgstr "Adaptives Laden"
 
-#: src/components/audio_picker.tsx:398
+#: src/components/audio_picker.tsx:399
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:235
+#: src/screens/settings_adhan/index.tsx:236
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/screens/settings_adhan/index.tsx:208
-#: src/screens/settings_adhan/index.tsx:213
+#: src/screens/settings_adhan/index.tsx:209
+#: src/screens/settings_adhan/index.tsx:214
 msgid "Add Custom Adhan"
 msgstr "Benutzerdefinierten Adhan hinzufügen"
 
@@ -184,7 +184,7 @@ msgstr "Kalender"
 
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:232
+#: src/screens/settings_adhan/index.tsx:233
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -489,7 +489,7 @@ msgstr "Wenn Sie sicherstellen möchten, dass die App zuverlässig funktioniert,
 
 #: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
-msgstr "Wenn Ihr Gerät über adaptives Laden verfügt, wie das Google Pixel, und Sie nicht möchten, dass Adhan oder Erinnerungen als Alarm erkannt werden, können Sie diese Option aktivieren."
+msgstr "Aktivieren Sie diese Option, wenn Ihr Gerät, wie beispielsweise das Google Pixel, über adaptives Laden verfügt und Sie nicht möchten, dass der Adhan oder Erinnerungen als Alarm erkannt werden."
 
 #: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import"
@@ -640,8 +640,8 @@ msgstr "Islamische Weltliga"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:216
-#: src/screens/settings_adhan/index.tsx:219
+#: src/screens/settings_adhan/index.tsx:217
+#: src/screens/settings_adhan/index.tsx:220
 msgid "Name"
 msgstr "Name"
 
@@ -673,7 +673,7 @@ msgstr "Nein"
 msgid "No Data"
 msgstr "Keine Daten"
 
-#: src/components/audio_picker.tsx:414
+#: src/components/audio_picker.tsx:415
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Keine Ergebnisse"
@@ -893,7 +893,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Samstag"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:393
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Suche"
@@ -911,7 +911,7 @@ msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Unterstützt unterschiedliche Adhan-Stimmen für das Fajr-Gebet"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:226
 msgid "Selecting a name is required"
 msgstr "Die Auswahl eines Namens ist erforderlich"
 
@@ -1281,7 +1281,7 @@ msgid "about_settings"
 msgstr "Über"
 
 #. shown under adjustment accordion in calculation settings
-#: src/screens/settings_calculation/adjustment_settings.tsx:16
+#: src/screens/settings_calculation/adjustment_settings.tsx:17
 msgid "adjustment.hint"
 msgstr "Anzahl der Minuten, die zu den berechneten Zeiten hinzugefügt werden"
 

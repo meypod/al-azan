@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-18 02:47+0330\n"
+"POT-Creation-Date: 2023-04-19 20:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,16 +53,16 @@ msgstr "Không quảng cáo"
 
 #: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
-msgstr "Sạc thích ứng"
+msgstr "Sạc Thích ứng"
 
-#: src/components/audio_picker.tsx:398
+#: src/components/audio_picker.tsx:399
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:235
+#: src/screens/settings_adhan/index.tsx:236
 msgid "Add"
 msgstr "Thêm"
 
-#: src/screens/settings_adhan/index.tsx:208
-#: src/screens/settings_adhan/index.tsx:213
+#: src/screens/settings_adhan/index.tsx:209
+#: src/screens/settings_adhan/index.tsx:214
 msgid "Add Custom Adhan"
 msgstr "Thêm Azan tùy chỉnh"
 
@@ -184,7 +184,7 @@ msgstr "Lịch"
 
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:232
+#: src/screens/settings_adhan/index.tsx:233
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -638,8 +638,8 @@ msgstr "Liên đoàn Hồi giáo Thế giới"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:216
-#: src/screens/settings_adhan/index.tsx:219
+#: src/screens/settings_adhan/index.tsx:217
+#: src/screens/settings_adhan/index.tsx:220
 msgid "Name"
 msgstr "Tên"
 
@@ -671,7 +671,7 @@ msgstr "Không"
 msgid "No Data"
 msgstr "Không có dữ liệu"
 
-#: src/components/audio_picker.tsx:414
+#: src/components/audio_picker.tsx:415
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Không kết quả"
@@ -771,7 +771,7 @@ msgstr "Dán"
 
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Persian"
-msgstr "tiếng ba tư"
+msgstr "Ba Tư"
 
 #: src/utils/permission.ts:168
 msgid "Phone State Permission"
@@ -889,7 +889,7 @@ msgstr "Các thiết bị Samsung có Trình quản lý nguồn tùy chỉnh c�
 msgid "Saturday"
 msgstr "Thứ 7"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:393
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Tìm kiếm"
@@ -907,7 +907,7 @@ msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Chọn âm báo Azan khác nhau cho Fajr namaz"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:226
 msgid "Selecting a name is required"
 msgstr "Chọn tên là bắt buộc"
 
@@ -1277,7 +1277,7 @@ msgid "about_settings"
 msgstr "Về Ứng dụng"
 
 #. shown under adjustment accordion in calculation settings
-#: src/screens/settings_calculation/adjustment_settings.tsx:16
+#: src/screens/settings_calculation/adjustment_settings.tsx:17
 msgid "adjustment.hint"
 msgstr "Số phút sẽ được thêm vào thời gian tính toán"
 

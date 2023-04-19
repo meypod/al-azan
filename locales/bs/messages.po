@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-18 02:47+0330\n"
+"POT-Creation-Date: 2023-04-19 20:05+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,14 +55,14 @@ msgstr "Bez oglasa"
 msgid "Adaptive Charging"
 msgstr "Adaptivno punjenje"
 
-#: src/components/audio_picker.tsx:398
+#: src/components/audio_picker.tsx:399
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:235
+#: src/screens/settings_adhan/index.tsx:236
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/screens/settings_adhan/index.tsx:208
-#: src/screens/settings_adhan/index.tsx:213
+#: src/screens/settings_adhan/index.tsx:209
+#: src/screens/settings_adhan/index.tsx:214
 msgid "Add Custom Adhan"
 msgstr "Dodajte Prilagođeni Ezan"
 
@@ -184,7 +184,7 @@ msgstr "Kalendar"
 
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_adhan/index.tsx:232
+#: src/screens/settings_adhan/index.tsx:233
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 #: src/tasks/set_pre_alarm.ts:57
 msgid "Cancel"
@@ -638,8 +638,8 @@ msgstr "Svjetska Liga Muslimana"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:216
-#: src/screens/settings_adhan/index.tsx:219
+#: src/screens/settings_adhan/index.tsx:217
+#: src/screens/settings_adhan/index.tsx:220
 msgid "Name"
 msgstr "Naziv"
 
@@ -671,7 +671,7 @@ msgstr "Ne"
 msgid "No Data"
 msgstr "Nema Date"
 
-#: src/components/audio_picker.tsx:414
+#: src/components/audio_picker.tsx:415
 #: src/components/AutocompleteInput.tsx:140
 msgid "No Results"
 msgstr "Nema Rezultata"
@@ -893,7 +893,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Subota"
 
-#: src/components/audio_picker.tsx:392
+#: src/components/audio_picker.tsx:393
 #: src/components/AutocompleteInput.tsx:110
 msgid "Search"
 msgstr "Tražite"
@@ -911,7 +911,7 @@ msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Odaberite različite zvuke ezana za Sabah"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:226
 msgid "Selecting a name is required"
 msgstr "Odabir imena je potrebno"
 
@@ -1287,7 +1287,7 @@ msgid "about_settings"
 msgstr "O Aplikaciji"
 
 #. shown under adjustment accordion in calculation settings
-#: src/screens/settings_calculation/adjustment_settings.tsx:16
+#: src/screens/settings_calculation/adjustment_settings.tsx:17
 msgid "adjustment.hint"
 msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 
