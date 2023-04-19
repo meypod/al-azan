@@ -1,4 +1,4 @@
-import {Text, Input, VStack, Button} from 'native-base';
+import {Text, Input, HStack, VStack, Button} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
 import {useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
@@ -51,7 +51,7 @@ export function AdjustmentSetting({
   }, [setLocalAdjustment, adjustment]);
 
   return (
-    <VStack {...hStackProps}>
+    <VStack {...hStackProps} mb="2" flex={1}>
       <Text
         textAlign={'center'}
         numberOfLines={1}
@@ -60,19 +60,29 @@ export function AdjustmentSetting({
         fontSize={'xs'}>
         {prayerName}
       </Text>
-
-      <Button variant="outline" onPress={increaseLocalAdjustmentByOne}>
-        +
-      </Button>
-      <Input
-        size="md"
-        value={localAdjustment.toString()}
-        onChangeText={setLocalAdjustmentHelper}
-        textAlign={'center'}
-      />
-      <Button variant="outline" onPress={decreaseLocalAdjustmentByOne}>
-        -
-      </Button>
+      <HStack h="10">
+        <Button
+          variant="outline"
+          onPress={increaseLocalAdjustmentByOne}
+          w="10"
+          p="0">
+          +
+        </Button>
+        <Input
+          flex={1}
+          size="md"
+          value={localAdjustment.toString()}
+          onChangeText={setLocalAdjustmentHelper}
+          textAlign={'center'}
+        />
+        <Button
+          variant="outline"
+          onPress={decreaseLocalAdjustmentByOne}
+          w="10"
+          p="0">
+          -
+        </Button>
+      </HStack>
     </VStack>
   );
 }

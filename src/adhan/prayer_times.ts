@@ -65,12 +65,13 @@ function getPrayerTimesOptionsFromSettings() {
   };
 
   prayerTimeOptions.calculationParameters.adjustments = {
-    asr: state.ASR_ADJUSTMENT,
-    dhuhr: state.DHUHR_ADJUSTMENT,
     fajr: state.FAJR_ADJUSTMENT,
-    isha: state.ISHA_ADJUSTMENT,
-    maghrib: state.MAGHRIB_ADJUSTMENT,
     sunrise: state.SUNRISE_ADJUSTMENT,
+    dhuhr: state.DHUHR_ADJUSTMENT,
+    asr: state.ASR_ADJUSTMENT,
+    sunset: state.SUNSET_ADJUSTMENT,
+    maghrib: state.MAGHRIB_ADJUSTMENT,
+    isha: state.ISHA_ADJUSTMENT,
   };
 
   switch (highLatRuleSetting) {

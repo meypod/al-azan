@@ -40,7 +40,6 @@ export type CalcSettingsStore = {
   SUNSET_ADJUSTMENT: number;
   MAGHRIB_ADJUSTMENT: number;
   ISHA_ADJUSTMENT: number;
-  MIDNIGHT_ADJUSTMENT: number;
 
   setSetting: <T extends keyof CalcSettingsStore>(
     key: T,
@@ -72,7 +71,6 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SUNSET_ADJUSTMENT: 0,
       MAGHRIB_ADJUSTMENT: 0,
       ISHA_ADJUSTMENT: 0,
-      MIDNIGHT_ADJUSTMENT: 0,
 
       // general
       setSetting: <T extends keyof CalcSettingsStore>(
@@ -123,7 +121,6 @@ export const calcSettings = createStore<CalcSettingsStore>()(
             (persistedState as CalcSettingsStore).SUNSET_ADJUSTMENT = 0;
             (persistedState as CalcSettingsStore).MAGHRIB_ADJUSTMENT = 0;
             (persistedState as CalcSettingsStore).ISHA_ADJUSTMENT = 0;
-            (persistedState as CalcSettingsStore).MIDNIGHT_ADJUSTMENT = 0;
           case 1:
             // moved all notification related keys to alarm settings
             for (const key in persistedState as CalcSettingsStore) {

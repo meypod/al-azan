@@ -5,9 +5,10 @@ import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Sta
 import {Prayer} from '@/adhan';
 import {AdjustmentSetting} from '@/screens/settings_calculation/adjustment_setting';
 
-const AdjustablePrayersTop = [Prayer.Fajr, Prayer.Sunrise, Prayer.Dhuhr];
-
-const AdjustablePrayersBottom = [Prayer.Asr, Prayer.Maghrib, Prayer.Isha];
+const AdjustablePrayers = [
+  [Prayer.Fajr, Prayer.Sunrise, Prayer.Dhuhr, Prayer.Asr],
+  [Prayer.Sunset, Prayer.Maghrib, Prayer.Isha],
+];
 
 export function AdjustmentSettings({...vStackProps}: IVStackProps) {
   return (
@@ -19,15 +20,25 @@ export function AdjustmentSettings({...vStackProps}: IVStackProps) {
           message: `Number of minutes that will be added to the calculated times`,
         })}
       </Text>
-      <HStack mb="3">
-        {AdjustablePrayersTop.map(prayer => (
-          <AdjustmentSetting flex={1} prayer={prayer} key={prayer.toString()} />
-        ))}
-      </HStack>
-      <HStack {...vStackProps}>
-        {AdjustablePrayersBottom.map(prayer => (
-          <AdjustmentSetting flex={1} prayer={prayer} key={prayer.toString()} />
-        ))}
+      <HStack>
+        <VStack flex="1">
+          {AdjustablePrayers[0].map(prayer => (
+            <AdjustmentSetting
+              flex={1}
+              prayer={prayer}
+              key={prayer.toString()}
+            />
+          ))}
+        </VStack>
+        <VStack flex="1" pl="3">
+          {AdjustablePrayers[1].map(prayer => (
+            <AdjustmentSetting
+              flex={1}
+              prayer={prayer}
+              key={prayer.toString()}
+            />
+          ))}
+        </VStack>
       </HStack>
     </VStack>
   );
