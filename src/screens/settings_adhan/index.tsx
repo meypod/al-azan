@@ -149,6 +149,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
         'application/ogg',
         'audio/opus',
         'audio/x-wav',
+        'audio/webm',
       ],
     })
       .then(val => {

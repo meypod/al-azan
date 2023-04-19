@@ -297,6 +297,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
         'application/ogg',
         'audio/opus',
         'audio/x-wav',
+        'audio/webm',
       ],
     })
       .then(val => {
