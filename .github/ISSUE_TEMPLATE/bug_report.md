@@ -18,6 +18,14 @@ assignees: ''
 
 <!-- **Screenshots**
 If applicable, add screenshots to help explain your problem. -->
+<!-- 
+<details>
+  <summary>Screenshots</summary>
+   
+   put your screenshots here, and remove the comment tags around details 
+
+</details>
+ -->
 
 **Device Info <!--(please complete the following information)-->:**
  - Device: [e.g. Samsung S20]
