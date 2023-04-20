@@ -1,0 +1,16 @@
+name: test sth
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: test
+      if: github.event_name == 'release' && github.ref == 'refs/heads/main'
+      run: |
+        echo "yes"
+        
