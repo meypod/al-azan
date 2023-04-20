@@ -10,7 +10,8 @@ jobs:
     
     steps:
     - name: test
-      if: github.event_name == 'release' && github.ref == 'refs/heads/main'
+      # if: github.event_name == 'release' && github.ref == 'refs/heads/main'
       run: |
-        echo "yes"
+        echo ${{ github.ref }}
+
         
