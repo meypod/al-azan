@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-20 20:58+0330\n"
+"POT-Creation-Date: 2023-04-24 04:19+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,7 +221,7 @@ msgstr "Chọn loại lịch"
 
 #: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
-msgstr "Chọn hệ thống đánh số"
+msgstr "Chọn hệ thống số đếm"
 
 #: src/screens/settings_location/index.tsx:235
 #: src/screens/settings_location/index.tsx:237
@@ -930,7 +930,7 @@ msgid ""
 "determine the time for Isha"
 msgstr ""
 "Shafaq được sử dụng bởi phương pháp Uỷ ban Ngắm trăng\n"
-"để xác định loại hoàng hôn sẽ sử dụng để\n"
+"để xác định loại chạng vạng sẽ sử dụng để\n"
 "xác định thời gian cho Isha"
 
 #: src/screens/settings_calculation/index.tsx:138
@@ -1110,7 +1110,7 @@ msgstr "Thứ 3"
 
 #: src/screens/settings_calculation/index.tsx:125
 msgid "Twilight Angle"
-msgstr "Góc Hoàng hôn"
+msgstr "Góc chạng vạng"
 
 #: src/adhan/calculation_methods.ts:46
 msgid "Umm al-Qura University, Makkah"
@@ -1374,7 +1374,7 @@ msgstr "Trang chủ"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
-msgstr "nếu được bật, một thông báo sẽ được hiển thị khoảng một giờ trước mỗi lần cầu nguyện hoặc lời nhắc nào có âm báo"
+msgstr "Nếu bật, một thông báo sẽ được hiển thị khoảng một tiếng trước mỗi lần cầu nguyện hoặc lời nhắc nào có âm báo"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
