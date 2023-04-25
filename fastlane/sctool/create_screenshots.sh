@@ -3,14 +3,14 @@
 export MSYS_NO_PATHCONV=1
 
 function start_clean_status_bar {
-    # set date to march 10 2023 at 10 oclock
-    adb shell date 031010002023
+    # set date to march 10 2023 at 11 oclock
+    adb shell date 031011002023
 
     # Start demo mode
     adb shell settings put global sysui_demo_allowed 1
 
-    # Display time 10:00
-    adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1000
+    # Display time 11:00
+    adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1100
     # Display full mobile data without type
     adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false
     adb shell am broadcast -a com.android.systemui.demo -e command network -e wifi show -e level 4 -e fully true
@@ -60,6 +60,14 @@ function goto_app {
     adb shell am start com.github.meypod.al_azan/.MainActivity
 }
 
+function dark_mode_enable {
+   adb shell "cmd uimode night yes"
+}
+
+function dark_mode_disable {
+   adb shell "cmd uimode night no"
+}
+
 function save_screenshot {
     #Capture a screenshot and save to /sdcard/screen.png on your Android device.
     adb shell screencap -p /sdcard/screen.png
@@ -88,14 +96,17 @@ do
 
     set_app_settings THEME_COLOR light
     change_app_lang $i
-    sleep 2
+    sleep 5 # increased wait for broadcast to finish
     save_screenshot "$scrDir/1-main-light.png"
 
+    dark_mode_enable
     set_app_settings THEME_COLOR dark
-    sleep 0.5
+    sleep 1.5
     save_screenshot "$scrDir/2-main-dark.png"
 
+    dark_mode_disable
     set_app_settings THEME_COLOR light
+    sleep 1
 
     navigate DisplaySettings
     sleep 1
@@ -104,7 +115,7 @@ do
     navigate NotificationSettings
     sleep 1
     tap 980 580 # tap on add expand
-    sleep 1
+    sleep 0.5
     save_screenshot "$scrDir/4-notification-light.png"
     
     navigate RemindersSettings
@@ -127,7 +138,7 @@ do
     save_screenshot "$scrDir/8-notification-widget-light.png"
     collapse_status_bar
     goto_home
-    sleep 0.5
+    sleep 1
     save_screenshot "$scrDir/9-homescreen-widget-light.png"
 
     # goto app for next language

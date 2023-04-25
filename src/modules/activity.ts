@@ -59,7 +59,9 @@ export function handleDemoCommands() {
       console.log(args);
       switch (args.command) {
         case 'lang':
-          settings.setState({SELECTED_LOCALE: args.lang});
+          settings.setState({
+            SELECTED_LOCALE: args.lang === 'en-US' ? 'en' : args.lang,
+          });
           loadLocale(args.lang);
           I18nManager.forceRTL(isRTL);
           // allow some time for forceRTL to work
