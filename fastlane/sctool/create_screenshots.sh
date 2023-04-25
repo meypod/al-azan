@@ -115,8 +115,8 @@ do
 
     navigate NotificationSettings
     sleep 1
-    tap 980 560 # tap on add expand
-    tap 100 560 # tap on add expand
+    tap 980 580 # tap on add expand
+    tap 100 580 # tap on add expand
     sleep 1
     save_screenshot "$scrDir/4-notification-light.png"
     
