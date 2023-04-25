@@ -51,8 +51,8 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
   <tr>
     <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1-main-light.png"/></th>
     <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2-main-dark.png"/></th>
-    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6-homescreen-widget-light.png"/></th>
-    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/7-notification-widget-light.png"/></th>
+    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/9-homescreen-widget-light.png"/></th>
+    <td><img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/metadata/android/en-US/images/phoneScreenshots/8-notification-widget-light.png"/></th>
   </tr>
 </table>
 
