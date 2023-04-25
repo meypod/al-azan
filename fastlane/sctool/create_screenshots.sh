@@ -104,7 +104,12 @@ do
 
     adb shell date 031011002023 # always update the date and time to make sure It's right
 
-    scrDir="../metadata/android/$i/images/phoneScreenshots"
+    if [ "$1" == 'tablet' ]; then
+        scrDir="./tablet/$i/"
+    else
+        scrDir="../metadata/android/$i/images/phoneScreenshots"
+    fi
+    
     mkdir -p $scrDir
 
     dark_mode_enable # this is a bug that we need to enable dark mode before launching the app to get the dark top
