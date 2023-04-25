@@ -86,9 +86,12 @@ function save_screenshot {
 
  rm -f ./screen-tmp.png
 
-locales=('en-US' 'fa' 'bs' 'de' 'fr' 'vi' 'tr')
+locales=('en-US' 'ar' 'bs' 'de' 'fa' 'fr' 'hi' 'id' 'tr' 'ur' 'vi')
 
 start_clean_status_bar
+
+# set timezone to london
+adb shell service call alarm 3 s16 Europe/London
 
 goto_app
 sleep 2
@@ -98,6 +101,9 @@ set_app_settings SHOW_WIDGET 1
 
 for i in "${locales[@]}"
 do
+
+    adb shell date 031011002023 # always update the date and time to make sure It's right
+
     scrDir="../metadata/android/$i/images/phoneScreenshots"
     mkdir -p $scrDir
 
@@ -105,7 +111,7 @@ do
 
     set_app_settings THEME_COLOR light
     change_app_lang $i
-    sleep 6 # increased wait for broadcast to finish
+    sleep 6.3 # increased wait for broadcast to finish
     save_screenshot "$scrDir/1-main-light.png"
 
     set_app_settings THEME_COLOR dark
