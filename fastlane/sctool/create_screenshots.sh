@@ -103,13 +103,13 @@ do
 
     navigate NotificationSettings
     sleep 1
-    tap 980 610 # tap on add expand
+    tap 980 580 # tap on add expand
     sleep 1
     save_screenshot "$scrDir/4-notification-light.png"
     
     navigate RemindersSettings
     sleep 1
-    tap 600 2100 # tap on add reminder
+    tap 600 2000 # tap on add reminder
     sleep 0.5
     save_screenshot "$scrDir/5-reminders-light.png"
 
