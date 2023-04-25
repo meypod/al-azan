@@ -1,4 +1,13 @@
-import {NativeModules} from 'react-native';
+import {
+  I18nManager,
+  NativeEventEmitter,
+  NativeModule,
+  NativeModules,
+} from 'react-native';
+import {isRTL, loadLocale} from '@/i18n';
+import {push, replace} from '@/navigation/root_navigation';
+import {storage} from '@/store/mmkv';
+import {settings} from '@/store/settings';
 
 const ActivityModule = (
   NativeModules.ActivityModule
@@ -15,7 +24,7 @@ const ActivityModule = (
       )
 ) as ActivityModuleInterface;
 
-interface ActivityModuleInterface {
+interface ActivityModuleInterface extends NativeModule {
   restart(): Promise<void>;
   finish(): Promise<void>;
   finishAndRemoveTask(): Promise<void>;
@@ -31,6 +40,63 @@ interface ActivityModuleInterface {
   /** resolve true if internet became available */
   openMobileDataSettings(): Promise<boolean>;
   saveJsonDocument(data: string, initialName: string): Promise<boolean>;
+}
+
+const eventEmitter = new NativeEventEmitter(ActivityModule);
+
+type EventListener = (
+  eventType: 'demo_cmd',
+  listener: (event: any) => void,
+) => ReturnType<typeof eventEmitter.addListener>;
+
+const addEventListener = eventEmitter.addListener.bind(
+  eventEmitter,
+) as EventListener;
+
+export function handleDemoCommands() {
+  addEventListener('demo_cmd', (args: Record<string, string>) => {
+    if (args.command) {
+      console.log(args);
+      switch (args.command) {
+        case 'lang':
+          settings.setState({SELECTED_LOCALE: args.lang});
+          loadLocale(args.lang);
+          I18nManager.forceRTL(isRTL);
+          // allow some time for forceRTL to work
+          setTimeout(restart, 200);
+          break;
+        case 'set': {
+          switch (args.store) {
+            case 'settings':
+              if (args.json) {
+                settings.setState({
+                  [args.key]: JSON.parse(args.value),
+                });
+              } else {
+                settings.setState({
+                  [args.key]: args.value,
+                });
+              }
+              break;
+            case 'mmkv':
+              storage.set(args.key, args.value);
+              break;
+          }
+          break;
+        }
+        case 'restart':
+          restart();
+          break;
+        case 'navigate':
+          if (args.type === 'replace') {
+            replace(args.screen);
+          } else {
+            push(args.screen);
+          }
+          break;
+      }
+    }
+  });
 }
 
 export const restart = ActivityModule.restart;

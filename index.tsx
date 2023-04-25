@@ -2,6 +2,7 @@ import {LogBox, AppRegistry} from 'react-native';
 import {App} from '@/app';
 import {BaseComponent} from '@/base_component';
 import {bootstrap} from '@/bootstrap';
+import {handleDemoCommands} from '@/modules/activity';
 import {onUpdateScreenWidgetRequested} from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
 import fullscreen_alarm from '@/screens/fullscreen_alarm';
@@ -21,6 +22,8 @@ onUpdateScreenWidgetRequested(async () => {
   bootstrap();
   await Promise.all([setUpdateWidgetsAlarms(), updateWidgets()]);
 });
+
+handleDemoCommands();
 
 AppRegistry.registerRunnable('main-app', async initialProps => {
   bootstrap();
