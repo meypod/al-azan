@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Qibla, Coordinates} from 'adhan';
 import {
   Flex,
@@ -25,10 +26,13 @@ import CompassMod, {
   setUpdateRate,
   useCompassAccuracy,
 } from '@/modules/compass';
+import {RootStackParamList} from '@/navigation/types';
 import AccuracyIndicator from '@/screens/qibla_finder_compass/accuracy_indicator';
 import {calcSettings} from '@/store/calculation';
 
-export function QiblaCompass() {
+type Props = NativeStackScreenProps<RootStackParamList, 'QiblaCompass'>;
+
+export function QiblaCompass({route}: Props) {
   const accuracy = useCompassAccuracy();
   const {colorMode} = useColorMode();
   const [staticQiblaDegree, setStaticQiblaDegree] = useState(0);
@@ -94,14 +98,15 @@ export function QiblaCompass() {
   useEffect(() => {
     if (triedLocationOnce.current) return;
     triedLocationOnce.current = true;
-    ToastAndroid.show(t`Getting coordinates`, ToastAndroid.SHORT);
     const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
     if (LOCATION_LAT && LOCATION_LONG) {
       setFetchedCoords(undefined);
       updateQiblaDegree({lat: LOCATION_LAT, long: LOCATION_LONG});
     }
+    if (route?.params?.skipInit) return;
+    ToastAndroid.show(t`Getting coordinates`, ToastAndroid.SHORT);
     refreshLocation(true);
-  }, [refreshLocation, updateQiblaDegree]);
+  }, [refreshLocation, route?.params?.skipInit, updateQiblaDegree]);
 
   const compassImgRef = useRef<Image>(null);
   const qiblaImgRef = useRef<Image>(null);

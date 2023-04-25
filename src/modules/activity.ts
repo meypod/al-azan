@@ -87,13 +87,20 @@ export function handleDemoCommands() {
         case 'restart':
           restart();
           break;
-        case 'navigate':
+        case 'navigate': {
+          const params = Object.keys(args)
+            .filter(k => !['command', 'type'].includes(k))
+            .reduce((accumulator, curr) => {
+              accumulator[curr] = args[curr];
+              return accumulator;
+            }, {} as Record<string, string>);
           if (args.type === 'replace') {
-            replace(args.screen);
+            replace(args.screen, params);
           } else {
-            push(args.screen);
+            push(args.screen, params);
           }
           break;
+        }
       }
     }
   });

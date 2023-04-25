@@ -25,7 +25,7 @@ function stop_clean_status_bar {
 }
 
 function navigate {
-    adb shell am broadcast -a com.github.meypod.al_azan.demo -e command navigate -e type push -e screen $1
+    adb shell am broadcast -a com.github.meypod.al_azan.demo -e command navigate -e type push -e screen $@
 }
 
 function restart_app {
@@ -85,33 +85,52 @@ for i in "${locales[@]}"
 do
     scrDir="../metadata/android/$i/images/phoneScreenshots"
     mkdir -p $scrDir
+
     set_app_settings THEME_COLOR light
     change_app_lang $i
     sleep 2
     save_screenshot "$scrDir/1-main-light.png"
+
     set_app_settings THEME_COLOR dark
     sleep 0.5
     save_screenshot "$scrDir/2-main-dark.png"
+
     set_app_settings THEME_COLOR light
+
     navigate DisplaySettings
     sleep 1
     save_screenshot "$scrDir/3-display-light.png"
+
     navigate NotificationSettings
     sleep 1
+    tap 980 610
+    sleep 0.5
     save_screenshot "$scrDir/4-notification-light.png"
-    # tap on add reminder
+    
     navigate RemindersSettings
     sleep 1
-    tap 600 2100
+    tap 600 2100 # tap on add reminder
     sleep 0.5
     save_screenshot "$scrDir/5-reminders-light.png"
+
+    navigate QadaCounter
+    sleep 1
+    save_screenshot "$scrDir/6-qada-counter-light.png"
+
+    navigate QiblaCompass -e skipInit 1
+    sleep 1
+    save_screenshot "$scrDir/7-qibla-compass-light.png"
+
+    # widgets
     expand_status_bar
     sleep 0.5
-    save_screenshot "$scrDir/7-notification-widget-light.png"
+    save_screenshot "$scrDir/8-notification-widget-light.png"
     collapse_status_bar
     goto_home
     sleep 0.5
-    save_screenshot "$scrDir/6-homescreen-widget-light.png"
+    save_screenshot "$scrDir/9-homescreen-widget-light.png"
+
+    # goto app for next language
     goto_app
     sleep 1
 done
