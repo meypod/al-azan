@@ -4,7 +4,11 @@ module.exports = {
   catalogs: [
     {
       path: '<rootDir>/locales/{locale}/messages',
-      include: ['<rootDir>/src', '<rootDir>/website/src'],
+      include: [
+        '<rootDir>/src',
+        '<rootDir>/website/src',
+        '<rootDir>/fastlane/update/',
+      ],
       exclude: ['**/node_modules/**'],
     },
   ],

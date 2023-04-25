@@ -27,7 +27,7 @@ i18n.loadLocaleData({
   vi: {plurals: vi},
 });
 
-const localeFallbacks = [
+export const localeFallbacks = [
   {
     base: 'en',
     fallback: 'en',

@@ -1,6 +1,6 @@
-Application pour Adhan des temps de prière islamique et la determination de la Qibla qui respecte de la vie privée, open-source et sans publicité!
+Application Adhan et Qibla qui respecte la vie privée, open-source, sans publicité!
 
-Caractéristiques de l'application :
+Caractéristiques de l'application:
 
 * Sans publicité
 
@@ -8,13 +8,13 @@ Caractéristiques de l'application :
 
 * Open-source
 
-* Vous pouvez rechercher votre emplacement en ligne ou utiliser le GPS hors ligne.
+* Vous pouvez rechercher votre emplacement en ligne ou utiliser le GPS hors ligne
 
 * Définir l'audio personnalisé pour l'Adhan
 
 * Sélectionnez un son Adhan différent pour le Fajr
 
-* En plus des cinq prières quotidiennes, il y a des réglages pour le lever du soleil, le coucher du soleil, minuit et la prière de nuit (Tahajjud).
+* En plus des cinq prières quotidiennes, il y a des réglages pour le lever du soleil, le coucher du soleil, minuit et la prière de nuit (Tahajjud)
 
 * Nombreuses options pour le calcul de l'Adhan (اذان)
 
@@ -32,9 +32,8 @@ Caractéristiques de l'application :
 
 * Traduit en anglais, persan, arabe, turc, indonésien, français, urdu, hindi, allemand, bosniaque, vietnamien
 
-Répositoire open source :
-https://github.com/meypod/al-azan/
+Répositoire open source:
+https://github.com/meypod/al-azan
 
-Puisque nous n'utilisons aucune sorte de tracker ou de crash analytics, merci de nous faire part de tout problème ou suggestion sur notre répositoire github :
+Puisque nous n'utilisons aucune sorte de tracker ou de crash analytics, merci de nous faire part de tout problème ou suggestion sur notre répositoire GitHub:
 https://github.com/meypod/al-azan/issues
-

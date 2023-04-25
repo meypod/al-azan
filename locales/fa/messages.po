@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-24 04:19+0330\n"
+"POT-Creation-Date: 2023-04-25 21:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,8 @@ msgstr "سفید"
 msgid "Accuracy"
 msgstr "دقت"
 
-#: website/src/_includes/home.tsx:85
+#: fastlane/update/update.ts:41
+#: website/src/_includes/home.tsx:79
 msgid "Ad-Free"
 msgstr "عاری از تبلیغات"
 
@@ -100,13 +101,13 @@ msgid "Ahmer"
 msgstr "قرمز"
 
 #. Don't translate Al-Azan name
-#: website/src/_includes/home.tsx:42
+#: website/src/_includes/home.tsx:36
 #: website/src/_includes/privacy-policy.tsx:13
 msgid "Al-Azan"
 msgstr "الأذان"
 
 #. Max. 30 characters
-#: website/src/_includes/home.tsx:12
+#: fastlane/update/update.ts:27
 msgid "Al-Azan - Prayer Times"
 msgstr "الأذان - اوقات شرعی"
 
@@ -130,7 +131,8 @@ msgstr "تمام داده های ارائه شده به الأذان فقط به
 msgid "An error occured while playing the current track"
 msgstr "هنگام پخش صوت فعلی خطایی روی داد"
 
-#: website/src/_includes/home.tsx:83
+#: fastlane/update/update.ts:39
+#: website/src/_includes/home.tsx:77
 msgid "App features"
 msgstr "ویژگی های برنامه"
 
@@ -318,7 +320,8 @@ msgstr "رد کردن"
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "ریاست امور مذهبی، ترکیه"
 
-#: website/src/_includes/home.tsx:86
+#: fastlane/update/update.ts:43
+#: website/src/_includes/home.tsx:80
 msgid "Doesn't use any kind of trackers"
 msgstr "از هیچ نوع ردیابی استفاده نمی کند"
 
@@ -373,7 +376,7 @@ msgstr "خطا در بارگیری نتایج جستجو"
 msgid "Error while downloading audio"
 msgstr "خطا هنگام دانلود صوت"
 
-#: src/screens/qibla_finder_compass/index.tsx:78
+#: src/screens/qibla_finder_compass/index.tsx:82
 #: src/screens/settings_location/index.tsx:150
 msgid "Error while getting coordinates"
 msgstr "خطا هنگام گرفتن مختصات"
@@ -406,8 +409,8 @@ msgstr "جمعه"
 msgid "General (default)"
 msgstr "عمومی (پیش فرض)"
 
-#: src/screens/qibla_finder_compass/index.tsx:97
-#: src/screens/qibla_finder_compass/index.tsx:163
+#: src/screens/qibla_finder_compass/index.tsx:107
+#: src/screens/qibla_finder_compass/index.tsx:168
 #: src/screens/settings_location/index.tsx:201
 msgid "Getting coordinates"
 msgstr "درحال گرفتن مختصات"
@@ -438,7 +441,8 @@ msgstr "پنهان؟"
 msgid "Hide Prayer Times"
 msgstr "مخفی کردن اوقات شرعی"
 
-#: website/src/_includes/home.tsx:102
+#: fastlane/update/update.ts:59
+#: website/src/_includes/home.tsx:96
 msgid "Hide times you don't need"
 msgstr " پنهان کردن وقت هایی که نیاز ندارید"
 
@@ -455,7 +459,8 @@ msgstr "عرض جغرافیایی بالا"
 msgid "Home"
 msgstr "خانه"
 
-#: website/src/_includes/home.tsx:104
+#: fastlane/update/update.ts:63
+#: website/src/_includes/home.tsx:98
 msgid "Homescreen and notification Widgets"
 msgstr "ویجت های صفحه نمایش و اعلان"
 
@@ -503,7 +508,8 @@ msgstr "داده های برنامه را وارد کنید"
 msgid "Import successful"
 msgstr "وارد کردن با موفقیت انجام شد"
 
-#: website/src/_includes/home.tsx:96
+#: fastlane/update/update.ts:53
+#: website/src/_includes/home.tsx:90
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "علاوه بر نماز های پنجگانه، قابلیت نمایش طلوع، غروب، نیمه شب و نماز شب (تهجد) را دارد"
 
@@ -519,7 +525,8 @@ msgstr "اتصال اینترنت"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "اتصال به اینترنت برای کارکرد نقشه قبله ضروری است. لطفاً wifi یا اینترنت موبایل خود را فعال کنید و دوباره امتحان کنید."
 
-#: website/src/_includes/home.tsx:108
+#: fastlane/update/update.ts:69
+#: website/src/_includes/home.tsx:102
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
 msgstr "ترجمه شده به زبان های انگلیسی، فارسی، عربی، ترکی، اندونزیایی، فرانسوی، اردو، هندی، آلمانی، بوسنیایی، ویتنامی"
 
@@ -581,14 +588,18 @@ msgstr "لایسنس"
 msgid "Light"
 msgstr "روشن"
 
-#: website/src/_includes/home.tsx:101
+#: fastlane/update/update.ts:57
+msgid "Light and Dark theme"
+msgstr "تم روشن و تاریک"
+
+#: website/src/_includes/home.tsx:95
 msgid "Light/Dark theme"
 msgstr ""
 "تم روشن و تاریک\n"
 ""
 
 #: src/intro/intro.tsx:27
-#: src/screens/qibla_finder_compass/index.tsx:148
+#: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
 msgid "Location"
 msgstr "موقعیت"
@@ -610,7 +621,8 @@ msgstr "طول جغرافیایی نامعتبر است"
 msgid "Low"
 msgstr "کم"
 
-#: website/src/_includes/home.tsx:100
+#: fastlane/update/update.ts:55
+#: website/src/_includes/home.tsx:94
 msgid "Many options for Adhan (اذان) calculation"
 msgstr ""
 "گزینه های بسیار برای محاسبه وقت اذان\n"
@@ -749,11 +761,13 @@ msgstr "تنظیمات بهینه سازی باتری را باز کن"
 msgid "Open Power Manager Settings"
 msgstr "تنظیمات مدیریت انرژی را باز کن"
 
-#: website/src/_includes/home.tsx:113
+#: fastlane/update/update.ts:71
+#: website/src/_includes/home.tsx:107
 msgid "Open source repository"
 msgstr "مخزن اوپن سورس"
 
-#: website/src/_includes/home.tsx:87
+#: fastlane/update/update.ts:45
+#: website/src/_includes/home.tsx:81
 msgid "Open-source"
 msgstr "اوپن سورس یا متن باز"
 
@@ -797,7 +811,7 @@ msgstr "محاسبه مناطق قطبی"
 msgid "Power Manager"
 msgstr "مدیریت انرژی"
 
-#: website/src/_includes/home.tsx:44
+#: website/src/_includes/home.tsx:38
 msgid "Prayer Times"
 msgstr "اوقات شرعی"
 
@@ -812,12 +826,13 @@ msgid "Privacy Policy"
 msgstr "حریم خصوصی"
 
 #. Max. 80 characters
-#: website/src/_includes/home.tsx:21
+#: fastlane/update/update.ts:16
 #: website/src/_includes/privacy-policy.tsx:24
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "برنامه اوپن سورس اذان (اوقات شرعی اسلامی) و قبله یاب با حفظ حریم خصوصی"
 
-#: website/src/_includes/home.tsx:106
+#: fastlane/update/update.ts:67
+#: website/src/_includes/home.tsx:100
 msgid "Qada counter"
 msgstr "شمارنده قضا"
 
@@ -825,12 +840,13 @@ msgstr "شمارنده قضا"
 msgid "Qatar"
 msgstr "قطر"
 
-#: src/screens/qibla_finder_compass/index.tsx:139
-#: website/src/_includes/home.tsx:44
+#: src/screens/qibla_finder_compass/index.tsx:144
+#: website/src/_includes/home.tsx:38
 msgid "Qibla"
 msgstr "قبله"
 
-#: website/src/_includes/home.tsx:105
+#: fastlane/update/update.ts:65
+#: website/src/_includes/home.tsx:99
 msgid "Qibla finder"
 msgstr "قبله یاب"
 
@@ -868,8 +884,8 @@ msgid "Remind me next year"
 msgstr "سال بعد به من یادآوری کن"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:80
-#: src/tasks/set_reminder.ts:109
+#: src/tasks/set_reminder.ts:85
+#: src/tasks/set_reminder.ts:114
 msgid "Reminder"
 msgstr "یادآوری"
 
@@ -906,7 +922,8 @@ msgstr "تقویم ثانویه"
 msgid "Select as Fajr Adhan"
 msgstr "به عنوان اذان فجر انتخاب کنید"
 
-#: website/src/_includes/home.tsx:94
+#: fastlane/update/update.ts:51
+#: website/src/_includes/home.tsx:88
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "انتخاب اذان متفاوت برای نماز صبح"
 
@@ -915,11 +932,13 @@ msgstr "انتخاب اذان متفاوت برای نماز صبح"
 msgid "Selecting a name is required"
 msgstr "انتخاب نام الزامی است"
 
-#: website/src/_includes/home.tsx:93
+#: fastlane/update/update.ts:49
+#: website/src/_includes/home.tsx:87
 msgid "Set custom Adhan audio"
 msgstr "انتخاب صدای دلخواه برای اذان"
 
-#: website/src/_includes/home.tsx:103
+#: fastlane/update/update.ts:61
+#: website/src/_includes/home.tsx:97
 msgid "Set reminders before or after a prayer time"
 msgstr "ایجاد یاد آوری قبل یا بعد از هر وقت شرعی"
 
@@ -983,7 +1002,8 @@ msgstr "اعلان هشدار بعدی نمایش داده شود؟"
 msgid "Silent"
 msgstr "بی صدا"
 
-#: website/src/_includes/home.tsx:118
+#: fastlane/update/update.ts:74
+#: website/src/_includes/home.tsx:112
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "به دلیل اینکه ما از هیچ گونه ردیابی یا تجزیه و تحلیل خرابی برنامه ها استفاده نمی کنیم، لطفا مشکلات خودتون، یا پیشنهاداتتون رو در محل پروژه گیت هاب ما گزارش کنید"
 
@@ -1245,9 +1265,12 @@ msgstr "در اینجا می توانید اوقات شرعی را که نمی �
 msgid "You can hide prayer times you don't want to see in the widget here:"
 msgstr "می‌توانید اوقات شرعی را که نمی‌خواهید در ابزارک ببینید در اینجا پنهان کنید:"
 
-#: website/src/_includes/home.tsx:89
+#: fastlane/update/update.ts:47
+#: website/src/_includes/home.tsx:83
 msgid "You can search for your location online Or use GPS offline"
-msgstr "می توانید مکان خود را به صورت آنلاین جستجو کنید یا از GPS آفلاین استفاده کنید"
+msgstr ""
+"می توانید مکان خود را به صورت آنلاین جستجو کنید یا از جی پی اس استفاده کنید\n"
+""
 
 #: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
@@ -1356,11 +1379,11 @@ msgstr "فجر"
 msgid "forces all numbers to be in the selected system"
 msgstr "همه اعداد را مجبور می کند که در سیستم انتخاب شده باشند"
 
-#: src/screens/qibla_finder_compass/index.tsx:143
+#: src/screens/qibla_finder_compass/index.tsx:148
 msgid "from North"
 msgstr "از شمال"
 
-#: src/screens/qibla_finder_compass/index.tsx:154
+#: src/screens/qibla_finder_compass/index.tsx:159
 msgid "from settings"
 msgstr "از تنظیمات"
 

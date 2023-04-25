@@ -1,4 +1,4 @@
-Gizlilik öncelikli reklamsız açık kaynaklı Ezan (İslami namaz vakitleri) ve kıble uygulaması
+Mahremiyete saygılı açık kaynak Ezan (İslami namaz vakitleri) ve kıble uygulaması
 
 Uygulama özellikleri:
 
@@ -14,7 +14,7 @@ Uygulama özellikleri:
 
 * Sabah namazı için farklı Ezan sesi seçme
 
-* Beş vakit namaza ek olarak Gün Doğumu, Gün Batımı, Gece Yarısı ve Gece Namazı (Teheccüd) ayarları vardır.
+* Beş vakit namaza ek olarak Gün Doğumu, Gün Batımı, Gece Yarısı ve Gece Namazı (Teheccüd) ayarları vardır
 
 * Ezan hesaplaması için birçok seçenek
 
@@ -33,8 +33,7 @@ Uygulama özellikleri:
 * İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça, Vietnamca dili seçenekleri
 
 Açık kaynak deposu:
-https://github.com/meypod/al-azan/
+https://github.com/meypod/al-azan
 
 Herhangi bir izleyici veya çökme analizi kullanmadığımız için, lütfen yaşadığınız herhangi bir sorunu veya önerilerinizi github repomuza bildirin:
 https://github.com/meypod/al-azan/issues
-

@@ -1,4 +1,4 @@
-Datenschutzfreundliche Open-Source App für den Adhan (Islamische Gebetszeiten) und die Qibla
+Datenschutzfreundliche Open-Source App für den Adhan (Gebetszeit) und die Qibla
 
 Features der App:
 
@@ -18,6 +18,7 @@ Features der App:
 
 * Mehrere Methoden für die Berechnung des Adhan (اذان)
 
+
 * Heller und dunkler Farbmodus
 
 * Ausblenden nicht benötigter Gebetszeiten möglich
@@ -26,14 +27,14 @@ Features der App:
 
 * Startbildschirm- und Benachrichtigungs-Widgets
 
-* Ermittlung der Qibla 
+* Ermittlung der Qibla
 
 * Qada-Zähler
 
 * Lokalisierung in Englisch, Persisch, Arabisch, Türkisch, Indonesisch, Französisch, Urdu, Hindi, Deutsch, Bosnisch und Vietnamesisch
 
 Open-Source Repository:
-https://github.com/meypod/al-azan/
+https://github.com/meypod/al-azan
 
 Da in der App keine Tracker und Analysewerkzeuge eingebaut sind, melden Sie Fehler oder Vorschläge bitte an das folgende GitHub-Repository:
 https://github.com/meypod/al-azan/issues
