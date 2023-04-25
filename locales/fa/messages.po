@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-25 21:01+0330\n"
+"POT-Creation-Date: 2023-04-26 00:21+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -827,6 +827,7 @@ msgstr "حریم خصوصی"
 
 #. Max. 80 characters
 #: fastlane/update/update.ts:16
+#: website/src/_includes/home.tsx:17
 #: website/src/_includes/privacy-policy.tsx:24
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "برنامه اوپن سورس اذان (اوقات شرعی اسلامی) و قبله یاب با حفظ حریم خصوصی"
@@ -1268,9 +1269,7 @@ msgstr "می‌توانید اوقات شرعی را که نمی‌خواهید 
 #: fastlane/update/update.ts:47
 #: website/src/_includes/home.tsx:83
 msgid "You can search for your location online Or use GPS offline"
-msgstr ""
-"می توانید مکان خود را به صورت آنلاین جستجو کنید یا از جی پی اس استفاده کنید\n"
-""
+msgstr "می توانید مکان خود را به صورت آنلاین جستجو کنید یا از جی پی اس استفاده کنید"
 
 #: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."

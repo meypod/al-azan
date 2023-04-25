@@ -14,9 +14,9 @@ export function data() {
       },
       description: ({page}: {page: Page}) => {
         loadLocale(page.lang);
-        return i18n._({
-          id: 'Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app',
-        });
+        return i18n._(
+          'Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app',
+        );
       },
     },
   };
