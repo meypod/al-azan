@@ -3,8 +3,8 @@
 export MSYS_NO_PATHCONV=1
 
 function start_clean_status_bar {
-    # set date to march 10 2023 at 12 oclock
-    adb shell date 031012002023
+    # set date to march 10 2023 at 10 oclock
+    adb shell date 031010002023
 
     # Start demo mode
     adb shell settings put global sysui_demo_allowed 1
@@ -103,8 +103,8 @@ do
 
     navigate NotificationSettings
     sleep 1
-    tap 980 610
-    sleep 0.5
+    tap 980 610 # tap on add expand
+    sleep 1
     save_screenshot "$scrDir/4-notification-light.png"
     
     navigate RemindersSettings
