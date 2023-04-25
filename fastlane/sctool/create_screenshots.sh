@@ -98,7 +98,7 @@ do
 
     set_app_settings THEME_COLOR light
     change_app_lang $i
-    sleep 5 # increased wait for broadcast to finish
+    sleep 6 # increased wait for broadcast to finish
     save_screenshot "$scrDir/1-main-light.png"
 
     set_app_settings THEME_COLOR dark
