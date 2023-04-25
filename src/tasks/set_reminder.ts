@@ -33,15 +33,14 @@ export async function setReminders(options?: SetReminderOptions) {
     let reminderIdsToCancel: Array<string>;
     if (force) {
       reminderIdsToCancel = reminders.map(r => r.id);
+      settings.getState().deleteTimestamps(reminderIdsToCancel);
     } else {
       reminderIdsToCancel = reminders.filter(r => !r.enabled).map(r => r.id);
     }
     await Promise.all([
+      notifee.cancelAllNotifications(reminderIdsToCancel).catch(console.error),
       notifee
-        .cancelAllNotifications([
-          ...reminderIdsToCancel,
-          ...reminderIdsToCancel.map(id => 'pre-' + id),
-        ])
+        .cancelAllNotifications(reminderIdsToCancel.map(id => 'pre-' + id))
         .catch(console.error),
     ]);
   }
@@ -60,21 +59,27 @@ export async function setReminders(options?: SetReminderOptions) {
   const tasks = [];
 
   for (const reminder of reminders.filter(r => r.enabled)) {
-    let pTime = prayerTimes[reminder.prayer].getTime();
-    if (pTime + reminder.duration * reminder.durationModifier < Date.now()) {
-      pTime = tomorrowPrayerTimes[reminder.prayer].getTime();
-    }
-
-    const triggerDate = new Date(
-      pTime + reminder.duration * reminder.durationModifier,
-    );
-
-    if (triggerDate.getTime() < Date.now()) continue;
-
     const dismissedAlarmTS =
       settings.getState().DELIVERED_ALARM_TIMESTAMPS[reminder.id] || 0;
 
-    if (!force && dismissedAlarmTS >= triggerDate.getTime()) continue;
+    let pTime = prayerTimes[reminder.prayer].valueOf();
+    let triggerDate = new Date(
+      pTime + reminder.duration * reminder.durationModifier,
+    );
+
+    if (
+      triggerDate.valueOf() < Date.now() ||
+      dismissedAlarmTS >= triggerDate.valueOf()
+    ) {
+      pTime = tomorrowPrayerTimes[reminder.prayer].valueOf();
+      triggerDate = new Date(
+        pTime + reminder.duration * reminder.durationModifier,
+      );
+    }
+
+    if (triggerDate.valueOf() < Date.now()) continue;
+
+    if (!force && dismissedAlarmTS >= triggerDate.valueOf()) continue;
 
     const reminderOptions: SetAlarmTaskOptions & {once?: boolean} = {
       title: t`Reminder`,

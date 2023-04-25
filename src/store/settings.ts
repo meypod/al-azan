@@ -94,6 +94,7 @@ export type SettingsStore = {
   deleteAudioEntry: (entry: AudioEntry) => void;
   saveTimestamp: (alarmId: string, timestamp: number) => void;
   deleteTimestamp: (alarmId: string) => void;
+  deleteTimestamps: (alarmId: string[]) => void;
   setSetting: <T extends keyof SettingsStore>(
     key: T,
     val: SettingsStore[T],
@@ -263,6 +264,12 @@ export const settings = createStore<SettingsStore>()(
         set(
           produce<SettingsStore>(draft => {
             delete draft.DELIVERED_ALARM_TIMESTAMPS[alarmId];
+          }),
+        ),
+      deleteTimestamps: alarmIds =>
+        set(
+          produce<SettingsStore>(draft => {
+            alarmIds.forEach(id => delete draft.DELIVERED_ALARM_TIMESTAMPS[id]);
           }),
         ),
 

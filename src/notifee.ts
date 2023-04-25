@@ -239,8 +239,16 @@ async function handleNotification({
               reminderSettings.getState().disableReminder({
                 id: scheduledAlarmOptions.notifId,
               });
+            } else {
+              const reminder = reminderSettings
+                .getState()
+                .REMINDERS.find(r => r.id === scheduledAlarmOptions.notifId);
+              if (reminder) {
+                await setReminders({
+                  reminders: [reminder],
+                });
+              }
             }
-            await setReminders();
           }
         }
       }
