@@ -94,12 +94,13 @@ do
     scrDir="../metadata/android/$i/images/phoneScreenshots"
     mkdir -p $scrDir
 
+    dark_mode_enable # this is a bug that we need to enable dark mode before launching the app to get the dark top
+
     set_app_settings THEME_COLOR light
     change_app_lang $i
     sleep 5 # increased wait for broadcast to finish
     save_screenshot "$scrDir/1-main-light.png"
 
-    dark_mode_enable
     set_app_settings THEME_COLOR dark
     sleep 1.5
     save_screenshot "$scrDir/2-main-dark.png"
@@ -115,7 +116,7 @@ do
     navigate NotificationSettings
     sleep 1
     tap 980 580 # tap on add expand
-    sleep 0.5
+    sleep 1
     save_screenshot "$scrDir/4-notification-light.png"
     
     navigate RemindersSettings
