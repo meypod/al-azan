@@ -75,9 +75,16 @@ function save_screenshot {
     adb pull /sdcard/screen.png ./screen-tmp.png
     #Delete /sdcard/screen.png
     adb shell rm /sdcard/screen.png
+
+    pngquant --strip --skip-if-larger --force --quality 85-99 ./screen-tmp.png -o ./screen-tmp.png
+    oxipng --strip safe ./screen-tmp.png --out ./screen-tmp.png
     
     mv ./screen-tmp.png "$1"
 }
+
+# cleanup from before
+
+ rm -f ./screen-tmp.png
 
 locales=('en-US' 'fa' 'bs' 'de' 'fr' 'vi' 'tr')
 

@@ -2,6 +2,9 @@
 
 ## checklist
 
+- scoop install pngquant
+- scoop install oxipng
+
 - use Pixel 3 hardware profile (1080x2160)
 - update wallpaper
 - check if icons arrangement are okay
