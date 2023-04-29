@@ -19,7 +19,7 @@ export function PreferHeadphoneSetting(props: IStackProps) {
     <HStack {...props}>
       <FormControl fontSize="md">
         <HStack justifyContent={'space-between'}>
-          <Text>{t`Use headphones when available?`}</Text>
+          <Text flexShrink={1}>{t`Use headphones when available?`}</Text>
           <Switch value={preference} onToggle={onToggle} size="lg" />
         </HStack>
         <FormControl.HelperText mt="-1">

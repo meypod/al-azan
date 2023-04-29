@@ -11,7 +11,7 @@ export function NotifyNextAdhanSetting(props: IStackProps) {
     <HStack {...props}>
       <FormControl fontSize="md">
         <HStack justifyContent={'space-between'}>
-          <Text>{t`Show next in notification?`}</Text>
+          <Text flexShrink={1}>{t`Show next in notification?`}</Text>
           <Switch
             value={notifyNextPrayerTime}
             onToggle={setNotifyNextPrayerTime}

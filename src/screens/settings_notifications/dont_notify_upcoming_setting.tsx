@@ -18,7 +18,7 @@ export function DontNotifyUpcomingSetting(props: IStackProps) {
     <HStack {...props}>
       <FormControl fontSize="md">
         <HStack justifyContent={'space-between'}>
-          <Text>{t`Show upcoming alarm notification?`}</Text>
+          <Text flexShrink={1}>{t`Show upcoming alarm notification?`}</Text>
           <Switch
             value={!dontNotifyUpcomingAlarm}
             onToggle={onToggle}

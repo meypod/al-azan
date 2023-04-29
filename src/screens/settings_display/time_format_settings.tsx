@@ -10,7 +10,7 @@ export function TimeFormatSettings(props: IStackProps) {
       <FormControl fontSize="md">
         <FormControl.Label>{t`Time format`}:</FormControl.Label>
         <HStack justifyContent={'space-between'}>
-          <Text>{t`Use 24-Hour format`}</Text>
+          <Text flexShrink={1}>{t`Use 24-Hour format`}</Text>
           <Switch value={is24Hour} onToggle={setIs24Hour} size="lg" />
         </HStack>
       </FormControl>

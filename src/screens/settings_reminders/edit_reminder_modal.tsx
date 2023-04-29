@@ -209,7 +209,7 @@ export function EditReminderModal({
             <FormControl>
               <FormControl.Label>{t`Options`}:</FormControl.Label>
               <HStack alignItems="center" justifyContent="space-between">
-                <Text>
+                <Text flexShrink={1}>
                   {t({
                     message: `Only once?`,
                     comment: 'shown in add/edit reminder dialog',

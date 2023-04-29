@@ -19,7 +19,7 @@ export function VolumeButtonSetting(props: IStackProps) {
     <HStack {...props}>
       <FormControl fontSize="md">
         <HStack justifyContent={'space-between'}>
-          <Text>{t`Volume button stops adhan`}</Text>
+          <Text flexShrink={1}>{t`Volume button stops adhan`}</Text>
           <Switch
             value={volumeButtonStopsAdhan}
             onToggle={onToggle}
