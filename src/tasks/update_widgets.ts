@@ -8,6 +8,7 @@ import {
   translatePrayer,
 } from '@/adhan';
 import {getActivePrayer} from '@/adhan/utils';
+import {isRTL} from '@/i18n';
 import {updateScreenWidget} from '@/modules/screen_widget';
 import {
   cancelPermanentNotifWidget,
@@ -74,6 +75,10 @@ export async function updateWidgets() {
         p === activePrayer,
       ] as [prayerName: string, prayerTime: string, isActive: Boolean],
   );
+
+  if (!isRTL) {
+    prayers.reverse();
+  }
 
   const secondaryDate = getFormattedDate(now);
   const hijriDate = getArabicDate(now);
