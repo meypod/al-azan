@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-29 04:18+0330\n"
+"POT-Creation-Date: 2023-05-08 17:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "Preciznost"
 msgid "Ad-Free"
 msgstr "Bez oglasa"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
 msgstr "Adaptivno punjenje"
 
@@ -88,7 +88,7 @@ msgid "Adjustments"
 msgstr "Prilagođenja"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
-#: src/screens/settings_battery_optimizations/index.tsx:108
+#: src/screens/settings_fix_common_problems/index.tsx:108
 msgid "Advanced"
 msgstr "Napredno"
 
@@ -163,10 +163,6 @@ msgstr "Mora biti prikazano najmanje jedno vrijeme namaza"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "Pažnja"
-
-#: src/intro/intro.tsx:39
-msgid "Battery Optimization"
-msgstr "Optimizacija Baterije"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -291,7 +287,7 @@ msgstr "Zadano"
 msgid "Delete"
 msgstr "Izbrišite"
 
-#: src/screens/settings_battery_optimizations/index.tsx:46
+#: src/screens/settings_fix_common_problems/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Ovisno o vašem uređaju i verziji Androida, ponekad vaš uređaj može ugasiti aplikaciju u pozadini kako bi uštedio bateriju. Ovo može spriječiti isporuku alarma/obavještenja."
 
@@ -303,7 +299,7 @@ msgstr "Poništite odabir kao Sabah Ezan"
 msgid "Device sounds"
 msgstr "Zvukovi uređaja"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Disabled"
 msgstr "Isključeno"
 
@@ -356,7 +352,7 @@ msgstr "Uredite Podsjetnik"
 msgid "Egyptian General Survey Authority"
 msgstr "Egipatska Generalna Geodetska Uprava"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Enabled"
 msgstr "Uključeno"
 
@@ -400,6 +396,12 @@ msgstr "Izvezite podatke"
 #: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Nađite Moju Lokaciju"
+
+#. screen title
+#: src/intro/intro.tsx:39
+#: src/navigation/types.ts:75
+msgid "Fix Common Problems"
+msgstr "Popravite uobičajene probleme"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -484,15 +486,15 @@ msgstr "Ako je omogućeno, kada se prikaže obavijest, sadržavat će informacij
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Ako ste aktivirali “Backup & Reset” u postavkama svog telefona (Postavke / Sigurnosna kopija i resetiranje / Sigurnosna kopija mojih podataka), treba da budete svjesni da će sam Android (ne Al-Azan) povremeno spremati kopiju podataka vašeg telefona u Googleovu serveri. Ovo omogućava Androidu da povrati vaše podatke u slučaju da se vaš uređaj ošteti ili da kupite novi uređaj. Programeri Al-Azana nemaju pristup ovim podacima."
 
-#: src/screens/settings_battery_optimizations/index.tsx:103
+#: src/screens/settings_fix_common_problems/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Ako ste i dalje imali problema sa zaustavljanjem aplikacije nakon nekog vremena, molim vas da posjetite dontkillmyapp.com za više rješenja."
 
-#: src/screens/settings_battery_optimizations/index.tsx:49
+#: src/screens/settings_fix_common_problems/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Ako želite biti sigurni da aplikacija može raditi pouzdano, morate onemogućiti optimizaciju napajanja za ovu aplikaciju. Povezane postavke možete otvoriti koristeći dugme ispod."
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:19
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "Ako vaš uređaj ima prilagodljivo punjenje, kao što je Google Pixel, i ne želite da se ezan ili podsjetnici prepoznaju kao alarm, možete omogućiti ovu opciju."
 
@@ -749,11 +751,11 @@ msgstr "Samo jednom?"
 msgid "Only six items can be shown at the same time"
 msgstr "Samo šest stvari može biti pokazano istovremeno"
 
-#: src/screens/settings_battery_optimizations/index.tsx:62
+#: src/screens/settings_fix_common_problems/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "Otvorite Postavke za Optimizaciju Baterije"
 
-#: src/screens/settings_battery_optimizations/index.tsx:93
+#: src/screens/settings_fix_common_problems/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "Otvorite Postavke Napojnog Menadžera"
 
@@ -795,7 +797,7 @@ msgstr "Dozvola Stanja Telefona"
 msgid "Please enable location service"
 msgstr "Omogućite uslugu lokacije"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:22
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "Imajte na umu da omogućavanje ove opcije može uzrokovati pokretanje ezana i podsjetnika sa zakašnjenjem ili nikako u nekim slučajevima. Omogućite ovo s oprezom."
 
@@ -803,7 +805,7 @@ msgstr "Imajte na umu da omogućavanje ove opcije može uzrokovati pokretanje ez
 msgid "Polar Resolution"
 msgstr "Polarna Procjena Razmaka"
 
-#: src/screens/settings_battery_optimizations/index.tsx:67
+#: src/screens/settings_fix_common_problems/index.tsx:67
 msgid "Power Manager"
 msgstr "Napojni Menadžer"
 
@@ -871,7 +873,7 @@ msgstr "Ramazan je blizu,"
 msgid "Referred to as the ISNA method"
 msgstr "Pominje se kao ISNA metoda"
 
-#: src/tasks/update_widgets.ts:20
+#: src/tasks/update_widgets.ts:21
 msgid "Remaining till"
 msgstr "Ostaje do"
 
@@ -894,7 +896,7 @@ msgstr "Ponovite"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Potrebne postavke su nepotpune. Da bi aplikacija prikazivala vremena molitve, morate je kasnije konfigurirati iz postavkih."
 
-#: src/screens/settings_battery_optimizations/index.tsx:83
+#: src/screens/settings_fix_common_problems/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1027,7 +1029,7 @@ msgstr "Softverska licenca"
 msgid "Solar Hijri"
 msgstr "Iranski Kalendar"
 
-#: src/screens/settings_battery_optimizations/index.tsx:71
+#: src/screens/settings_fix_common_problems/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1048,7 +1050,7 @@ msgstr "Zvuk"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Duhovna Uprava Muslimana Rusije"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_fix_common_problems/index.tsx:52
 msgid "Status"
 msgstr "Stanje"
 
@@ -1189,7 +1191,7 @@ msgstr "Koristite Kompas"
 msgid "Use Map"
 msgstr "Koristite Kartu"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:26
 msgid "Use a different alarm type?"
 msgstr "Koristiti drugu vrstu alarma?"
 
@@ -1259,7 +1261,7 @@ msgstr "WiFi"
 msgid "Yes"
 msgstr "Da"
 
-#: src/screens/settings_battery_optimizations/index.tsx:76
+#: src/screens/settings_fix_common_problems/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme ispod."
 
@@ -1304,7 +1306,7 @@ msgid "about.credits.google"
 msgstr "Većina ikona koje se koriste u ovoj aplikaciji su iz ikona google materijala."
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:89
 msgid "about_settings"
 msgstr "O Aplikaciji"
 
@@ -1329,11 +1331,6 @@ msgstr "Ikindija"
 #: src/navigation/types.ts:45
 msgid "backup_settings"
 msgstr "Rezerva"
-
-#. screen title
-#: src/navigation/types.ts:75
-msgid "battery_optimization_settings"
-msgstr "Optimizacija Baterije"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
@@ -1366,7 +1363,7 @@ msgid "date.second"
 msgstr "sekunda"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:94
 msgid "dev_settings"
 msgstr "Razvodničke Postavke"
 
@@ -1451,19 +1448,19 @@ msgid "notification_settings"
 msgstr "Obavijesti i Zvuk"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:111
 msgid "qada_counter"
 msgstr "Kadski Brojač"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:107
 msgid "qibla_compass"
 msgstr "Kibla Kompas"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:99
 msgid "qibla_finder"
 msgstr "Kibla Pronalaznik"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:103
 msgid "qibla_map"
 msgstr "Kibla Karta"
 
@@ -1472,7 +1469,7 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Rahib Mustafa Galvaš"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:84
 msgid "reminders_settings"
 msgstr "Podsjetnici"
 
@@ -1510,7 +1507,7 @@ msgid "sunset"
 msgstr "Zalazak"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:79
 msgid "widget_settings"
 msgstr "Postavke za Vidžete"
 

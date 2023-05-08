@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-29 04:18+0330\n"
+"POT-Creation-Date: 2023-05-08 17:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "Akurasi"
 msgid "Ad-Free"
 msgstr "Bebas Iklan"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
 msgstr "Pengisian Daya Adaptif"
 
@@ -88,7 +88,7 @@ msgid "Adjustments"
 msgstr "Penyesuaian"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
-#: src/screens/settings_battery_optimizations/index.tsx:108
+#: src/screens/settings_fix_common_problems/index.tsx:108
 msgid "Advanced"
 msgstr "Lanjutan"
 
@@ -163,10 +163,6 @@ msgstr "Setidaknya satu waktu sholat harus ditampilkan"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "Perhatian"
-
-#: src/intro/intro.tsx:39
-msgid "Battery Optimization"
-msgstr "Optimasi Baterai"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -291,7 +287,7 @@ msgstr "Bawaan"
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/screens/settings_battery_optimizations/index.tsx:46
+#: src/screens/settings_fix_common_problems/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa perangkat mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
 
@@ -303,7 +299,7 @@ msgstr "Batalkan pilihan sebagai Adzan Subuh"
 msgid "Device sounds"
 msgstr "Suara perangkat"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Disabled"
 msgstr "Tidak Aktif"
 
@@ -356,7 +352,7 @@ msgstr "Ubah Pengingat"
 msgid "Egyptian General Survey Authority"
 msgstr "Otoritas Umum Mesir"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Enabled"
 msgstr "Aktif"
 
@@ -400,6 +396,12 @@ msgstr "Ekspor data"
 #: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
+
+#. screen title
+#: src/intro/intro.tsx:39
+#: src/navigation/types.ts:75
+msgid "Fix Common Problems"
+msgstr "Memperbaiki Masalah Umum"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -484,15 +486,15 @@ msgstr "Jika diaktifkan, ketika notifikasi ditampilkan, maka akan berisi info un
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Jika Anda telah mengaktifkan \"Pencadangan & Pengaturan Ulang\" di pengaturan ponsel Anda (Pengaturan / Pencadangan & Pengaturan Ulang / Cadangkan data saya), Anda harus mengetahui bahwa Android itu sendiri (bukan Al-Azan) akan menyimpan salinan data ponsel Anda secara berkala di server Google. Hal ini memungkinkan Android untuk memulihkan data Anda jika perangkat Anda rusak, atau Anda membeli perangkat baru. Pengembang Al-Azan tidak memiliki akses ke data ini."
 
-#: src/screens/settings_battery_optimizations/index.tsx:103
+#: src/screens/settings_fix_common_problems/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Jika Anda masih memiliki masalah dengan aplikasi yang berhenti setelah beberapa waktu, silakan kunjungi dontkillmyapp.com untuk solusi lebih lanjut."
 
-#: src/screens/settings_battery_optimizations/index.tsx:49
+#: src/screens/settings_fix_common_problems/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Untuk memastikan aplikasi berjalan dengan lancar, Anda perlu menonaktifkan pengoptimalan daya untuk aplikasi ini. Buka halaman pengaturan daya dengan tombol berikut."
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:19
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "Jika perangkat Anda memiliki pengisian daya adaptif, seperti Google Pixel, dan Anda tidak ingin azan atau pengingat dikenali sebagai alarm, Anda dapat mengaktifkan opsi ini."
 
@@ -749,11 +751,11 @@ msgstr "Hanya sekali?"
 msgid "Only six items can be shown at the same time"
 msgstr "Hanya enam item yang dapat ditampilkan secara bersamaan"
 
-#: src/screens/settings_battery_optimizations/index.tsx:62
+#: src/screens/settings_fix_common_problems/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "Buka Pengaturan"
 
-#: src/screens/settings_battery_optimizations/index.tsx:93
+#: src/screens/settings_fix_common_problems/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "Buka Pengaturan"
 
@@ -795,7 +797,7 @@ msgstr "Izin Status Telepon"
 msgid "Please enable location service"
 msgstr "Harap aktifkan layanan lokasi"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:22
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "Harap diperhatikan bahwa mengaktifkan opsi ini dapat menyebabkan adzan dan pengingat berbunyi dengan penundaan atau tidak berbunyi sama sekali dalam beberapa kasus. Aktifkan ini dengan hati-hati."
 
@@ -803,7 +805,7 @@ msgstr "Harap diperhatikan bahwa mengaktifkan opsi ini dapat menyebabkan adzan d
 msgid "Polar Resolution"
 msgstr "Resolusi Kutub"
 
-#: src/screens/settings_battery_optimizations/index.tsx:67
+#: src/screens/settings_fix_common_problems/index.tsx:67
 msgid "Power Manager"
 msgstr "Pengelola Daya"
 
@@ -871,7 +873,7 @@ msgstr "Ramadan sudah dekat,"
 msgid "Referred to as the ISNA method"
 msgstr "Mengacu pada metode ISNA"
 
-#: src/tasks/update_widgets.ts:20
+#: src/tasks/update_widgets.ts:21
 msgid "Remaining till"
 msgstr "Sisa sampai"
 
@@ -894,7 +896,7 @@ msgstr "Ulangi"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Pengaturan yang diperlukan tidak lengkap. Agar aplikasi menampilkan waktu sholat, proses pengaturan perlu dilanjutkan kembali nanti."
 
-#: src/screens/settings_battery_optimizations/index.tsx:83
+#: src/screens/settings_fix_common_problems/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1022,7 +1024,7 @@ msgstr "Lisensi Perangkat Lunak"
 msgid "Solar Hijri"
 msgstr "Matahari Hijriah"
 
-#: src/screens/settings_battery_optimizations/index.tsx:71
+#: src/screens/settings_fix_common_problems/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1040,7 +1042,7 @@ msgstr "Suara"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Administrasi Keagamaan Muslim Rusia"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_fix_common_problems/index.tsx:52
 msgid "Status"
 msgstr "Status"
 
@@ -1178,7 +1180,7 @@ msgstr "Gunakan Kompas"
 msgid "Use Map"
 msgstr "Gunakan Peta"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:26
 msgid "Use a different alarm type?"
 msgstr "Menggunakan jenis alarm yang berbeda?"
 
@@ -1248,7 +1250,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "Ya"
 
-#: src/screens/settings_battery_optimizations/index.tsx:76
+#: src/screens/settings_fix_common_problems/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
@@ -1290,7 +1292,7 @@ msgid "about.credits.google"
 msgstr "Sebagian besar ikon yang digunakan dalam aplikasi ini berasal dari ikon material Google."
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:89
 msgid "about_settings"
 msgstr "Tentang"
 
@@ -1315,11 +1317,6 @@ msgstr "Ashar"
 #: src/navigation/types.ts:45
 msgid "backup_settings"
 msgstr "Cadangan"
-
-#. screen title
-#: src/navigation/types.ts:75
-msgid "battery_optimization_settings"
-msgstr "Optimasi Baterai"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
@@ -1352,7 +1349,7 @@ msgid "date.second"
 msgstr "detik"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:94
 msgid "dev_settings"
 msgstr "Pengembang"
 
@@ -1437,19 +1434,19 @@ msgid "notification_settings"
 msgstr "Notifikasi & Suara"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:111
 msgid "qada_counter"
 msgstr "Penghitung Qada"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:107
 msgid "qibla_compass"
 msgstr "Kompas Kiblat"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:99
 msgid "qibla_finder"
 msgstr "Penunjuk Arah Kiblat"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:103
 msgid "qibla_map"
 msgstr "Peta Kiblat"
 
@@ -1458,7 +1455,7 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:84
 msgid "reminders_settings"
 msgstr "Pengingat"
 
@@ -1496,7 +1493,7 @@ msgid "sunset"
 msgstr "Terbenam"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:79
 msgid "widget_settings"
 msgstr "Pengaturan Widget"
 

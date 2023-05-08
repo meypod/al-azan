@@ -58,7 +58,7 @@ const settingsScreenList: ScreenListItem[] = [
     icon: CalculateIcon,
   },
   {
-    name: 'BatteryOptimizationSettings',
+    name: 'FixCommonProblemsSettings',
     icon: BatteryChargingIcon,
   },
   {

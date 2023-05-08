@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-29 04:18+0330\n"
+"POT-Creation-Date: 2023-05-08 17:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "دقت"
 msgid "Ad-Free"
 msgstr "عاری از تبلیغات"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
 msgstr "شارژ تطبیقی"
 
@@ -88,7 +88,7 @@ msgid "Adjustments"
 msgstr "تنظیمات زمان"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
-#: src/screens/settings_battery_optimizations/index.tsx:108
+#: src/screens/settings_fix_common_problems/index.tsx:108
 msgid "Advanced"
 msgstr "پیشرفته"
 
@@ -163,10 +163,6 @@ msgstr "حداقل یک وقت شرعی باید نشان داده شود"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "توجه"
-
-#: src/intro/intro.tsx:39
-msgid "Battery Optimization"
-msgstr "بهینه سازی باتری"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -291,7 +287,7 @@ msgstr "پیش فرض"
 msgid "Delete"
 msgstr "حذف"
 
-#: src/screens/settings_battery_optimizations/index.tsx:46
+#: src/screens/settings_fix_common_problems/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "بسته به دستگاه و نسخه اندروید شما، گاهی اوقات ممکن است دستگاه شما برای صرفه جویی در باتری، برنامه را در پس‌زمینه ببندد. این می تواند از ارسال هشدارها/اعلان ها جلوگیری کند."
 
@@ -303,7 +299,7 @@ msgstr "لغو انتخاب به عنوان اذان فجر"
 msgid "Device sounds"
 msgstr "صداهای دستگاه"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Disabled"
 msgstr "غیرفعال"
 
@@ -356,7 +352,7 @@ msgstr "ویرایش یادآوری"
 msgid "Egyptian General Survey Authority"
 msgstr "اداره کل بررسی مصر"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Enabled"
 msgstr "فعال"
 
@@ -400,6 +396,12 @@ msgstr "خروجی داده ها"
 #: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "پیدا کردن مکان من"
+
+#. screen title
+#: src/intro/intro.tsx:39
+#: src/navigation/types.ts:75
+msgid "Fix Common Problems"
+msgstr "رفع مشکلات رایج"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -484,15 +486,15 @@ msgstr "در صورت فعال بودن، هنگامی که اعلان نشان 
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "اگر «پشتیبان‌گیری و بازنشانی» را در تنظیمات گوشی خود فعال کرده‌اید (تنظیمات / پشتیبان‌گیری و بازنشانی / پشتیبان‌گیری از داده‌های من)، باید توجه داشته باشید که خود اندروید (نه الأذان) به طور دوره‌ای یک کپی از داده‌های گوشی شما را در Google ذخیره می‌کند. سرورها این به Android اجازه می دهد تا در صورت آسیب دیدن دستگاه یا خرید دستگاه جدید، اطلاعات شما را بازیابی کند. توسعه دهندگان الأذان به این داده ها دسترسی ندارند."
 
-#: src/screens/settings_battery_optimizations/index.tsx:103
+#: src/screens/settings_fix_common_problems/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "اگر پس از مدتی همچنان با توقف برنامه مشکل داشتید، لطفاً برای راه حل های بیشتر به dontkillmyapp.com مراجعه کنید."
 
-#: src/screens/settings_battery_optimizations/index.tsx:49
+#: src/screens/settings_fix_common_problems/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "اگر می‌خواهید مطمئن شوید که برنامه بتواند قابل اعتماد کار کند، باید بهینه‌سازی نیرو را برای این برنامه غیرفعال کنید. می توانید تنظیمات مربوطه را با استفاده از دکمه زیر باز کنید."
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:19
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "اگر دستگاه شما مانند Google Pixel دارای شارژ تطبیقی است و نمی‌خواهید اذان یا یادآوری‌ها به‌عنوان زنگ هشدار شناسایی شوند، می‌توانید این گزینه را فعال کنید."
 
@@ -753,11 +755,11 @@ msgstr "فقط یک بار؟"
 msgid "Only six items can be shown at the same time"
 msgstr "فقط شش مورد را می توان همزمان نشان داد"
 
-#: src/screens/settings_battery_optimizations/index.tsx:62
+#: src/screens/settings_fix_common_problems/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "تنظیمات بهینه سازی باتری را باز کن"
 
-#: src/screens/settings_battery_optimizations/index.tsx:93
+#: src/screens/settings_fix_common_problems/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "تنظیمات مدیریت انرژی را باز کن"
 
@@ -799,7 +801,7 @@ msgstr "مجوز وضعیت تلفن"
 msgid "Please enable location service"
 msgstr "لطفاً سرویس موقعیت مکانی را فعال کنید"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:22
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "لطفاً توجه داشته باشید که فعال کردن این گزینه ممکن است باعث شود اذان و یادآوری ها با تأخیر فعال شوند یا در برخی موارد اصلاً اجرا نشود. این را با احتیاط فعال کنید."
 
@@ -807,7 +809,7 @@ msgstr "لطفاً توجه داشته باشید که فعال کردن این 
 msgid "Polar Resolution"
 msgstr "محاسبه مناطق قطبی"
 
-#: src/screens/settings_battery_optimizations/index.tsx:67
+#: src/screens/settings_fix_common_problems/index.tsx:67
 msgid "Power Manager"
 msgstr "مدیریت انرژی"
 
@@ -875,7 +877,7 @@ msgstr "ماه مبارک رمضان نزدیک است،"
 msgid "Referred to as the ISNA method"
 msgstr "معروف به روش ایسنا"
 
-#: src/tasks/update_widgets.ts:20
+#: src/tasks/update_widgets.ts:21
 msgid "Remaining till"
 msgstr "مانده تا"
 
@@ -898,7 +900,7 @@ msgstr "تکرار"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "تنظیمات مورد نیاز ناقص هستند. برای اینکه برنامه اوقات شرعی را نشان دهد، بعداً باید آن را از صفحه تنظیمات تنظیم کنید."
 
-#: src/screens/settings_battery_optimizations/index.tsx:83
+#: src/screens/settings_fix_common_problems/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1024,7 +1026,7 @@ msgstr "مجوز نرم افزار"
 msgid "Solar Hijri"
 msgstr "هجری شمسی"
 
-#: src/screens/settings_battery_optimizations/index.tsx:71
+#: src/screens/settings_fix_common_problems/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1042,7 +1044,7 @@ msgstr "صدا"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "اداره معنوی مسلمانان روسیه"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_fix_common_problems/index.tsx:52
 msgid "Status"
 msgstr "وضعیت"
 
@@ -1180,7 +1182,7 @@ msgstr "استفاده از قطب نما"
 msgid "Use Map"
 msgstr "استفاده از نقشه"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:26
 msgid "Use a different alarm type?"
 msgstr "از نوع دیگری از زنگ هشدار استفاده شود؟"
 
@@ -1250,7 +1252,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "بله"
 
-#: src/screens/settings_battery_optimizations/index.tsx:76
+#: src/screens/settings_fix_common_problems/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
 
@@ -1295,7 +1297,7 @@ msgid "about.credits.google"
 msgstr "اکثر آیکون های استفاده شده در این برنامه از آیکون های متریال گوگل هستند."
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:89
 msgid "about_settings"
 msgstr "درباره"
 
@@ -1320,11 +1322,6 @@ msgstr "عصر"
 #: src/navigation/types.ts:45
 msgid "backup_settings"
 msgstr "پشتیبان گیری"
-
-#. screen title
-#: src/navigation/types.ts:75
-msgid "battery_optimization_settings"
-msgstr "بهینه سازی باتری"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
@@ -1357,7 +1354,7 @@ msgid "date.second"
 msgstr "ثانیه"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:94
 msgid "dev_settings"
 msgstr "توسعه دهنده"
 
@@ -1442,19 +1439,19 @@ msgid "notification_settings"
 msgstr "اعلان و صدا"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:111
 msgid "qada_counter"
 msgstr "شمارنده قضا"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:107
 msgid "qibla_compass"
 msgstr "قبله نما"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:99
 msgid "qibla_finder"
 msgstr "قبله یاب"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:103
 msgid "qibla_map"
 msgstr "نقشه قبله"
 
@@ -1463,7 +1460,7 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفی غلوش"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:84
 msgid "reminders_settings"
 msgstr "یادآوری ها"
 
@@ -1501,7 +1498,7 @@ msgid "sunset"
 msgstr "غروب"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:79
 msgid "widget_settings"
 msgstr "تنظیمات ابزارک"
 

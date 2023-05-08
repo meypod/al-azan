@@ -4,7 +4,7 @@ import {useCallback, useState} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
 import {IntroItem} from '@/intro/intro_item';
-import {BatteryOptimizationSlide} from '@/intro/slides/battery';
+import {FixCommonProblemsSlide} from '@/intro/slides/battery';
 import {CalculationSlide} from '@/intro/slides/calculation';
 import {LocationSlide} from '@/intro/slides/location';
 import {NotificationAndSoundSlide} from '@/intro/slides/notification';
@@ -36,8 +36,8 @@ const data = [
     children: <NotificationAndSoundSlide />,
   },
   {
-    title: () => t`Battery Optimization`,
-    children: <BatteryOptimizationSlide />,
+    title: () => t`Fix Common Problems`,
+    children: <FixCommonProblemsSlide />,
   },
 ];
 

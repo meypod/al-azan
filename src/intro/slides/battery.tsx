@@ -1,5 +1,5 @@
-import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
+import {FixCommonProblemsSettings} from '@/screens/settings_fix_common_problems';
 
-export function BatteryOptimizationSlide() {
-  return <BatteryOptimizationSettings />;
+export function FixCommonProblemsSlide() {
+  return <FixCommonProblemsSettings />;
 }

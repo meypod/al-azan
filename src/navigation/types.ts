@@ -11,7 +11,7 @@ export type RootStackParamList = {
   NotificationSettings: undefined;
   AdhanSettings: undefined;
   CalculationSettings: undefined;
-  BatteryOptimizationSettings: undefined;
+  FixCommonProblemsSettings: undefined;
   WidgetSettings: undefined;
   RemindersSettings: undefined;
   AboutSettings: undefined;
@@ -72,9 +72,8 @@ const routeTranslations = {
     message: 'Calculation',
     comment: 'screen title',
   }),
-  BatteryOptimizationSettings: defineMessage({
-    id: 'battery_optimization_settings',
-    message: 'Battery Optimization',
+  FixCommonProblemsSettings: defineMessage({
+    message: 'Fix Common Problems',
     comment: 'screen title',
   }),
   WidgetSettings: defineMessage({

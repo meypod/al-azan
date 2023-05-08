@@ -14,7 +14,7 @@ import {AdaptiveChargingToggle} from './adaptive_charging_toggle';
 import {MenuIcon} from '@/assets/icons/material_icons/menu';
 import useInterval from '@/utils/hooks/use_interval';
 
-export function BatteryOptimizationSettings(props: IScrollViewProps) {
+export function FixCommonProblemsSettings(props: IScrollViewProps) {
   const [batteryOptimizationStatus, setBatteryOptimizationStatus] =
     useState<Boolean>(false);
   const [powerManagerInfo, setPowerManagerInfo] = useState<

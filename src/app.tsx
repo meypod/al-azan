@@ -29,10 +29,10 @@ import Settings from '@/screens/settings';
 import {AboutSettings} from '@/screens/settings_about';
 import {AdhanSettings} from '@/screens/settings_adhan';
 import {BackupSettings} from '@/screens/settings_backup';
-import {BatteryOptimizationSettings} from '@/screens/settings_battery_optimizations';
 import {CalculationSettings} from '@/screens/settings_calculation';
 import {DevSettings} from '@/screens/settings_dev';
 import {DisplaySettings} from '@/screens/settings_display';
+import {FixCommonProblemsSettings} from '@/screens/settings_fix_common_problems';
 import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
@@ -156,8 +156,8 @@ export function App(): JSX.Element {
             component={CalculationSettings}
           />
           <Stack.Screen
-            name="BatteryOptimizationSettings"
-            component={BatteryOptimizationSettings}
+            name="FixCommonProblemsSettings"
+            component={FixCommonProblemsSettings}
           />
           <Stack.Screen name="WidgetSettings" component={WidgetSettings} />
           <Stack.Screen

@@ -58,7 +58,7 @@ msgstr "Accuracy"
 msgid "Ad-Free"
 msgstr "Ad-Free"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
 msgstr "Adaptive Charging"
 
@@ -94,7 +94,7 @@ msgid "Adjustments"
 msgstr "Adjustments"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
-#: src/screens/settings_battery_optimizations/index.tsx:108
+#: src/screens/settings_fix_common_problems/index.tsx:108
 msgid "Advanced"
 msgstr "Advanced"
 
@@ -169,10 +169,6 @@ msgstr "At least one prayer time must be shown"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "Attention"
-
-#: src/intro/intro.tsx:39
-msgid "Battery Optimization"
-msgstr "Battery Optimization"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -297,7 +293,7 @@ msgstr "Default"
 msgid "Delete"
 msgstr "Delete"
 
-#: src/screens/settings_battery_optimizations/index.tsx:46
+#: src/screens/settings_fix_common_problems/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 
@@ -309,7 +305,7 @@ msgstr "Deselect as Fajr Adhan"
 msgid "Device sounds"
 msgstr "Device sounds"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Disabled"
 msgstr "Disabled"
 
@@ -362,7 +358,7 @@ msgstr "Edit Reminder"
 msgid "Egyptian General Survey Authority"
 msgstr "Egyptian General Survey Authority"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Enabled"
 msgstr "Enabled"
 
@@ -406,6 +402,12 @@ msgstr "Export data"
 #: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "Find My Location"
+
+#. screen title
+#: src/intro/intro.tsx:39
+#: src/navigation/types.ts:75
+msgid "Fix Common Problems"
+msgstr "Fix Common Problems"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -490,15 +492,15 @@ msgstr "If enabled, when a notification is shown, it will contain info for the n
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 
-#: src/screens/settings_battery_optimizations/index.tsx:103
+#: src/screens/settings_fix_common_problems/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 
-#: src/screens/settings_battery_optimizations/index.tsx:49
+#: src/screens/settings_fix_common_problems/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:19
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 
@@ -755,11 +757,11 @@ msgstr "Only once?"
 msgid "Only six items can be shown at the same time"
 msgstr "Only six items can be shown at the same time"
 
-#: src/screens/settings_battery_optimizations/index.tsx:62
+#: src/screens/settings_fix_common_problems/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "Open Battery Optimization Settings"
 
-#: src/screens/settings_battery_optimizations/index.tsx:93
+#: src/screens/settings_fix_common_problems/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "Open Power Manager Settings"
 
@@ -801,7 +803,7 @@ msgstr "Phone State Permission"
 msgid "Please enable location service"
 msgstr "Please enable location service"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:22
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 
@@ -809,7 +811,7 @@ msgstr "Please note that enabling this option may cause adhan and reminders to f
 msgid "Polar Resolution"
 msgstr "Polar Resolution"
 
-#: src/screens/settings_battery_optimizations/index.tsx:67
+#: src/screens/settings_fix_common_problems/index.tsx:67
 msgid "Power Manager"
 msgstr "Power Manager"
 
@@ -877,7 +879,7 @@ msgstr "Ramadan is near,"
 msgid "Referred to as the ISNA method"
 msgstr "Referred to as the ISNA method"
 
-#: src/tasks/update_widgets.ts:20
+#: src/tasks/update_widgets.ts:21
 msgid "Remaining till"
 msgstr "Remaining till"
 
@@ -900,7 +902,7 @@ msgstr "Repeat"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 
-#: src/screens/settings_battery_optimizations/index.tsx:83
+#: src/screens/settings_fix_common_problems/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1033,7 +1035,7 @@ msgstr "Software License"
 msgid "Solar Hijri"
 msgstr "Solar Hijri"
 
-#: src/screens/settings_battery_optimizations/index.tsx:71
+#: src/screens/settings_fix_common_problems/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1054,7 +1056,7 @@ msgstr "Sound"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Spiritual Administration of Muslims of Russia"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_fix_common_problems/index.tsx:52
 msgid "Status"
 msgstr "Status"
 
@@ -1194,7 +1196,7 @@ msgstr "Use Compass"
 msgid "Use Map"
 msgstr "Use Map"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:26
 msgid "Use a different alarm type?"
 msgstr "Use a different alarm type?"
 
@@ -1264,7 +1266,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "Yes"
 
-#: src/screens/settings_battery_optimizations/index.tsx:76
+#: src/screens/settings_fix_common_problems/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
@@ -1309,7 +1311,7 @@ msgid "about.credits.google"
 msgstr "Most of icons used in this app are from google material icons."
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:89
 msgid "about_settings"
 msgstr "About"
 
@@ -1334,11 +1336,6 @@ msgstr "Asr"
 #: src/navigation/types.ts:45
 msgid "backup_settings"
 msgstr "Backup"
-
-#. screen title
-#: src/navigation/types.ts:75
-msgid "battery_optimization_settings"
-msgstr "Battery Optimization"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
@@ -1371,7 +1368,7 @@ msgid "date.second"
 msgstr "second"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:94
 msgid "dev_settings"
 msgstr "Developer"
 
@@ -1456,19 +1453,19 @@ msgid "notification_settings"
 msgstr "Notification & Sound"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:111
 msgid "qada_counter"
 msgstr "Qada Counter"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:107
 msgid "qibla_compass"
 msgstr "Qibla Compass"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:99
 msgid "qibla_finder"
 msgstr "Qibla Finder"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:103
 msgid "qibla_map"
 msgstr "Qibla Map"
 
@@ -1477,7 +1474,7 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:84
 msgid "reminders_settings"
 msgstr "Reminders"
 
@@ -1515,7 +1512,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:79
 msgid "widget_settings"
 msgstr "Widget Settings"
 

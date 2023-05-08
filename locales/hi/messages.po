@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-29 04:18+0330\n"
+"POT-Creation-Date: 2023-05-08 17:45+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,7 +52,7 @@ msgstr "शुद्धता"
 msgid "Ad-Free"
 msgstr "विज्ञापन मुक्त"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:15
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
 msgstr "अनुकूली चार्जिंग"
 
@@ -88,7 +88,7 @@ msgid "Adjustments"
 msgstr "समायोजन"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:31
-#: src/screens/settings_battery_optimizations/index.tsx:108
+#: src/screens/settings_fix_common_problems/index.tsx:108
 msgid "Advanced"
 msgstr "विकसित"
 
@@ -163,10 +163,6 @@ msgstr "कम से कम एक नमाज़ का समय दिख�
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "ध्यान"
-
-#: src/intro/intro.tsx:39
-msgid "Battery Optimization"
-msgstr "बैटरी अनुकूलन"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -291,7 +287,7 @@ msgstr "डिफॉल्ट "
 msgid "Delete"
 msgstr "मिटाना"
 
-#: src/screens/settings_battery_optimizations/index.tsx:46
+#: src/screens/settings_fix_common_problems/index.tsx:46
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "आपके डिवाइस और एंड्रॉइड वर्जन के आधार पर, बैटरी बचाने के लिए कभी-कभी आपका डिवाइस बैकग्राउंड में ऐप को बंद कर सकता है। यह अलार्म/सूचनाओं को डिलीवर होने से रोक सकता है।"
 
@@ -303,7 +299,7 @@ msgstr "फज्र अज़ान के लिए चयन हटा दी
 msgid "Device sounds"
 msgstr "डिवाइस लगता है"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Disabled"
 msgstr "अक्षम"
 
@@ -356,7 +352,7 @@ msgstr "रिमाइंडर संपादित करें"
 msgid "Egyptian General Survey Authority"
 msgstr "मिस्र का सामान्य सर्वेक्षण प्राधिकरण"
 
-#: src/screens/settings_battery_optimizations/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Enabled"
 msgstr "सक्रिय"
 
@@ -400,6 +396,12 @@ msgstr "निर्यात जानकारी"
 #: src/screens/settings_location/index.tsx:197
 msgid "Find My Location"
 msgstr "मेरा स्थान खोजें"
+
+#. screen title
+#: src/intro/intro.tsx:39
+#: src/navigation/types.ts:75
+msgid "Fix Common Problems"
+msgstr "सामान्य समस्याओं को ठीक करें"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -484,15 +486,15 @@ msgstr "यदि सक्षम है, जब एक सूचना दि�
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "यदि आपने अपनी फ़ोन सेटिंग (सेटिंग / बैकअप और रीसेट / बैकअप मेरे डेटा) में \"बैकअप और रीसेट\" सक्रिय किया है, तो आपको पता होना चाहिए कि Android स्वयं (अल-अज़ान नहीं) समय-समय पर आपके फ़ोन के डेटा की एक प्रति Google में सहेजेगा सर्वर। यदि आपका डिवाइस क्षतिग्रस्त हो जाता है, या आप एक नया डिवाइस खरीदते हैं, तो यह Android को आपके डेटा को पुनर्प्राप्त करने की अनुमति देता है। अल-अज़ान के डेवलपर्स के पास इस डेटा तक पहुंच नहीं है।"
 
-#: src/screens/settings_battery_optimizations/index.tsx:103
+#: src/screens/settings_fix_common_problems/index.tsx:103
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "यदि आपको कुछ समय बाद भी ऐप के बंद होने की समस्या है, तो अधिक समाधान के लिए कृपया dontkillmyapp.com पर जाएं।"
 
-#: src/screens/settings_battery_optimizations/index.tsx:49
+#: src/screens/settings_fix_common_problems/index.tsx:49
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "यदि आप ये सुनिश्चित करना चाहते हैं कि ऐप सही तरीके से काम करे, तो आप को इस ऐप के लिए पावर ऑप्टिमाइजेशन को अक्षम करना होगा। आप नीचे दिए गए बटन का उपयोग कर के संबंधित सेटिंग्स खोल सकते हैं।"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:19
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:19
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "यदि आपके डिवाइस में अनुकूली चार्जिंग है, जैसे Google पिक्सेल, और आप नहीं चाहते कि एडहान या रिमाइंडर्स को अलार्म के रूप में पहचाना जाए, तो आप इस विकल्प को सक्षम कर सकते हैं।"
 
@@ -749,11 +751,11 @@ msgstr "सिर्फ एक बार?"
 msgid "Only six items can be shown at the same time"
 msgstr "एक ही समय में केवल छह चीज़ें दिखाए जा सकती हैं"
 
-#: src/screens/settings_battery_optimizations/index.tsx:62
+#: src/screens/settings_fix_common_problems/index.tsx:62
 msgid "Open Battery Optimization Settings"
 msgstr "बैटरी अनुकूलन सेटिंग्स खोलें"
 
-#: src/screens/settings_battery_optimizations/index.tsx:93
+#: src/screens/settings_fix_common_problems/index.tsx:93
 msgid "Open Power Manager Settings"
 msgstr "पावर मैनेजर सेटिंग्स खोलें"
 
@@ -795,7 +797,7 @@ msgstr "फोन राज्य की अनुमति"
 msgid "Please enable location service"
 msgstr "कृपया स्थान सेवा सक्षम करें"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:22
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:22
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "कृपया ध्यान दें कि इस विकल्प को सक्षम करने से एडहान और रिमाइंडर्स देरी से शुरू हो सकते हैं या कुछ मामलों में बिल्कुल भी नहीं। इसे सावधानी से सक्षम करें।"
 
@@ -803,7 +805,7 @@ msgstr "कृपया ध्यान दें कि इस विकल्�
 msgid "Polar Resolution"
 msgstr "ध्रुवीय रेज़ोल्यूशन "
 
-#: src/screens/settings_battery_optimizations/index.tsx:67
+#: src/screens/settings_fix_common_problems/index.tsx:67
 msgid "Power Manager"
 msgstr "पावर मैनेजर"
 
@@ -871,7 +873,7 @@ msgstr "रमजान करीब है,"
 msgid "Referred to as the ISNA method"
 msgstr "ISNA पद्धति के रूप में संदर्भित"
 
-#: src/tasks/update_widgets.ts:20
+#: src/tasks/update_widgets.ts:21
 msgid "Remaining till"
 msgstr "तक शेष है"
 
@@ -894,7 +896,7 @@ msgstr "दोहराना"
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "आवश्यक सेटिंग्स अपूर्ण हैं। ऐप में नमाज़ का वक्त दिखाने के लिए, आपको इसे बाद में सेटिंग्स से कॉन्फ़िगर करना होगा।"
 
-#: src/screens/settings_battery_optimizations/index.tsx:83
+#: src/screens/settings_fix_common_problems/index.tsx:83
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1020,7 +1022,7 @@ msgstr "सॉफ़्टवेयर लाइसेंस"
 msgid "Solar Hijri"
 msgstr "सौर हिजरी"
 
-#: src/screens/settings_battery_optimizations/index.tsx:71
+#: src/screens/settings_fix_common_problems/index.tsx:71
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1038,7 +1040,7 @@ msgstr "ध्वनि"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "रूस के मुसलमानों का आध्यात्मिक प्रशासन"
 
-#: src/screens/settings_battery_optimizations/index.tsx:52
+#: src/screens/settings_fix_common_problems/index.tsx:52
 msgid "Status"
 msgstr "दर्जा"
 
@@ -1176,7 +1178,7 @@ msgstr "कम्पास का प्रयोग करें"
 msgid "Use Map"
 msgstr "मानचित्र का प्रयोग करें"
 
-#: src/screens/settings_battery_optimizations/adaptive_charging_toggle.tsx:26
+#: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:26
 msgid "Use a different alarm type?"
 msgstr "किसी भिन्न अलार्म प्रकार का उपयोग करें?"
 
@@ -1246,7 +1248,7 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "हां"
 
-#: src/screens/settings_battery_optimizations/index.tsx:76
+#: src/screens/settings_fix_common_problems/index.tsx:76
 msgid "You can access your device Power Manager using the button below."
 msgstr "आप नीचे दिए गए बटन का उपयोग करके अपने डिवाइस पावर मैनेजर तक पहुंच सकते हैं।"
 
@@ -1288,7 +1290,7 @@ msgid "about.credits.google"
 msgstr "इस ऐप में इस्तेमाल होने वाले ज्यादातर आइकन गूगल मटेरियल आइकन के हैं।"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:89
 msgid "about_settings"
 msgstr "के बारे में"
 
@@ -1313,11 +1315,6 @@ msgstr "असर "
 #: src/navigation/types.ts:45
 msgid "backup_settings"
 msgstr "बैकअप"
-
-#. screen title
-#: src/navigation/types.ts:75
-msgid "battery_optimization_settings"
-msgstr "बैटरी अनुकूलन"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "before"
@@ -1350,7 +1347,7 @@ msgid "date.second"
 msgstr "सेकंड"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:94
 msgid "dev_settings"
 msgstr "डेवलपर"
 
@@ -1435,19 +1432,19 @@ msgid "notification_settings"
 msgstr "सूचना और ध्वनि"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:111
 msgid "qada_counter"
 msgstr "कड़ा काउंटर"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:107
 msgid "qibla_compass"
 msgstr "किबला कम्पास"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:99
 msgid "qibla_finder"
 msgstr "किबला खोजक"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:103
 msgid "qibla_map"
 msgstr "किबला नक्शा"
 
@@ -1456,7 +1453,7 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "राघेब मुस्तफा गलवाश"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:84
 msgid "reminders_settings"
 msgstr "अनुस्मारक"
 
@@ -1494,7 +1491,7 @@ msgid "sunset"
 msgstr "सूर्यास्त"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:79
 msgid "widget_settings"
 msgstr "विजेट सेटिंग्स"
 
