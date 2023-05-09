@@ -4,6 +4,7 @@ export type {PrayerTimesOptions, PrayerTime} from './prayer_times';
 
 export {
   getPrayerTimes,
+  getCurrentPrayer,
   getNextPrayer,
   calculatePrayerTimes,
   isMinimumSettingsAvailable,

@@ -1,11 +1,24 @@
-import {Prayer, PrayerTime, getNextPrayer} from '@/adhan';
+import {Prayer, PrayerTime, getNextPrayer, getCurrentPrayer} from '@/adhan';
 
 export function getActivePrayer(
   lookingAtDay: Date,
   prayersList: Prayer[],
+  /** return current active prayer instead of next prayer */
+  current?: boolean,
 ): Prayer | undefined {
   if (!lookingAtDay || !prayersList.length) return;
   const now = new Date();
+
+  if (current) {
+    const activePrayer = getCurrentPrayer({date: now, prayers: prayersList});
+    if (
+      activePrayer?.calculatedFrom.toDateString() ===
+      lookingAtDay.toDateString()
+    ) {
+      return activePrayer.prayer;
+    }
+    return;
+  }
 
   const activePrayer: PrayerTime | undefined = getNextPrayer({
     date: now,
