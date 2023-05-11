@@ -1,0 +1,1 @@
+- added option to highlight current prayer instead of next
