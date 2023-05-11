@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-05-08 17:45+0330\n"
+"POT-Creation-Date: 2023-05-11 05:16+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -456,6 +456,10 @@ msgstr "بالا"
 msgid "High Latitude"
 msgstr "عرض جغرافیایی بالا"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:22
+msgid "Highlight current prayer"
+msgstr "نماز فعلی را برجسته کن"
+
 #: src/screens/settings_about/index.tsx:34
 #: website/src/_data/navigation.ts:2
 msgid "Home"
@@ -676,7 +680,7 @@ msgstr "یادآوری جدید"
 msgid "Next"
 msgstr "بعدی"
 
-#: src/screens/home/index.tsx:167
+#: src/screens/home/index.tsx:168
 msgid "Next Day"
 msgstr "روز بعد"
 
@@ -817,7 +821,7 @@ msgstr "مدیریت انرژی"
 msgid "Prayer Times"
 msgstr "اوقات شرعی"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:139
 msgid "Prev Day"
 msgstr "روز قبل"
 
@@ -968,6 +972,10 @@ msgstr "شیعه اثنا عشری، مؤسسه لوا، قم"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "شیعه، موسسه ژئوفیزیک دانشگاه تهران"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:26
+msgid "Should app highlight current prayer instead of next prayer?"
+msgstr "آیا برنامه باید نماز فعلی را به جای نماز بعدی برجسته کند؟"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "آیا با فشار دادن دکمه صدا، برنامه باید پخش اذان را متوقف کند؟"
@@ -976,7 +984,7 @@ msgstr "آیا با فشار دادن دکمه صدا، برنامه باید پ
 msgid "Show Adhan Options"
 msgstr "نمایش گزینه های اذان"
 
-#: src/screens/home/index.tsx:161
+#: src/screens/home/index.tsx:162
 msgid "Show Today"
 msgstr "نمایش امروز"
 

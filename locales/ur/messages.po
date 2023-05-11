@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-05-08 17:45+0330\n"
+"POT-Creation-Date: 2023-05-11 05:16+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -456,6 +456,10 @@ msgstr "اعلی"
 msgid "High Latitude"
 msgstr "ہائی عرض بلد"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:22
+msgid "Highlight current prayer"
+msgstr "موجودہ نماز کو نمایاں کریں۔"
+
 #: src/screens/settings_about/index.tsx:34
 #: website/src/_data/navigation.ts:2
 msgid "Home"
@@ -672,7 +676,7 @@ msgstr "نئی یاد دہانی"
 msgid "Next"
 msgstr "اگلے"
 
-#: src/screens/home/index.tsx:167
+#: src/screens/home/index.tsx:168
 msgid "Next Day"
 msgstr "اگلے دن"
 
@@ -813,7 +817,7 @@ msgstr "پاور مینیجر"
 msgid "Prayer Times"
 msgstr "نماز کے اوقات"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:139
 msgid "Prev Day"
 msgstr "پچھلا دن"
 
@@ -964,6 +968,10 @@ msgstr "شیعہ اتھنا اشعری، لیوا انسٹی ٹیوٹ، قم"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی آف تہران"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:26
+msgid "Should app highlight current prayer instead of next prayer?"
+msgstr "کیا ایپ کو اگلی نماز کی بجائے موجودہ نماز کو نمایاں کرنا چاہیے؟"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "کیا والیوم بٹن دبانے پر ایپ کو اذان بجانا بند کر دینا چاہیے؟"
@@ -972,7 +980,7 @@ msgstr "کیا والیوم بٹن دبانے پر ایپ کو اذان بجان
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
-#: src/screens/home/index.tsx:161
+#: src/screens/home/index.tsx:162
 msgid "Show Today"
 msgstr "آج دکھائیں۔"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-05-08 17:45+0330\n"
+"POT-Creation-Date: 2023-05-11 05:16+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -456,6 +456,10 @@ msgstr "उच्च"
 msgid "High Latitude"
 msgstr "उच्च अक्षांश"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:22
+msgid "Highlight current prayer"
+msgstr "वर्तमान प्रार्थना को हाइलाइट करें"
+
 #: src/screens/settings_about/index.tsx:34
 #: website/src/_data/navigation.ts:2
 msgid "Home"
@@ -672,7 +676,7 @@ msgstr "नया अनुस्मारक"
 msgid "Next"
 msgstr "अगला"
 
-#: src/screens/home/index.tsx:167
+#: src/screens/home/index.tsx:168
 msgid "Next Day"
 msgstr "अगले दिन"
 
@@ -813,7 +817,7 @@ msgstr "पावर मैनेजर"
 msgid "Prayer Times"
 msgstr "प्रार्थना का समय"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:139
 msgid "Prev Day"
 msgstr "पिछला दिन"
 
@@ -964,6 +968,10 @@ msgstr "शिया इथना अशरी, लेवा संस्था�
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "शिया, भूभौतिकी संस्थान, तेहरान विश्वविद्यालय"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:26
+msgid "Should app highlight current prayer instead of next prayer?"
+msgstr "क्या ऐप को अगली प्रार्थना के बजाय वर्तमान प्रार्थना को हाइलाइट करना चाहिए?"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "क्या वॉल्यूम बटन दबाए जाने पर ऐप को एडन बजाना बंद कर देना चाहिए?"
@@ -972,7 +980,7 @@ msgstr "क्या वॉल्यूम बटन दबाए जाने �
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
-#: src/screens/home/index.tsx:161
+#: src/screens/home/index.tsx:162
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 

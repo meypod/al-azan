@@ -462,6 +462,10 @@ msgstr "High"
 msgid "High Latitude"
 msgstr "High Latitude"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:22
+msgid "Highlight current prayer"
+msgstr "Highlight current prayer"
+
 #: src/screens/settings_about/index.tsx:34
 #: website/src/_data/navigation.ts:2
 msgid "Home"
@@ -678,7 +682,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:167
+#: src/screens/home/index.tsx:168
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -819,7 +823,7 @@ msgstr "Power Manager"
 msgid "Prayer Times"
 msgstr "Prayer Times"
 
-#: src/screens/home/index.tsx:138
+#: src/screens/home/index.tsx:139
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -977,6 +981,10 @@ msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
+#: src/screens/settings_display/highlight_current_setting.tsx:26
+msgid "Should app highlight current prayer instead of next prayer?"
+msgstr "Should app highlight current prayer instead of next prayer?"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Should app stop playing adhan when the volume button is pressed?"
@@ -985,7 +993,7 @@ msgstr "Should app stop playing adhan when the volume button is pressed?"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:161
+#: src/screens/home/index.tsx:162
 msgid "Show Today"
 msgstr "Show Today"
 
