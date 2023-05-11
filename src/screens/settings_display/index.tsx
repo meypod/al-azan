@@ -1,5 +1,6 @@
 import {ScrollView, IScrollViewProps} from 'native-base';
 import {CalendarSecondarySettings} from './calendar_secondary_settings';
+import {HighlightCurrentSetting} from './highlight_current_setting';
 import {HidePrayerSettings} from '@/screens/settings_display/hide_prayer_settings';
 import {LanguageSettings} from '@/screens/settings_display/language_settings';
 import {NumberFormatSettings} from '@/screens/settings_display/number_format_settings';
@@ -15,6 +16,7 @@ export function DisplaySettings(props: IScrollViewProps) {
       <TimeFormatSettings mb="6" />
       <NumberFormatSettings mb="6" />
       <CalendarSecondarySettings mb="6" />
+      <HighlightCurrentSetting mb="6" />
     </ScrollView>
   );
 }

@@ -32,6 +32,7 @@ export async function updateWidgets() {
     HIDDEN_WIDGET_PRAYERS: hiddenPrayers,
     ADAPTIVE_WIDGETS: adaptiveTheme,
     SHOW_WIDGET_COUNTDOWN: showCountdown,
+    HIGHLIGHT_CURRENT_PRAYER,
   } = settings.getState();
 
   const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers);
@@ -44,7 +45,11 @@ export async function updateWidgets() {
     now.valueOf() <
       prayerTimes[visiblePrayerTimes[visiblePrayerTimes.length - 1]].valueOf()
   ) {
-    activePrayer = getActivePrayer(now, visiblePrayerTimes);
+    activePrayer = getActivePrayer(
+      now,
+      visiblePrayerTimes,
+      HIGHLIGHT_CURRENT_PRAYER,
+    );
   }
 
   let countdownLabel: string | null = null;

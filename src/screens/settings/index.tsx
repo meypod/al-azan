@@ -83,11 +83,12 @@ if (settings.getState().DEV_MODE) {
 }
 
 function Settings() {
-  const {calendarType, selectedAdhans} = useStore(
+  const {calendarType, selectedAdhans, HIGHLIGHT_CURRENT_PRAYER} = useStore(
     settings,
     s => ({
       calendarType: s.SELECTED_ARABIC_CALENDAR,
       selectedAdhans: s.SELECTED_ADHAN_ENTRIES,
+      HIGHLIGHT_CURRENT_PRAYER: s.HIGHLIGHT_CURRENT_PRAYER,
     }),
     shallow,
   );
@@ -143,6 +144,10 @@ function Settings() {
     setReminders({noToast: true, force: true});
     updateWidgets();
   }, [calcSettingsHash, alarmSettingsHash]);
+
+  useNoInitialEffect(() => {
+    updateWidgets();
+  }, [HIGHLIGHT_CURRENT_PRAYER]);
 
   const renderItem = useCallback(
     ({item}: {item: ScreenListItem}) => <SettingsListItem item={item} />,

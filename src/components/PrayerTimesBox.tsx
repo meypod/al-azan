@@ -13,7 +13,7 @@ type PrayerTimesBoxProps = {
   prayerTimes?: CachedPrayerTimes;
   settings: Pick<
     SettingsStore,
-    'HIDDEN_PRAYERS' | 'DELIVERED_ALARM_TIMESTAMPS'
+    'HIDDEN_PRAYERS' | 'DELIVERED_ALARM_TIMESTAMPS' | 'HIGHLIGHT_CURRENT_PRAYER'
   >;
 };
 
@@ -31,7 +31,11 @@ function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
     settings.HIDDEN_PRAYERS || [],
   );
   const activePrayer = prayerTimes?.date
-    ? getActivePrayer(prayerTimes.date, visiblePrayerTimes)
+    ? getActivePrayer(
+        prayerTimes.date,
+        visiblePrayerTimes,
+        settings.HIGHLIGHT_CURRENT_PRAYER,
+      )
     : undefined;
 
   let nextPrayerSoundIsMuted: boolean;

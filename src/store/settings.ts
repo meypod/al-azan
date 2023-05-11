@@ -34,6 +34,7 @@ export type SettingsStore = {
   // display
   IS_24_HOUR_FORMAT: boolean;
   NUMBERING_SYSTEM: string;
+  HIGHLIGHT_CURRENT_PRAYER: boolean;
   // other
   SELECTED_LOCALE: string;
   SELECTED_ARABIC_CALENDAR: string;
@@ -135,8 +136,11 @@ export const settings = createStore<SettingsStore>()(
       SHOW_WIDGET: false,
       SHOW_WIDGET_COUNTDOWN: false,
       ADAPTIVE_WIDGETS: false,
+      // DISPLAY
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
+      HIGHLIGHT_CURRENT_PRAYER: false,
+
       CALC_SETTINGS_HASH: '',
       ALARM_SETTINGS_HASH: '',
       REMINDER_SETTINGS_HASH: '',
