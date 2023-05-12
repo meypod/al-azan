@@ -55,7 +55,7 @@ export async function updateWidgets() {
   let countdownLabel: string | null = null;
   let countdownBase: string | null = null;
   if (prayerTimes && showCountdown) {
-    if (activePrayer) {
+    if (activePrayer && !HIGHLIGHT_CURRENT_PRAYER) {
       countdownLabel = getCountdownLabel(activePrayer);
       countdownBase = prayerTimes[activePrayer].valueOf().toString();
     } else {
