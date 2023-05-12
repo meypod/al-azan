@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-05-11 05:16+0330\n"
+"POT-Creation-Date: 2023-05-12 07:46+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -458,7 +458,7 @@ msgstr "Vĩ độ cao"
 
 #: src/screens/settings_display/highlight_current_setting.tsx:22
 msgid "Highlight current prayer"
-msgstr "Làm nổi bật lời cầu nguyện hiện tại"
+msgstr "Tô sáng giờ cầu nguyện hiện tại"
 
 #: src/screens/settings_about/index.tsx:34
 #: website/src/_data/navigation.ts:2
@@ -973,7 +973,7 @@ msgstr "Shia, Viện Địa vật lý, Đại học Tehran"
 
 #: src/screens/settings_display/highlight_current_setting.tsx:26
 msgid "Should app highlight current prayer instead of next prayer?"
-msgstr "Ứng dụng có nên làm nổi bật lời cầu nguyện hiện tại thay vì lời cầu nguyện tiếp theo không?"
+msgstr "Ứng dụng có nên tô sáng giờ cầu nguyện hiện tại thay vì giờ cầu nguyện tiếp theo không?"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
