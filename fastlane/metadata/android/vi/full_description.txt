@@ -14,7 +14,7 @@ Tính năng ứng dụng:
 
 * Chọn âm báo Azan khác nhau cho Fajr namaz
 
-* Ngoài 5 lần cầu nguyện hàng ngày, nó còn có các cài đặt cho các lần cầu nguyện lúc Bình Minh, Hoàng Hôn, Nửa Đêm và Ban Đêm (Tahajjud)
+* Ngoài 5 lần cầu nguyện hàng ngày, nó còn có cài đặt cho các lần cầu nguyện lúc Mặt trời mọc, Mặt trời lặn, Nửa Đêm và Ban Đêm (Tahajjud)
 
 * Nhiều tùy chọn để tính toán Azan (اذان)
 

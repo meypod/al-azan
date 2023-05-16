@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-05-12 07:46+0330\n"
+"POT-Creation-Date: 2023-05-16 05:15+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -517,7 +517,7 @@ msgstr "Nhập thành công"
 #: fastlane/update/update.ts:53
 #: website/src/_includes/home.tsx:90
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
-msgstr "Ngoài 5 lần cầu nguyện hàng ngày, nó còn có các cài đặt cho các lần cầu nguyện lúc Bình Minh, Hoàng Hôn, Nửa Đêm và Ban Đêm (Tahajjud)"
+msgstr "Ngoài 5 lần cầu nguyện hàng ngày, nó còn có cài đặt cho các lần cầu nguyện lúc Mặt trời mọc, Mặt trời lặn, Nửa Đêm và Ban Đêm (Tahajjud)"
 
 #: src/screens/qibla_finder/index.tsx:31
 msgid "Info"
@@ -1498,11 +1498,11 @@ msgstr "Tahajjud"
 
 #: src/adhan/prayer.ts:44
 msgid "sunrise"
-msgstr "Bình minh"
+msgstr "Mặt trời mọc"
 
 #: src/adhan/prayer.ts:56
 msgid "sunset"
-msgstr "Hoàng hôn"
+msgstr "Mặt trời lặn"
 
 #. screen title
 #: src/navigation/types.ts:79
