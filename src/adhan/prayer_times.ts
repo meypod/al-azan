@@ -310,7 +310,7 @@ export function getCurrentPrayer(
 
   let prayerTime: PrayerTime | undefined;
 
-  for (let i = prayers.length - 1; i > 0; i--) {
+  for (let i = prayers.length - 1; i >= 0; i--) {
     if (date >= prayerTimes[prayers[i]]) {
       prayerTime = {
         date: prayerTimes[prayers[i]],
