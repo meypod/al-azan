@@ -6,6 +6,7 @@ import autoprefixer from "autoprefixer";
 import {loadLocale, i18n} from './i18n_base';
 import type EleventyConfig from "@11ty/eleventy/src/UserConfig";
 import type EleventyDefaultConfig from "@11ty/eleventy/src/defaultConfig";
+import formatDate from 'date-fns/format';
 
 const eleventyGoogleFonts = require("eleventy-google-fonts");
 const { EleventyI18nPlugin, EleventyHtmlBasePlugin  } = require("@11ty/eleventy"); 
@@ -29,6 +30,7 @@ module.exports = function (eleventyConfig: EleventyConfig): typeof EleventyDefau
   // Passthrough Copy
   eleventyConfig.addPassthroughCopy({
     'src/assets/favicon/*': '/',
+    'src/assets/google5b152741d15e792b': '/google5b152741d15e792b.html',
     'src/assets/images/*.png': '/images/',
     'src/assets/images/f-droid/*.png': '/images/f-droid/',
     'src/assets/images/gplay/*.png': '/images/gplay/'
@@ -78,6 +80,11 @@ module.exports = function (eleventyConfig: EleventyConfig): typeof EleventyDefau
     loadLocale(this.page.lang);
     return i18n._(inputContent);
   });
+
+  // for formatting dates for sitemap.xml
+  eleventyConfig.addFilter('date', function (date, dateFormat) {
+    return formatDate(date, dateFormat)
+  })
 
   return {
     dir,
