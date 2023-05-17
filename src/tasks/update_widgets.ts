@@ -39,12 +39,7 @@ export async function updateWidgets() {
 
   let activePrayer: Prayer | undefined = undefined;
 
-  if (
-    prayerTimes &&
-    visiblePrayerTimes.length &&
-    now.valueOf() <
-      prayerTimes[visiblePrayerTimes[visiblePrayerTimes.length - 1]].valueOf()
-  ) {
+  if (prayerTimes && visiblePrayerTimes.length) {
     activePrayer = getActivePrayer(
       now,
       visiblePrayerTimes,

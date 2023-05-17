@@ -279,6 +279,7 @@ export function getNextPrayer(
       prayerTime = getNextPrayer({
         useSettings,
         date: dayToCheck,
+        prayers: prayers,
         _originalDate: false, // this makes it a boolean, and thus not checking the day before it
       });
       if (prayerTime) {
