@@ -129,6 +129,10 @@ Translation to other languages has been done by these awesome people:
 
 * [Bach Nguyen](https://github.com/techyescountry)
 
+#### Arabic
+
+* [@M86xKC](https://github.com/M86xKC)
+
 ## Thanks to
 
 All of people who have helped this project grow.
