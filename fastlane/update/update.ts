@@ -66,7 +66,7 @@ ${t`App features`}:
 
 * ${t`Qada counter`}
 
-* ${t`Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese`}
+* ${t`Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla`}
 
 ${t`Open source repository`}:
 https://github.com/meypod/al-azan

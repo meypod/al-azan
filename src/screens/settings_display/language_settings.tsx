@@ -59,6 +59,10 @@ export function LanguageSettings(props: IStackProps) {
       label: `Tiếng Việt`,
       value: 'vi',
     },
+    {
+      label: `বাংলা`,
+      value: 'bn',
+    },
   ];
 
   if (

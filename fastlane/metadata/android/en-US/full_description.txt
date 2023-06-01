@@ -30,7 +30,7 @@ App features:
 
 * Qada counter
 
-* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese
+* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla
 
 Open-Source repository:
 https://github.com/meypod/al-azan/
