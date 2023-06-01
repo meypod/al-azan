@@ -133,6 +133,10 @@ Translation to other languages has been done by these awesome people:
 
 * [@M86xKC](https://github.com/M86xKC)
 
+#### Bangla
+
+* [@SaminYaser-work](https://github.com/SaminYaser-work)
+
 ## Thanks to
 
 All of people who have helped this project grow.
