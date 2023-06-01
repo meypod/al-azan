@@ -35,4 +35,7 @@ module.exports = {
   vi: {
     availableText: 'Trang này cũng có sẵn trong:',
   },
+  bn: {
+    availableText: 'এই পৃষ্ঠাটিও পাওয়া যায়:',
+  },
 };
