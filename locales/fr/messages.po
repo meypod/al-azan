@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 19:37+0330\n"
+"POT-Creation-Date: 2023-06-01 21:23+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -200,7 +200,7 @@ msgstr "Choisir la méthode de calcul"
 msgid "Choose High Latitude Setting"
 msgstr "Choisir le réglage de la latitude élevée"
 
-#: src/screens/settings_display/language_settings.tsx:104
+#: src/screens/settings_display/language_settings.tsx:108
 msgid "Choose Language"
 msgstr "Choisir la langue"
 
@@ -533,8 +533,8 @@ msgstr "Une connexion Internet est nécessaire pour que la carte de la qibla fon
 
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:102
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
-msgstr "Traduit en anglais, persan, arabe, turc, indonésien, français, urdu, hindi, allemand, bosniaque, vietnamien"
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
+msgstr "Est localisé en anglais, persan, arabe, turc, indonésien, français, urdu, hindi, allemand, bosniaque, vietnamien, bengali"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -573,7 +573,7 @@ msgstr "Koweït"
 msgid "Label"
 msgstr "Intitulé"
 
-#: src/screens/settings_display/language_settings.tsx:101
+#: src/screens/settings_display/language_settings.tsx:105
 msgid "Language"
 msgstr "Langue"
 
@@ -1173,7 +1173,7 @@ msgstr "Précision peu fiable"
 msgid "Unresolved (default)"
 msgstr "Non résolu (par défaut)"
 
-#: src/screens/settings_display/language_settings.tsx:80
+#: src/screens/settings_display/language_settings.tsx:84
 msgid "Unsupported"
 msgstr "Non pris en charge"
 

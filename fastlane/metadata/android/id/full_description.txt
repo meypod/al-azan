@@ -30,7 +30,7 @@ Fitur aplikasi:
 
 * Penghitung Qada
 
-* Dilokalkan dalam bahasa Inggris, Persia, Arab, Turki, Indonesia, Prancis, Urdu, Hindi, Jerman, Bosnia, Vietnam
+* Dilokalkan dalam bahasa Inggris, Persia, Arab, Turki, Indonesia, Prancis, Urdu, Hindi, Jerman, Bosnia, Vietnam, Bangla
 
 Repositori sumber terbuka:
 https://github.com/meypod/al-azan

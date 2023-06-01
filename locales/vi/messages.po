@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 19:37+0330\n"
+"POT-Creation-Date: 2023-06-01 21:23+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -200,7 +200,7 @@ msgstr "Chọn phương pháp tính toán"
 msgid "Choose High Latitude Setting"
 msgstr "Chọn Cài đặt Vĩ độ Cao"
 
-#: src/screens/settings_display/language_settings.tsx:104
+#: src/screens/settings_display/language_settings.tsx:108
 msgid "Choose Language"
 msgstr "Chọn ngôn ngữ"
 
@@ -533,8 +533,8 @@ msgstr "Kết nối Internet là cần thiết để bản đồ qibla hoạt đ
 
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:102
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
-msgstr "Được bản địa hóa bằng tiếng Anh, Ba Tư, Ả Rập, Thổ Nhĩ Kỳ, Indonesia, Pháp, Urdu, Hindi, Đức, Bosnia, Việt"
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
+msgstr "Được bản địa hóa bằng tiếng Anh, tiếng Ba Tư, tiếng Ả Rập, tiếng Thổ Nhĩ Kỳ, tiếng Indonesia, tiếng Pháp, tiếng Urdu, tiếng Hindi, tiếng Đức, tiếng Bosnia, tiếng Việt, tiếng Bangla"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -573,7 +573,7 @@ msgstr "Cô-oét"
 msgid "Label"
 msgstr "Tên"
 
-#: src/screens/settings_display/language_settings.tsx:101
+#: src/screens/settings_display/language_settings.tsx:105
 msgid "Language"
 msgstr "Ngôn ngữ"
 
@@ -1167,7 +1167,7 @@ msgstr "Không tin cậy"
 msgid "Unresolved (default)"
 msgstr "Chưa giải quyết (mặc định)"
 
-#: src/screens/settings_display/language_settings.tsx:80
+#: src/screens/settings_display/language_settings.tsx:84
 msgid "Unsupported"
 msgstr "Không hỗ trợ"
 

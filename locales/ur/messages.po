@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 19:37+0330\n"
+"POT-Creation-Date: 2023-06-01 21:23+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -200,7 +200,7 @@ msgstr "حساب کتاب کا طریقہ منتخب کریں۔"
 msgid "Choose High Latitude Setting"
 msgstr "اعلی عرض بلد کی ترتیب کا انتخاب کریں۔"
 
-#: src/screens/settings_display/language_settings.tsx:104
+#: src/screens/settings_display/language_settings.tsx:108
 msgid "Choose Language"
 msgstr "زبان کا انتخاب کریں۔"
 
@@ -533,8 +533,8 @@ msgstr "قبلہ نقشہ کے کام کرنے کے لیے انٹرنیٹ کنک
 
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:102
-msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese"
-msgstr "انگریزی، فارسی، عربی، ترکی، انڈونیشی، فرانسیسی، اردو، ہندی، جرمن، بوسنیائی، ویتنامی میں مقامی ہے"
+msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
+msgstr "انگریزی، فارسی، عربی، ترکی، انڈونیشی، فرانسیسی، اردو، ہندی، جرمن، بوسنیائی، ویتنامی، بنگلہ میں مقامی ہے"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -573,7 +573,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "لیبل"
 
-#: src/screens/settings_display/language_settings.tsx:101
+#: src/screens/settings_display/language_settings.tsx:105
 msgid "Language"
 msgstr "زبان"
 
@@ -1161,7 +1161,7 @@ msgstr "ناقابل اعتبار"
 msgid "Unresolved (default)"
 msgstr "غیر حل شدہ (پہلے سے طے شدہ)"
 
-#: src/screens/settings_display/language_settings.tsx:80
+#: src/screens/settings_display/language_settings.tsx:84
 msgid "Unsupported"
 msgstr "غیر تعاون یافتہ"
 

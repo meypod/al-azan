@@ -30,7 +30,7 @@ Tính năng ứng dụng:
 
 * Bộ đếm Qada
 
-* Được bản địa hóa bằng tiếng Anh, Ba Tư, Ả Rập, Thổ Nhĩ Kỳ, Indonesia, Pháp, Urdu, Hindi, Đức, Bosnia, Việt
+* Được bản địa hóa bằng tiếng Anh, tiếng Ba Tư, tiếng Ả Rập, tiếng Thổ Nhĩ Kỳ, tiếng Indonesia, tiếng Pháp, tiếng Urdu, tiếng Hindi, tiếng Đức, tiếng Bosnia, tiếng Việt, tiếng Bangla
 
 Kho mã nguồn mở:
 https://github.com/meypod/al-azan

@@ -30,7 +30,7 @@ Caractéristiques de l'application:
 
 * Compteur de Qada
 
-* Traduit en anglais, persan, arabe, turc, indonésien, français, urdu, hindi, allemand, bosniaque, vietnamien
+* Est localisé en anglais, persan, arabe, turc, indonésien, français, urdu, hindi, allemand, bosniaque, vietnamien, bengali
 
 Répositoire open source:
 https://github.com/meypod/al-azan

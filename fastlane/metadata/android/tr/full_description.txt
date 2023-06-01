@@ -30,7 +30,7 @@ Uygulama özellikleri:
 
 * Kaza namazı sayacı
 
-* İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça, Vietnamca dili seçenekleri
+* İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça, Vietnamca, Bangla dillerinde yerelleştirilmiştir
 
 Açık kaynak deposu:
 https://github.com/meypod/al-azan

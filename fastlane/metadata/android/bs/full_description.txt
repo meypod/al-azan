@@ -30,7 +30,7 @@ Funkcije aplikacije:
 
 * Kada brojač
 
-* Lokaliziran je na engleski, perzijski, arapski, turski, indonezijski, francuski, urdu, hindi, njemački, bosanski, vijetnamski
+* Lokaliziran je na engleski, perzijski, arapski, turski, indonezijski, francuski, urdu, hindi, njemački, bosanski, vijetnamski, bangla
 
 Otvoreno spremište:
 https://github.com/meypod/al-azan
