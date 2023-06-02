@@ -151,7 +151,7 @@ Translation to other languages has been done by these awesome people:
 
 #### Bangla
 
-* [@SaminYaser-work](https://github.com/SaminYaser-work)
+* [Samin Yaser](https://github.com/SaminYaser-work)
 
 ## Thanks to
 
