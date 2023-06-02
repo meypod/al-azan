@@ -58,6 +58,21 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 ## How to run this project
 
+Requirements:
+
+* Node >= 16
+* Android SDK
+* Yarn
+
+Clone the project:
+
+```bash
+# 1. clone
+git clone git@github.com:meypod/al-azan.git
+# 2. update git submodule
+cd al-azan && git submodule update --init --recursive
+```
+
 for development:
 
 ```bash
