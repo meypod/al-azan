@@ -492,7 +492,7 @@
     "@lingui/conf" "3.17.2"
     mkdirp "^1.0.4"
 
-"@lingui/cli@^3.16.0":
+"@lingui/cli@^3.17.2":
   version "3.17.2"
   resolved "https://registry.yarnpkg.com/@lingui/cli/-/cli-3.17.2.tgz#1d1d48228842ac4c5be5a31babb21f59d87f8014"
   integrity sha512-8hPZOfwB7KZolZ01diUqtprKva1RNAUUNdzISN9pmAUGw9zCPRY/dlOvM6obZi8v0VC/JKrcadOs4Z8krIS2QQ==
@@ -542,7 +542,7 @@
     jest-validate "^26.5.2"
     lodash.get "^4.4.2"
 
-"@lingui/core@3.17.2", "@lingui/core@^3.16.0":
+"@lingui/core@3.17.2", "@lingui/core@^3.17.2":
   version "3.17.2"
   resolved "https://registry.yarnpkg.com/@lingui/core/-/core-3.17.2.tgz#275aa19520477910ddf41a838ef91a8204bea7eb"
   integrity sha512-YOd068NanznN8lLQqOKPlAY0ill3rrgmiAvPRKuYkrxzJMIHqlIFO/2Kcc/RH5vClOmLfg+wgR4rsHK/kLKelQ==
