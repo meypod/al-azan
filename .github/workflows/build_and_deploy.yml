@@ -120,5 +120,5 @@ jobs:
         releaseFiles: android/app/build/outputs/bundle/release/*.aab
         track: internal
         status: draft
-        changesNotSentForReview: true
+      #  changesNotSentForReview: true
         
