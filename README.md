@@ -67,9 +67,10 @@ Requirements:
 Clone the project:
 
 ```bash
-# 1. clone
-git clone git@github.com:meypod/al-azan.git
-# 2. update git submodule
+# clone with submodules
+git clone  --recurse-submodules git@github.com:meypod/al-azan.git
+
+# OR if you have already cloned the repo without `--recurse-submodules` update git submodule:
 cd al-azan && git submodule update --init --recursive
 ```
 
