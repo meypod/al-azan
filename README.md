@@ -43,7 +43,7 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Qada counter
 
-* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese
+* Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla
 
 ## Screenshots
 
