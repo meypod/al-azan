@@ -8,6 +8,9 @@
 const defaultSourceExts =
   require('metro-config/src/defaults/defaults').sourceExts;
 
+const defaultAssetExts =
+  require('metro-config/src/defaults/defaults').assetExts;
+
 module.exports = {
   transformer: {
     getTransformOptions: async () => ({
@@ -18,6 +21,7 @@ module.exports = {
     }),
   },
   resolver: {
+    assetExts: [...defaultAssetExts, 'txt'],
     sourceExts: process.env.RN_SRC_EXT
       ? [...process.env.RN_SRC_EXT.split(',').concat(defaultSourceExts), 'mjs']
       : [...defaultSourceExts, 'mjs'],
