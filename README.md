@@ -64,17 +64,18 @@ for development:
 # 1. install packages
 yarn install
 
-# 2. build the debug version and launch emulator
-yarn android
-
-# 3. run the packager
+# 2. run the packager
 yarn start
 
+# 3. build the debug version and launch emulator
+yarn android
 ```
 
 for creating a release build locally to debug:
 
 ```bash
+yarn android --variant=release
+# OR run:
 cd android && ./gradlew :app:assembleRelease
 ```
 
