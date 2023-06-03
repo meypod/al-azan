@@ -6,6 +6,7 @@ import {getNextPrayer} from '@/adhan/prayer_times';
 import {
   ADHAN_NOTIFICATION_ID,
   ADHAN_CHANNEL_ID,
+  ADHAN_DND_CHANNEL_ID,
   PRE_ADHAN_NOTIFICATION_ID,
   PRE_ADHAN_CHANNEL_ID,
 } from '@/constants/notification';
@@ -41,6 +42,7 @@ export async function setNextAdhan(
     SELECTED_ADHAN_ENTRIES,
     SAVED_ADHAN_AUDIO_ENTRIES,
     USE_DIFFERENT_ALARM_TYPE,
+    BYPASS_DND,
   } = settings.getState();
 
   const deliveredTS = DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
@@ -97,7 +99,7 @@ export async function setNextAdhan(
 
   const adhanOptions = {
     notifId: ADHAN_NOTIFICATION_ID,
-    notifChannelId: ADHAN_CHANNEL_ID,
+    notifChannelId: BYPASS_DND ? ADHAN_DND_CHANNEL_ID : ADHAN_CHANNEL_ID,
     date,
     title,
     body,

@@ -2,6 +2,7 @@ import {MessageDescriptor} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
 export const ADHAN_CHANNEL_ID = 'adhan-channel';
+export const ADHAN_DND_CHANNEL_ID = 'adhan-dnd-channel';
 export const ADHAN_NOTIFICATION_ID = 'adhan-trigger-notification';
 
 export const PRE_ADHAN_CHANNEL_ID = 'pre-adhan-channel';
@@ -14,6 +15,7 @@ export const WIDGET_UPDATE_CHANNEL_ID = 'widget-update-channel';
 export const WIDGET_UPDATE_NOTIFICATION_ID = 'widget-update-notification';
 
 export const REMINDER_CHANNEL_ID = 'reminder-channel';
+export const REMINDER_DND_CHANNEL_ID = 'reminder-dnd-channel';
 export const PRE_REMINDER_CHANNEL_ID = 'pre-reminder-channel';
 
 export const IMPORTANT_CHANNEL_ID = 'important-channel';

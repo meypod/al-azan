@@ -7,6 +7,7 @@ import {
   Text,
 } from 'native-base';
 import {useCallback, useState} from 'react';
+import {BypassDnDSetting} from './bypass_dnd_setting';
 import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
 import {PreferHeadphoneSetting} from './prefer_headphone_setting';
@@ -67,6 +68,7 @@ export function NotificationSettings(props: IScrollViewProps) {
       <DontNotifyUpcomingSetting mb="6" />
       <PreferHeadphoneSetting mb="4" />
       <VolumeButtonSetting mb="8" />
+      <BypassDnDSetting mb="8" />
     </ScrollView>
   );
 }

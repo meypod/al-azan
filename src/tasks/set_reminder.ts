@@ -6,6 +6,7 @@ import {getPrayerTimes} from '@/adhan';
 import {
   PRE_REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
+  REMINDER_DND_CHANNEL_ID,
 } from '@/constants/notification';
 import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
 import {reminderSettings, Reminder} from '@/store/reminder';
@@ -27,6 +28,8 @@ export async function setReminders(options?: SetReminderOptions) {
     noToast = false,
     force = false,
   } = options || {};
+
+  const {BYPASS_DND} = settings.getState();
 
   {
     // we dont need reminderIdsToCancel out of this scope, hence the extra {}
@@ -88,7 +91,9 @@ export async function setReminders(options?: SetReminderOptions) {
       date: triggerDate,
       prayer: reminder.prayer,
       notifId: reminder.id,
-      notifChannelId: REMINDER_CHANNEL_ID,
+      notifChannelId: BYPASS_DND
+        ? REMINDER_DND_CHANNEL_ID
+        : REMINDER_CHANNEL_ID,
       isReminder: true,
       sound: reminder.sound,
       once: reminder.once,

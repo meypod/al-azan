@@ -9,11 +9,13 @@ import notifee, {
 import {Alert, PermissionsAndroid, Platform} from 'react-native';
 import {
   ADHAN_CHANNEL_ID,
+  ADHAN_DND_CHANNEL_ID,
   channelNameTranslations,
   IMPORTANT_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_ID,
   PRE_REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
+  REMINDER_DND_CHANNEL_ID,
   WIDGET_CHANNEL_ID,
   WIDGET_UPDATE_CHANNEL_ID,
 } from '@/constants/notification';
@@ -70,59 +72,86 @@ async function askNotificationPermission() {
     // create channels early for user access
 
     // Alarms
-    await notifee.createChannel({
-      id: ADHAN_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['ADHAN_CHANNEL_NAME']),
-      importance: AndroidImportance.HIGH,
-      visibility: AndroidVisibility.PUBLIC,
-    });
-    await notifee.createChannel({
-      id: REMINDER_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['REMINDER_CHANNEL_NAME']),
-      importance: AndroidImportance.HIGH,
-      visibility: AndroidVisibility.PUBLIC,
-    });
+    if (settings.getState().BYPASS_DND) {
+      await Promise.all([
+        notifee.deleteChannel(ADHAN_CHANNEL_ID),
+        notifee.deleteChannel(REMINDER_CHANNEL_ID),
+        notifee.createChannel({
+          id: ADHAN_DND_CHANNEL_ID,
+          name: i18n._(channelNameTranslations['ADHAN_CHANNEL_NAME']),
+          importance: AndroidImportance.HIGH,
+          visibility: AndroidVisibility.PUBLIC,
+          bypassDnd: true,
+        }),
+        notifee.createChannel({
+          id: REMINDER_DND_CHANNEL_ID,
+          name: i18n._(channelNameTranslations['REMINDER_CHANNEL_NAME']),
+          importance: AndroidImportance.HIGH,
+          visibility: AndroidVisibility.PUBLIC,
+          bypassDnd: true,
+        }),
+      ]);
+    } else {
+      await Promise.all([
+        notifee.deleteChannel(ADHAN_DND_CHANNEL_ID),
+        notifee.deleteChannel(REMINDER_DND_CHANNEL_ID),
+        notifee.createChannel({
+          id: ADHAN_CHANNEL_ID,
+          name: i18n._(channelNameTranslations['ADHAN_CHANNEL_NAME']),
+          importance: AndroidImportance.HIGH,
+          visibility: AndroidVisibility.PUBLIC,
+        }),
+        notifee.createChannel({
+          id: REMINDER_CHANNEL_ID,
+          name: i18n._(channelNameTranslations['REMINDER_CHANNEL_NAME']),
+          importance: AndroidImportance.HIGH,
+          visibility: AndroidVisibility.PUBLIC,
+        }),
+      ]);
+    }
 
-    // Pre alarms
-    await notifee.createChannel({
-      id: PRE_ADHAN_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['PRE_ADHAN_CHANNEL_NAME']),
-      visibility: AndroidVisibility.PUBLIC,
-    });
-    await notifee.createChannel({
-      id: PRE_REMINDER_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['PRE_REMINDER_CHANNEL_NAME']),
-      visibility: AndroidVisibility.PUBLIC,
-    });
+    await Promise.all([
+      // Pre alarms
+      notifee.createChannel({
+        id: PRE_ADHAN_CHANNEL_ID,
+        name: i18n._(channelNameTranslations['PRE_ADHAN_CHANNEL_NAME']),
+        visibility: AndroidVisibility.PUBLIC,
+      }),
+      notifee.createChannel({
+        id: PRE_REMINDER_CHANNEL_ID,
+        name: i18n._(channelNameTranslations['PRE_REMINDER_CHANNEL_NAME']),
+        visibility: AndroidVisibility.PUBLIC,
+      }),
 
-    // Widget related
-    await notifee.createChannel({
-      id: WIDGET_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['WIDGET_CHANNEL_NAME']),
-      importance: AndroidImportance.LOW,
-      visibility: AndroidVisibility.PUBLIC,
-    });
-    // for updating widgets silently
-    await notifee.createChannel({
-      id: WIDGET_UPDATE_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['WIDGET_UPDATE_CHANNEL_NAME']),
-      importance: AndroidImportance.MIN,
-      visibility: AndroidVisibility.SECRET,
-      lights: false,
-      badge: false,
-      vibration: false,
-    });
-    // for important notifications
-    await notifee.createChannel({
-      id: IMPORTANT_CHANNEL_ID,
-      name: i18n._(channelNameTranslations['IMPORTANT_CHANNEL_ID']),
-      importance: AndroidImportance.HIGH,
-      visibility: AndroidVisibility.PUBLIC,
-      lights: true,
-      badge: true,
-      vibration: true,
-      sound: 'default',
-    });
+      // Widget related
+      notifee.createChannel({
+        id: WIDGET_CHANNEL_ID,
+        name: i18n._(channelNameTranslations['WIDGET_CHANNEL_NAME']),
+        importance: AndroidImportance.LOW,
+        visibility: AndroidVisibility.PUBLIC,
+      }),
+      // for updating widgets silently
+      notifee.createChannel({
+        id: WIDGET_UPDATE_CHANNEL_ID,
+        name: i18n._(channelNameTranslations['WIDGET_UPDATE_CHANNEL_NAME']),
+        importance: AndroidImportance.MIN,
+        visibility: AndroidVisibility.SECRET,
+        lights: false,
+        badge: false,
+        vibration: false,
+      }),
+      // for important notifications
+      notifee.createChannel({
+        id: IMPORTANT_CHANNEL_ID,
+        name: i18n._(channelNameTranslations['IMPORTANT_CHANNEL_ID']),
+        importance: AndroidImportance.HIGH,
+        visibility: AndroidVisibility.PUBLIC,
+        lights: true,
+        badge: true,
+        vibration: true,
+        sound: 'default',
+      }),
+    ]);
   }
 }
 

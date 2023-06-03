@@ -6,6 +6,7 @@ import {ToastAndroid} from 'react-native';
 import {getNextPrayer, Prayer, translatePrayer} from '@/adhan';
 import {
   ADHAN_CHANNEL_ID,
+  ADHAN_DND_CHANNEL_ID,
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
 import {AudioEntry} from '@/modules/media_player';
@@ -42,6 +43,7 @@ export function DevSettings(props: IScrollViewProps) {
       SELECTED_ADHAN_ENTRIES,
       SAVED_ADHAN_AUDIO_ENTRIES,
       USE_DIFFERENT_ALARM_TYPE,
+      BYPASS_DND,
     } = settings.getState();
 
     let sound: AudioEntry | undefined = undefined;
@@ -54,7 +56,7 @@ export function DevSettings(props: IScrollViewProps) {
 
     const adhanOptions = {
       notifId: ADHAN_NOTIFICATION_ID, // TODO: using same notification id is troublesome when dismissing
-      notifChannelId: ADHAN_CHANNEL_ID,
+      notifChannelId: BYPASS_DND ? ADHAN_DND_CHANNEL_ID : ADHAN_CHANNEL_ID,
       date,
       title,
       body,
