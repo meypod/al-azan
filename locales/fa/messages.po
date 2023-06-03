@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 21:23+0330\n"
+"POT-Creation-Date: 2023-06-03 18:32+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,12 +221,12 @@ msgstr "نوع تقویم را انتخاب کنید"
 msgid "Choose numbering system"
 msgstr "سیستم شماره گذاری را انتخاب کنید"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "شهر/ناحیه"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "داده های کلیپ بورد حاوی مختصات نیستند"
 
@@ -251,7 +251,7 @@ msgstr "سنسور قطب نما در دسترس نیست"
 msgid "Confirm"
 msgstr "تایید"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "مختصات به روز شد"
 
@@ -259,8 +259,8 @@ msgstr "مختصات به روز شد"
 msgid "Count"
 msgstr "تعداد"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "کشور"
 
@@ -356,15 +356,15 @@ msgstr "اداره کل بررسی مصر"
 msgid "Enabled"
 msgstr "فعال"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "خطا در دریافت داده های کلیپ بورد"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "خطا در بارگیری کشورها"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "خطا در بارگیری نتایج جستجو"
 
@@ -373,7 +373,7 @@ msgid "Error while downloading audio"
 msgstr "خطا هنگام دانلود صوت"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "خطا هنگام گرفتن مختصات"
 
@@ -393,7 +393,7 @@ msgstr "خروجی داده های برنامه"
 msgid "Export data"
 msgstr "خروجی داده ها"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "پیدا کردن مکان من"
 
@@ -413,7 +413,7 @@ msgstr "عمومی (پیش فرض)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "درحال گرفتن مختصات"
 
@@ -577,12 +577,12 @@ msgstr "برچسب"
 msgid "Language"
 msgstr "زبان"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "عرض جغرافیایی"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "عرض جغرافیایی نامعتبر است"
 
@@ -604,6 +604,10 @@ msgstr ""
 "تم روشن و تاریک\n"
 ""
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "در حال بارگذاری"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -614,12 +618,12 @@ msgstr "موقعیت"
 msgid "Location settings"
 msgstr "تنظیمات مکان"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "طول جغرافیایی"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "طول جغرافیایی نامعتبر است"
 
@@ -689,12 +693,12 @@ msgstr "روز بعد"
 msgid "No"
 msgstr "خیر"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "بدون اطلاعات"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "نتیجه ای یافت نشد"
 
@@ -789,7 +793,7 @@ msgstr "هشدار بعدی"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "یادآوری بعدی"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "چسباندن"
 
@@ -917,7 +921,7 @@ msgid "Saturday"
 msgstr "شنبه"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "جستجو"
 
@@ -1117,7 +1121,7 @@ msgstr "وقت"
 msgid "Time format"
 msgstr "قالب زمان"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "برای محاسبه اذان، به موقعیت مکانی شما نیاز داریم. می‌توانید از دکمه «پیدا کردن مکان من» استفاده کنید یا از جستجوی کشور و شهر/منطقه استفاده کنید یا مختصات خود را به صورت دستی وارد کنید."
 
@@ -1153,7 +1157,7 @@ msgstr "سازمان اتحادیه اسلامی فرانسه"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "دانشگاه علوم اسلامی کراچی"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "خطای نامشخص"
 
@@ -1203,15 +1207,15 @@ msgstr "استفاده از تم تطبیقی؟"
 msgid "Use headphones when available?"
 msgstr "استفاده از هدفون در صورت وجود؟"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "با استفاده از مختصات"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "با استفاده از GPS"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "با استفاده از جستجو"
 
@@ -1264,7 +1268,7 @@ msgstr "بله"
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "همچنین می توانید مختصات را از کلیپ بورد بچسبانید"
 

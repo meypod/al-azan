@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 21:23+0330\n"
+"POT-Creation-Date: 2023-06-03 18:32+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,12 +221,12 @@ msgstr "Odaberite tip kalndara"
 msgid "Choose numbering system"
 msgstr "Odaberite brojni sistem"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "Grad/Okruženje"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "Podaci međuspremnika ne sadrže koordinate"
 
@@ -251,7 +251,7 @@ msgstr "Senzor kompasa je nedostupan"
 msgid "Confirm"
 msgstr "Potvrdite"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "Koordinati su ažurirani"
 
@@ -259,8 +259,8 @@ msgstr "Koordinati su ažurirani"
 msgid "Count"
 msgstr "Zbroj"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "Zemlja"
 
@@ -356,15 +356,15 @@ msgstr "Egipatska Generalna Geodetska Uprava"
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "Greška pri preuzimanju podataka međuspremnika"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "Greška pri učitavanju zemalja"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "Greška pri učitavanju rezultata pretraživanja"
 
@@ -373,7 +373,7 @@ msgid "Error while downloading audio"
 msgstr "Greška pri skidanju audia"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "Greška pri dobivanju koordinata"
 
@@ -393,7 +393,7 @@ msgstr "Izvezite podatke aplikacije"
 msgid "Export data"
 msgstr "Izvezite podatke"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "Nađite Moju Lokaciju"
 
@@ -413,7 +413,7 @@ msgstr "Općenito (zadano)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "Koordinate se preuzimaju"
 
@@ -577,12 +577,12 @@ msgstr "Oznaka"
 msgid "Language"
 msgstr "Jezik"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "Geografska Širina"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "Geografska Širina ne važi"
 
@@ -602,6 +602,10 @@ msgstr "Svjetla/mračna tema"
 msgid "Light/Dark theme"
 msgstr "Svjetla/mračna tema"
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "Učitavanje"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -612,12 +616,12 @@ msgstr "Lokacija"
 msgid "Location settings"
 msgstr "Postavke za lokaciju"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "Geografska Dužina"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "Geografska Dužina ne važi"
 
@@ -685,12 +689,12 @@ msgstr "Sljedeći Dan"
 msgid "No"
 msgstr "Ne"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "Nema Date"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "Nema Rezultata"
 
@@ -785,7 +789,7 @@ msgstr "Nadolazeći ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Nadolazeća podsjeta"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "Zalijepi"
 
@@ -917,7 +921,7 @@ msgid "Saturday"
 msgstr "Subota"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "Tražite"
 
@@ -1126,7 +1130,7 @@ msgstr "Vrijeme"
 msgid "Time format"
 msgstr "Vremenski format"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Za izračunavanje ezana, potrebna nam je vaša lokacija. Možete koristiti dugme \"Pronađi moju lokaciju\", ili pretragu zemlje i grada/područja, ili ručno unesite svoje koordinate."
 
@@ -1162,7 +1166,7 @@ msgstr "Islamska Organizacija Francuske"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Univerzitet Islamskih Nauka, Karači"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "Nepoznata Greška"
 
@@ -1212,15 +1216,15 @@ msgstr "Koristite adaptivnu temu?"
 msgid "Use headphones when available?"
 msgstr "Koristite slušalice kad je dostupno?"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "Koordinati su u Koristi"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "GPS je u Koristi"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "Pretraga je u Koristi"
 
@@ -1273,7 +1277,7 @@ msgstr "Da"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme ispod."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "Možete također zalijepiti koordinate iz međuspremnika"
 

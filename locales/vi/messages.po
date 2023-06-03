@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 21:23+0330\n"
+"POT-Creation-Date: 2023-06-03 18:32+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,12 +221,12 @@ msgstr "Chọn loại lịch"
 msgid "Choose numbering system"
 msgstr "Chọn hệ thống số đếm"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "Th. phố/Khu vực"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "Dữ liệu nhớ tạm không chứa tọa độ"
 
@@ -251,7 +251,7 @@ msgstr "Cảm biến la bàn không khả dụng"
 msgid "Confirm"
 msgstr "Xác nhận"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "Đã cập nhật tọa độ"
 
@@ -259,8 +259,8 @@ msgstr "Đã cập nhật tọa độ"
 msgid "Count"
 msgstr "Đếm"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "Quốc gia"
 
@@ -356,15 +356,15 @@ msgstr "Tổng cục Khảo sát Ai Cập"
 msgid "Enabled"
 msgstr "Đã bật"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "Lỗi khi nhận dữ liệu khay nhớ tạm"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "Lỗi khi tải quốc gia"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "Lỗi khi tải kết quả tìm kiếm"
 
@@ -373,7 +373,7 @@ msgid "Error while downloading audio"
 msgstr "Lỗi khi tải âm báo"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "Lỗi khi lấy tọa độ"
 
@@ -393,7 +393,7 @@ msgstr "Xuất dữ liệu ứng dụng"
 msgid "Export data"
 msgstr "Xuất dữ liệu"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "Tìm Vị trí của Tôi"
 
@@ -413,7 +413,7 @@ msgstr "Chung (mặc định)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "Lấy tọa độ"
 
@@ -577,12 +577,12 @@ msgstr "Tên"
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "Vĩ độ"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "Vĩ độ không hợp lệ"
 
@@ -602,6 +602,10 @@ msgstr "Chủ đề Sáng/Tối"
 msgid "Light/Dark theme"
 msgstr "Chủ đề Sáng/Tối"
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "Đang tải"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -612,12 +616,12 @@ msgstr "Vị trí"
 msgid "Location settings"
 msgstr "Cài đặt vị trí"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "Kinh độ"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "Kinh độ không hợp lệ"
 
@@ -685,12 +689,12 @@ msgstr "Ngày Sau"
 msgid "No"
 msgstr "Không"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "Không có dữ liệu"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "Không kết quả"
 
@@ -785,7 +789,7 @@ msgstr "Azan sắp tới"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Lời nhắc sắp tới"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "Dán"
 
@@ -913,7 +917,7 @@ msgid "Saturday"
 msgstr "Thứ 7"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "Tìm kiếm"
 
@@ -1119,7 +1123,7 @@ msgstr "Lần"
 msgid "Time format"
 msgstr "Định dạng giờ"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Để tính toán Azan, chúng tôi cần vị trí của bạn. Bạn có thể sử dụng nút \"Tìm Vị trí của Tôi\" hoặc sử dụng tìm kiếm quốc gia và thành phố/khu vực hoặc nhập tọa độ thủ công."
 
@@ -1155,7 +1159,7 @@ msgstr "Tổ chức Liên minh Hồi giáo de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Đại học Khoa học Hồi giáo, Karachi"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "Lỗi không rõ"
 
@@ -1205,15 +1209,15 @@ msgstr "Sử dụng chủ đề thích ứng?"
 msgid "Use headphones when available?"
 msgstr "Sử dụng tai nghe khi được cắm?"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "Dùng Tọa độ"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "Dùng GPS"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "Dùng Tìm kiếm"
 
@@ -1266,7 +1270,7 @@ msgstr "Được"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết bị bằng cách ấn nút bên dưới."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "Bạn cũng có thể dán toạ độ từ khay nhớ tạm"
 

@@ -227,12 +227,12 @@ msgstr "Choose calendar type"
 msgid "Choose numbering system"
 msgstr "Choose numbering system"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "City/Area"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
 
@@ -257,7 +257,7 @@ msgstr "Compass sensor unavailable"
 msgid "Confirm"
 msgstr "Confirm"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "Coordinates updated"
 
@@ -265,8 +265,8 @@ msgstr "Coordinates updated"
 msgid "Count"
 msgstr "Count"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "Country"
 
@@ -362,15 +362,15 @@ msgstr "Egyptian General Survey Authority"
 msgid "Enabled"
 msgstr "Enabled"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "Error getting clipboard data"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "Error in loading countries"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "Error in loading search results"
 
@@ -379,7 +379,7 @@ msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
 
@@ -399,7 +399,7 @@ msgstr "Export app data"
 msgid "Export data"
 msgstr "Export data"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "Find My Location"
 
@@ -419,7 +419,7 @@ msgstr "General (default)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
 
@@ -583,12 +583,12 @@ msgstr "Label"
 msgid "Language"
 msgstr "Language"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "Latitude"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "Latitude is invalid"
 
@@ -608,6 +608,10 @@ msgstr "Light and Dark theme"
 msgid "Light/Dark theme"
 msgstr "Light/Dark theme"
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "Loading"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -618,12 +622,12 @@ msgstr "Location"
 msgid "Location settings"
 msgstr "Location settings"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "Longitude"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "Longitude is invalid"
 
@@ -691,12 +695,12 @@ msgstr "Next Day"
 msgid "No"
 msgstr "No"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "No Data"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "No Results"
 
@@ -791,7 +795,7 @@ msgstr "Upcoming adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Upcoming reminder"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "Paste"
 
@@ -923,7 +927,7 @@ msgid "Saturday"
 msgstr "Saturday"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "Search"
 
@@ -1131,7 +1135,7 @@ msgstr "Time"
 msgid "Time format"
 msgstr "Time format"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
@@ -1167,7 +1171,7 @@ msgstr "Union Organization Islamic de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "University of Islamic Sciences, Karachi"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "Unknown Error"
 
@@ -1217,15 +1221,15 @@ msgstr "Use adaptive theme?"
 msgid "Use headphones when available?"
 msgstr "Use headphones when available?"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "Using Coordinates"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "Using GPS"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "Using Search"
 
@@ -1278,7 +1282,7 @@ msgstr "Yes"
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 21:23+0330\n"
+"POT-Creation-Date: 2023-06-03 18:32+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,12 +221,12 @@ msgstr "Takvim türünü seçin"
 msgid "Choose numbering system"
 msgstr "Sayı sistemini seçin"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "Şehir/Bölge"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
 
@@ -251,7 +251,7 @@ msgstr "Pusula sensörü kullanılamıyor"
 msgid "Confirm"
 msgstr "Onayla"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "Koordinatlar güncellendi"
 
@@ -259,8 +259,8 @@ msgstr "Koordinatlar güncellendi"
 msgid "Count"
 msgstr "Say"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "Ülke"
 
@@ -356,15 +356,15 @@ msgstr "Mısır Genel Araştırma Kurumu"
 msgid "Enabled"
 msgstr "Etkinleştir"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "Kopyalanan veriler alınırken hata oluştu"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "Ülkeler yüklenirken hata oluştu"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "Arama sonuçları yüklenirken hata oluştu"
 
@@ -373,7 +373,7 @@ msgid "Error while downloading audio"
 msgstr "Sesler indirilirken hata oluştu"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
@@ -393,7 +393,7 @@ msgstr "Uygulama verilerini dışa aktar"
 msgid "Export data"
 msgstr "Verileri dışa aktar"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "Konumumu bul"
 
@@ -413,7 +413,7 @@ msgstr "Genel (varsayılan)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "Koordinatları al"
 
@@ -577,12 +577,12 @@ msgstr "Etiket"
 msgid "Language"
 msgstr "Dil"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "Enlem"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "Enlem geçersiz"
 
@@ -602,6 +602,10 @@ msgstr "Açık/Koyu tema"
 msgid "Light/Dark theme"
 msgstr "Açık/Koyu tema"
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "Yükleniyor"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -612,12 +616,12 @@ msgstr "Konum"
 msgid "Location settings"
 msgstr "Konum ayarları"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "Boylam"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
@@ -685,12 +689,12 @@ msgstr "Ertesi gün"
 msgid "No"
 msgstr "Hayır"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "Veri yok"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "Sonuç yok"
 
@@ -785,7 +789,7 @@ msgstr "Yaklaşan ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Yaklaşan hatırlatma"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "Yapıştır"
 
@@ -913,7 +917,7 @@ msgid "Saturday"
 msgstr "Cumartesi"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "Ara"
 
@@ -1113,7 +1117,7 @@ msgstr "Vakit"
 msgid "Time format"
 msgstr "Zaman formatı"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir, ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
@@ -1149,7 +1153,7 @@ msgstr "Fransa İslam organizasyon birliği"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "İslami İlimler Üniversitesi, Karaçi"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "Bilinmeyen hata"
 
@@ -1199,15 +1203,15 @@ msgstr "Uyarlanabilir bir tema mı kullanıyorsunuz?"
 msgid "Use headphones when available?"
 msgstr "Uygun olduğunda kulaklık kullanılsın mı?"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "Koordinatları kullan"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "GPS kullan"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "Aramayı kullan"
 
@@ -1260,7 +1264,7 @@ msgstr "Evet"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kordinatları yapıştırabilirsiniz"
 

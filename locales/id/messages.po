@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 21:23+0330\n"
+"POT-Creation-Date: 2023-06-03 18:32+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,12 +221,12 @@ msgstr "Pilih jenis kalender"
 msgid "Choose numbering system"
 msgstr "Pilih sistem penomoran"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "Kota/Daerah"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
@@ -251,7 +251,7 @@ msgstr "Sensor kompas tidak tersedia"
 msgid "Confirm"
 msgstr "Selesai"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
@@ -259,8 +259,8 @@ msgstr "Koordinat diperbarui"
 msgid "Count"
 msgstr "Menghitung"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "Negara"
 
@@ -356,15 +356,15 @@ msgstr "Otoritas Umum Mesir"
 msgid "Enabled"
 msgstr "Aktif"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "Tidak mendapatkan data clipboard"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "Kesalahan dalam memuat daftar negara"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "Kesalahan dalam memuat hasil pencarian"
 
@@ -373,7 +373,7 @@ msgid "Error while downloading audio"
 msgstr "Kesalahan saat mengunduh audio"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
@@ -393,7 +393,7 @@ msgstr "Mengekspor data aplikasi"
 msgid "Export data"
 msgstr "Ekspor data"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "Temukan Lokasi Saya"
 
@@ -413,7 +413,7 @@ msgstr "Umum (default)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "Mendapatkan Koordinat"
 
@@ -577,12 +577,12 @@ msgstr "Judul"
 msgid "Language"
 msgstr "Bahasa"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "Latitud"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "Latitud tidak valid"
 
@@ -602,6 +602,10 @@ msgstr "Tema Terang dan Gelap"
 msgid "Light/Dark theme"
 msgstr "Tema terang/gelap"
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "Memuat"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -612,12 +616,12 @@ msgstr "Lokasi"
 msgid "Location settings"
 msgstr "Pengaturan lokasi"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "Longitud"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "Longitud tidak valid"
 
@@ -685,12 +689,12 @@ msgstr "Hari Brkut"
 msgid "No"
 msgstr "Tidak"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "Tidak ada data"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "Tidak ada hasil"
 
@@ -785,7 +789,7 @@ msgstr "Adzan yang akan datang"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Pengingat yang akan datang"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "Tempel"
 
@@ -913,7 +917,7 @@ msgid "Saturday"
 msgstr "Sabtu"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "Pencarian"
 
@@ -1115,7 +1119,7 @@ msgstr "Waktu"
 msgid "Time format"
 msgstr "Format waktu"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Lokasi dibutuhkan untuk menghitung waktu adzan. Gunakan tombol \"Temukan Lokasi Saya\", atau gunakan pencarian negara dan kota/daerah, atau masukkan koordinat secara manual."
 
@@ -1151,7 +1155,7 @@ msgstr "Serikat Organisasi Islam Perancis (UOIF)"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Universitas Ilmu Islam, Karachi"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "Kesalahan Tidak Dikenal"
 
@@ -1201,15 +1205,15 @@ msgstr "Gunakan tema adaptif?"
 msgid "Use headphones when available?"
 msgstr "Gunakan headphone jika tersedia?"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "Menggunakan Koordinat"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "Menggunakan GPS"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "Menggunakan Pencarian"
 
@@ -1262,7 +1266,7 @@ msgstr "Ya"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 

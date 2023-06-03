@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-01 21:23+0330\n"
+"POT-Creation-Date: 2023-06-03 18:32+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -221,12 +221,12 @@ msgstr "Kalendertyp auswählen"
 msgid "Choose numbering system"
 msgstr "Nummerierungssystem auswählen"
 
-#: src/screens/settings_location/index.tsx:235
-#: src/screens/settings_location/index.tsx:237
+#: src/screens/settings_location/index.tsx:191
+#: src/screens/settings_location/index.tsx:193
 msgid "City/Area"
 msgstr "Stadt/Gebiet"
 
-#: src/screens/settings_location/index.tsx:123
+#: src/screens/settings_location/index.tsx:79
 msgid "Clipboard data does not contain coordinates"
 msgstr "Die Zwischenablage enthält keine Koordinaten"
 
@@ -251,7 +251,7 @@ msgstr "Der Kompass-Sensor ist nicht verfügbar"
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/screens/settings_location/index.tsx:146
+#: src/screens/settings_location/index.tsx:102
 msgid "Coordinates updated"
 msgstr "Die Koordinaten wurden aktualisiert"
 
@@ -259,8 +259,8 @@ msgstr "Die Koordinaten wurden aktualisiert"
 msgid "Count"
 msgstr "Zählen"
 
-#: src/screens/settings_location/index.tsx:212
-#: src/screens/settings_location/index.tsx:214
+#: src/screens/settings_location/index.tsx:173
+#: src/screens/settings_location/index.tsx:175
 msgid "Country"
 msgstr "Land"
 
@@ -356,15 +356,15 @@ msgstr "Ägyptische Generalvermessungsbehörde"
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: src/screens/settings_location/index.tsx:129
+#: src/screens/settings_location/index.tsx:85
 msgid "Error getting clipboard data"
 msgstr "Fehler beim Abrufen der Zwischenablage"
 
-#: src/screens/settings_location/index.tsx:225
+#: src/screens/settings_location/index.tsx:185
 msgid "Error in loading countries"
 msgstr "Fehler beim Laden der Länder"
 
-#: src/screens/settings_location/index.tsx:251
+#: src/screens/settings_location/index.tsx:206
 msgid "Error in loading search results"
 msgstr "Fehler beim Laden der Suchergebnisse"
 
@@ -373,7 +373,7 @@ msgid "Error while downloading audio"
 msgstr "Fehler beim Herunterladen der Audio-Dateien"
 
 #: src/screens/qibla_finder_compass/index.tsx:82
-#: src/screens/settings_location/index.tsx:150
+#: src/screens/settings_location/index.tsx:106
 msgid "Error while getting coordinates"
 msgstr "Fehler beim Abrufen der Koordinaten"
 
@@ -393,7 +393,7 @@ msgstr "App-Daten exportieren"
 msgid "Export data"
 msgstr "Daten exportieren"
 
-#: src/screens/settings_location/index.tsx:197
+#: src/screens/settings_location/index.tsx:158
 msgid "Find My Location"
 msgstr "Meinen Standort finden"
 
@@ -413,7 +413,7 @@ msgstr "Allgemein (Standard)"
 
 #: src/screens/qibla_finder_compass/index.tsx:107
 #: src/screens/qibla_finder_compass/index.tsx:168
-#: src/screens/settings_location/index.tsx:201
+#: src/screens/settings_location/index.tsx:162
 msgid "Getting coordinates"
 msgstr "Koordinaten ermitteln"
 
@@ -577,12 +577,12 @@ msgstr "Bezeichnung"
 msgid "Language"
 msgstr "Sprache"
 
-#: src/screens/settings_location/index.tsx:276
-#: src/screens/settings_location/index.tsx:281
+#: src/screens/settings_location/index.tsx:231
+#: src/screens/settings_location/index.tsx:236
 msgid "Latitude"
 msgstr "Breitengrad"
 
-#: src/screens/settings_location/index.tsx:288
+#: src/screens/settings_location/index.tsx:243
 msgid "Latitude is invalid"
 msgstr "Der Breitengrad ist ungültig"
 
@@ -602,6 +602,10 @@ msgstr "Heller und dunkler Farbmodus"
 msgid "Light/Dark theme"
 msgstr "Heller und dunkler Farbmodus"
 
+#: src/components/AutocompleteInput.tsx:192
+msgid "Loading"
+msgstr "Laden"
+
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
 #: src/utils/dialogs.ts:35
@@ -612,12 +616,12 @@ msgstr "Standort"
 msgid "Location settings"
 msgstr "Standort-Einstellungen"
 
-#: src/screens/settings_location/index.tsx:292
-#: src/screens/settings_location/index.tsx:297
+#: src/screens/settings_location/index.tsx:247
+#: src/screens/settings_location/index.tsx:252
 msgid "Longitude"
 msgstr "Längengrad"
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/index.tsx:259
 msgid "Longitude is invalid"
 msgstr "Der Längengrad ist ungültig"
 
@@ -687,12 +691,12 @@ msgstr "Nächster Tag"
 msgid "No"
 msgstr "Nein"
 
-#: src/components/AutocompleteInput.tsx:136
+#: src/components/AutocompleteInput.tsx:196
 msgid "No Data"
 msgstr "Keine Daten"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:140
+#: src/components/AutocompleteInput.tsx:200
 msgid "No Results"
 msgstr "Keine Ergebnisse"
 
@@ -787,7 +791,7 @@ msgstr "Bevorstehender Adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Kommende Erinnerung"
 
-#: src/screens/settings_location/index.tsx:332
+#: src/screens/settings_location/index.tsx:287
 msgid "Paste"
 msgstr "Einfügen"
 
@@ -917,7 +921,7 @@ msgid "Saturday"
 msgstr "Samstag"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:110
+#: src/components/AutocompleteInput.tsx:166
 msgid "Search"
 msgstr "Suche"
 
@@ -1120,7 +1124,7 @@ msgstr "Zeit"
 msgid "Time format"
 msgstr "Zeitformat"
 
-#: src/screens/settings_location/index.tsx:187
+#: src/screens/settings_location/index.tsx:148
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Um den Adhan zu berechnen, benötigen wir Ihren Standort. Sie können die Schaltfläche \"Meinen Standort finden\" verwenden, die Suche nach Land und Stadt/Gebiet nutzen oder Ihre Koordinaten manuell eingeben."
 
@@ -1156,7 +1160,7 @@ msgstr "Islamische Union Frankreichs"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Universität für Islamische Wissenschaften, Karatschi"
 
-#: src/components/AutocompleteInput.tsx:131
+#: src/components/AutocompleteInput.tsx:187
 msgid "Unknown Error"
 msgstr "Unbekannter Fehler"
 
@@ -1206,15 +1210,15 @@ msgstr "Adaptives Thema verwenden?"
 msgid "Use headphones when available?"
 msgstr "Kopfhörer benutzen, wenn verfügbar?"
 
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/index.tsx:227
 msgid "Using Coordinates"
 msgstr "Koordinaten verwenden"
 
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/index.tsx:150
 msgid "Using GPS"
 msgstr "GPS verwenden"
 
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/index.tsx:169
 msgid "Using Search"
 msgstr "Suche verwenden"
 
@@ -1267,7 +1271,7 @@ msgstr "Ja"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Über die untere Schaltfläche können Sie auf die Energieverwaltung Ihres Geräts zugreifen."
 
-#: src/screens/settings_location/index.tsx:326
+#: src/screens/settings_location/index.tsx:281
 msgid "You can also paste coords from clipboard"
 msgstr "Sie können die Koordinaten auch aus der Zwischenablage einfügen"
 
