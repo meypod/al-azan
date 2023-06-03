@@ -54,5 +54,5 @@ export function normalizeLetters(str: string) {
   }
   return str
     .replace(accentsRegex, m => accentsMap.get(m)!)
-    .replaceAll(/[\u064B\u064D\u064E\u064F\u0650\u0651\u0655]/g, '');
+    .replaceAll(/[\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0655]/g, '');
 }
