@@ -11,7 +11,6 @@ export type CountryInfo = {
 export async function getCountries(): Promise<CountryInfo[]> {
   const text = await loadFile(
     require('@/assets/geocoding/countries_haystack.txt'),
-    false,
   );
   const countries = text
     .trim()
@@ -38,7 +37,6 @@ export type CityInfo = {
 export async function getCities(countryCode: string): Promise<CityInfo[]> {
   const text = await loadFile(
     require('@/assets/geocoding/cities_haystack.txt'),
-    false,
   );
   const cities = text
     .trim()
