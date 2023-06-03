@@ -1,6 +1,5 @@
 import {t} from '@lingui/macro';
 import Clipboard from '@react-native-clipboard/clipboard';
-import {debounce} from 'lodash';
 import {
   HStack,
   ScrollView,
@@ -13,7 +12,7 @@ import {
   WarningOutlineIcon,
   Spacer,
 } from 'native-base';
-import {useCallback, useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import {ToastAndroid} from 'react-native';
 import LocationProvider from 'react-native-get-location';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
@@ -21,15 +20,8 @@ import Divider from '@/components/Divider';
 import NumericInput from '@/components/numeric_input';
 import {useCalcSettings} from '@/store/calculation';
 import {useSettings} from '@/store/settings';
-import {getCached} from '@/utils/cached';
 import {askForLocationService} from '@/utils/dialogs';
-import {
-  CountryInfo,
-  getCountries,
-  search,
-  SearchResult,
-} from '@/utils/geonames';
-import {useAction} from '@/utils/hooks/use_action';
+import {CountryInfo, getCountries, getCities, CityInfo} from '@/utils/geonames';
 
 function isValidCoords(num: number) {
   return num >= -180 && num <= 180;
@@ -42,49 +34,13 @@ export function LocationSettings(props: IScrollViewProps) {
   const [long, setLong] = useCalcSettings('LOCATION_LONG');
   const [gettingLocation, setGettingLocation] = useState<boolean>(false);
   const [selectedCountry, setSelectedCountry] = useSettings('LOCATION_COUNTRY');
-  const [locale] = useSettings('SELECTED_LOCALE');
 
   const [selectedCity, setSelectedCity] = useSettings('LOCATION_CITY');
-
-  const {
-    pending: isLoadingCountries,
-    result: countries,
-    runAction: getCountriesAction,
-    error: getCountryError,
-  } = useAction(() =>
-    getCached('countries-' + locale, () => getCountries({locale})),
-  );
-
-  const {
-    pending: isLoadingCities,
-    result: citiesSearchResult,
-    runAction: searchCitiesAction,
-    error: searchCitiesError,
-  } = useAction((term: string, signal: AbortSignal) =>
-    search({
-      countryCode: selectedCountry?.countryCode!,
-      term,
-      abortControllerSignal: signal,
-      locale,
-    }),
-  );
 
   const clearCountryAndCity = useCallback(() => {
     setSelectedCountry(undefined);
     setSelectedCity(undefined);
   }, [setSelectedCity, setSelectedCountry]);
-
-  const onChangeText = useCallback(() => {
-    if (!countries) getCountriesAction();
-  }, [countries, getCountriesAction]);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const onCitiesChangeText = useCallback(
-    debounce((term: string) => {
-      searchCitiesAction(term);
-    }, 400),
-    [searchCitiesAction],
-  );
 
   const onLatChange = useCallback(
     (num: number | undefined) => {
@@ -174,13 +130,18 @@ export function LocationSettings(props: IScrollViewProps) {
   );
 
   const onCitySelected = useCallback(
-    (result: SearchResult) => {
+    (result: CityInfo) => {
       setSelectedCity(result);
       setLong(parseFloat(result.lng));
       setLat(parseFloat(result.lat));
     },
     [setSelectedCity, setLong, setLat],
   );
+
+  const getCitiesData = useMemo(() => {
+    if (!selectedCountry) return () => Promise.resolve([]);
+    return () => getCities(selectedCountry?.code);
+  }, [selectedCountry]);
 
   return (
     <ScrollView p="4" _contentContainerStyle={{paddingBottom: 40}} {...props}>
@@ -212,36 +173,30 @@ export function LocationSettings(props: IScrollViewProps) {
           <FormControl.Label>{t`Country`}</FormControl.Label>
           <AutocompleteInput<CountryInfo>
             actionsheetLabel={t`Country`}
-            data={countries}
+            getData={getCountries}
             onItemSelected={onCountrySelected}
-            getOptionLabel={item => item.countryName}
-            getOptionKey={item => item.countryCode}
-            autoCompleteKeys={['countryCode', 'countryName']}
-            onChangeText={onChangeText}
-            loading={isLoadingCountries}
+            getOptionLabel={item => (item as any).selectedName || item.name}
+            getOptionKey={item => item.code}
+            autoCompleteKeys={['names']}
             selectedItem={selectedCountry}
+            useReturnedMatch={true}
             size="sm"
             px="1"
             errorMessage={t`Error in loading countries`}
-            showError={!!getCountryError}
           />
         </FormControl>
 
         {selectedCountry && (
-          <FormControl
-            ml="2"
-            width={selectedCity ? '40%' : '60%'}
-            isInvalid={!!searchCitiesError}>
+          <FormControl ml="2" width={selectedCity ? '40%' : '60%'}>
             <FormControl.Label>{t`City/Area`}</FormControl.Label>
-            <AutocompleteInput<SearchResult>
+            <AutocompleteInput<CityInfo>
               actionsheetLabel={t`City/Area`}
-              data={citiesSearchResult}
+              getData={getCitiesData}
               onItemSelected={onCitySelected}
-              getOptionKey={item => item.geonameId.toString()}
-              getOptionLabel={item => item.name}
-              autoCompleteKeys={['name']}
-              onChangeText={onCitiesChangeText}
-              loading={isLoadingCities}
+              getOptionKey={item => item.names}
+              getOptionLabel={item => (item as any).selectedName || item.name}
+              autoCompleteKeys={['names']}
+              useReturnedMatch={true}
               selectedItem={selectedCity}
               size="sm"
               px="1"

@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-file-access/android/src/main/java/com/alpha0010/fs/FileAccessModule.kt b/node_modules/react-native-file-access/android/src/main/java/com/alpha0010/fs/FileAccessModule.kt
+index 248a938..0fe4cc8 100644
+--- a/node_modules/react-native-file-access/android/src/main/java/com/alpha0010/fs/FileAccessModule.kt
++++ b/node_modules/react-native-file-access/android/src/main/java/com/alpha0010/fs/FileAccessModule.kt
+@@ -119,7 +119,7 @@ class FileAccessModule internal constructor(context: ReactApplicationContext) :
+         if (type == "resource") {
+           val id = reactApplicationContext.resources.getIdentifier(
+             asset,
+-            null,
++            "raw",
+             reactApplicationContext.packageName
+           )
+           reactApplicationContext.resources.openRawResource(id)

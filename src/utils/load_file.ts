@@ -34,7 +34,7 @@ export async function loadFile(resourceId: number, compressed = true) {
   } else {
     resourcePath = Dirs.CacheDir + '/' + uri;
     if (!(await FileSystem.exists(resourcePath))) {
-      await FileSystem.cpAsset(uri, resourcePath);
+      await FileSystem.cpAsset(uri, resourcePath, 'resource');
       if (compressed) {
         await decompressFileInPlace(resourcePath);
       }

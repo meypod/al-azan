@@ -15,41 +15,74 @@ import {
   Box,
   WarningOutlineIcon,
 } from 'native-base';
-import {useCallback, useMemo, useState} from 'react';
-import useFuse from '@/utils/hooks/use_fuse';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {ListRenderItem, ListRenderItemInfo} from 'react-native';
+import {mapToData, useFastSearch} from '@/utils/hooks/use_fast_search';
 
 export const AutocompleteInput = <T extends unknown>(
   props: AutocompleteInputProps<T>,
 ) => {
   const {
-    data = [],
+    getData,
     label,
     autoCompleteKeys,
-    getOptionKey = defaultGetOptionKey,
+    getOptionKey = defaultGetOptionKey as (item: T, i: number) => string,
     getOptionLabel = defaultGetOptionLabel(label || 'label'),
     onItemSelected = () => {},
     onChangeText: onChangeTextProp,
     actionsheetLabel,
-    loading,
     selectedItem,
     showError,
     errorMessage,
+    useReturnedMatch,
+    loadingMsg,
     ...inputProps
   } = props;
-
   const {isOpen, onOpen, onClose} = useDisclose();
+  const [data, setData] = useState<T[]>([]);
+  const [loading, setLoading] = useState(true);
+  const unmounted = useRef(false);
+
+  useEffect(() => {
+    unmounted.current = false;
+    return () => {
+      unmounted.current = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      setLoading(true);
+      getData()
+        .then(setData)
+        .then(() => {
+          if (!unmounted.current) {
+            setLoading(false);
+          }
+        })
+        .catch(console.log);
+    } else {
+      setData([]);
+      setLoading(false);
+    }
+  }, [getData, isOpen]);
+
   const [inputVal, setInputVal] = useState<string>('');
 
-  const {results, setSearchTerm} = useFuse(data, {
+  const {results, setSearchTerm} = useFastSearch(data, {
     keys: autoCompleteKeys,
-    threshold: 0.3,
   });
+
+  const mappedResults = useMemo(
+    () => mapToData(results, data),
+    [results, data],
+  );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateSearchTerm = useCallback(
-    debounce((term: string) => {
-      setSearchTerm(term);
-    }, 100),
+    debounce((newTerm: string) => {
+      setSearchTerm(newTerm);
+    }, 200),
     [setSearchTerm],
   );
 
@@ -64,17 +97,40 @@ export const AutocompleteInput = <T extends unknown>(
   );
 
   const onListItemPressed = useCallback(
-    (item: T) => {
-      onItemSelected && onItemSelected(item);
+    (listItem: ListRenderItemInfo<T>) => {
+      let newItem = listItem.item;
+      if (typeof listItem.item === 'object') {
+        newItem = {...listItem.item};
+        if (useReturnedMatch) {
+          (newItem as any).selectedName = results[listItem.index].value;
+        }
+      }
+      onItemSelected && onItemSelected(newItem);
       onClose();
       setInputVal('');
     },
-    [onItemSelected, onClose],
+    [onItemSelected, onClose, useReturnedMatch, results],
   );
 
-  const textValue = useMemo(
-    () => selectedItem && getOptionLabel(selectedItem),
-    [getOptionLabel, selectedItem],
+  const textValue = useMemo(() => {
+    if (selectedItem) {
+      return getOptionLabel(selectedItem);
+    }
+    return '';
+  }, [getOptionLabel, selectedItem]);
+
+  const memoRenderItem: ListRenderItem<T> = useCallback(
+    listItemInfo => (
+      <Actionsheet.Item onPress={onListItemPressed.bind(this, listItemInfo)}>
+        {useReturnedMatch
+          ? results[listItemInfo.index].value
+          : getOptionLabel(listItemInfo.item)}
+        {useReturnedMatch && results[listItemInfo.index].firstValue
+          ? `(${results[listItemInfo.index].firstValue})`
+          : undefined}
+      </Actionsheet.Item>
+    ),
+    [getOptionLabel, onListItemPressed, results, useReturnedMatch],
   );
 
   return (
@@ -131,6 +187,10 @@ export const AutocompleteInput = <T extends unknown>(
                       {errorMessage ? errorMessage : t`Unknown Error`}
                     </Text>
                   </>
+                ) : loading ? (
+                  <Text color="gray.500" fontSize="xl">
+                    {loadingMsg ? loadingMsg : t`Loading`}
+                  </Text>
                 ) : !data?.length ? (
                   <Text color="gray.500" fontSize="xl">
                     {t`No Data`}
@@ -146,13 +206,8 @@ export const AutocompleteInput = <T extends unknown>(
             <FlatList
               flexShrink={1}
               flexGrow={0}
-              data={results}
-              renderItem={listItemInfo => (
-                <Actionsheet.Item
-                  onPress={() => onListItemPressed(listItemInfo.item)}>
-                  {getOptionLabel(listItemInfo.item)}
-                </Actionsheet.Item>
-              )}
+              data={mappedResults}
+              renderItem={memoRenderItem}
               keyExtractor={getOptionKey}
             />
           </KeyboardAvoidingView>
@@ -162,7 +217,7 @@ export const AutocompleteInput = <T extends unknown>(
   );
 };
 
-const defaultGetOptionKey = (option: any) => {
+function defaultGetOptionKey(option: any) {
   if (typeof option === 'object' && option.id) {
     return option.id;
   } else {
@@ -176,7 +231,7 @@ const defaultGetOptionKey = (option: any) => {
       );
     }
   }
-};
+}
 
 const defaultGetOptionLabel = (label: string) => (option: any) => {
   if (typeof option === 'object') {
@@ -192,18 +247,19 @@ const defaultGetOptionLabel = (label: string) => (option: any) => {
 };
 
 type AutocompleteInputProps<T> = IInputProps & {
-  data?: Array<T>;
+  getData: () => Promise<Array<T>>;
   label?: string;
   showError?: boolean;
   errorMessage?: string;
+  loadingMsg?: string;
   actionsheetLabel?: string;
-  loading?: boolean;
   selectedItem?: T;
   autoCompleteKeys?: string[];
   getOptionKey?: (item: T) => string;
   getOptionLabel?: (item: T) => string;
   onItemSelected?: (item: T) => void;
   onChangeText?: (text: string) => void;
+  useReturnedMatch?: boolean;
 };
 
 export default AutocompleteInput;

@@ -1,83 +1,57 @@
-import {URL, URLSearchParams} from 'react-native-url-polyfill';
-
-const baseURL = 'https://secure.geonames.org/';
-const username = 'meypod';
-const responseStyle = 'short';
-const responseType = 'json';
-const maxRows = 10;
-
-function getBaseSearchParams() {
-  const baseSearchParams = new URLSearchParams();
-  baseSearchParams.set('username', username);
-  baseSearchParams.set('style', responseStyle);
-  baseSearchParams.set('type', responseType);
-  baseSearchParams.set('maxRows', maxRows.toString());
-  return baseSearchParams;
-}
-
-type GeonamesResponse<T> = {
-  geonames: T;
-  status?: {
-    message?: string;
-  };
-  value?: number;
-  totalResultsCount?: number;
-};
-
-function throwIfMalformed(response: GeonamesResponse<unknown>) {
-  if (response.status && response.value) {
-    throw new Error('Service limit reached');
-  }
-}
+import {loadFile} from './load_file';
 
 export type CountryInfo = {
-  countryCode: string;
-  countryName: string;
+  code: string;
+  /** comma seperated alternative names */
+  names: string;
+  /** English name */
+  name: string;
 };
 
-export async function getCountries(options: {
-  locale?: string;
-}): Promise<CountryInfo[]> {
-  const url = new URL('/countryInfo', baseURL);
-  const searchParams = getBaseSearchParams();
-  if (options.locale) {
-    searchParams.set('lang', options.locale);
-  }
-  const request = new Request(`${url}?${searchParams}`);
-  const resp = (await fetch(request).then(r => r.json())) as GeonamesResponse<
-    Array<CountryInfo>
-  >;
-  throwIfMalformed(resp);
-  return resp.geonames;
+export async function getCountries(): Promise<CountryInfo[]> {
+  const text = await loadFile(
+    require('@/assets/geocoding/countries_haystack.txt'),
+    false,
+  );
+  const countries = text
+    .trim()
+    .split('\n')
+    .map(line => line.split('|'))
+    .map(([code, names]) => ({
+      code,
+      names,
+      name: names.split(',')[0],
+    }));
+
+  return countries;
 }
 
-export type SearchResult = {
-  lng: string;
-  lat: string;
-  countryCode: string;
+export type CityInfo = {
+  /** latin name */
   name: string;
-  geonameId: number;
+  names: string;
+  lat: string;
+  lng: string;
+  country: string;
 };
 
-export async function search(options: {
-  countryCode: string;
-  term: string;
-  locale?: string;
-  abortControllerSignal: AbortSignal;
-}) {
-  const url = new URL('/search', baseURL);
-  const searchParams = getBaseSearchParams();
-  searchParams.set('country', options.countryCode);
-  searchParams.set('name', options.term);
-  if (options.locale) {
-    searchParams.set('lang', options.locale);
-  }
-  const request = new Request(`${url}?${searchParams}`, {
-    signal: options.abortControllerSignal,
-  });
-  const resp = (await fetch(request).then(r => r.json())) as GeonamesResponse<
-    Array<SearchResult>
-  >;
+export async function getCities(countryCode: string): Promise<CityInfo[]> {
+  const text = await loadFile(
+    require('@/assets/geocoding/cities_haystack.txt'),
+    false,
+  );
+  const cities = text
+    .trim()
+    .split('\n')
+    .filter(l => l.endsWith(countryCode))
+    .map(line => line.split('|'))
+    .map(([names, lat, lng, country]) => ({
+      name: names.split(',')[0],
+      names,
+      lat,
+      lng,
+      country,
+    }));
 
-  return resp.geonames;
+  return cities;
 }
