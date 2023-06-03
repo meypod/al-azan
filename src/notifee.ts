@@ -218,16 +218,7 @@ async function handleNotification({
       const {pressAction} = detail;
 
       if (type === EventType.DISMISSED || pressAction?.id === 'dismiss_alarm') {
-        if (
-          [
-            ADHAN_CHANNEL_ID,
-            ADHAN_DND_CHANNEL_ID,
-            REMINDER_CHANNEL_ID,
-            REMINDER_DND_CHANNEL_ID,
-          ].includes(channelId)
-        ) {
-          await cancelAlarmNotif({notification: detail.notification, options});
-        }
+        await cancelAlarmNotif({notification: detail.notification, options});
       } else if (pressAction?.id === 'cancel_alarm') {
         // 'cancel_alarm' only exists on a pre-alarm notification
         const scheduledAlarmOptions = await getSecheduledAlarmOptions(
