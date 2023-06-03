@@ -1,1 +1,3 @@
 - use offline geocoding data. location search no longer needs internet. application size has increased as a result.
+- added option to play adhan when "Do Not Disturb" is active
+- minor bug fixes
