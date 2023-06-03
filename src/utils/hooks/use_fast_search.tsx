@@ -115,8 +115,8 @@ function search({
 
   results.sort(
     (a, b) =>
-      a.value.length - b.value.length ||
       a.indexOf! - b.indexOf! ||
+      a.value.length - b.value.length ||
       cmp(a.value, b.value),
   );
 
