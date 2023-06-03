@@ -1,4 +1,5 @@
 import {useMemo, useState} from 'react';
+import {normalizeLetters} from '../normalize';
 
 const cmp = new Intl.Collator([
   'en',
@@ -17,43 +18,8 @@ const cmp = new Intl.Collator([
 
 // some of this code is taken from uFuzzy (https://github.com/leeoniya/uFuzzy/blob/main/src/uFuzzy.js)
 
-export function latinize(str: string) {
-  const accents = {
-    A: 'ÁÀÃÂÄĄ',
-    a: 'áàãâäą',
-    E: 'ÉÈÊËĖ',
-    e: 'éèêëę',
-    I: 'ÍÌÎÏĮ',
-    i: 'íìîïį',
-    O: 'ÓÒÔÕÖ',
-    o: 'óòôõö',
-    U: 'ÚÙÛÜŪŲ',
-    u: 'úùûüūų',
-    C: 'ÇČ',
-    c: 'çč',
-    N: 'Ñ',
-    n: 'ñ',
-    S: 'Š',
-    s: 'š',
-  };
-
-  let accentsMap = new Map();
-  let accentsTpl = '';
-
-  for (let r in accents) {
-    accents[r as keyof typeof accents].split('').forEach(a => {
-      accentsTpl += a;
-      accentsMap.set(a, r);
-    });
-  }
-
-  let accentsRe = new RegExp(`[${accentsTpl}]`, 'g');
-
-  return str.replace(accentsRe, m => accentsMap.get(m));
-}
-
 export function prepareForSearch(str: string) {
-  return latinize(str.toLocaleUpperCase());
+  return normalizeLetters(str.toLocaleUpperCase());
 }
 
 /** returns the matched string inside a string that has elements that are separated by delimiter */
