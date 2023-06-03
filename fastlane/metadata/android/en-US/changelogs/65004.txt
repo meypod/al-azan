@@ -1,0 +1,1 @@
+- use offline geocoding data. location search no longer needs internet. application size has increased as a result.
