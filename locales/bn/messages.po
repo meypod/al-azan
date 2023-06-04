@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-03 18:32+0330\n"
+"POT-Creation-Date: 2023-06-04 03:59+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "৬০ মিনিট"
 msgid "90 min"
 msgstr "৯০ মিনিট"
 
-#: src/constants/notification.ts:23
+#: src/constants/notification.ts:25
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "আযান"
 
@@ -119,7 +119,7 @@ msgstr "আল-আজান অ্যাপটি এই আশায় বি�
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "আল-আজান একটি বিনামূল্যের সফ্টওয়্যার: আপনি ফ্রি সফটওয়্যার ফাউন্ডেশন দ্বারা প্রকাশিত GNU Affero জেনারেল পাবলিক লাইসেন্স (v3.0) এর শর্তাবলীর অধীনে এটিকে পুনরায় বিতরণ এবং/অথবা সংশোধন করতে পারেন।"
 
-#: src/utils/permission.ts:136
+#: src/utils/permission.ts:165
 msgid "Alarms Permission"
 msgstr "অ্যালার্মের অনুমতি"
 
@@ -163,6 +163,10 @@ msgstr "অন্তত একটি নামাজের সময় দে�
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "মনোযোগ"
+
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
+msgid "Bypass \"Do Not Disturb\"?"
+msgstr "বাইপাস \"ডু নট ডিস্টার্ব\"?"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -308,7 +312,7 @@ msgid "Disclaimer"
 msgstr "দাবিত্যাগ"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:94
 msgid "Dismiss"
 msgstr "খারিজ"
 
@@ -321,9 +325,9 @@ msgstr "Diyanet İşleri Başkanlığı, তুরস্ক"
 msgid "Doesn't use any kind of trackers"
 msgstr "কোনো ধরনের ট্র্যাকার ব্যবহার করে না"
 
-#: src/utils/permission.ts:42
-#: src/utils/permission.ts:140
-#: src/utils/permission.ts:172
+#: src/utils/permission.ts:44
+#: src/utils/permission.ts:169
+#: src/utils/permission.ts:201
 msgid "Don't ask again"
 msgstr "আবার জিজ্ঞাসা করবেন না"
 
@@ -478,7 +482,7 @@ msgstr "যাইহোক, অনলাইন পরিষেবাগুলি
 msgid "I Understand"
 msgstr "আমি বুঝেছি"
 
-#: src/constants/notification.ts:47
+#: src/constants/notification.ts:49
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "গুরুত্বপূর্ণ"
 
@@ -674,9 +678,9 @@ msgid "New Reminder"
 msgstr "রিমাইন্ডার যোগ করুন"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:35
-#: src/tasks/set_next_adhan.ts:82
-#: src/tasks/set_next_adhan.ts:122
+#: src/screens/settings_dev/index.tsx:36
+#: src/tasks/set_next_adhan.ts:84
+#: src/tasks/set_next_adhan.ts:124
 msgid "Next"
 msgstr "পরবর্তী"
 
@@ -702,7 +706,7 @@ msgstr "কোন ফলাফল নেই"
 msgid "None (Automatic)"
 msgstr "কোনটিই নয় (স্বয়ংক্রিয়)"
 
-#: src/utils/permission.ts:145
+#: src/utils/permission.ts:174
 msgid "Not now"
 msgstr "এখন না"
 
@@ -722,7 +726,7 @@ msgstr "নোটিফিকেশন"
 msgid "Notification & Sound"
 msgstr "নোটিফিকেশন এবং শব্দ"
 
-#: src/utils/permission.ts:38
+#: src/utils/permission.ts:40
 msgid "Notifications Permission"
 msgstr "নোটিফিকেশন দেখানোর অনুমতি"
 
@@ -733,12 +737,12 @@ msgstr "সংখ্যা পদ্ধতি"
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
 #: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:48
-#: src/utils/permission.ts:178
+#: src/utils/permission.ts:50
+#: src/utils/permission.ts:207
 msgid "Okay"
 msgstr "ঠিক আছে"
 
-#: src/utils/permission.ts:137
+#: src/utils/permission.ts:166
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "অ্যান্ড্রয়েড 12 এবং নতুন সংস্করণে, অ্যাপটিকে সঠিকভাবে কাজ করার জন্য অ্যালার্মের অনুমতিরও প্রয়োজন, তাই আপনাকে অবশ্যই এটির অনুমতি দিতে হবে।"
 
@@ -781,11 +785,11 @@ msgstr "ওপেন সোর্স"
 msgid "Options"
 msgstr "অপশনসমূহ"
 
-#: src/constants/notification.ts:27
+#: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "আসন্ন আযান"
 
-#: src/constants/notification.ts:43
+#: src/constants/notification.ts:45
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "আসন্ন রিমাইন্ডার"
 
@@ -797,7 +801,7 @@ msgstr "পেস্ট করুন"
 msgid "Persian"
 msgstr "ফার্সি"
 
-#: src/utils/permission.ts:168
+#: src/utils/permission.ts:197
 msgid "Phone State Permission"
 msgstr "ফোন স্টেট পারমিশন"
 
@@ -865,7 +869,7 @@ msgstr "কিবলা ফাইন্ডারের লোকেশন সা
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "কিবলা মানচিত্র বর্তমানে F-Droid বিল্ডগুলিতে নেই। এটি ভবিষ্যতে সংযোজন হতে পারে।"
 
-#: src/constants/notification.ts:39
+#: src/constants/notification.ts:41
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "রিমাইন্ডার"
 
@@ -891,8 +895,8 @@ msgid "Remind me next year"
 msgstr "পরের বছর আমাকে মনে করিয়ে দিন"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:85
-#: src/tasks/set_reminder.ts:114
+#: src/tasks/set_reminder.ts:88
+#: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "রিমাইন্ডার"
 
@@ -976,6 +980,10 @@ msgstr "শিয়া, জিওফিজিক্স ইনস্টিটি
 msgid "Should app highlight current prayer instead of next prayer?"
 msgstr "অ্যাপটি কি পরবর্তী সালাতের পরিবর্তে বর্তমান সালাতকে হাইলাইট করবে?"
 
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:30
+msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
+msgstr "\"ডু নট ডিস্টার্ব\" সক্রিয় থাকা অবস্থায়ও কি অ্যাপকে আজান বাজানো উচিত?"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "ভলিউম চাপলে অ্যাপের কি আজান বাজানো বন্ধ করা উচিত?"
@@ -1001,7 +1009,7 @@ msgstr "পরবর্তী নোটিফিকেশনে দেখবে�
 msgid "Show notification widget?"
 msgstr "বিজ্ঞপ্তি উইজেট দেখাবেন?"
 
-#: src/utils/permission.ts:149
+#: src/utils/permission.ts:178
 msgid "Show settings"
 msgstr "সেটিংস দেখুন"
 
@@ -1064,7 +1072,7 @@ msgstr "রবিবার"
 msgid "System Default"
 msgstr "সিস্টেমের ডিফল্ট"
 
-#: src/screens/settings_notifications/index.tsx:63
+#: src/screens/settings_notifications/index.tsx:64
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "অ্যাপটিতে তাহাজ্জুদের সময় বলা হয়েছে রাতের শেষ তৃতীয়াংশ"
 
@@ -1121,11 +1129,11 @@ msgstr "সময় ফর্ম্যাট"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "আযান গণনা করতে, আমাদের আপনার অবস্থান প্রয়োজন। আপনি \"আমার অবস্থান খুঁজুন\" বোতামটি ব্যবহার করতে পারেন, অথবা দেশ এবং শহর/এলাকা অনুসন্ধান ব্যবহার করতে পারেন, অথবা ম্যানুয়ালি আপনার স্থানাঙ্ক লিখতে পারেন।"
 
-#: src/utils/permission.ts:39
+#: src/utils/permission.ts:41
 msgid "To see notifications about adhan, we need your permission."
 msgstr "আজান সম্পর্কে নোটিফিকেশন দেখতে, আমাদের আপনার অনুমতি প্রয়োজন।"
 
-#: src/utils/permission.ts:169
+#: src/utils/permission.ts:198
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "আপনি একটি কল পেলে আযান বাজানো বন্ধ করতে, আমাদের আপনার ফোনের অবস্থা সম্পর্কে হবে। এই অনুমতি না দেওয়া হলে এই ফিচারটি বন্ধ থাকবে।"
 
@@ -1223,11 +1231,11 @@ msgstr "সংস্করণ"
 msgid "Volume button stops adhan"
 msgstr "ভলিউম বাটন আযান বন্ধ করে দেয়"
 
-#: src/constants/notification.ts:31
+#: src/constants/notification.ts:33
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "উইজেট"
 
-#: src/constants/notification.ts:35
+#: src/constants/notification.ts:37
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "উইজেট আপডেট"
 

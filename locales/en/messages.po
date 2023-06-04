@@ -41,7 +41,7 @@ msgstr "60 min"
 msgid "90 min"
 msgstr "90 min"
 
-#: src/constants/notification.ts:23
+#: src/constants/notification.ts:25
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Adhan"
 
@@ -125,7 +125,7 @@ msgstr "Al-Azan is distributed in the hope that it will be useful, but WITHOUT A
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 
-#: src/utils/permission.ts:136
+#: src/utils/permission.ts:165
 msgid "Alarms Permission"
 msgstr "Alarms Permission"
 
@@ -169,6 +169,10 @@ msgstr "At least one prayer time must be shown"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "Attention"
+
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
+msgid "Bypass \"Do Not Disturb\"?"
+msgstr "Bypass \"Do Not Disturb\"?"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -314,7 +318,7 @@ msgid "Disclaimer"
 msgstr "Disclaimer"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:94
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -327,9 +331,9 @@ msgstr "Diyanet İşleri Başkanlığı, Turkey"
 msgid "Doesn't use any kind of trackers"
 msgstr "Doesn't use any kind of trackers"
 
-#: src/utils/permission.ts:42
-#: src/utils/permission.ts:140
-#: src/utils/permission.ts:172
+#: src/utils/permission.ts:44
+#: src/utils/permission.ts:169
+#: src/utils/permission.ts:201
 msgid "Don't ask again"
 msgstr "Don't ask again"
 
@@ -484,7 +488,7 @@ msgstr "However, When using online services, such as searching for location coor
 msgid "I Understand"
 msgstr "I Understand"
 
-#: src/constants/notification.ts:47
+#: src/constants/notification.ts:49
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "Important"
 
@@ -680,9 +684,9 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:35
-#: src/tasks/set_next_adhan.ts:82
-#: src/tasks/set_next_adhan.ts:122
+#: src/screens/settings_dev/index.tsx:36
+#: src/tasks/set_next_adhan.ts:84
+#: src/tasks/set_next_adhan.ts:124
 msgid "Next"
 msgstr "Next"
 
@@ -708,7 +712,7 @@ msgstr "No Results"
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
-#: src/utils/permission.ts:145
+#: src/utils/permission.ts:174
 msgid "Not now"
 msgstr "Not now"
 
@@ -728,7 +732,7 @@ msgstr "Notification"
 msgid "Notification & Sound"
 msgstr "Notification & Sound"
 
-#: src/utils/permission.ts:38
+#: src/utils/permission.ts:40
 msgid "Notifications Permission"
 msgstr "Notifications Permission"
 
@@ -739,12 +743,12 @@ msgstr "Numbering system"
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
 #: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:48
-#: src/utils/permission.ts:178
+#: src/utils/permission.ts:50
+#: src/utils/permission.ts:207
 msgid "Okay"
 msgstr "Okay"
 
-#: src/utils/permission.ts:137
+#: src/utils/permission.ts:166
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 
@@ -787,11 +791,11 @@ msgstr "Open-source"
 msgid "Options"
 msgstr "Options"
 
-#: src/constants/notification.ts:27
+#: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "Upcoming adhan"
 
-#: src/constants/notification.ts:43
+#: src/constants/notification.ts:45
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Upcoming reminder"
 
@@ -803,7 +807,7 @@ msgstr "Paste"
 msgid "Persian"
 msgstr "Persian"
 
-#: src/utils/permission.ts:168
+#: src/utils/permission.ts:197
 msgid "Phone State Permission"
 msgstr "Phone State Permission"
 
@@ -871,7 +875,7 @@ msgstr "Qibla finder needs location service. If not enabled, location from app s
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 
-#: src/constants/notification.ts:39
+#: src/constants/notification.ts:41
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "Reminder"
 
@@ -897,8 +901,8 @@ msgid "Remind me next year"
 msgstr "Remind me next year"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:85
-#: src/tasks/set_reminder.ts:114
+#: src/tasks/set_reminder.ts:88
+#: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "Reminder"
 
@@ -989,6 +993,10 @@ msgstr "Shia, Institute of Geophysics, University of Tehran"
 msgid "Should app highlight current prayer instead of next prayer?"
 msgstr "Should app highlight current prayer instead of next prayer?"
 
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:30
+msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
+msgstr "Should app still play adhan when \"Do Not Disturb\" is active?"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Should app stop playing adhan when the volume button is pressed?"
@@ -1014,7 +1022,7 @@ msgstr "Show next in notification?"
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
-#: src/utils/permission.ts:149
+#: src/utils/permission.ts:178
 msgid "Show settings"
 msgstr "Show settings"
 
@@ -1080,7 +1088,7 @@ msgstr "Sunday"
 msgid "System Default"
 msgstr "System Default"
 
-#: src/screens/settings_notifications/index.tsx:63
+#: src/screens/settings_notifications/index.tsx:64
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Tahajjud time mentioned in the app is the last third of the night"
 
@@ -1139,11 +1147,11 @@ msgstr "Time format"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
-#: src/utils/permission.ts:39
+#: src/utils/permission.ts:41
 msgid "To see notifications about adhan, we need your permission."
 msgstr "To see notifications about adhan, we need your permission."
 
-#: src/utils/permission.ts:169
+#: src/utils/permission.ts:198
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 
@@ -1241,11 +1249,11 @@ msgstr "Version"
 msgid "Volume button stops adhan"
 msgstr "Volume button stops adhan"
 
-#: src/constants/notification.ts:31
+#: src/constants/notification.ts:33
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "Widget"
 
-#: src/constants/notification.ts:35
+#: src/constants/notification.ts:37
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "Widget Update"
 

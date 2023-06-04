@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-03 18:32+0330\n"
+"POT-Creation-Date: 2023-06-04 03:59+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "60 منٹ"
 msgid "90 min"
 msgstr "90 منٹ"
 
-#: src/constants/notification.ts:23
+#: src/constants/notification.ts:25
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "اذان"
 
@@ -119,7 +119,7 @@ msgstr "الاذان کو اس امید پر تقسیم کیا گیا ہے کہ 
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "الاذان مفت سافٹ ویئر ہے: آپ اسے GNU Affero General Public License (v3.0) کی شرائط کے تحت دوبارہ تقسیم کر سکتے ہیں اور/یا اس میں ترمیم کر سکتے ہیں جیسا کہ فری سافٹ ویئر فاؤنڈیشن نے شائع کیا ہے۔"
 
-#: src/utils/permission.ts:136
+#: src/utils/permission.ts:165
 msgid "Alarms Permission"
 msgstr "الارم کی اجازت"
 
@@ -163,6 +163,10 @@ msgstr "کم از کم ایک نماز کا وقت ضرور دکھایا جائ�
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "توجہ"
+
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
+msgid "Bypass \"Do Not Disturb\"?"
+msgstr "بائی پاس \"ڈسٹرب نہ کریں\"؟"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -308,7 +312,7 @@ msgid "Disclaimer"
 msgstr "ڈس کلیمر"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:94
 msgid "Dismiss"
 msgstr "برطرف کرنا"
 
@@ -321,9 +325,9 @@ msgstr "Diyanet İşleri Başkanlığı، ترکی"
 msgid "Doesn't use any kind of trackers"
 msgstr "کسی بھی قسم کے ٹریکرز کا استعمال نہیں کرتا ہے۔"
 
-#: src/utils/permission.ts:42
-#: src/utils/permission.ts:140
-#: src/utils/permission.ts:172
+#: src/utils/permission.ts:44
+#: src/utils/permission.ts:169
+#: src/utils/permission.ts:201
 msgid "Don't ask again"
 msgstr "دوبارہ مت پوچھو"
 
@@ -478,7 +482,7 @@ msgstr "تاہم، آن لائن خدمات کا استعمال کرتے وقت�
 msgid "I Understand"
 msgstr "میں سمجھتا ہوں۔"
 
-#: src/constants/notification.ts:47
+#: src/constants/notification.ts:49
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "اہم"
 
@@ -674,9 +678,9 @@ msgid "New Reminder"
 msgstr "نئی یاد دہانی"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:35
-#: src/tasks/set_next_adhan.ts:82
-#: src/tasks/set_next_adhan.ts:122
+#: src/screens/settings_dev/index.tsx:36
+#: src/tasks/set_next_adhan.ts:84
+#: src/tasks/set_next_adhan.ts:124
 msgid "Next"
 msgstr "اگلے"
 
@@ -702,7 +706,7 @@ msgstr "کوئی نتیجہ نہیں"
 msgid "None (Automatic)"
 msgstr "کوئی نہیں (خودکار)"
 
-#: src/utils/permission.ts:145
+#: src/utils/permission.ts:174
 msgid "Not now"
 msgstr "ابھی نہیں"
 
@@ -722,7 +726,7 @@ msgstr "اطلاع"
 msgid "Notification & Sound"
 msgstr "اطلاع اور آواز"
 
-#: src/utils/permission.ts:38
+#: src/utils/permission.ts:40
 msgid "Notifications Permission"
 msgstr "اطلاعات کی اجازت"
 
@@ -733,12 +737,12 @@ msgstr "نمبر سازی کا نظام"
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
 #: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:48
-#: src/utils/permission.ts:178
+#: src/utils/permission.ts:50
+#: src/utils/permission.ts:207
 msgid "Okay"
 msgstr "ٹھیک ہے"
 
-#: src/utils/permission.ts:137
+#: src/utils/permission.ts:166
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "اینڈرائیڈ 12 اور جدید تر پر، ایپ کو بھی مناسب طریقے سے کام کرنے کے لیے الارم کی اجازت درکار ہے، لہذا آپ کو اس کی بھی اجازت دینی ہوگی۔"
 
@@ -781,11 +785,11 @@ msgstr "آزاد مصدر"
 msgid "Options"
 msgstr "اختیارات"
 
-#: src/constants/notification.ts:27
+#: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "آنے والی اذان"
 
-#: src/constants/notification.ts:43
+#: src/constants/notification.ts:45
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "آنے والی یاد دہانی"
 
@@ -797,7 +801,7 @@ msgstr "چسپاں کریں۔"
 msgid "Persian"
 msgstr "فارسی"
 
-#: src/utils/permission.ts:168
+#: src/utils/permission.ts:197
 msgid "Phone State Permission"
 msgstr "فون اسٹیٹ کی اجازت"
 
@@ -865,7 +869,7 @@ msgstr "قبلہ تلاش کرنے والے کو مقام کی خدمت کی ض�
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "قبلہ کا نقشہ فی الحال F-Droid کی تعمیرات میں دستیاب نہیں ہے۔ یہ مستقبل کی تازہ کاریوں میں دستیاب ہوسکتا ہے۔"
 
-#: src/constants/notification.ts:39
+#: src/constants/notification.ts:41
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "یاد دہانی"
 
@@ -891,8 +895,8 @@ msgid "Remind me next year"
 msgstr "اگلے سال مجھے یاد دلائیں۔"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:85
-#: src/tasks/set_reminder.ts:114
+#: src/tasks/set_reminder.ts:88
+#: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "یاد دہانی"
 
@@ -976,6 +980,10 @@ msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی
 msgid "Should app highlight current prayer instead of next prayer?"
 msgstr "کیا ایپ کو اگلی نماز کی بجائے موجودہ نماز کو نمایاں کرنا چاہیے؟"
 
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:30
+msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
+msgstr "کیا ایپ کو \"ڈسٹرب نہ کریں\" کے فعال ہونے پر بھی اذان بجانی چاہیے؟"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "کیا والیوم بٹن دبانے پر ایپ کو اذان بجانا بند کر دینا چاہیے؟"
@@ -1001,7 +1009,7 @@ msgstr "اطلاع میں اگلا دکھائیں؟"
 msgid "Show notification widget?"
 msgstr "اطلاع ویجیٹ دکھائیں؟"
 
-#: src/utils/permission.ts:149
+#: src/utils/permission.ts:178
 msgid "Show settings"
 msgstr "ترتیبات دکھائیں۔"
 
@@ -1064,7 +1072,7 @@ msgstr "اتوار"
 msgid "System Default"
 msgstr "سسٹم ڈیفالٹ"
 
-#: src/screens/settings_notifications/index.tsx:63
+#: src/screens/settings_notifications/index.tsx:64
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "ایپ میں تہجد کا وقت رات کا آخری تہائی حصہ ہے۔"
 
@@ -1121,11 +1129,11 @@ msgstr "وقت کی ترتیب"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "اذان کا حساب لگانے کے لیے ہمیں آپ کا مقام درکار ہے۔ آپ \"میرا مقام تلاش کریں\" بٹن استعمال کر سکتے ہیں، یا ملک اور شہر/علاقے کی تلاش کا استعمال کر سکتے ہیں، یا اپنے نقاط کو دستی طور پر درج کر سکتے ہیں۔"
 
-#: src/utils/permission.ts:39
+#: src/utils/permission.ts:41
 msgid "To see notifications about adhan, we need your permission."
 msgstr "اذان کے بارے میں اطلاعات دیکھنے کے لیے ہمیں آپ کی اجازت درکار ہے۔"
 
-#: src/utils/permission.ts:169
+#: src/utils/permission.ts:198
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "جب آپ کو کال موصول ہوتی ہے تو اذان بجانا بند کرنے کے لیے، ہمیں آپ کے فون کی حالت پڑھنی ہوگی۔ اس اجازت کی اجازت نہ دینا صرف خصوصیت کو غیر فعال کر دیتا ہے۔"
 
@@ -1223,11 +1231,11 @@ msgstr "ورژن"
 msgid "Volume button stops adhan"
 msgstr "والیوم بٹن اذان کو روکتا ہے۔"
 
-#: src/constants/notification.ts:31
+#: src/constants/notification.ts:33
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "ویجیٹ"
 
-#: src/constants/notification.ts:35
+#: src/constants/notification.ts:37
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "ویجیٹ اپ ڈیٹ"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-03 18:32+0330\n"
+"POT-Creation-Date: 2023-06-04 03:59+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr "60 dk."
 msgid "90 min"
 msgstr "90 dk."
 
-#: src/constants/notification.ts:23
+#: src/constants/notification.ts:25
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Ezan"
 
@@ -119,7 +119,7 @@ msgstr "Al-Azan, yararlı olacağı umuduyla, ancak HERHANGİ BİR GARANTİ OLMA
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "Al-Azan özgür bir yazılımdır: Özgür Yazılım Vakfı tarafından yayınlanan GNU Affero Genel Kamu Lisansı (v3.0) koşulları altında yeniden dağıtabilir ve/veya değiştirebilirsiniz."
 
-#: src/utils/permission.ts:136
+#: src/utils/permission.ts:165
 msgid "Alarms Permission"
 msgstr "Alarm izni"
 
@@ -163,6 +163,10 @@ msgstr "En az bir namaz vakti gösterilmelidir"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "Dikkat"
+
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
+msgid "Bypass \"Do Not Disturb\"?"
+msgstr "\"Rahatsız Etmeyin \"i atlamak mı?"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -308,7 +312,7 @@ msgid "Disclaimer"
 msgstr "Sorumluluk reddi"
 
 #: src/screens/fullscreen_alarm/index.tsx:137
-#: src/tasks/set_alarm.ts:95
+#: src/tasks/set_alarm.ts:94
 msgid "Dismiss"
 msgstr "Reddet"
 
@@ -321,9 +325,9 @@ msgstr "Diyanet İşleri Başkanlığı, Türkiye"
 msgid "Doesn't use any kind of trackers"
 msgstr "Herhangi bir izleyici kullanmaz"
 
-#: src/utils/permission.ts:42
-#: src/utils/permission.ts:140
-#: src/utils/permission.ts:172
+#: src/utils/permission.ts:44
+#: src/utils/permission.ts:169
+#: src/utils/permission.ts:201
 msgid "Don't ask again"
 msgstr "Bir daha sorma"
 
@@ -478,7 +482,7 @@ msgstr "Ancak, isme göre konum koordinatları veya kıble haritası aramak gibi
 msgid "I Understand"
 msgstr "Anlıyorum"
 
-#: src/constants/notification.ts:47
+#: src/constants/notification.ts:49
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "Önemli"
 
@@ -674,9 +678,9 @@ msgid "New Reminder"
 msgstr "Yeni hatırlatıcı"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:35
-#: src/tasks/set_next_adhan.ts:82
-#: src/tasks/set_next_adhan.ts:122
+#: src/screens/settings_dev/index.tsx:36
+#: src/tasks/set_next_adhan.ts:84
+#: src/tasks/set_next_adhan.ts:124
 msgid "Next"
 msgstr "Sonraki"
 
@@ -702,7 +706,7 @@ msgstr "Sonuç yok"
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
 
-#: src/utils/permission.ts:145
+#: src/utils/permission.ts:174
 msgid "Not now"
 msgstr "Şimdi olmaz"
 
@@ -722,7 +726,7 @@ msgstr "Bildirim"
 msgid "Notification & Sound"
 msgstr "Bildirim & Ses"
 
-#: src/utils/permission.ts:38
+#: src/utils/permission.ts:40
 msgid "Notifications Permission"
 msgstr "Bildirim izni"
 
@@ -733,12 +737,12 @@ msgstr "Sayı sistemi"
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
 #: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:48
-#: src/utils/permission.ts:178
+#: src/utils/permission.ts:50
+#: src/utils/permission.ts:207
 msgid "Okay"
 msgstr "Tamam"
 
-#: src/utils/permission.ts:137
+#: src/utils/permission.ts:166
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Android 12 ve daha yeni sürümlerde, uygulamanın düzgün çalışması için alarm iznine de ihtiyacı vardır, bu nedenle buna da izin vermelisiniz."
 
@@ -781,11 +785,11 @@ msgstr "Açık kaynak"
 msgid "Options"
 msgstr "Seçenekler"
 
-#: src/constants/notification.ts:27
+#: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "Yaklaşan ezan"
 
-#: src/constants/notification.ts:43
+#: src/constants/notification.ts:45
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Yaklaşan hatırlatma"
 
@@ -797,7 +801,7 @@ msgstr "Yapıştır"
 msgid "Persian"
 msgstr "Farsça"
 
-#: src/utils/permission.ts:168
+#: src/utils/permission.ts:197
 msgid "Phone State Permission"
 msgstr "Telefon durumu izni"
 
@@ -865,7 +869,7 @@ msgstr "Kıble bulucu konum servisine ihtiyaç duyar. Etkinleştirilmezse, uygul
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Kıble haritası şu anda F-Droid sürümlerinde kullanılamamaktadır. Gelecekteki güncellemelerde kullanılabilir hale gelebilir."
 
-#: src/constants/notification.ts:39
+#: src/constants/notification.ts:41
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "Hatırlatıcı"
 
@@ -891,8 +895,8 @@ msgid "Remind me next year"
 msgstr "Gelecek yıl hatırlat bana"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:85
-#: src/tasks/set_reminder.ts:114
+#: src/tasks/set_reminder.ts:88
+#: src/tasks/set_reminder.ts:119
 msgid "Reminder"
 msgstr "Hatırlatıcı"
 
@@ -976,6 +980,10 @@ msgstr "Şii, Jeofizik Enstitüsü, Tahran Üniversitesi"
 msgid "Should app highlight current prayer instead of next prayer?"
 msgstr "Uygulama bir sonraki dua yerine mevcut duayı vurgulamalı mı?"
 
+#: src/screens/settings_notifications/bypass_dnd_setting.tsx:30
+msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
+msgstr "\"Rahatsız Etmeyin\" aktifken uygulama hala ezan çalmalı mı?"
+
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Ses düğmesine basıldığında uygulama ezan çalmayı durdursun mu?"
@@ -1001,7 +1009,7 @@ msgstr "Sonraki bildirim gösterilsin mi?"
 msgid "Show notification widget?"
 msgstr "Bildirim gereci gösterilsin mi?"
 
-#: src/utils/permission.ts:149
+#: src/utils/permission.ts:178
 msgid "Show settings"
 msgstr "Ayarları göster"
 
@@ -1064,7 +1072,7 @@ msgstr "Pazar"
 msgid "System Default"
 msgstr "Sistem varsayılanı"
 
-#: src/screens/settings_notifications/index.tsx:63
+#: src/screens/settings_notifications/index.tsx:64
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Uygulamada belirtilen teheccüd vakti gecenin son üçte biridir"
 
@@ -1121,11 +1129,11 @@ msgstr "Zaman formatı"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir, ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
-#: src/utils/permission.ts:39
+#: src/utils/permission.ts:41
 msgid "To see notifications about adhan, we need your permission."
 msgstr "Ezanla ilgili bildirimleri görmek için izninize ihtiyacımız var."
 
-#: src/utils/permission.ts:169
+#: src/utils/permission.ts:198
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "Bir çağrı aldığınızda ezan çalmayı durdurmak için telefon durumuna erişmemiz gerekir. Bu erişime izin vermemek bu özelliği devre dışı bırakır."
 
@@ -1223,11 +1231,11 @@ msgstr "Sürüm"
 msgid "Volume button stops adhan"
 msgstr "Ses düğmesi ezanı durdursun"
 
-#: src/constants/notification.ts:31
+#: src/constants/notification.ts:33
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "Widget"
 
-#: src/constants/notification.ts:35
+#: src/constants/notification.ts:37
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "Widgeti güncelle"
 
