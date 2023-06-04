@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-04 03:59+0330\n"
+"POT-Creation-Date: 2023-06-04 12:26+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -166,7 +166,7 @@ msgstr "انتباه"
 
 #: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
 msgid "Bypass \"Do Not Disturb\"?"
-msgstr "تجاوز \"الرجاء عدم الإزعاج\"؟"
+msgstr "تجاوز وضع \"عدم الإزعاج\"؟"
 
 #: src/screens/settings_calculation/index.tsx:70
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
@@ -538,7 +538,7 @@ msgstr "الاتصال بالإنترنت ضروري لعمل خريطة الق�
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:102
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
-msgstr "مترجمة إلى الإنجليزية، الفارسية، العربية، التركية، الإندونيسية، الفرنسية، الأردية، الهندية، الألمانية، البوسنية، الفيتنامية، البنغالية"
+msgstr "مترجم إلى الإنجليزية، الفارسية، العربية، التركية، الإندونيسية، الفرنسية، الأردية، الهندية، الألمانية، البوسنية، الفيتنامية، البنغالية"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -608,7 +608,7 @@ msgstr "وضع النمط الفاتح/النمط الداكن"
 
 #: src/components/AutocompleteInput.tsx:192
 msgid "Loading"
-msgstr "تحميل"
+msgstr "جاري تحميل البيانات"
 
 #: src/intro/intro.tsx:27
 #: src/screens/qibla_finder_compass/index.tsx:153
@@ -840,7 +840,7 @@ msgstr "سياسة الخصوصية"
 #: website/src/_includes/home.tsx:17
 #: website/src/_includes/privacy-policy.tsx:24
 msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
-msgstr "تطبيق الأذان (أوقات الصلاة الإسلامية) والقبلة ومحترم للخصوصية المستخدم"
+msgstr "تطبيق الأذان والقبلة وأوقات الصلاة الإسلامية المحترم للخصوصية والمفتوح المصدر"
 
 #: fastlane/update/update.ts:67
 #: website/src/_includes/home.tsx:100
@@ -982,7 +982,7 @@ msgstr "هل يجب أن يبرز التطبيق الصلاة الحالية ب�
 
 #: src/screens/settings_notifications/bypass_dnd_setting.tsx:30
 msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
-msgstr "هل يجب أن يستمر التطبيق في تشغيل الأذان عندما يكون \"الرجاء عدم الإزعاج\" نشطًا؟"
+msgstr "هل يجب أن يستمر التطبيق في تشغيل الأذان عندما يكون وضع \"عدم الإزعاج\" نشطًا؟"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
