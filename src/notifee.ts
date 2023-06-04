@@ -84,6 +84,7 @@ export async function cancelAlarmNotif({
           },
           importance: AndroidImportance.DEFAULT,
         },
+        data: undefined,
       })
       .catch(console.error);
   }
@@ -157,6 +158,7 @@ async function handleNotification({
     ].includes(channelId)
   ) {
     const options = getAlarmOptions(notification)!;
+    if (!options) return;
 
     if (
       type === EventType.DELIVERED ||
