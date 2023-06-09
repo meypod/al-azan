@@ -14,7 +14,7 @@ export async function loadFile(resourceId: number) {
   } else {
     resourcePath = Dirs.CacheDir + '/' + uri;
     if (!(await FileSystem.exists(resourcePath))) {
-      await FileSystem.cpAsset(uri, resourcePath, 'resource');
+      await FileSystem.cpAsset('raw/' + uri, resourcePath, 'resource');
     }
   }
 
