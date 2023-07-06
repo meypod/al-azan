@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-10 13:30+0330\n"
+"POT-Creation-Date: 2023-07-06 06:38+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -448,7 +448,7 @@ msgid "Hide Prayer Times"
 msgstr "Namaz vakitlerini gizle"
 
 #: fastlane/update/update.ts:59
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "İhtiyacınız olmayan zamanları gizleme"
 
@@ -470,7 +470,7 @@ msgid "Home"
 msgstr "Anasayfa"
 
 #: fastlane/update/update.ts:63
-#: website/src/_includes/home.tsx:98
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "Ana ekran ve bildirim Widget'lerı"
 
@@ -519,7 +519,7 @@ msgid "Import successful"
 msgstr "İçe aktarma başarılı"
 
 #: fastlane/update/update.ts:53
-#: website/src/_includes/home.tsx:90
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "Beş vakit namaza ek olarak Gün Doğumu, Gün Batımı, Gece Yarısı ve Gece Namazı (Teheccüd) ayarları vardır"
 
@@ -536,7 +536,7 @@ msgid "Internet connection is necessary for qibla map to work. Please enable you
 msgstr "Kıble haritasının çalışması için internet bağlantısı gereklidir. Lütfen kablosuz ağı veya mobil verinizi etkinleştirin ve tekrar deneyin."
 
 #: fastlane/update/update.ts:69
-#: website/src/_includes/home.tsx:102
+#: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 msgstr "İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça, Vietnamca, Bangla dillerinde yerelleştirilmiştir"
 
@@ -602,7 +602,7 @@ msgstr "Aydınlık"
 msgid "Light and Dark theme"
 msgstr "Açık/Koyu tema"
 
-#: website/src/_includes/home.tsx:95
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Açık/Koyu tema"
 
@@ -634,7 +634,7 @@ msgid "Low"
 msgstr "Düşük"
 
 #: fastlane/update/update.ts:55
-#: website/src/_includes/home.tsx:94
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "Ezan hesaplaması için birçok seçenek"
 
@@ -772,7 +772,7 @@ msgid "Open Power Manager Settings"
 msgstr "Güç yönetimi ayarlarını aç"
 
 #: fastlane/update/update.ts:71
-#: website/src/_includes/home.tsx:107
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "Açık kaynak deposu"
 
@@ -843,7 +843,7 @@ msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla a
 msgstr "Mahremiyete saygılı açık kaynak Ezan (İslami namaz vakitleri) ve kıble uygulaması"
 
 #: fastlane/update/update.ts:67
-#: website/src/_includes/home.tsx:100
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "Kaza namazı sayacı"
 
@@ -857,7 +857,7 @@ msgid "Qibla"
 msgstr "Kıble"
 
 #: fastlane/update/update.ts:65
-#: website/src/_includes/home.tsx:99
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "Kıble bulucu"
 
@@ -934,7 +934,7 @@ msgid "Select as Fajr Adhan"
 msgstr "Fecr ezanı olarak seç"
 
 #: fastlane/update/update.ts:51
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Sabah namazı için farklı Ezan sesi seçme"
 
@@ -944,12 +944,12 @@ msgid "Selecting a name is required"
 msgstr "Bir isim gerekli"
 
 #: fastlane/update/update.ts:49
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "Özel Ezan sesi ayarlama"
 
 #: fastlane/update/update.ts:61
-#: website/src/_includes/home.tsx:97
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "Dua zamanından önce veya sonra hatırlatıcı ayarlama"
 
@@ -1022,7 +1022,7 @@ msgid "Silent"
 msgstr "Sessiz"
 
 #: fastlane/update/update.ts:74
-#: website/src/_includes/home.tsx:112
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Herhangi bir izleyici veya çökme analizi kullanmadığımız için, lütfen yaşadığınız herhangi bir sorunu veya önerilerinizi github repomuza bildirin"
 
@@ -1286,8 +1286,8 @@ msgstr "Widget'ta görünmesini istemediğiniz vakitleri buradan gizleyebilirsin
 
 #: fastlane/update/update.ts:47
 #: website/src/_includes/home.tsx:83
-msgid "You can search for your location online Or use GPS offline"
-msgstr "Konumunuzu çevrimiçi arayabilir veya GPS'i çevrimdışı kullanabilirsiniz"
+msgid "You can search for your location offline Or use GPS"
+msgstr "Konumunuzu çevrimdışı arayabilir veya GPS kullanabilirsiniz"
 
 #: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."

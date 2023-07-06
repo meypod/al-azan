@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-10 13:30+0330\n"
+"POT-Creation-Date: 2023-07-06 06:38+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -448,7 +448,7 @@ msgid "Hide Prayer Times"
 msgstr "নামাজের সময়সূচি লুকান"
 
 #: fastlane/update/update.ts:59
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "অপ্রয়জনিয় সময় লুকান"
 
@@ -470,7 +470,7 @@ msgid "Home"
 msgstr "হোম"
 
 #: fastlane/update/update.ts:63
-#: website/src/_includes/home.tsx:98
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "হোমস্ক্রিন এবং বিজ্ঞপ্তি উইজেটসমুহ"
 
@@ -519,7 +519,7 @@ msgid "Import successful"
 msgstr "ইমপোর্ট সফল"
 
 #: fastlane/update/update.ts:53
-#: website/src/_includes/home.tsx:90
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "দৈনিক পাঁচটি সালাত ছাড়াও এতে সূর্যোদয়, সূর্যাস্ত, মধ্যরাত ও রাতের নামাজের (তাহাজ্জুদ) দিকনির্দেশনা রয়েছে।"
 
@@ -536,7 +536,7 @@ msgid "Internet connection is necessary for qibla map to work. Please enable you
 msgstr "কিবলা মানচিত্রে কাজ করার জন্য ইন্টারনেট সংযোগ প্রয়োজন। অনুগ্রহ করে আপনার ওয়াইফাই বা মোবাইল ডেটা চালু করুন এবং আবার চেষ্টা করুন।"
 
 #: fastlane/update/update.ts:69
-#: website/src/_includes/home.tsx:102
+#: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 msgstr "ইংরেজি, ফার্সি, আরবি, তুর্কি, ইন্দোনেশিয়ান, ফরাসি, উর্দু, হিন্দি, জার্মান, বসনিয়ান, ভিয়েতনামী, বাংলা ভাষায় স্থানীয়করণ করা হয়েছে"
 
@@ -602,7 +602,7 @@ msgstr "আলো"
 msgid "Light and Dark theme"
 msgstr "আলো এবং অন্ধকার থিম"
 
-#: website/src/_includes/home.tsx:95
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "আলো/অন্ধকার থিম"
 
@@ -634,7 +634,7 @@ msgid "Low"
 msgstr "কম"
 
 #: fastlane/update/update.ts:55
-#: website/src/_includes/home.tsx:94
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "আযান (اذان) গণনার পদ্ধতিসমূহ"
 
@@ -772,7 +772,7 @@ msgid "Open Power Manager Settings"
 msgstr "পাওয়ার ম্যানেজার সেটিংস খুলুন"
 
 #: fastlane/update/update.ts:71
-#: website/src/_includes/home.tsx:107
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "ওপেন সোর্স রিপোজিটরি"
 
@@ -843,7 +843,7 @@ msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla a
 msgstr "গোপনীয়তা-প্রথম ওপেন সোর্স মুসলিম আযান (ইসলামিক নামাজের সময়) এবং কিবলা অ্যাপ"
 
 #: fastlane/update/update.ts:67
-#: website/src/_includes/home.tsx:100
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "কাযা কাউন্টার"
 
@@ -857,7 +857,7 @@ msgid "Qibla"
 msgstr "কিবলা"
 
 #: fastlane/update/update.ts:65
-#: website/src/_includes/home.tsx:99
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "কিবলা সন্ধানকারী"
 
@@ -934,7 +934,7 @@ msgid "Select as Fajr Adhan"
 msgstr "ফজরের আযান হিসেবে নির্বাচন করুন"
 
 #: fastlane/update/update.ts:51
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "ফজর নামাজের জন্য বিভিন্ন আযান অডিও নির্বাচন করুন"
 
@@ -944,12 +944,12 @@ msgid "Selecting a name is required"
 msgstr "একটি নাম নির্বাচন করা প্রয়োজন"
 
 #: fastlane/update/update.ts:49
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "কাস্টম আযান অডিও সেট করুন"
 
 #: fastlane/update/update.ts:61
-#: website/src/_includes/home.tsx:97
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "প্রার্থনার আগে বা পরে রিমাইন্ডার সেট করুন"
 
@@ -1022,7 +1022,7 @@ msgid "Silent"
 msgstr "নীরব"
 
 #: fastlane/update/update.ts:74
-#: website/src/_includes/home.tsx:112
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "যেহেতু আমরা কোনো ধরনের ট্র্যাকার বা ক্র্যাশ অ্যানালিটিক্স ব্যবহার করি না, তাই অনুগ্রহ করে আমাদের গিটহাব রেপোতে আপনার কোনো সমস্যা বা পরামর্শ জানান"
 
@@ -1286,8 +1286,8 @@ msgstr "আপনি এখানে যে সমস্ত সালাতে�
 
 #: fastlane/update/update.ts:47
 #: website/src/_includes/home.tsx:83
-msgid "You can search for your location online Or use GPS offline"
-msgstr "আপনি অনলাইনে আপনার অবস্থান অনুসন্ধান করতে পারেন অথবা GPS অফলাইন ব্যবহার করতে পারেন"
+msgid "You can search for your location offline Or use GPS"
+msgstr "আপনি অফলাইনে আপনার অবস্থান অনুসন্ধান করতে পারেন বা GPS ব্যবহার করতে পারেন৷"
 
 #: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-06-10 13:30+0330\n"
+"POT-Creation-Date: 2023-07-06 06:38+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -448,7 +448,7 @@ msgid "Hide Prayer Times"
 msgstr "Sakrij Vremena Molitve"
 
 #: fastlane/update/update.ts:59
-#: website/src/_includes/home.tsx:96
+#: website/src/_includes/home.tsx:94
 msgid "Hide times you don't need"
 msgstr "Sakrijte vremena koja vam nisu potrebna"
 
@@ -470,7 +470,7 @@ msgid "Home"
 msgstr "Početna"
 
 #: fastlane/update/update.ts:63
-#: website/src/_includes/home.tsx:98
+#: website/src/_includes/home.tsx:96
 msgid "Homescreen and notification Widgets"
 msgstr "Početni ekran i vidžeti za obaveštenja"
 
@@ -519,7 +519,7 @@ msgid "Import successful"
 msgstr "Uvoz je uspješan"
 
 #: fastlane/update/update.ts:53
-#: website/src/_includes/home.tsx:90
+#: website/src/_includes/home.tsx:88
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "Pored pet dnevnih namaza, ima postavke za izlazak sunca, zalazak sunca, ponoć i noćni namaz (tahadžud)"
 
@@ -536,7 +536,7 @@ msgid "Internet connection is necessary for qibla map to work. Please enable you
 msgstr "Internet veza je neophodna da bi karta kible radila. Molimo vas da omogućite WiFi ili mobilnu mrežu i probajte ponovo."
 
 #: fastlane/update/update.ts:69
-#: website/src/_includes/home.tsx:102
+#: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 msgstr "Lokaliziran je na engleski, perzijski, arapski, turski, indonezijski, francuski, urdu, hindi, njemački, bosanski, vijetnamski, bangla"
 
@@ -602,7 +602,7 @@ msgstr "Svjetla"
 msgid "Light and Dark theme"
 msgstr "Svjetla/mračna tema"
 
-#: website/src/_includes/home.tsx:95
+#: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Svjetla/mračna tema"
 
@@ -634,7 +634,7 @@ msgid "Low"
 msgstr "Niska"
 
 #: fastlane/update/update.ts:55
-#: website/src/_includes/home.tsx:94
+#: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
 msgstr "Mnogo opcija za izračunavanje ezana (اذان)"
 
@@ -772,7 +772,7 @@ msgid "Open Power Manager Settings"
 msgstr "Otvorite Postavke Napojnog Menadžera"
 
 #: fastlane/update/update.ts:71
-#: website/src/_includes/home.tsx:107
+#: website/src/_includes/home.tsx:105
 msgid "Open source repository"
 msgstr "Otvoreno spremište"
 
@@ -843,7 +843,7 @@ msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla a
 msgstr "Prva privatna-bezoglasna otvorena muslimanska aplikacija za Ezan i kiblu"
 
 #: fastlane/update/update.ts:67
-#: website/src/_includes/home.tsx:100
+#: website/src/_includes/home.tsx:98
 msgid "Qada counter"
 msgstr "Kada brojač"
 
@@ -857,7 +857,7 @@ msgid "Qibla"
 msgstr "Kibla"
 
 #: fastlane/update/update.ts:65
-#: website/src/_includes/home.tsx:99
+#: website/src/_includes/home.tsx:97
 msgid "Qibla finder"
 msgstr "Kibla pronalaznik"
 
@@ -938,7 +938,7 @@ msgid "Select as Fajr Adhan"
 msgstr "Odaberite ko Sabah Ezan"
 
 #: fastlane/update/update.ts:51
-#: website/src/_includes/home.tsx:88
+#: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Odaberite različite zvuke ezana za Sabah"
 
@@ -948,12 +948,12 @@ msgid "Selecting a name is required"
 msgstr "Odabir imena je potrebno"
 
 #: fastlane/update/update.ts:49
-#: website/src/_includes/home.tsx:87
+#: website/src/_includes/home.tsx:85
 msgid "Set custom Adhan audio"
 msgstr "Postavite prilagođeni zvuk za Ezan"
 
 #: fastlane/update/update.ts:61
-#: website/src/_includes/home.tsx:97
+#: website/src/_includes/home.tsx:95
 msgid "Set reminders before or after a prayer time"
 msgstr "Postavite podsjetnike prije ili poslije molitvenog vremena"
 
@@ -1029,7 +1029,7 @@ msgid "Silent"
 msgstr "Tiho"
 
 #: fastlane/update/update.ts:74
-#: website/src/_includes/home.tsx:112
+#: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Budući da ne koristimo nikakvu vrstu tragača ili analitiku rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repo"
 
@@ -1299,8 +1299,8 @@ msgstr "Možete sakriti vremena molitve koja ne želite da vidite u vidžetu ovd
 
 #: fastlane/update/update.ts:47
 #: website/src/_includes/home.tsx:83
-msgid "You can search for your location online Or use GPS offline"
-msgstr "Možete tražiti svoju lokaciju na mreži ili koristiti GPS van mreže"
+msgid "You can search for your location offline Or use GPS"
+msgstr "Možete tražiti svoju lokaciju van mreže ili koristiti GPS"
 
 #: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
