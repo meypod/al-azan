@@ -22,6 +22,22 @@ import {settings} from '@/store/settings';
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
 import {askPermissions} from '@/utils/permission';
 
+type DayDetails = {
+  dateString: string;
+  dayName: string;
+  arabicDate: string;
+  isToday: boolean;
+};
+
+function getDayDetails(date: Date): DayDetails {
+  return {
+    dayName: getDayName(date),
+    dateString: getFormattedDate(date),
+    arabicDate: getArabicDate(date),
+    isToday: date.toDateString() === new Date().toDateString(),
+  };
+}
+
 export function Home() {
   const [
     currentDate,
@@ -52,23 +68,13 @@ export function Home() {
   );
 
   const [prayerTimes, setPrayerTimes] = useState<CachedPrayerTimes | undefined>(
-    undefined,
+    getPrayerTimes(currentDate),
   );
 
-  const [day, setDay] = useState<{
-    dateString: string;
-    dayName: string;
-    arabicDate: string;
-    isToday: boolean;
-  }>({dateString: '', dayName: '', arabicDate: '', isToday: true});
+  const [day, setDay] = useState<DayDetails>(getDayDetails(currentDate));
 
   useEffect(() => {
-    setDay({
-      dayName: getDayName(currentDate),
-      dateString: getFormattedDate(currentDate),
-      arabicDate: getArabicDate(currentDate),
-      isToday: currentDate.toDateString() === new Date().toDateString(),
-    });
+    setDay(getDayDetails(currentDate));
     setPrayerTimes(getPrayerTimes(currentDate));
   }, [currentDate]);
 
