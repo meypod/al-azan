@@ -1,7 +1,7 @@
 import {i18n} from '@lingui/core';
 import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
-import React, {StrictMode, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
 import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
@@ -91,15 +91,13 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
   };
 
   return (
-    <StrictMode>
-      <I18nProvider i18n={i18n}>
-        <NativeBaseProvider
-          theme={extendedTheme}
-          config={config}
-          colorModeManager={colorCodeManager}>
-          <ChildComponent {...args} />
-        </NativeBaseProvider>
-      </I18nProvider>
-    </StrictMode>
+    <I18nProvider i18n={i18n}>
+      <NativeBaseProvider
+        theme={extendedTheme}
+        config={config}
+        colorModeManager={colorCodeManager}>
+        <ChildComponent {...args} />
+      </NativeBaseProvider>
+    </I18nProvider>
   );
 }
