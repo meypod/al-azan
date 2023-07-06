@@ -17,7 +17,9 @@ export function ImportSettings(props: IFormControlProps) {
     if (busy) return;
     setBusy(true);
     try {
-      const pickResponse = await pickSingle({type: 'application/json'});
+      const pickResponse = await pickSingle({
+        type: ['application/json', 'json', 'application/octet-stream'],
+      });
       const fileData = await FileSystem.readFile(pickResponse.uri, 'utf8');
       const data = JSON.parse(fileData) as Record<string, {state: unknown}>;
 
