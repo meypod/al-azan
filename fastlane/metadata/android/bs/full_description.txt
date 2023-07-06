@@ -8,7 +8,7 @@ Funkcije aplikacije:
 
 * Otvorenog izvora
 
-* Možete tražiti svoju lokaciju na mreži ili koristiti GPS van mreže
+* Možete tražiti svoju lokaciju van mreže ili koristiti GPS
 
 * Postavite prilagođeni zvuk za Ezan
 

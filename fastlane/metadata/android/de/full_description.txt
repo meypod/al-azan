@@ -8,7 +8,7 @@ Features der App:
 
 * Open-Source
 
-* Online-Standortsuche und Suche über GPS möglich
+* Sie können offline nach Ihrem Standort suchen oder GPS verwenden
 
 * Benutzerdefinierte Adhan-Stimmen auswählbar
 

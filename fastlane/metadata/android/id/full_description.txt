@@ -8,7 +8,7 @@ Fitur aplikasi:
 
 * Sumber terbuka
 
-* Anda dapat mencari lokasi Anda secara online Atau menggunakan GPS secara offline
+* Anda dapat mencari lokasi Anda secara offline Atau menggunakan GPS
 
 * Mengatur audio Adzan khusus
 

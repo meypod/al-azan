@@ -8,7 +8,7 @@ Tính năng ứng dụng:
 
 * Mã nguồn mở
 
-* Bạn có thể tìm kiếm vị trí của mình trực tuyến Hoặc sử dụng GPS ngoại tuyến
+* Bạn có thể tìm kiếm vị trí của mình ngoại tuyến Hoặc sử dụng GPS
 
 * Đặt âm báo Azan tùy chỉnh
 

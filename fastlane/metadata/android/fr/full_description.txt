@@ -8,7 +8,7 @@ Caractéristiques de l'application:
 
 * Open-source
 
-* Vous pouvez rechercher votre emplacement en ligne ou utiliser le GPS hors ligne
+* Vous pouvez rechercher votre position hors ligne ou utiliser le GPS
 
 * Définir l'audio personnalisé pour l'Adhan
 

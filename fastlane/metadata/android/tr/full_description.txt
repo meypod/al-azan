@@ -8,7 +8,7 @@ Uygulama özellikleri:
 
 * Açık kaynak
 
-* Konumunuzu çevrimiçi arayabilir veya GPS'i çevrimdışı kullanabilirsiniz
+* Konumunuzu çevrimdışı arayabilir veya GPS kullanabilirsiniz
 
 * Özel Ezan sesi ayarlama
 
