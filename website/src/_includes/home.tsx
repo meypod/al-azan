@@ -80,9 +80,7 @@ export async function render({page}: ReturnType<typeof data> & {page: Page}) {
               <li>{i18n._("Doesn't use any kind of trackers")}</li>
               <li>{i18n._('Open-source')}</li>
               <li>
-                {i18n._(
-                  'You can search for your location online Or use GPS offline',
-                )}
+                {i18n._('You can search for your location offline Or use GPS')}
               </li>
               <li>{i18n._('Set custom Adhan audio')}</li>
               <li>{i18n._('Select different Adhan audio for Fajr namaz')}</li>

@@ -8,7 +8,7 @@ App features:
 
 * Open-source
 
-* You can search for your location online Or use GPS offline
+* You can search for your location offline Or use GPS
 
 * Set custom Adhan audio
 

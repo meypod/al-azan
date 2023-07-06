@@ -21,7 +21,7 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Open-source
 
-* You can search for your location online Or use GPS offline
+* You can search for your location offline Or use GPS
 
 * Set custom Adhan audio
 

@@ -44,7 +44,7 @@ ${t`App features`}:
 
 * ${t`Open-source`}
 
-* ${t`You can search for your location online Or use GPS offline`}
+* ${t`You can search for your location offline Or use GPS`}
 
 * ${t`Set custom Adhan audio`}
 
