@@ -101,15 +101,11 @@ export type SettingsStore = {
     key: T,
     val: SettingsStore[T],
   ) => void;
-  setSettingCurry: <T extends keyof SettingsStore>(
-    key: T,
-  ) => (val: SettingsStore[T]) => void;
   removeSetting: (key: keyof SettingsStore) => () => void;
 };
 
 const invalidKeys = [
   'setSetting',
-  'setSettingCurry',
   'removeSetting',
   'saveAdhanEntry',
   'deleteAdhanEntry',
@@ -292,15 +288,6 @@ export const settings = createStore<SettingsStore>()(
             draft[key] = val;
           }),
         ),
-      setSettingCurry:
-        <T extends keyof SettingsStore>(key: T) =>
-        (val: SettingsStore[T]) =>
-          set(
-            produce<SettingsStore>(draft => {
-              if (invalidKeys.includes(key)) return;
-              draft[key] = val;
-            }),
-          ),
       removeSetting: key => () =>
         set(
           produce<SettingsStore>(draft => {
@@ -400,9 +387,12 @@ export const settings = createStore<SettingsStore>()(
 
 export function useSettings<T extends keyof SettingsStore>(key: T) {
   const state = useStore(settings, s => s[key], shallow);
-  const setterCurry = useStore(settings, s => s.setSettingCurry, shallow);
+  const setSetting = useStore(settings, s => s.setSetting, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const setCallback = useCallback(setterCurry(key), [key]);
+  const setCallback = useCallback(
+    (val: SettingsStore[T]) => setSetting(key, val),
+    [key, setSetting],
+  );
   return [state, setCallback] as [
     SettingsStore[T],
     (val: SettingsStore[T]) => void,

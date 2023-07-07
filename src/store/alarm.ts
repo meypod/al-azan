@@ -62,13 +62,10 @@ export type AlarmSettingsStore = {
     key: T,
     val: AlarmSettingsStore[T],
   ) => void;
-  setSettingCurry: <T extends keyof AlarmSettingsStore>(
-    key: T,
-  ) => (val: AlarmSettingsStore[T]) => void;
   removeSetting: (key: keyof AlarmSettingsStore) => () => void;
 };
 
-const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
+const invalidKeys = ['setSetting', 'removeSetting'];
 
 export const alarmSettings = createStore<AlarmSettingsStore>()(
   persist(
@@ -87,15 +84,6 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
             draft[key] = val;
           }),
         ),
-      setSettingCurry:
-        <T extends keyof AlarmSettingsStore>(key: T) =>
-        (val: AlarmSettingsStore[T]) =>
-          set(
-            produce<AlarmSettingsStore>(draft => {
-              if (invalidKeys.includes(key)) return;
-              draft[key] = val;
-            }),
-          ),
       removeSetting: key => () =>
         set(
           produce<AlarmSettingsStore>(draft => {
@@ -139,9 +127,12 @@ export function isAnyNotificationEnabled() {
 
 export function useAlarmSettings<T extends keyof AlarmSettingsStore>(key: T) {
   const state = useStore(alarmSettings, s => s[key], shallow);
-  const setterCurry = useStore(alarmSettings, s => s.setSettingCurry, shallow);
+  const setSetting = useStore(alarmSettings, s => s.setSetting, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const setCallback = useCallback(setterCurry(key), [key]);
+  const setCallback = useCallback(
+    (val: AlarmSettingsStore[T]) => setSetting(key, val),
+    [key, setSetting],
+  );
   return [state, setCallback] as [
     AlarmSettingsStore[T],
     (val: AlarmSettingsStore[T]) => void,

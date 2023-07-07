@@ -45,13 +45,10 @@ export type CalcSettingsStore = {
     key: T,
     val: CalcSettingsStore[T],
   ) => void;
-  setSettingCurry: <T extends keyof CalcSettingsStore>(
-    key: T,
-  ) => (val: CalcSettingsStore[T]) => void;
   removeSetting: (key: keyof CalcSettingsStore) => () => void;
 };
 
-const invalidKeys = ['setSetting', 'setSettingCurry', 'removeSetting'];
+const invalidKeys = ['setSetting', 'removeSetting'];
 
 export const calcSettings = createStore<CalcSettingsStore>()(
   persist(
@@ -83,15 +80,6 @@ export const calcSettings = createStore<CalcSettingsStore>()(
             draft[key] = val;
           }),
         ),
-      setSettingCurry:
-        <T extends keyof CalcSettingsStore>(key: T) =>
-        (val: CalcSettingsStore[T]) =>
-          set(
-            produce<CalcSettingsStore>(draft => {
-              if (invalidKeys.includes(key)) return;
-              draft[key] = val;
-            }),
-          ),
       removeSetting: key => () =>
         set(
           produce<CalcSettingsStore>(draft => {
@@ -152,9 +140,12 @@ export const calcSettings = createStore<CalcSettingsStore>()(
 
 export function useCalcSettings<T extends keyof CalcSettingsStore>(key: T) {
   const state = useStore(calcSettings, s => s[key], shallow);
-  const setterCurry = useStore(calcSettings, s => s.setSettingCurry, shallow);
+  const setSetting = useStore(calcSettings, s => s.setSetting, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const setCallback = useCallback(setterCurry(key), [key]);
+  const setCallback = useCallback(
+    (val: CalcSettingsStore[T]) => setSetting(key, val),
+    [key, setSetting],
+  );
   return [state, setCallback] as [
     CalcSettingsStore[T],
     (val: CalcSettingsStore[T]) => void,

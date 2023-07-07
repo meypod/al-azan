@@ -57,15 +57,11 @@ export type ReminderStore = {
     key: T,
     val: ReminderStore[T],
   ) => void;
-  setSettingCurry: <T extends keyof ReminderStore>(
-    key: T,
-  ) => (val: ReminderStore[T]) => void;
   removeSetting: (key: keyof ReminderStore) => () => void;
 };
 
 const invalidKeys = [
   'setSetting',
-  'setSettingCurry',
   'removeSetting',
   'saveReminder',
   'deleteReminder',
@@ -124,15 +120,6 @@ export const reminderSettings = createStore<ReminderStore>()(
             draft[key] = val;
           }),
         ),
-      setSettingCurry:
-        <T extends keyof ReminderStore>(key: T) =>
-        (val: ReminderStore[T]) =>
-          set(
-            produce<ReminderStore>(draft => {
-              if (invalidKeys.includes(key)) return;
-              draft[key] = val;
-            }),
-          ),
       removeSetting: key => () =>
         set(
           produce<ReminderStore>(draft => {
@@ -166,13 +153,12 @@ export const reminderSettings = createStore<ReminderStore>()(
 
 export function useReminderSettings<T extends keyof ReminderStore>(key: T) {
   const state = useStore(reminderSettings, s => s[key], shallow);
-  const setterCurry = useStore(
-    reminderSettings,
-    s => s.setSettingCurry,
-    shallow,
-  );
+  const setSetting = useStore(reminderSettings, s => s.setSetting, shallow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const setCallback = useCallback(setterCurry(key), [key]);
+  const setCallback = useCallback(
+    (val: ReminderStore[T]) => setSetting(key, val),
+    [key, setSetting],
+  );
   return [state, setCallback] as [
     ReminderStore[T],
     (val: ReminderStore[T]) => void,
