@@ -64,7 +64,7 @@ Requirements:
 * Android SDK
 * Yarn
 
-Clone the project:
+1. Clone the project:
 
 ```bash
 # clone with submodules
@@ -74,22 +74,35 @@ git clone --recurse-submodules git@github.com:meypod/al-azan.git
 cd al-azan && git submodule update --init --recursive
 ```
 
+2. install packages:
+
+```bash
+yarn install
+```
+
+3. Prepare language settings by renaming `lingui.config.js.example` to `lingui.config.js`.
+
+4. Compile the languages:
+
+```bash
+# need to do only once, or when you sync the translations
+yarn lingui compile
+```
+
 for development:
 
 ```bash
-# 1. install packages
-yarn install
-
-# 2. run the packager
+# 1. run the packager
 yarn start
 
-# 3. build the debug version and launch emulator
+# 2. build the debug version and launch emulator
 yarn android
 ```
 
 for creating a release build locally to debug:
 
 ```bash
+# start the build
 yarn android --variant=release
 # OR run:
 cd android && ./gradlew :app:assembleRelease
