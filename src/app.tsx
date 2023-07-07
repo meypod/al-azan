@@ -117,10 +117,14 @@ export function App(): JSX.Element {
       <Stack.Navigator
         screenOptions={{
           headerTitle: TranslatedHeaderTitle,
-          animation: 'fade_from_bottom',
+          animation: 'fade',
         }}>
         <Stack.Group screenOptions={{headerShown: false}}>
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{animation: 'none'}}
+          />
         </Stack.Group>
         <Stack.Group>
           <Stack.Screen
