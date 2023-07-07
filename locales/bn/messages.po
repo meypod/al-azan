@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "অন্ধকার"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "অডিও ডাউনলোড করার সময় সমস�
 msgid "Error while getting coordinates"
 msgstr "স্থানাঙ্কগুলি পাওয়ার সময় সমস্যার সম্মুখীন হয়েছে"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "এরর: ফাইল খুলতে ব্যর্থ হয়েছে৷"
 
@@ -506,15 +506,15 @@ msgstr "আপনি যদি নিশ্চিত করতে চান য�
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "যদি আপনার ডিভাইসে Google Pixel-এর মতো অ্যাডাপ্টিভ চার্জিং থাকে এবং আপনি আধান বা অনুস্মারকগুলিকে অ্যালার্ম হিসাবে চিহ্নিত করতে না চান, তাহলে আপনি এই বিকল্পটি সক্ষম করতে পারেন৷"
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "ইমপোর্ট"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "অ্যাপ ডেটা ইমপোর্ট করুন"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "ইমপোর্ট সফল"
 
@@ -684,7 +684,7 @@ msgstr "রিমাইন্ডার যোগ করুন"
 msgid "Next"
 msgstr "পরবর্তী"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "পরবর্তী দিন"
 
@@ -716,7 +716,7 @@ msgstr "মনে রাখবেন যে সফ্টওয়্যার �
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -803,7 +803,7 @@ msgstr "ফার্সি"
 
 #: src/utils/permission.ts:197
 msgid "Phone State Permission"
-msgstr "ফোন স্টেট পারমিশন"
+msgstr "ফোন স্টেট অনুমতি"
 
 #: src/utils/dialogs.ts:36
 msgid "Please enable location service"
@@ -825,7 +825,7 @@ msgstr "পাওয়ার ম্যানেজার"
 msgid "Prayer Times"
 msgstr "সালাতের সময়"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "আগের দিন"
 
@@ -992,7 +992,7 @@ msgstr "ভলিউম চাপলে অ্যাপের কি আজা�
 msgid "Show Adhan Options"
 msgstr "আযান অপশন দেখুন"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "আজ দেখুন"
 
@@ -1135,7 +1135,7 @@ msgstr "আজান সম্পর্কে নোটিফিকেশন দ
 
 #: src/utils/permission.ts:198
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
-msgstr "আপনি একটি কল পেলে আযান বাজানো বন্ধ করতে, আমাদের আপনার ফোনের অবস্থা সম্পর্কে হবে। এই অনুমতি না দেওয়া হলে এই ফিচারটি বন্ধ থাকবে।"
+msgstr "আপনি একটি কল পেলে আযান বাজানো বন্ধ করতে, আমাদের আপনার ফোনের অবস্থা সম্পর্কে জানতে হবে। এই অনুমতি না দেওয়া হলে এই ফিচারটি বন্ধ থাকবে।"
 
 #: src/utils/upcoming.ts:15
 msgid "Tomorrow"

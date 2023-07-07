@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "अँधेरा"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "ऑडियो डाउनलोड करते समय गलत�
 msgid "Error while getting coordinates"
 msgstr "निर्देशांक प्राप्त करने में गलती"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "त्रुटि: फ़ाइल खोलने में विफल"
 
@@ -506,15 +506,15 @@ msgstr "यदि आप ये सुनिश्चित करना चा�
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "यदि आपके डिवाइस में अनुकूली चार्जिंग है, जैसे Google पिक्सेल, और आप नहीं चाहते कि एडहान या रिमाइंडर्स को अलार्म के रूप में पहचाना जाए, तो आप इस विकल्प को सक्षम कर सकते हैं।"
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "आयात"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "ऐप डेटा आयात करें"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "आयात सफल रहा"
 
@@ -684,7 +684,7 @@ msgstr "नया अनुस्मारक"
 msgid "Next"
 msgstr "अगला"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "अगले दिन"
 
@@ -716,7 +716,7 @@ msgstr "ध्यान दें कि सॉफ़्टवेयर और �
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -825,7 +825,7 @@ msgstr "पावर मैनेजर"
 msgid "Prayer Times"
 msgstr "प्रार्थना का समय"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "पिछला दिन"
 
@@ -992,7 +992,7 @@ msgstr "क्या वॉल्यूम बटन दबाए जाने �
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "Gelap"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "Kesalahan saat mengunduh audio"
 msgid "Error while getting coordinates"
 msgstr "Kesalahan saat mendapatkan koordinat"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "Kesalahan: gagal membuka file"
 
@@ -506,15 +506,15 @@ msgstr "Untuk memastikan aplikasi berjalan dengan lancar, Anda perlu menonaktifk
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "Jika perangkat Anda memiliki pengisian daya adaptif, seperti Google Pixel, dan Anda tidak ingin azan atau pengingat dikenali sebagai alarm, Anda dapat mengaktifkan opsi ini."
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "Impor"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "Mengimpor data aplikasi"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "Impor berhasil"
 
@@ -684,7 +684,7 @@ msgstr "Buat Pengingat"
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -716,7 +716,7 @@ msgstr "Harap diperhatikan bahwa karena kesalahan perangkat lunak dan perangkat 
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -825,7 +825,7 @@ msgstr "Pengelola Daya"
 msgid "Prayer Times"
 msgstr "Waktu Sholat"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -994,7 +994,7 @@ msgstr "Haruskah aplikasi berhenti memutar adzan ketika tombol volume ditekan?"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "Hari Ini"
 

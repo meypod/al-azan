@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "اندھیرا"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "آڈیو ڈاؤن لوڈ کرتے وقت مسئلہ "
 msgid "Error while getting coordinates"
 msgstr "نقاط حاصل کرتے وقت مسلئہ۔"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "خرابی: فائل کو کھولنے میں ناکام"
 
@@ -506,15 +506,15 @@ msgstr "اگر آپ یہ یقینی بنانا چاہتے ہیں کہ ایپ ق�
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "اگر آپ کے آلے میں Google Pixel کی طرح اڈاپٹیو چارجنگ ہے اور آپ نہیں چاہتے کہ اذان یا یاددہانی کو الارم کے طور پر پہچانا جائے، تو آپ اس اختیار کو فعال کر سکتے ہیں۔"
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "درآمد کریں۔"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "ایپ ڈیٹا درآمد کریں۔"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "درآمد کامیاب"
 
@@ -684,7 +684,7 @@ msgstr "نئی یاد دہانی"
 msgid "Next"
 msgstr "اگلے"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "اگلے دن"
 
@@ -716,7 +716,7 @@ msgstr "نوٹ کریں کہ سافٹ ویئر اور ہارڈویئر کی خر
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -825,7 +825,7 @@ msgstr "پاور مینیجر"
 msgid "Prayer Times"
 msgstr "نماز کے اوقات"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "پچھلا دن"
 
@@ -992,7 +992,7 @@ msgstr "کیا والیوم بٹن دبانے پر ایپ کو اذان بجان
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "آج دکھائیں۔"
 

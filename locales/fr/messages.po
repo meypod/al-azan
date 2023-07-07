@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "Sombre"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "Erreur lors du téléchargement d'un fichier audio"
 msgid "Error while getting coordinates"
 msgstr "Erreur lors de l'obtention des coordonnées"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "Erreur : le fichier n'a pas pu être ouvert"
 
@@ -506,15 +506,15 @@ msgstr "Si vous voulez vous assurer que l'application fonctionne de manière fia
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "Si votre appareil est doté d'une fonction de charge adaptative, comme le Google Pixel, et que vous ne souhaitez pas que l'adhan ou les rappels soient reconnus comme des alarmes, vous pouvez activer cette option."
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "Importer"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "Importer les données de l'application"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "Importation réussie"
 
@@ -684,7 +684,7 @@ msgstr "Nouveau rappel"
 msgid "Next"
 msgstr "Suivant"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "Jour suivant"
 
@@ -716,7 +716,7 @@ msgstr "Notez qu'en raison d'erreurs logicielles et matérielles, la direction d
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -825,7 +825,7 @@ msgstr "Gestionnaire d'énergie"
 msgid "Prayer Times"
 msgstr "Horaire de prière"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "Jour précédent"
 
@@ -999,7 +999,7 @@ msgstr "Arrêter la lecture de l'Adhan en appuyant sur le bouton de volume"
 msgid "Show Adhan Options"
 msgstr "Afficher les options pour l'Adhan"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "Montrer le jour d'aujourd'hui"
 

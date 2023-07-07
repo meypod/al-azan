@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "Mračna"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "Greška pri skidanju audia"
 msgid "Error while getting coordinates"
 msgstr "Greška pri dobivanju koordinata"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "Greška: nije se mogla datoteka otvoriti"
 
@@ -506,15 +506,15 @@ msgstr "Ako želite biti sigurni da aplikacija može raditi pouzdano, morate one
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "Ako vaš uređaj ima prilagodljivo punjenje, kao što je Google Pixel, i ne želite da se ezan ili podsjetnici prepoznaju kao alarm, možete omogućiti ovu opciju."
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "Uvezite"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "Uvezite podatke aplikacije"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "Uvoz je uspješan"
 
@@ -684,7 +684,7 @@ msgstr "Novi Podsjetnik"
 msgid "Next"
 msgstr "Sljedeći"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "Sljedeći Dan"
 
@@ -716,7 +716,7 @@ msgstr "Čuvajte na umu da zbog softverskih i hardverskih grešaka, smjer Kabe k
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -825,7 +825,7 @@ msgstr "Napojni Menadžer"
 msgid "Prayer Times"
 msgstr "Vremena Molitve"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "Prošli Dan"
 
@@ -999,7 +999,7 @@ msgstr "Da li aplikacija treba da prestane da pušta ezan kada se pritisne dugme
 msgid "Show Adhan Options"
 msgstr "Prikažite Postavke za Ezan"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "Prikažite Danas"
 

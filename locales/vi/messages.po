@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-06 06:38+0330\n"
+"POT-Creation-Date: 2023-07-07 19:41+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,7 +278,7 @@ msgstr "Tối"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
@@ -381,7 +381,7 @@ msgstr "Lỗi khi tải âm báo"
 msgid "Error while getting coordinates"
 msgstr "Lỗi khi lấy tọa độ"
 
-#: src/screens/settings_backup/import_settings.tsx:72
+#: src/screens/settings_backup/import_settings.tsx:74
 msgid "Error: failed to open file"
 msgstr "Lỗi: không mở được tệp"
 
@@ -506,15 +506,15 @@ msgstr "Nếu bạn muốn đảm bảo ứng dụng có thể hoạt động �
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "Nếu thiết bị của bạn có tính năng sạc thích ứng, chẳng hạn như Google Pixel và bạn không muốn Azan hoặc Lời nhắc bị nhận dạng là báo thức, thì bạn có thể bật tùy chọn này."
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/import_settings.tsx:85
 msgid "Import"
 msgstr "Nhập dữ liệu"
 
-#: src/screens/settings_backup/import_settings.tsx:81
+#: src/screens/settings_backup/import_settings.tsx:83
 msgid "Import app data"
 msgstr "Nhập dữ liệu ứng dụng"
 
-#: src/screens/settings_backup/import_settings.tsx:67
+#: src/screens/settings_backup/import_settings.tsx:69
 msgid "Import successful"
 msgstr "Nhập thành công"
 
@@ -684,7 +684,7 @@ msgstr "Lời nhắc Mới"
 msgid "Next"
 msgstr "Tiếp"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:174
 msgid "Next Day"
 msgstr "Ngày Sau"
 
@@ -716,7 +716,7 @@ msgstr "Lưu ý rằng do lỗi phần mềm và phần cứng, hướng Qibla d
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:55
+#: src/screens/settings_backup/import_settings.tsx:57
 #: src/screens/settings_notifications/notification_setting.tsx:239
 #: src/screens/settings_notifications/notification_setting.tsx:322
 msgid "Notification"
@@ -825,7 +825,7 @@ msgstr "Quản lý Pin"
 msgid "Prayer Times"
 msgstr "Giờ cầu nguyện"
 
-#: src/screens/home/index.tsx:139
+#: src/screens/home/index.tsx:145
 msgid "Prev Day"
 msgstr "Ngày Trước"
 
@@ -995,7 +995,7 @@ msgstr "Ứng dụng có nên dừng phát Azan khi nhấn nút âm lượng kh�
 msgid "Show Adhan Options"
 msgstr "Tùy chọn Hiển thị Azan"
 
-#: src/screens/home/index.tsx:162
+#: src/screens/home/index.tsx:168
 msgid "Show Today"
 msgstr "Hôm nay"
 
