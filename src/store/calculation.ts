@@ -3,7 +3,6 @@ import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
-import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {clearCache} from './adhan_calc_cache';
 import {alarmSettings, AlarmSettingsStore} from './alarm';
@@ -139,8 +138,8 @@ export const calcSettings = createStore<CalcSettingsStore>()(
 );
 
 export function useCalcSettings<T extends keyof CalcSettingsStore>(key: T) {
-  const state = useStore(calcSettings, s => s[key], shallow);
-  const setSetting = useStore(calcSettings, s => s.setSetting, shallow);
+  const state = useStore(calcSettings, s => s[key]);
+  const setSetting = useStore(calcSettings, s => s.setSetting);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(
     (val: CalcSettingsStore[T]) => setSetting(key, val),

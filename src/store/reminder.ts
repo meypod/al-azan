@@ -3,7 +3,6 @@ import {WritableDraft} from 'immer/dist/internal';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
-import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {Prayer, PrayersInOrder} from '@/adhan';
@@ -152,8 +151,8 @@ export const reminderSettings = createStore<ReminderStore>()(
 );
 
 export function useReminderSettings<T extends keyof ReminderStore>(key: T) {
-  const state = useStore(reminderSettings, s => s[key], shallow);
-  const setSetting = useStore(reminderSettings, s => s.setSetting, shallow);
+  const state = useStore(reminderSettings, s => s[key]);
+  const setSetting = useStore(reminderSettings, s => s.setSetting);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(
     (val: ReminderStore[T]) => setSetting(key, val),

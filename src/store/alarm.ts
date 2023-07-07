@@ -2,7 +2,6 @@ import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
-import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {reminderSettings} from './reminder';
@@ -126,8 +125,8 @@ export function isAnyNotificationEnabled() {
 }
 
 export function useAlarmSettings<T extends keyof AlarmSettingsStore>(key: T) {
-  const state = useStore(alarmSettings, s => s[key], shallow);
-  const setSetting = useStore(alarmSettings, s => s.setSetting, shallow);
+  const state = useStore(alarmSettings, s => s[key]);
+  const setSetting = useStore(alarmSettings, s => s.setSetting);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(
     (val: AlarmSettingsStore[T]) => setSetting(key, val),

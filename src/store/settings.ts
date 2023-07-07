@@ -4,7 +4,6 @@ import {useCallback} from 'react';
 import {FileSystem} from 'react-native-file-access';
 import {useStore} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
-import {shallow} from 'zustand/shallow';
 import {createStore} from 'zustand/vanilla';
 import {clearCache} from './adhan_calc_cache';
 import {alarmSettings} from './alarm';
@@ -386,8 +385,8 @@ export const settings = createStore<SettingsStore>()(
 );
 
 export function useSettings<T extends keyof SettingsStore>(key: T) {
-  const state = useStore(settings, s => s[key], shallow);
-  const setSetting = useStore(settings, s => s.setSetting, shallow);
+  const state = useStore(settings, s => s[key]);
+  const setSetting = useStore(settings, s => s.setSetting);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setCallback = useCallback(
     (val: SettingsStore[T]) => setSetting(key, val),
