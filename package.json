@@ -29,7 +29,7 @@
     "@react-navigation/native-stack": "^6.9.13",
     "@types/metro-config": "^0.76.3",
     "@xutl/defer": "^1.0.5",
-    "adhan": "^4.4.3",
+    "adhan-extended": "^5.0.1",
     "fuse.js": "^6.6.2",
     "hash.js": "^1.1.7",
     "immer": "^9.0.17",

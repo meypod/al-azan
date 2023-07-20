@@ -1,4 +1,4 @@
-import {Madhab, PolarCircleResolution, Shafaq} from 'adhan';
+import {Madhab, PolarCircleResolution, Shafaq} from 'adhan-extended';
 import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';

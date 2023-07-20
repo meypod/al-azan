@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import MapLibreGL, {ShapeSourceProps} from '@maplibre/maplibre-react-native';
-import {Coordinates, Qibla} from 'adhan';
+import {Coordinates, Qibla} from 'adhan-extended';
 import debounce from 'lodash/debounce';
 import {Button, HStack, Text} from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';

@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {CalculationMethod, CalculationParameters} from 'adhan';
+import {CalculationMethod, CalculationParameters} from 'adhan-extended';
 
 type CalculationMethodEntry = {
   label: string;

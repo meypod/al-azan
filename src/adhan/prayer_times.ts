@@ -7,7 +7,7 @@ import {
   Madhab,
   Shafaq,
   PolarCircleResolution,
-} from 'adhan';
+} from 'adhan-extended';
 import intersection from 'lodash/intersection';
 import {CalculationMethods} from './calculation_methods';
 import {PrayersInOrder, Prayer} from './prayer';
@@ -142,6 +142,15 @@ export function calculatePrayerTimes(date: Date) {
     options.calculationParameters.ishaInterval = 120;
   }
 
+  // some extra rules for turkey from: https://kurul.diyanet.gov.tr/Karar-Mutalaa-Cevap/4093/45-enlemin-otesinde-namaz-vakitleri
+  // prefix for turkey
+  if (options.calcMethodKey === 'Turkey') {
+    // appendix (d)
+    if (options.coordinates.latitude >= 62) {
+      options.coordinates.latitude = 62;
+    }
+  }
+
   const prayerTimes: Partial<CachedPrayerTimes> = new PrayerTimes(
     options.coordinates,
     date,
@@ -151,6 +160,41 @@ export function calculatePrayerTimes(date: Date) {
   const sunnahTimes = new SunnahTimes(prayerTimes as any as PrayerTimes);
   prayerTimes.midnight = sunnahTimes.middleOfTheNight;
   prayerTimes.tahajjud = sunnahTimes.lastThirdOfTheNight;
+
+  // post fix for turkey
+  if (options.calcMethodKey === 'Turkey') {
+    // Diyanet appendix (a) and (b)
+    if (options.coordinates.latitude > 45) {
+      const oneThirdOfNightDurationMs = sunnahTimes.nightDuration / 3;
+
+      if (oneThirdOfNightDurationMs <= 80 * 60 * 1000) {
+        // 1 Hour and 20 min in milliseconds
+        prayerTimes.isha = new Date(
+          prayerTimes.maghrib!.getTime() + oneThirdOfNightDurationMs,
+        );
+      } else {
+        prayerTimes.isha = new Date(
+          prayerTimes.maghrib!.getTime() + 80 * 60 * 1000,
+        );
+      }
+
+      // for rule (c)
+      if (
+        prayerTimes.date!.getMonth() >= 2 ||
+        prayerTimes.date!.getMonth() < 8
+      ) {
+        // between March (2) and September (8)
+        let intervalTime =
+          prayerTimes.isha!.getTime() -
+          prayerTimes.maghrib!.getTime() +
+          10 * 60 * 1000;
+
+        prayerTimes.fajr = new Date(
+          prayerTimes.sunrise!.getTime() - intervalTime,
+        );
+      }
+    }
+  }
 
   return prayerTimes as Required<CachedPrayerTimes>;
 }

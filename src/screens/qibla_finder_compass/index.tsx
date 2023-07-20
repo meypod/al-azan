@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {Qibla, Coordinates} from 'adhan';
+import {Qibla, Coordinates} from 'adhan-extended';
 import {
   Flex,
   HStack,

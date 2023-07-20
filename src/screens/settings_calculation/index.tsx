@@ -1,6 +1,11 @@
 import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
-import {PolarCircleResolution, HighLatitudeRule, Madhab, Shafaq} from 'adhan';
+import {
+  PolarCircleResolution,
+  HighLatitudeRule,
+  Madhab,
+  Shafaq,
+} from 'adhan-extended';
 import {
   Select,
   FormControl,
