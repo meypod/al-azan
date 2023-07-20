@@ -155,17 +155,18 @@ export const AutocompleteInput = <T extends unknown>(
                 {actionsheetLabel}
               </Text>
             )}
-            <HStack width="100%" mb="2">
+            <HStack width="100%" mb="2" px="2">
               <Input
+                size="md"
                 // eslint-disable-next-line jsx-a11y/no-autofocus
                 autoFocus={true}
                 flex={1}
-                InputLeftElement={<SearchIcon ml="2" />}
+                InputLeftElement={<SearchIcon ml="2" size="lg" />}
                 onChangeText={onChangeText}
                 value={inputVal}
                 placeholder={t`Search`}
               />
-              {loading ? <Spinner mx="1"></Spinner> : null}
+              {loading ? <Spinner ml="2" size="lg"></Spinner> : null}
             </HStack>
             {(!data?.length || !results.length || showError) && (
               <Box
