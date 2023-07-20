@@ -122,7 +122,21 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
 
   Algeria: {
     label: t`Ministry of Religious Affairs and Wakfs, Algeria`,
-    info: 'Uses Fajr angle of 18, Maghrib angle of 3 min and Isha angle of 17',
-    get: () => new CalculationParameters('Other', 18.0, 17.0, undefined, 3.0),
+    info: 'Uses Fajr angle of 18, Isha angle of 17, + 3min maghrib',
+    get: () => {
+      const params = new CalculationParameters('Other', 18.0, 17.0);
+      params.methodAdjustments = {
+        ...params.methodAdjustments,
+        sunset: 3,
+        maghrib: 3,
+      };
+      return params;
+    },
+  },
+
+  Brunei: {
+    label: t`Kementrian Hal Ehwal Ugama (Brunei Darussalam)`,
+    info: 'Uses Fajr angle of 20 and Isha angle of 18',
+    get: () => new CalculationParameters('Other', 20.0, 18.0),
   },
 };
