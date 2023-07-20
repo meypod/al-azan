@@ -1,0 +1,3 @@
+- Added Brunei and Algeria calculation methods
+- Updated Diyanet method
+- Other small improvements
