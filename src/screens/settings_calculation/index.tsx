@@ -10,6 +10,7 @@ import {
   Text,
 } from 'native-base';
 
+import {useCallback} from 'react';
 import {CalendarSettings} from './calendar_settings';
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/material_icons/menu';
@@ -39,31 +40,26 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   const [shafaqSetting, setShafaqSetting] = useCalcSettings('SHAFAQ');
 
-  const calculationMethodKeyChanged = (itemValue: string) => {
-    setCalculationMethodKey(itemValue);
-    setFajrAdjustment(0);
-    setSunriseAdjustment(0);
-    setDhuhrAdjustment(0);
-    setAsrAdjustment(0);
-    setMaghribAdjustment(0);
-    setIshaAdjustment(0);
-  };
-
-  const highLatitudeSettingChanged = (itemValue: string) => {
-    setHighLatitudeRuleSetting(itemValue);
-  };
-
-  const asrCalculationSettingChanged = (itemValue: string) => {
-    setAsrCalculationSetting(itemValue);
-  };
-
-  const polarResolutionSettingChanged = (itemValue: string) => {
-    setPolarResolutionSetting(itemValue);
-  };
-
-  const shafaqSettingChanged = (itemValue: string) => {
-    setShafaqSetting(itemValue);
-  };
+  const calculationMethodKeyChanged = useCallback(
+    (itemValue: string) => {
+      setCalculationMethodKey(itemValue);
+      setFajrAdjustment(0);
+      setSunriseAdjustment(0);
+      setDhuhrAdjustment(0);
+      setAsrAdjustment(0);
+      setMaghribAdjustment(0);
+      setIshaAdjustment(0);
+    },
+    [
+      setAsrAdjustment,
+      setCalculationMethodKey,
+      setDhuhrAdjustment,
+      setFajrAdjustment,
+      setIshaAdjustment,
+      setMaghribAdjustment,
+      setSunriseAdjustment,
+    ],
+  );
 
   return (
     <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
@@ -110,7 +106,7 @@ export function CalculationSettings(props: IScrollViewProps) {
               <Select
                 accessibilityLabel={t`Choose High Latitude Setting`}
                 selectedValue={highLatitudeRuleSetting || 'none'}
-                onValueChange={highLatitudeSettingChanged}
+                onValueChange={setHighLatitudeRuleSetting}
                 flex="1">
                 <Select.Item label={t`None (Automatic)`} value="none" />
                 <Select.Item
@@ -132,7 +128,7 @@ export function CalculationSettings(props: IScrollViewProps) {
               <Select
                 accessibilityLabel={t`Choose Asr Calculation Madhab`}
                 selectedValue={asrCalculationSetting || Madhab.Shafi}
-                onValueChange={asrCalculationSettingChanged}
+                onValueChange={setAsrCalculationSetting}
                 flex="1">
                 <Select.Item
                   label={t`Shafi, Maliki, Hanbali (Default)`}
@@ -147,7 +143,7 @@ export function CalculationSettings(props: IScrollViewProps) {
               </FormControl.Label>
               <Select
                 accessibilityLabel={t`Choose Polar Resolution`}
-                onValueChange={polarResolutionSettingChanged}
+                onValueChange={setPolarResolutionSetting}
                 selectedValue={
                   polarResolutionSetting || PolarCircleResolution.Unresolved
                 }
@@ -176,7 +172,7 @@ export function CalculationSettings(props: IScrollViewProps) {
               <Select
                 mt="1"
                 accessibilityLabel={t`Choose Shafaq method`}
-                onValueChange={shafaqSettingChanged}
+                onValueChange={setShafaqSetting}
                 selectedValue={shafaqSetting || Shafaq.General}
                 flex="1">
                 <Select.Item
