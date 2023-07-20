@@ -29,6 +29,14 @@ function isValidCoords(num: number) {
 
 const clipboardCoordsRegex = /\s*([-\d.]+)[\s°NS]*[,| ]{1}\s*([-\d.]+)[\s°EW]*/;
 
+function cityToKey(city: CityInfo) {
+  return city.names + city.name + city.lat;
+}
+
+function cityToLabel(city: CityInfo) {
+  return (city as any).selectedName || city.name;
+}
+
 export function LocationSettings(props: IScrollViewProps) {
   const [lat, setLat] = useCalcSettings('LOCATION_LAT');
   const [long, setLong] = useCalcSettings('LOCATION_LONG');
@@ -193,8 +201,8 @@ export function LocationSettings(props: IScrollViewProps) {
               actionsheetLabel={t`City/Area`}
               getData={getCitiesData}
               onItemSelected={onCitySelected}
-              getOptionKey={item => item.names}
-              getOptionLabel={item => (item as any).selectedName || item.name}
+              getOptionKey={cityToKey}
+              getOptionLabel={cityToLabel}
               autoCompleteKeys={['names']}
               useReturnedMatch={true}
               selectedItem={selectedCity}
