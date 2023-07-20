@@ -205,6 +205,7 @@ export const AutocompleteInput = <T extends unknown>(
             )}
 
             <FlatList
+              keyboardShouldPersistTaps="handled"
               flexShrink={1}
               flexGrow={0}
               data={mappedResults}

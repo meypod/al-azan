@@ -152,7 +152,11 @@ export function LocationSettings(props: IScrollViewProps) {
   }, [selectedCountry]);
 
   return (
-    <ScrollView p="4" _contentContainerStyle={{paddingBottom: 40}} {...props}>
+    <ScrollView
+      p="4"
+      _contentContainerStyle={{paddingBottom: 40}}
+      {...props}
+      keyboardShouldPersistTaps="handled">
       <Text textAlign="justify">{t`To calculate Adhan, We need your location. You can use the "Find My Location" button, or use the country and city/area search, or enter your coordinates manually.`}</Text>
 
       <Divider label={t`Using GPS`} mb="3" mt="2" />
