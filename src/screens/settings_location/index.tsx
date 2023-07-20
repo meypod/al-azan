@@ -224,6 +224,7 @@ export function LocationSettings(props: IScrollViewProps) {
           <FormControl ml="3" justifyContent="center">
             <FormControl.Label> </FormControl.Label>
             <Button
+              accessibilityLabel={t`Clear location`}
               borderColor="danger.900"
               variant="outline"
               colorScheme="danger"
@@ -239,10 +240,11 @@ export function LocationSettings(props: IScrollViewProps) {
       <Divider label={t`Using Coordinates`} mb="2" mt="4" />
 
       <HStack>
-        <FormControl flex={1} flexGrow={1} pr="1" mb="1">
+        <FormControl flex={1} flexGrow={1} pr="1">
           <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
           <NumericInput
             py="0"
+            flex={1}
             fontSize="lg"
             textAlign="center"
             placeholder={t`Latitude`}
@@ -259,6 +261,7 @@ export function LocationSettings(props: IScrollViewProps) {
           <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
           <NumericInput
             py="0"
+            flex={1}
             fontSize="lg"
             textAlign="center"
             placeholder={t`Longitude`}
@@ -273,9 +276,11 @@ export function LocationSettings(props: IScrollViewProps) {
         </FormControl>
 
         {lat || long ? (
-          <FormControl flexShrink={1} flexGrow={0} width="10" pl="1">
+          <FormControl flexShrink={1} flexGrow={0} w="10" pl="1">
             <FormControl.Label> </FormControl.Label>
             <Button
+              flex={1}
+              accessibilityLabel={t`Clear coordinates`}
               borderColor="danger.900"
               variant="outline"
               colorScheme="danger"
