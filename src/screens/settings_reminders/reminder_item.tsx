@@ -8,9 +8,11 @@ import {
   Flex,
   Button,
   Switch,
+  VStack,
 } from 'native-base';
 import {memo, useCallback} from 'react';
 import {translatePrayer} from '@/adhan';
+import {CopyIcon} from '@/assets/icons/material_icons/copy';
 import {DeleteIcon} from '@/assets/icons/material_icons/delete';
 import {EditIcon} from '@/assets/icons/material_icons/edit';
 import {Reminder} from '@/store/reminder';
@@ -20,6 +22,7 @@ export type ReminderItemProps = {
   onEditPress: (reminderState: Reminder) => void;
   onChange: (reminderState: Reminder) => void;
   onDelete: (reminderState: Reminder) => void;
+  onClonePress: (reminderState: Reminder) => void;
   item: Reminder;
 };
 
@@ -44,6 +47,7 @@ function ReminderItem({
   onDelete = () => {},
   onChange,
   onEditPress,
+  onClonePress,
 }: ReminderItemProps) {
   const onToggle = useCallback(
     (state: boolean) => {
@@ -64,6 +68,7 @@ function ReminderItem({
     <Pressable onPress={onEditPress.bind(null, item)}>
       {({isPressed}) => (
         <Box
+          flexDirection="row"
           m="2"
           p="3"
           rounded="sm"
@@ -81,43 +86,56 @@ function ReminderItem({
               ? 'coolGray.700:alpha.20'
               : 'coolGray.700:alpha.10',
           }}>
-          <HStack>
-            {item.label ? (
-              <Flex px="3" flexDirection="row" alignItems="center" flex={1}>
-                <Text
-                  fontSize="sm"
-                  _dark={{
-                    borderBottomColor: 'coolGray.300',
-                  }}
-                  _light={{
-                    borderBottomColor: 'coolGray.600',
-                  }}
-                  borderBottomWidth="1">
-                  {item.label}
-                </Text>
-              </Flex>
-            ) : (
+          <VStack flex={1} py="3" px="2">
+            <Flex direction="row">
+              <Text
+                ellipsizeMode="tail"
+                noOfLines={1}
+                fontSize="sm"
+                _dark={{
+                  borderBottomColor: 'coolGray.300',
+                }}
+                _light={{
+                  borderBottomColor: 'coolGray.600',
+                }}
+                borderBottomWidth="1">
+                {item.label || ''}
+              </Text>
               <Spacer />
-            )}
+            </Flex>
+            <Spacer />
+            <Text>{getReminderSubtitle(item)}</Text>
+          </VStack>
+          <VStack>
             <HStack>
-              <Button onPress={onEditPress.bind(null, item)} variant="ghost">
+              <Button
+                onPress={onEditPress.bind(null, item)}
+                variant="ghost"
+                px="2">
                 <EditIcon
                   color="coolGray.300"
                   size="xl"
                   _light={{color: 'coolGray.600'}}
                 />
               </Button>
-              <Button onPress={onDeletePress} variant="ghost">
+              <Button onPress={onDeletePress} variant="ghost" px="2">
                 <DeleteIcon color="red.500" size="xl" />
               </Button>
             </HStack>
-          </HStack>
-          <HStack>
-            <Text p="3" flex={1}>
-              {getReminderSubtitle(item)}
-            </Text>
-            <Switch isChecked={item.enabled} onToggle={onToggle} size="lg" />
-          </HStack>
+            <HStack>
+              <Button
+                onPress={onClonePress.bind(null, item)}
+                variant="ghost"
+                px="2">
+                <CopyIcon
+                  color="coolGray.300"
+                  size="xl"
+                  _light={{color: 'coolGray.600'}}
+                />
+              </Button>
+              <Switch isChecked={item.enabled} onToggle={onToggle} size="lg" />
+            </HStack>
+          </VStack>
         </Box>
       )}
     </Pressable>

@@ -39,10 +39,22 @@ export function RemindersSettings(props: IBoxProps) {
     });
   }, []);
 
+  const onCloneReminder = useCallback((reminder: Reminder) => {
+    let newLabel = (reminder.label || '') + ' (' + t`Copy` + ')';
+    const newReminder: Reminder = {
+      ...reminder,
+      id: 'reminder_' + Date.now().toString(),
+      label: newLabel,
+      enabled: false,
+    };
+    reminderSettings.getState().saveReminder(newReminder);
+  }, []);
+
   const renderItemMemoized = useCallback(
     ({item}: ListRenderItemInfo<Reminder>) => {
       return (
         <ReminderItem
+          onClonePress={onCloneReminder}
           onEditPress={setCreatingReminder}
           onChange={onReminderChange}
           onDelete={onReminderDelete}
@@ -50,7 +62,7 @@ export function RemindersSettings(props: IBoxProps) {
         />
       );
     },
-    [onReminderChange, onReminderDelete, setCreatingReminder],
+    [onCloneReminder, onReminderChange, onReminderDelete],
   );
 
   return (
