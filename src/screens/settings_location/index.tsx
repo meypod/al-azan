@@ -224,7 +224,7 @@ export function LocationSettings(props: IScrollViewProps) {
           <FormControl ml="3" justifyContent="center">
             <FormControl.Label> </FormControl.Label>
             <Button
-              accessibilityLabel={t`Clear location`}
+              accessibilityLabel={t`Clear the location`}
               borderColor="danger.900"
               variant="outline"
               colorScheme="danger"
@@ -280,7 +280,7 @@ export function LocationSettings(props: IScrollViewProps) {
             <FormControl.Label> </FormControl.Label>
             <Button
               flex={1}
-              accessibilityLabel={t`Clear coordinates`}
+              accessibilityLabel={t`Clear the coordinates`}
               borderColor="danger.900"
               variant="outline"
               colorScheme="danger"
