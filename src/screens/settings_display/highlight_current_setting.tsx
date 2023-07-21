@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {HStack, FormControl, IStackProps, Switch, Text} from 'native-base';
+import {HStack, FormControl, IStackProps, Switch} from 'native-base';
 import {useCallback} from 'react';
 import {useSettings} from '@/store/settings';
 
@@ -19,7 +19,8 @@ export function HighlightCurrentSetting(props: IStackProps) {
     <HStack {...props}>
       <FormControl fontSize="md">
         <HStack justifyContent={'space-between'}>
-          <Text flexShrink={1}>{t`Highlight current prayer`}</Text>
+          <FormControl.Label
+            flexShrink={1}>{t`Highlight current prayer`}</FormControl.Label>
           <Switch value={highlightCurrent} onToggle={onToggle} size="lg" />
         </HStack>
         <FormControl.HelperText>

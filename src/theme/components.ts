@@ -16,7 +16,6 @@ export const components: Theme['components'] | (Record<string, any> & {}) = {
           color: 'light.50',
         },
         color: 'dark.100',
-        fontWeight: 'bold',
       },
       marginTop: 0.5,
       marginBottom: 0.5,
