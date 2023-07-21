@@ -9,6 +9,7 @@ import {
   ADHAN_DND_CHANNEL_ID,
   ADHAN_NOTIFICATION_ID,
 } from '@/constants/notification';
+import {VibrationMode, vibrate, vibrateStop} from '@/modules/activity';
 import {AudioEntry} from '@/modules/media_player';
 import {clearCache} from '@/store/adhan_calc_cache';
 import {alarmSettings} from '@/store/alarm';
@@ -80,6 +81,14 @@ export function DevSettings(props: IScrollViewProps) {
     ToastAndroid.show('Cache cleared', ToastAndroid.SHORT);
   };
 
+  const onVibratePressed = () => vibrate(VibrationMode.ONCE);
+
+  const onVibrateLongPressed = () => {
+    ToastAndroid.show('Vibrating for 30 seconds', ToastAndroid.SHORT);
+    vibrate(VibrationMode.CONTINUOUS);
+    setTimeout(() => vibrateStop(), 30_000);
+  };
+
   return (
     <ScrollView
       p="4"
@@ -94,9 +103,18 @@ export function DevSettings(props: IScrollViewProps) {
         <Text>Show adhan notif in 10 seconds: </Text>
         <Button onPress={scheduleAdhanInTen.bind(null, false)}>Schedule</Button>
       </HStack>
-      <HStack alignItems="center" justifyContent="space-between">
+      <HStack alignItems="center" justifyContent="space-between" mb="5">
         <Text>Clear Calculation Cache: </Text>
         <Button onPress={onClearPressed}>Clear</Button>
+      </HStack>
+      <HStack alignItems="center" justifyContent="space-between" mb="5">
+        <Text>Test vibration: </Text>
+        <Button onPress={onVibratePressed}>Vibrate</Button>
+        <Button onPress={onVibrateLongPressed}>Vibrate Long</Button>
+      </HStack>
+      <HStack alignItems="center" justifyContent="space-between" mb="5">
+        <Text> </Text>
+        <Button onPress={() => vibrateStop()}>Stop Vibration</Button>
       </HStack>
     </ScrollView>
   );

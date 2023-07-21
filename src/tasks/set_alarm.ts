@@ -7,6 +7,7 @@ import notifee, {
   AlarmType,
 } from '@notifee/react-native';
 import {Prayer} from '@/adhan';
+import {VibrationMode} from '@/modules/activity';
 import {AudioEntry, isIntrusive, isSilent} from '@/modules/media_player';
 
 export type SetAlarmTaskOptions = {
@@ -31,6 +32,9 @@ export type SetAlarmTaskOptions = {
   alarmType: AlarmType;
   /** if true, won't launch any activity when alarm triggers and won't light up screen */
   dontTurnOnScreen?: boolean;
+  vibrationMode?: VibrationMode;
+  /** this is set by setAlarmTask function. indicates that a sound is going to be played by this alarm and the sound is not short. */
+  readonly intrusive?: boolean;
 };
 
 export async function setAlarmTask(options: SetAlarmTaskOptions) {
@@ -60,6 +64,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
   };
 
   const intrusive = isIntrusive(sound);
+  (options as any).isIntrusive = intrusive;
   const silent = isSilent(sound);
   await notifee.createTriggerNotification(
     {

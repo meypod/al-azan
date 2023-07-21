@@ -7,11 +7,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
+import android.media.AudioAttributes;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.provider.Settings;
 
 import androidx.annotation.NonNull;
@@ -292,6 +295,47 @@ public class ActivityModule extends ReactContextBaseJavaModule {
         } catch (Exception e) {
             promise.reject(e);
         }
+    }
+
+    @ReactMethod
+    public void vibrate(int vibrationMode, final Promise promise) {
+        // 0 = disabled
+        // 1 = once
+        // 2 = continuous
+        if (vibrationMode == 0) {
+            promise.resolve(null);
+            return;
+        };
+        var context = getReactApplicationContext();
+        Vibrator vibrator = (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
+        if (vibrationMode == 1) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                vibrator.vibrate(500);
+            }
+        } else if (vibrationMode == 2) {
+            long[] pattern = {0, 700, 2300, 1000, 2300, 1000, 1300, 1000, 1000};
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createWaveform(pattern, 5),
+                        new AudioAttributes.Builder()
+                                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                                .setUsage(AudioAttributes.USAGE_ALARM)
+                                .build());
+            } else {
+                vibrator.vibrate(pattern, 5);
+            }
+        }
+        promise.resolve(null);
+    }
+
+    @ReactMethod
+    public void vibrateStop(final Promise promise) {
+        var context = getReactApplicationContext();
+        Vibrator vibrator = (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
+        vibrator.cancel();
+        promise.resolve(null);
     }
 
     // Required for rn built in EventEmitter Calls.

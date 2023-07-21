@@ -82,6 +82,7 @@ async function askNotificationPermission() {
           importance: AndroidImportance.HIGH,
           visibility: AndroidVisibility.PUBLIC,
           bypassDnd: true,
+          vibration: false,
         }),
         notifee.createChannel({
           id: REMINDER_DND_CHANNEL_ID,
@@ -89,6 +90,7 @@ async function askNotificationPermission() {
           importance: AndroidImportance.HIGH,
           visibility: AndroidVisibility.PUBLIC,
           bypassDnd: true,
+          vibration: false,
         }),
       ]);
     } else {
@@ -100,12 +102,14 @@ async function askNotificationPermission() {
           name: i18n._(channelNameTranslations['ADHAN_CHANNEL_NAME']),
           importance: AndroidImportance.HIGH,
           visibility: AndroidVisibility.PUBLIC,
+          vibration: false,
         }),
         notifee.createChannel({
           id: REMINDER_CHANNEL_ID,
           name: i18n._(channelNameTranslations['REMINDER_CHANNEL_NAME']),
           importance: AndroidImportance.HIGH,
           visibility: AndroidVisibility.PUBLIC,
+          vibration: false,
         }),
       ]);
     }

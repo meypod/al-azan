@@ -12,6 +12,7 @@ import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
 import {DontTurnOnScreenSetting} from './dont_turn_on_screen';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
 import {PreferHeadphoneSetting} from './prefer_headphone_setting';
+import {VibrationSetting} from './vibration_setting';
 import {VolumeButtonSetting} from './volume_button_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import NotificationSetting from '@/screens/settings_notifications/notification_setting';
@@ -70,6 +71,7 @@ export function NotificationSettings(props: IScrollViewProps) {
       <PreferHeadphoneSetting mb="4" />
       <VolumeButtonSetting mb="8" />
       <BypassDnDSetting mb="8" />
+      <VibrationSetting mb="8" />
       <DontTurnOnScreenSetting mb="8" />
     </ScrollView>
   );

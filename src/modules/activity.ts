@@ -24,6 +24,12 @@ const ActivityModule = (
       )
 ) as ActivityModuleInterface;
 
+export enum VibrationMode {
+  OFF = 0,
+  ONCE = 1,
+  CONTINUOUS = 2,
+}
+
 interface ActivityModuleInterface extends NativeModule {
   restart(): Promise<void>;
   finish(): Promise<void>;
@@ -40,6 +46,8 @@ interface ActivityModuleInterface extends NativeModule {
   /** resolve true if internet became available */
   openMobileDataSettings(): Promise<boolean>;
   saveJsonDocument(data: string, initialName: string): Promise<boolean>;
+  vibrate(vibrationMode: VibrationMode): Promise<void>;
+  vibrateStop(): Promise<void>;
 }
 
 const eventEmitter = new NativeEventEmitter(ActivityModule);
@@ -120,5 +128,7 @@ export const openLocationSettings = ActivityModule.openLocationSettings;
 export const openMobileWifiSettings = ActivityModule.openMobileWifiSettings;
 export const openMobileDataSettings = ActivityModule.openMobileDataSettings;
 export const saveJsonDocument = ActivityModule.saveJsonDocument;
+export const vibrate = ActivityModule.vibrate;
+export const vibrateStop = ActivityModule.vibrateStop;
 
 export default ActivityModule;

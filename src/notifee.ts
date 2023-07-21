@@ -4,7 +4,7 @@ import notifee, {
   AndroidImportance,
   Notification,
 } from '@notifee/react-native';
-import {isDndActive} from './modules/activity';
+import {isDndActive, vibrate, vibrateStop} from './modules/activity';
 import {isIntrusive, isSilent} from './modules/media_player';
 import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
@@ -58,6 +58,10 @@ export async function cancelAlarmNotif({
   notification,
   replaceWithNormal,
 }: CancelNotifOptions) {
+  if (options?.vibrationMode && options.intrusive) {
+    await vibrateStop().catch(console.error);
+  }
+
   if (!isSilent(options?.sound)) {
     await stopAudio().catch(console.error);
     await notifee.stopForegroundService().catch(console.error);
@@ -328,6 +332,10 @@ export function setupNotifeeHandlers() {
     ) {
       const options = getAlarmOptions(notification);
 
+      if (options?.vibrationMode && options.intrusive) {
+        await vibrate(options.vibrationMode).catch(console.error);
+      }
+
       if (!isSilent(options?.sound)) {
         const isDnd = await isDndActive();
 
@@ -360,4 +368,8 @@ export async function updatePermanentNotifWidget(options: updateWidgetOptions) {
 
 export function cancelPermanentNotifWidget() {
   return notifee.cancelDisplayedNotification(WIDGET_NOTIFICATION_ID);
+}
+
+export function deleteChannel(channelId: string) {
+  return notifee.deleteChannel(channelId);
 }

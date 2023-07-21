@@ -15,7 +15,9 @@ import {
   INITIAL_ADHAN_AUDIO_ENTRIES,
 } from '@/assets/adhan_entries';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
+import {VibrationMode} from '@/modules/activity';
 import type {AudioEntry} from '@/modules/media_player';
+import {deleteChannel} from '@/notifee';
 import {CountryInfo, CityInfo} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
@@ -54,6 +56,7 @@ export type SettingsStore = {
   PREFER_EXTERNAL_AUDIO_DEVICE: boolean;
   BYPASS_DND: boolean;
   DONT_TURN_ON_SCREEN: boolean;
+  VIBRATION_MODE: VibrationMode;
   // widget
   SHOW_WIDGET: boolean;
   SHOW_WIDGET_COUNTDOWN: boolean;
@@ -154,6 +157,7 @@ export const settings = createStore<SettingsStore>()(
       PREFER_EXTERNAL_AUDIO_DEVICE: false,
       BYPASS_DND: false,
       DONT_TURN_ON_SCREEN: false,
+      VIBRATION_MODE: VibrationMode.ONCE,
       //
       COUNTER_HISTORY_VISIBLE: false,
       RAMADAN_REMINDED_YEAR: '',
@@ -304,7 +308,7 @@ export const settings = createStore<SettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 10,
+      version: 11,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -377,6 +381,21 @@ export const settings = createStore<SettingsStore>()(
                 (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[0],
               [Prayer.Fajr]: (persistedState as any).SELECTED_FAJR_ADHAN_ENTRY,
             };
+            break;
+          case 10:
+            [
+              'adhan-channel',
+              'adhan-dnd-channel',
+              'reminder-channel',
+              'reminder-dnd-channel',
+            ].map(deleteChannel);
+            if (
+              typeof (persistedState as SettingsStore).VIBRATION_MODE ===
+              'undefined'
+            ) {
+              (persistedState as SettingsStore).VIBRATION_MODE =
+                VibrationMode.ONCE;
+            }
             break;
         }
         /* eslint-enable no-fallthrough */

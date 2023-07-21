@@ -29,7 +29,7 @@ export async function setReminders(options?: SetReminderOptions) {
     force = false,
   } = options || {};
 
-  const {BYPASS_DND, DONT_TURN_ON_SCREEN} = settings.getState();
+  const {BYPASS_DND, DONT_TURN_ON_SCREEN, VIBRATION_MODE} = settings.getState();
 
   {
     // we dont need reminderIdsToCancel out of this scope, hence the extra {}
@@ -101,6 +101,7 @@ export async function setReminders(options?: SetReminderOptions) {
         ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
         : AlarmType.SET_ALARM_CLOCK,
       dontTurnOnScreen: DONT_TURN_ON_SCREEN,
+      vibrationMode: VIBRATION_MODE,
     };
 
     tasks.push(
