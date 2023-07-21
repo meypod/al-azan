@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-21 12:36+0330\n"
+"POT-Creation-Date: 2023-07-21 13:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -224,7 +224,7 @@ msgstr "نوع تقویم را انتخاب کنید"
 
 #: src/screens/settings_calculation/index.tsx:119
 msgid "Choose midnight calculation method"
-msgstr ""
+msgstr "روش محاسبه نیمه شب را انتخاب کنید"
 
 #: src/screens/settings_display/number_format_settings.tsx:24
 msgid "Choose numbering system"
@@ -236,12 +236,12 @@ msgid "City/Area"
 msgstr "شهر/ناحیه"
 
 #: src/screens/settings_location/index.tsx:283
-msgid "Clear coordinates"
-msgstr ""
+msgid "Clear the coordinates"
+msgstr "مختصات را پاک کنید"
 
 #: src/screens/settings_location/index.tsx:227
-msgid "Clear location"
-msgstr ""
+msgid "Clear the location"
+msgstr "مکان را پاک کنید"
 
 #: src/screens/settings_location/index.tsx:87
 msgid "Clipboard data does not contain coordinates"
@@ -270,7 +270,7 @@ msgstr "تایید"
 
 #: src/screens/settings_notifications/vibration_setting.tsx:30
 msgid "Continuous"
-msgstr ""
+msgstr "مداوم"
 
 #: src/screens/settings_location/index.tsx:110
 msgid "Coordinates updated"
@@ -278,7 +278,7 @@ msgstr "مختصات به روز شد"
 
 #: src/screens/settings_reminders/index.tsx:43
 msgid "Copy"
-msgstr ""
+msgstr "کپی"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:144
 msgid "Count"
@@ -307,7 +307,7 @@ msgstr "پیش فرض"
 
 #: src/screens/settings_calculation/index.tsx:124
 msgid "Default (Mid Sunset to Sunrise)"
-msgstr ""
+msgstr "پیش‌فرض (وسط غروب تا طلوع خورشید)"
 
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
@@ -343,7 +343,7 @@ msgstr "رد کردن"
 
 #: src/screens/settings_calculation/index.tsx:94
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
-msgstr ""
+msgstr "روش دیانت ارائه شده در الاذان تقریبی از اوقات رسمی است. از آنجایی که اسناد کافی در مورد نحوه محاسبه دقیق زمان وجود ندارد، ممکن است زمان ها با وب سایت رسمی دیانت، به ویژه خارج از ترکیه، مطابقت نداشته باشند."
 
 #: src/adhan/calculation_methods.ts:94
 msgid "Diyanet İşleri Başkanlığı, Turkey"
@@ -367,7 +367,7 @@ msgstr "دیگر نشان نده"
 
 #: src/screens/settings_notifications/dont_turn_on_screen.tsx:12
 msgid "Don't show alarm screen?"
-msgstr ""
+msgstr "صفحه زنگ هشدار نشان داده نشود؟"
 
 #: src/intro/intro.tsx:99
 msgid "Done"
@@ -595,7 +595,7 @@ msgstr "اسلامی (جدولی)"
 
 #: src/screens/settings_calculation/index.tsx:128
 msgid "Jafari (Mid Sunset to Fajr)"
-msgstr ""
+msgstr "جعفری (وسط غروب تا اذان فجر)"
 
 #: src/utils/date.ts:329
 msgid "Just now"
@@ -607,7 +607,7 @@ msgstr "وزارت دین جمهوری اندونزی (KEMENAG)"
 
 #: src/adhan/calculation_methods.ts:138
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
-msgstr ""
+msgstr "Kementrian Hal Ehwal Ugama (برونئی دارالسلام)"
 
 #: src/adhan/calculation_methods.ts:70
 msgid "Kuwait"
@@ -693,11 +693,11 @@ msgstr "نیمه شب شرعی"
 
 #: src/screens/settings_calculation/index.tsx:117
 msgid "Midnight Method"
-msgstr ""
+msgstr "روش نیمه شب"
 
 #: src/adhan/calculation_methods.ts:124
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
-msgstr ""
+msgstr "وزارت امور دینی و وقف الجزایر"
 
 #: src/screens/qibla_finder/index.tsx:57
 msgid "Mobile Data"
@@ -789,7 +789,7 @@ msgstr "سیستم شماره گذاری"
 
 #: src/screens/settings_notifications/vibration_setting.tsx:27
 msgid "Off"
-msgstr ""
+msgstr "خاموش"
 
 #: src/screens/qibla_finder/index.tsx:35
 #: src/screens/qibla_finder/index.tsx:52
@@ -1048,7 +1048,7 @@ msgstr "آیا با فشار دادن دکمه صدا، برنامه باید پ
 
 #: src/screens/settings_notifications/vibration_setting.tsx:21
 msgid "Should phone vibrate when adhan or reminder starts playing?"
-msgstr ""
+msgstr "آیا هنگام شروع پخش اذان یا یادآوری، تلفن باید بلرزد؟"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:186
 msgid "Show Adhan Options"
@@ -1291,7 +1291,7 @@ msgstr "نسخه"
 
 #: src/screens/settings_notifications/vibration_setting.tsx:19
 msgid "Vibration Mode"
-msgstr ""
+msgstr "حالت ویبره"
 
 #: src/screens/settings_notifications/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
@@ -1323,7 +1323,7 @@ msgstr "عربی غربی"
 
 #: src/screens/settings_notifications/dont_turn_on_screen.tsx:16
 msgid "When enabled, the screen will remain off when adhan or reminder starts playing, and alarm screen won't be shown"
-msgstr ""
+msgstr "هنگامی که فعال باشد، با شروع پخش اذان یا یادآوری، صفحه خاموش می‌ماند و صفحه زنگ هشدار نشان داده نمی‌شود"
 
 #: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
@@ -1477,7 +1477,7 @@ msgstr "در حال پخش اذان"
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:45
 msgid "hijri.adjustment.hint"
-msgstr ""
+msgstr "تعداد روزهایی که به تقویم قمری اضافه می شود"
 
 #: src/navigation/types.ts:32
 msgid "home"

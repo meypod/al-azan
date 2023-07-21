@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-21 12:36+0330\n"
+"POT-Creation-Date: 2023-07-21 13:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,11 +236,11 @@ msgid "City/Area"
 msgstr "শহর/এলাকা"
 
 #: src/screens/settings_location/index.tsx:283
-msgid "Clear coordinates"
-msgstr "স্থানাঙ্ক পরিষ্কার করুন"
+msgid "Clear the coordinates"
+msgstr "স্থানাঙ্ক সাফ করুন"
 
 #: src/screens/settings_location/index.tsx:227
-msgid "Clear location"
+msgid "Clear the location"
 msgstr "অবস্থান পরিষ্কার করুন"
 
 #: src/screens/settings_location/index.tsx:87
@@ -1470,7 +1470,7 @@ msgstr "আযান হচ্ছে"
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:45
 msgid "hijri.adjustment.hint"
-msgstr "হিজরি ক্যালেন্ডারে যোগ করা হবে এমন দিনের সংখ্যা"
+msgstr "চন্দ্র ক্যালেন্ডারে যোগ করা দিনের সংখ্যা"
 
 #: src/navigation/types.ts:32
 msgid "home"

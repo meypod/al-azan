@@ -242,12 +242,12 @@ msgid "City/Area"
 msgstr "City/Area"
 
 #: src/screens/settings_location/index.tsx:283
-msgid "Clear coordinates"
-msgstr "Clear coordinates"
+msgid "Clear the coordinates"
+msgstr "Clear the coordinates"
 
 #: src/screens/settings_location/index.tsx:227
-msgid "Clear location"
-msgstr "Clear location"
+msgid "Clear the location"
+msgstr "Clear the location"
 
 #: src/screens/settings_location/index.tsx:87
 msgid "Clipboard data does not contain coordinates"
@@ -1491,7 +1491,7 @@ msgstr "Playing Adhan"
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:45
 msgid "hijri.adjustment.hint"
-msgstr "Number of days that will be added to the hijri calendar"
+msgstr "Number of days that will be added to the lunar calendar"
 
 #: src/navigation/types.ts:32
 msgid "home"

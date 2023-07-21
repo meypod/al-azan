@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-21 12:36+0330\n"
+"POT-Creation-Date: 2023-07-21 13:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,12 +236,12 @@ msgid "City/Area"
 msgstr "Şehir/Bölge"
 
 #: src/screens/settings_location/index.tsx:283
-msgid "Clear coordinates"
+msgid "Clear the coordinates"
 msgstr "Koordinatları temizleyin"
 
 #: src/screens/settings_location/index.tsx:227
-msgid "Clear location"
-msgstr "Net konum"
+msgid "Clear the location"
+msgstr "Konumu temizleyin"
 
 #: src/screens/settings_location/index.tsx:87
 msgid "Clipboard data does not contain coordinates"
@@ -1473,7 +1473,7 @@ msgstr "Ezanı dinle"
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:45
 msgid "hijri.adjustment.hint"
-msgstr "Hicri takvime eklenecek gün sayısı"
+msgstr "Ay takvimine eklenecek gün sayısı"
 
 #: src/navigation/types.ts:32
 msgid "home"

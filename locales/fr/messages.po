@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-21 12:36+0330\n"
+"POT-Creation-Date: 2023-07-21 13:01+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,12 +236,12 @@ msgid "City/Area"
 msgstr "Ville/Zone"
 
 #: src/screens/settings_location/index.tsx:283
-msgid "Clear coordinates"
-msgstr "Coordonnées claires"
+msgid "Clear the coordinates"
+msgstr "Effacer les coordonnées"
 
 #: src/screens/settings_location/index.tsx:227
-msgid "Clear location"
-msgstr "Emplacement clair"
+msgid "Clear the location"
+msgstr "Effacer l'emplacement"
 
 #: src/screens/settings_location/index.tsx:87
 msgid "Clipboard data does not contain coordinates"
@@ -1485,7 +1485,7 @@ msgstr "Jouer l'Adhan"
 #. shown under adjustment accordion in calculation settings
 #: src/screens/settings_calculation/adjustment_settings.tsx:45
 msgid "hijri.adjustment.hint"
-msgstr "Nombre de jours qui seront ajoutés au calendrier hijri"
+msgstr "Nombre de jours qui seront ajoutés au calendrier lunaire"
 
 #: src/navigation/types.ts:32
 msgid "home"
