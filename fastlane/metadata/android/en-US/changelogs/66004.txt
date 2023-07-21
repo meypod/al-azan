@@ -1,6 +1,6 @@
 - Added Brunei and Algeria calculation methods
 - Updated Diyanet method
 - Fixed Midnight calculation
-- Added option to select midnight calculation variant
+- Added option to select midnight calculation method
 - Added Hijri date adjustment
 - Other small improvements
