@@ -29,6 +29,8 @@ export type SetAlarmTaskOptions = {
   prayer: Prayer;
   /** Alarm type to use with alarm manager */
   alarmType: AlarmType;
+  /** if true, won't launch any activity when alarm triggers and won't light up screen */
+  keepScreenOff: boolean;
 };
 
 export async function setAlarmTask(options: SetAlarmTaskOptions) {
@@ -46,6 +48,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
     notifChannelId,
     notifId,
     alarmType,
+    keepScreenOff,
   } = options;
 
   const trigger: TimestampTrigger = {
@@ -65,18 +68,19 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       subtitle: subtitle,
       body: body,
       android: {
-        lightUpScreen: intrusive,
+        lightUpScreen: !keepScreenOff && intrusive,
         smallIcon: 'ic_stat_name',
         channelId: notifChannelId,
         category: AndroidCategory.ALARM,
         importance: AndroidImportance.HIGH,
         autoCancel: !intrusive,
-        fullScreenAction: intrusive
-          ? {
-              id: 'fullscreen',
-              launchActivity: 'com.github.meypod.al_azan.AlarmActivity',
-            }
-          : undefined,
+        fullScreenAction:
+          !keepScreenOff && intrusive
+            ? {
+                id: 'fullscreen',
+                launchActivity: 'com.github.meypod.al_azan.AlarmActivity',
+              }
+            : undefined,
         pressAction: intrusive
           ? {
               id: 'fullscreen',
