@@ -45,7 +45,7 @@ export function AdjustmentSettings({...vStackProps}: IVStackProps) {
         {t({
           id: 'hijri.adjustment.hint',
           comment: 'shown under adjustment accordion in calculation settings',
-          message: `Number of days that will be added to the hijri calendar`,
+          message: `Number of days that will be added to the lunar calendar`,
         })}
       </Text>
       <AdjustmentSetting
