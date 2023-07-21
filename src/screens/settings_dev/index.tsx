@@ -46,6 +46,7 @@ export function DevSettings(props: IScrollViewProps) {
       USE_DIFFERENT_ALARM_TYPE,
       BYPASS_DND,
       DONT_TURN_ON_SCREEN,
+      VIBRATION_MODE,
     } = settings.getState();
 
     let sound: AudioEntry | undefined = undefined;
@@ -69,6 +70,7 @@ export function DevSettings(props: IScrollViewProps) {
         ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
         : AlarmType.SET_ALARM_CLOCK,
       dontTurnOnScreen: DONT_TURN_ON_SCREEN,
+      vibrationMode: VIBRATION_MODE,
     };
 
     setAlarmTask(adhanOptions).then(() => {
