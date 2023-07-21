@@ -6,6 +6,7 @@ import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
 import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
 import {colors} from '@/theme/colors';
+import {components} from '@/theme/components';
 
 let width;
 {
@@ -39,6 +40,7 @@ const extendedTheme = extendTheme({
   config: {
     useSystemColorMode: true,
   },
+  components,
   fontSizes: {
     xxs: 10 * pixelRatio,
     xs: 12 * pixelRatio,
