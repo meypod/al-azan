@@ -56,6 +56,7 @@ export type AlarmSettingsStore = {
   SHOW_NEXT_PRAYER_TIME: boolean;
   // pre alarm notification
   DONT_NOTIFY_UPCOMING: boolean;
+  PRE_ALARM_MINUTES_BEFORE: number;
 
   setSetting: <T extends keyof AlarmSettingsStore>(
     key: T,
@@ -71,6 +72,7 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
     set => ({
       SHOW_NEXT_PRAYER_TIME: false,
       DONT_NOTIFY_UPCOMING: false,
+      PRE_ALARM_MINUTES_BEFORE: 60,
 
       // general
       setSetting: <T extends keyof AlarmSettingsStore>(
@@ -98,7 +100,7 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 1,
+      version: 2,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -109,7 +111,16 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
             });
             delete (persistedState as any)['REMINDERS'];
           case 1:
-            // this will be run when storage version is changed to 2
+            if (
+              !(persistedState as AlarmSettingsStore).PRE_ALARM_MINUTES_BEFORE
+            ) {
+              (
+                persistedState as AlarmSettingsStore
+              ).PRE_ALARM_MINUTES_BEFORE = 60;
+            }
+            break;
+          case 2:
+            // this will be run when storage version is changed to 3
             break;
         }
         /* eslint-enable no-fallthrough */

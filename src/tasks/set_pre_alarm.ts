@@ -19,13 +19,16 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
   // to replace the notification settings
   await notifee.cancelNotification(notifId).catch(console.error);
 
+  const {PRE_ALARM_MINUTES_BEFORE = 60, DONT_NOTIFY_UPCOMING} =
+    alarmSettings.getState();
+
   // We don't need a pre alarm for alarms that do not play sound.
-  if (!isIntrusive(sound) || alarmSettings.getState().DONT_NOTIFY_UPCOMING) {
+  if (!isIntrusive(sound) || DONT_NOTIFY_UPCOMING) {
     return;
   }
 
-  // fire the pre adhan 1 hour remaining to adhan
-  let triggerTs = date.getTime() - 3600 * 1000;
+  // fire the pre alarm X minutes remaining to alarm
+  let triggerTs = date.getTime() - PRE_ALARM_MINUTES_BEFORE * 60 * 1000;
   // if it goes to the past, make it 10 seconds in the future
   if (triggerTs <= Date.now()) {
     triggerTs = Date.now() + 10000;
