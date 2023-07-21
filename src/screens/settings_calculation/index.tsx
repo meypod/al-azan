@@ -86,6 +86,9 @@ export function CalculationSettings(props: IScrollViewProps) {
         {calculationMethodKey === 'UmmAlQura' && (
           <FormControl.HelperText>{t`30 minutes is added to Isha time during Ramadan in this method`}</FormControl.HelperText>
         )}
+        {calculationMethodKey === 'Turkey' && (
+          <FormControl.HelperText>{t`Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey.`}</FormControl.HelperText>
+        )}
       </FormControl>
       <CalendarSettings mb="6" />
       <Accordion mb="3" borderRadius={0}>
