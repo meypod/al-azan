@@ -2,7 +2,7 @@
 - Updated Diyanet method
 - Fixed Midnight calculation
 - Added option to select midnight calculation method
-- Added Hijri date adjustment
+- Added Hijri date adjustment option
 - Added clone button to reminders
 - Added option to keep screen off when adhan or reminder starts playing
 - Added vibration modes (Off, Once, Continuous)
