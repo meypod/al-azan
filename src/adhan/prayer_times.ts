@@ -7,6 +7,7 @@ import {
   Madhab,
   Shafaq,
   PolarCircleResolution,
+  MidnightMethod,
 } from 'adhan-extended';
 import intersection from 'lodash/intersection';
 import {CalculationMethods} from './calculation_methods';
@@ -28,6 +29,7 @@ export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
   coordinates: Coordinates;
   calcMethodKey: string;
+  midnightMethod: MidnightMethod;
 };
 
 export function isMinimumSettingsAvailable(calcState?: CalcSettingsStore) {
@@ -57,11 +59,13 @@ function getPrayerTimesOptionsFromSettings() {
   const asrCalcSetting = state.ASR_CALCULATION;
   const shafaqCalcSetting = state.SHAFAQ;
   const polarCicleResolutionSetting = state.POLAR_RESOLUTION;
+  const midnightMethod = state.MIDNIGHT_METHOD || MidnightMethod.Standard;
 
   const prayerTimeOptions: PrayerTimesOptions = {
     calculationParameters: CalculationMethods[calcMethodKey!].get(),
     coordinates: new Coordinates(lat, long),
     calcMethodKey: calcMethodKey!,
+    midnightMethod,
   };
 
   prayerTimeOptions.calculationParameters.adjustments = {
@@ -157,7 +161,10 @@ export function calculatePrayerTimes(date: Date) {
     options.calculationParameters,
   );
 
-  const sunnahTimes = new SunnahTimes(prayerTimes as any as PrayerTimes);
+  const sunnahTimes = new SunnahTimes(
+    prayerTimes as any as PrayerTimes,
+    options.midnightMethod,
+  );
   prayerTimes.midnight = sunnahTimes.middleOfTheNight;
   prayerTimes.tahajjud = sunnahTimes.lastThirdOfTheNight;
 

@@ -5,6 +5,7 @@ import {
   HighLatitudeRule,
   Madhab,
   Shafaq,
+  MidnightMethod,
 } from 'adhan-extended';
 import {
   Select,
@@ -44,6 +45,9 @@ export function CalculationSettings(props: IScrollViewProps) {
     useCalcSettings('POLAR_RESOLUTION');
 
   const [shafaqSetting, setShafaqSetting] = useCalcSettings('SHAFAQ');
+
+  const [midnightMethod, setMidnightMethod] =
+    useCalcSettings('MIDNIGHT_METHOD');
 
   const calculationMethodKeyChanged = useCallback(
     (itemValue: string) => {
@@ -109,6 +113,23 @@ export function CalculationSettings(props: IScrollViewProps) {
             <MenuIcon></MenuIcon>
           </Accordion.Summary>
           <Accordion.Details>
+            <FormControl mb="3">
+              <FormControl.Label m="0">{t`Midnight Mode`}:</FormControl.Label>
+              <Select
+                accessibilityLabel={t`Choose midnight calculation method`}
+                selectedValue={midnightMethod || MidnightMethod.Standard}
+                onValueChange={setMidnightMethod as (str: string) => void}
+                flex="1">
+                <Select.Item
+                  label={t`Default (Mid Sunset to Sunrise)`}
+                  value={MidnightMethod.Standard}
+                />
+                <Select.Item
+                  label={t`Jafari (Mid Sunset to Fajr)`}
+                  value={MidnightMethod.Jafari}
+                />
+              </Select>
+            </FormControl>
             <FormControl mb="3">
               <FormControl.Label m="0">{t`High Latitude`}:</FormControl.Label>
               <Select

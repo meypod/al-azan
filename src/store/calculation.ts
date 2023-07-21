@@ -1,4 +1,9 @@
-import {Madhab, PolarCircleResolution, Shafaq} from 'adhan-extended';
+import {
+  Madhab,
+  MidnightMethod,
+  PolarCircleResolution,
+  Shafaq,
+} from 'adhan-extended';
 import {produce} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
@@ -30,6 +35,7 @@ export type CalcSettingsStore = {
   ASR_CALCULATION: string;
   SHAFAQ: string;
   POLAR_RESOLUTION: string;
+  MIDNIGHT_METHOD: MidnightMethod;
 
   // prayer adjustment settings
   FAJR_ADJUSTMENT: number;
@@ -39,6 +45,7 @@ export type CalcSettingsStore = {
   SUNSET_ADJUSTMENT: number;
   MAGHRIB_ADJUSTMENT: number;
   ISHA_ADJUSTMENT: number;
+  // calendar
   HIJRI_DATE_ADJUSTMENT: number;
 
   setSetting: <T extends keyof CalcSettingsStore>(
@@ -60,6 +67,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       ASR_CALCULATION: Madhab.Shafi,
       SHAFAQ: Shafaq.General,
       POLAR_RESOLUTION: PolarCircleResolution.Unresolved,
+      MIDNIGHT_METHOD: MidnightMethod.Standard,
 
       FAJR_ADJUSTMENT: 0,
       SUNRISE_ADJUSTMENT: 0,
@@ -68,7 +76,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SUNSET_ADJUSTMENT: 0,
       MAGHRIB_ADJUSTMENT: 0,
       ISHA_ADJUSTMENT: 0,
-
+      // calendar
       HIJRI_DATE_ADJUSTMENT: 0,
 
       // general
