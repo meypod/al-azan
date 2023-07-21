@@ -6,4 +6,4 @@
 - Added clone button to reminders
 - Added option to keep screen off when adhan or reminder starts playing
 - Added vibration modes (Off, Once, Continuous)
-- Other small improvements
+- Other small improvements and bug fixes
