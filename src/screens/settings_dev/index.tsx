@@ -13,7 +13,7 @@ import {AudioEntry} from '@/modules/media_player';
 import {clearCache} from '@/store/adhan_calc_cache';
 import {alarmSettings} from '@/store/alarm';
 import {settings} from '@/store/settings';
-import {setAlarmTask} from '@/tasks/set_alarm';
+import {SetAlarmTaskOptions, setAlarmTask} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
 import {getUpcommingTimeDay} from '@/utils/upcoming';
 
@@ -44,6 +44,7 @@ export function DevSettings(props: IScrollViewProps) {
       SAVED_ADHAN_AUDIO_ENTRIES,
       USE_DIFFERENT_ALARM_TYPE,
       BYPASS_DND,
+      DONT_TURN_ON_SCREEN,
     } = settings.getState();
 
     let sound: AudioEntry | undefined = undefined;
@@ -54,7 +55,7 @@ export function DevSettings(props: IScrollViewProps) {
       }
     }
 
-    const adhanOptions = {
+    const adhanOptions: SetAlarmTaskOptions = {
       notifId: ADHAN_NOTIFICATION_ID, // TODO: using same notification id is troublesome when dismissing
       notifChannelId: BYPASS_DND ? ADHAN_DND_CHANNEL_ID : ADHAN_CHANNEL_ID,
       date,
@@ -66,6 +67,7 @@ export function DevSettings(props: IScrollViewProps) {
       alarmType: USE_DIFFERENT_ALARM_TYPE
         ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
         : AlarmType.SET_ALARM_CLOCK,
+      dontTurnOnScreen: DONT_TURN_ON_SCREEN,
     };
 
     setAlarmTask(adhanOptions).then(() => {

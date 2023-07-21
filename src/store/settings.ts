@@ -53,6 +53,7 @@ export type SettingsStore = {
   VOLUME_BUTTON_STOPS_ADHAN: boolean;
   PREFER_EXTERNAL_AUDIO_DEVICE: boolean;
   BYPASS_DND: boolean;
+  DONT_TURN_ON_SCREEN: boolean;
   // widget
   SHOW_WIDGET: boolean;
   SHOW_WIDGET_COUNTDOWN: boolean;
@@ -152,6 +153,7 @@ export const settings = createStore<SettingsStore>()(
       VOLUME_BUTTON_STOPS_ADHAN: false,
       PREFER_EXTERNAL_AUDIO_DEVICE: false,
       BYPASS_DND: false,
+      DONT_TURN_ON_SCREEN: false,
       //
       COUNTER_HISTORY_VISIBLE: false,
       RAMADAN_REMINDED_YEAR: '',

@@ -13,7 +13,7 @@ import {
 import {AudioEntry} from '@/modules/media_player';
 import {alarmSettings, hasAtLeastOneNotificationSetting} from '@/store/alarm';
 import {settings} from '@/store/settings';
-import {setAlarmTask} from '@/tasks/set_alarm';
+import {SetAlarmTaskOptions, setAlarmTask} from '@/tasks/set_alarm';
 import {setPreAlarmTask} from '@/tasks/set_pre_alarm';
 import {getTime} from '@/utils/date';
 import {canScheduleNotifications} from '@/utils/permission';
@@ -43,6 +43,7 @@ export async function setNextAdhan(
     SAVED_ADHAN_AUDIO_ENTRIES,
     USE_DIFFERENT_ALARM_TYPE,
     BYPASS_DND,
+    DONT_TURN_ON_SCREEN,
   } = settings.getState();
 
   const deliveredTS = DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
@@ -97,7 +98,7 @@ export async function setNextAdhan(
     }
   }
 
-  const adhanOptions = {
+  const adhanOptions: SetAlarmTaskOptions = {
     notifId: ADHAN_NOTIFICATION_ID,
     notifChannelId: BYPASS_DND ? ADHAN_DND_CHANNEL_ID : ADHAN_CHANNEL_ID,
     date,
@@ -109,6 +110,7 @@ export async function setNextAdhan(
     alarmType: USE_DIFFERENT_ALARM_TYPE
       ? AlarmType.SET_EXACT_AND_ALLOW_WHILE_IDLE
       : AlarmType.SET_ALARM_CLOCK,
+    dontTurnOnScreen: DONT_TURN_ON_SCREEN,
   };
 
   await setAlarmTask(adhanOptions);
