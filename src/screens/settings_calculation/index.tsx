@@ -68,7 +68,7 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   return (
     <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
-      <Text textAlign="justify">{t`Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method.`}</Text>
+      <Text mb="2">{t`Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method.`}</Text>
       <FormControl mb="3">
         <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
         <Select
