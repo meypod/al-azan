@@ -310,10 +310,10 @@ public class ActivityModule extends ReactContextBaseJavaModule {
         Vibrator vibrator = (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
         if (vibrationMode == 1) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
+                vibrator.vibrate(VibrationEffect.createOneShot(800, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 //deprecated in API 26
-                vibrator.vibrate(500);
+                vibrator.vibrate(800);
             }
         } else if (vibrationMode == 2) {
             long[] pattern = {0, 700, 2300, 1000, 2300, 1000, 1300, 1000, 1000};
