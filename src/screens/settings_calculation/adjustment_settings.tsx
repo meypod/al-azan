@@ -13,14 +13,14 @@ const AdjustablePrayers = [
 export function AdjustmentSettings({...vStackProps}: IVStackProps) {
   return (
     <VStack {...vStackProps}>
-      <Text textAlign="justify" fontSize="xs" mb="2">
+      <Text fontSize="xs" mb="2">
         {t({
           id: 'adjustment.hint',
           comment: 'shown under adjustment accordion in calculation settings',
           message: `Number of minutes that will be added to the calculated times`,
         })}
       </Text>
-      <HStack>
+      <HStack mb="3">
         <VStack flex="1">
           {AdjustablePrayers[0].map(prayer => (
             <AdjustmentSetting
@@ -40,6 +40,19 @@ export function AdjustmentSettings({...vStackProps}: IVStackProps) {
           ))}
         </VStack>
       </HStack>
+
+      <Text fontSize="xs" mb="2">
+        {t({
+          id: 'hijri.adjustment.hint',
+          comment: 'shown under adjustment accordion in calculation settings',
+          message: `Number of days that will be added to the hijri calendar`,
+        })}
+      </Text>
+      <AdjustmentSetting
+        flex={1}
+        settingKey={'HIJRI_DATE_ADJUSTMENT'}
+        label={''}
+      />
     </VStack>
   );
 }

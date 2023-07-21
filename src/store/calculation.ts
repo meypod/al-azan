@@ -39,6 +39,7 @@ export type CalcSettingsStore = {
   SUNSET_ADJUSTMENT: number;
   MAGHRIB_ADJUSTMENT: number;
   ISHA_ADJUSTMENT: number;
+  HIJRI_DATE_ADJUSTMENT: number;
 
   setSetting: <T extends keyof CalcSettingsStore>(
     key: T,
@@ -67,6 +68,8 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SUNSET_ADJUSTMENT: 0,
       MAGHRIB_ADJUSTMENT: 0,
       ISHA_ADJUSTMENT: 0,
+
+      HIJRI_DATE_ADJUSTMENT: 0,
 
       // general
       setSetting: <T extends keyof CalcSettingsStore>(

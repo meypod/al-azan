@@ -1,6 +1,7 @@
 import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage, t} from '@lingui/macro';
 import {Platform} from 'react-native';
+import {calcSettings} from '@/store/calculation';
 import {settings, SettingsStore} from '@/store/settings';
 
 const timeTranslations = {
@@ -36,6 +37,7 @@ export let formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
 let SELECTED_ARABIC_CALENDAR = settings.getState().SELECTED_ARABIC_CALENDAR;
 let SELECTED_SECONDARY_CALENDAR =
   settings.getState().SELECTED_SECONDARY_CALENDAR || 'gregory';
+let HIJRI_DATE_ADJUSTMENT = calcSettings.getState().HIJRI_DATE_ADJUSTMENT;
 
 settings.subscribe(state => {
   IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
@@ -44,6 +46,10 @@ settings.subscribe(state => {
   formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
   SELECTED_ARABIC_CALENDAR = state.SELECTED_ARABIC_CALENDAR;
   SELECTED_SECONDARY_CALENDAR = state.SELECTED_SECONDARY_CALENDAR;
+});
+
+calcSettings.subscribe(state => {
+  HIJRI_DATE_ADJUSTMENT = state.HIJRI_DATE_ADJUSTMENT;
 });
 
 const oneMinuteInMs = 60 * 1000;
@@ -231,6 +237,7 @@ export function getArabicMonthName(date: Date) {
 }
 
 export function getArabicDate(date: Date) {
+  const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
   const calendar = getArabicCalendarType();
 
   let numbering = '-nu-arab';
@@ -242,10 +249,11 @@ export function getArabicDate(date: Date) {
     month: 'long',
     year: 'numeric',
     weekday: 'long',
-  }).format(date);
+  }).format(adjustedDate);
 }
 
 export function getHijriYear(date: Date, formatted?: boolean) {
+  const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
   const calendar = getArabicCalendarType();
 
   let numbering = '-nu-latn';
@@ -258,10 +266,11 @@ export function getHijriYear(date: Date, formatted?: boolean) {
 
   return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
     year: 'numeric',
-  }).format(date);
+  }).format(adjustedDate);
 }
 
 export function getHijriMonth(date: Date, formatted?: boolean) {
+  const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
   const calendar = getArabicCalendarType();
 
   let numbering = '-nu-latn';
@@ -274,10 +283,11 @@ export function getHijriMonth(date: Date, formatted?: boolean) {
 
   return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
     month: 'numeric',
-  }).format(date);
+  }).format(adjustedDate);
 }
 
 export function getHijriDay(date: Date, formatted?: boolean) {
+  const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
   const calendar = getArabicCalendarType();
 
   let numbering = '-nu-latn';
@@ -289,7 +299,7 @@ export function getHijriDay(date: Date, formatted?: boolean) {
   }
   return new Intl.DateTimeFormat(`ar-u-ca-${calendar}${numbering}`, {
     day: 'numeric',
-  }).format(date);
+  }).format(adjustedDate);
 }
 
 export type DateDiff = {
