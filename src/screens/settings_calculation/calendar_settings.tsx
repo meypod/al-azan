@@ -17,10 +17,10 @@ export function CalendarSettings(props: IStackProps) {
 
   return (
     <HStack {...props}>
-      <FormControl fontSize="md">
+      <FormControl>
         <FormControl.Label>{t`Calendar`}:</FormControl.Label>
-        <FormControl.HelperText>
-          {t`The type of lunar calendar shown in main screen and widgets` + '.'}{' '}
+        <FormControl.HelperText marginBottom={1}>
+          {t`The type of lunar calendar shown in main screen and widgets` + '.'}
         </FormControl.HelperText>
         <Select
           accessibilityLabel={t`Choose calendar type`}

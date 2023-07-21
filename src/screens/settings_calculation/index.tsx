@@ -68,8 +68,8 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   return (
     <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
-      <Text mb="2">{t`Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method.`}</Text>
-      <FormControl mb="3">
+      <Text mb="5">{t`Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method.`}</Text>
+      <FormControl mb="5">
         <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
         <Select
           selectedValue={calculationMethodKey}
@@ -90,8 +90,8 @@ export function CalculationSettings(props: IScrollViewProps) {
           <FormControl.HelperText>{t`Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey.`}</FormControl.HelperText>
         )}
       </FormControl>
-      <CalendarSettings mb="6" />
-      <Accordion mb="3" borderRadius={0}>
+      <CalendarSettings mb="7" />
+      <Accordion mb="5" borderRadius={0}>
         <Accordion.Item>
           <Accordion.Summary>
             {t`Adjustments`}
