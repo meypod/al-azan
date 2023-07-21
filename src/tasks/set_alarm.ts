@@ -37,6 +37,10 @@ export type SetAlarmTaskOptions = {
   readonly intrusive?: boolean;
 };
 
+type Mutable<T> = {
+  -readonly [k in keyof T]: T[k];
+};
+
 export async function setAlarmTask(options: SetAlarmTaskOptions) {
   /**
    *  general note: we don't check options because we are on typescript and we are not a library,
@@ -64,7 +68,7 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
   };
 
   const intrusive = isIntrusive(sound);
-  (options as any).isIntrusive = intrusive;
+  (options as Mutable<SetAlarmTaskOptions>).intrusive = intrusive;
   const silent = isSilent(sound);
   await notifee.createTriggerNotification(
     {
