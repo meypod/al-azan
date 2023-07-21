@@ -4,7 +4,12 @@ import notifee, {
   AndroidImportance,
   Notification,
 } from '@notifee/react-native';
-import {isDndActive, vibrate, vibrateStop} from './modules/activity';
+import {
+  VibrationMode,
+  isDndActive,
+  vibrate,
+  vibrateStop,
+} from './modules/activity';
 import {isIntrusive, isSilent} from './modules/media_player';
 import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
@@ -332,8 +337,12 @@ export function setupNotifeeHandlers() {
     ) {
       const options = getAlarmOptions(notification);
 
-      if (options?.vibrationMode && options.intrusive) {
-        await vibrate(options.vibrationMode).catch(console.error);
+      if (options?.vibrationMode) {
+        if (options.intrusive) {
+          await vibrate(options.vibrationMode).catch(console.error);
+        } else {
+          await vibrate(VibrationMode.ONCE).catch(console.error);
+        }
       }
 
       if (!isSilent(options?.sound)) {
