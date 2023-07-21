@@ -114,7 +114,7 @@ export function CalculationSettings(props: IScrollViewProps) {
           </Accordion.Summary>
           <Accordion.Details>
             <FormControl mb="3">
-              <FormControl.Label m="0">{t`Midnight Mode`}:</FormControl.Label>
+              <FormControl.Label m="0">{t`Midnight Method`}:</FormControl.Label>
               <Select
                 accessibilityLabel={t`Choose midnight calculation method`}
                 selectedValue={midnightMethod || MidnightMethod.Standard}
