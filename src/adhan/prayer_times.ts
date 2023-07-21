@@ -59,7 +59,7 @@ function getPrayerTimesOptionsFromSettings() {
   const asrCalcSetting = state.ASR_CALCULATION;
   const shafaqCalcSetting = state.SHAFAQ;
   const polarCicleResolutionSetting = state.POLAR_RESOLUTION;
-  const midnightMethod = state.MIDNIGHT_METHOD || MidnightMethod.Standard;
+  const midnightMethod = state.MIDNIGHT_METHOD;
 
   const prayerTimeOptions: PrayerTimesOptions = {
     calculationParameters: CalculationMethods[calcMethodKey!].get(),

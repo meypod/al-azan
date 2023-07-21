@@ -105,7 +105,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 3,
+      version: 4,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -138,6 +138,13 @@ export const calcSettings = createStore<CalcSettingsStore>()(
               'UmmAlQura'
             ) {
               clearCache();
+            }
+            break;
+          case 3:
+            // a cache reset force for Radaman fix for Umm al-Qura University method
+            if (!(persistedState as CalcSettingsStore).MIDNIGHT_METHOD) {
+              (persistedState as CalcSettingsStore).MIDNIGHT_METHOD =
+                MidnightMethod.Standard;
             }
             break;
         }
