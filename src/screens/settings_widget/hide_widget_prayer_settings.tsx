@@ -57,7 +57,7 @@ export function HideWidgetPrayerSettings(props: IStackProps) {
       mb="3"
       {...props}>
       <FormControl.Label>{t`Hide Prayer Times`}:</FormControl.Label>
-      <Text textAlign="justify">{t`You can hide prayer times you don't want to see in the widget here:`}</Text>
+      <Text>{t`You can hide prayer times you don't want to see in the widget here:`}</Text>
       <HStack p="2">
         <Text width="1/2" textAlign="left">{t`Time`}</Text>
         <Text width="1/2" textAlign="center">{t`Hidden?`}</Text>
