@@ -378,7 +378,3 @@ export async function updatePermanentNotifWidget(options: updateWidgetOptions) {
 export function cancelPermanentNotifWidget() {
   return notifee.cancelDisplayedNotification(WIDGET_NOTIFICATION_ID);
 }
-
-export function deleteChannel(channelId: string) {
-  return notifee.deleteChannel(channelId);
-}

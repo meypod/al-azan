@@ -1,3 +1,4 @@
+import notifee from '@notifee/react-native';
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
@@ -17,7 +18,6 @@ import {
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
 import {VibrationMode} from '@/modules/activity';
 import type {AudioEntry} from '@/modules/media_player';
-import {deleteChannel} from '@/notifee';
 import {CountryInfo, CityInfo} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
@@ -388,7 +388,7 @@ export const settings = createStore<SettingsStore>()(
               'adhan-dnd-channel',
               'reminder-channel',
               'reminder-dnd-channel',
-            ].map(deleteChannel);
+            ].map(notifee.deleteChannel);
             if (
               typeof (persistedState as SettingsStore).VIBRATION_MODE ===
               'undefined'
