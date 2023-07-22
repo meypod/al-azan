@@ -6,6 +6,7 @@ import {
   Madhab,
   Shafaq,
   MidnightMethod,
+  CalculationParameters,
 } from 'adhan-extended';
 import {
   Select,
@@ -14,9 +15,11 @@ import {
   ScrollView,
   IScrollViewProps,
   Text,
+  HStack,
+  VStack,
 } from 'native-base';
 
-import {useCallback} from 'react';
+import {useCallback, useMemo} from 'react';
 import {CalendarSettings} from './calendar_settings';
 import {CalculationMethods} from '@/adhan';
 import {MenuIcon} from '@/assets/icons/material_icons/menu';
@@ -70,6 +73,14 @@ export function CalculationSettings(props: IScrollViewProps) {
     ],
   );
 
+  const calculationParameters = useMemo(() => {
+    if (calculationMethodKey) {
+      return CalculationMethods[calculationMethodKey].get();
+    } else {
+      return new CalculationParameters('Other', 0, 0);
+    }
+  }, [calculationMethodKey]);
+
   return (
     <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
       <Text mb="5">{t`Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method.`}</Text>
@@ -93,6 +104,58 @@ export function CalculationSettings(props: IScrollViewProps) {
         {calculationMethodKey === 'Turkey' && (
           <FormControl.HelperText>{t`Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey.`}</FormControl.HelperText>
         )}
+        <HStack
+          flex={1}
+          borderWidth={1}
+          borderRadius={5}
+          mt="1"
+          py="1"
+          borderColor={'gray.300'}>
+          <VStack flex={1}>
+            <Text fontSize="xs" textAlign="center" mb="1">
+              {t`Fajr Angle`}
+            </Text>
+            <Text
+              fontSize="sm"
+              textAlign="center"
+              textDecorationLine="underline">
+              {calculationParameters.fajrAngle}
+            </Text>
+          </VStack>
+          <VStack flex={1}>
+            <Text fontSize="xs" textAlign="center" mb="1">
+              {t`Isha Angle`}
+            </Text>
+            <Text
+              fontSize="sm"
+              textAlign="center"
+              textDecorationLine="underline">
+              {calculationParameters.ishaAngle}
+            </Text>
+          </VStack>
+          <VStack flex={1}>
+            <Text fontSize="xs" textAlign="center" mb="1">
+              {t`Isha Interval`}
+            </Text>
+            <Text
+              fontSize="sm"
+              textAlign="center"
+              textDecorationLine="underline">
+              {calculationParameters.ishaInterval}
+            </Text>
+          </VStack>
+          <VStack flex={1}>
+            <Text fontSize="xs" textAlign="center" mb="1">
+              {t`Maghrib Angle`}
+            </Text>
+            <Text
+              fontSize="sm"
+              textAlign="center"
+              textDecorationLine="underline">
+              {calculationParameters.maghribAngle}
+            </Text>
+          </VStack>
+        </HStack>
       </FormControl>
       <CalendarSettings mb="7" />
       <Accordion mb="5" borderRadius={0}>

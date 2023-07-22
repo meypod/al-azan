@@ -13,30 +13,36 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "10 min"
 msgstr "10 min"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "15 min"
 msgstr "15 min"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 msgid "30 min"
 msgstr "30 min"
 
-#: src/screens/settings_calculation/index.tsx:91
+#: src/screens/settings_calculation/index.tsx:102
 msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 minutes is added to Isha time during Ramadan in this method"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
 msgstr "5 min"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "60 min"
 msgstr "60 min"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 min"
@@ -45,7 +51,7 @@ msgstr "90 min"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Adhan"
 
-#: src/screens/settings_calculation/index.tsx:212
+#: src/screens/settings_calculation/index.tsx:275
 msgid "Abyad"
 msgstr "Abyad"
 
@@ -89,7 +95,7 @@ msgstr "Adhan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Adhan audio file is not downloaded yet"
 
-#: src/screens/settings_calculation/index.tsx:101
+#: src/screens/settings_calculation/index.tsx:164
 msgid "Adjustments"
 msgstr "Adjustments"
 
@@ -98,11 +104,11 @@ msgstr "Adjustments"
 msgid "Advanced"
 msgstr "Advanced"
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:175
 msgid "Advanced Calculation Settings"
 msgstr "Advanced Calculation Settings"
 
-#: src/screens/settings_calculation/index.tsx:211
+#: src/screens/settings_calculation/index.tsx:274
 msgid "Ahmer"
 msgstr "Ahmer"
 
@@ -154,7 +160,7 @@ msgstr "Are you sure you want to delete \"{itemName}\" ?"
 msgid "Are you sure you want to delete this?"
 msgstr "Are you sure you want to delete this?"
 
-#: src/screens/settings_calculation/index.tsx:156
+#: src/screens/settings_calculation/index.tsx:219
 msgid "Asr Calculation"
 msgstr "Asr Calculation"
 
@@ -174,7 +180,7 @@ msgstr "Attention"
 msgid "Bypass \"Do Not Disturb\"?"
 msgstr "Bypass \"Do Not Disturb\"?"
 
-#: src/screens/settings_calculation/index.tsx:75
+#: src/screens/settings_calculation/index.tsx:86
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 
@@ -182,7 +188,7 @@ msgstr "Calculating Adhan has many different methods. Each method provides diffe
 msgid "Calculation"
 msgstr "Calculation"
 
-#: src/screens/settings_calculation/index.tsx:77
+#: src/screens/settings_calculation/index.tsx:88
 msgid "Calculation Method"
 msgstr "Calculation Method"
 
@@ -198,16 +204,16 @@ msgstr "Calendar"
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/screens/settings_calculation/index.tsx:158
+#: src/screens/settings_calculation/index.tsx:221
 msgid "Choose Asr Calculation Madhab"
 msgstr "Choose Asr Calculation Madhab"
 
-#: src/screens/settings_calculation/index.tsx:80
+#: src/screens/settings_calculation/index.tsx:91
 #: src/screens/settings_notifications/vibration_setting.tsx:25
 msgid "Choose Calculation Method"
 msgstr "Choose Calculation Method"
 
-#: src/screens/settings_calculation/index.tsx:136
+#: src/screens/settings_calculation/index.tsx:199
 msgid "Choose High Latitude Setting"
 msgstr "Choose High Latitude Setting"
 
@@ -215,11 +221,11 @@ msgstr "Choose High Latitude Setting"
 msgid "Choose Language"
 msgstr "Choose Language"
 
-#: src/screens/settings_calculation/index.tsx:174
+#: src/screens/settings_calculation/index.tsx:237
 msgid "Choose Polar Resolution"
 msgstr "Choose Polar Resolution"
 
-#: src/screens/settings_calculation/index.tsx:203
+#: src/screens/settings_calculation/index.tsx:266
 msgid "Choose Shafaq method"
 msgstr "Choose Shafaq method"
 
@@ -228,7 +234,7 @@ msgstr "Choose Shafaq method"
 msgid "Choose calendar type"
 msgstr "Choose calendar type"
 
-#: src/screens/settings_calculation/index.tsx:119
+#: src/screens/settings_calculation/index.tsx:182
 msgid "Choose midnight calculation method"
 msgstr "Choose midnight calculation method"
 
@@ -253,11 +259,11 @@ msgstr "Clear the location"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
 
-#: src/screens/settings_calculation/index.tsx:185
+#: src/screens/settings_calculation/index.tsx:248
 msgid "Closest City"
 msgstr "Closest City"
 
-#: src/screens/settings_calculation/index.tsx:189
+#: src/screens/settings_calculation/index.tsx:252
 msgid "Closest Date"
 msgstr "Closest Date"
 
@@ -299,6 +305,10 @@ msgstr "Country"
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "Custom sounds and muezzins will not be exported"
 
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:26
+msgid "Custom upcoming alarm time"
+msgstr "Custom upcoming alarm time"
+
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "Dark"
@@ -311,7 +321,7 @@ msgstr "Dark"
 msgid "Default"
 msgstr "Default"
 
-#: src/screens/settings_calculation/index.tsx:124
+#: src/screens/settings_calculation/index.tsx:187
 msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Default (Mid Sunset to Sunrise)"
 
@@ -347,7 +357,7 @@ msgstr "Disclaimer"
 msgid "Dismiss"
 msgstr "Dismiss"
 
-#: src/screens/settings_calculation/index.tsx:94
+#: src/screens/settings_calculation/index.tsx:105
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 
@@ -436,6 +446,10 @@ msgstr "Export app data"
 msgid "Export data"
 msgstr "Export data"
 
+#: src/screens/settings_calculation/index.tsx:116
+msgid "Fajr Angle"
+msgstr "Fajr Angle"
+
 #: src/screens/settings_location/index.tsx:170
 msgid "Find My Location"
 msgstr "Find My Location"
@@ -450,7 +464,7 @@ msgstr "Fix Common Problems"
 msgid "Friday"
 msgstr "Friday"
 
-#: src/screens/settings_calculation/index.tsx:208
+#: src/screens/settings_calculation/index.tsx:271
 msgid "General (default)"
 msgstr "General (default)"
 
@@ -472,7 +486,7 @@ msgstr "Gregorian"
 msgid "Gulf region"
 msgstr "Gulf region"
 
-#: src/screens/settings_calculation/index.tsx:166
+#: src/screens/settings_calculation/index.tsx:229
 msgid "Hanafi"
 msgstr "Hanafi"
 
@@ -495,7 +509,7 @@ msgstr "Hide times you don't need"
 msgid "High"
 msgstr "High"
 
-#: src/screens/settings_calculation/index.tsx:134
+#: src/screens/settings_calculation/index.tsx:197
 msgid "High Latitude"
 msgstr "High Latitude"
 
@@ -579,6 +593,14 @@ msgstr "Internet connection is necessary for qibla map to work. Please enable yo
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 msgstr "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 
+#: src/screens/settings_calculation/index.tsx:127
+msgid "Isha Angle"
+msgstr "Isha Angle"
+
+#: src/screens/settings_calculation/index.tsx:138
+msgid "Isha Interval"
+msgstr "Isha Interval"
+
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
 msgstr "Islamic"
@@ -599,7 +621,7 @@ msgstr "Islamic (civil)"
 msgid "Islamic (tabular)"
 msgstr "Islamic (tabular)"
 
-#: src/screens/settings_calculation/index.tsx:128
+#: src/screens/settings_calculation/index.tsx:191
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "Jafari (Mid Sunset to Fajr)"
 
@@ -680,6 +702,10 @@ msgstr "Longitude is invalid"
 msgid "Low"
 msgstr "Low"
 
+#: src/screens/settings_calculation/index.tsx:149
+msgid "Maghrib Angle"
+msgstr "Maghrib Angle"
+
 #: fastlane/update/update.ts:55
 #: website/src/_includes/home.tsx:92
 msgid "Many options for Adhan (اذان) calculation"
@@ -689,11 +715,11 @@ msgstr "Many options for Adhan (اذان) calculation"
 msgid "Medium"
 msgstr "Medium"
 
-#: src/screens/settings_calculation/index.tsx:142
+#: src/screens/settings_calculation/index.tsx:205
 msgid "Middle of the Night"
 msgstr "Middle of the Night"
 
-#: src/screens/settings_calculation/index.tsx:117
+#: src/screens/settings_calculation/index.tsx:180
 msgid "Midnight Method"
 msgstr "Midnight Method"
 
@@ -733,13 +759,13 @@ msgid "New Reminder"
 msgstr "New Reminder"
 
 #: src/intro/intro.tsx:98
-#: src/screens/settings_dev/index.tsx:37
-#: src/tasks/set_next_adhan.ts:86
-#: src/tasks/set_next_adhan.ts:128
+#: src/screens/settings_dev/index.tsx:38
+#: src/tasks/set_next_adhan.ts:85
+#: src/tasks/set_next_adhan.ts:127
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:174
+#: src/screens/home/index.tsx:175
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -757,7 +783,7 @@ msgstr "No Data"
 msgid "No Results"
 msgstr "No Results"
 
-#: src/screens/settings_calculation/index.tsx:140
+#: src/screens/settings_calculation/index.tsx:203
 msgid "None (Automatic)"
 msgstr "None (Automatic)"
 
@@ -810,7 +836,7 @@ msgstr "On Android 12 and newer, the app also needs alarms permission to work pr
 msgid "Once"
 msgstr "Once"
 
-#: src/screens/settings_calculation/index.tsx:146
+#: src/screens/settings_calculation/index.tsx:209
 msgid "One-Seventh of the Night"
 msgstr "One-Seventh of the Night"
 
@@ -873,7 +899,7 @@ msgstr "Please enable location service"
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 
-#: src/screens/settings_calculation/index.tsx:171
+#: src/screens/settings_calculation/index.tsx:234
 msgid "Polar Resolution"
 msgstr "Polar Resolution"
 
@@ -885,7 +911,7 @@ msgstr "Power Manager"
 msgid "Prayer Times"
 msgstr "Prayer Times"
 
-#: src/screens/home/index.tsx:145
+#: src/screens/home/index.tsx:146
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -955,8 +981,8 @@ msgid "Remind me next year"
 msgstr "Remind me next year"
 
 #: src/screens/fullscreen_alarm/index.tsx:71
-#: src/tasks/set_reminder.ts:88
-#: src/tasks/set_reminder.ts:121
+#: src/tasks/set_reminder.ts:90
+#: src/tasks/set_reminder.ts:123
 msgid "Reminder"
 msgstr "Reminder"
 
@@ -1017,11 +1043,11 @@ msgstr "Set custom Adhan audio"
 msgid "Set reminders before or after a prayer time"
 msgstr "Set reminders before or after a prayer time"
 
-#: src/screens/settings_calculation/index.tsx:195
+#: src/screens/settings_calculation/index.tsx:258
 msgid "Shafaq"
 msgstr "Shafaq"
 
-#: src/screens/settings_calculation/index.tsx:197
+#: src/screens/settings_calculation/index.tsx:260
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
@@ -1031,7 +1057,7 @@ msgstr ""
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 
-#: src/screens/settings_calculation/index.tsx:163
+#: src/screens/settings_calculation/index.tsx:226
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Shafi, Maliki, Hanbali (Default)"
 
@@ -1063,7 +1089,7 @@ msgstr "Should phone vibrate when adhan or reminder starts playing?"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:168
+#: src/screens/home/index.tsx:169
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -1146,7 +1172,7 @@ msgstr "Sunday"
 msgid "System Default"
 msgstr "System Default"
 
-#: src/screens/settings_notifications/index.tsx:66
+#: src/screens/settings_notifications/index.tsx:67
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Tahajjud time mentioned in the app is the last third of the night"
 
@@ -1221,7 +1247,7 @@ msgstr "Tomorrow"
 msgid "Tuesday"
 msgstr "Tuesday"
 
-#: src/screens/settings_calculation/index.tsx:150
+#: src/screens/settings_calculation/index.tsx:213
 msgid "Twilight Angle"
 msgstr "Twilight Angle"
 
@@ -1245,7 +1271,7 @@ msgstr "Unknown Error"
 msgid "Unreliable"
 msgstr "Unreliable"
 
-#: src/screens/settings_calculation/index.tsx:181
+#: src/screens/settings_calculation/index.tsx:244
 msgid "Unresolved (default)"
 msgstr "Unresolved (default)"
 
@@ -1359,6 +1385,10 @@ msgstr "You can access your device Power Manager using the button below."
 #: src/screens/settings_location/index.tsx:298
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
+
+#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:41
+msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
+msgstr "You can change when the upcoming alarm notification is sent before adhan or reminder"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
