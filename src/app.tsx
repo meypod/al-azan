@@ -56,29 +56,29 @@ const TranslatedHeaderTitle = memo(function TranslatedHeaderTitle({
   }
 });
 
-const QiblaFinderHeaderRight = memo(function QiblaFinderHeaderRight() {
+const QiblaFinderHeaderRight = function QiblaFinderHeaderRight() {
   return (
     <HStack>
       <OrientationLock p="2" mr="-2" size="xl"></OrientationLock>
     </HStack>
   );
-});
+};
 
-const QadaCounterHeaderRight = memo(function QadaCounterHeaderRight() {
+const QadaCounterHeaderRight = function QadaCounterHeaderRight() {
   return (
     <HStack>
       <QadaHistoryToggle p="2" mr="-2" size="xl"></QadaHistoryToggle>
     </HStack>
   );
-});
+};
 
-const SettingsAdhanHeaderRight = memo(function SettingsAdhanHeaderRight() {
+const SettingsAdhanHeaderRight = function SettingsAdhanHeaderRight() {
   return (
     <HStack>
       <AdvancedCustomAdhanToggle fontSize="sm"></AdvancedCustomAdhanToggle>
     </HStack>
   );
-});
+};
 
 export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
   const [appIntroDone] = useSettings('APP_INTRO_DONE');
