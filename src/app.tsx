@@ -122,7 +122,8 @@ export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
         screenOptions={{
           headerTitle: TranslatedHeaderTitle,
           animation: 'fade',
-        }}>
+        }}
+        initialRouteName="Home">
         <Stack.Group screenOptions={{headerShown: false}}>
           <Stack.Screen
             name="Home"
