@@ -33,4 +33,14 @@ export const components: Theme['components'] | (Record<string, any> & {}) = {
       marginBottom: 0.5,
     },
   },
+  Input: {
+    variants: {
+      outline: {
+        placeholderTextColor: '#939393',
+        _dark: {
+          placeholderTextColor: '#b9b9b9',
+        },
+      },
+    },
+  },
 };

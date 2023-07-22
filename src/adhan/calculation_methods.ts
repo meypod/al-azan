@@ -1,10 +1,12 @@
 import {t} from '@lingui/macro';
 import {CalculationMethod, CalculationParameters} from 'adhan-extended';
 
-type CalculationMethodEntry = {
+export type CalculationMethodEntry = {
   label: string;
   info: string;
   get: () => CalculationParameters;
+  /** this is used by some other code internally */
+  key?: string;
 };
 
 export const CalculationMethods: Record<string, CalculationMethodEntry> = {

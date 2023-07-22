@@ -23,6 +23,7 @@ export const AutocompleteInput = <T extends unknown>(
   props: AutocompleteInputProps<T>,
 ) => {
   const {
+    data: propData,
     getData,
     label,
     autoCompleteKeys,
@@ -32,6 +33,7 @@ export const AutocompleteInput = <T extends unknown>(
     onChangeText: onChangeTextProp,
     actionsheetLabel,
     selectedItem,
+    placeholder,
     showError,
     errorMessage,
     useReturnedMatch,
@@ -39,8 +41,8 @@ export const AutocompleteInput = <T extends unknown>(
     ...inputProps
   } = props;
   const {isOpen, onOpen, onClose} = useDisclose();
-  const [data, setData] = useState<T[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<T[]>(propData || []);
+  const [loading, setLoading] = useState(!propData);
   const unmounted = useRef(false);
 
   useEffect(() => {
@@ -51,7 +53,8 @@ export const AutocompleteInput = <T extends unknown>(
   }, []);
 
   useEffect(() => {
-    if (isOpen) {
+    if (propData) return;
+    if (isOpen && getData) {
       setLoading(true);
       getData()
         .then(setData)
@@ -65,7 +68,7 @@ export const AutocompleteInput = <T extends unknown>(
       setData([]);
       setLoading(false);
     }
-  }, [getData, isOpen]);
+  }, [getData, isOpen, propData]);
 
   const [inputVal, setInputVal] = useState<string>('');
 
@@ -144,7 +147,7 @@ export const AutocompleteInput = <T extends unknown>(
           contextMenuHidden: true,
         }}
         value={textValue}
-        variant={selectedItem ? 'underlined' : undefined}
+        placeholder={placeholder}
         {...inputProps}
       />
       <Actionsheet isOpen={isOpen} onClose={onClose}>
@@ -249,7 +252,6 @@ const defaultGetOptionLabel = (label: string) => (option: any) => {
 };
 
 type AutocompleteInputProps<T> = IInputProps & {
-  getData: () => Promise<Array<T>>;
   label?: string;
   showError?: boolean;
   errorMessage?: string;
@@ -262,6 +264,15 @@ type AutocompleteInputProps<T> = IInputProps & {
   onItemSelected?: (item: T) => void;
   onChangeText?: (text: string) => void;
   useReturnedMatch?: boolean;
-};
+} & (
+    | {
+        getData: () => Promise<Array<T>>;
+        data?: never;
+      }
+    | {
+        data: Array<T>;
+        getData?: never;
+      }
+  );
 
 export default AutocompleteInput;

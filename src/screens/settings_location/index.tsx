@@ -194,8 +194,9 @@ export function LocationSettings(props: IScrollViewProps) {
               autoCompleteKeys={['names']}
               selectedItem={selectedCountry}
               useReturnedMatch={true}
+              placeholder={t`Press to search`}
               size="sm"
-              px="1"
+              px="2"
               errorMessage={t`Error in loading countries`}
             />
           </FormControl>
@@ -212,8 +213,9 @@ export function LocationSettings(props: IScrollViewProps) {
                 autoCompleteKeys={['names']}
                 useReturnedMatch={true}
                 selectedItem={selectedCity}
+                placeholder={t`Press to search`}
                 size="sm"
-                px="1"
+                px="2"
               />
               <FormControl.ErrorMessage
                 leftIcon={<WarningOutlineIcon size="xs" />}>
@@ -223,15 +225,15 @@ export function LocationSettings(props: IScrollViewProps) {
           )}
 
           {(selectedCountry || selectedCity) && (
-            <FormControl ml="3" justifyContent="center">
+            <FormControl ml="2" justifyContent="center">
               <FormControl.Label> </FormControl.Label>
               <Button
+                flex={1}
                 accessibilityLabel={t`Clear the location`}
                 borderColor="danger.900"
                 variant="outline"
                 colorScheme="danger"
                 width="10"
-                height="10"
                 onPress={clearCountryAndCity}>
                 <CloseIcon />
               </Button>

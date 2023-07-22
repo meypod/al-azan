@@ -1,4 +1,3 @@
-import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
 import {
   PolarCircleResolution,
@@ -22,7 +21,9 @@ import {
 import {useCallback, useMemo} from 'react';
 import {CalendarSettings} from './calendar_settings';
 import {CalculationMethods} from '@/adhan';
+import {CalculationMethodEntry} from '@/adhan/calculation_methods';
 import {MenuIcon} from '@/assets/icons/material_icons/menu';
+import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {SafeArea} from '@/components/safe_area';
 import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
 import {useCalcSettings} from '@/store/calculation';
@@ -53,9 +54,9 @@ export function CalculationSettings(props: IScrollViewProps) {
   const [midnightMethod, setMidnightMethod] =
     useCalcSettings('MIDNIGHT_METHOD');
 
-  const calculationMethodKeyChanged = useCallback(
-    (itemValue: string) => {
-      setCalculationMethodKey(itemValue);
+  const calculationMethodChanged = useCallback(
+    (itemValue: CalculationMethodEntry) => {
+      setCalculationMethodKey(itemValue.key);
       setFajrAdjustment(0);
       setSunriseAdjustment(0);
       setDhuhrAdjustment(0);
@@ -82,24 +83,46 @@ export function CalculationSettings(props: IScrollViewProps) {
     }
   }, [calculationMethodKey]);
 
+  const selectedMethod = useMemo(
+    () =>
+      calculationMethodKey
+        ? CalculationMethods[calculationMethodKey]
+        : undefined,
+    [calculationMethodKey],
+  );
+
+  const calcMethods = useMemo(
+    () =>
+      Object.keys(CalculationMethods).map(key => {
+        const method =
+          CalculationMethods[key as keyof typeof CalculationMethods];
+        method.key = key;
+        return method;
+      }),
+    [],
+  );
+
   return (
     <SafeArea>
-      <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
+      <ScrollView
+        p="4"
+        _contentContainerStyle={{paddingBottom: 20}}
+        keyboardShouldPersistTaps="handled"
+        {...props}>
         <Text mb="5">{t`Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method.`}</Text>
         <FormControl mb="5">
           <FormControl.Label m="0">{t`Calculation Method`}:</FormControl.Label>
-          <Select
-            selectedValue={calculationMethodKey}
+          <AutocompleteInput<CalculationMethodEntry>
+            actionsheetLabel={t`Calculation Method`}
             accessibilityLabel={t`Choose Calculation Method`}
-            onValueChange={calculationMethodKeyChanged}>
-            {Object.keys(CalculationMethods).map(key => (
-              <Select.Item
-                label={i18n._((CalculationMethods as any)[key].label)}
-                value={key}
-                key={key}
-              />
-            ))}
-          </Select>
+            data={calcMethods}
+            onItemSelected={calculationMethodChanged}
+            autoCompleteKeys={['label']}
+            getOptionLabel={item => item.label}
+            selectedItem={selectedMethod}
+            placeholder={t`Press to select a method`}
+            errorMessage={t`Error in loading countries`}
+          />
           {calculationMethodKey === 'UmmAlQura' && (
             <FormControl.HelperText>{t`30 minutes is added to Isha time during Ramadan in this method`}</FormControl.HelperText>
           )}
