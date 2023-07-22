@@ -45,6 +45,7 @@ export type CalcSettingsStore = {
   SUNSET_ADJUSTMENT: number;
   MAGHRIB_ADJUSTMENT: number;
   ISHA_ADJUSTMENT: number;
+  MIDNIGHT_ADJUSTMENT: number;
   // calendar
   HIJRI_DATE_ADJUSTMENT: number;
 
@@ -76,6 +77,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SUNSET_ADJUSTMENT: 0,
       MAGHRIB_ADJUSTMENT: 0,
       ISHA_ADJUSTMENT: 0,
+      MIDNIGHT_ADJUSTMENT: 0,
       // calendar
       HIJRI_DATE_ADJUSTMENT: 0,
 
@@ -105,7 +107,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 4,
+      version: 5,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -145,6 +147,20 @@ export const calcSettings = createStore<CalcSettingsStore>()(
             if (!(persistedState as CalcSettingsStore).MIDNIGHT_METHOD) {
               (persistedState as CalcSettingsStore).MIDNIGHT_METHOD =
                 MidnightMethod.Standard;
+            }
+            break;
+          case 4:
+            if (
+              typeof (persistedState as CalcSettingsStore)
+                .MIDNIGHT_ADJUSTMENT === 'undefined'
+            ) {
+              (persistedState as CalcSettingsStore).MIDNIGHT_ADJUSTMENT = 0;
+            }
+            if (
+              typeof (persistedState as CalcSettingsStore)
+                .HIJRI_DATE_ADJUSTMENT === 'undefined'
+            ) {
+              (persistedState as CalcSettingsStore).HIJRI_DATE_ADJUSTMENT = 0;
             }
             break;
         }

@@ -7,7 +7,7 @@ import {AdjustmentSetting} from '@/screens/settings_calculation/adjustment_setti
 
 const AdjustablePrayers = [
   [Prayer.Fajr, Prayer.Sunrise, Prayer.Dhuhr, Prayer.Asr],
-  [Prayer.Sunset, Prayer.Maghrib, Prayer.Isha],
+  [Prayer.Sunset, Prayer.Maghrib, Prayer.Isha, Prayer.Midnight],
 ];
 
 export function AdjustmentSettings({...vStackProps}: IVStackProps) {

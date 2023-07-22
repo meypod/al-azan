@@ -30,6 +30,8 @@ export type PrayerTimesOptions = {
   coordinates: Coordinates;
   calcMethodKey: string;
   midnightMethod: MidnightMethod;
+  /** in minutes */
+  midnightAdjustment: number;
 };
 
 export function isMinimumSettingsAvailable(calcState?: CalcSettingsStore) {
@@ -60,12 +62,14 @@ function getPrayerTimesOptionsFromSettings() {
   const shafaqCalcSetting = state.SHAFAQ;
   const polarCicleResolutionSetting = state.POLAR_RESOLUTION;
   const midnightMethod = state.MIDNIGHT_METHOD;
+  const midnightAdjustment = state.MIDNIGHT_ADJUSTMENT;
 
   const prayerTimeOptions: PrayerTimesOptions = {
     calculationParameters: CalculationMethods[calcMethodKey!].get(),
     coordinates: new Coordinates(lat, long),
     calcMethodKey: calcMethodKey!,
     midnightMethod,
+    midnightAdjustment,
   };
 
   prayerTimeOptions.calculationParameters.adjustments = {
@@ -165,7 +169,10 @@ export function calculatePrayerTimes(date: Date) {
     prayerTimes as any as PrayerTimes,
     options.midnightMethod,
   );
-  prayerTimes.midnight = sunnahTimes.middleOfTheNight;
+  prayerTimes.midnight = new Date(
+    sunnahTimes.middleOfTheNight.getTime() +
+      options.midnightAdjustment * 60 * 1000,
+  );
   prayerTimes.tahajjud = sunnahTimes.lastThirdOfTheNight;
 
   // post fix for turkey
