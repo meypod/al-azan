@@ -3,7 +3,7 @@ import {defineMessage} from '@lingui/macro';
 
 import keys from 'lodash/keys';
 import {Stack, FormControl, IStackProps} from 'native-base';
-import {useCallback, useState} from 'react';
+import {memo, useCallback, useState} from 'react';
 import {WeekDayButton} from '@/components/week_day_button';
 import {WeekDayIndex, WeekDayName, WeekDays} from '@/utils/date';
 
@@ -33,7 +33,7 @@ export const WeekDaysInOrder = {
 
 export type SelectorValue = Partial<Record<WeekDayIndex, boolean>> | boolean;
 
-export function WeekDaySelector(
+export const WeekDaySelector = memo(function WeekDaySelector(
   props: IStackProps & {
     value?: SelectorValue;
     onChanged?: (weekDays: SelectorValue) => void;
@@ -108,4 +108,4 @@ export function WeekDaySelector(
       </Stack>
     </FormControl>
   );
-}
+});

@@ -1,7 +1,10 @@
 import {Button, IButtonProps} from 'native-base';
 import {memo} from 'react';
 
-function ToggleButton({active, ...props}: IButtonProps & {active: boolean}) {
+export const ToggleButton = memo(function ToggleButton({
+  active,
+  ...props
+}: IButtonProps & {active: boolean}) {
   return (
     <Button
       {...props}
@@ -21,6 +24,4 @@ function ToggleButton({active, ...props}: IButtonProps & {active: boolean}) {
       {props.children}
     </Button>
   );
-}
-
-export default memo(ToggleButton);
+});

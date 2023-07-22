@@ -1,7 +1,7 @@
 import {t} from '@lingui/macro';
 import {IButtonProps} from 'native-base';
 import {useCallback} from 'react';
-import ToggleButton from './ToggleButton';
+import {ToggleButton} from './ToggleButton';
 import {useSettings} from '@/store/settings';
 
 export function AdvancedCustomAdhanToggle(props: IButtonProps) {

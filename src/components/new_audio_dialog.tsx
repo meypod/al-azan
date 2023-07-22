@@ -7,9 +7,9 @@ import {
   Text,
   Button,
 } from 'native-base';
-import {useCallback, useEffect, useState} from 'react';
+import {memo, useCallback, useEffect, useState} from 'react';
 
-export function NewAudioDialog({
+export const NewAudioDialog = memo(function NewAudioDialog({
   selectedFilePath,
   initialAudioName = '',
   onSave,
@@ -63,4 +63,4 @@ export function NewAudioDialog({
       </Modal.Content>
     </Modal>
   );
-}
+});

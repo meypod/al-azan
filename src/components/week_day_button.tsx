@@ -1,5 +1,5 @@
 import {Button} from 'native-base';
-import {useCallback, useState} from 'react';
+import {memo, useCallback, useState} from 'react';
 import {WeekDayIndex} from '@/utils/date';
 
 type WeekDayButtonProps = {
@@ -11,7 +11,9 @@ type WeekDayButtonProps = {
   colorScheme?: string;
 };
 
-export function WeekDayButton(props: WeekDayButtonProps) {
+export const WeekDayButton = memo(function WeekDayButton(
+  props: WeekDayButtonProps,
+) {
   const [isActive, setIsActive] = useState(!!props.isActive);
   const [colorScheme] = useState(props.colorScheme || 'primary');
 
@@ -43,4 +45,4 @@ export function WeekDayButton(props: WeekDayButtonProps) {
       {props.label}
     </Button>
   );
-}
+});
