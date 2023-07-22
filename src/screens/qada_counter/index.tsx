@@ -1,4 +1,4 @@
-import {Box, Button} from 'native-base';
+import {Stack, Button} from 'native-base';
 import {useCallback, useState} from 'react';
 import DraggableFlatList, {RenderItem} from 'react-native-draggable-flatlist';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -67,7 +67,7 @@ export function QadaCounter() {
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
-      <Box safeArea flex={1}>
+      <Stack safeArea flex={1}>
         <DraggableFlatList
           data={counters}
           onDragEnd={({data}) => setCounters(data)}
@@ -107,7 +107,7 @@ export function QadaCounter() {
           onConfirm={onCounterChanged}
           onDelete={removeCounter}
         />
-      </Box>
+      </Stack>
     </GestureHandlerRootView>
   );
 }

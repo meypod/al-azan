@@ -1,4 +1,4 @@
-import {Flex, Text, IBoxProps, Box} from 'native-base';
+import {Flex, Text, Stack, IStackProps} from 'native-base';
 import {memo} from 'react';
 
 function Divider({
@@ -6,11 +6,11 @@ function Divider({
   fontSize = 'sm',
   _text,
   children,
-  ...boxProps
-}: {label?: string} & IBoxProps) {
+  ...stackProps
+}: {label?: string} & IStackProps) {
   return (
-    <Box
-      {...boxProps}
+    <Stack
+      {...stackProps}
       flex={1}
       flexDirection="row"
       alignItems="center"
@@ -41,7 +41,7 @@ function Divider({
         _light={{
           borderBottomColor: 'coolGray.600:alpha.50',
         }}></Flex>
-    </Box>
+    </Stack>
   );
 }
 

@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import MapLibreGL from '@maplibre/maplibre-react-native';
-import {Box, Button, HStack, Text} from 'native-base';
+import {Stack, Button, HStack, Text} from 'native-base';
 import {useCallback} from 'react';
 import {Alert} from 'react-native';
 import {
@@ -82,7 +82,7 @@ export function QiblaFinder() {
   }, [askForGps]);
 
   return (
-    <Box safeArea p="3">
+    <Stack safeArea p="3">
       <Text textAlign="center" fontSize="xl">
         {t`Disclaimer`}
       </Text>
@@ -97,6 +97,6 @@ export function QiblaFinder() {
       ) : (
         <Button onPress={onUnderstood}>{t`I Understand`}</Button>
       )}
-    </Box>
+    </Stack>
   );
 }

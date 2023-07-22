@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Modal, Box, Button} from 'native-base';
+import {Modal, Button, Stack} from 'native-base';
 import {useCallback, useState} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
@@ -85,7 +85,7 @@ export function Intro() {
   }, [setConfigAlertIsOpen, setAppIntroDone]);
 
   return (
-    <Box flex="1" safeArea>
+    <Stack flex="1" safeArea>
       <AppIntroSlider<Item>
         keyExtractor={_keyExtractor}
         dotStyle={{borderColor: 'gray', borderWidth: 1}}
@@ -124,6 +124,6 @@ export function Intro() {
           </Modal.Footer>
         </Modal.Content>
       </Modal>
-    </Box>
+    </Stack>
   );
 }

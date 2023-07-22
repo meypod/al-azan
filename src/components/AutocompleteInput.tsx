@@ -12,8 +12,8 @@ import {
   SearchIcon,
   HStack,
   Spinner,
-  Box,
   WarningOutlineIcon,
+  Stack,
 } from 'native-base';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {ListRenderItem, ListRenderItemInfo} from 'react-native';
@@ -169,7 +169,7 @@ export const AutocompleteInput = <T extends unknown>(
               {loading ? <Spinner ml="2" size="lg"></Spinner> : null}
             </HStack>
             {(!data?.length || !results.length || showError) && (
-              <Box
+              <Stack
                 mt="2"
                 pt="16"
                 mb="6"
@@ -201,7 +201,7 @@ export const AutocompleteInput = <T extends unknown>(
                     {t`No Results`}
                   </Text>
                 )}
-              </Box>
+              </Stack>
             )}
 
             <FlatList

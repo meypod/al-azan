@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {
-  Box,
+  Stack,
   Button,
   HStack,
   VStack,
@@ -75,8 +75,8 @@ export function EditReminderModal({
       transparent={true}
       visible={!!draftReminderState}
       onRequestClose={onCancel}>
-      <Box p="2" bg="black:alpha.40" flex={1} justifyContent="center">
-        <Box
+      <Stack p="2" bg="black:alpha.40" flex={1} justifyContent="center">
+        <Stack
           m="5"
           rounded="lg"
           _dark={{
@@ -244,8 +244,8 @@ export function EditReminderModal({
             <Button onPress={onConfirmProxy}>{t`Confirm`}</Button>
             <Button onPress={onCancel}>{t`Cancel`}</Button>
           </HStack>
-        </Box>
-      </Box>
+        </Stack>
+      </Stack>
     </Modal>
   );
 }

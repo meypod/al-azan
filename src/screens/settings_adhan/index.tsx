@@ -2,14 +2,14 @@ import {t} from '@lingui/macro';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {
   FlatList,
-  Box,
+  Stack,
   Button,
   Modal,
   FormControl,
   Input,
   WarningOutlineIcon,
   Text,
-  IBoxProps,
+  IStackProps,
   ScrollView,
 } from 'native-base';
 import {useCallback, useEffect, useState} from 'react';
@@ -36,7 +36,7 @@ type AdhanSettingsProps = NativeStackScreenProps<
   'AdhanSettings'
 >;
 
-export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
+export function AdhanSettings(props: IStackProps & AdhanSettingsProps) {
   const {navigation} = props;
 
   const [playingAdhanEntry, setPlayingAdhanEntry] = useState<
@@ -93,7 +93,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
   if (ADVANCED_CUSTOM_ADHAN) {
     return (
       <ScrollView>
-        <Box flex={1} safeArea px="4" py="2" {...props}>
+        <Stack flex={1} safeArea px="4" py="2" {...props}>
           {PrayersInOrder.map(prayer => (
             <PrayerAdhan
               prayer={prayer}
@@ -102,7 +102,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
               setSelectedAdhan={setSelectedAdhan}
             />
           ))}
-        </Box>
+        </Stack>
       </ScrollView>
     );
   }
@@ -197,7 +197,7 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
   };
 
   return (
-    <Box flex={1} safeArea pt="4" {...props}>
+    <Stack flex={1} safeArea pt="4" {...props}>
       <FlatList
         flex={1}
         data={SAVED_ADHAN_AUDIO_ENTRIES}
@@ -238,6 +238,6 @@ export function AdhanSettings(props: IBoxProps & AdhanSettingsProps) {
           </Modal.Footer>
         </Modal.Content>
       </Modal>
-    </Box>
+    </Stack>
   );
 }

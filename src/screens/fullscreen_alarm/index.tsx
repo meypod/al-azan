@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Text, Box, Button, Spacer} from 'native-base';
+import {Text, Stack, Button, Spacer} from 'native-base';
 import {memo, useCallback, useEffect, useRef, useState} from 'react';
 import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {replace} from '@/navigation/root_navigation';
@@ -93,7 +93,7 @@ function FullscreenAlarm() {
   }, [audioFinished, taskOptions]);
 
   return (
-    <Box
+    <Stack
       flex={1}
       flexDirection="column"
       safeArea
@@ -108,7 +108,7 @@ function FullscreenAlarm() {
         borderBottomColor="coolGray.300">
         {fullscreenOptions.title}
       </Text>
-      <Box margin="2">
+      <Stack margin="2">
         <Text
           adjustsFontSizeToFit
           noOfLines={1}
@@ -124,7 +124,7 @@ function FullscreenAlarm() {
           textAlign="center">
           {fullscreenOptions.body}
         </Text>
-      </Box>
+      </Stack>
       <Spacer />
       <Button
         height="100"
@@ -136,7 +136,7 @@ function FullscreenAlarm() {
         }}>
         {t`Dismiss`}
       </Button>
-    </Box>
+    </Stack>
   );
 }
 

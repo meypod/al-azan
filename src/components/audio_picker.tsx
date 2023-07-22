@@ -12,7 +12,7 @@ import {
   KeyboardAvoidingView,
   SearchIcon,
   HStack,
-  Box,
+  Stack,
   SectionList,
   Button,
 } from 'native-base';
@@ -399,7 +399,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
                 startIcon={<AddIcon size="xl" />}>{t`Add`}</Button>
             </HStack>
             {searchValue && !results.length && (
-              <Box
+              <Stack
                 mt="2"
                 pt="16"
                 mb="6"
@@ -414,7 +414,7 @@ export const AudioPicker = (props: AudioPickerProps) => {
                 <Text color="gray.400" fontSize="xl">
                   {t`No Results`}
                 </Text>
-              </Box>
+              </Stack>
             )}
 
             {searchValue ? (

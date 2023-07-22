@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {
-  Box,
+  Stack,
   Pressable,
   Text,
   Spacer,
@@ -67,7 +67,7 @@ function ReminderItem({
   return (
     <Pressable onPress={onEditPress.bind(null, item)}>
       {({isPressed}) => (
-        <Box
+        <Stack
           flexDirection="row"
           m="2"
           p="3"
@@ -136,7 +136,7 @@ function ReminderItem({
               <Switch isChecked={item.enabled} onToggle={onToggle} size="lg" />
             </HStack>
           </VStack>
-        </Box>
+        </Stack>
       )}
     </Pressable>
   );

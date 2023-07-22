@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {FlatList, Box, Button, IBoxProps} from 'native-base';
+import {FlatList, Stack, Button, IStackProps} from 'native-base';
 import {useCallback, useState} from 'react';
 import {ListRenderItemInfo} from 'react-native';
 import {EditReminderModal} from '@/screens/settings_reminders/edit_reminder_modal';
@@ -11,7 +11,7 @@ import {
 } from '@/store/reminder';
 import {setReminders} from '@/tasks/set_reminder';
 
-export function RemindersSettings(props: IBoxProps) {
+export function RemindersSettings(props: IStackProps) {
   const [reminderEntries] = useReminderSettings('REMINDERS');
   const [creatingReminder, setCreatingReminder] =
     useState<Partial<Reminder> | null>(null);
@@ -66,7 +66,7 @@ export function RemindersSettings(props: IBoxProps) {
   );
 
   return (
-    <Box flex={1} safeArea py="3" {...props}>
+    <Stack flex={1} safeArea py="3" {...props}>
       <FlatList
         flex={1}
         data={reminderEntries}
@@ -82,6 +82,6 @@ export function RemindersSettings(props: IBoxProps) {
         onCancel={cancelReminderCreation}
         onConfirm={editedState => onReminderChange(editedState)}
       />
-    </Box>
+    </Stack>
   );
 }

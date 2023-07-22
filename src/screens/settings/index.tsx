@@ -1,4 +1,4 @@
-import {Box, FlatList} from 'native-base';
+import {Stack, FlatList} from 'native-base';
 import {memo, useCallback, useEffect} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
@@ -159,9 +159,9 @@ function Settings() {
   );
 
   return (
-    <Box safeArea py="3">
+    <Stack safeArea py="3">
       <FlatList data={settingsScreenList} renderItem={renderItem}></FlatList>
-    </Box>
+    </Stack>
   );
 }
 
