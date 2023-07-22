@@ -5,7 +5,6 @@ import {
   Text,
   Spacer,
   HStack,
-  Flex,
   Button,
   Switch,
   VStack,
@@ -87,7 +86,7 @@ function ReminderItem({
               : 'coolGray.700:alpha.10',
           }}>
           <VStack flex={1} py="3" px="2">
-            <Flex direction="row">
+            <Stack flexDirection="row">
               <Text
                 ellipsizeMode="tail"
                 noOfLines={1}
@@ -102,7 +101,7 @@ function ReminderItem({
                 {item.label || ''}
               </Text>
               <Spacer />
-            </Flex>
+            </Stack>
             <Spacer />
             <Text>{getReminderSubtitle(item)}</Text>
           </VStack>

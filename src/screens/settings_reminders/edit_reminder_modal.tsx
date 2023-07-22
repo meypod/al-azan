@@ -5,7 +5,6 @@ import {
   HStack,
   VStack,
   Text,
-  Flex,
   Select,
   FormControl,
   Input,
@@ -93,9 +92,9 @@ export function EditReminderModal({
             _light={{
               borderBottomColor: 'coolGray.300',
             }}>
-            <Flex px="3" flexDirection="row" alignItems="center" flex={1}>
+            <Stack px="3" flexDirection="row" alignItems="center" flex={1}>
               <Text>{editMode ? t`Edit Reminder` : t`New Reminder`}</Text>
-            </Flex>
+            </Stack>
             <Button onPress={onCancel} variant="ghost">
               <CloseIcon size="xl" />
             </Button>

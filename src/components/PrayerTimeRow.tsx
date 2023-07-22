@@ -1,4 +1,4 @@
-import {Flex, Spacer, Text, HStack} from 'native-base';
+import {Stack, Spacer, Text, HStack} from 'native-base';
 import {memo} from 'react';
 import {NonPrayer, Prayer, translatePrayer} from '@/adhan';
 import {MutedIcon} from '@/assets/icons/material_icons/muted';
@@ -18,11 +18,11 @@ function PrayerTimeRow({
   isActiveDismissed,
 }: TimeRowProps) {
   return (
-    <Flex
-      direction="row"
+    <Stack
+      flexDirection="row"
       width="100%"
       py="2"
-      align="center"
+      alignItems="center"
       borderColor={active ? 'yellow.300' : 'coolGray.400'}
       borderRadius="md"
       borderWidth="2"
@@ -39,7 +39,7 @@ function PrayerTimeRow({
 
       <Spacer />
       {<Text>{date ? getTime(date) : '--:--'}</Text>}
-    </Flex>
+    </Stack>
   );
 }
 

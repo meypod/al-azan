@@ -1,4 +1,4 @@
-import {Flex, Text, Stack, IStackProps} from 'native-base';
+import {Text, Stack, IStackProps} from 'native-base';
 import {memo} from 'react';
 
 function Divider({
@@ -15,14 +15,14 @@ function Divider({
       flexDirection="row"
       alignItems="center"
       flexWrap="nowrap">
-      <Flex
+      <Stack
         flex={1}
         flexShrink={1}
         borderBottomWidth={1}
         borderBottomColor="coolGray.300:alpha.50"
         _light={{
           borderBottomColor: 'coolGray.600:alpha.50',
-        }}></Flex>
+        }}></Stack>
       <Text
         fontSize={fontSize}
         noOfLines={1}
@@ -33,14 +33,14 @@ function Divider({
         {..._text}>
         {label || children}
       </Text>
-      <Flex
+      <Stack
         flex={1}
         flexShrink={1}
         borderBottomWidth={1}
         borderBottomColor="coolGray.300:alpha.50"
         _light={{
           borderBottomColor: 'coolGray.600:alpha.50',
-        }}></Flex>
+        }}></Stack>
     </Stack>
   );
 }

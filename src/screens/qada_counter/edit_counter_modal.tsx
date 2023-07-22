@@ -5,7 +5,6 @@ import {
   HStack,
   VStack,
   Text,
-  Flex,
   FormControl,
   Input,
 } from 'native-base';
@@ -106,10 +105,9 @@ export function EditCounterModal({
             _light={{
               borderBottomColor: 'coolGray.300',
             }}>
-            <Flex px="3" flexDirection="row" alignItems="center" flex={1}>
+            <Stack px="3" flexDirection="row" alignItems="center" flex={1}>
               <Text>{editMode ? t`Edit Counter` : t`New Counter`}</Text>
-            </Flex>
-
+            </Stack>
             <HStack>
               {!isDefaultCounter && editMode && (
                 <Button onPress={onDeleteCounter} variant="ghost">

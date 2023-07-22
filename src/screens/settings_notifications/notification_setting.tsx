@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
-import {HStack, Text, Button, VStack, Checkbox, Flex} from 'native-base';
+import {HStack, Text, Button, VStack, Checkbox, Stack} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
 import {memo, useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
@@ -237,7 +237,7 @@ function NotificationSetting({
                 _dark={{
                   color: 'white:alpha.90',
                 }}>{t`Notification`}</Text>
-              <Flex mx="0.5" />
+              <Stack mx="0.5" />
               <Checkbox
                 p="0"
                 size="sm"
@@ -288,7 +288,7 @@ function NotificationSetting({
                 _dark={{
                   color: 'white:alpha.90',
                 }}>{t`Sound`}</Text>
-              <Flex mx="0.5" />
+              <Stack mx="0.5" />
               <Checkbox
                 p="0"
                 size="sm"

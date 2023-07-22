@@ -2,7 +2,7 @@ import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
 import keys from 'lodash/keys';
-import {Flex, FormControl, IFlexProps} from 'native-base';
+import {Stack, FormControl, IStackProps} from 'native-base';
 import {useCallback, useState} from 'react';
 import {WeekDayButton} from '@/components/week_day_button';
 import {WeekDayIndex, WeekDayName, WeekDays} from '@/utils/date';
@@ -34,7 +34,7 @@ export const WeekDaysInOrder = {
 export type SelectorValue = Partial<Record<WeekDayIndex, boolean>> | boolean;
 
 export function WeekDaySelector(
-  props: IFlexProps & {
+  props: IStackProps & {
     value?: SelectorValue;
     onChanged?: (weekDays: SelectorValue) => void;
     label?: string;
@@ -88,7 +88,7 @@ export function WeekDaySelector(
   return (
     <FormControl>
       {props.label && <FormControl.Label>{props.label}:</FormControl.Label>}
-      <Flex direction="row" flexWrap="wrap" {...props}>
+      <Stack flexDirection="row" flexWrap="wrap" {...props}>
         {keys(WeekDaysInOrder).map((dayName: string) => {
           return (
             <WeekDayButton
@@ -105,7 +105,7 @@ export function WeekDaySelector(
             />
           );
         })}
-      </Flex>
+      </Stack>
     </FormControl>
   );
 }

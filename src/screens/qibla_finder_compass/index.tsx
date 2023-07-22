@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Qibla, Coordinates} from 'adhan-extended';
 import {
-  Flex,
+  Stack,
   HStack,
   Input,
   useColorMode,
@@ -137,7 +137,7 @@ export function QiblaCompass({route}: Props) {
   }, []);
 
   return (
-    <Flex safeArea py="2" flexDirection="column">
+    <Stack safeArea py="2" flexDirection="column">
       <HStack justifyContent="space-between" px="3" mb="4">
         <AccuracyIndicator accuracy={accuracy} />
         <Text>
@@ -173,7 +173,7 @@ export function QiblaCompass({route}: Props) {
           )}
         </Button>
       </HStack>
-      <Flex
+      <Stack
         position="relative"
         justifyContent="center"
         alignItems="center"
@@ -228,7 +228,7 @@ export function QiblaCompass({route}: Props) {
             }}
           />
         </View>
-      </Flex>
-    </Flex>
+      </Stack>
+    </Stack>
   );
 }

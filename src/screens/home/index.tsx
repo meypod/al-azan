@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Button, Flex, HStack, ScrollView, Stack, Text} from 'native-base';
+import {Button, HStack, ScrollView, Stack, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
@@ -140,12 +140,14 @@ export function Home() {
           justifyContent="space-between"
           alignItems="center"
           w="100%"
-          direction={isRTL ? 'row-reverse' : 'row'}>
+          flexDirection={isRTL ? 'row-reverse' : 'row'}>
           <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
-            <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
+            <Stack
+              flexDirection={isRTL ? 'row' : 'row-reverse'}
+              alignItems="center">
               <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
               <RestoreIcon size="xl" />
-            </Flex>
+            </Stack>
           </Button>
           {!day.isToday && (
             <Button
@@ -170,10 +172,12 @@ export function Home() {
             </Button>
           )}
           <Button variant="ghost" onPress={increaseCurrentDateByOne}>
-            <Flex direction={isRTL ? 'row' : 'row-reverse'} alignItems="center">
+            <Stack
+              flexDirection={isRTL ? 'row' : 'row-reverse'}
+              alignItems="center">
               <UpdateIcon size="xl" />
               <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
-            </Flex>
+            </Stack>
           </Button>
         </HStack>
         <PrayerTimesBox
