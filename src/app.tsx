@@ -5,8 +5,8 @@ import {
   DefaultTheme,
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HStack, useColorMode} from 'native-base';
-import {useEffect} from 'react';
+import {HStack} from 'native-base';
+import {memo, useEffect, useMemo} from 'react';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
@@ -45,44 +45,48 @@ import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const TranslatedHeaderTitle = function TranslatedHeaderTitle({...props}: any) {
+const TranslatedHeaderTitle = memo(function TranslatedHeaderTitle({
+  ...props
+}: any) {
   const routeName = getCurrentRoute().name;
   if (routeName) {
     return <HeaderTitle {...props}>{translateRoute(routeName)}</HeaderTitle>;
   } else {
     return <></>;
   }
-};
+});
 
-const QiblaFinderHeaderRight = function QiblaFinderHeaderRight() {
+const QiblaFinderHeaderRight = memo(function QiblaFinderHeaderRight() {
   return (
     <HStack>
       <OrientationLock p="2" mr="-2" size="xl"></OrientationLock>
     </HStack>
   );
-};
+});
 
-const QadaCounterHeaderRight = function QadaCounterHeaderRight() {
+const QadaCounterHeaderRight = memo(function QadaCounterHeaderRight() {
   return (
     <HStack>
       <QadaHistoryToggle p="2" mr="-2" size="xl"></QadaHistoryToggle>
     </HStack>
   );
-};
+});
 
-const SettingsAdhanHeaderRight = function SettingsAdhanHeaderRight() {
+const SettingsAdhanHeaderRight = memo(function SettingsAdhanHeaderRight() {
   return (
     <HStack>
       <AdvancedCustomAdhanToggle fontSize="sm"></AdvancedCustomAdhanToggle>
     </HStack>
   );
-};
+});
 
-export function App(): JSX.Element {
+export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
   const [appIntroDone] = useSettings('APP_INTRO_DONE');
-  const {colorMode} = useColorMode();
 
-  const isDarkMode = colorMode === 'dark';
+  const navigationTheme = useMemo(
+    () => (themeColor === 'dark' ? DarkTheme : DefaultTheme),
+    [themeColor],
+  );
 
   useEffect(() => {
     setNextAdhan();
@@ -113,7 +117,7 @@ export function App(): JSX.Element {
     <NavigationContainer
       ref={navigationRef}
       onReady={onReady}
-      theme={isDarkMode ? DarkTheme : DefaultTheme}>
+      theme={navigationTheme}>
       <Stack.Navigator
         screenOptions={{
           headerTitle: TranslatedHeaderTitle,

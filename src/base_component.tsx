@@ -1,7 +1,7 @@
 import {i18n} from '@lingui/core';
 import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo} from 'react';
 import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
 import {setupNotifeeForegroundHandler} from '@/notifee';
 import {useSettings} from '@/store/settings';
@@ -79,13 +79,17 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
 
   const [themeColor, setThemeColor] = useSettings('THEME_COLOR');
 
+  const currentThemeColor = useMemo(() => {
+    if (themeColor === 'default') {
+      return systemColorScheme;
+    } else {
+      return themeColor;
+    }
+  }, [systemColorScheme, themeColor]);
+
   const colorCodeManager = {
     async get() {
-      if (themeColor === 'default') {
-        return systemColorScheme;
-      } else {
-        return themeColor;
-      }
+      return currentThemeColor;
     },
     async set(value: ColorMode | 'default') {
       setThemeColor(value);
@@ -98,7 +102,7 @@ export function BaseComponent<T extends JSX.IntrinsicAttributes>(
         theme={extendedTheme}
         config={config}
         colorModeManager={colorCodeManager}>
-        <ChildComponent {...args} />
+        <ChildComponent {...args} themeColor={currentThemeColor} />
       </NativeBaseProvider>
     </I18nProvider>
   );
