@@ -8,6 +8,7 @@ import {
 } from 'native-base';
 import {useCallback, useState} from 'react';
 import {BypassDnDSetting} from './bypass_dnd_setting';
+import {CustomUpcomingTimeSetting} from './custom_upcoming_time_setting';
 import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
 import {DontTurnOnScreenSetting} from './dont_turn_on_screen';
 import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
@@ -73,6 +74,7 @@ export function NotificationSettings(props: IScrollViewProps) {
       <BypassDnDSetting mb="8" />
       <VibrationSetting mb="8" />
       <DontTurnOnScreenSetting mb="8" />
+      <CustomUpcomingTimeSetting mb="8" />
     </ScrollView>
   );
 }
