@@ -18,7 +18,7 @@ export type RootStackParamList = {
   DevSettings: undefined;
   QiblaFinder: undefined;
   QiblaMap: undefined;
-  QiblaCompass: {skipInit?: boolean};
+  QiblaCompass: {skipInit?: boolean} | undefined;
   QadaCounter: undefined;
 };
 
