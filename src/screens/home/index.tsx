@@ -186,7 +186,7 @@ export function Home() {
         </Text>
         {impactfulSettings.LOCATION_CITY && (
           <Text mb="1">
-            {(impactfulSettings.LOCATION_CITY as any).selectedName ||
+            {impactfulSettings.LOCATION_CITY.selectedName ||
               impactfulSettings.LOCATION_CITY.name}
           </Text>
         )}

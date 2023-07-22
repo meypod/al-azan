@@ -6,6 +6,8 @@ export type CountryInfo = {
   names: string;
   /** English name */
   name: string;
+  /** user selected name from search */
+  selectedName?: string;
 };
 
 export async function getCountries(): Promise<CountryInfo[]> {
@@ -32,6 +34,8 @@ export type CityInfo = {
   lat: string;
   lng: string;
   country: string;
+  /** user selected name from search */
+  selectedName?: string;
 };
 
 export async function getCities(countryCode: string): Promise<CityInfo[]> {

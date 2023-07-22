@@ -34,7 +34,7 @@ function cityToKey(city: CityInfo) {
 }
 
 function cityToLabel(city: CityInfo) {
-  return (city as any).selectedName || city.name;
+  return city.selectedName || city.name;
 }
 
 export function LocationSettings(props: IScrollViewProps) {
@@ -187,7 +187,7 @@ export function LocationSettings(props: IScrollViewProps) {
             actionsheetLabel={t`Country`}
             getData={getCountries}
             onItemSelected={onCountrySelected}
-            getOptionLabel={item => (item as any).selectedName || item.name}
+            getOptionLabel={item => item.selectedName || item.name}
             getOptionKey={item => item.code}
             autoCompleteKeys={['names']}
             selectedItem={selectedCountry}
