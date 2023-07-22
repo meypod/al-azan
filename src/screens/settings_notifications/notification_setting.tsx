@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
 import {HStack, Text, Button, VStack, Checkbox, Stack} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {useCallback, useEffect, useState} from 'react';
+import {memo, useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {ExpandCircleDownIcon} from '@/assets/icons/material_icons/expand_circle_down';
 import Divider from '@/components/Divider';
@@ -124,6 +124,166 @@ function getChangedValues(options: getChangedValuesOptions) {
   return {modifiedSound, modifiedNotify};
 }
 
+const NotificationToggleButton = memo(function NotificationToggleButton({
+  prayerName,
+  toggleNotify,
+  notify,
+  notifyFullActive,
+}: {
+  prayerName: string;
+  toggleNotify: (...args: any) => void;
+  notifyFullActive?: boolean;
+  notify?: PrayerAlarmSettings;
+}) {
+  return (
+    <Button
+      size="sm"
+      py="1"
+      px="2"
+      variant="unstyled"
+      onPress={toggleNotify}
+      borderWidth={1}
+      _light={{
+        backgroundColor: notifyFullActive ? 'primary.500' : 'black:alpha.5',
+        borderColor: notifyFullActive
+          ? 'primary.500'
+          : notify
+          ? 'primary.500'
+          : 'black:alpha.5',
+      }}
+      _dark={{
+        backgroundColor: notifyFullActive ? 'primary.800' : 'black',
+        borderColor: notifyFullActive
+          ? 'primary.800'
+          : notify
+          ? 'primary.900'
+          : 'black',
+      }}>
+      <HStack justifyContent="center" alignItems="center">
+        <Text
+          fontSize="xs"
+          _light={{
+            color: notifyFullActive ? 'white' : 'black:alpha.70',
+          }}
+          _dark={{
+            color: 'white:alpha.90',
+          }}>{t`Notification`}</Text>
+        <Stack mx="0.5" />
+        <Checkbox
+          p="0"
+          size="sm"
+          isDisabled={true}
+          value="notify"
+          isChecked={!!notify}
+          accessibilityLabel={t`${prayerName} notification will be shown`}
+          _disabled={{
+            opacity: 1,
+          }}
+        />
+      </HStack>
+    </Button>
+  );
+});
+const SoundToggleButton = memo(function SoundToggleButton({
+  prayerName,
+  toggleSound,
+  sound,
+  soundFullActive,
+}: {
+  prayerName: string;
+  toggleSound: (...args: any) => void;
+  soundFullActive?: boolean;
+  sound?: PrayerAlarmSettings;
+}) {
+  return (
+    <Button
+      size="sm"
+      py="1"
+      px="2"
+      justifyContent="center"
+      alignItems="center"
+      variant="unstyled"
+      onPress={toggleSound}
+      borderWidth={1}
+      _light={{
+        backgroundColor: soundFullActive
+          ? 'emerald.500:alpha.70'
+          : 'black:alpha.5',
+        borderColor: soundFullActive
+          ? 'emerald.500:alpha.70'
+          : sound
+          ? 'emerald.500:alpha.70'
+          : 'black:alpha.5',
+      }}
+      _dark={{
+        backgroundColor: soundFullActive ? 'emerald.700' : 'black',
+        borderColor: soundFullActive
+          ? 'emerald.700'
+          : sound
+          ? 'emerald.800'
+          : 'black',
+      }}>
+      <HStack justifyContent="center" alignItems="center">
+        <Text
+          fontSize="xs"
+          _light={{
+            color: soundFullActive ? 'white' : 'black:alpha.70',
+          }}
+          _dark={{
+            color: 'white:alpha.90',
+          }}>{t`Sound`}</Text>
+        <Stack mx="0.5" />
+        <Checkbox
+          p="0"
+          size="sm"
+          value="sound"
+          colorScheme="emerald"
+          isDisabled={true}
+          isChecked={!!sound}
+          accessibilityLabel={t`${prayerName} sound will be played`}
+          _disabled={{
+            opacity: 1,
+          }}
+        />
+      </HStack>
+    </Button>
+  );
+});
+
+const CollapsibleSelector = memo(function CollapsibleSelector({
+  show,
+  notify,
+  setNotifyProxy,
+  sound,
+  setSoundProxy,
+}: {
+  show?: boolean;
+  setNotifyProxy: (...args: any) => void;
+  setSoundProxy: (...args: any) => void;
+  sound?: PrayerAlarmSettings;
+  notify?: PrayerAlarmSettings;
+}) {
+  if (show) {
+    return (
+      <VStack px="2" py="1">
+        <VStack>
+          <Divider fontSize="xs" label={t`Notification`} mb="1" />
+          <WeekDaySelector value={notify} onChanged={setNotifyProxy} />
+        </VStack>
+        <VStack>
+          <Divider fontSize="xs" label={t`Sound`} mb="1" />
+          <WeekDaySelector
+            value={sound}
+            onChanged={setSoundProxy}
+            colorScheme="emerald"
+          />
+        </VStack>
+      </VStack>
+    );
+  }
+  return <></>;
+});
+
 export const NotificationSetting = function NotificationSetting({
   prayer,
   onExpandChanged,
@@ -203,106 +363,19 @@ export const NotificationSetting = function NotificationSetting({
           {prayerName}
         </Text>
         <HStack justifyContent="center" alignItems="center" flex={1} px="2">
-          <Button
-            size="sm"
-            py="1"
-            px="2"
-            variant="unstyled"
-            onPress={toggleNotify}
-            borderWidth={1}
-            _light={{
-              backgroundColor: notifyFullActive
-                ? 'primary.500'
-                : 'black:alpha.5',
-              borderColor: notifyFullActive
-                ? 'primary.500'
-                : notify
-                ? 'primary.500'
-                : 'black:alpha.5',
-            }}
-            _dark={{
-              backgroundColor: notifyFullActive ? 'primary.800' : 'black',
-              borderColor: notifyFullActive
-                ? 'primary.800'
-                : notify
-                ? 'primary.900'
-                : 'black',
-            }}>
-            <HStack justifyContent="center" alignItems="center">
-              <Text
-                fontSize="xs"
-                _light={{
-                  color: notifyFullActive ? 'white' : 'black:alpha.70',
-                }}
-                _dark={{
-                  color: 'white:alpha.90',
-                }}>{t`Notification`}</Text>
-              <Stack mx="0.5" />
-              <Checkbox
-                p="0"
-                size="sm"
-                isDisabled={true}
-                value="notify"
-                isChecked={!!notify}
-                accessibilityLabel={t`${prayerName} notification will be shown`}
-                _disabled={{
-                  opacity: 1,
-                }}
-              />
-            </HStack>
-          </Button>
+          <NotificationToggleButton
+            prayerName={prayerName}
+            toggleNotify={toggleNotify}
+            notify={notify}
+            notifyFullActive={notifyFullActive}
+          />
           <HStack flex={0} flexGrow={0} mx="1" />
-          <Button
-            size="sm"
-            py="1"
-            px="2"
-            justifyContent="center"
-            alignItems="center"
-            variant="unstyled"
-            onPress={toggleSound}
-            borderWidth={1}
-            _light={{
-              backgroundColor: soundFullActive
-                ? 'emerald.500:alpha.70'
-                : 'black:alpha.5',
-              borderColor: soundFullActive
-                ? 'emerald.500:alpha.70'
-                : sound
-                ? 'emerald.500:alpha.70'
-                : 'black:alpha.5',
-            }}
-            _dark={{
-              backgroundColor: soundFullActive ? 'emerald.700' : 'black',
-              borderColor: soundFullActive
-                ? 'emerald.700'
-                : sound
-                ? 'emerald.800'
-                : 'black',
-            }}>
-            <HStack justifyContent="center" alignItems="center">
-              <Text
-                fontSize="xs"
-                _light={{
-                  color: soundFullActive ? 'white' : 'black:alpha.70',
-                }}
-                _dark={{
-                  color: 'white:alpha.90',
-                }}>{t`Sound`}</Text>
-              <Stack mx="0.5" />
-              <Checkbox
-                p="0"
-                size="sm"
-                value="sound"
-                colorScheme="emerald"
-                isDisabled={true}
-                isChecked={!!sound}
-                accessibilityLabel={t`${prayerName} sound will be played`}
-                _disabled={{
-                  opacity: 1,
-                }}
-              />
-            </HStack>
-          </Button>
+          <SoundToggleButton
+            prayerName={prayerName}
+            toggleSound={toggleSound}
+            sound={sound}
+            soundFullActive={soundFullActive}
+          />
         </HStack>
 
         <HStack justifyContent="flex-end" flexShrink={1}>
@@ -316,27 +389,13 @@ export const NotificationSetting = function NotificationSetting({
           </Button>
         </HStack>
       </HStack>
-      {internalExpanded && (
-        <VStack px="2" py="1">
-          <VStack>
-            <Divider fontSize="xs" label={t`Notification`} mb="1" />
-            <WeekDaySelector
-              value={notify}
-              onChanged={setNotifyProxy}
-              key={JSON.stringify(notify)}
-            />
-          </VStack>
-          <VStack>
-            <Divider fontSize="xs" label={t`Sound`} mb="1" />
-            <WeekDaySelector
-              value={sound}
-              onChanged={setSoundProxy}
-              key={JSON.stringify(sound)}
-              colorScheme="emerald"
-            />
-          </VStack>
-        </VStack>
-      )}
+      <CollapsibleSelector
+        setNotifyProxy={setNotifyProxy}
+        setSoundProxy={setSoundProxy}
+        show={internalExpanded}
+        notify={notify}
+        sound={sound}
+      />
     </VStack>
   );
 };
