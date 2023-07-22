@@ -42,7 +42,7 @@ export function NotificationSettings(props: IScrollViewProps) {
         {...props}>
         {PrayersInOrder.map(p => (
           <NotificationSetting
-            key={p.toString()}
+            key={p}
             prayer={p}
             onExpandChanged={onExpandChanged}
             expanded={expandedPrayer === p}
