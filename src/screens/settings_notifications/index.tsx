@@ -17,7 +17,7 @@ import {VibrationSetting} from './vibration_setting';
 import {VolumeButtonSetting} from './volume_button_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {SafeArea} from '@/components/safe_area';
-import NotificationSetting from '@/screens/settings_notifications/notification_setting';
+import {NotificationSetting} from '@/screens/settings_notifications/notification_setting';
 
 export function NotificationSettings(props: IScrollViewProps) {
   const [expandedPrayer, setExpandedPrayer] = useState<Prayer | undefined>();

@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
 import {HStack, Text, Button, VStack, Checkbox, Stack} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {memo, useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {ExpandCircleDownIcon} from '@/assets/icons/material_icons/expand_circle_down';
 import Divider from '@/components/Divider';
@@ -124,7 +124,7 @@ function getChangedValues(options: getChangedValuesOptions) {
   return {modifiedSound, modifiedNotify};
 }
 
-function NotificationSetting({
+export const NotificationSetting = function NotificationSetting({
   prayer,
   onExpandChanged,
   expanded,
@@ -339,6 +339,4 @@ function NotificationSetting({
       )}
     </VStack>
   );
-}
-
-export default memo(NotificationSetting);
+};
