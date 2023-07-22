@@ -1,6 +1,7 @@
 import {t} from '@lingui/macro';
 import {Text, Stack, Button, Spacer} from 'native-base';
 import {memo, useCallback, useEffect, useRef, useState} from 'react';
+import {SafeArea} from '@/components/safe_area';
 import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {replace} from '@/navigation/root_navigation';
 import {
@@ -93,50 +94,51 @@ function FullscreenAlarm() {
   }, [audioFinished, taskOptions]);
 
   return (
-    <Stack
-      flex={1}
-      flexDirection="column"
-      safeArea
-      alignItems="stretch"
-      display="flex">
-      <Text
-        textAlign="center"
-        fontSize="sm"
-        adjustsFontSizeToFit
-        noOfLines={1}
-        borderBottomWidth={1}
-        borderBottomColor="coolGray.300">
-        {fullscreenOptions.title}
-      </Text>
-      <Stack margin="2">
+    <SafeArea>
+      <Stack
+        flex={1}
+        flexDirection="column"
+        alignItems="stretch"
+        display="flex">
         <Text
-          adjustsFontSizeToFit
-          noOfLines={1}
           textAlign="center"
-          fontSize="6xl"
-          marginBottom={3}>
-          {fullscreenOptions.subtitle}
-        </Text>
-        <Text
+          fontSize="sm"
           adjustsFontSizeToFit
           noOfLines={1}
-          fontSize="4xl"
-          textAlign="center">
-          {fullscreenOptions.body}
+          borderBottomWidth={1}
+          borderBottomColor="coolGray.300">
+          {fullscreenOptions.title}
         </Text>
+        <Stack margin="2">
+          <Text
+            adjustsFontSizeToFit
+            noOfLines={1}
+            textAlign="center"
+            fontSize="6xl"
+            marginBottom={3}>
+            {fullscreenOptions.subtitle}
+          </Text>
+          <Text
+            adjustsFontSizeToFit
+            noOfLines={1}
+            fontSize="4xl"
+            textAlign="center">
+            {fullscreenOptions.body}
+          </Text>
+        </Stack>
+        <Spacer />
+        <Button
+          height="100"
+          onPress={onDismissPress}
+          margin="2"
+          _text={{
+            allowFontScaling: false,
+            fontSize: '3xl',
+          }}>
+          {t`Dismiss`}
+        </Button>
       </Stack>
-      <Spacer />
-      <Button
-        height="100"
-        onPress={onDismissPress}
-        margin="2"
-        _text={{
-          allowFontScaling: false,
-          fontSize: '3xl',
-        }}>
-        {t`Dismiss`}
-      </Button>
-    </Stack>
+    </SafeArea>
   );
 }
 

@@ -3,6 +3,7 @@ import {Modal, Button, Stack} from 'native-base';
 import {useCallback, useState} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import {isMinimumSettingsAvailable} from '@/adhan';
+import {SafeArea} from '@/components/safe_area';
 import {IntroItem} from '@/intro/intro_item';
 import {FixCommonProblemsSlide} from '@/intro/slides/battery';
 import {CalculationSlide} from '@/intro/slides/calculation';
@@ -85,45 +86,47 @@ export function Intro() {
   }, [setConfigAlertIsOpen, setAppIntroDone]);
 
   return (
-    <Stack flex="1" safeArea>
-      <AppIntroSlider<Item>
-        keyExtractor={_keyExtractor}
-        dotStyle={{borderColor: 'gray', borderWidth: 1}}
-        dotClickEnabled={false}
-        activeDotStyle={{
-          borderColor: '#22d3ee',
-          borderWidth: 1,
-          backgroundColor: '#22d3ee',
-        }}
-        renderNextButton={() => <StepLabel label={t`Next`} />}
-        renderDoneButton={() => <StepLabel label={t`Done`} />}
-        renderSkipButton={() => <StepLabel label={t`Skip`} />}
-        showSkipButton={true}
-        onSkip={() => setConfigAlertIsOpen(true)}
-        onDone={() => onDonePressed()}
-        renderItem={IntroItem}
-        data={data}
-        contentContainerStyle={{
-          marginBottom: 60,
-        }}
-      />
-      <Modal
-        size="full"
-        isOpen={configAlertIsOpen}
-        onClose={onConfigAlertClose}>
-        <Modal.Content borderRadius={0}>
-          <Modal.CloseButton />
-          <Modal.Header>{t`Attention`}</Modal.Header>
-          <Modal.Body>
-            {t`Required settings are incomplete. For app to show prayer times, You have to configure it from settings later.`}
-          </Modal.Body>
-          <Modal.Footer>
-            <Button colorScheme="coolGray" onPress={onConfigAlertOk}>
-              {t`Got it`}
-            </Button>
-          </Modal.Footer>
-        </Modal.Content>
-      </Modal>
-    </Stack>
+    <SafeArea>
+      <Stack flex="1">
+        <AppIntroSlider<Item>
+          keyExtractor={_keyExtractor}
+          dotStyle={{borderColor: 'gray', borderWidth: 1}}
+          dotClickEnabled={false}
+          activeDotStyle={{
+            borderColor: '#22d3ee',
+            borderWidth: 1,
+            backgroundColor: '#22d3ee',
+          }}
+          renderNextButton={() => <StepLabel label={t`Next`} />}
+          renderDoneButton={() => <StepLabel label={t`Done`} />}
+          renderSkipButton={() => <StepLabel label={t`Skip`} />}
+          showSkipButton={true}
+          onSkip={() => setConfigAlertIsOpen(true)}
+          onDone={() => onDonePressed()}
+          renderItem={IntroItem}
+          data={data}
+          contentContainerStyle={{
+            marginBottom: 60,
+          }}
+        />
+        <Modal
+          size="full"
+          isOpen={configAlertIsOpen}
+          onClose={onConfigAlertClose}>
+          <Modal.Content borderRadius={0}>
+            <Modal.CloseButton />
+            <Modal.Header>{t`Attention`}</Modal.Header>
+            <Modal.Body>
+              {t`Required settings are incomplete. For app to show prayer times, You have to configure it from settings later.`}
+            </Modal.Body>
+            <Modal.Footer>
+              <Button colorScheme="coolGray" onPress={onConfigAlertOk}>
+                {t`Got it`}
+              </Button>
+            </Modal.Footer>
+          </Modal.Content>
+        </Modal>
+      </Stack>
+    </SafeArea>
   );
 }

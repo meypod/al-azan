@@ -2,6 +2,7 @@ import {t} from '@lingui/macro';
 import {FlatList, Stack, Button, IStackProps} from 'native-base';
 import {useCallback, useState} from 'react';
 import {ListRenderItemInfo} from 'react-native';
+import {SafeArea} from '@/components/safe_area';
 import {EditReminderModal} from '@/screens/settings_reminders/edit_reminder_modal';
 import ReminderItem from '@/screens/settings_reminders/reminder_item';
 import {
@@ -66,22 +67,24 @@ export function RemindersSettings(props: IStackProps) {
   );
 
   return (
-    <Stack flex={1} safeArea py="3" {...props}>
-      <FlatList
-        flex={1}
-        data={reminderEntries}
-        renderItem={renderItemMemoized}
-      />
-      <Button
-        onPress={onAddReminderPressed}
-        mx="2"
-        mt="2">{t`Add Reminder`}</Button>
+    <SafeArea>
+      <Stack flex={1} py="3" {...props}>
+        <FlatList
+          flex={1}
+          data={reminderEntries}
+          renderItem={renderItemMemoized}
+        />
+        <Button
+          onPress={onAddReminderPressed}
+          mx="2"
+          mt="2">{t`Add Reminder`}</Button>
 
-      <EditReminderModal
-        reminderState={creatingReminder}
-        onCancel={cancelReminderCreation}
-        onConfirm={editedState => onReminderChange(editedState)}
-      />
-    </Stack>
+        <EditReminderModal
+          reminderState={creatingReminder}
+          onCancel={cancelReminderCreation}
+          onConfirm={editedState => onReminderChange(editedState)}
+        />
+      </Stack>
+    </SafeArea>
   );
 }

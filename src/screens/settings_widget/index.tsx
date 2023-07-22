@@ -9,6 +9,7 @@ import {
 } from 'native-base';
 import {useEffect, useMemo} from 'react';
 import {Platform} from 'react-native';
+import {SafeArea} from '@/components/safe_area';
 import {HideWidgetPrayerSettings} from '@/screens/settings_widget/hide_widget_prayer_settings';
 import {useSettings} from '@/store/settings';
 import {updateWidgets} from '@/tasks/update_widgets';
@@ -31,80 +32,82 @@ export function WidgetSettings(props: IScrollViewProps) {
   );
 
   return (
-    <ScrollView
-      p="4"
-      _contentContainerStyle={{paddingBottom: 20}}
-      mb="3"
-      {...props}>
-      <HStack justifyContent="space-between" mb="4">
-        <Text flex="1">{t`Show notification widget?`}</Text>
-
-        <Stack flexShrink="1" justifyContent="center" alignItems="center">
-          <Checkbox.Group
-            value={showWidget ? ['enabled'] : []}
-            onChange={values => {
-              if (values && values.length) {
-                setShowWidget(true);
-              } else {
-                setShowWidget(false);
-              }
-            }}>
-            <Checkbox
-              value="enabled"
-              size="md"
-              accessibilityLabel={t`should notification widget be shown?`}
-            />
-          </Checkbox.Group>
-        </Stack>
-      </HStack>
-
-      <HStack justifyContent="space-between" mb="4">
-        <Text flex="1">{t`Show countdown?`}</Text>
-
-        <Stack flexShrink="1" justifyContent="center" alignItems="center">
-          <Checkbox.Group
-            value={showWidgetCountdown ? ['enabled'] : []}
-            onChange={values => {
-              if (values && values.length) {
-                setShowWidgetCountdown(true);
-              } else {
-                setShowWidgetCountdown(false);
-              }
-            }}>
-            <Checkbox
-              value="enabled"
-              size="md"
-              accessibilityLabel={t`Show countdown?`}
-            />
-          </Checkbox.Group>
-        </Stack>
-      </HStack>
-
-      {isAdaptiveThemeSupported && (
+    <SafeArea>
+      <ScrollView
+        p="4"
+        _contentContainerStyle={{paddingBottom: 20}}
+        mb="3"
+        {...props}>
         <HStack justifyContent="space-between" mb="4">
-          <Text flex="1">{t`Use adaptive theme?`}</Text>
+          <Text flex="1">{t`Show notification widget?`}</Text>
 
           <Stack flexShrink="1" justifyContent="center" alignItems="center">
             <Checkbox.Group
-              value={adaptiveWidget ? ['enabled'] : []}
+              value={showWidget ? ['enabled'] : []}
               onChange={values => {
                 if (values && values.length) {
-                  setAdaptiveWidgets(true);
+                  setShowWidget(true);
                 } else {
-                  setAdaptiveWidgets(false);
+                  setShowWidget(false);
                 }
               }}>
               <Checkbox
                 value="enabled"
                 size="md"
-                accessibilityLabel={t`Use adaptive theme?`}
+                accessibilityLabel={t`should notification widget be shown?`}
               />
             </Checkbox.Group>
           </Stack>
         </HStack>
-      )}
 
-      <HideWidgetPrayerSettings />
-    </ScrollView>
+        <HStack justifyContent="space-between" mb="4">
+          <Text flex="1">{t`Show countdown?`}</Text>
+
+          <Stack flexShrink="1" justifyContent="center" alignItems="center">
+            <Checkbox.Group
+              value={showWidgetCountdown ? ['enabled'] : []}
+              onChange={values => {
+                if (values && values.length) {
+                  setShowWidgetCountdown(true);
+                } else {
+                  setShowWidgetCountdown(false);
+                }
+              }}>
+              <Checkbox
+                value="enabled"
+                size="md"
+                accessibilityLabel={t`Show countdown?`}
+              />
+            </Checkbox.Group>
+          </Stack>
+        </HStack>
+
+        {isAdaptiveThemeSupported && (
+          <HStack justifyContent="space-between" mb="4">
+            <Text flex="1">{t`Use adaptive theme?`}</Text>
+
+            <Stack flexShrink="1" justifyContent="center" alignItems="center">
+              <Checkbox.Group
+                value={adaptiveWidget ? ['enabled'] : []}
+                onChange={values => {
+                  if (values && values.length) {
+                    setAdaptiveWidgets(true);
+                  } else {
+                    setAdaptiveWidgets(false);
+                  }
+                }}>
+                <Checkbox
+                  value="enabled"
+                  size="md"
+                  accessibilityLabel={t`Use adaptive theme?`}
+                />
+              </Checkbox.Group>
+            </Stack>
+          </HStack>
+        )}
+
+        <HideWidgetPrayerSettings />
+      </ScrollView>
+    </SafeArea>
   );
 }

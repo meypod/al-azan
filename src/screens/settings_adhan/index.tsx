@@ -20,6 +20,7 @@ import {shallow} from 'zustand/shallow';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {AdhanEntry} from '@/assets/adhan_entries';
 import PrayerAdhan from '@/components/prayer_adhan';
+import {SafeArea} from '@/components/safe_area';
 import MediaPlayer, {
   AudioEntry,
   PlaybackState,
@@ -92,18 +93,20 @@ export function AdhanSettings(props: IStackProps & AdhanSettingsProps) {
 
   if (ADVANCED_CUSTOM_ADHAN) {
     return (
-      <ScrollView>
-        <Stack flex={1} safeArea px="4" py="2" {...props}>
-          {PrayersInOrder.map(prayer => (
-            <PrayerAdhan
-              prayer={prayer}
-              key={prayer}
-              selectedEntry={SELECTED_ADHAN_ENTRIES[prayer] as AudioEntry}
-              setSelectedAdhan={setSelectedAdhan}
-            />
-          ))}
-        </Stack>
-      </ScrollView>
+      <SafeArea>
+        <ScrollView>
+          <Stack flex={1} px="4" py="2" {...props}>
+            {PrayersInOrder.map(prayer => (
+              <PrayerAdhan
+                prayer={prayer}
+                key={prayer}
+                selectedEntry={SELECTED_ADHAN_ENTRIES[prayer] as AudioEntry}
+                setSelectedAdhan={setSelectedAdhan}
+              />
+            ))}
+          </Stack>
+        </ScrollView>
+      </SafeArea>
     );
   }
 
@@ -197,47 +200,52 @@ export function AdhanSettings(props: IStackProps & AdhanSettingsProps) {
   };
 
   return (
-    <Stack flex={1} safeArea pt="4" {...props}>
-      <FlatList
-        flex={1}
-        data={SAVED_ADHAN_AUDIO_ENTRIES}
-        renderItem={renderItem}
-        extraData={[playerState]}
-      />
-      <Button
-        onPress={onAddCustomAdhanPressed}
-        m="1">{t`Add Custom Adhan`}</Button>
+    <SafeArea>
+      <Stack flex={1} pt="4" {...props}>
+        <FlatList
+          flex={1}
+          data={SAVED_ADHAN_AUDIO_ENTRIES}
+          renderItem={renderItem}
+          extraData={[playerState]}
+        />
+        <Button
+          onPress={onAddCustomAdhanPressed}
+          m="1">{t`Add Custom Adhan`}</Button>
 
-      <Modal size="full" isOpen={!!selectedFilePath} onClose={onNewAdhanCancel}>
-        <Modal.Content borderRadius={0}>
-          <Modal.CloseButton />
-          <Modal.Header>{t`Add Custom Adhan`}</Modal.Header>
-          <Modal.Body>
-            <FormControl isInvalid={!newAdhanName}>
-              <FormControl.Label>{t`Name`}</FormControl.Label>
-              <Input
-                value={newAdhanName || ''}
-                placeholder={t`Name`}
-                onChangeText={str => setNewAdhanName(str)}
-              />
-              <FormControl.ErrorMessage
-                leftIcon={<WarningOutlineIcon color="yellow.300" />}>
-                <Text color="yellow.400">
-                  {t`Selecting a name is required`}
-                </Text>
-              </FormControl.ErrorMessage>
-            </FormControl>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button mx="2" colorScheme="coolGray" onPress={onNewAdhanCancel}>
-              {t`Cancel`}
-            </Button>
-            <Button colorScheme="coolGray" onPress={onNewAdhanAdd}>
-              {t`Add`}
-            </Button>
-          </Modal.Footer>
-        </Modal.Content>
-      </Modal>
-    </Stack>
+        <Modal
+          size="full"
+          isOpen={!!selectedFilePath}
+          onClose={onNewAdhanCancel}>
+          <Modal.Content borderRadius={0}>
+            <Modal.CloseButton />
+            <Modal.Header>{t`Add Custom Adhan`}</Modal.Header>
+            <Modal.Body>
+              <FormControl isInvalid={!newAdhanName}>
+                <FormControl.Label>{t`Name`}</FormControl.Label>
+                <Input
+                  value={newAdhanName || ''}
+                  placeholder={t`Name`}
+                  onChangeText={str => setNewAdhanName(str)}
+                />
+                <FormControl.ErrorMessage
+                  leftIcon={<WarningOutlineIcon color="yellow.300" />}>
+                  <Text color="yellow.400">
+                    {t`Selecting a name is required`}
+                  </Text>
+                </FormControl.ErrorMessage>
+              </FormControl>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button mx="2" colorScheme="coolGray" onPress={onNewAdhanCancel}>
+                {t`Cancel`}
+              </Button>
+              <Button colorScheme="coolGray" onPress={onNewAdhanAdd}>
+                {t`Add`}
+              </Button>
+            </Modal.Footer>
+          </Modal.Content>
+        </Modal>
+      </Stack>
+    </SafeArea>
   );
 }

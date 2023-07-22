@@ -4,6 +4,7 @@ import {HStack, ScrollView, Text, IScrollViewProps, Button} from 'native-base';
 import {useCallback} from 'react';
 import {ToastAndroid} from 'react-native';
 import {getNextPrayer, Prayer, translatePrayer} from '@/adhan';
+import {SafeArea} from '@/components/safe_area';
 import {
   ADHAN_CHANNEL_ID,
   ADHAN_DND_CHANNEL_ID,
@@ -91,32 +92,38 @@ export function DevSettings(props: IScrollViewProps) {
   };
 
   return (
-    <ScrollView
-      p="4"
-      _contentContainerStyle={{paddingBottom: 20}}
-      mb="3"
-      {...props}>
-      <HStack alignItems="center" justifyContent="space-between" mb="5">
-        <Text>Play adhan in 10 seconds: </Text>
-        <Button onPress={scheduleAdhanInTen.bind(null, true)}>Schedule</Button>
-      </HStack>
-      <HStack alignItems="center" justifyContent="space-between" mb="5">
-        <Text>Show adhan notif in 10 seconds: </Text>
-        <Button onPress={scheduleAdhanInTen.bind(null, false)}>Schedule</Button>
-      </HStack>
-      <HStack alignItems="center" justifyContent="space-between" mb="5">
-        <Text>Clear Calculation Cache: </Text>
-        <Button onPress={onClearPressed}>Clear</Button>
-      </HStack>
-      <HStack alignItems="center" justifyContent="space-between" mb="5">
-        <Text>Test vibration: </Text>
-        <Button onPress={onVibratePressed}>Vibrate</Button>
-        <Button onPress={onVibrateLongPressed}>Vibrate Long</Button>
-      </HStack>
-      <HStack alignItems="center" justifyContent="space-between" mb="5">
-        <Text> </Text>
-        <Button onPress={() => vibrateStop()}>Stop Vibration</Button>
-      </HStack>
-    </ScrollView>
+    <SafeArea>
+      <ScrollView
+        p="4"
+        _contentContainerStyle={{paddingBottom: 20}}
+        mb="3"
+        {...props}>
+        <HStack alignItems="center" justifyContent="space-between" mb="5">
+          <Text>Play adhan in 10 seconds: </Text>
+          <Button onPress={scheduleAdhanInTen.bind(null, true)}>
+            Schedule
+          </Button>
+        </HStack>
+        <HStack alignItems="center" justifyContent="space-between" mb="5">
+          <Text>Show adhan notif in 10 seconds: </Text>
+          <Button onPress={scheduleAdhanInTen.bind(null, false)}>
+            Schedule
+          </Button>
+        </HStack>
+        <HStack alignItems="center" justifyContent="space-between" mb="5">
+          <Text>Clear Calculation Cache: </Text>
+          <Button onPress={onClearPressed}>Clear</Button>
+        </HStack>
+        <HStack alignItems="center" justifyContent="space-between" mb="5">
+          <Text>Test vibration: </Text>
+          <Button onPress={onVibratePressed}>Vibrate</Button>
+          <Button onPress={onVibrateLongPressed}>Vibrate Long</Button>
+        </HStack>
+        <HStack alignItems="center" justifyContent="space-between" mb="5">
+          <Text> </Text>
+          <Button onPress={() => vibrateStop()}>Stop Vibration</Button>
+        </HStack>
+      </ScrollView>
+    </SafeArea>
   );
 }

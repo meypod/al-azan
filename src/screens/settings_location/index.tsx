@@ -18,6 +18,7 @@ import LocationProvider from 'react-native-get-location';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import Divider from '@/components/Divider';
 import NumericInput from '@/components/numeric_input';
+import {SafeArea} from '@/components/safe_area';
 import {useCalcSettings} from '@/store/calculation';
 import {useSettings} from '@/store/settings';
 import {askForLocationService} from '@/utils/dialogs';
@@ -152,159 +153,163 @@ export function LocationSettings(props: IScrollViewProps) {
   }, [selectedCountry]);
 
   return (
-    <ScrollView
-      p="4"
-      _contentContainerStyle={{paddingBottom: 40}}
-      {...props}
-      keyboardShouldPersistTaps="handled">
-      <Text textAlign="justify">{t`To calculate Adhan, We need your location. You can use the "Find My Location" button, or use the country and city/area search, or enter your coordinates manually.`}</Text>
+    <SafeArea>
+      <ScrollView
+        p="4"
+        _contentContainerStyle={{paddingBottom: 40}}
+        {...props}
+        keyboardShouldPersistTaps="handled">
+        <Text textAlign="justify">{t`To calculate Adhan, We need your location. You can use the "Find My Location" button, or use the country and city/area search, or enter your coordinates manually.`}</Text>
 
-      <Divider label={t`Using GPS`} mb="3" mt="2" />
+        <Divider label={t`Using GPS`} mb="3" mt="2" />
 
-      <Button
-        onPress={getCoordinatesFromLocationProvider}
-        disabled={gettingLocation}>
-        <HStack alignItems="center">
-          <Text
-            adjustsFontSizeToFit
-            _light={{color: 'white'}}>{t`Find My Location`}</Text>
-          {gettingLocation && (
-            <Spinner
-              mx="2"
-              accessibilityLabel={t`Getting coordinates`}
-              color="lime.200"
-            />
-          )}
-        </HStack>
-      </Button>
+        <Button
+          onPress={getCoordinatesFromLocationProvider}
+          disabled={gettingLocation}>
+          <HStack alignItems="center">
+            <Text
+              adjustsFontSizeToFit
+              _light={{color: 'white'}}>{t`Find My Location`}</Text>
+            {gettingLocation && (
+              <Spinner
+                mx="2"
+                accessibilityLabel={t`Getting coordinates`}
+                color="lime.200"
+              />
+            )}
+          </HStack>
+        </Button>
 
-      <Divider label={t`Using Search`} mt="4" />
+        <Divider label={t`Using Search`} mt="4" />
 
-      <HStack>
-        <FormControl width={selectedCountry ? '35%' : '100%'}>
-          <FormControl.Label>{t`Country`}</FormControl.Label>
-          <AutocompleteInput<CountryInfo>
-            actionsheetLabel={t`Country`}
-            getData={getCountries}
-            onItemSelected={onCountrySelected}
-            getOptionLabel={item => item.selectedName || item.name}
-            getOptionKey={item => item.code}
-            autoCompleteKeys={['names']}
-            selectedItem={selectedCountry}
-            useReturnedMatch={true}
-            size="sm"
-            px="1"
-            errorMessage={t`Error in loading countries`}
-          />
-        </FormControl>
-
-        {selectedCountry && (
-          <FormControl ml="2" width={selectedCity ? '40%' : '60%'}>
-            <FormControl.Label>{t`City/Area`}</FormControl.Label>
-            <AutocompleteInput<CityInfo>
-              actionsheetLabel={t`City/Area`}
-              getData={getCitiesData}
-              onItemSelected={onCitySelected}
-              getOptionKey={cityToKey}
-              getOptionLabel={cityToLabel}
+        <HStack>
+          <FormControl width={selectedCountry ? '35%' : '100%'}>
+            <FormControl.Label>{t`Country`}</FormControl.Label>
+            <AutocompleteInput<CountryInfo>
+              actionsheetLabel={t`Country`}
+              getData={getCountries}
+              onItemSelected={onCountrySelected}
+              getOptionLabel={item => item.selectedName || item.name}
+              getOptionKey={item => item.code}
               autoCompleteKeys={['names']}
+              selectedItem={selectedCountry}
               useReturnedMatch={true}
-              selectedItem={selectedCity}
               size="sm"
               px="1"
+              errorMessage={t`Error in loading countries`}
+            />
+          </FormControl>
+
+          {selectedCountry && (
+            <FormControl ml="2" width={selectedCity ? '40%' : '60%'}>
+              <FormControl.Label>{t`City/Area`}</FormControl.Label>
+              <AutocompleteInput<CityInfo>
+                actionsheetLabel={t`City/Area`}
+                getData={getCitiesData}
+                onItemSelected={onCitySelected}
+                getOptionKey={cityToKey}
+                getOptionLabel={cityToLabel}
+                autoCompleteKeys={['names']}
+                useReturnedMatch={true}
+                selectedItem={selectedCity}
+                size="sm"
+                px="1"
+              />
+              <FormControl.ErrorMessage
+                leftIcon={<WarningOutlineIcon size="xs" />}>
+                {t`Error in loading search results`}
+              </FormControl.ErrorMessage>
+            </FormControl>
+          )}
+
+          {(selectedCountry || selectedCity) && (
+            <FormControl ml="3" justifyContent="center">
+              <FormControl.Label> </FormControl.Label>
+              <Button
+                accessibilityLabel={t`Clear the location`}
+                borderColor="danger.900"
+                variant="outline"
+                colorScheme="danger"
+                width="10"
+                height="10"
+                onPress={clearCountryAndCity}>
+                <CloseIcon />
+              </Button>
+            </FormControl>
+          )}
+        </HStack>
+
+        <Divider label={t`Using Coordinates`} mb="2" mt="4" />
+
+        <HStack>
+          <FormControl flex={1} flexGrow={1} pr="1">
+            <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
+            <NumericInput
+              py="0"
+              flex={1}
+              fontSize="lg"
+              textAlign="center"
+              placeholder={t`Latitude`}
+              value={lat}
+              onChange={onLatChange}
+              invalidLabel="-"
+              invalidValue={undefined}
             />
             <FormControl.ErrorMessage
               leftIcon={<WarningOutlineIcon size="xs" />}>
-              {t`Error in loading search results`}
+              {t`Latitude is invalid`}
             </FormControl.ErrorMessage>
           </FormControl>
-        )}
-
-        {(selectedCountry || selectedCity) && (
-          <FormControl ml="3" justifyContent="center">
-            <FormControl.Label> </FormControl.Label>
-            <Button
-              accessibilityLabel={t`Clear the location`}
-              borderColor="danger.900"
-              variant="outline"
-              colorScheme="danger"
-              width="10"
-              height="10"
-              onPress={clearCountryAndCity}>
-              <CloseIcon />
-            </Button>
-          </FormControl>
-        )}
-      </HStack>
-
-      <Divider label={t`Using Coordinates`} mb="2" mt="4" />
-
-      <HStack>
-        <FormControl flex={1} flexGrow={1} pr="1">
-          <FormControl.Label justifyContent="center">{t`Latitude`}</FormControl.Label>
-          <NumericInput
-            py="0"
-            flex={1}
-            fontSize="lg"
-            textAlign="center"
-            placeholder={t`Latitude`}
-            value={lat}
-            onChange={onLatChange}
-            invalidLabel="-"
-            invalidValue={undefined}
-          />
-          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-            {t`Latitude is invalid`}
-          </FormControl.ErrorMessage>
-        </FormControl>
-        <FormControl flex={1} flexGrow={1} pl="1">
-          <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
-          <NumericInput
-            py="0"
-            flex={1}
-            fontSize="lg"
-            textAlign="center"
-            placeholder={t`Longitude`}
-            value={long}
-            onChange={onLongChange}
-            invalidLabel="-"
-            invalidValue={undefined}
-          />
-          <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-            {t`Longitude is invalid`}
-          </FormControl.ErrorMessage>
-        </FormControl>
-
-        {lat || long ? (
-          <FormControl flexShrink={1} flexGrow={0} w="10" pl="1">
-            <FormControl.Label> </FormControl.Label>
-            <Button
+          <FormControl flex={1} flexGrow={1} pl="1">
+            <FormControl.Label justifyContent="center">{t`Longitude`}</FormControl.Label>
+            <NumericInput
+              py="0"
               flex={1}
-              accessibilityLabel={t`Clear the coordinates`}
-              borderColor="danger.900"
-              variant="outline"
-              colorScheme="danger"
-              size="sm"
-              onPress={clearCoordinatesAndCities}>
-              <CloseIcon />
-            </Button>
+              fontSize="lg"
+              textAlign="center"
+              placeholder={t`Longitude`}
+              value={long}
+              onChange={onLongChange}
+              invalidLabel="-"
+              invalidValue={undefined}
+            />
+            <FormControl.ErrorMessage
+              leftIcon={<WarningOutlineIcon size="xs" />}>
+              {t`Longitude is invalid`}
+            </FormControl.ErrorMessage>
           </FormControl>
-        ) : undefined}
-      </HStack>
-      <HStack mt="5">
-        <FormControl alignItems="center" justifyContent="center">
-          <FormControl.Label mb="3">
-            <Text fontSize="sm" textAlign="justify">
-              {t`You can also paste coords from clipboard`}
-            </Text>
-          </FormControl.Label>
-          <Button
-            onPress={onPasteButtonPressed}
-            textAlign="center"
-            width="1/3">{t`Paste`}</Button>
-          <Spacer />
-        </FormControl>
-      </HStack>
-    </ScrollView>
+
+          {lat || long ? (
+            <FormControl flexShrink={1} flexGrow={0} w="10" pl="1">
+              <FormControl.Label> </FormControl.Label>
+              <Button
+                flex={1}
+                accessibilityLabel={t`Clear the coordinates`}
+                borderColor="danger.900"
+                variant="outline"
+                colorScheme="danger"
+                size="sm"
+                onPress={clearCoordinatesAndCities}>
+                <CloseIcon />
+              </Button>
+            </FormControl>
+          ) : undefined}
+        </HStack>
+        <HStack mt="5">
+          <FormControl alignItems="center" justifyContent="center">
+            <FormControl.Label mb="3">
+              <Text fontSize="sm" textAlign="justify">
+                {t`You can also paste coords from clipboard`}
+              </Text>
+            </FormControl.Label>
+            <Button
+              onPress={onPasteButtonPressed}
+              textAlign="center"
+              width="1/3">{t`Paste`}</Button>
+            <Spacer />
+          </FormControl>
+        </HStack>
+      </ScrollView>
+    </SafeArea>
   );
 }

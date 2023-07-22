@@ -8,6 +8,7 @@ import {StyleSheet, View} from 'react-native';
 import {CheckIcon} from '@/assets/icons/material_icons/check';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {ExploreIcon} from '@/assets/icons/material_icons/explore';
+import {SafeArea} from '@/components/safe_area';
 import Compass, {setUpdateRate} from '@/modules/compass';
 import {calcSettings} from '@/store/calculation';
 
@@ -197,139 +198,141 @@ export function QiblaMap() {
   }
 
   return (
-    <View style={styles.page}>
-      <View
-        style={{
-          position: 'absolute',
-          right: 0,
-          bottom: 0,
-          zIndex: 1,
-          flexDirection: 'column',
-          alignItems: 'flex-end',
-        }}>
-        <Button
-          mb="1"
-          mr="1"
-          px="1"
-          backgroundColor={compassLock ? 'primary.900' : 'black:alpha.60'}
-          h="10"
-          borderColor={compassLock ? 'primary.400' : 'black:alpha.50'}
-          borderWidth={1}
-          size="sm"
-          onPress={toggleCompassLock}>
-          <HStack alignItems="center">
-            <Text
-              fontSize="sm"
-              color={
-                compassLock ? 'primary.400' : 'white'
-              }>{t`Compass Lock`}</Text>
-            <ExploreIcon
-              ml="1"
-              color={compassLock ? 'primary.400' : 'white'}
-              size="2xl"
-            />
-          </HStack>
-        </Button>
+    <SafeArea>
+      <View style={styles.page}>
         <View
           style={{
-            backgroundColor: '#00000099',
-          }}>
-          <Text background="red" padding="1" color="white" fontSize="xs">
-            &copy; OpenStreetMap Contributors
-          </Text>
-        </View>
-      </View>
-      {compassLock ? (
-        <View
-          style={{
-            justifyContent: 'center',
             position: 'absolute',
-            left: 0,
-            top: 0,
+            right: 0,
+            bottom: 0,
             zIndex: 1,
-            width: '100%',
-            flexDirection: 'row',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
           }}>
+          <Button
+            mb="1"
+            mr="1"
+            px="1"
+            backgroundColor={compassLock ? 'primary.900' : 'black:alpha.60'}
+            h="10"
+            borderColor={compassLock ? 'primary.400' : 'black:alpha.50'}
+            borderWidth={1}
+            size="sm"
+            onPress={toggleCompassLock}>
+            <HStack alignItems="center">
+              <Text
+                fontSize="sm"
+                color={
+                  compassLock ? 'primary.400' : 'white'
+                }>{t`Compass Lock`}</Text>
+              <ExploreIcon
+                ml="1"
+                color={compassLock ? 'primary.400' : 'white'}
+                size="2xl"
+              />
+            </HStack>
+          </Button>
           <View
             style={{
               backgroundColor: '#00000099',
             }}>
-            {isFacingKaaba ? (
-              <CheckIcon size="6xl" color="#59cf78" />
-            ) : (
-              <CloseIcon size="6xl" color="red.400" />
-            )}
+            <Text background="red" padding="1" color="white" fontSize="xs">
+              &copy; OpenStreetMap Contributors
+            </Text>
           </View>
         </View>
-      ) : undefined}
-      <MapLibreGL.MapView
-        style={styles.map}
-        attributionEnabled={true}
-        attributionPosition={{left: 5, bottom: 5}}
-        logoEnabled={false}
-        zoomEnabled={true}
-        pitchEnabled={false}
-        scrollEnabled={false}
-        rotateEnabled={true}
-        compassEnabled={true}
-        localizeLabels={true}
-        onTouchEnd={debouncedCameraUpdate}
-        onDidFinishRenderingMapFully={updateCamera}>
-        {/* @ts-ignore */}
-        <MapLibreGL.Style json={mapStyle} />
-        <MapLibreGL.Camera
-          // @ts-ignore
-          ref={cameraRef}
-          zoomLevel={10}
-          minZoomLevel={12}
-        />
-        <MapLibreGL.UserLocation
-          visible={true}
-          showsUserHeadingIndicator={false}
-          renderMode="normal"
-          onUpdate={onUserLocationUpdate}
-        />
-        <MapLibreGL.ShapeSource
-          id="qibla_line"
-          shape={getLineGeoJson(coords.current, qiblaDirCoords)}
-        />
-        <MapLibreGL.ShapeSource
-          id="user_line"
-          shape={getLineGeoJson(coords.current, userDirCoords)}
-        />
-        <MapLibreGL.LineLayer
-          id="qibla_line_highlight"
-          sourceID="qibla_line"
-          style={{
-            lineCap: 'round',
-            lineJoin: 'round',
-            lineColor: '#444',
-            lineWidth: 10,
-          }}
-        />
-        <MapLibreGL.LineLayer
-          id="qibla_line_layer"
-          sourceID="qibla_line"
-          style={{
-            lineCap: 'round',
-            lineJoin: 'round',
-            lineColor: '#ffdd00',
-            lineWidth: 3,
-          }}
-        />
         {compassLock ? (
+          <View
+            style={{
+              justifyContent: 'center',
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              zIndex: 1,
+              width: '100%',
+              flexDirection: 'row',
+            }}>
+            <View
+              style={{
+                backgroundColor: '#00000099',
+              }}>
+              {isFacingKaaba ? (
+                <CheckIcon size="6xl" color="#59cf78" />
+              ) : (
+                <CloseIcon size="6xl" color="red.400" />
+              )}
+            </View>
+          </View>
+        ) : undefined}
+        <MapLibreGL.MapView
+          style={styles.map}
+          attributionEnabled={true}
+          attributionPosition={{left: 5, bottom: 5}}
+          logoEnabled={false}
+          zoomEnabled={true}
+          pitchEnabled={false}
+          scrollEnabled={false}
+          rotateEnabled={true}
+          compassEnabled={true}
+          localizeLabels={true}
+          onTouchEnd={debouncedCameraUpdate}
+          onDidFinishRenderingMapFully={updateCamera}>
+          {/* @ts-ignore */}
+          <MapLibreGL.Style json={mapStyle} />
+          <MapLibreGL.Camera
+            // @ts-ignore
+            ref={cameraRef}
+            zoomLevel={10}
+            minZoomLevel={12}
+          />
+          <MapLibreGL.UserLocation
+            visible={true}
+            showsUserHeadingIndicator={false}
+            renderMode="normal"
+            onUpdate={onUserLocationUpdate}
+          />
+          <MapLibreGL.ShapeSource
+            id="qibla_line"
+            shape={getLineGeoJson(coords.current, qiblaDirCoords)}
+          />
+          <MapLibreGL.ShapeSource
+            id="user_line"
+            shape={getLineGeoJson(coords.current, userDirCoords)}
+          />
           <MapLibreGL.LineLayer
-            id="user_line_layer"
-            sourceID="user_line"
+            id="qibla_line_highlight"
+            sourceID="qibla_line"
             style={{
               lineCap: 'round',
               lineJoin: 'round',
-              lineColor: isFacingKaaba ? '#59cf78' : '#000',
+              lineColor: '#444',
+              lineWidth: 10,
+            }}
+          />
+          <MapLibreGL.LineLayer
+            id="qibla_line_layer"
+            sourceID="qibla_line"
+            style={{
+              lineCap: 'round',
+              lineJoin: 'round',
+              lineColor: '#ffdd00',
               lineWidth: 3,
             }}
           />
-        ) : undefined}
-      </MapLibreGL.MapView>
-    </View>
+          {compassLock ? (
+            <MapLibreGL.LineLayer
+              id="user_line_layer"
+              sourceID="user_line"
+              style={{
+                lineCap: 'round',
+                lineJoin: 'round',
+                lineColor: isFacingKaaba ? '#59cf78' : '#000',
+                lineWidth: 3,
+              }}
+            />
+          ) : undefined}
+        </MapLibreGL.MapView>
+      </View>
+    </SafeArea>
   );
 }

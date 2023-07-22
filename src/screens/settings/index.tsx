@@ -14,6 +14,7 @@ import {NotificationsActiveIcon} from '@/assets/icons/material_icons/notificatio
 import {SaveIcon} from '@/assets/icons/material_icons/save';
 import {VolumeUpIcon} from '@/assets/icons/material_icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/material_icons/widget';
+import {SafeArea} from '@/components/safe_area';
 import {RootStackParamList} from '@/navigation/types';
 import {clearCache} from '@/store/adhan_calc_cache';
 import {alarmSettings} from '@/store/alarm';
@@ -159,9 +160,11 @@ function Settings() {
   );
 
   return (
-    <Stack safeArea py="3">
-      <FlatList data={settingsScreenList} renderItem={renderItem}></FlatList>
-    </Stack>
+    <SafeArea>
+      <Stack py="3">
+        <FlatList data={settingsScreenList} renderItem={renderItem}></FlatList>
+      </Stack>
+    </SafeArea>
   );
 }
 

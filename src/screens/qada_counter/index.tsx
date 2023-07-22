@@ -7,6 +7,7 @@ import {shallow} from 'zustand/shallow';
 import {CounterView} from './counter_view';
 import {EditCounterModal} from './edit_counter_modal';
 import {AddIcon} from '@/assets/icons/material_icons/add';
+import {SafeArea} from '@/components/safe_area';
 import {Counter, counterStore} from '@/store/counter';
 import {useSettings} from '@/store/settings';
 
@@ -67,47 +68,49 @@ export function QadaCounter() {
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
-      <Stack safeArea flex={1}>
-        <DraggableFlatList
-          data={counters}
-          onDragEnd={({data}) => setCounters(data)}
-          renderItem={renderItem as RenderItem<unknown>}
-          keyExtractor={counter => counter.id}
-          contentContainerStyle={{
-            paddingBottom: 80,
-          }}
-          style={{
-            padding: 8,
-          }}
-        />
-        <Button
-          bgColor="primary.600"
-          _dark={{
-            bgColor: 'coolGray.700',
-          }}
-          _pressed={{
-            bgColor: 'primary.700',
-            _dark: {
-              bgColor: 'coolGray.800',
-            },
-          }}
-          position="absolute"
-          right={2}
-          bottom={2}
-          height={16}
-          width={16}
-          shadow="2"
-          borderRadius={1000}
-          onPress={onAddCounterPressed}>
-          <AddIcon size="2xl" color="gray.100" _dark={{color: 'gray.400'}} />
-        </Button>
-        <EditCounterModal
-          counterState={creatingCounter}
-          onCancel={cancelCounterCreation}
-          onConfirm={onCounterChanged}
-          onDelete={removeCounter}
-        />
-      </Stack>
+      <SafeArea>
+        <Stack flex={1}>
+          <DraggableFlatList
+            data={counters}
+            onDragEnd={({data}) => setCounters(data)}
+            renderItem={renderItem as RenderItem<unknown>}
+            keyExtractor={counter => counter.id}
+            contentContainerStyle={{
+              paddingBottom: 80,
+            }}
+            style={{
+              padding: 8,
+            }}
+          />
+          <Button
+            bgColor="primary.600"
+            _dark={{
+              bgColor: 'coolGray.700',
+            }}
+            _pressed={{
+              bgColor: 'primary.700',
+              _dark: {
+                bgColor: 'coolGray.800',
+              },
+            }}
+            position="absolute"
+            right={2}
+            bottom={2}
+            height={16}
+            width={16}
+            shadow="2"
+            borderRadius={1000}
+            onPress={onAddCounterPressed}>
+            <AddIcon size="2xl" color="gray.100" _dark={{color: 'gray.400'}} />
+          </Button>
+          <EditCounterModal
+            counterState={creatingCounter}
+            onCancel={cancelCounterCreation}
+            onConfirm={onCounterChanged}
+            onDelete={removeCounter}
+          />
+        </Stack>
+      </SafeArea>
     </GestureHandlerRootView>
   );
 }

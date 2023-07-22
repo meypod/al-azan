@@ -11,6 +11,7 @@ import {SettingsSharpIcon} from '@/assets/icons/material_icons/settings_sharp';
 import {UpdateIcon} from '@/assets/icons/material_icons/update';
 import Divider from '@/components/Divider';
 import PrayerTimesBox from '@/components/PrayerTimesBox';
+import {SafeArea} from '@/components/safe_area';
 import {isRTL} from '@/i18n';
 
 import {navigate} from '@/navigation/root_navigation';
@@ -88,113 +89,115 @@ export function Home() {
   }, [impactfulSettings, updateCurrentDate]);
 
   return (
-    <ScrollView>
-      <Stack safeArea flex={1} alignItems="center">
-        <HStack
-          mb="-3"
-          px="3"
-          justifyContent="space-between"
-          alignItems="center"
-          w="100%">
-          <HStack alignItems="center">
-            <Text>{day.dateString}</Text>
-          </HStack>
+    <SafeArea>
+      <ScrollView>
+        <Stack flex={1} alignItems="center">
+          <HStack
+            mb="-3"
+            px="3"
+            justifyContent="space-between"
+            alignItems="center"
+            w="100%">
+            <HStack alignItems="center">
+              <Text>{day.dateString}</Text>
+            </HStack>
 
-          <HStack alignItems="center">
-            <Button
-              p="2"
-              marginLeft="3"
-              variant="ghost"
-              onPress={() => {
-                navigate('QadaCounter');
-              }}>
-              <AddCircleIcon size="2xl" />
+            <HStack alignItems="center">
+              <Button
+                p="2"
+                marginLeft="3"
+                variant="ghost"
+                onPress={() => {
+                  navigate('QadaCounter');
+                }}>
+                <AddCircleIcon size="2xl" />
+              </Button>
+              <Button
+                p="2"
+                variant="ghost"
+                onPress={() => {
+                  navigate('QiblaFinder');
+                }}>
+                <ExploreIcon size="2xl" />
+              </Button>
+              <Button
+                p="2"
+                marginRight="-3"
+                variant="ghost"
+                onPress={() => {
+                  navigate('Settings');
+                }}>
+                <SettingsSharpIcon size="2xl" />
+              </Button>
+            </HStack>
+          </HStack>
+          <Divider
+            borderColor="coolGray.300"
+            mb="-2"
+            _text={{fontWeight: 'bold'}}>
+            {day.dayName}
+          </Divider>
+          <HStack
+            mt="2"
+            justifyContent="space-between"
+            alignItems="center"
+            w="100%"
+            flexDirection={isRTL ? 'row-reverse' : 'row'}>
+            <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
+              <Stack
+                flexDirection={isRTL ? 'row' : 'row-reverse'}
+                alignItems="center">
+                <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
+                <RestoreIcon size="xl" />
+              </Stack>
             </Button>
-            <Button
-              p="2"
-              variant="ghost"
-              onPress={() => {
-                navigate('QiblaFinder');
-              }}>
-              <ExploreIcon size="2xl" />
-            </Button>
-            <Button
-              p="2"
-              marginRight="-3"
-              variant="ghost"
-              onPress={() => {
-                navigate('Settings');
-              }}>
-              <SettingsSharpIcon size="2xl" />
+            {!day.isToday && (
+              <Button
+                onPress={resetCurrentDate}
+                variant="outline"
+                py="2"
+                px="1"
+                flexShrink={1}
+                _text={{
+                  adjustsFontSizeToFit: true,
+                  fontSize: 'xs',
+                  noOfLines: 1,
+                  _light: {
+                    color: 'primary.700',
+                  },
+                  _dark: {
+                    color: 'primary.300',
+                  },
+                }}
+                borderColor="primary.500">
+                {t`Show Today`}
+              </Button>
+            )}
+            <Button variant="ghost" onPress={increaseCurrentDateByOne}>
+              <Stack
+                flexDirection={isRTL ? 'row' : 'row-reverse'}
+                alignItems="center">
+                <UpdateIcon size="xl" />
+                <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
+              </Stack>
             </Button>
           </HStack>
-        </HStack>
-        <Divider
-          borderColor="coolGray.300"
-          mb="-2"
-          _text={{fontWeight: 'bold'}}>
-          {day.dayName}
-        </Divider>
-        <HStack
-          mt="2"
-          justifyContent="space-between"
-          alignItems="center"
-          w="100%"
-          flexDirection={isRTL ? 'row-reverse' : 'row'}>
-          <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
-            <Stack
-              flexDirection={isRTL ? 'row' : 'row-reverse'}
-              alignItems="center">
-              <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
-              <RestoreIcon size="xl" />
-            </Stack>
-          </Button>
-          {!day.isToday && (
-            <Button
-              onPress={resetCurrentDate}
-              variant="outline"
-              py="2"
-              px="1"
-              flexShrink={1}
-              _text={{
-                adjustsFontSizeToFit: true,
-                fontSize: 'xs',
-                noOfLines: 1,
-                _light: {
-                  color: 'primary.700',
-                },
-                _dark: {
-                  color: 'primary.300',
-                },
-              }}
-              borderColor="primary.500">
-              {t`Show Today`}
-            </Button>
-          )}
-          <Button variant="ghost" onPress={increaseCurrentDateByOne}>
-            <Stack
-              flexDirection={isRTL ? 'row' : 'row-reverse'}
-              alignItems="center">
-              <UpdateIcon size="xl" />
-              <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
-            </Stack>
-          </Button>
-        </HStack>
-        <PrayerTimesBox
-          pt="2.5"
-          prayerTimes={prayerTimes}
-          settings={impactfulSettings}
-        />
-        <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="1">
-          {day.arabicDate}
-        </Text>
-        {impactfulSettings.LOCATION_CITY && (
-          <Text mb="1">
-            {impactfulSettings.LOCATION_CITY.selectedName ||
-              impactfulSettings.LOCATION_CITY.name}
+          <PrayerTimesBox
+            pt="2.5"
+            prayerTimes={prayerTimes}
+            settings={impactfulSettings}
+          />
+          <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="1">
+            {day.arabicDate}
           </Text>
-        )}
-      </Stack>
-    </ScrollView>
+          {impactfulSettings.LOCATION_CITY && (
+            <Text mb="1">
+              {impactfulSettings.LOCATION_CITY.selectedName ||
+                impactfulSettings.LOCATION_CITY.name}
+            </Text>
+          )}
+        </Stack>
+      </ScrollView>
+    </SafeArea>
   );
 }
