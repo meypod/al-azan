@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Box, Button, Flex, HStack, ScrollView, Text} from 'native-base';
+import {Button, Flex, HStack, ScrollView, Stack, Text} from 'native-base';
 import {useEffect, useState} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
@@ -89,7 +89,7 @@ export function Home() {
 
   return (
     <ScrollView>
-      <Box safeArea flex={1} alignItems="center">
+      <Stack safeArea flex={1} alignItems="center">
         <HStack
           mb="-3"
           px="3"
@@ -181,13 +181,13 @@ export function Home() {
           prayerTimes={prayerTimes}
           settings={impactfulSettings}
         />
-        {impactfulSettings.LOCATION_CITY && (
-          <Text>{impactfulSettings.LOCATION_CITY.name}</Text>
-        )}
-        <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="3">
+        <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="1">
           {day.arabicDate}
         </Text>
-      </Box>
+        {impactfulSettings.LOCATION_CITY && (
+          <Text mb="1">{impactfulSettings.LOCATION_CITY.name}</Text>
+        )}
+      </Stack>
     </ScrollView>
   );
 }
