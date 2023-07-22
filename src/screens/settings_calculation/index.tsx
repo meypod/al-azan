@@ -135,7 +135,10 @@ export function CalculationSettings(props: IScrollViewProps) {
             borderRadius={5}
             mt="1"
             py="1"
-            borderColor={'gray.300'}>
+            borderColor="muted.300"
+            _dark={{
+              borderColor: 'muted.700',
+            }}>
             <VStack flex={1}>
               <Text fontSize="xs" textAlign="center" mb="1">
                 {t`Fajr Angle`}
