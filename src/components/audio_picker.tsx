@@ -460,7 +460,7 @@ const defaultGetOptionKey = (option: any) => {
       return JSON.stringify(option);
     } catch (e) {
       return console.warn(
-        `[AutocompleteInput warn]: Could not stringify option ` +
+        `[AudioPicker warn]: Could not stringify option ` +
           `to generate unique key. Please provide 'getOptionKey' prop ` +
           `to return a unique key for each option.\n`,
       );
@@ -472,7 +472,7 @@ const defaultGetOptionLabel = (label: string) => (option: any) => {
   if (typeof option === 'object') {
     if (!Object.prototype.hasOwnProperty.call(option, label)) {
       return console.warn(
-        `[AutocompleteInput warn]: Label key "option.${label}" does not` +
+        `[AudioPicker warn]: Label key "option.${label}" does not` +
           ` exist in options object ${JSON.stringify(option)}.\n`,
       );
     }
