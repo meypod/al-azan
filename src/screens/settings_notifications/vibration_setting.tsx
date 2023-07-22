@@ -2,10 +2,10 @@ import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useCallback} from 'react';
 import {VibrationMode} from '@/modules/activity';
-import {useSettings} from '@/store/settings';
+import {useAlarmSettings} from '@/store/alarm';
 
 export function VibrationSetting(props: IStackProps) {
-  const [vibrationMode, setVibrationMode] = useSettings('VIBRATION_MODE');
+  const [vibrationMode, setVibrationMode] = useAlarmSettings('VIBRATION_MODE');
 
   const setVibrationModeProxy = useCallback(
     (val: string) => {

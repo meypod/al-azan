@@ -43,8 +43,6 @@ export async function setNextAdhan(
     SAVED_ADHAN_AUDIO_ENTRIES,
     USE_DIFFERENT_ALARM_TYPE,
     BYPASS_DND,
-    DONT_TURN_ON_SCREEN,
-    VIBRATION_MODE,
   } = settings.getState();
 
   const deliveredTS = DELIVERED_ALARM_TIMESTAMPS[ADHAN_NOTIFICATION_ID] || 0;
@@ -70,13 +68,14 @@ export async function setNextAdhan(
     return;
   }
 
-  const showNextPrayerInfo = alarmSettings.getState().SHOW_NEXT_PRAYER_TIME;
+  const {SHOW_NEXT_PRAYER_TIME, DONT_TURN_ON_SCREEN, VIBRATION_MODE} =
+    alarmSettings.getState();
 
   const title = translatePrayer(prayer);
   let body: string | undefined = getTime(date);
   let subtitle: string | undefined = body;
 
-  if (showNextPrayerInfo) {
+  if (SHOW_NEXT_PRAYER_TIME) {
     const next = getNextPrayer({
       date: new Date(date.valueOf() + 1000),
       checkNextDays: true,

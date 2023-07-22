@@ -6,6 +6,7 @@ import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {reminderSettings} from './reminder';
 import {Prayer, PrayersInOrder} from '@/adhan';
+import {VibrationMode} from '@/modules/activity';
 import {WeekDayIndex} from '@/utils/date';
 
 export const ALARM_SETTINGS_STORAGE_KEY = 'ALARM_SETTINGS_STORAGE';
@@ -57,6 +58,9 @@ export type AlarmSettingsStore = {
   // pre alarm notification
   DONT_NOTIFY_UPCOMING: boolean;
   PRE_ALARM_MINUTES_BEFORE: number;
+  // behavior related
+  DONT_TURN_ON_SCREEN: boolean;
+  VIBRATION_MODE: VibrationMode;
 
   setSetting: <T extends keyof AlarmSettingsStore>(
     key: T,
@@ -73,6 +77,9 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
       SHOW_NEXT_PRAYER_TIME: false,
       DONT_NOTIFY_UPCOMING: false,
       PRE_ALARM_MINUTES_BEFORE: 60,
+      // behavior
+      DONT_TURN_ON_SCREEN: false,
+      VIBRATION_MODE: VibrationMode.ONCE,
 
       // general
       setSetting: <T extends keyof AlarmSettingsStore>(
@@ -100,7 +107,7 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 2,
+      version: 3,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -120,7 +127,16 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
             }
             break;
           case 2:
-            // this will be run when storage version is changed to 3
+            if (
+              typeof (persistedState as AlarmSettingsStore).VIBRATION_MODE ===
+              'undefined'
+            ) {
+              (persistedState as AlarmSettingsStore).VIBRATION_MODE =
+                VibrationMode.ONCE;
+            }
+            break;
+          case 3:
+            // this will be run when storage version is changed to 4
             break;
         }
         /* eslint-enable no-fallthrough */

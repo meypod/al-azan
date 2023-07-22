@@ -16,7 +16,6 @@ import {
   INITIAL_ADHAN_AUDIO_ENTRIES,
 } from '@/assets/adhan_entries';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
-import {VibrationMode} from '@/modules/activity';
 import type {AudioEntry} from '@/modules/media_player';
 import {CountryInfo, CityInfo} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
@@ -55,8 +54,6 @@ export type SettingsStore = {
   VOLUME_BUTTON_STOPS_ADHAN: boolean;
   PREFER_EXTERNAL_AUDIO_DEVICE: boolean;
   BYPASS_DND: boolean;
-  DONT_TURN_ON_SCREEN: boolean;
-  VIBRATION_MODE: VibrationMode;
   // widget
   SHOW_WIDGET: boolean;
   SHOW_WIDGET_COUNTDOWN: boolean;
@@ -156,8 +153,6 @@ export const settings = createStore<SettingsStore>()(
       VOLUME_BUTTON_STOPS_ADHAN: false,
       PREFER_EXTERNAL_AUDIO_DEVICE: false,
       BYPASS_DND: false,
-      DONT_TURN_ON_SCREEN: false,
-      VIBRATION_MODE: VibrationMode.ONCE,
       //
       COUNTER_HISTORY_VISIBLE: false,
       RAMADAN_REMINDED_YEAR: '',
@@ -389,13 +384,6 @@ export const settings = createStore<SettingsStore>()(
               'reminder-channel',
               'reminder-dnd-channel',
             ].map(notifee.deleteChannel);
-            if (
-              typeof (persistedState as SettingsStore).VIBRATION_MODE ===
-              'undefined'
-            ) {
-              (persistedState as SettingsStore).VIBRATION_MODE =
-                VibrationMode.ONCE;
-            }
             break;
         }
         /* eslint-enable no-fallthrough */

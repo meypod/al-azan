@@ -9,6 +9,7 @@ import {
   REMINDER_DND_CHANNEL_ID,
 } from '@/constants/notification';
 import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
+import {alarmSettings} from '@/store/alarm';
 import {reminderSettings, Reminder} from '@/store/reminder';
 import {settings} from '@/store/settings';
 import {getNextDayBeginning} from '@/utils/date';
@@ -29,7 +30,8 @@ export async function setReminders(options?: SetReminderOptions) {
     force = false,
   } = options || {};
 
-  const {BYPASS_DND, DONT_TURN_ON_SCREEN, VIBRATION_MODE} = settings.getState();
+  const {BYPASS_DND} = settings.getState();
+  const {DONT_TURN_ON_SCREEN, VIBRATION_MODE} = alarmSettings.getState();
 
   {
     // we dont need reminderIdsToCancel out of this scope, hence the extra {}
