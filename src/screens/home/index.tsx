@@ -63,6 +63,7 @@ export function Home() {
       HIDDEN_PRAYERS: s.HIDDEN_PRAYERS,
       DELIVERED_ALARM_TIMESTAMPS: s.DELIVERED_ALARM_TIMESTAMPS,
       HIGHLIGHT_CURRENT_PRAYER: s.HIGHLIGHT_CURRENT_PRAYER,
+      LOCATION_CITY: s.LOCATION_CITY,
     }),
     shallow,
   );
@@ -176,9 +177,13 @@ export function Home() {
           </Button>
         </HStack>
         <PrayerTimesBox
+          pt="2.5"
           prayerTimes={prayerTimes}
           settings={impactfulSettings}
         />
+        {impactfulSettings.LOCATION_CITY && (
+          <Text>{impactfulSettings.LOCATION_CITY.name}</Text>
+        )}
         <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="3">
           {day.arabicDate}
         </Text>

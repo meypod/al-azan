@@ -1,5 +1,5 @@
 import {difference} from 'lodash';
-import {Box} from 'native-base';
+import {Stack, IStackProps} from 'native-base';
 import {memo} from 'react';
 import {PrayersInOrder} from '@/adhan';
 import {getNextPrayer} from '@/adhan/prayer_times';
@@ -17,7 +17,11 @@ type PrayerTimesBoxProps = {
   >;
 };
 
-function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
+function PrayerTimesBox({
+  prayerTimes,
+  settings,
+  ...stackProps
+}: PrayerTimesBoxProps & IStackProps) {
   const nextPrayer = prayerTimes?.date
     ? getNextPrayer({
         date: prayerTimes.date,
@@ -52,7 +56,7 @@ function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
   }
 
   return (
-    <Box display="flex" flexDirection="column" px="3" py="2">
+    <Stack display="flex" flexDirection="column" px="3" {...stackProps}>
       {visiblePrayerTimes.map(prayer => (
         <PrayerTimeRow
           key={prayer}
@@ -62,7 +66,7 @@ function PrayerTimesBox({prayerTimes, settings}: PrayerTimesBoxProps) {
           prayer={prayer}
         />
       ))}
-    </Box>
+    </Stack>
   );
 }
 
