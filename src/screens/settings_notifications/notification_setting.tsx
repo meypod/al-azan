@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
 import {HStack, Text, Button, VStack, Checkbox, Stack} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {memo, useCallback, useEffect, useState} from 'react';
+import {memo, useCallback} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {ExpandCircleDownIcon} from '@/assets/icons/material_icons/expand_circle_down';
 import Divider from '@/components/Divider';
@@ -297,16 +297,9 @@ export const NotificationSetting = function NotificationSetting({
     getAdhanSettingKey(prayer, 'sound') as 'FAJR_SOUND',
   );
 
-  const [internalExpanded, setInternalExpanded] = useState(expanded);
-
   const toggleExpanded = useCallback(() => {
     onExpandChanged && onExpandChanged(!expanded, prayer);
-    setInternalExpanded(!expanded);
   }, [expanded, onExpandChanged, prayer]);
-
-  useEffect(() => {
-    setInternalExpanded(expanded);
-  }, [expanded, setInternalExpanded]);
 
   const setSoundProxy = useCallback(
     (s: PrayerAlarmSettings) => {
@@ -353,12 +346,7 @@ export const NotificationSetting = function NotificationSetting({
       borderRadius={4}
       mb="1"
       {...vStackProps}>
-      <HStack
-        alignItems="center"
-        py="1"
-        pl="2"
-        pr="1"
-        mb={internalExpanded ? -2 : 0}>
+      <HStack alignItems="center" py="1" pl="2" pr="1" mb={expanded ? -2 : 0}>
         <Text width="1/4" flex={0} flexShrink={0}>
           {prayerName}
         </Text>
@@ -383,7 +371,7 @@ export const NotificationSetting = function NotificationSetting({
             <ExpandCircleDownIcon
               size="2xl"
               style={{
-                transform: [{rotate: internalExpanded ? '180deg' : '0deg'}],
+                transform: [{rotate: expanded ? '180deg' : '0deg'}],
               }}
             />
           </Button>
@@ -392,7 +380,7 @@ export const NotificationSetting = function NotificationSetting({
       <CollapsibleSelector
         setNotifyProxy={setNotifyProxy}
         setSoundProxy={setSoundProxy}
-        show={internalExpanded}
+        show={expanded}
         notify={notify}
         sound={sound}
       />
