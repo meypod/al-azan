@@ -12,6 +12,7 @@ import {
   useCalcSettings,
 } from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
+import {useUnmounted} from '@/utils/hooks/use_mounted';
 import useNoInitialEffect from '@/utils/hooks/use_update_effect';
 import {sumFloats} from '@/utils/numbers';
 
@@ -108,6 +109,12 @@ export function AdjustmentSetting({
     // to reset adjustment when the method changes
     setLocalAdjustment(adjustment as number);
   }, [setLocalAdjustment, adjustment]);
+
+  useUnmounted(() => {
+    if (localAdjustment !== undefined && localAdjustment !== adjustment) {
+      setAdjustment(localAdjustment);
+    }
+  }, [localAdjustment, setAdjustment]);
 
   return (
     <VStack {...hStackProps} mb="2" flex={1}>
