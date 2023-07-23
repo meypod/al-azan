@@ -82,6 +82,22 @@ function getPrayerTimesOptionsFromSettings() {
     isha: state.ISHA_ADJUSTMENT,
   };
 
+  prayerTimeOptions.calculationParameters.fajrAngle =
+    state.FAJR_ANGLE_OVERRIDE ||
+    prayerTimeOptions.calculationParameters.fajrAngle;
+
+  prayerTimeOptions.calculationParameters.ishaAngle =
+    state.ISHA_ANGLE_OVERRIDE ||
+    prayerTimeOptions.calculationParameters.ishaAngle;
+
+  prayerTimeOptions.calculationParameters.ishaInterval =
+    state.ISHA_INTERVAL_OVERRIDE ||
+    prayerTimeOptions.calculationParameters.ishaInterval;
+
+  prayerTimeOptions.calculationParameters.maghribAngle =
+    state.MAGHRIB_ANGLE_OVERRIDE ||
+    prayerTimeOptions.calculationParameters.maghribAngle;
+
   switch (highLatRuleSetting) {
     case HighLatitudeRule.MiddleOfTheNight:
       prayerTimeOptions.calculationParameters.highLatitudeRule =
