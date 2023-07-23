@@ -21,6 +21,7 @@ import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
 
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
+import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
 import {askPermissions} from '@/utils/permission';
 
 type DayDetails = {
@@ -40,19 +41,23 @@ function getDayDetails(date: Date): DayDetails {
 }
 
 export function Home() {
-  const [
+  const {
     currentDate,
     increaseCurrentDateByOne,
     decreaseCurrentDateByOne,
     updateCurrentDate,
     resetCurrentDate,
-  ] = useStore(homeStore, state => [
-    state.date,
-    state.increaseCurrentDateByOne,
-    state.decreaseCurrentDateByOne,
-    state.updateCurrentDate,
-    state.resetCurrentDate,
-  ]);
+  } = useStore(
+    homeStore,
+    state => ({
+      currentDate: state.date,
+      increaseCurrentDateByOne: state.increaseCurrentDateByOne,
+      decreaseCurrentDateByOne: state.decreaseCurrentDateByOne,
+      updateCurrentDate: state.updateCurrentDate,
+      resetCurrentDate: state.resetCurrentDate,
+    }),
+    shallow,
+  );
 
   const impactfulSettings = useStore(
     settings,
@@ -75,7 +80,7 @@ export function Home() {
 
   const [day, setDay] = useState<DayDetails>(getDayDetails(currentDate));
 
-  useEffect(() => {
+  useNoInitialEffect(() => {
     setDay(getDayDetails(currentDate));
     setPrayerTimes(getPrayerTimes(currentDate));
   }, [currentDate]);
@@ -84,7 +89,7 @@ export function Home() {
     void askPermissions();
   }, []);
 
-  useEffect(() => {
+  useNoInitialEffect(() => {
     updateCurrentDate();
   }, [impactfulSettings, updateCurrentDate]);
 
