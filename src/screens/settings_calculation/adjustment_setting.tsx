@@ -1,6 +1,10 @@
 import {Text, Input, HStack, VStack, Button} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
+import type {
+  NativeSyntheticEvent,
+  TextInputEndEditingEventData,
+} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
 import {
   type CalcSettingsStore,
@@ -9,7 +13,9 @@ import {
 } from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
 
-type AdjustmentSettingProps =
+type AdjustmentSettingProps = {
+  isFloat?: boolean;
+} & (
   | {
       prayer: Prayer;
       settingKey?: never;
@@ -19,19 +25,28 @@ type AdjustmentSettingProps =
       prayer?: never;
       settingKey: keyof CalcSettingsStore;
       label: string;
-    };
+    }
+);
 
 export function AdjustmentSetting({
   prayer,
   label,
   settingKey,
+  isFloat,
   ...hStackProps
 }: AdjustmentSettingProps & IVStackProps) {
   const [adjustment, setAdjustment] = useCalcSettings(
     settingKey || getPrayerAdjustmentSettingKey(prayer),
   );
 
-  const [localAdjustment, setLocalAdjustment] = useState(adjustment as number);
+  const [localAdjustment, setLocalAdjustment] = useState<number | undefined>(
+    adjustment as number,
+  );
+  const localAdjustmentString = useMemo(
+    () =>
+      typeof localAdjustment !== 'undefined' ? String(localAdjustment) : '',
+    [localAdjustment],
+  );
   const debouncedAdjustment = useDebounce(localAdjustment, 600);
 
   const adjustmentLabel =
@@ -39,22 +54,51 @@ export function AdjustmentSetting({
 
   const setLocalAdjustmentHelper = useCallback(
     (value: string) => {
-      setLocalAdjustment(parseInt(value, 10) || 0);
+      let parsedValue = NaN;
+      if (isFloat) {
+        parsedValue = parseFloat(value);
+      } else {
+        parsedValue = parseInt(value, 10);
+      }
+      if (Number.isNaN(parsedValue)) {
+        setLocalAdjustment(undefined);
+      } else {
+        setLocalAdjustment(parsedValue);
+      }
     },
-    [setLocalAdjustment],
+    [setLocalAdjustment, isFloat],
   );
 
-  const increaseLocalAdjustmentByOne = () => {
-    setLocalAdjustment(localAdjustment + 1);
-  };
+  const setLocalAdjustmentHelperForced = useCallback(
+    (e: NativeSyntheticEvent<TextInputEndEditingEventData>) => {
+      if (!e.nativeEvent.text) {
+        setLocalAdjustmentHelper('0');
+      }
+    },
+    [setLocalAdjustmentHelper],
+  );
 
-  const decreaseLocalAdjustmentByOne = () => {
-    setLocalAdjustment(localAdjustment - 1);
-  };
+  const increaseLocalAdjustmentByOne = useCallback(() => {
+    if (isFloat) {
+      setLocalAdjustment(adj => (adj || 0) + 0.1);
+    } else {
+      setLocalAdjustment(adj => (adj || 0) + 1);
+    }
+  }, [isFloat]);
+
+  const decreaseLocalAdjustmentByOne = useCallback(() => {
+    if (isFloat) {
+      setLocalAdjustment(adj => (adj || 0) - 0.1);
+    } else {
+      setLocalAdjustment(adj => (adj || 0) - 1);
+    }
+  }, [isFloat]);
 
   useEffect(() => {
     // to set values when user finishes
-    setAdjustment(debouncedAdjustment);
+    if (debouncedAdjustment) {
+      setAdjustment(debouncedAdjustment);
+    }
   }, [debouncedAdjustment, setAdjustment]);
 
   useEffect(() => {
@@ -88,9 +132,10 @@ export function AdjustmentSetting({
           flex={1}
           size="md"
           keyboardType="numeric"
-          value={localAdjustment.toString()}
+          value={localAdjustmentString}
           onChangeText={setLocalAdjustmentHelper}
           textAlign={'center'}
+          onEndEditing={setLocalAdjustmentHelperForced}
         />
         <Button
           variant="outline"
