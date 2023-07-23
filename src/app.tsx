@@ -6,7 +6,7 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack} from 'native-base';
-import {memo, useEffect, useMemo} from 'react';
+import {useEffect, useMemo} from 'react';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
@@ -45,16 +45,14 @@ import {updateWidgets} from '@/tasks/update_widgets';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const TranslatedHeaderTitle = memo(function TranslatedHeaderTitle({
-  ...props
-}: any) {
+const TranslatedHeaderTitle = function TranslatedHeaderTitle() {
   const routeName = getCurrentRoute().name;
   if (routeName) {
-    return <HeaderTitle {...props}>{translateRoute(routeName)}</HeaderTitle>;
+    return <HeaderTitle>{translateRoute(routeName)}</HeaderTitle>;
   } else {
     return <></>;
   }
-});
+};
 
 const QiblaFinderHeaderRight = function QiblaFinderHeaderRight() {
   return (
