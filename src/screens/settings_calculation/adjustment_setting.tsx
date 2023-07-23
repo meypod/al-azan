@@ -12,9 +12,11 @@ import {
   useCalcSettings,
 } from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
+import {sumFloats} from '@/utils/numbers';
 
 type AdjustmentSettingProps = {
   isFloat?: boolean;
+  fallbackInitial?: number;
 } & (
   | {
       prayer: Prayer;
@@ -33,6 +35,7 @@ export function AdjustmentSetting({
   label,
   settingKey,
   isFloat,
+  fallbackInitial,
   ...hStackProps
 }: AdjustmentSettingProps & IVStackProps) {
   const [adjustment, setAdjustment] = useCalcSettings(
@@ -40,7 +43,7 @@ export function AdjustmentSetting({
   );
 
   const [localAdjustment, setLocalAdjustment] = useState<number | undefined>(
-    adjustment as number,
+    (adjustment as number) || fallbackInitial,
   );
   const localAdjustmentString = useMemo(
     () =>
@@ -80,7 +83,7 @@ export function AdjustmentSetting({
 
   const increaseLocalAdjustmentByOne = useCallback(() => {
     if (isFloat) {
-      setLocalAdjustment(adj => (adj || 0) + 0.1);
+      setLocalAdjustment(adj => sumFloats(adj || 0, 0.1));
     } else {
       setLocalAdjustment(adj => (adj || 0) + 1);
     }
@@ -88,7 +91,7 @@ export function AdjustmentSetting({
 
   const decreaseLocalAdjustmentByOne = useCallback(() => {
     if (isFloat) {
-      setLocalAdjustment(adj => (adj || 0) - 0.1);
+      setLocalAdjustment(adj => sumFloats(adj || 0, -0.1));
     } else {
       setLocalAdjustment(adj => (adj || 0) - 1);
     }
