@@ -1,6 +1,7 @@
 import {t} from '@lingui/macro';
+import {DarkTheme, DefaultTheme} from '@react-navigation/native';
 import {Text, Stack, Button, Spacer} from 'native-base';
-import {memo, useCallback, useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {SafeArea} from '@/components/safe_area';
 import {finishAndRemoveTask, getActivityName} from '@/modules/activity';
 import {replace} from '@/navigation/root_navigation';
@@ -15,7 +16,21 @@ import {SetAlarmTaskOptions} from '@/tasks/set_alarm';
 import {getTime} from '@/utils/date';
 import {usePrevious} from '@/utils/hooks/use_previous';
 
-function FullscreenAlarm() {
+export const FullscreenAlarm = function FullscreenAlarm(
+  props: {
+    themeColor?: 'dark' | 'light';
+  } = {},
+) {
+  const bgColor = useMemo(() => {
+    if (props.themeColor) {
+      if (props.themeColor === 'dark') {
+        return DarkTheme.colors.background;
+      }
+      return DefaultTheme.colors.background;
+    }
+    return undefined;
+  }, [props.themeColor]);
+
   const [fullscreenOptions, setFullscreenOptions] = useState<{
     title: String;
     subtitle: String;
@@ -96,6 +111,7 @@ function FullscreenAlarm() {
   return (
     <SafeArea>
       <Stack
+        backgroundColor={bgColor}
         flex={1}
         flexDirection="column"
         alignItems="stretch"
@@ -140,6 +156,4 @@ function FullscreenAlarm() {
       </Stack>
     </SafeArea>
   );
-}
-
-export default memo(FullscreenAlarm);
+};

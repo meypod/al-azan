@@ -38,7 +38,8 @@ if (width < 420) {
 const extendedTheme = extendTheme({
   colors: colors,
   config: {
-    useSystemColorMode: true,
+    useSystemColorMode: false,
+    initialColorMode: 'dark',
   },
   components,
   fontSizes: {
@@ -63,9 +64,9 @@ const config = {
   suppressColorAccessibilityWarning: true,
 };
 
-export function BaseComponent<T extends JSX.IntrinsicAttributes>(
-  ChildComponent: React.FunctionComponent<T>,
-  args: T,
+export function BaseComponent(
+  ChildComponent: React.FunctionComponent<any>,
+  args: any,
 ) {
   useEffect(() => {
     const unsubscribe = setupNotifeeForegroundHandler();

@@ -5,7 +5,7 @@ import {bootstrap} from '@/bootstrap';
 import {handleDemoCommands} from '@/modules/activity';
 import {onUpdateScreenWidgetRequested} from '@/modules/screen_widget';
 import {setupNotifeeHandlers} from '@/notifee';
-import fullscreen_alarm from '@/screens/fullscreen_alarm';
+import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
@@ -36,7 +36,7 @@ AppRegistry.registerRunnable('main-app', async initialProps => {
 AppRegistry.registerRunnable('fs-alarm', async initialProps => {
   bootstrap();
   AppRegistry.registerComponent('fs-alarm', () =>
-    BaseComponent.bind(this, fullscreen_alarm),
+    BaseComponent.bind(this, FullscreenAlarm),
   );
   AppRegistry.runApplication('fs-alarm', initialProps);
 });
