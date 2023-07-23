@@ -87,6 +87,7 @@ export function AdjustmentSetting({
           borderRightWidth={0}
           flex={1}
           size="md"
+          keyboardType="numeric"
           value={localAdjustment.toString()}
           onChangeText={setLocalAdjustmentHelper}
           textAlign={'center'}
