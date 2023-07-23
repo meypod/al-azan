@@ -29,6 +29,7 @@ export const AutocompleteInput = <T extends unknown>(
     autoCompleteKeys,
     getOptionKey = defaultGetOptionKey as (item: T, i: number) => string,
     getOptionLabel = defaultGetOptionLabel(label || 'label'),
+    getSelectedOptionLabel: getInputLabel,
     onItemSelected = () => {},
     onChangeText: onChangeTextProp,
     actionsheetLabel,
@@ -44,6 +45,8 @@ export const AutocompleteInput = <T extends unknown>(
   const [data, setData] = useState<T[]>(propData || []);
   const [loading, setLoading] = useState(!propData);
   const unmounted = useRef(false);
+
+  const getSelectedOptionLabel = getInputLabel || getOptionLabel;
 
   useEffect(() => {
     unmounted.current = false;
@@ -117,10 +120,10 @@ export const AutocompleteInput = <T extends unknown>(
 
   const textValue = useMemo(() => {
     if (selectedItem) {
-      return getOptionLabel(selectedItem);
+      return getSelectedOptionLabel(selectedItem);
     }
     return '';
-  }, [getOptionLabel, selectedItem]);
+  }, [getSelectedOptionLabel, selectedItem]);
 
   const memoRenderItem: ListRenderItem<T> = useCallback(
     listItemInfo => (
@@ -261,6 +264,7 @@ type AutocompleteInputProps<T> = IInputProps & {
   autoCompleteKeys?: string[];
   getOptionKey?: (item: T) => string;
   getOptionLabel?: (item: T) => string;
+  getSelectedOptionLabel?: (item: T) => string;
   onItemSelected?: (item: T) => void;
   onChangeText?: (text: string) => void;
   useReturnedMatch?: boolean;

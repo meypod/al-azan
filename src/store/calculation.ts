@@ -36,6 +36,11 @@ export type CalcSettingsStore = {
   SHAFAQ: string;
   POLAR_RESOLUTION: string;
   MIDNIGHT_METHOD: MidnightMethod;
+  // Parameters override
+  FAJR_ANGLE_OVERRIDE: undefined | number;
+  ISHA_ANGLE_OVERRIDE: undefined | number;
+  MAGHRIB_ANGLE_OVERRIDE: undefined | number;
+  ISHA_INTERVAL_OVERRIDE: undefined | number;
 
   // prayer adjustment settings
   FAJR_ADJUSTMENT: number;
@@ -49,6 +54,10 @@ export type CalcSettingsStore = {
   // calendar
   HIJRI_DATE_ADJUSTMENT: number;
 
+  computed: {
+    isCalcParamsModified: boolean;
+  };
+
   setSetting: <T extends keyof CalcSettingsStore>(
     key: T,
     val: CalcSettingsStore[T],
@@ -56,11 +65,11 @@ export type CalcSettingsStore = {
   removeSetting: (key: keyof CalcSettingsStore) => () => void;
 };
 
-const invalidKeys = ['setSetting', 'removeSetting'];
+const invalidKeys = ['setSetting', 'removeSetting', 'computed'];
 
 export const calcSettings = createStore<CalcSettingsStore>()(
   persist(
-    set => ({
+    (set, get) => ({
       LOCATION_LAT: undefined,
       LOCATION_LONG: undefined,
       CALCULATION_METHOD_KEY: undefined,
@@ -69,6 +78,11 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SHAFAQ: Shafaq.General,
       POLAR_RESOLUTION: PolarCircleResolution.Unresolved,
       MIDNIGHT_METHOD: MidnightMethod.Standard,
+      // Parameters override
+      FAJR_ANGLE_OVERRIDE: undefined,
+      ISHA_ANGLE_OVERRIDE: undefined,
+      MAGHRIB_ANGLE_OVERRIDE: undefined,
+      ISHA_INTERVAL_OVERRIDE: undefined,
 
       FAJR_ADJUSTMENT: 0,
       SUNRISE_ADJUSTMENT: 0,
@@ -80,6 +94,20 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       MIDNIGHT_ADJUSTMENT: 0,
       // calendar
       HIJRI_DATE_ADJUSTMENT: 0,
+
+      computed: {
+        get isCalcParamsModified() {
+          const state = get();
+          return (
+            [
+              state.FAJR_ANGLE_OVERRIDE,
+              state.ISHA_ANGLE_OVERRIDE,
+              state.MAGHRIB_ANGLE_OVERRIDE,
+              state.ISHA_INTERVAL_OVERRIDE,
+            ].findIndex(p => typeof p !== 'undefined') !== -1
+          );
+        },
+      },
 
       // general
       setSetting: <T extends keyof CalcSettingsStore>(

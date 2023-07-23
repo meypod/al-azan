@@ -5,7 +5,6 @@ import {
   Madhab,
   Shafaq,
   MidnightMethod,
-  CalculationParameters,
 } from 'adhan-extended';
 import {
   Select,
@@ -14,11 +13,10 @@ import {
   ScrollView,
   IScrollViewProps,
   Text,
-  HStack,
-  VStack,
 } from 'native-base';
-
 import {useCallback, useMemo} from 'react';
+import {useStore} from 'zustand';
+import {CalcParamsBox} from './calc_params_box';
 import {CalendarSettings} from './calendar_settings';
 import {CalculationMethods} from '@/adhan';
 import {CalculationMethodEntry} from '@/adhan/calculation_methods';
@@ -26,19 +24,27 @@ import {MenuIcon} from '@/assets/icons/material_icons/menu';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {SafeArea} from '@/components/safe_area';
 import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
-import {useCalcSettings} from '@/store/calculation';
+import {calcSettings, useCalcSettings} from '@/store/calculation';
 
 export function CalculationSettings(props: IScrollViewProps) {
+  const isMethodModified = useStore(
+    calcSettings,
+    s => s.computed.isCalcParamsModified,
+  );
+
   const [calculationMethodKey, setCalculationMethodKey] = useCalcSettings(
     'CALCULATION_METHOD_KEY',
   );
 
-  const [, setFajrAdjustment] = useCalcSettings('FAJR_ADJUSTMENT');
-  const [, setSunriseAdjustment] = useCalcSettings('SUNRISE_ADJUSTMENT');
-  const [, setDhuhrAdjustment] = useCalcSettings('DHUHR_ADJUSTMENT');
-  const [, setAsrAdjustment] = useCalcSettings('ASR_ADJUSTMENT');
-  const [, setMaghribAdjustment] = useCalcSettings('MAGHRIB_ADJUSTMENT');
-  const [, setIshaAdjustment] = useCalcSettings('ISHA_ADJUSTMENT');
+  const getMethodLabel = useCallback(
+    (entry: CalculationMethodEntry) => {
+      if (isMethodModified && entry.key !== 'Custom') {
+        return entry.label + ' (' + t`Modified` + ')';
+      }
+      return entry.label;
+    },
+    [isMethodModified],
+  );
 
   const [highLatitudeRuleSetting, setHighLatitudeRuleSetting] =
     useCalcSettings('HIGH_LATITUDE_RULE');
@@ -57,31 +63,22 @@ export function CalculationSettings(props: IScrollViewProps) {
   const calculationMethodChanged = useCallback(
     (itemValue: CalculationMethodEntry) => {
       setCalculationMethodKey(itemValue.key);
-      setFajrAdjustment(0);
-      setSunriseAdjustment(0);
-      setDhuhrAdjustment(0);
-      setAsrAdjustment(0);
-      setMaghribAdjustment(0);
-      setIshaAdjustment(0);
+      calcSettings.setState({
+        FAJR_ADJUSTMENT: 0,
+        SUNRISE_ADJUSTMENT: 0,
+        DHUHR_ADJUSTMENT: 0,
+        ASR_ADJUSTMENT: 0,
+        MAGHRIB_ADJUSTMENT: 0,
+        ISHA_ADJUSTMENT: 0,
+        FAJR_ANGLE_OVERRIDE: undefined,
+        ISHA_ANGLE_OVERRIDE: undefined,
+        MAGHRIB_ANGLE_OVERRIDE: undefined,
+        ISHA_INTERVAL_OVERRIDE: undefined,
+      });
     },
-    [
-      setAsrAdjustment,
-      setCalculationMethodKey,
-      setDhuhrAdjustment,
-      setFajrAdjustment,
-      setIshaAdjustment,
-      setMaghribAdjustment,
-      setSunriseAdjustment,
-    ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
   );
-
-  const calculationParameters = useMemo(() => {
-    if (calculationMethodKey) {
-      return CalculationMethods[calculationMethodKey].get();
-    } else {
-      return new CalculationParameters('Other', 0, 0);
-    }
-  }, [calculationMethodKey]);
 
   const selectedMethod = useMemo(
     () =>
@@ -118,7 +115,7 @@ export function CalculationSettings(props: IScrollViewProps) {
             data={calcMethods}
             onItemSelected={calculationMethodChanged}
             autoCompleteKeys={['label']}
-            getOptionLabel={item => item.label}
+            getSelectedOptionLabel={getMethodLabel}
             selectedItem={selectedMethod}
             placeholder={t`Press to select a method`}
             errorMessage={t`Error in loading countries`}
@@ -129,61 +126,7 @@ export function CalculationSettings(props: IScrollViewProps) {
           {calculationMethodKey === 'Turkey' && (
             <FormControl.HelperText>{t`Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey.`}</FormControl.HelperText>
           )}
-          <HStack
-            flex={1}
-            borderWidth={1}
-            borderRadius={5}
-            mt="1"
-            py="1"
-            borderColor="muted.300"
-            _dark={{
-              borderColor: 'muted.700',
-            }}>
-            <VStack flex={1}>
-              <Text fontSize="xs" textAlign="center" mb="1">
-                {t`Fajr Angle`}
-              </Text>
-              <Text
-                fontSize="sm"
-                textAlign="center"
-                textDecorationLine="underline">
-                {calculationParameters.fajrAngle}
-              </Text>
-            </VStack>
-            <VStack flex={1}>
-              <Text fontSize="xs" textAlign="center" mb="1">
-                {t`Isha Angle`}
-              </Text>
-              <Text
-                fontSize="sm"
-                textAlign="center"
-                textDecorationLine="underline">
-                {calculationParameters.ishaAngle}
-              </Text>
-            </VStack>
-            <VStack flex={1}>
-              <Text fontSize="xs" textAlign="center" mb="1">
-                {t`Isha Interval`}
-              </Text>
-              <Text
-                fontSize="sm"
-                textAlign="center"
-                textDecorationLine="underline">
-                {calculationParameters.ishaInterval}
-              </Text>
-            </VStack>
-            <VStack flex={1}>
-              <Text fontSize="xs" textAlign="center" mb="1">
-                {t`Maghrib Angle`}
-              </Text>
-              <Text
-                fontSize="sm"
-                textAlign="center"
-                textDecorationLine="underline">
-                {calculationParameters.maghribAngle}
-              </Text>
-            </VStack>
-          </HStack>
+          <CalcParamsBox />
         </FormControl>
         <CalendarSettings mb="7" />
         <Accordion mb="5" borderRadius={0}>
