@@ -1,15 +1,11 @@
-import {useEffect, useRef, EffectCallback, DependencyList} from 'react';
+import {useEffect, useRef} from 'react';
 
-export function useUnmounted(
-  effect: EffectCallback,
-  dependencies: DependencyList = [],
-) {
+export function useUnmounted(effect: () => void) {
   const callbackRef = useRef(effect);
 
   useEffect(() => {
     callbackRef.current = effect;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, dependencies);
+  }, [effect]);
 
   useEffect(() => {
     return () => {

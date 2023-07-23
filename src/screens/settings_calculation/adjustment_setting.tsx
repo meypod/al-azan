@@ -114,7 +114,7 @@ export function AdjustmentSetting({
     if (localAdjustment !== undefined && localAdjustment !== adjustment) {
       setAdjustment(localAdjustment);
     }
-  }, [localAdjustment, setAdjustment]);
+  });
 
   return (
     <VStack {...hStackProps} mb="2" flex={1}>
