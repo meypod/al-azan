@@ -1,6 +1,6 @@
 import {Text, Input, HStack, VStack, Button} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import type {
   NativeSyntheticEvent,
   TextInputEndEditingEventData,
@@ -12,6 +12,7 @@ import {
   useCalcSettings,
 } from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
+import useNoInitialEffect from '@/utils/hooks/use_update_effect';
 import {sumFloats} from '@/utils/numbers';
 
 type AdjustmentSettingProps = {
@@ -43,17 +44,16 @@ export function AdjustmentSetting({
   );
 
   const [localAdjustment, setLocalAdjustment] = useState<number | undefined>(
-    (adjustment as number) || fallbackInitial,
+    adjustment !== undefined ? (adjustment as number) : fallbackInitial,
   );
   const localAdjustmentString = useMemo(
-    () =>
-      typeof localAdjustment !== 'undefined' ? String(localAdjustment) : '',
+    () => (localAdjustment !== undefined ? String(localAdjustment) : ''),
     [localAdjustment],
   );
   const debouncedAdjustment = useDebounce(localAdjustment, 600);
 
   const adjustmentLabel =
-    typeof label !== 'undefined' ? label : translatePrayer(prayer!);
+    label !== undefined ? label : translatePrayer(prayer!);
 
   const setLocalAdjustmentHelper = useCallback(
     (value: string) => {
@@ -97,14 +97,14 @@ export function AdjustmentSetting({
     }
   }, [isFloat]);
 
-  useEffect(() => {
+  useNoInitialEffect(() => {
     // to set values when user finishes
-    if (debouncedAdjustment) {
+    if (debouncedAdjustment !== undefined) {
       setAdjustment(debouncedAdjustment);
     }
   }, [debouncedAdjustment, setAdjustment]);
 
-  useEffect(() => {
+  useNoInitialEffect(() => {
     // to reset adjustment when the method changes
     setLocalAdjustment(adjustment as number);
   }, [setLocalAdjustment, adjustment]);
