@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-22 19:07+0330\n"
+"POT-Creation-Date: 2023-07-23 14:52+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr "15 min"
 msgid "30 min"
 msgstr "30 min"
 
-#: src/screens/settings_calculation/index.tsx:127
+#: src/screens/settings_calculation/index.tsx:124
 msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "Bei dieser Methode werden 30 Minuten zur Isha-Zeit während des Ramadan hinzugefügt"
 
@@ -45,7 +45,7 @@ msgstr "90 min"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Adhan"
 
-#: src/screens/settings_calculation/index.tsx:304
+#: src/screens/settings_calculation/index.tsx:250
 msgid "Abyad"
 msgstr "Abyad"
 
@@ -89,7 +89,7 @@ msgstr "Adhan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Die Adhan-Audiodatei wurde noch nicht heruntergeladen"
 
-#: src/screens/settings_calculation/index.tsx:189
+#: src/screens/settings_calculation/index.tsx:135
 msgid "Adjustments"
 msgstr "Einstellungen"
 
@@ -98,11 +98,11 @@ msgstr "Einstellungen"
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: src/screens/settings_calculation/index.tsx:200
+#: src/screens/settings_calculation/index.tsx:146
 msgid "Advanced Calculation Settings"
 msgstr "Erweiterte Berechnungseinstellungen"
 
-#: src/screens/settings_calculation/index.tsx:303
+#: src/screens/settings_calculation/index.tsx:249
 msgid "Ahmer"
 msgstr "Ahmer"
 
@@ -154,7 +154,7 @@ msgstr "Sind Sie sicher, dass Sie \"{itemName}\" löschen wollen?"
 msgid "Are you sure you want to delete this?"
 msgstr "Sind Sie sicher, dass Sie dies löschen wollen?"
 
-#: src/screens/settings_calculation/index.tsx:247
+#: src/screens/settings_calculation/index.tsx:193
 msgid "Asr Calculation"
 msgstr "Asr-Berechnung"
 
@@ -174,7 +174,7 @@ msgstr "Achtung"
 msgid "Bypass \"Do Not Disturb\"?"
 msgstr "Soll der Hinweis \"Bitte nicht stören\" umgangen werden?"
 
-#: src/screens/settings_calculation/index.tsx:112
+#: src/screens/settings_calculation/index.tsx:109
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Für die Berechnung des Adhan gibt es viele verschiedene Methoden. Jede Methode liefert unterschiedliche Ergebnisse. Es liegt in Ihrer Verantwortung, die richtige Methode zu finden und auszuwählen."
 
@@ -182,8 +182,8 @@ msgstr "Für die Berechnung des Adhan gibt es viele verschiedene Methoden. Jede 
 msgid "Calculation"
 msgstr "Berechnung"
 
-#: src/screens/settings_calculation/index.tsx:114
-#: src/screens/settings_calculation/index.tsx:116
+#: src/screens/settings_calculation/index.tsx:111
+#: src/screens/settings_calculation/index.tsx:113
 msgid "Calculation Method"
 msgstr "Berechnungsmethode"
 
@@ -199,16 +199,16 @@ msgstr "Kalender"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/screens/settings_calculation/index.tsx:250
+#: src/screens/settings_calculation/index.tsx:196
 msgid "Choose Asr Calculation Madhab"
 msgstr "Asr-Berechnung auswählen"
 
-#: src/screens/settings_calculation/index.tsx:117
+#: src/screens/settings_calculation/index.tsx:114
 #: src/screens/settings_notifications/vibration_setting.tsx:25
 msgid "Choose Calculation Method"
 msgstr "Berechnungsmethode auswählen"
 
-#: src/screens/settings_calculation/index.tsx:226
+#: src/screens/settings_calculation/index.tsx:172
 msgid "Choose High Latitude Setting"
 msgstr "Hohen Breitengrad festlegen"
 
@@ -216,11 +216,11 @@ msgstr "Hohen Breitengrad festlegen"
 msgid "Choose Language"
 msgstr "Sprache auswählen"
 
-#: src/screens/settings_calculation/index.tsx:266
+#: src/screens/settings_calculation/index.tsx:212
 msgid "Choose Polar Resolution"
 msgstr "Polarauflösung auswählen"
 
-#: src/screens/settings_calculation/index.tsx:295
+#: src/screens/settings_calculation/index.tsx:241
 msgid "Choose Shafaq method"
 msgstr "Shafaq-Methode auswählen"
 
@@ -229,7 +229,7 @@ msgstr "Shafaq-Methode auswählen"
 msgid "Choose calendar type"
 msgstr "Kalendertyp auswählen"
 
-#: src/screens/settings_calculation/index.tsx:209
+#: src/screens/settings_calculation/index.tsx:155
 msgid "Choose midnight calculation method"
 msgstr "Berechnungsmethode für Mitternacht wählen"
 
@@ -254,11 +254,11 @@ msgstr "Den Standort löschen"
 msgid "Clipboard data does not contain coordinates"
 msgstr "Die Zwischenablage enthält keine Koordinaten"
 
-#: src/screens/settings_calculation/index.tsx:277
+#: src/screens/settings_calculation/index.tsx:223
 msgid "Closest City"
 msgstr "Nächstgelegene Stadt"
 
-#: src/screens/settings_calculation/index.tsx:281
+#: src/screens/settings_calculation/index.tsx:227
 msgid "Closest Date"
 msgstr "Nächstes Datum"
 
@@ -296,6 +296,10 @@ msgstr "Zählen"
 msgid "Country"
 msgstr "Land"
 
+#: src/adhan/calculation_methods.ts:14
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
 #: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "Benutzerdefinierte Töne und Muezzin-Rufe werden nicht exportiert"
@@ -316,7 +320,7 @@ msgstr "Dunkel"
 msgid "Default"
 msgstr "Standard"
 
-#: src/screens/settings_calculation/index.tsx:214
+#: src/screens/settings_calculation/index.tsx:160
 msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Standard (Mitte Sonnenuntergang bis Sonnenaufgang)"
 
@@ -352,11 +356,11 @@ msgstr "Haftungsausschluss"
 msgid "Dismiss"
 msgstr "Ablehnen"
 
-#: src/screens/settings_calculation/index.tsx:130
+#: src/screens/settings_calculation/index.tsx:127
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "Die in Al-Azan angegebene Diyanet-Methode ist ein Näherungswert für die offiziellen Zeiten. Da nicht ausreichend dokumentiert ist, wie die Zeiten genau berechnet werden, stimmen die Zeiten möglicherweise nicht mit der offiziellen Website überein, insbesondere außerhalb der Türkei."
 
-#: src/adhan/calculation_methods.ts:96
+#: src/adhan/calculation_methods.ts:92
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Türkei"
 
@@ -388,6 +392,10 @@ msgstr "Erledigt"
 msgid "Eastern Arabic"
 msgstr "Ostarabisch"
 
+#: src/screens/settings_calculation/calc_params_box.tsx:140
+msgid "Edit Calculation Parameters"
+msgstr "Berechnungsparameter bearbeiten"
+
 #: src/screens/qada_counter/edit_counter_modal.tsx:109
 msgid "Edit Counter"
 msgstr "Zähler bearbeiten"
@@ -396,7 +404,7 @@ msgstr "Zähler bearbeiten"
 msgid "Edit Reminder"
 msgstr "Erinnerung bearbeiten"
 
-#: src/adhan/calculation_methods.ts:36
+#: src/adhan/calculation_methods.ts:32
 msgid "Egyptian General Survey Authority"
 msgstr "Ägyptische Generalvermessungsbehörde"
 
@@ -408,7 +416,7 @@ msgstr "Aktiviert"
 msgid "Error getting clipboard data"
 msgstr "Fehler beim Abrufen der Zwischenablage"
 
-#: src/screens/settings_calculation/index.tsx:124
+#: src/screens/settings_calculation/index.tsx:121
 #: src/screens/settings_location/index.tsx:200
 msgid "Error in loading countries"
 msgstr "Fehler beim Laden der Länder"
@@ -442,7 +450,8 @@ msgstr "App-Daten exportieren"
 msgid "Export data"
 msgstr "Daten exportieren"
 
-#: src/screens/settings_calculation/index.tsx:141
+#: src/screens/settings_calculation/calc_params_box.tsx:59
+#: src/screens/settings_calculation/calc_params_box.tsx:151
 msgid "Fajr Angle"
 msgstr "Fajr-Winkel"
 
@@ -460,7 +469,7 @@ msgstr "Häufige Probleme beheben"
 msgid "Friday"
 msgstr "Freitag"
 
-#: src/screens/settings_calculation/index.tsx:300
+#: src/screens/settings_calculation/index.tsx:246
 msgid "General (default)"
 msgstr "Allgemein (Standard)"
 
@@ -478,11 +487,11 @@ msgstr "Verstanden"
 msgid "Gregorian"
 msgstr "Gregorianisch"
 
-#: src/adhan/calculation_methods.ts:60
+#: src/adhan/calculation_methods.ts:56
 msgid "Gulf region"
 msgstr "Golfregion"
 
-#: src/screens/settings_calculation/index.tsx:258
+#: src/screens/settings_calculation/index.tsx:204
 msgid "Hanafi"
 msgstr "Hanafi"
 
@@ -505,7 +514,7 @@ msgstr "Ausblenden nicht benötigter Gebetszeiten möglich"
 msgid "High"
 msgstr "Hoch"
 
-#: src/screens/settings_calculation/index.tsx:224
+#: src/screens/settings_calculation/index.tsx:170
 msgid "High Latitude"
 msgstr "Hoher Breitengrad"
 
@@ -589,11 +598,13 @@ msgstr "Damit die Qibla-Karte funktioniert, ist eine Internetverbindung erforder
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 msgstr "Ist lokalisiert in Englisch, Persisch, Arabisch, Türkisch, Indonesisch, Französisch, Urdu, Hindi, Deutsch, Bosnisch, Vietnamesisch, Bangla"
 
-#: src/screens/settings_calculation/index.tsx:152
+#: src/screens/settings_calculation/calc_params_box.tsx:72
+#: src/screens/settings_calculation/calc_params_box.tsx:158
 msgid "Isha Angle"
 msgstr "Isha-Winkel"
 
-#: src/screens/settings_calculation/index.tsx:163
+#: src/screens/settings_calculation/calc_params_box.tsx:85
+#: src/screens/settings_calculation/calc_params_box.tsx:165
 msgid "Isha Interval"
 msgstr "Isha Intervall"
 
@@ -617,7 +628,7 @@ msgstr "Islamisch (zivil)"
 msgid "Islamic (tabular)"
 msgstr "Islamisch (tabellarisch)"
 
-#: src/screens/settings_calculation/index.tsx:218
+#: src/screens/settings_calculation/index.tsx:164
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "Jafari (Mitte Sonnenuntergang bis Fajr)"
 
@@ -625,15 +636,15 @@ msgstr "Jafari (Mitte Sonnenuntergang bis Fajr)"
 msgid "Just now"
 msgstr "gegenwärtig"
 
-#: src/adhan/calculation_methods.ts:120
+#: src/adhan/calculation_methods.ts:116
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Kementrian Agama Republik Indonesien (KEMENAG)"
 
-#: src/adhan/calculation_methods.ts:140
+#: src/adhan/calculation_methods.ts:136
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 
-#: src/adhan/calculation_methods.ts:72
+#: src/adhan/calculation_methods.ts:68
 msgid "Kuwait"
 msgstr "Kuwait"
 
@@ -671,7 +682,7 @@ msgstr "Heller und dunkler Farbmodus"
 msgid "Light/Dark theme"
 msgstr "Heller und dunkler Farbmodus"
 
-#: src/components/AutocompleteInput.tsx:196
+#: src/components/AutocompleteInput.tsx:199
 msgid "Loading"
 msgstr "Laden"
 
@@ -698,7 +709,8 @@ msgstr "Der Längengrad ist ungültig"
 msgid "Low"
 msgstr "Niedrig"
 
-#: src/screens/settings_calculation/index.tsx:174
+#: src/screens/settings_calculation/calc_params_box.tsx:98
+#: src/screens/settings_calculation/calc_params_box.tsx:172
 msgid "Maghrib Angle"
 msgstr "Maghrib-Winkel"
 
@@ -713,15 +725,15 @@ msgstr ""
 msgid "Medium"
 msgstr "Mittel"
 
-#: src/screens/settings_calculation/index.tsx:232
+#: src/screens/settings_calculation/index.tsx:178
 msgid "Middle of the Night"
 msgstr "Mitten in der Nacht"
 
-#: src/screens/settings_calculation/index.tsx:206
+#: src/screens/settings_calculation/index.tsx:152
 msgid "Midnight Method"
 msgstr "Mitternachtsmethode"
 
-#: src/adhan/calculation_methods.ts:126
+#: src/adhan/calculation_methods.ts:122
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "Ministerium für religiöse Angelegenheiten und Wakfs, Algerien"
 
@@ -729,15 +741,19 @@ msgstr "Ministerium für religiöse Angelegenheiten und Wakfs, Algerien"
 msgid "Mobile Data"
 msgstr "Mobile Daten"
 
+#: src/screens/settings_calculation/index.tsx:42
+msgid "Modified"
+msgstr "Geändert"
+
 #: src/components/week_day_selector.tsx:14
 msgid "Monday"
 msgstr "Montag"
 
-#: src/adhan/calculation_methods.ts:24
+#: src/adhan/calculation_methods.ts:20
 msgid "Moonsighting Committee"
 msgstr "Ausschuss für Mondsichtung"
 
-#: src/adhan/calculation_methods.ts:30
+#: src/adhan/calculation_methods.ts:26
 msgid "Muslim World League"
 msgstr "Islamische Weltliga"
 
@@ -772,16 +788,16 @@ msgstr "Nächster Tag"
 msgid "No"
 msgstr "Nein"
 
-#: src/components/AutocompleteInput.tsx:200
+#: src/components/AutocompleteInput.tsx:203
 msgid "No Data"
 msgstr "Keine Daten"
 
 #: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:204
+#: src/components/AutocompleteInput.tsx:207
 msgid "No Results"
 msgstr "Keine Ergebnisse"
 
-#: src/screens/settings_calculation/index.tsx:230
+#: src/screens/settings_calculation/index.tsx:176
 msgid "None (Automatic)"
 msgstr "Keine (automatisch)"
 
@@ -834,7 +850,7 @@ msgstr "Ab Android 12 benötigt die App auch die Erlaubnis für Alarme, um ordnu
 msgid "Once"
 msgstr "Einmal"
 
-#: src/screens/settings_calculation/index.tsx:236
+#: src/screens/settings_calculation/index.tsx:182
 msgid "One-Seventh of the Night"
 msgstr "Ein Siebtel der Nacht"
 
@@ -897,7 +913,7 @@ msgstr "Bitte aktivieren Sie den Standortdienst"
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "Bitte beachten Sie, dass die Aktivierung dieser Option dazu führen kann, dass Adhan und Erinnerungen in einigen Fällen verzögert oder gar nicht ausgelöst werden. Aktivieren Sie diese Option mit Bedacht."
 
-#: src/screens/settings_calculation/index.tsx:263
+#: src/screens/settings_calculation/index.tsx:209
 msgid "Polar Resolution"
 msgstr "Polarauflösung"
 
@@ -914,7 +930,7 @@ msgstr "Gebetszeiten"
 msgid "Press to search"
 msgstr "Drücken Sie zum Suchen"
 
-#: src/screens/settings_calculation/index.tsx:123
+#: src/screens/settings_calculation/index.tsx:120
 msgid "Press to select a method"
 msgstr "Drücken Sie zur Auswahl einer Methode"
 
@@ -940,7 +956,7 @@ msgstr "Datenschutzfreundliche Open-Source App für den Adhan (Gebetszeit) und d
 msgid "Qada counter"
 msgstr "Qada-Zähler"
 
-#: src/adhan/calculation_methods.ts:78
+#: src/adhan/calculation_methods.ts:74
 msgid "Qatar"
 msgstr "Katar"
 
@@ -974,7 +990,7 @@ msgstr "Der Ramadan geht zu Ende,"
 msgid "Ramadan is near,"
 msgstr "Der Ramadan ist nah,"
 
-#: src/adhan/calculation_methods.ts:54
+#: src/adhan/calculation_methods.ts:50
 msgid "Referred to as the ISNA method"
 msgstr "ISNA-Methode"
 
@@ -1016,7 +1032,7 @@ msgid "Saturday"
 msgstr "Samstag"
 
 #: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:170
+#: src/components/AutocompleteInput.tsx:173
 msgid "Search"
 msgstr "Suche"
 
@@ -1048,11 +1064,11 @@ msgstr "Benutzerdefinierte Adhan-Stimmen auswählbar"
 msgid "Set reminders before or after a prayer time"
 msgstr "Erstellung von Erinnerungen vor und nach den Gebetszeiten"
 
-#: src/screens/settings_calculation/index.tsx:287
+#: src/screens/settings_calculation/index.tsx:233
 msgid "Shafaq"
 msgstr "Shafaq"
 
-#: src/screens/settings_calculation/index.tsx:289
+#: src/screens/settings_calculation/index.tsx:235
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
@@ -1062,15 +1078,15 @@ msgstr ""
 "die Art der Dämmerung zu bestimmen, woraus die\n"
 "die Zeit für Isha abgeleitet wird"
 
-#: src/screens/settings_calculation/index.tsx:255
+#: src/screens/settings_calculation/index.tsx:201
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Shafi, Maliki, Hanbali (Standard)"
 
-#: src/adhan/calculation_methods.ts:108
+#: src/adhan/calculation_methods.ts:104
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "Shia Ithna Ashari, Leva-Institut, Qom"
 
-#: src/adhan/calculation_methods.ts:114
+#: src/adhan/calculation_methods.ts:110
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institut für Geophysik, Universität von Teheran"
 
@@ -1128,7 +1144,7 @@ msgstr "Stumm"
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
 msgstr "Da in der App keine Tracker und Analysewerkzeuge eingebaut sind, melden Sie Fehler oder Vorschläge bitte an das folgende GitHub-Repository"
 
-#: src/adhan/calculation_methods.ts:84
+#: src/adhan/calculation_methods.ts:80
 msgid "Singapore"
 msgstr "Singapur"
 
@@ -1158,7 +1174,7 @@ msgstr "Um zu verhindern, dass die Anwendung im Hintergrund beendet wird, benöt
 msgid "Sound"
 msgstr "Ton"
 
-#: src/adhan/calculation_methods.ts:102
+#: src/adhan/calculation_methods.ts:98
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Geistliche Verwaltung der Muslime Russlands"
 
@@ -1188,7 +1204,7 @@ msgid ""
 "can start using this app."
 msgstr "Danke, dass Sie sich für diese App entschieden haben! Es gibt mehrere Dinge, die Sie einstellen müssen, bevor Sie diese App verwenden können."
 
-#: src/adhan/calculation_methods.ts:66
+#: src/adhan/calculation_methods.ts:62
 msgid "The Gulf Region (Dubai)"
 msgstr "Die Golfregion (Dubai)"
 
@@ -1247,23 +1263,23 @@ msgstr "Morgen"
 msgid "Tuesday"
 msgstr "Dienstag"
 
-#: src/screens/settings_calculation/index.tsx:240
+#: src/screens/settings_calculation/index.tsx:186
 msgid "Twilight Angle"
 msgstr "Dämmerungswinkel"
 
-#: src/adhan/calculation_methods.ts:48
+#: src/adhan/calculation_methods.ts:44
 msgid "Umm al-Qura University, Makkah"
 msgstr "Universität Umm al-Qura, Mekka"
 
-#: src/adhan/calculation_methods.ts:90
+#: src/adhan/calculation_methods.ts:86
 msgid "Union Organization Islamic de France"
 msgstr "Islamische Union Frankreichs"
 
-#: src/adhan/calculation_methods.ts:42
+#: src/adhan/calculation_methods.ts:38
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Universität für Islamische Wissenschaften, Karatschi"
 
-#: src/components/AutocompleteInput.tsx:191
+#: src/components/AutocompleteInput.tsx:194
 msgid "Unknown Error"
 msgstr "Unbekannter Fehler"
 
@@ -1271,7 +1287,7 @@ msgstr "Unbekannter Fehler"
 msgid "Unreliable"
 msgstr "Unzuverlässig"
 
-#: src/screens/settings_calculation/index.tsx:273
+#: src/screens/settings_calculation/index.tsx:219
 msgid "Unresolved (default)"
 msgstr "Ungelöst (Standard)"
 
