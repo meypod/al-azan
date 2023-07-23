@@ -111,7 +111,7 @@ export function AdjustmentSetting({
   }, [setLocalAdjustment, adjustment]);
 
   useUnmounted(() => {
-    if (localAdjustment !== undefined && localAdjustment !== adjustment) {
+    if (localAdjustment !== undefined && localAdjustment !== fallbackInitial) {
       setAdjustment(localAdjustment);
     }
   });
