@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Select} from 'native-base';
 import {useSettings} from '@/store/settings';
 import {updateWidgets} from '@/tasks/update_widgets';
-import useNoInitialEffect from '@/utils/hooks/use_update_effect';
+import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
 
 // UPDATE WIDGETS WHEN SETTINGS CHANGES
 

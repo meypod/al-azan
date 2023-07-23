@@ -12,8 +12,8 @@ import {
   useCalcSettings,
 } from '@/store/calculation';
 import useDebounce from '@/utils/hooks/use_debounce';
-import {useUnmounted} from '@/utils/hooks/use_mounted';
-import useNoInitialEffect from '@/utils/hooks/use_update_effect';
+import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
+import {useUnmounted} from '@/utils/hooks/use_unmounted';
 import {sumFloats} from '@/utils/numbers';
 
 type AdjustmentSettingProps = {

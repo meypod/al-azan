@@ -25,7 +25,7 @@ import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {updateWidgets} from '@/tasks/update_widgets';
 import {sha256} from '@/utils/hash';
-import useNoInitialEffect from '@/utils/hooks/use_update_effect';
+import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
 import {askPermissions} from '@/utils/permission';
 
 type ScreenListItem = {
