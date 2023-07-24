@@ -109,6 +109,7 @@ export function Home() {
 
             <HStack alignItems="center">
               <Button
+                accessibilityLabel={t({id: 'qada_counter'})}
                 p="2"
                 marginLeft="3"
                 variant="ghost"
@@ -118,6 +119,7 @@ export function Home() {
                 <AddCircleIcon size="2xl" />
               </Button>
               <Button
+                accessibilityLabel={t({id: 'qibla_finder'})}
                 p="2"
                 variant="ghost"
                 onPress={() => {
@@ -126,6 +128,7 @@ export function Home() {
                 <ExploreIcon size="2xl" />
               </Button>
               <Button
+                accessibilityLabel={t({id: 'settings'})}
                 p="2"
                 marginRight="-3"
                 variant="ghost"

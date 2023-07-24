@@ -1,5 +1,5 @@
 import {i18n, MessageDescriptor} from '@lingui/core';
-import {defineMessage} from '@lingui/macro';
+import {defineMessage, t} from '@lingui/macro';
 import {HStack, Text, VStack, Button} from 'native-base';
 import {memo} from 'react';
 import {TouchableNativeFeedback} from 'react-native';
@@ -54,6 +54,7 @@ export function CounterView({
         }}
         borderRadius={4}>
         <Button
+          accessibilityLabel={t`Decrement`}
           height="100%"
           onPress={decreaseCounter.bind(null, counter.id)}
           variant="ghost"
@@ -107,6 +108,7 @@ export function CounterView({
         </TouchableNativeFeedback>
 
         <Button
+          accessibilityLabel={t`Increment`}
           height="100%"
           onPress={increaseCounter.bind(null, counter.id)}
           variant="ghost"

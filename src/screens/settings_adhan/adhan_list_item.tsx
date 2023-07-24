@@ -150,12 +150,18 @@ export function AdhanListItem({
                 mr="1"
                 size="md"
                 color={isSelectedAsAdhan ? 'green.500' : 'transparent'}
+                accessibilityLabel={
+                  isSelectedAsAdhan ? t`Selected as adhan` : ''
+                }
               />
               {isSelectedAsFajrAdhan && (
                 <CheckIcon
                   mr="1"
                   size="md"
                   color={isSelectedAsFajrAdhan ? 'primary.500' : 'transparent'}
+                  accessibilityLabel={
+                    isSelectedAsFajrAdhan ? t`Selected as fajr adhan` : ''
+                  }
                 />
               )}
               <Text flex={1} flexGrow={1} noOfLines={1}>
@@ -172,9 +178,12 @@ export function AdhanListItem({
                   p="2"
                   variant="ghost">
                   {dlTask !== null ? (
-                    <CloseIcon size="xl" />
+                    <CloseIcon
+                      size="xl"
+                      accessibilityLabel={t`Cancel download`}
+                    />
                   ) : (
-                    <DownloadIcon size="xl" />
+                    <DownloadIcon size="xl" accessibilityLabel={t`Download`} />
                   )}
                 </Button>
               )}
@@ -209,9 +218,9 @@ export function AdhanListItem({
                   variant="ghost">
                   {isCurrentlyPlaying &&
                   playerState === PlaybackState.started ? (
-                    <StopIcon size="xl" />
+                    <StopIcon size="xl" accessibilityLabel={t`Stop`} />
                   ) : (
-                    <PlayIcon size="xl" />
+                    <PlayIcon size="xl" accessibilityLabel={t`Play`} />
                   )}
                 </Button>
               )}

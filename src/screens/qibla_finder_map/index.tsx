@@ -1,10 +1,13 @@
 import {t} from '@lingui/macro';
-import MapLibreGL, {ShapeSourceProps} from '@maplibre/maplibre-react-native';
+import MapLibreGL, {
+  ShapeSourceProps,
+  Logger,
+} from '@maplibre/maplibre-react-native';
 import {Coordinates, Qibla} from 'adhan-extended';
 import debounce from 'lodash/debounce';
 import {Button, HStack, Text} from 'native-base';
 import {useCallback, useEffect, useRef, useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, TextInput as NativeInput} from 'react-native';
 import {CheckIcon} from '@/assets/icons/material_icons/check';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {ExploreIcon} from '@/assets/icons/material_icons/explore';
@@ -16,6 +19,7 @@ if (MapLibreGL) {
   // Will be null for most users (only Mapbox authenticates this way).
   // Required on Android. See Android installation notes.
   MapLibreGL.setAccessToken(null);
+  Logger.setLogLevel('none' as any);
 }
 
 const styles = StyleSheet.create({
@@ -108,6 +112,9 @@ export function QiblaMap() {
   const [compassLock, setCompassLock] = useState(false);
   const compassLockRef = useRef(false);
   const gotLocationOnce = useRef(false);
+  const turnHintRef = useRef<NativeInput>(null);
+  const turnLeft = useRef(t`Turn Left`);
+  const turnRight = useRef(t`Turn Right`);
 
   const updateCamera = useCallback(() => {
     const qiblaSecondPoint = getDirectionSecondPoint({
@@ -143,6 +150,14 @@ export function QiblaMap() {
       cameraRef.current?.setCamera({
         centerCoordinate: coords.current,
       });
+    }
+
+    if (turnHintRef.current) {
+      if (compassDegree.current < qiblaDegree.current) {
+        turnHintRef.current.setNativeProps({text: turnRight.current});
+      } else {
+        turnHintRef.current.setNativeProps({text: turnLeft.current});
+      }
     }
   }, []);
 
@@ -241,15 +256,28 @@ export function QiblaMap() {
             </Text>
           </View>
         </View>
-        {compassLock ? (
+        <View
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            zIndex: 10,
+            width: '100%',
+            opacity: compassLock ? 1 : 0.001,
+            flexDirection: 'column',
+          }}>
           <View
+            accessibilityRole="text"
+            aria-live="polite"
+            accessibilityLiveRegion="polite"
+            accessible
+            accessibilityLabel={
+              isFacingKaaba
+                ? t`You are facing Kaaba`
+                : t`You are not facing Kaaba`
+            }
             style={{
               justifyContent: 'center',
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              zIndex: 1,
-              width: '100%',
               flexDirection: 'row',
             }}>
             <View
@@ -263,8 +291,27 @@ export function QiblaMap() {
               )}
             </View>
           </View>
-        ) : undefined}
+          <View>
+            <NativeInput
+              style={{height: 70, opacity: 0.001}}
+              accessible={false}
+              aria-live="polite"
+              accessibilityLiveRegion="polite"
+              ref={turnHintRef}
+              aria-hidden={true}
+              editable={false}
+              aria-disabled={false}
+              aria-modal={false}
+              accessibilityHint=""
+              accessibilityRole="text"
+            />
+          </View>
+        </View>
         <MapLibreGL.MapView
+          accessibilityElementsHidden
+          accessibilityHint=""
+          accessibilityLabel=""
+          accessible={false}
           style={styles.map}
           attributionEnabled={true}
           attributionPosition={{left: 5, bottom: 5}}
@@ -273,7 +320,7 @@ export function QiblaMap() {
           pitchEnabled={false}
           scrollEnabled={false}
           rotateEnabled={true}
-          compassEnabled={true}
+          compassEnabled={!compassLock}
           localizeLabels={true}
           onTouchEnd={debouncedCameraUpdate}
           onDidFinishRenderingMapFully={updateCamera}>

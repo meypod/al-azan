@@ -1,3 +1,4 @@
+import {t} from '@lingui/macro';
 import {Button, IButtonProps, IIconProps} from 'native-base';
 import {useCallback, useEffect} from 'react';
 import Orientation, {OrientationType} from 'react-native-orientation-locker';
@@ -44,12 +45,21 @@ export function OrientationLock(props: IButtonProps & IIconProps) {
     <Button {...otherProps} onPress={orientationLockToggle} variant="ghost">
       {orientationLocked ? (
         isPortrait ? (
-          <ScreenLockPortrait size={size} />
+          <ScreenLockPortrait
+            size={size}
+            accessibilityLabel={t`Orientation Lock: Portrait`}
+          />
         ) : (
-          <ScreenLockLandscape size={size} />
+          <ScreenLockLandscape
+            size={size}
+            accessibilityLabel={t`Orientation Lock: Landscape`}
+          />
         )
       ) : (
-        <ScreenRotationIcon size={size} />
+        <ScreenRotationIcon
+          size={size}
+          accessibilityLabel={t`Orientation: Unlocked`}
+        />
       )}
     </Button>
   );

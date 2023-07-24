@@ -1,3 +1,4 @@
+import {t} from '@lingui/macro';
 import {Stack, Button} from 'native-base';
 import {useCallback, useState} from 'react';
 import DraggableFlatList, {RenderItem} from 'react-native-draggable-flatlist';
@@ -83,6 +84,7 @@ export function QadaCounter() {
             }}
           />
           <Button
+            accessibilityLabel={t`Add new counter`}
             bgColor="primary.600"
             _dark={{
               bgColor: 'coolGray.700',

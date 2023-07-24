@@ -231,12 +231,11 @@ export const AudioPicker = (props: AudioPickerProps) => {
     [onItemSelected, onClose, playbackState],
   );
 
-  const textValue = useMemo(
-    () =>
-      (memoSelectedItem && getOptionLabel(memoSelectedItem as AudioEntry)) ||
-      '',
-    [getOptionLabel, memoSelectedItem],
-  );
+  const textValue = useMemo(() => {
+    return (
+      (memoSelectedItem && getOptionLabel(memoSelectedItem as AudioEntry)) || ''
+    );
+  }, [getOptionLabel, memoSelectedItem]);
 
   const onDeletePress = useCallback(
     async (item: AudioEntry) => {
@@ -360,6 +359,11 @@ export const AudioPicker = (props: AudioPickerProps) => {
       <Input
         flexGrow={1}
         onTouchEnd={onOpenProxy}
+        accessibilityRole="combobox"
+        accessibilityHint=""
+        accessibilityLabel={textValue}
+        placeholder={t`Press to search`}
+        onAccessibilityAction={onOpen}
         value={textValue}
         autoCorrect={false}
         caretHidden={true}
@@ -369,7 +373,11 @@ export const AudioPicker = (props: AudioPickerProps) => {
         rightElement={
           memoSelectedItem && memoSelectedItem.id !== 'silent' ? (
             <Button onPress={toggleAudioEntry} p="2" variant="ghost">
-              {localIsPlaying ? <StopIcon size="xl" /> : <PlayIcon size="xl" />}
+              {localIsPlaying ? (
+                <StopIcon size="xl" accessibilityLabel={t`Stop`} />
+              ) : (
+                <PlayIcon size="xl" accessibilityLabel={t`Play`} />
+              )}
             </Button>
           ) : undefined
         }

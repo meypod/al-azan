@@ -144,6 +144,10 @@ export const AutocompleteInput = <T extends unknown>(
       <Input
         width="100%"
         onTouchEnd={onOpen}
+        accessibilityRole="combobox"
+        accessibilityHint=""
+        accessibilityLabel={textValue}
+        onAccessibilityAction={onOpen}
         autoCorrect={false}
         caretHidden={true}
         _input={{

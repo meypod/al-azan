@@ -115,6 +115,7 @@ export function EditReminderModal({
               <VStack>
                 <HStack minH={12}>
                   <Select
+                    accessibilityLabel={t`Time list`}
                     borderRadius={0}
                     borderTopLeftRadius={'sm'}
                     flex={1}
@@ -151,6 +152,7 @@ export function EditReminderModal({
                     />
                   </Select>
                   <Select
+                    accessibilityLabel={t`Time condition`}
                     borderRadius={0}
                     borderTopRightRadius={'sm'}
                     flex={1}
@@ -170,6 +172,7 @@ export function EditReminderModal({
                   </Select>
                 </HStack>
                 <Select
+                  accessibilityLabel={t`Prayer list`}
                   minH={12}
                   px="3"
                   borderRadius={0}

@@ -220,7 +220,10 @@ export const settings = createStore<SettingsStore>()(
           produce<SettingsStore>(draft => {
             draft.SELECTED_ADHAN_ENTRIES = {
               default: entry || draft.SAVED_ADHAN_AUDIO_ENTRIES[0],
-              [Prayer.Fajr]: draft.SELECTED_ADHAN_ENTRIES[Prayer.Fajr],
+              [Prayer.Fajr]:
+                draft.SELECTED_ADHAN_ENTRIES[Prayer.Fajr] ||
+                entry ||
+                draft.SAVED_ADHAN_AUDIO_ENTRIES[0],
             };
           }),
         ),

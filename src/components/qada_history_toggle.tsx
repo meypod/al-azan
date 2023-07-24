@@ -1,3 +1,4 @@
+import {t} from '@lingui/macro';
 import {Button, HStack, IButtonProps, IIconProps} from 'native-base';
 import {useCallback} from 'react';
 import {ScheduleIcon} from '@/assets/icons/material_icons/schedule';
@@ -22,6 +23,9 @@ export function QadaHistoryToggle(props: IButtonProps & IIconProps) {
       _dark={{
         borderColor: historyVisible ? 'primary.400' : 'muted.400',
       }}
+      accessibilityLabel={
+        historyVisible ? t`Turn history off` : t`Turn history on`
+      }
       p="1">
       <HStack alignItems="center">
         <ScheduleIcon
