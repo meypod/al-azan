@@ -108,6 +108,7 @@ function ReminderItem({
           <VStack>
             <HStack>
               <Button
+                accessibilityLabel={t`Edit`}
                 onPress={onEditPress.bind(null, item)}
                 variant="ghost"
                 px="2">
@@ -117,12 +118,17 @@ function ReminderItem({
                   _light={{color: 'coolGray.600'}}
                 />
               </Button>
-              <Button onPress={onDeletePress} variant="ghost" px="2">
+              <Button
+                onPress={onDeletePress}
+                variant="ghost"
+                px="2"
+                accessibilityLabel={t`Delete`}>
                 <DeleteIcon color="red.500" size="xl" />
               </Button>
             </HStack>
             <HStack>
               <Button
+                accessibilityLabel={t`Make a Copy`}
                 onPress={onClonePress.bind(null, item)}
                 variant="ghost"
                 px="2">
