@@ -11,6 +11,7 @@ import {
   FormControl,
   WarningOutlineIcon,
   Spacer,
+  VStack,
 } from 'native-base';
 import {useCallback, useMemo, useState} from 'react';
 import {ToastAndroid} from 'react-native';
@@ -182,10 +183,11 @@ export function LocationSettings(props: IScrollViewProps) {
 
         <Divider label={t`Using Search`} mt="4" />
 
-        <HStack>
-          <FormControl width={selectedCountry ? '35%' : '100%'}>
-            <FormControl.Label>{t`Country`}</FormControl.Label>
+        <HStack mt="2">
+          <VStack flex={2}>
+            <Text mb="1" nativeID="country_label">{t`Country`}</Text>
             <AutocompleteInput<CountryInfo>
+              accessibilityLabelledBy="country_label"
               actionsheetLabel={t`Country`}
               getData={getCountries}
               onItemSelected={onCountrySelected}
@@ -199,12 +201,12 @@ export function LocationSettings(props: IScrollViewProps) {
               px="2"
               errorMessage={t`Error in loading countries`}
             />
-          </FormControl>
-
+          </VStack>
           {selectedCountry && (
-            <FormControl ml="2" width={selectedCity ? '40%' : '60%'}>
-              <FormControl.Label>{t`City/Area`}</FormControl.Label>
+            <VStack flex={4} pl="2">
+              <Text mb="1" nativeID="city_label">{t`City/Area`}</Text>
               <AutocompleteInput<CityInfo>
+                accessibilityLabelledBy="city_label"
                 actionsheetLabel={t`City/Area`}
                 getData={getCitiesData}
                 onItemSelected={onCitySelected}
@@ -217,16 +219,11 @@ export function LocationSettings(props: IScrollViewProps) {
                 size="sm"
                 px="2"
               />
-              <FormControl.ErrorMessage
-                leftIcon={<WarningOutlineIcon size="xs" />}>
-                {t`Error in loading search results`}
-              </FormControl.ErrorMessage>
-            </FormControl>
+            </VStack>
           )}
-
-          {(selectedCountry || selectedCity) && (
-            <FormControl ml="2" justifyContent="center">
-              <FormControl.Label> </FormControl.Label>
+          {selectedCountry && (
+            <VStack flexShrink={1} pl="2">
+              <Text mb="1"> </Text>
               <Button
                 flex={1}
                 accessibilityLabel={t`Clear the location`}
@@ -237,7 +234,7 @@ export function LocationSettings(props: IScrollViewProps) {
                 onPress={clearCountryAndCity}>
                 <CloseIcon />
               </Button>
-            </FormControl>
+            </VStack>
           )}
         </HStack>
 
