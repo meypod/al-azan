@@ -114,7 +114,10 @@ export function EditCounterModal({
                   <DeleteIcon size="xl" color="red.400" />
                 </Button>
               )}
-              <Button onPress={onCancel} variant="ghost">
+              <Button
+                onPress={onCancel}
+                variant="ghost"
+                accessibilityLabel={t`Cancel`}>
                 <CloseIcon size="xl" />
               </Button>
             </HStack>

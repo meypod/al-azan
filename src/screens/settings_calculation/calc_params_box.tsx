@@ -139,7 +139,10 @@ export function CalcParamsBox() {
                 <Stack px="3" flexDirection="row" alignItems="center" flex={1}>
                   <Text>{t`Edit Calculation Parameters`}</Text>
                 </Stack>
-                <Button onPress={toggleEditing} variant="ghost">
+                <Button
+                  onPress={toggleEditing}
+                  variant="ghost"
+                  accessibilityLabel={t`Close`}>
                   <CloseIcon size="xl" />
                 </Button>
               </HStack>

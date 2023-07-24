@@ -95,7 +95,10 @@ export function EditReminderModal({
             <Stack px="3" flexDirection="row" alignItems="center" flex={1}>
               <Text>{editMode ? t`Edit Reminder` : t`New Reminder`}</Text>
             </Stack>
-            <Button onPress={onCancel} variant="ghost">
+            <Button
+              onPress={onCancel}
+              variant="ghost"
+              accessibilityLabel={t`Cancel`}>
               <CloseIcon size="xl" />
             </Button>
           </HStack>
