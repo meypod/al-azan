@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-23 16:17+0330\n"
+"POT-Creation-Date: 2023-07-24 13:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: fa\n"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "10 min"
 msgstr "10 دقیقه"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:137
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "15 min"
 msgstr "15 دقیقه"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 msgid "30 min"
 msgstr "30 دقیقه"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "در این روش 30 دقیقه به زمان عشا در ماه رمضان اضافه می شود"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
 msgstr "5 دقیقه"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:145
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "60 min"
 msgstr "60 دقیقه"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:149
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 دقیقه"
 
@@ -62,7 +62,7 @@ msgstr "عاری از تبلیغات"
 msgid "Adaptive Charging"
 msgstr "شارژ تطبیقی"
 
-#: src/components/audio_picker.tsx:399
+#: src/components/audio_picker.tsx:407
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:243
 msgid "Add"
@@ -81,7 +81,11 @@ msgstr "افزودن صدای دلخواه"
 msgid "Add Reminder"
 msgstr " اضافه کردن یادآوری"
 
-#: src/screens/fullscreen_alarm/index.tsx:68
+#: src/screens/qada_counter/index.tsx:87
+msgid "Add new counter"
+msgstr "اضافه کردن شمارنده جدید"
+
+#: src/screens/fullscreen_alarm/index.tsx:83
 msgid "Adhan"
 msgstr "اذان"
 
@@ -194,10 +198,14 @@ msgstr "تقویم"
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:165
 #: src/screens/settings_adhan/index.tsx:240
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:247
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "لغو"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:183
+msgid "Cancel download"
+msgstr "لغو دانلود"
 
 #: src/screens/settings_calculation/index.tsx:196
 msgid "Choose Asr Calculation Madhab"
@@ -262,7 +270,7 @@ msgstr "نزدیک ترین شهر"
 msgid "Closest Date"
 msgstr "نزدیک ترین تاریخ"
 
-#: src/screens/qibla_finder_map/index.tsx:227
+#: src/screens/qibla_finder_map/index.tsx:242
 msgid "Compass Lock"
 msgstr "قفل قطب نما"
 
@@ -271,7 +279,7 @@ msgid "Compass sensor unavailable"
 msgstr "سنسور قطب نما در دسترس نیست"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:164
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:243
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:246
 msgid "Confirm"
 msgstr "تایید"
 
@@ -312,6 +320,10 @@ msgstr "زمان دلخواه هشدار بعدی"
 msgid "Dark"
 msgstr "تاریک"
 
+#: src/screens/qada_counter/counter_view.tsx:57
+msgid "Decrement"
+msgstr "کاهش"
+
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:57
@@ -326,7 +338,7 @@ msgstr "پیش‌فرض (وسط غروب تا طلوع خورشید)"
 
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
-#: src/screens/settings_adhan/adhan_list_item.tsx:200
+#: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "حذف"
@@ -335,7 +347,7 @@ msgstr "حذف"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "بسته به دستگاه و نسخه اندروید شما، گاهی اوقات ممکن است دستگاه شما برای صرفه جویی در باتری، برنامه را در پس‌زمینه ببندد. این می تواند از ارسال هشدارها/اعلان ها جلوگیری کند."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:195
+#: src/screens/settings_adhan/adhan_list_item.tsx:204
 msgid "Deselect as Fajr Adhan"
 msgstr "لغو انتخاب به عنوان اذان فجر"
 
@@ -351,7 +363,7 @@ msgstr "غیرفعال"
 msgid "Disclaimer"
 msgstr "سلب مسئولیت"
 
-#: src/screens/fullscreen_alarm/index.tsx:138
+#: src/screens/fullscreen_alarm/index.tsx:154
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "رد کردن"
@@ -387,6 +399,10 @@ msgstr "صفحه زنگ هشدار نشان داده نشود؟"
 #: src/intro/intro.tsx:101
 msgid "Done"
 msgstr "اتمام"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
+msgid "Download"
+msgstr "دانلود"
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Eastern Arabic"
@@ -581,6 +597,10 @@ msgstr "وارد کردن با موفقیت انجام شد"
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "علاوه بر نماز های پنجگانه، قابلیت نمایش طلوع، غروب، نیمه شب و نماز شب (تهجد) را دارد"
 
+#: src/screens/qada_counter/counter_view.tsx:111
+msgid "Increment"
+msgstr "افزایش"
+
 #: src/screens/qibla_finder/index.tsx:32
 msgid "Info"
 msgstr "اطلاعات"
@@ -684,7 +704,7 @@ msgstr ""
 "تم روشن و تاریک\n"
 ""
 
-#: src/components/AutocompleteInput.tsx:199
+#: src/components/AutocompleteInput.tsx:203
 msgid "Loading"
 msgstr "در حال بارگذاری"
 
@@ -781,7 +801,7 @@ msgstr "یادآوری جدید"
 msgid "Next"
 msgstr "بعدی"
 
-#: src/screens/home/index.tsx:181
+#: src/screens/home/index.tsx:190
 msgid "Next Day"
 msgstr "روز بعد"
 
@@ -790,12 +810,12 @@ msgstr "روز بعد"
 msgid "No"
 msgstr "خیر"
 
-#: src/components/AutocompleteInput.tsx:203
+#: src/components/AutocompleteInput.tsx:207
 msgid "No Data"
 msgstr "بدون اطلاعات"
 
-#: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:207
+#: src/components/audio_picker.tsx:423
+#: src/components/AutocompleteInput.tsx:211
 msgid "No Results"
 msgstr "نتیجه ای یافت نشد"
 
@@ -857,7 +877,7 @@ msgid "One-Seventh of the Night"
 msgstr "یک هفتم شب"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:212
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "Only once?"
 msgstr "فقط یک بار؟"
 
@@ -883,9 +903,21 @@ msgstr "مخزن اوپن سورس"
 msgid "Open-source"
 msgstr "اوپن سورس یا متن باز"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:212
 msgid "Options"
 msgstr "گزینه ها"
+
+#: src/components/orientation_lock.tsx:55
+msgid "Orientation Lock: Landscape"
+msgstr "قفل جهت: افقی"
+
+#: src/components/orientation_lock.tsx:50
+msgid "Orientation Lock: Portrait"
+msgstr "قفل جهت: عمودی"
+
+#: src/components/orientation_lock.tsx:61
+msgid "Orientation: Unlocked"
+msgstr "جهت: قفل نشده"
 
 #: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
@@ -907,6 +939,11 @@ msgstr "فارسی"
 msgid "Phone State Permission"
 msgstr "مجوز وضعیت تلفن"
 
+#: src/components/audio_picker.tsx:379
+#: src/screens/settings_adhan/adhan_list_item.tsx:223
+msgid "Play"
+msgstr "پخش"
+
 #: src/utils/dialogs.ts:36
 msgid "Please enable location service"
 msgstr "لطفاً سرویس موقعیت مکانی را فعال کنید"
@@ -927,6 +964,11 @@ msgstr "مدیریت انرژی"
 msgid "Prayer Times"
 msgstr "اوقات شرعی"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:175
+msgid "Prayer list"
+msgstr "فهرست نمازها"
+
+#: src/components/audio_picker.tsx:365
 #: src/screens/settings_location/index.tsx:197
 #: src/screens/settings_location/index.tsx:216
 msgid "Press to search"
@@ -936,7 +978,7 @@ msgstr "برای جستجو لمس کنید"
 msgid "Press to select a method"
 msgstr "برای انتخاب لمس کنید"
 
-#: src/screens/home/index.tsx:150
+#: src/screens/home/index.tsx:159
 msgid "Prev Day"
 msgstr "روز قبل"
 
@@ -1005,7 +1047,7 @@ msgstr "مانده تا"
 msgid "Remind me next year"
 msgstr "سال بعد به من یادآوری کن"
 
-#: src/screens/fullscreen_alarm/index.tsx:72
+#: src/screens/fullscreen_alarm/index.tsx:87
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1031,8 +1073,8 @@ msgstr "دستگاه های سامسونگ دارای «مدیریت انرژی�
 msgid "Saturday"
 msgstr "شنبه"
 
-#: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:173
+#: src/components/audio_picker.tsx:401
+#: src/components/AutocompleteInput.tsx:177
 msgid "Search"
 msgstr "جستجو"
 
@@ -1040,7 +1082,7 @@ msgstr "جستجو"
 msgid "Secondary Calendar"
 msgstr "تقویم ثانویه"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:196
+#: src/screens/settings_adhan/adhan_list_item.tsx:205
 msgid "Select as Fajr Adhan"
 msgstr "به عنوان اذان فجر انتخاب کنید"
 
@@ -1048,6 +1090,14 @@ msgstr "به عنوان اذان فجر انتخاب کنید"
 #: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "انتخاب اذان متفاوت برای نماز صبح"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:154
+msgid "Selected as adhan"
+msgstr "به عنوان اذان انتخاب شد"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:163
+msgid "Selected as fajr adhan"
+msgstr "به عنوان اذان فجر انتخاب شد"
 
 #: src/components/new_audio_dialog.tsx:51
 #: src/screens/settings_adhan/index.tsx:233
@@ -1103,11 +1153,11 @@ msgstr "آیا با فشار دادن دکمه صدا، برنامه باید پ
 msgid "Should phone vibrate when adhan or reminder starts playing?"
 msgstr "آیا هنگام شروع پخش اذان یا یادآوری، تلفن باید بلرزد؟"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:186
+#: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Show Adhan Options"
 msgstr "نمایش گزینه های اذان"
 
-#: src/screens/home/index.tsx:173
+#: src/screens/home/index.tsx:182
 msgid "Show Today"
 msgstr "نمایش امروز"
 
@@ -1166,8 +1216,8 @@ msgstr "برخی از دستگاه‌ها به تنظیمات اضافی در \"
 
 #: src/screens/settings_notifications/notification_setting.tsx:234
 #: src/screens/settings_notifications/notification_setting.tsx:274
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:196
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:201
 msgid "Sound"
 msgstr "صدا"
 
@@ -1178,6 +1228,11 @@ msgstr "اداره معنوی مسلمانان روسیه"
 #: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Status"
 msgstr "وضعیت"
+
+#: src/components/audio_picker.tsx:377
+#: src/screens/settings_adhan/adhan_list_item.tsx:221
+msgid "Stop"
+msgstr "توقف"
 
 #: src/components/week_day_selector.tsx:11
 msgid "Sunday"
@@ -1236,9 +1291,17 @@ msgstr "پنج شنبه"
 msgid "Time"
 msgstr "وقت"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+msgid "Time condition"
+msgstr "شرایط زمانی"
+
 #: src/screens/settings_display/time_format_settings.tsx:11
 msgid "Time format"
 msgstr "قالب زمان"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+msgid "Time list"
+msgstr "لیست زمانی"
 
 #: src/screens/settings_location/index.tsx:162
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
@@ -1260,6 +1323,22 @@ msgstr "فردا"
 msgid "Tuesday"
 msgstr "سه شنبه"
 
+#: src/screens/qibla_finder_map/index.tsx:116
+msgid "Turn Left"
+msgstr "به چپ بپرخ"
+
+#: src/screens/qibla_finder_map/index.tsx:117
+msgid "Turn Right"
+msgstr "به راست بچرخ"
+
+#: src/components/qada_history_toggle.tsx:27
+msgid "Turn history off"
+msgstr "خاموش کردن تاریخچه"
+
+#: src/components/qada_history_toggle.tsx:27
+msgid "Turn history on"
+msgstr "روشن کردن تاریخچه"
+
 #: src/screens/settings_calculation/index.tsx:186
 msgid "Twilight Angle"
 msgstr "زاویه گرگ و میش"
@@ -1276,7 +1355,7 @@ msgstr "سازمان اتحادیه اسلامی فرانسه"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "دانشگاه علوم اسلامی کراچی"
 
-#: src/components/AutocompleteInput.tsx:194
+#: src/components/AutocompleteInput.tsx:198
 msgid "Unknown Error"
 msgstr "خطای نامشخص"
 
@@ -1391,6 +1470,14 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "بله"
 
+#: src/screens/qibla_finder_map/index.tsx:276
+msgid "You are facing Kaaba"
+msgstr "رو به قبله هستید"
+
+#: src/screens/qibla_finder_map/index.tsx:277
+msgid "You are not facing Kaaba"
+msgstr "ره به قبله نیستید"
+
 #: src/screens/settings_fix_common_problems/index.tsx:78
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
@@ -1449,7 +1536,7 @@ msgstr "درباره"
 msgid "adjustment.hint"
 msgstr "تعداد دقیقه هایی که به زمان های محاسبه شده اضافه می شود"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
 msgid "after"
 msgstr "بعد از"
 
@@ -1466,7 +1553,7 @@ msgstr "عصر"
 msgid "backup_settings"
 msgstr "پشتیبان گیری"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:168
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "before"
 msgstr "قبل از"
 
@@ -1576,7 +1663,7 @@ msgstr "موذن زاده"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
-#: src/components/prayer_adhan.tsx:28
+#: src/components/prayer_adhan.tsx:45
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "مؤذن"

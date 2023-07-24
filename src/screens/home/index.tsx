@@ -16,6 +16,7 @@ import {isRTL} from '@/i18n';
 
 import {navigate} from '@/navigation/root_navigation';
 
+import {translateRoute} from '@/navigation/types';
 import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
@@ -109,7 +110,7 @@ export function Home() {
 
             <HStack alignItems="center">
               <Button
-                accessibilityLabel={t({id: 'qada_counter'})}
+                accessibilityLabel={translateRoute('QadaCounter')}
                 p="2"
                 marginLeft="3"
                 variant="ghost"
@@ -119,7 +120,7 @@ export function Home() {
                 <AddCircleIcon size="2xl" />
               </Button>
               <Button
-                accessibilityLabel={t({id: 'qibla_finder'})}
+                accessibilityLabel={translateRoute('QiblaFinder')}
                 p="2"
                 variant="ghost"
                 onPress={() => {
@@ -128,7 +129,7 @@ export function Home() {
                 <ExploreIcon size="2xl" />
               </Button>
               <Button
-                accessibilityLabel={t({id: 'settings'})}
+                accessibilityLabel={translateRoute('Settings')}
                 p="2"
                 marginRight="-3"
                 variant="ghost"

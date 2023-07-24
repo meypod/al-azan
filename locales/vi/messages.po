@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-23 16:17+0330\n"
+"POT-Creation-Date: 2023-07-24 13:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: vi\n"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:134
 msgid "10 min"
 msgstr "10 phút"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:137
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
 msgid "15 min"
 msgstr "15 phút"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 msgid "30 min"
 msgstr "30 phút"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 phút được thêm vào thời gian Isha trong tháng Ramadan theo phương pháp này"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:130
 msgid "5 min"
 msgstr "5 phút"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:145
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "60 min"
 msgstr "60 phút"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:149
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:150
 msgid "90 min"
 msgstr "90 phút"
 
@@ -62,7 +62,7 @@ msgstr "Không quảng cáo"
 msgid "Adaptive Charging"
 msgstr "Sạc Thích ứng"
 
-#: src/components/audio_picker.tsx:399
+#: src/components/audio_picker.tsx:407
 #: src/components/new_audio_dialog.tsx:60
 #: src/screens/settings_adhan/index.tsx:243
 msgid "Add"
@@ -81,7 +81,11 @@ msgstr "Thêm Âm báo Tùy chỉnh"
 msgid "Add Reminder"
 msgstr "Thêm Lời nhắc"
 
-#: src/screens/fullscreen_alarm/index.tsx:68
+#: src/screens/qada_counter/index.tsx:87
+msgid "Add new counter"
+msgstr "Thêm bộ đếm mới"
+
+#: src/screens/fullscreen_alarm/index.tsx:83
 msgid "Adhan"
 msgstr "Azan"
 
@@ -194,10 +198,14 @@ msgstr "Lịch"
 #: src/components/new_audio_dialog.tsx:57
 #: src/screens/qada_counter/edit_counter_modal.tsx:165
 #: src/screens/settings_adhan/index.tsx:240
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:247
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "Hủy"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:183
+msgid "Cancel download"
+msgstr "Hủy tải xuống"
 
 #: src/screens/settings_calculation/index.tsx:196
 msgid "Choose Asr Calculation Madhab"
@@ -262,7 +270,7 @@ msgstr "Thành phố gần nhất"
 msgid "Closest Date"
 msgstr "Ngày gần nhất"
 
-#: src/screens/qibla_finder_map/index.tsx:227
+#: src/screens/qibla_finder_map/index.tsx:242
 msgid "Compass Lock"
 msgstr "Khóa La Bàn"
 
@@ -271,7 +279,7 @@ msgid "Compass sensor unavailable"
 msgstr "Cảm biến la bàn không khả dụng"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:164
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:243
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:246
 msgid "Confirm"
 msgstr "Xác nhận"
 
@@ -312,6 +320,10 @@ msgstr "Thời gian báo thức sắp tới tùy chỉnh"
 msgid "Dark"
 msgstr "Tối"
 
+#: src/screens/qada_counter/counter_view.tsx:57
+msgid "Decrement"
+msgstr "giảm"
+
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:57
@@ -326,7 +338,7 @@ msgstr "Mặc định (Giữa hoàng hôn đến bình minh)"
 
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
-#: src/screens/settings_adhan/adhan_list_item.tsx:200
+#: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Xóa"
@@ -335,7 +347,7 @@ msgstr "Xóa"
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tùy thuộc vào thiết bị và phiên bản Android của bạn, Đôi khi thiết bị của bạn có thể tắt ứng dụng chạy nền để tiết kiệm pin. Điều này có thể ngăn việc hiện báo thức/thông báo."
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:195
+#: src/screens/settings_adhan/adhan_list_item.tsx:204
 msgid "Deselect as Fajr Adhan"
 msgstr "Bỏ chọn làm Fajr Azan"
 
@@ -351,7 +363,7 @@ msgstr "Đã tắt"
 msgid "Disclaimer"
 msgstr "Lưu ý"
 
-#: src/screens/fullscreen_alarm/index.tsx:138
+#: src/screens/fullscreen_alarm/index.tsx:154
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "Bỏ qua"
@@ -387,6 +399,10 @@ msgstr "Không hiển thị màn hình báo thức?"
 #: src/intro/intro.tsx:101
 msgid "Done"
 msgstr "Xong"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:186
+msgid "Download"
+msgstr "Tải xuống"
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Eastern Arabic"
@@ -581,6 +597,10 @@ msgstr "Nhập thành công"
 msgid "In addition to five daily prayers, it has settings for Sunrise, Sunset, Midnight and Night Prayer (Tahajjud)"
 msgstr "Ngoài 5 lần cầu nguyện hàng ngày, nó còn có cài đặt cho các lần cầu nguyện lúc Mặt trời mọc, Mặt trời lặn, Nửa Đêm và Ban Đêm (Tahajjud)"
 
+#: src/screens/qada_counter/counter_view.tsx:111
+msgid "Increment"
+msgstr "Tăng"
+
 #: src/screens/qibla_finder/index.tsx:32
 msgid "Info"
 msgstr "Thông tin"
@@ -682,7 +702,7 @@ msgstr "Chủ đề Sáng/Tối"
 msgid "Light/Dark theme"
 msgstr "Chủ đề Sáng/Tối"
 
-#: src/components/AutocompleteInput.tsx:199
+#: src/components/AutocompleteInput.tsx:203
 msgid "Loading"
 msgstr "Đang tải"
 
@@ -777,7 +797,7 @@ msgstr "Lời nhắc Mới"
 msgid "Next"
 msgstr "Tiếp"
 
-#: src/screens/home/index.tsx:181
+#: src/screens/home/index.tsx:190
 msgid "Next Day"
 msgstr "Ngày Sau"
 
@@ -786,12 +806,12 @@ msgstr "Ngày Sau"
 msgid "No"
 msgstr "Không"
 
-#: src/components/AutocompleteInput.tsx:203
+#: src/components/AutocompleteInput.tsx:207
 msgid "No Data"
 msgstr "Không có dữ liệu"
 
-#: src/components/audio_picker.tsx:415
-#: src/components/AutocompleteInput.tsx:207
+#: src/components/audio_picker.tsx:423
+#: src/components/AutocompleteInput.tsx:211
 msgid "No Results"
 msgstr "Không kết quả"
 
@@ -853,7 +873,7 @@ msgid "One-Seventh of the Night"
 msgstr "Một phần bảy đêm"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:212
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "Only once?"
 msgstr "Chỉ một lần?"
 
@@ -879,9 +899,21 @@ msgstr "Kho mã nguồn mở"
 msgid "Open-source"
 msgstr "Mã nguồn mở"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:212
 msgid "Options"
 msgstr "Tùy chọn"
+
+#: src/components/orientation_lock.tsx:55
+msgid "Orientation Lock: Landscape"
+msgstr "Khóa định hướng: Phong cảnh"
+
+#: src/components/orientation_lock.tsx:50
+msgid "Orientation Lock: Portrait"
+msgstr "Khóa định hướng: Chân dung"
+
+#: src/components/orientation_lock.tsx:61
+msgid "Orientation: Unlocked"
+msgstr "Định hướng: Đã mở khóa"
 
 #: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
@@ -903,6 +935,11 @@ msgstr "Ba Tư"
 msgid "Phone State Permission"
 msgstr "Quyền Trạng thái Thiết bị"
 
+#: src/components/audio_picker.tsx:379
+#: src/screens/settings_adhan/adhan_list_item.tsx:223
+msgid "Play"
+msgstr "Chơi"
+
 #: src/utils/dialogs.ts:36
 msgid "Please enable location service"
 msgstr "Vui lòng bật dịch vụ định vị"
@@ -923,6 +960,11 @@ msgstr "Quản lý Pin"
 msgid "Prayer Times"
 msgstr "Giờ cầu nguyện"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:175
+msgid "Prayer list"
+msgstr "danh sách cầu nguyện"
+
+#: src/components/audio_picker.tsx:365
 #: src/screens/settings_location/index.tsx:197
 #: src/screens/settings_location/index.tsx:216
 msgid "Press to search"
@@ -932,7 +974,7 @@ msgstr "Nhấn để tìm kiếm"
 msgid "Press to select a method"
 msgstr "Nhấn để chọn một phương pháp"
 
-#: src/screens/home/index.tsx:150
+#: src/screens/home/index.tsx:159
 msgid "Prev Day"
 msgstr "Ngày Trước"
 
@@ -1001,7 +1043,7 @@ msgstr "Đếm ngược tới"
 msgid "Remind me next year"
 msgstr "Nhắc tôi năm sau"
 
-#: src/screens/fullscreen_alarm/index.tsx:72
+#: src/screens/fullscreen_alarm/index.tsx:87
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1027,8 +1069,8 @@ msgstr "Các thiết bị Samsung có Trình quản lý nguồn tùy chỉnh c�
 msgid "Saturday"
 msgstr "Thứ 7"
 
-#: src/components/audio_picker.tsx:393
-#: src/components/AutocompleteInput.tsx:173
+#: src/components/audio_picker.tsx:401
+#: src/components/AutocompleteInput.tsx:177
 msgid "Search"
 msgstr "Tìm kiếm"
 
@@ -1036,7 +1078,7 @@ msgstr "Tìm kiếm"
 msgid "Secondary Calendar"
 msgstr "Lịch phụ"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:196
+#: src/screens/settings_adhan/adhan_list_item.tsx:205
 msgid "Select as Fajr Adhan"
 msgstr "Chọn làm Fajr Azan"
 
@@ -1044,6 +1086,14 @@ msgstr "Chọn làm Fajr Azan"
 #: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Chọn âm báo Azan khác nhau cho Fajr namaz"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:154
+msgid "Selected as adhan"
+msgstr "Được chọn là adhan"
+
+#: src/screens/settings_adhan/adhan_list_item.tsx:163
+msgid "Selected as fajr adhan"
+msgstr "Được chọn là fajr adhan"
 
 #: src/components/new_audio_dialog.tsx:51
 #: src/screens/settings_adhan/index.tsx:233
@@ -1102,11 +1152,11 @@ msgstr "Ứng dụng có nên dừng phát Azan khi nhấn nút âm lượng kh�
 msgid "Should phone vibrate when adhan or reminder starts playing?"
 msgstr "Điện thoại có nên rung khi quảng cáo hoặc lời nhắc bắt đầu phát không?"
 
-#: src/screens/settings_adhan/adhan_list_item.tsx:186
+#: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Show Adhan Options"
 msgstr "Tùy chọn Hiển thị Azan"
 
-#: src/screens/home/index.tsx:173
+#: src/screens/home/index.tsx:182
 msgid "Show Today"
 msgstr "Hôm nay"
 
@@ -1168,8 +1218,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:234
 #: src/screens/settings_notifications/notification_setting.tsx:274
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:196
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:201
 msgid "Sound"
 msgstr "Âm báo"
 
@@ -1180,6 +1230,11 @@ msgstr "Cơ quan Quản lý Tinh thần của người Hồi giáo ở Nga"
 #: src/screens/settings_fix_common_problems/index.tsx:54
 msgid "Status"
 msgstr "Trạng thái"
+
+#: src/components/audio_picker.tsx:377
+#: src/screens/settings_adhan/adhan_list_item.tsx:221
+msgid "Stop"
+msgstr "Dừng lại"
 
 #: src/components/week_day_selector.tsx:11
 msgid "Sunday"
@@ -1238,9 +1293,17 @@ msgstr "Thứ 5"
 msgid "Time"
 msgstr "Lần"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+msgid "Time condition"
+msgstr "điều kiện thời gian"
+
 #: src/screens/settings_display/time_format_settings.tsx:11
 msgid "Time format"
 msgstr "Định dạng giờ"
+
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+msgid "Time list"
+msgstr "danh sách thời gian"
 
 #: src/screens/settings_location/index.tsx:162
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
@@ -1262,6 +1325,22 @@ msgstr "Ngày mai"
 msgid "Tuesday"
 msgstr "Thứ 3"
 
+#: src/screens/qibla_finder_map/index.tsx:116
+msgid "Turn Left"
+msgstr "Rẽ trái"
+
+#: src/screens/qibla_finder_map/index.tsx:117
+msgid "Turn Right"
+msgstr "Rẽ phải"
+
+#: src/components/qada_history_toggle.tsx:27
+msgid "Turn history off"
+msgstr "Tắt lịch sử"
+
+#: src/components/qada_history_toggle.tsx:27
+msgid "Turn history on"
+msgstr "Bật lịch sử"
+
 #: src/screens/settings_calculation/index.tsx:186
 msgid "Twilight Angle"
 msgstr "Góc chạng vạng"
@@ -1278,7 +1357,7 @@ msgstr "Tổ chức Liên minh Hồi giáo de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Đại học Khoa học Hồi giáo, Karachi"
 
-#: src/components/AutocompleteInput.tsx:194
+#: src/components/AutocompleteInput.tsx:198
 msgid "Unknown Error"
 msgstr "Lỗi không rõ"
 
@@ -1393,6 +1472,14 @@ msgstr "Wifi"
 msgid "Yes"
 msgstr "Được"
 
+#: src/screens/qibla_finder_map/index.tsx:276
+msgid "You are facing Kaaba"
+msgstr "Bạn đang đối mặt với Kaaba"
+
+#: src/screens/qibla_finder_map/index.tsx:277
+msgid "You are not facing Kaaba"
+msgstr "Bạn không phải đối mặt với Kaaba"
+
 #: src/screens/settings_fix_common_problems/index.tsx:78
 msgid "You can access your device Power Manager using the button below."
 msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết bị bằng cách ấn nút bên dưới."
@@ -1448,7 +1535,7 @@ msgstr "Về Ứng dụng"
 msgid "adjustment.hint"
 msgstr "Số phút sẽ được thêm vào thời gian tính toán"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
 msgid "after"
 msgstr "sau"
 
@@ -1465,7 +1552,7 @@ msgstr "Asr"
 msgid "backup_settings"
 msgstr "Sao lưu"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:168
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "before"
 msgstr "trước"
 
@@ -1575,7 +1662,7 @@ msgstr "Moazen Zade"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
-#: src/components/prayer_adhan.tsx:28
+#: src/components/prayer_adhan.tsx:45
 #: src/navigation/types.ts:65
 msgid "muezzin_settings"
 msgstr "Muezzin"
