@@ -1,8 +1,7 @@
 import {Stack, FlatList} from 'native-base';
-import {memo, useCallback, useEffect} from 'react';
-import {useStore} from 'zustand';
-import {shallow} from 'zustand/shallow';
+import {memo, useCallback} from 'react';
 import SettingsListItem from './settings_list_item';
+import {useSettingsMonitor} from './use_settings_monitor';
 import {AlarmIcon} from '@/assets/icons/material_icons/alarm';
 import {BatteryChargingIcon} from '@/assets/icons/material_icons/battery_charging';
 import {BrightnessMediumIcon} from '@/assets/icons/material_icons/brightness_medium';
@@ -16,17 +15,8 @@ import {VolumeUpIcon} from '@/assets/icons/material_icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/material_icons/widget';
 import {SafeArea} from '@/components/safe_area';
 import {RootStackParamList} from '@/navigation/types';
-import {clearCache} from '@/store/adhan_calc_cache';
-import {alarmSettings} from '@/store/alarm';
-import {calcSettings} from '@/store/calculation';
-import {reminderSettings} from '@/store/reminder';
-import {settings, useSettings} from '@/store/settings';
-import {setNextAdhan} from '@/tasks/set_next_adhan';
-import {setReminders} from '@/tasks/set_reminder';
-import {updateWidgets} from '@/tasks/update_widgets';
-import {sha256} from '@/utils/hash';
-import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
-import {askPermissions} from '@/utils/permission';
+
+import {settings} from '@/store/settings';
 
 type ScreenListItem = {
   name: keyof RootStackParamList;
@@ -84,75 +74,7 @@ if (settings.getState().DEV_MODE) {
 }
 
 function Settings() {
-  const {calendarType, selectedAdhans, HIGHLIGHT_CURRENT_PRAYER, BYPASS_DND} =
-    useStore(
-      settings,
-      s => ({
-        calendarType: s.SELECTED_ARABIC_CALENDAR,
-        selectedAdhans: s.SELECTED_ADHAN_ENTRIES,
-        HIGHLIGHT_CURRENT_PRAYER: s.HIGHLIGHT_CURRENT_PRAYER,
-        BYPASS_DND: s.BYPASS_DND,
-      }),
-      shallow,
-    );
-  const calcSettingsState = useStore(calcSettings, state => state);
-  const alarmSettingsState = useStore(alarmSettings, state => state);
-  const reminderSettingsState = useStore(reminderSettings, state => state);
-  const [calcSettingsHash, setCalcSettingsHash] =
-    useSettings('CALC_SETTINGS_HASH');
-  const [alarmSettingsHash, setAlarmSettingsHash] = useSettings(
-    'ALARM_SETTINGS_HASH',
-  );
-  const [reminderSettingsHash, setReminderSettingsHash] = useSettings(
-    'REMINDER_SETTINGS_HASH',
-  );
-
-  useEffect(() => {
-    const stateHash = sha256(
-      JSON.stringify(calcSettingsState) +
-        calendarType +
-        BYPASS_DND +
-        JSON.stringify(selectedAdhans),
-    );
-    if (calcSettingsHash !== stateHash) {
-      setCalcSettingsHash(stateHash);
-    }
-  }, [
-    calcSettingsState,
-    calcSettingsHash,
-    setCalcSettingsHash,
-    calendarType,
-    selectedAdhans,
-    BYPASS_DND,
-  ]);
-
-  useEffect(() => {
-    const stateHash = sha256(JSON.stringify(alarmSettingsState));
-    if (alarmSettingsHash !== stateHash) {
-      askPermissions().then(() => {
-        setAlarmSettingsHash(stateHash);
-      });
-    }
-  }, [alarmSettingsState, alarmSettingsHash, setAlarmSettingsHash]);
-
-  useEffect(() => {
-    const stateHash = sha256(JSON.stringify(reminderSettingsState));
-    if (reminderSettingsHash !== stateHash) {
-      setReminderSettingsHash(stateHash);
-    }
-  }, [reminderSettingsHash, reminderSettingsState, setReminderSettingsHash]);
-
-  useNoInitialEffect(() => {
-    settings.setState({DELIVERED_ALARM_TIMESTAMPS: {}});
-    clearCache();
-    setNextAdhan();
-    setReminders({noToast: true, force: true});
-    updateWidgets();
-  }, [calcSettingsHash, alarmSettingsHash]);
-
-  useNoInitialEffect(() => {
-    updateWidgets();
-  }, [HIGHLIGHT_CURRENT_PRAYER]);
+  useSettingsMonitor();
 
   const renderItem = useCallback(
     ({item}: {item: ScreenListItem}) => <SettingsListItem item={item} />,

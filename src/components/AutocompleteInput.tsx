@@ -282,5 +282,3 @@ type AutocompleteInputProps<T> = IInputProps & {
         getData?: never;
       }
   );
-
-export default AutocompleteInput;

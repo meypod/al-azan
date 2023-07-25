@@ -57,15 +57,16 @@ const tests = timezone =>
     describe('getPrayerTimes()', () => {
       beforeAll(() => {
         calcSettings.setState({
-          LOCATION_LAT: 1,
-          LOCATION_LONG: 1,
+          LOCATION: {
+            lat: 1,
+            long: 1,
+          },
           CALCULATION_METHOD_KEY: 'MoonsightingCommittee', // doesn't matter which for test
         });
       });
       afterAll(() => {
         calcSettings.setState({
-          LOCATION_LAT: undefined,
-          LOCATION_LONG: undefined,
+          LOCATION: undefined,
           CALCULATION_METHOD_KEY: undefined,
         });
       });
@@ -122,8 +123,10 @@ describe('prayer times minimum settings check works as expected', () => {
      *  so no need to handle it, its in the middle of the ocean ;) */
     expect(
       isMinimumSettingsAvailable({
-        LOCATION_LAT: 1,
-        LOCATION_LONG: 1,
+        LOCATION: {
+          lat: 1,
+          long: 1,
+        },
         CALCULATION_METHOD_KEY: 'something',
       }),
     ).toBeTruthy();
@@ -132,8 +135,10 @@ describe('prayer times minimum settings check works as expected', () => {
   it('returns false when minimum settings coordinates is not a number', () => {
     expect(
       isMinimumSettingsAvailable({
-        LOCATION_LAT: 'foo',
-        LOCATION_LONG: 'bar',
+        LOCATION: {
+          lat: 'foo',
+          long: 'bar',
+        },
         CALCULATION_METHOD_KEY: 'something',
       }),
     ).toBeFalsy();
@@ -143,15 +148,16 @@ describe('prayer times minimum settings check works as expected', () => {
 describe('getNextPrayer()', () => {
   beforeAll(() => {
     calcSettings.setState({
-      LOCATION_LAT: 1,
-      LOCATION_LONG: 1,
+      LOCATION: {
+        lat: 1,
+        long: 1,
+      },
       CALCULATION_METHOD_KEY: 'MoonsightingCommittee', // doesn't matter which for test
     });
   });
   afterAll(() => {
     calcSettings.setState({
-      LOCATION_LAT: undefined,
-      LOCATION_LONG: undefined,
+      LOCATION: undefined,
       CALCULATION_METHOD_KEY: undefined,
     });
   });

@@ -99,10 +99,10 @@ export function QiblaCompass({route}: Props) {
   useEffect(() => {
     if (triedLocationOnce.current) return;
     triedLocationOnce.current = true;
-    const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
-    if (LOCATION_LAT && LOCATION_LONG) {
+    const {LOCATION} = calcSettings.getState();
+    if (LOCATION?.lat && LOCATION.long) {
       setFetchedCoords(undefined);
-      updateQiblaDegree({lat: LOCATION_LAT, long: LOCATION_LONG});
+      updateQiblaDegree({lat: LOCATION.lat, long: LOCATION.long});
     }
     if (route?.params?.skipInit) return;
     ToastAndroid.show(t`Getting coordinates`, ToastAndroid.SHORT);

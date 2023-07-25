@@ -8,6 +8,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack} from 'native-base';
 import {useEffect, useMemo} from 'react';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
+import {FavoriteLocations} from './screens/favorite_locations';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
@@ -130,6 +131,10 @@ export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
           />
         </Stack.Group>
         <Stack.Group>
+          <Stack.Screen
+            name="FavoriteLocations"
+            component={FavoriteLocations}
+          />
           <Stack.Screen
             name="QadaCounter"
             component={QadaCounter}

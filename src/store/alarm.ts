@@ -125,7 +125,6 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
                 persistedState as AlarmSettingsStore
               ).PRE_ALARM_MINUTES_BEFORE = 60;
             }
-            break;
           case 2:
             if (
               typeof (persistedState as AlarmSettingsStore).VIBRATION_MODE ===
@@ -134,7 +133,6 @@ export const alarmSettings = createStore<AlarmSettingsStore>()(
               (persistedState as AlarmSettingsStore).VIBRATION_MODE =
                 VibrationMode.ONCE;
             }
-            break;
           case 3:
             // this will be run when storage version is changed to 4
             break;

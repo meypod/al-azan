@@ -12,13 +12,24 @@ import {createStore} from 'zustand/vanilla';
 import {clearCache} from './adhan_calc_cache';
 import {alarmSettings, AlarmSettingsStore} from './alarm';
 import {zustandStorage} from './mmkv';
+import {settings} from './settings';
 import {Prayer} from '@/adhan';
+import type {CityInfo, CountryInfo} from '@/utils/geonames';
 
 export const CALC_SETTINGS_STORAGE_KEY = 'CALC_SETTINGS_STORAGE';
 
 export const ADHAN_NOTIFICATION_SUFFIX = '_NOTIFY';
 export const ADHAN_SOUND_SUFFIX = '_SOUND';
 export const ADHAN_ADJUSTMENT_SUFFIX = '_ADJUSTMENT';
+
+export type LocationDetail = {
+  lat?: number;
+  long?: number;
+  city?: CityInfo;
+  country?: CountryInfo;
+  /** available on `FavoriteLocation`s */
+  label?: string;
+};
 
 export function getPrayerAdjustmentSettingKey(
   prayer: Prayer,
@@ -28,8 +39,7 @@ export function getPrayerAdjustmentSettingKey(
 }
 
 export type CalcSettingsStore = {
-  LOCATION_LAT: number | undefined;
-  LOCATION_LONG: number | undefined;
+  LOCATION: LocationDetail | undefined;
   CALCULATION_METHOD_KEY: string | undefined;
   HIGH_LATITUDE_RULE: string | undefined;
   ASR_CALCULATION: string;
@@ -72,6 +82,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
     (set, get) => ({
       LOCATION_LAT: undefined,
       LOCATION_LONG: undefined,
+      LOCATION: undefined,
       CALCULATION_METHOD_KEY: undefined,
       HIGH_LATITUDE_RULE: undefined,
       ASR_CALCULATION: Madhab.Shafi,
@@ -169,14 +180,12 @@ export const calcSettings = createStore<CalcSettingsStore>()(
             ) {
               clearCache();
             }
-            break;
           case 3:
             // a cache reset force for Radaman fix for Umm al-Qura University method
             if (!(persistedState as CalcSettingsStore).MIDNIGHT_METHOD) {
               (persistedState as CalcSettingsStore).MIDNIGHT_METHOD =
                 MidnightMethod.Standard;
             }
-            break;
           case 4:
             if (
               typeof (persistedState as CalcSettingsStore)
@@ -190,7 +199,16 @@ export const calcSettings = createStore<CalcSettingsStore>()(
             ) {
               (persistedState as CalcSettingsStore).HIJRI_DATE_ADJUSTMENT = 0;
             }
+          case 5: {
+            const s = settings.getState();
+            let store = persistedState as CalcSettingsStore;
+            if (!store.LOCATION) store.LOCATION = {};
+            store.LOCATION.city = (s as any).LOCATION_CITY;
+            store.LOCATION.country = (s as any).LOCATION_COUNTRY;
+            store.LOCATION.lat = (store as any).LOCATION_LAT;
+            store.LOCATION.long = (store as any).LOCATION_LONG;
             break;
+          }
         }
         /* eslint-enable no-fallthrough */
         return persistedState as CalcSettingsStore;

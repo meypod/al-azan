@@ -186,11 +186,11 @@ export function QiblaMap() {
 
   useEffect(() => {
     if (gotLocationOnce.current) return;
-    const {LOCATION_LAT, LOCATION_LONG} = calcSettings.getState();
-    if (LOCATION_LAT && LOCATION_LONG) {
+    const {LOCATION} = calcSettings.getState();
+    if (LOCATION?.lat && LOCATION.long) {
       gotLocationOnce.current = true;
       onUserLocationUpdate({
-        coords: {latitude: LOCATION_LAT, longitude: LOCATION_LONG},
+        coords: {latitude: LOCATION?.lat, longitude: LOCATION.long},
       });
     }
   }, [onUserLocationUpdate]);

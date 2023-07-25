@@ -20,6 +20,7 @@ export type RootStackParamList = {
   QiblaMap: undefined;
   QiblaCompass: {skipInit?: boolean} | undefined;
   QadaCounter: undefined;
+  FavoriteLocations: undefined;
 };
 
 declare global {
@@ -112,6 +113,12 @@ const routeTranslations = {
     id: 'qada_counter',
     message: 'Qada Counter',
     comment: 'Title of the page where you can count your Qada prayers and fast',
+  }),
+  FavoriteLocations: defineMessage({
+    id: 'favorite_location',
+    message: 'Favorite Locations',
+    comment:
+      'Title of the page where you add your favorite locations for faster switch',
   }),
 } as Record<string, MessageDescriptor>;
 

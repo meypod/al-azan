@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {Button, HStack, ScrollView, Stack, Text} from 'native-base';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {getPrayerTimes} from '@/adhan';
@@ -18,6 +18,7 @@ import {navigate} from '@/navigation/root_navigation';
 
 import {translateRoute} from '@/navigation/types';
 import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
+import {calcSettings} from '@/store/calculation';
 import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
 
@@ -70,10 +71,11 @@ export function Home() {
       HIDDEN_PRAYERS: s.HIDDEN_PRAYERS,
       DELIVERED_ALARM_TIMESTAMPS: s.DELIVERED_ALARM_TIMESTAMPS,
       HIGHLIGHT_CURRENT_PRAYER: s.HIGHLIGHT_CURRENT_PRAYER,
-      LOCATION_CITY: s.LOCATION_CITY,
     }),
     shallow,
   );
+
+  const location = useStore(calcSettings, s => s.LOCATION);
 
   const [prayerTimes, setPrayerTimes] = useState<CachedPrayerTimes | undefined>(
     getPrayerTimes(currentDate),
@@ -94,10 +96,36 @@ export function Home() {
     updateCurrentDate();
   }, [impactfulSettings, updateCurrentDate]);
 
+  const goToCities = useCallback(() => navigate('FavoriteLocations'), []);
+
+  const locationText = useMemo(() => {
+    if (location) {
+      if (location.label) {
+        return location.label;
+      }
+      if (location.city) {
+        return location.city.selectedName || location.city.name;
+      }
+
+      if (location.lat && location.long) {
+        const latString =
+          Math.abs(location.lat).toFixed(2) +
+          (location.lat > 0 ? '° N' : '° S');
+        const longString =
+          Math.abs(location.long).toFixed(2) +
+          (location.long > 0 ? '° E' : '° W');
+        return latString + ', ' + longString;
+      }
+      return '';
+    } else {
+      return '';
+    }
+  }, [location]);
+
   return (
     <SafeArea>
       <ScrollView>
-        <Stack flex={1} alignItems="center">
+        <Stack flex={1} alignItems="center" pb="4">
           <HStack
             mb="-3"
             px="3"
@@ -196,14 +224,31 @@ export function Home() {
             prayerTimes={prayerTimes}
             settings={impactfulSettings}
           />
-          <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR} mb="1">
+          <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR}>
             {day.arabicDate}
           </Text>
-          {impactfulSettings.LOCATION_CITY && (
-            <Text mb="1">
-              {impactfulSettings.LOCATION_CITY.selectedName ||
-                impactfulSettings.LOCATION_CITY.name}
-            </Text>
+          {location && (
+            <Button
+              pt="1"
+              p="3"
+              accessibilityActions={[
+                {
+                  name: 'activate',
+                  label: t`See favorite cities`,
+                },
+              ]}
+              onPress={goToCities}
+              onAccessibilityAction={goToCities}
+              variant="unstyled">
+              <Text
+                borderBottomWidth={1}
+                borderColor="muted.300"
+                _dark={{
+                  borderColor: 'muted.500',
+                }}>
+                {locationText}
+              </Text>
+            </Button>
           )}
         </Stack>
       </ScrollView>

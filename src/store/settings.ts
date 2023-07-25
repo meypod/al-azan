@@ -17,7 +17,6 @@ import {
 } from '@/assets/adhan_entries';
 import {ADHAN_NOTIFICATION_ID} from '@/constants/notification';
 import type {AudioEntry} from '@/modules/media_player';
-import {CountryInfo, CityInfo} from '@/utils/geonames';
 import {PREFERRED_LOCALE} from '@/utils/locale';
 
 export const SETTINGS_STORAGE_KEY = 'SETTINGS_STORAGE';
@@ -44,8 +43,8 @@ export type SettingsStore = {
   SAVED_ADHAN_AUDIO_ENTRIES: AdhanEntry[];
   SAVED_USER_AUDIO_ENTRIES: AudioEntry[];
   SELECTED_ADHAN_ENTRIES: SelectedAdhanEntries;
-  LOCATION_COUNTRY: CountryInfo | undefined;
-  LOCATION_CITY: CityInfo | undefined;
+  // LOCATION_COUNTRY: CountryInfo | undefined; // moved to calculation store
+  // LOCATION_CITY: CityInfo | undefined; // moved to calculation store
   LAST_APP_FOCUS_TIMESTAMP?: number;
   HIDDEN_PRAYERS: Array<Prayer>;
   HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
@@ -379,7 +378,6 @@ export const settings = createStore<SettingsStore>()(
                 (persistedState as SettingsStore).SAVED_ADHAN_AUDIO_ENTRIES[0],
               [Prayer.Fajr]: (persistedState as any).SELECTED_FAJR_ADHAN_ENTRY,
             };
-            break;
           case 10:
             [
               'adhan-channel',

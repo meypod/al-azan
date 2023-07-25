@@ -37,11 +37,11 @@ export type PrayerTimesOptions = {
 export function isMinimumSettingsAvailable(calcState?: CalcSettingsStore) {
   if (!calcState) return false;
 
-  const lat = calcState['LOCATION_LAT']!;
-  const long = calcState['LOCATION_LONG']!;
+  const lat = calcState.LOCATION?.lat;
+  const long = calcState.LOCATION?.long;
   const calcMethodKey = calcState['CALCULATION_METHOD_KEY'];
 
-  if (![lat, long, calcMethodKey].every(Boolean)) return false;
+  if (!lat || !long || !calcMethodKey) return false;
 
   if (isNaN(lat) || isNaN(long)) {
     return false;
@@ -54,8 +54,8 @@ function getPrayerTimesOptionsFromSettings() {
   const state = calcSettings.getState();
   if (!isMinimumSettingsAvailable(state)) return;
 
-  const lat = state.LOCATION_LAT!;
-  const long = state.LOCATION_LONG!;
+  const lat = state.LOCATION!.lat!;
+  const long = state.LOCATION!.long!;
   const calcMethodKey = state.CALCULATION_METHOD_KEY;
   const highLatRuleSetting = state.HIGH_LATITUDE_RULE;
   const asrCalcSetting = state.ASR_CALCULATION;
