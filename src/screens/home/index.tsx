@@ -96,7 +96,7 @@ export function Home() {
     updateCurrentDate();
   }, [impactfulSettings, updateCurrentDate]);
 
-  const goToCities = useCallback(() => navigate('FavoriteLocations'), []);
+  const goToLocations = useCallback(() => navigate('FavoriteLocations'), []);
 
   const locationText = useMemo(() => {
     if (location) {
@@ -234,11 +234,11 @@ export function Home() {
               accessibilityActions={[
                 {
                   name: 'activate',
-                  label: t`See favorite cities`,
+                  label: t`See favorite locations`,
                 },
               ]}
-              onPress={goToCities}
-              onAccessibilityAction={goToCities}
+              onPress={goToLocations}
+              onAccessibilityAction={goToLocations}
               variant="unstyled">
               <Text
                 borderBottomWidth={1}
