@@ -78,11 +78,7 @@ export function EditFavoriteLocationModal({
       visible={!!draftState}
       onRequestClose={onCancel}>
       <Pressable flex={1} bg="black:alpha.50" onPressOut={onCancel}>
-        <ScrollView
-          flex={1}
-          borderWidth={1}
-          borderColor={'white'}
-          paddingTop="10">
+        <ScrollView flex={1} paddingTop="10">
           <TouchableWithoutFeedback>
             <Stack
               m="4"
