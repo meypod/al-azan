@@ -55,6 +55,7 @@ export function EditFavoriteLocationModal({
       setDraftState(s => ({
         ...s,
         ...val,
+        label: s?.label || val.city?.selectedName || val.city?.name,
       }));
     } else {
       setDraftState(s => ({id: s?.id, label: s?.label}));
