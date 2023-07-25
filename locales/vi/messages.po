@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-25 16:58+0330\n"
+"POT-Creation-Date: 2023-07-25 17:47+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -85,7 +85,7 @@ msgstr "Thêm Lời nhắc"
 msgid "Add new counter"
 msgstr "Thêm bộ đếm mới"
 
-#: src/screens/favorite_locations/index.tsx:110
+#: src/screens/favorite_locations/index.tsx:119
 msgid "Add new location"
 msgstr "Thêm vị trí mới"
 
@@ -200,8 +200,8 @@ msgid "Calendar"
 msgstr "Lịch"
 
 #: src/components/new_audio_dialog.tsx:57
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:109
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:148
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
@@ -290,7 +290,7 @@ msgstr "Khóa La Bàn"
 msgid "Compass sensor unavailable"
 msgstr "Cảm biến la bàn không khả dụng"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:147
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:249
 msgid "Confirm"
@@ -350,7 +350,7 @@ msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Mặc định (Giữa hoàng hôn đến bình minh)"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:76
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/screens/settings_reminders/reminder_item.tsx:125
@@ -423,7 +423,7 @@ msgstr "Tải xuống"
 msgid "Eastern Arabic"
 msgstr "Đông Ả Rập"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:62
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "Biên tập"
@@ -436,7 +436,7 @@ msgstr "Chỉnh sửa thông số tính toán"
 msgid "Edit Counter"
 msgstr "Chỉnh sửa Bộ đếm"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "Edit Location"
 msgstr "Chỉnh sửa vị trí"
 
@@ -688,7 +688,7 @@ msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgid "Kuwait"
 msgstr "Cô-oét"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:116
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:107
 msgid "Label"
@@ -722,6 +722,10 @@ msgstr "Chủ đề Sáng/Tối"
 #: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Chủ đề Sáng/Tối"
+
+#: src/screens/favorite_locations/index.tsx:114
+msgid "List is empty"
+msgstr "Danh sách trống"
 
 #: src/components/AutocompleteInput.tsx:203
 msgid "Loading"
@@ -811,7 +815,7 @@ msgstr "Tên"
 msgid "New Counter"
 msgstr "Bộ đếm mới"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "New Location"
 msgstr "Vị trí mới"
 
@@ -1120,7 +1124,7 @@ msgstr "Chọn làm Fajr Azan"
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Chọn âm báo Azan khác nhau cho Fajr namaz"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:54
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:55
 msgid "Selected"
 msgstr "Đã chọn"
 

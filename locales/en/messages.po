@@ -91,7 +91,7 @@ msgstr "Add Reminder"
 msgid "Add new counter"
 msgstr "Add new counter"
 
-#: src/screens/favorite_locations/index.tsx:110
+#: src/screens/favorite_locations/index.tsx:119
 msgid "Add new location"
 msgstr "Add new location"
 
@@ -206,8 +206,8 @@ msgid "Calendar"
 msgstr "Calendar"
 
 #: src/components/new_audio_dialog.tsx:57
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:109
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:148
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
@@ -296,7 +296,7 @@ msgstr "Compass Lock"
 msgid "Compass sensor unavailable"
 msgstr "Compass sensor unavailable"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:147
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:249
 msgid "Confirm"
@@ -356,7 +356,7 @@ msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Default (Mid Sunset to Sunrise)"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:76
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/screens/settings_reminders/reminder_item.tsx:125
@@ -429,7 +429,7 @@ msgstr "Download"
 msgid "Eastern Arabic"
 msgstr "Eastern Arabic"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:62
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "Edit"
@@ -442,7 +442,7 @@ msgstr "Edit Calculation Parameters"
 msgid "Edit Counter"
 msgstr "Edit Counter"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "Edit Location"
 msgstr "Edit Location"
 
@@ -694,7 +694,7 @@ msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:116
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:107
 msgid "Label"
@@ -728,6 +728,10 @@ msgstr "Light and Dark theme"
 #: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Light/Dark theme"
+
+#: src/screens/favorite_locations/index.tsx:114
+msgid "List is empty"
+msgstr "List is empty"
 
 #: src/components/AutocompleteInput.tsx:203
 msgid "Loading"
@@ -817,7 +821,7 @@ msgstr "Name"
 msgid "New Counter"
 msgstr "New Counter"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "New Location"
 msgstr "New Location"
 
@@ -1130,7 +1134,7 @@ msgstr "Select as Fajr Adhan"
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Select different Adhan audio for Fajr namaz"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:54
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:55
 msgid "Selected"
 msgstr "Selected"
 

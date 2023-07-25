@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-25 16:58+0330\n"
+"POT-Creation-Date: 2023-07-25 17:47+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -85,7 +85,7 @@ msgstr "یاد دہانی شامل کریں۔"
 msgid "Add new counter"
 msgstr "نیا کاؤنٹر شامل کریں۔"
 
-#: src/screens/favorite_locations/index.tsx:110
+#: src/screens/favorite_locations/index.tsx:119
 msgid "Add new location"
 msgstr "نیا مقام شامل کریں۔"
 
@@ -200,8 +200,8 @@ msgid "Calendar"
 msgstr "کیلنڈر"
 
 #: src/components/new_audio_dialog.tsx:57
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:109
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:148
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
@@ -290,7 +290,7 @@ msgstr "کمپاس لاک"
 msgid "Compass sensor unavailable"
 msgstr "کمپاس سینسر دستیاب نہیں ہے۔"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:147
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:249
 msgid "Confirm"
@@ -350,7 +350,7 @@ msgid "Default (Mid Sunset to Sunrise)"
 msgstr "پہلے سے طے شدہ (وسط غروب سے طلوع آفتاب)"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:76
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/screens/settings_reminders/reminder_item.tsx:125
@@ -423,7 +423,7 @@ msgstr "ڈاؤن لوڈ کریں"
 msgid "Eastern Arabic"
 msgstr "مشرقی عربی۔"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:62
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "ترمیم"
@@ -436,7 +436,7 @@ msgstr "حساب کتاب کے پیرامیٹرز میں ترمیم کریں۔"
 msgid "Edit Counter"
 msgstr "کاؤنٹر میں ترمیم کریں۔"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "Edit Location"
 msgstr "مقام میں ترمیم کریں۔"
 
@@ -688,7 +688,7 @@ msgstr "کیمینٹرین ہال ایہوال یوگاما (برونائی دا
 msgid "Kuwait"
 msgstr "کویت"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:116
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:107
 msgid "Label"
@@ -722,6 +722,10 @@ msgstr "ہلکی/گہرا تھیم"
 #: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "ہلکی/گہرا تھیم"
+
+#: src/screens/favorite_locations/index.tsx:114
+msgid "List is empty"
+msgstr "فہرست خالی ہے۔"
 
 #: src/components/AutocompleteInput.tsx:203
 msgid "Loading"
@@ -811,7 +815,7 @@ msgstr "نام"
 msgid "New Counter"
 msgstr "نیا کاؤنٹر"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "New Location"
 msgstr "نیا مقام"
 
@@ -1120,7 +1124,7 @@ msgstr "فجر کی اذان کے طور پر منتخب کریں۔"
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "فجر کی نماز کے لیے مختلف اذان آڈیو منتخب کریں۔"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:54
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:55
 msgid "Selected"
 msgstr "منتخب شدہ"
 

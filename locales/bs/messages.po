@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-25 16:58+0330\n"
+"POT-Creation-Date: 2023-07-25 17:47+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -85,7 +85,7 @@ msgstr "Dodajte Podsjetnik"
 msgid "Add new counter"
 msgstr "Dodaj novi brojač"
 
-#: src/screens/favorite_locations/index.tsx:110
+#: src/screens/favorite_locations/index.tsx:119
 msgid "Add new location"
 msgstr "Dodajte novu lokaciju"
 
@@ -200,8 +200,8 @@ msgid "Calendar"
 msgstr "Kalendar"
 
 #: src/components/new_audio_dialog.tsx:57
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:109
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:148
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
@@ -290,7 +290,7 @@ msgstr "Ključnica Kompas"
 msgid "Compass sensor unavailable"
 msgstr "Senzor kompasa je nedostupan"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:147
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:249
 msgid "Confirm"
@@ -350,7 +350,7 @@ msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Zadano (od sredine zalaska do izlaska sunca)"
 
 #: src/components/audio_picker_item.tsx:63
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:76
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/screens/settings_reminders/reminder_item.tsx:125
@@ -423,7 +423,7 @@ msgstr "Skinuti"
 msgid "Eastern Arabic"
 msgstr "istočni arapski"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:62
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "Uredi"
@@ -436,7 +436,7 @@ msgstr "Uredi parametre izračuna"
 msgid "Edit Counter"
 msgstr "Uredite Brojač"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "Edit Location"
 msgstr "Uredi lokaciju"
 
@@ -688,7 +688,7 @@ msgstr "Kementrian Hal Ehwal Ugama (Brunej Darussalam)"
 msgid "Kuwait"
 msgstr "Kuvajt"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:116
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:107
 msgid "Label"
@@ -722,6 +722,10 @@ msgstr "Svjetla/mračna tema"
 #: website/src/_includes/home.tsx:93
 msgid "Light/Dark theme"
 msgstr "Svjetla/mračna tema"
+
+#: src/screens/favorite_locations/index.tsx:114
+msgid "List is empty"
+msgstr "Lista je prazna"
 
 #: src/components/AutocompleteInput.tsx:203
 msgid "Loading"
@@ -811,7 +815,7 @@ msgstr "Naziv"
 msgid "New Counter"
 msgstr "Novi Brojač"
 
-#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "New Location"
 msgstr "Nova lokacija"
 
@@ -1124,7 +1128,7 @@ msgstr "Odaberite ko Sabah Ezan"
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Odaberite različite zvuke ezana za Sabah"
 
-#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:54
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:55
 msgid "Selected"
 msgstr "Odabrano"
 
