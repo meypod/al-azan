@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-24 13:44+0330\n"
+"POT-Creation-Date: 2023-07-25 16:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: tr\n"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:134
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:137
 msgid "10 min"
 msgstr "10 dk."
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
 msgid "15 min"
 msgstr "15 dk."
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:145
 msgid "30 min"
 msgstr "30 dk."
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "Bu yöntemde ramazan boyunca yatsı vaktine 30 dakika eklenir"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:130
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
 msgid "5 min"
 msgstr "15 dk."
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:149
 msgid "60 min"
 msgstr "60 dk."
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:150
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "90 min"
 msgstr "90 dk."
 
@@ -84,6 +84,10 @@ msgstr "Hatırlatıcı ekle"
 #: src/screens/qada_counter/index.tsx:87
 msgid "Add new counter"
 msgstr "Yeni sayaç ekle"
+
+#: src/screens/favorite_locations/index.tsx:110
+msgid "Add new location"
+msgstr "Yeni konum ekle"
 
 #: src/screens/fullscreen_alarm/index.tsx:83
 msgid "Adhan"
@@ -196,9 +200,13 @@ msgid "Calendar"
 msgstr "Takvim"
 
 #: src/components/new_audio_dialog.tsx:57
-#: src/screens/qada_counter/edit_counter_modal.tsx:165
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:109
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:148
+#: src/screens/qada_counter/edit_counter_modal.tsx:120
+#: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:247
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:101
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "İptal"
@@ -245,22 +253,26 @@ msgstr "Gece yarısı hesaplama yöntemini seçin"
 msgid "Choose numbering system"
 msgstr "Sayı sistemini seçin"
 
-#: src/screens/settings_location/index.tsx:206
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/location_search.tsx:97
+#: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "Şehir/Bölge"
 
-#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/location_coordinates.tsx:123
 msgid "Clear the coordinates"
 msgstr "Koordinatları temizleyin"
 
-#: src/screens/settings_location/index.tsx:232
+#: src/screens/settings_location/location_search.tsx:119
 msgid "Clear the location"
 msgstr "Konumu temizleyin"
 
-#: src/screens/settings_location/index.tsx:88
+#: src/screens/settings_location/location_coordinates.tsx:70
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
+
+#: src/screens/settings_calculation/calc_params_box.tsx:145
+msgid "Close"
+msgstr "Kapat"
 
 #: src/screens/settings_calculation/index.tsx:223
 msgid "Closest City"
@@ -278,8 +290,9 @@ msgstr "Pusula kilidi"
 msgid "Compass sensor unavailable"
 msgstr "Pusula sensörü kullanılamıyor"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:164
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:246
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:147
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:249
 msgid "Confirm"
 msgstr "Onayla"
 
@@ -287,7 +300,7 @@ msgstr "Onayla"
 msgid "Continuous"
 msgstr "Sürekli"
 
-#: src/screens/settings_location/index.tsx:111
+#: src/screens/settings_location/gps_button.tsx:30
 msgid "Coordinates updated"
 msgstr "Koordinatlar güncellendi"
 
@@ -295,12 +308,12 @@ msgstr "Koordinatlar güncellendi"
 msgid "Copy"
 msgstr "Anlaşıldı"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:142
+#: src/screens/qada_counter/edit_counter_modal.tsx:145
 msgid "Count"
 msgstr "Say"
 
-#: src/screens/settings_location/index.tsx:187
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/location_search.tsx:78
+#: src/screens/settings_location/location_search.tsx:81
 msgid "Country"
 msgstr "Ülke"
 
@@ -337,8 +350,10 @@ msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Varsayılan (Gün Batımından Gün Doğumuna)"
 
 #: src/components/audio_picker_item.tsx:63
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:76
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
+#: src/screens/settings_reminders/reminder_item.tsx:125
 #: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Sil"
@@ -408,6 +423,11 @@ msgstr "İndir"
 msgid "Eastern Arabic"
 msgstr "Doğu Arapçası"
 
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:62
+#: src/screens/settings_reminders/reminder_item.tsx:111
+msgid "Edit"
+msgstr "Düzenle"
+
 #: src/screens/settings_calculation/calc_params_box.tsx:140
 msgid "Edit Calculation Parameters"
 msgstr "Hesaplama Parametrelerini Düzenle"
@@ -415,6 +435,10 @@ msgstr "Hesaplama Parametrelerini Düzenle"
 #: src/screens/qada_counter/edit_counter_modal.tsx:109
 msgid "Edit Counter"
 msgstr "Sayacı düzenle"
+
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+msgid "Edit Location"
+msgstr "Konumu Düzenle"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "Edit Reminder"
@@ -428,25 +452,21 @@ msgstr "Mısır Genel Araştırma Kurumu"
 msgid "Enabled"
 msgstr "Etkinleştir"
 
-#: src/screens/settings_location/index.tsx:94
+#: src/screens/settings_location/location_coordinates.tsx:76
 msgid "Error getting clipboard data"
 msgstr "Kopyalanan veriler alınırken hata oluştu"
 
 #: src/screens/settings_calculation/index.tsx:121
-#: src/screens/settings_location/index.tsx:200
+#: src/screens/settings_location/location_search.tsx:92
 msgid "Error in loading countries"
 msgstr "Ülkeler yüklenirken hata oluştu"
-
-#: src/screens/settings_location/index.tsx:222
-msgid "Error in loading search results"
-msgstr "Arama sonuçları yüklenirken hata oluştu"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:85
 msgid "Error while downloading audio"
 msgstr "Sesler indirilirken hata oluştu"
 
 #: src/screens/qibla_finder_compass/index.tsx:83
-#: src/screens/settings_location/index.tsx:115
+#: src/screens/settings_location/gps_button.tsx:34
 msgid "Error while getting coordinates"
 msgstr "Koordinatlar alınırken hata oluştu"
 
@@ -467,17 +487,17 @@ msgid "Export data"
 msgstr "Verileri dışa aktar"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:59
-#: src/screens/settings_calculation/calc_params_box.tsx:151
+#: src/screens/settings_calculation/calc_params_box.tsx:154
 msgid "Fajr Angle"
 msgstr "Fecr Açısı"
 
-#: src/screens/settings_location/index.tsx:172
+#: src/screens/settings_location/gps_button.tsx:48
 msgid "Find My Location"
 msgstr "Konumumu bul"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:76
 msgid "Fix Common Problems"
 msgstr "Yaygın Sorunları Giderin"
 
@@ -491,7 +511,7 @@ msgstr "Genel (varsayılan)"
 
 #: src/screens/qibla_finder_compass/index.tsx:108
 #: src/screens/qibla_finder_compass/index.tsx:170
-#: src/screens/settings_location/index.tsx:176
+#: src/screens/settings_location/gps_button.tsx:52
 msgid "Getting coordinates"
 msgstr "Koordinatları al"
 
@@ -619,12 +639,12 @@ msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Ur
 msgstr "İngilizce, Farsça, Arapça, Türkçe, Endonezce, Fransızca, Urduca, Hintçe, Almanca, Boşnakça, Vietnamca, Bangla dillerinde yerelleştirilmiştir"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:72
-#: src/screens/settings_calculation/calc_params_box.tsx:158
+#: src/screens/settings_calculation/calc_params_box.tsx:161
 msgid "Isha Angle"
 msgstr "Isha Angle"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:85
-#: src/screens/settings_calculation/calc_params_box.tsx:165
+#: src/screens/settings_calculation/calc_params_box.tsx:168
 msgid "Isha Interval"
 msgstr "Isha Interval"
 
@@ -668,8 +688,9 @@ msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgid "Kuwait"
 msgstr "Kuveyt"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:124
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:116
+#: src/screens/qada_counter/edit_counter_modal.tsx:127
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:107
 msgid "Label"
 msgstr "Etiket"
 
@@ -677,12 +698,12 @@ msgstr "Etiket"
 msgid "Language"
 msgstr "Dil"
 
-#: src/screens/settings_location/index.tsx:248
-#: src/screens/settings_location/index.tsx:254
+#: src/screens/settings_location/location_coordinates.tsx:84
+#: src/screens/settings_location/location_coordinates.tsx:90
 msgid "Latitude"
 msgstr "Enlem"
 
-#: src/screens/settings_location/index.tsx:262
+#: src/screens/settings_location/location_coordinates.tsx:97
 msgid "Latitude is invalid"
 msgstr "Enlem geçersiz"
 
@@ -716,12 +737,12 @@ msgstr "Konum"
 msgid "Location settings"
 msgstr "Konum ayarları"
 
-#: src/screens/settings_location/index.tsx:266
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/location_coordinates.tsx:101
+#: src/screens/settings_location/location_coordinates.tsx:107
 msgid "Longitude"
 msgstr "Boylam"
 
-#: src/screens/settings_location/index.tsx:280
+#: src/screens/settings_location/location_coordinates.tsx:114
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
@@ -730,9 +751,13 @@ msgid "Low"
 msgstr "Düşük"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
-#: src/screens/settings_calculation/calc_params_box.tsx:172
+#: src/screens/settings_calculation/calc_params_box.tsx:175
 msgid "Maghrib Angle"
 msgstr "Maghrib Açısı"
+
+#: src/screens/settings_reminders/reminder_item.tsx:131
+msgid "Make a Copy"
+msgstr "Bir Kopya Oluşturun"
 
 #: fastlane/update/update.ts:55
 #: website/src/_includes/home.tsx:92
@@ -786,6 +811,10 @@ msgstr "Ad"
 msgid "New Counter"
 msgstr "Yeni sayaç"
 
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+msgid "New Location"
+msgstr "Yeni Konum"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "New Reminder"
 msgstr "Yeni hatırlatıcı"
@@ -797,7 +826,7 @@ msgstr "Yeni hatırlatıcı"
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:218
 msgid "Next Day"
 msgstr "Ertesi gün"
 
@@ -873,7 +902,7 @@ msgid "One-Seventh of the Night"
 msgstr "Gecenin yedide biri"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
 msgid "Only once?"
 msgstr "Sadece bir kez mi?"
 
@@ -899,7 +928,7 @@ msgstr "Açık kaynak deposu"
 msgid "Open-source"
 msgstr "Açık kaynak"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:212
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "Options"
 msgstr "Seçenekler"
 
@@ -923,7 +952,7 @@ msgstr "Yaklaşan ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Yaklaşan hatırlatma"
 
-#: src/screens/settings_location/index.tsx:310
+#: src/screens/settings_location/location_coordinates.tsx:144
 msgid "Paste"
 msgstr "Yapıştır"
 
@@ -960,13 +989,13 @@ msgstr "Güç yöneticisi"
 msgid "Prayer Times"
 msgstr "Namaz Vakitleri"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:175
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:178
 msgid "Prayer list"
 msgstr "Dua listesi"
 
 #: src/components/audio_picker.tsx:365
-#: src/screens/settings_location/index.tsx:197
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/location_search.tsx:89
+#: src/screens/settings_location/location_search.tsx:108
 msgid "Press to search"
 msgstr "Aramak için basın"
 
@@ -974,7 +1003,7 @@ msgstr "Aramak için basın"
 msgid "Press to select a method"
 msgstr "Bir yöntem seçmek için basın"
 
-#: src/screens/home/index.tsx:159
+#: src/screens/home/index.tsx:187
 msgid "Prev Day"
 msgstr "Önceki gün"
 
@@ -1078,6 +1107,10 @@ msgstr "Ara"
 msgid "Secondary Calendar"
 msgstr "İkincil takvim"
 
+#: src/screens/home/index.tsx:237
+msgid "See favorite locations"
+msgstr "Favori konumları görün"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:205
 msgid "Select as Fajr Adhan"
 msgstr "Fecr ezanı olarak seç"
@@ -1086,6 +1119,10 @@ msgstr "Fecr ezanı olarak seç"
 #: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Sabah namazı için farklı Ezan sesi seçme"
+
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:54
+msgid "Selected"
+msgstr "Seçilmiş"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:154
 msgid "Selected as adhan"
@@ -1153,7 +1190,7 @@ msgstr "Ezan veya hatırlatma çalmaya başladığında telefon titremeli mi?"
 msgid "Show Adhan Options"
 msgstr "Ezan seçeneklerini göster"
 
-#: src/screens/home/index.tsx:182
+#: src/screens/home/index.tsx:210
 msgid "Show Today"
 msgstr "Bugünü göster"
 
@@ -1212,8 +1249,8 @@ msgstr "Bazı cihazlarda, uygulamanın arka planda çalışmaya devam edebilmesi
 
 #: src/screens/settings_notifications/notification_setting.tsx:234
 #: src/screens/settings_notifications/notification_setting.tsx:274
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:201
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:204
 msgid "Sound"
 msgstr "Ses"
 
@@ -1282,12 +1319,12 @@ msgid "Thursday"
 msgstr "Perşembe"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:114
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:117
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Vakit"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "Time condition"
 msgstr "Zaman koşulu"
 
@@ -1295,11 +1332,11 @@ msgstr "Zaman koşulu"
 msgid "Time format"
 msgstr "Zaman formatı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "Time list"
 msgstr "Zaman listesi"
 
-#: src/screens/settings_location/index.tsx:162
+#: src/screens/settings_location/index.tsx:19
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "Ezan vaktini hesaplamak için konumunuza ihtiyacımız var. \"Konumumu Bul\" düğmesini kullanabilir, ülke ve şehir/bölge aramasını kullanabilir veya koordinatlarınızı manuel olarak girebilirsiniz."
 
@@ -1401,15 +1438,15 @@ msgstr "Uyarlanabilir bir tema mı kullanıyorsunuz?"
 msgid "Use headphones when available?"
 msgstr "Uygun olduğunda kulaklık kullanılsın mı?"
 
-#: src/screens/settings_location/index.tsx:244
+#: src/screens/settings_location/location_stack.tsx:32
 msgid "Using Coordinates"
 msgstr "Koordinatları kullan"
 
-#: src/screens/settings_location/index.tsx:164
+#: src/screens/settings_location/location_stack.tsx:20
 msgid "Using GPS"
 msgstr "GPS kullan"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/location_stack.tsx:24
 msgid "Using Search"
 msgstr "Aramayı kullan"
 
@@ -1478,7 +1515,7 @@ msgstr "Kâbe'ye dönük değilsin"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/location_coordinates.tsx:138
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kordinatları yapıştırabilirsiniz"
 
@@ -1523,7 +1560,7 @@ msgid "about.credits.google"
 msgstr "Bu uygulamada kullanılan simgelerin çoğu Google Material simgelerinden alınmıştır."
 
 #. screen title
-#: src/navigation/types.ts:89
+#: src/navigation/types.ts:90
 msgid "about_settings"
 msgstr "Hakkında"
 
@@ -1532,7 +1569,7 @@ msgstr "Hakkında"
 msgid "adjustment.hint"
 msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "after"
 msgstr "sonra"
 
@@ -1545,16 +1582,16 @@ msgid "asr.prayer"
 msgstr "İkindi"
 
 #. screen title
-#: src/navigation/types.ts:45
+#: src/navigation/types.ts:46
 msgid "backup_settings"
 msgstr "Yedekleme"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
 msgid "before"
 msgstr "önce"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:71
 msgid "calculation_settings"
 msgstr "Hesaplama"
 
@@ -1580,7 +1617,7 @@ msgid "date.second"
 msgstr "saniye"
 
 #. screen title
-#: src/navigation/types.ts:94
+#: src/navigation/types.ts:95
 msgid "dev_settings"
 msgstr "Geliştirici"
 
@@ -1589,13 +1626,18 @@ msgid "dhuhr.prayer"
 msgstr "Öğle"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:51
 msgid "display_settings"
 msgstr "Görünüm"
 
 #: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "Sabah"
+
+#. Title of the page where you add your favorite locations for faster switch
+#: src/navigation/types.ts:117
+msgid "favorite_location"
+msgstr "Favori Mekanlar"
 
 #: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
@@ -1610,7 +1652,7 @@ msgid "from settings"
 msgstr "ayarlardan"
 
 #. screen title
-#: src/navigation/types.ts:40
+#: src/navigation/types.ts:41
 msgid "fullscreen_alarm"
 msgstr "Ezanı dinle"
 
@@ -1619,7 +1661,7 @@ msgstr "Ezanı dinle"
 msgid "hijri.adjustment.hint"
 msgstr "Ay takvimine eklenecek gün sayısı"
 
-#: src/navigation/types.ts:32
+#: src/navigation/types.ts:33
 msgid "home"
 msgstr "Anasayfa"
 
@@ -1641,7 +1683,7 @@ msgid "later"
 msgstr "daha sonra"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:56
 msgid "location_settings"
 msgstr "Konum"
 
@@ -1660,29 +1702,29 @@ msgstr "Moazen Zade"
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:66
 msgid "muezzin_settings"
 msgstr "Müezzin"
 
 #. screen title
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:61
 msgid "notification_settings"
 msgstr "Bildirim & Ses"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:111
+#: src/navigation/types.ts:112
 msgid "qada_counter"
 msgstr "Kaza sayacı"
 
-#: src/navigation/types.ts:107
+#: src/navigation/types.ts:108
 msgid "qibla_compass"
 msgstr "Kıble pusulası"
 
-#: src/navigation/types.ts:99
+#: src/navigation/types.ts:100
 msgid "qibla_finder"
 msgstr "Kıble Bulucu"
 
-#: src/navigation/types.ts:103
+#: src/navigation/types.ts:104
 msgid "qibla_map"
 msgstr "Kıble haritası"
 
@@ -1691,11 +1733,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:85
 msgid "reminders_settings"
 msgstr "Hatırlatıcılar"
 
-#: src/navigation/types.ts:36
+#: src/navigation/types.ts:37
 msgid "settings"
 msgstr "Ayarlar"
 
@@ -1729,7 +1771,7 @@ msgid "sunset"
 msgstr "Gün batımı"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:80
 msgid "widget_settings"
 msgstr "Widget ayarları"
 

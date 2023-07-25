@@ -14,17 +14,17 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:134
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:137
 msgid "10 min"
 msgstr "10 min"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:138
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
 msgid "15 min"
 msgstr "15 min"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:145
 msgid "30 min"
 msgstr "30 min"
 
@@ -33,17 +33,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 minutes is added to Isha time during Ramadan in this method"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:130
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
 msgid "5 min"
 msgstr "5 min"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:149
 msgid "60 min"
 msgstr "60 min"
 
 #: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:150
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "90 min"
 msgstr "90 min"
 
@@ -90,6 +90,10 @@ msgstr "Add Reminder"
 #: src/screens/qada_counter/index.tsx:87
 msgid "Add new counter"
 msgstr "Add new counter"
+
+#: src/screens/favorite_locations/index.tsx:110
+msgid "Add new location"
+msgstr "Add new location"
 
 #: src/screens/fullscreen_alarm/index.tsx:83
 msgid "Adhan"
@@ -202,9 +206,13 @@ msgid "Calendar"
 msgstr "Calendar"
 
 #: src/components/new_audio_dialog.tsx:57
-#: src/screens/qada_counter/edit_counter_modal.tsx:165
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:109
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:148
+#: src/screens/qada_counter/edit_counter_modal.tsx:120
+#: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:247
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:101
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "Cancel"
@@ -251,22 +259,26 @@ msgstr "Choose midnight calculation method"
 msgid "Choose numbering system"
 msgstr "Choose numbering system"
 
-#: src/screens/settings_location/index.tsx:206
-#: src/screens/settings_location/index.tsx:208
+#: src/screens/settings_location/location_search.tsx:97
+#: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "City/Area"
 
-#: src/screens/settings_location/index.tsx:289
+#: src/screens/settings_location/location_coordinates.tsx:123
 msgid "Clear the coordinates"
 msgstr "Clear the coordinates"
 
-#: src/screens/settings_location/index.tsx:232
+#: src/screens/settings_location/location_search.tsx:119
 msgid "Clear the location"
 msgstr "Clear the location"
 
-#: src/screens/settings_location/index.tsx:88
+#: src/screens/settings_location/location_coordinates.tsx:70
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
+
+#: src/screens/settings_calculation/calc_params_box.tsx:145
+msgid "Close"
+msgstr "Close"
 
 #: src/screens/settings_calculation/index.tsx:223
 msgid "Closest City"
@@ -284,8 +296,9 @@ msgstr "Compass Lock"
 msgid "Compass sensor unavailable"
 msgstr "Compass sensor unavailable"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:164
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:246
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:147
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:249
 msgid "Confirm"
 msgstr "Confirm"
 
@@ -293,7 +306,7 @@ msgstr "Confirm"
 msgid "Continuous"
 msgstr "Continuous"
 
-#: src/screens/settings_location/index.tsx:111
+#: src/screens/settings_location/gps_button.tsx:30
 msgid "Coordinates updated"
 msgstr "Coordinates updated"
 
@@ -301,12 +314,12 @@ msgstr "Coordinates updated"
 msgid "Copy"
 msgstr "Copy"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:142
+#: src/screens/qada_counter/edit_counter_modal.tsx:145
 msgid "Count"
 msgstr "Count"
 
-#: src/screens/settings_location/index.tsx:187
-#: src/screens/settings_location/index.tsx:189
+#: src/screens/settings_location/location_search.tsx:78
+#: src/screens/settings_location/location_search.tsx:81
 msgid "Country"
 msgstr "Country"
 
@@ -343,8 +356,10 @@ msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Default (Mid Sunset to Sunrise)"
 
 #: src/components/audio_picker_item.tsx:63
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:76
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
+#: src/screens/settings_reminders/reminder_item.tsx:125
 #: src/utils/dialogs.ts:8
 msgid "Delete"
 msgstr "Delete"
@@ -414,6 +429,11 @@ msgstr "Download"
 msgid "Eastern Arabic"
 msgstr "Eastern Arabic"
 
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:62
+#: src/screens/settings_reminders/reminder_item.tsx:111
+msgid "Edit"
+msgstr "Edit"
+
 #: src/screens/settings_calculation/calc_params_box.tsx:140
 msgid "Edit Calculation Parameters"
 msgstr "Edit Calculation Parameters"
@@ -421,6 +441,10 @@ msgstr "Edit Calculation Parameters"
 #: src/screens/qada_counter/edit_counter_modal.tsx:109
 msgid "Edit Counter"
 msgstr "Edit Counter"
+
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+msgid "Edit Location"
+msgstr "Edit Location"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "Edit Reminder"
@@ -434,25 +458,21 @@ msgstr "Egyptian General Survey Authority"
 msgid "Enabled"
 msgstr "Enabled"
 
-#: src/screens/settings_location/index.tsx:94
+#: src/screens/settings_location/location_coordinates.tsx:76
 msgid "Error getting clipboard data"
 msgstr "Error getting clipboard data"
 
 #: src/screens/settings_calculation/index.tsx:121
-#: src/screens/settings_location/index.tsx:200
+#: src/screens/settings_location/location_search.tsx:92
 msgid "Error in loading countries"
 msgstr "Error in loading countries"
-
-#: src/screens/settings_location/index.tsx:222
-msgid "Error in loading search results"
-msgstr "Error in loading search results"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:85
 msgid "Error while downloading audio"
 msgstr "Error while downloading audio"
 
 #: src/screens/qibla_finder_compass/index.tsx:83
-#: src/screens/settings_location/index.tsx:115
+#: src/screens/settings_location/gps_button.tsx:34
 msgid "Error while getting coordinates"
 msgstr "Error while getting coordinates"
 
@@ -473,17 +493,17 @@ msgid "Export data"
 msgstr "Export data"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:59
-#: src/screens/settings_calculation/calc_params_box.tsx:151
+#: src/screens/settings_calculation/calc_params_box.tsx:154
 msgid "Fajr Angle"
 msgstr "Fajr Angle"
 
-#: src/screens/settings_location/index.tsx:172
+#: src/screens/settings_location/gps_button.tsx:48
 msgid "Find My Location"
 msgstr "Find My Location"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:76
 msgid "Fix Common Problems"
 msgstr "Fix Common Problems"
 
@@ -497,7 +517,7 @@ msgstr "General (default)"
 
 #: src/screens/qibla_finder_compass/index.tsx:108
 #: src/screens/qibla_finder_compass/index.tsx:170
-#: src/screens/settings_location/index.tsx:176
+#: src/screens/settings_location/gps_button.tsx:52
 msgid "Getting coordinates"
 msgstr "Getting coordinates"
 
@@ -625,12 +645,12 @@ msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Ur
 msgstr "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:72
-#: src/screens/settings_calculation/calc_params_box.tsx:158
+#: src/screens/settings_calculation/calc_params_box.tsx:161
 msgid "Isha Angle"
 msgstr "Isha Angle"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:85
-#: src/screens/settings_calculation/calc_params_box.tsx:165
+#: src/screens/settings_calculation/calc_params_box.tsx:168
 msgid "Isha Interval"
 msgstr "Isha Interval"
 
@@ -674,8 +694,9 @@ msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: src/screens/qada_counter/edit_counter_modal.tsx:124
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:104
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:116
+#: src/screens/qada_counter/edit_counter_modal.tsx:127
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:107
 msgid "Label"
 msgstr "Label"
 
@@ -683,12 +704,12 @@ msgstr "Label"
 msgid "Language"
 msgstr "Language"
 
-#: src/screens/settings_location/index.tsx:248
-#: src/screens/settings_location/index.tsx:254
+#: src/screens/settings_location/location_coordinates.tsx:84
+#: src/screens/settings_location/location_coordinates.tsx:90
 msgid "Latitude"
 msgstr "Latitude"
 
-#: src/screens/settings_location/index.tsx:262
+#: src/screens/settings_location/location_coordinates.tsx:97
 msgid "Latitude is invalid"
 msgstr "Latitude is invalid"
 
@@ -722,12 +743,12 @@ msgstr "Location"
 msgid "Location settings"
 msgstr "Location settings"
 
-#: src/screens/settings_location/index.tsx:266
-#: src/screens/settings_location/index.tsx:272
+#: src/screens/settings_location/location_coordinates.tsx:101
+#: src/screens/settings_location/location_coordinates.tsx:107
 msgid "Longitude"
 msgstr "Longitude"
 
-#: src/screens/settings_location/index.tsx:280
+#: src/screens/settings_location/location_coordinates.tsx:114
 msgid "Longitude is invalid"
 msgstr "Longitude is invalid"
 
@@ -736,9 +757,13 @@ msgid "Low"
 msgstr "Low"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
-#: src/screens/settings_calculation/calc_params_box.tsx:172
+#: src/screens/settings_calculation/calc_params_box.tsx:175
 msgid "Maghrib Angle"
 msgstr "Maghrib Angle"
+
+#: src/screens/settings_reminders/reminder_item.tsx:131
+msgid "Make a Copy"
+msgstr "Make a Copy"
 
 #: fastlane/update/update.ts:55
 #: website/src/_includes/home.tsx:92
@@ -792,6 +817,10 @@ msgstr "Name"
 msgid "New Counter"
 msgstr "New Counter"
 
+#: src/screens/favorite_locations/edit_favorite_location_modal.tsx:104
+msgid "New Location"
+msgstr "New Location"
+
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "New Reminder"
 msgstr "New Reminder"
@@ -803,7 +832,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:218
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -879,7 +908,7 @@ msgid "One-Seventh of the Night"
 msgstr "One-Seventh of the Night"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
 msgid "Only once?"
 msgstr "Only once?"
 
@@ -905,7 +934,7 @@ msgstr "Open source repository"
 msgid "Open-source"
 msgstr "Open-source"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:212
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "Options"
 msgstr "Options"
 
@@ -929,7 +958,7 @@ msgstr "Upcoming adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Upcoming reminder"
 
-#: src/screens/settings_location/index.tsx:310
+#: src/screens/settings_location/location_coordinates.tsx:144
 msgid "Paste"
 msgstr "Paste"
 
@@ -966,13 +995,13 @@ msgstr "Power Manager"
 msgid "Prayer Times"
 msgstr "Prayer Times"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:175
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:178
 msgid "Prayer list"
 msgstr "Prayer list"
 
 #: src/components/audio_picker.tsx:365
-#: src/screens/settings_location/index.tsx:197
-#: src/screens/settings_location/index.tsx:216
+#: src/screens/settings_location/location_search.tsx:89
+#: src/screens/settings_location/location_search.tsx:108
 msgid "Press to search"
 msgstr "Press to search"
 
@@ -980,7 +1009,7 @@ msgstr "Press to search"
 msgid "Press to select a method"
 msgstr "Press to select a method"
 
-#: src/screens/home/index.tsx:159
+#: src/screens/home/index.tsx:187
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -1088,6 +1117,10 @@ msgstr "Search"
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
+#: src/screens/home/index.tsx:237
+msgid "See favorite locations"
+msgstr "See favorite locations"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:205
 msgid "Select as Fajr Adhan"
 msgstr "Select as Fajr Adhan"
@@ -1096,6 +1129,10 @@ msgstr "Select as Fajr Adhan"
 #: website/src/_includes/home.tsx:86
 msgid "Select different Adhan audio for Fajr namaz"
 msgstr "Select different Adhan audio for Fajr namaz"
+
+#: src/screens/favorite_locations/favorite_location_list_item_view.tsx:54
+msgid "Selected"
+msgstr "Selected"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:154
 msgid "Selected as adhan"
@@ -1166,7 +1203,7 @@ msgstr "Should phone vibrate when adhan or reminder starts playing?"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:182
+#: src/screens/home/index.tsx:210
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -1228,8 +1265,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:234
 #: src/screens/settings_notifications/notification_setting.tsx:274
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:201
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:204
 msgid "Sound"
 msgstr "Sound"
 
@@ -1300,12 +1337,12 @@ msgid "Thursday"
 msgstr "Thursday"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:114
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:117
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Time"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "Time condition"
 msgstr "Time condition"
 
@@ -1313,11 +1350,11 @@ msgstr "Time condition"
 msgid "Time format"
 msgstr "Time format"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "Time list"
 msgstr "Time list"
 
-#: src/screens/settings_location/index.tsx:162
+#: src/screens/settings_location/index.tsx:19
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 
@@ -1419,15 +1456,15 @@ msgstr "Use adaptive theme?"
 msgid "Use headphones when available?"
 msgstr "Use headphones when available?"
 
-#: src/screens/settings_location/index.tsx:244
+#: src/screens/settings_location/location_stack.tsx:32
 msgid "Using Coordinates"
 msgstr "Using Coordinates"
 
-#: src/screens/settings_location/index.tsx:164
+#: src/screens/settings_location/location_stack.tsx:20
 msgid "Using GPS"
 msgstr "Using GPS"
 
-#: src/screens/settings_location/index.tsx:183
+#: src/screens/settings_location/location_stack.tsx:24
 msgid "Using Search"
 msgstr "Using Search"
 
@@ -1496,7 +1533,7 @@ msgstr "You are not facing Kaaba"
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
-#: src/screens/settings_location/index.tsx:304
+#: src/screens/settings_location/location_coordinates.tsx:138
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 
@@ -1541,7 +1578,7 @@ msgid "about.credits.google"
 msgstr "Most of icons used in this app are from google material icons."
 
 #. screen title
-#: src/navigation/types.ts:89
+#: src/navigation/types.ts:90
 msgid "about_settings"
 msgstr "About"
 
@@ -1550,7 +1587,7 @@ msgstr "About"
 msgid "adjustment.hint"
 msgstr "Number of minutes that will be added to the calculated times"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "after"
 msgstr "after"
 
@@ -1563,16 +1600,16 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:45
+#: src/navigation/types.ts:46
 msgid "backup_settings"
 msgstr "Backup"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
 msgid "before"
 msgstr "before"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:71
 msgid "calculation_settings"
 msgstr "Calculation"
 
@@ -1598,7 +1635,7 @@ msgid "date.second"
 msgstr "second"
 
 #. screen title
-#: src/navigation/types.ts:94
+#: src/navigation/types.ts:95
 msgid "dev_settings"
 msgstr "Developer"
 
@@ -1607,13 +1644,18 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:51
 msgid "display_settings"
 msgstr "Display"
 
 #: src/adhan/prayer.ts:40
 msgid "fajr.prayer"
 msgstr "Fajr"
+
+#. Title of the page where you add your favorite locations for faster switch
+#: src/navigation/types.ts:117
+msgid "favorite_location"
+msgstr "Favorite Locations"
 
 #: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
@@ -1628,7 +1670,7 @@ msgid "from settings"
 msgstr "from settings"
 
 #. screen title
-#: src/navigation/types.ts:40
+#: src/navigation/types.ts:41
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
@@ -1637,7 +1679,7 @@ msgstr "Playing Adhan"
 msgid "hijri.adjustment.hint"
 msgstr "Number of days that will be added to the lunar calendar"
 
-#: src/navigation/types.ts:32
+#: src/navigation/types.ts:33
 msgid "home"
 msgstr "Home"
 
@@ -1659,7 +1701,7 @@ msgid "later"
 msgstr "later"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:56
 msgid "location_settings"
 msgstr "Location"
 
@@ -1678,29 +1720,29 @@ msgstr "Moazen Zade"
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:66
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:61
 msgid "notification_settings"
 msgstr "Notification & Sound"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:111
+#: src/navigation/types.ts:112
 msgid "qada_counter"
 msgstr "Qada Counter"
 
-#: src/navigation/types.ts:107
+#: src/navigation/types.ts:108
 msgid "qibla_compass"
 msgstr "Qibla Compass"
 
-#: src/navigation/types.ts:99
+#: src/navigation/types.ts:100
 msgid "qibla_finder"
 msgstr "Qibla Finder"
 
-#: src/navigation/types.ts:103
+#: src/navigation/types.ts:104
 msgid "qibla_map"
 msgstr "Qibla Map"
 
@@ -1709,11 +1751,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:84
+#: src/navigation/types.ts:85
 msgid "reminders_settings"
 msgstr "Reminders"
 
-#: src/navigation/types.ts:36
+#: src/navigation/types.ts:37
 msgid "settings"
 msgstr "Settings"
 
@@ -1747,7 +1789,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:79
+#: src/navigation/types.ts:80
 msgid "widget_settings"
 msgstr "Widget Settings"
 
