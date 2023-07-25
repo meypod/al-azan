@@ -38,7 +38,8 @@ export const FavoriteLocationListItemView = memo(
           onLongPress={drag}>
           <HStack
             mb="2"
-            bgColor={dragging ? 'gray.300' : 'gray.400:alpha.50'}
+            bgColor="light.50"
+            shadow="2"
             _dark={{
               bgColor: dragging ? 'gray.800:alpha.90' : 'gray.800',
             }}

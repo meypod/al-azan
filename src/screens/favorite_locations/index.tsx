@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {Stack, Button} from 'native-base';
+import {Stack, Button, View, Text} from 'native-base';
 import {useCallback, useState} from 'react';
 import DraggableFlatList, {RenderItem} from 'react-native-draggable-flatlist';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -76,7 +76,6 @@ export function FavoriteLocations() {
     },
     [onDeletePress, selectedLocation, setSelectedLocation],
   );
-
   const onCounterChanged = useCallback(
     (state: FavoriteLocation) => {
       updateFavorite(state.id, state);
@@ -100,11 +99,21 @@ export function FavoriteLocations() {
             renderItem={renderItem as RenderItem<unknown>}
             keyExtractor={item => item.id}
             contentContainerStyle={{
+              padding: 10,
               paddingBottom: 80,
             }}
-            style={{
-              padding: 8,
-            }}
+            ListEmptyComponent={
+              <View
+                p="3"
+                justifyContent="center"
+                alignItems="center"
+                height="20">
+                <Text
+                  fontSize="lg"
+                  color="muted.500"
+                  _dark={{color: 'muted.400'}}>{t`List is empty`}</Text>
+              </View>
+            }
           />
           <Button
             accessibilityLabel={t`Add new location`}
