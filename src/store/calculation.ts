@@ -200,13 +200,15 @@ export const calcSettings = createStore<CalcSettingsStore>()(
               (persistedState as CalcSettingsStore).HIJRI_DATE_ADJUSTMENT = 0;
             }
           case 5: {
-            const s = settings.getState();
-            let store = persistedState as CalcSettingsStore;
-            if (!store.LOCATION) store.LOCATION = {};
-            store.LOCATION.city = (s as any).LOCATION_CITY;
-            store.LOCATION.country = (s as any).LOCATION_COUNTRY;
-            store.LOCATION.lat = (store as any).LOCATION_LAT;
-            store.LOCATION.long = (store as any).LOCATION_LONG;
+            if (!(persistedState as any).LOCATION) {
+              const s = settings.getState();
+              (persistedState as CalcSettingsStore).LOCATION = {
+                city: (s as any).LOCATION_CITY,
+                country: (s as any).LOCATION_COUNTRY,
+                lat: (persistedState as any).LOCATION_LAT,
+                long: (persistedState as any).LOCATION_LONG,
+              };
+            }
             break;
           }
         }
