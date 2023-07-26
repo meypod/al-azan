@@ -14,7 +14,7 @@ async function updateFiles() {
     await mkdir(langFolder + '/', {recursive: true});
 
     const shortDesc = t({
-      message: `Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app`,
+      message: `Privacy focused open-source muslim Adhan (islamic prayer times) and qibla app`,
       comment: 'Max. 80 characters',
     });
     await writeFile(`${langFolder}/short_description.txt`, shortDesc, {

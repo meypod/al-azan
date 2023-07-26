@@ -1025,10 +1025,8 @@ msgstr "Privacy Policy"
 
 #. Max. 80 characters
 #: fastlane/update/update.ts:16
-#: website/src/_includes/home.tsx:17
-#: website/src/_includes/privacy-policy.tsx:24
-msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
-msgstr "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
+msgid "Privacy focused open-source muslim Adhan (islamic prayer times) and qibla app"
+msgstr "Privacy focused open-source muslim Adhan (islamic prayer times) and qibla app"
 
 #: fastlane/update/update.ts:67
 #: website/src/_includes/home.tsx:98

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-25 17:47+0330\n"
+"POT-Creation-Date: 2023-07-26 04:38+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1019,9 +1019,7 @@ msgstr "Politika privatnosti"
 
 #. Max. 80 characters
 #: fastlane/update/update.ts:16
-#: website/src/_includes/home.tsx:17
-#: website/src/_includes/privacy-policy.tsx:24
-msgid "Privacy-first open-source muslim Adhan (islamic prayer times) and qibla app"
+msgid "Privacy focused open-source muslim Adhan (islamic prayer times) and qibla app"
 msgstr "Prva privatna-bezoglasna otvorena muslimanska aplikacija za Ezan i kiblu"
 
 #: fastlane/update/update.ts:67
