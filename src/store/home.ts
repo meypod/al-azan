@@ -1,4 +1,4 @@
-import {produce} from 'immer';
+import {immer} from 'zustand/middleware/immer';
 import {createStore} from 'zustand/vanilla';
 import {addDays} from '@/utils/date';
 
@@ -12,20 +12,18 @@ type AppState = {
   resetCurrentDate: () => void;
 };
 
-export const homeStore = createStore<AppState>()(set => ({
-  date: new Date(),
-  navigating: false,
-  changeCurrentDate: (newDate: Date) =>
-    set(
-      produce(draft => {
+export const homeStore = createStore<AppState>()(
+  immer(set => ({
+    date: new Date(),
+    navigating: false,
+    changeCurrentDate: (newDate: Date) =>
+      set(draft => {
         newDate.setHours(0, 0, 0, 0);
         draft.date = newDate;
         draft.navigating = true;
       }),
-    ),
-  increaseCurrentDateByOne: () =>
-    set(
-      produce(draft => {
+    increaseCurrentDateByOne: () =>
+      set(draft => {
         draft.date = addDays(draft.date, 1);
         if (draft.date.toDateString() === new Date().toDateString()) {
           draft.navigating = false;
@@ -33,10 +31,8 @@ export const homeStore = createStore<AppState>()(set => ({
           draft.navigating = true;
         }
       }),
-    ),
-  decreaseCurrentDateByOne: () =>
-    set(
-      produce(draft => {
+    decreaseCurrentDateByOne: () =>
+      set(draft => {
         draft.date = addDays(draft.date, -1);
         if (draft.date.toDateString() === new Date().toDateString()) {
           draft.navigating = false;
@@ -44,10 +40,8 @@ export const homeStore = createStore<AppState>()(set => ({
           draft.navigating = true;
         }
       }),
-    ),
-  updateCurrentDate: () =>
-    set(
-      produce(draft => {
+    updateCurrentDate: () =>
+      set(draft => {
         const now = new Date();
         let newDate = new Date(draft.date); // to update the current selected date
         if (!draft.navigating) {
@@ -55,12 +49,10 @@ export const homeStore = createStore<AppState>()(set => ({
         }
         draft.date = newDate;
       }),
-    ),
-  resetCurrentDate: () =>
-    set(
-      produce(draft => {
+    resetCurrentDate: () =>
+      set(draft => {
         draft.date = new Date();
         draft.navigating = false;
       }),
-    ),
-}));
+  })),
+);
