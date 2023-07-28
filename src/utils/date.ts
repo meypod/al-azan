@@ -1,8 +1,13 @@
 import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage, t} from '@lingui/macro';
+import memoize from 'fast-memoize';
 import {Platform} from 'react-native';
 import {calcSettings} from '@/store/calculation';
 import {settings} from '@/store/settings';
+
+const CreateIntlDateTimeFormatter = memoize(Intl.DateTimeFormat, {
+  strategy: memoize.strategies.variadic,
+});
 
 const timeTranslations = {
   day: defineMessage({
@@ -89,11 +94,11 @@ export function addDays(date: Date, days: number) {
   return result;
 }
 
-export function addMonths(date: Date, months: number) {
+export function addMonths(date: Date, months: number, hijri?: boolean) {
   if (!months) return new Date(date.getTime());
   let result = new Date(date.getTime());
   result.setDate(date.getDate() + months * 28);
-  while (getMonthName(result) === getMonthName(date)) {
+  while (getMonthName(result, hijri) === getMonthName(date, hijri)) {
     // this is for tricky daylight savings
     result = new Date(
       result.valueOf() + (months / Math.abs(months)) * oneDayInMs,
@@ -130,7 +135,7 @@ export function getMonthBeginning(date: Date, hijri?: boolean) {
   let beginningOfMonth = hijri
     ? addDays(date, HIJRI_DATE_ADJUSTMENT)
     : new Date(date.valueOf());
-  const day = new Intl.DateTimeFormat(
+  const day = CreateIntlDateTimeFormatter(
     'en-US-u-ca-' + hijri
       ? SELECTED_ARABIC_CALENDAR
       : SELECTED_SECONDARY_CALENDAR,
@@ -163,7 +168,7 @@ export function getMonthDates(date: Date, hijri?: boolean) {
 }
 
 export function getDayName(date: Date, length: 'long' | 'short' = 'long') {
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+  return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
     weekday: length,
   }).format(date);
 }
@@ -172,7 +177,7 @@ export function getDayNumeric(date: Date, hijri?: boolean) {
   if (hijri) {
     return getHijriDay(date);
   }
-  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+  return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
     day: 'numeric',
     calendar: SELECTED_SECONDARY_CALENDAR,
   }).format(date);
@@ -216,12 +221,12 @@ export function getFormattedDate(date: Date) {
     SELECTED_SECONDARY_CALENDAR === 'persian'
   ) {
     // polyfill for older androids not showing persian calendar properly
-    const month = new Intl.DateTimeFormat('en-US', {
+    const month = CreateIntlDateTimeFormatter('en-US', {
       month: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
     }).format(date);
 
-    let dateParts = new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    let dateParts = CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       day: '2-digit',
       year: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
@@ -241,7 +246,7 @@ export function getFormattedDate(date: Date) {
 
     return formattedDate;
   } else {
-    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       day: '2-digit',
       month: 'long',
       year: 'numeric',
@@ -258,7 +263,7 @@ export function getMonthName(date: Date, hijri?: boolean) {
     SELECTED_SECONDARY_CALENDAR === 'persian'
   ) {
     // polyfill for older androids not showing persian calendar properly
-    const month = new Intl.DateTimeFormat('en-US', {
+    const month = CreateIntlDateTimeFormatter('en-US', {
       month: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
     }).format(date);
@@ -269,7 +274,7 @@ export function getMonthName(date: Date, hijri?: boolean) {
       return persianMonthNames['en'][month];
     }
   } else {
-    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       month: 'long',
       calendar: SELECTED_SECONDARY_CALENDAR,
     }).format(date);
@@ -280,7 +285,7 @@ export function getYearAndMonth(date: Date, hijri?: boolean) {
   if (hijri) {
     const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-    return new Intl.DateTimeFormat(
+    return CreateIntlDateTimeFormatter(
       addNumberingToLocale(
         `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
         NUMBERING_SYSTEM,
@@ -298,12 +303,12 @@ export function getYearAndMonth(date: Date, hijri?: boolean) {
     SELECTED_SECONDARY_CALENDAR === 'persian'
   ) {
     // polyfill for older androids not showing persian calendar properly
-    const month = new Intl.DateTimeFormat('en-US', {
+    const month = CreateIntlDateTimeFormatter('en-US', {
       month: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
     }).format(date);
 
-    let dateParts = new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    let dateParts = CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       year: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
     })
@@ -322,7 +327,7 @@ export function getYearAndMonth(date: Date, hijri?: boolean) {
 
     return formattedDate;
   } else {
-    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       month: 'long',
       year: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
@@ -334,13 +339,13 @@ const faDayPeriodRegex = /([قب]).+از.?ظهر/;
 
 export function getTime(date: Date) {
   if (IS_24_HOUR_FORMAT) {
-    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       hour12: false,
       hour: '2-digit',
       minute: '2-digit',
     }).format(date);
   } else {
-    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    return CreateIntlDateTimeFormatter(SELECTED_LOCALE, {
       hour12: true,
       hour: '2-digit',
       minute: '2-digit',
@@ -353,7 +358,7 @@ export function getTime(date: Date) {
 
 export function getArabicMonthName(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
-  return new Intl.DateTimeFormat(
+  return CreateIntlDateTimeFormatter(
     addNumberingToLocale(
       `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
       NUMBERING_SYSTEM,
@@ -367,7 +372,7 @@ export function getArabicMonthName(date: Date) {
 export function getArabicDate(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return new Intl.DateTimeFormat(
+  return CreateIntlDateTimeFormatter(
     addNumberingToLocale(
       `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
       NUMBERING_SYSTEM,
@@ -384,7 +389,7 @@ export function getArabicDate(date: Date) {
 export function getHijriYear(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return new Intl.DateTimeFormat(
+  return CreateIntlDateTimeFormatter(
     addNumberingToLocale(
       `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
       NUMBERING_SYSTEM,
@@ -398,7 +403,7 @@ export function getHijriYear(date: Date) {
 export function getHijriMonth(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return new Intl.DateTimeFormat(
+  return CreateIntlDateTimeFormatter(
     addNumberingToLocale(
       `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
       NUMBERING_SYSTEM,
@@ -412,7 +417,7 @@ export function getHijriMonth(date: Date) {
 export function getHijriDay(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return new Intl.DateTimeFormat(
+  return CreateIntlDateTimeFormatter(
     addNumberingToLocale(
       `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
       NUMBERING_SYSTEM,

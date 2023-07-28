@@ -30,6 +30,7 @@
     "@types/metro-config": "^0.76.3",
     "@xutl/defer": "^1.0.5",
     "adhan-extended": "^5.0.2",
+    "fast-memoize": "^2.5.2",
     "fuse.js": "^6.6.2",
     "hash.js": "^1.1.7",
     "immer": "^9.0.17",
