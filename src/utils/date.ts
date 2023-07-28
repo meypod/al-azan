@@ -147,13 +147,14 @@ export function getMonthBeginning(date: Date, hijri?: boolean) {
 }
 
 export function getMonthDates(date: Date, hijri?: boolean) {
+  const ymOfOgDate = getYearAndMonth(date, hijri);
   // get first day in month:
   let counterDate = new Date(getMonthBeginning(date, hijri));
   const dates = [];
   // iter
   for (
     ;
-    getYearAndMonth(counterDate, hijri) === getYearAndMonth(date, hijri);
+    getYearAndMonth(counterDate, hijri) === ymOfOgDate;
     counterDate = addDays(counterDate, 1)
   ) {
     dates.push(counterDate);
