@@ -21,6 +21,7 @@ export type RootStackParamList = {
   QiblaCompass: {skipInit?: boolean} | undefined;
   QadaCounter: undefined;
   FavoriteLocations: undefined;
+  MonthlyView: undefined | {subtitle: string};
 };
 
 declare global {
@@ -119,6 +120,10 @@ const routeTranslations = {
     message: 'Favorite Locations',
     comment:
       'Title of the page where you add your favorite locations for faster switch',
+  }),
+  MonthlyView: defineMessage({
+    id: 'monthly_view',
+    message: 'Monthly View',
   }),
 } as Record<string, MessageDescriptor>;
 

@@ -1,0 +1,183 @@
+import {t} from '@lingui/macro';
+import {Button, FlatList, HStack, Stack, Text, Divider} from 'native-base';
+import {
+  PropsWithChildren,
+  memo,
+  useCallback,
+  useMemo,
+  useLayoutEffect,
+} from 'react';
+import {ListRenderItemInfo} from 'react-native';
+import {useStore} from 'zustand';
+import {shallow} from 'zustand/shallow';
+import {Prayer, getPrayerTimes, translatePrayer} from '@/adhan';
+import {RestoreIcon} from '@/assets/icons/material_icons/restore';
+import {UpdateIcon} from '@/assets/icons/material_icons/update';
+import {SafeArea} from '@/components/safe_area';
+import {isRTL} from '@/i18n';
+import {setRouteParams} from '@/navigation/root_navigation';
+import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
+import {monthlyViewStore} from '@/store/monthly_view';
+import {
+  getTime,
+  getMonthDates,
+  getYearAndMonth,
+  getDayNumeric,
+} from '@/utils/date';
+
+type MonthDetails = {
+  yearAndMonth: string;
+  isThisMonth: boolean;
+};
+
+function getMonthDetails(date: Date): MonthDetails {
+  return {
+    yearAndMonth: getYearAndMonth(date),
+    isThisMonth: getYearAndMonth(date) === getYearAndMonth(new Date()),
+  };
+}
+
+const TableCell = memo(function TableCell({
+  children,
+  flex = 2,
+}: PropsWithChildren & {flex?: number}) {
+  return (
+    <Text flex={flex} flexShrink={0} noOfLines={1} pr="4" textAlign="left">
+      {children}
+    </Text>
+  );
+});
+
+export function MonthlyView() {
+  const {
+    currentDate,
+    increaseCurrentDateByOneMonth,
+    decreaseCurrentDateByOneMonth,
+    resetCurrentDate,
+  } = useStore(
+    monthlyViewStore,
+    state => ({
+      currentDate: state.date,
+      increaseCurrentDateByOneMonth: state.increaseCurrentDateByOneMonth,
+      decreaseCurrentDateByOneMonth: state.decreaseCurrentDateByOneMonth,
+      resetCurrentDate: state.resetCurrentDate,
+    }),
+    shallow,
+  );
+
+  const monthPrayerTimes = useMemo(
+    () =>
+      getMonthDates(currentDate)
+        .map(getPrayerTimes)
+        .filter(Boolean) as CachedPrayerTimes[],
+    [currentDate],
+  );
+
+  const month = useMemo(() => getMonthDetails(currentDate), [currentDate]);
+
+  useLayoutEffect(() => {
+    setRouteParams({
+      subtitle: month.yearAndMonth,
+    });
+  }, [month]);
+
+  const renderItem = useCallback(
+    ({item}: ListRenderItemInfo<CachedPrayerTimes>) => (
+      <HStack p="1" px="2">
+        <TableCell flex={1}>{getDayNumeric(item.date)}</TableCell>
+        <TableCell>{getTime(item.fajr, true)}</TableCell>
+        <TableCell>{getTime(item.dhuhr, true)}</TableCell>
+        <TableCell>{getTime(item.asr, true)}</TableCell>
+        <TableCell>{getTime(item.maghrib, true)}</TableCell>
+        <TableCell>{getTime(item.isha, true)}</TableCell>
+      </HStack>
+    ),
+    [],
+  );
+
+  const getItemLayout = useCallback(
+    (_: any, index: number) => ({
+      length: 10, // height of each row
+      offset: index * 10, // height of rows till curr index
+      index,
+    }),
+    [],
+  );
+
+  const keyExtractor = useCallback(
+    (item: CachedPrayerTimes) => item.date.toString(),
+    [],
+  );
+
+  return (
+    <SafeArea>
+      <Stack flex={1}>
+        <HStack
+          justifyContent="space-between"
+          alignItems="center"
+          w="100%"
+          flexDirection={isRTL ? 'row-reverse' : 'row'}>
+          <Button variant="ghost" onPress={decreaseCurrentDateByOneMonth}>
+            <Stack
+              flexDirection={isRTL ? 'row' : 'row-reverse'}
+              alignItems="center">
+              <Text fontSize="xs" mx="1">{t`Prev Month`}</Text>
+              <RestoreIcon size="lg" />
+            </Stack>
+          </Button>
+          {!month.isThisMonth && (
+            <Button
+              onPress={resetCurrentDate}
+              variant="outline"
+              py="2"
+              px="1"
+              flexShrink={1}
+              _text={{
+                adjustsFontSizeToFit: true,
+                fontSize: 'xs',
+                noOfLines: 1,
+                _light: {
+                  color: 'primary.700',
+                },
+                _dark: {
+                  color: 'primary.300',
+                },
+              }}
+              borderColor="primary.500">
+              {t`Show current`}
+            </Button>
+          )}
+          <Button variant="ghost" onPress={increaseCurrentDateByOneMonth}>
+            <Stack
+              flexDirection={isRTL ? 'row' : 'row-reverse'}
+              alignItems="center">
+              <UpdateIcon size="lg" />
+              <Text mx="1" fontSize="xs">{t`Next Month`}</Text>
+            </Stack>
+          </Button>
+        </HStack>
+        <Divider borderColor="coolGray.300" mb="2"></Divider>
+        <FlatList
+          flex={1}
+          ListHeaderComponent={listHeaderComponent}
+          data={monthPrayerTimes}
+          renderItem={renderItem}
+          getItemLayout={getItemLayout}
+          keyExtractor={keyExtractor}></FlatList>
+      </Stack>
+    </SafeArea>
+  );
+}
+
+const listHeaderComponent = memo(function listHeaderComponent() {
+  return (
+    <HStack p="1" px="2">
+      <TableCell flex={1}>{t`Date`}</TableCell>
+      <TableCell>{translatePrayer(Prayer.Fajr)}</TableCell>
+      <TableCell>{translatePrayer(Prayer.Dhuhr)}</TableCell>
+      <TableCell>{translatePrayer(Prayer.Asr)}</TableCell>
+      <TableCell>{translatePrayer(Prayer.Maghrib)}</TableCell>
+      <TableCell>{translatePrayer(Prayer.Isha)}</TableCell>
+    </HStack>
+  );
+});

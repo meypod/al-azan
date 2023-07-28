@@ -38,7 +38,7 @@ export function getCachedPrayerTimes(
     cacheMonth(date);
     return getCachedPrayerTimes(date, true);
   }
-  throw new Error('INVALID_CACHE');
+  return calculatePrayerTimes(date)!;
 }
 
 const keysToCache = [...PrayersInOrder, 'date'];
@@ -48,7 +48,7 @@ export function cacheMonth(date: Date) {
 
   let dayToCache = monthBeginning;
 
-  while (dayToCache.getMonth() === date.getMonth()) {
+  for (let i = 0; i < 31; i++) {
     const prayerTimes = calculatePrayerTimes(dayToCache);
     storage.set(
       getDayKey(dayToCache),

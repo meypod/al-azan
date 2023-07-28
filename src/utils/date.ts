@@ -67,6 +67,19 @@ export function addDays(date: Date, days: number) {
   return result;
 }
 
+export function addMonths(date: Date, months: number) {
+  if (!months) return new Date(date.getTime());
+  let result = new Date(date.getTime());
+  result.setMonth(date.getMonth() + months);
+  while (getMonthName(result) === getMonthName(date)) {
+    // this is for tricky daylight savings
+    result = new Date(
+      result.valueOf() + (months / Math.abs(months)) * oneDayInMs,
+    );
+  }
+  return result;
+}
+
 export function getDayBeginning(date: Date) {
   const beginningOfDay = new Date(date.valueOf());
   let hours = 0;
@@ -92,40 +105,46 @@ export function getPrevDayBeginning(date: Date) {
 }
 
 export function getMonthBeginning(date: Date) {
-  const beginningOfMonth = new Date(date.valueOf());
-  beginningOfMonth.setHours(0, 0, 0, 0);
-  beginningOfMonth.setDate(1);
-  return beginningOfMonth;
-}
+  let beginningOfMonth = new Date(date.valueOf());
 
-export function getNextMonthBeginning(date: Date) {
-  const beginningOfMonth = new Date(date.valueOf());
-  beginningOfMonth.setHours(0, 0, 0, 0);
-  beginningOfMonth.setDate(1);
-  if (beginningOfMonth.getMonth() === 11) {
-    beginningOfMonth.setFullYear(beginningOfMonth.getFullYear() + 1);
-    beginningOfMonth.setMonth(0);
-  } else {
-    beginningOfMonth.setMonth(beginningOfMonth.getMonth() + 1);
+  const day = new Intl.DateTimeFormat('en-US', {
+    day: 'numeric',
+    calendar: SELECTED_SECONDARY_CALENDAR,
+  }).format(date);
+
+  const subtractAmount = parseInt(day, 10) - 1;
+  beginningOfMonth.setDate(beginningOfMonth.getDate() - subtractAmount);
+  while (getMonthName(beginningOfMonth) !== getMonthName(date)) {
+    beginningOfMonth = new Date(beginningOfMonth.getTime() + 60 * 60 * 1000);
   }
   return beginningOfMonth;
 }
 
-export function addMonths(date: Date, months: number = 0) {
-  const newDate = new Date(date);
-  const dateMonth = date.getMonth();
-  const sum = months + dateMonth;
-  const years = Math.floor(sum / 12);
-  const newMonth = sum - years * 12;
-
-  newDate.setFullYear(newDate.getFullYear() + years);
-  newDate.setMonth(newMonth);
-  return newDate;
+export function getMonthDates(date: Date) {
+  // get first day in month:
+  let counterDate = new Date(getMonthBeginning(date));
+  const dates = [];
+  // iter
+  for (
+    ;
+    getYearAndMonth(counterDate) === getYearAndMonth(date);
+    counterDate = addDays(counterDate, 1)
+  ) {
+    dates.push(counterDate);
+  }
+  return dates;
 }
 
 export function getDayName(date: Date, length: 'long' | 'short' = 'long') {
   return new Intl.DateTimeFormat(SELECTED_LOCALE, {
     weekday: length,
+  }).format(date);
+}
+
+export function getDayNumeric(date: Date) {
+  return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+    day: 'numeric',
+    calendar: SELECTED_SECONDARY_CALENDAR,
   }).format(date);
 }
 
@@ -201,8 +220,72 @@ export function getFormattedDate(date: Date) {
   }
 }
 
-export function getTime(date: Date) {
-  if (IS_24_HOUR_FORMAT) {
+export function getMonthName(date: Date) {
+  if (
+    Platform.OS === 'android' &&
+    Platform.Version < 30 &&
+    SELECTED_SECONDARY_CALENDAR === 'persian'
+  ) {
+    // polyfill for older androids not showing persian calendar properly
+    const month = new Intl.DateTimeFormat('en-US', {
+      month: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    }).format(date);
+
+    if (SELECTED_LOCALE.startsWith('fa')) {
+      return persianMonthNames['fa'][month];
+    } else {
+      return persianMonthNames['en'][month];
+    }
+  } else {
+    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      month: 'long',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    }).format(date);
+  }
+}
+
+export function getYearAndMonth(date: Date) {
+  if (
+    Platform.OS === 'android' &&
+    Platform.Version < 30 &&
+    SELECTED_SECONDARY_CALENDAR === 'persian'
+  ) {
+    // polyfill for older androids not showing persian calendar properly
+    const month = new Intl.DateTimeFormat('en-US', {
+      month: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    }).format(date);
+
+    let dateParts = new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      year: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    })
+      .format(date)
+      .split(' ');
+
+    let formattedDate;
+
+    if (SELECTED_LOCALE.startsWith('fa')) {
+      const monthName = persianMonthNames['fa'][month];
+      formattedDate = `${dateParts[1]} ${monthName} ${dateParts[0]}`;
+    } else {
+      const monthName = persianMonthNames['en'][month];
+      formattedDate = `${monthName} ${dateParts[0]}, ${dateParts[1]} AP`;
+    }
+
+    return formattedDate;
+  } else {
+    return new Intl.DateTimeFormat(SELECTED_LOCALE, {
+      month: 'long',
+      year: 'numeric',
+      calendar: SELECTED_SECONDARY_CALENDAR,
+    }).format(date);
+  }
+}
+
+export function getTime(date: Date, force24?: boolean) {
+  if (IS_24_HOUR_FORMAT || force24) {
     return new Intl.DateTimeFormat(SELECTED_LOCALE, {
       hour12: false,
       hour: '2-digit',

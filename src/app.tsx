@@ -5,10 +5,11 @@ import {
   DefaultTheme,
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HStack} from 'native-base';
+import {HStack, Text} from 'native-base';
 import {useEffect, useMemo} from 'react';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {FavoriteLocations} from './screens/favorite_locations';
+import {MonthlyView} from './screens/monthly_view';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
@@ -79,6 +80,11 @@ const SettingsAdhanHeaderRight = function SettingsAdhanHeaderRight() {
   );
 };
 
+const SubtitleHeaderRight = function SubtitleHeaderRight() {
+  const {subtitle = ''} = getCurrentRoute().params || ({} as any);
+  return <Text>{subtitle}</Text>;
+};
+
 export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
   const [appIntroDone] = useSettings('APP_INTRO_DONE');
 
@@ -134,6 +140,11 @@ export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
           <Stack.Screen
             name="FavoriteLocations"
             component={FavoriteLocations}
+          />
+          <Stack.Screen
+            name="MonthlyView"
+            component={MonthlyView}
+            options={{headerRight: SubtitleHeaderRight}}
           />
           <Stack.Screen
             name="QadaCounter"

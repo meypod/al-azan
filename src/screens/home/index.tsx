@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import {Button, HStack, ScrollView, Stack, Text} from 'native-base';
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo} from 'react';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {getPrayerTimes} from '@/adhan';
@@ -17,7 +17,6 @@ import {isRTL} from '@/i18n';
 import {navigate} from '@/navigation/root_navigation';
 
 import {translateRoute} from '@/navigation/types';
-import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {calcSettings} from '@/store/calculation';
 import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
@@ -77,16 +76,9 @@ export function Home() {
 
   const location = useStore(calcSettings, s => s.LOCATION);
 
-  const [prayerTimes, setPrayerTimes] = useState<CachedPrayerTimes | undefined>(
-    getPrayerTimes(currentDate),
-  );
+  const prayerTimes = useMemo(() => getPrayerTimes(currentDate), [currentDate]);
 
-  const [day, setDay] = useState<DayDetails>(getDayDetails(currentDate));
-
-  useNoInitialEffect(() => {
-    setDay(getDayDetails(currentDate));
-    setPrayerTimes(getPrayerTimes(currentDate));
-  }, [currentDate]);
+  const day = useMemo(() => getDayDetails(currentDate), [currentDate]);
 
   useEffect(() => {
     void askPermissions();
@@ -97,6 +89,7 @@ export function Home() {
   }, [impactfulSettings, updateCurrentDate]);
 
   const goToLocations = useCallback(() => navigate('FavoriteLocations'), []);
+  const goToMonthlyView = useCallback(() => navigate('MonthlyView'), []);
 
   const locationText = useMemo(() => {
     if (location) {
@@ -132,10 +125,9 @@ export function Home() {
             justifyContent="space-between"
             alignItems="center"
             w="100%">
-            <HStack alignItems="center">
-              <Text>{day.dateString}</Text>
-            </HStack>
-
+            <Text py="1" onPress={goToMonthlyView}>
+              {day.dateString}
+            </Text>
             <HStack alignItems="center">
               <Button
                 accessibilityLabel={translateRoute('QadaCounter')}

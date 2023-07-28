@@ -1,18 +1,18 @@
 import {immer} from 'zustand/middleware/immer';
 import {createStore} from 'zustand/vanilla';
-import {addDays} from '@/utils/date';
+import {addMonths, getYearAndMonth} from '@/utils/date';
 
 type AppState = {
   date: Date;
   navigating: boolean;
   changeCurrentDate: (newDate: Date) => void;
-  increaseCurrentDateByOne: () => void;
-  decreaseCurrentDateByOne: () => void;
+  increaseCurrentDateByOneMonth: () => void;
+  decreaseCurrentDateByOneMonth: () => void;
   updateCurrentDate: () => void;
   resetCurrentDate: () => void;
 };
 
-export const homeStore = createStore<AppState>()(
+export const monthlyViewStore = createStore<AppState>()(
   immer<AppState>(set => ({
     date: new Date(),
     navigating: false,
@@ -22,19 +22,19 @@ export const homeStore = createStore<AppState>()(
         draft.date = newDate;
         draft.navigating = true;
       }),
-    increaseCurrentDateByOne: () =>
+    increaseCurrentDateByOneMonth: () =>
       set(draft => {
-        draft.date = addDays(draft.date, 1);
-        if (draft.date.toDateString() === new Date().toDateString()) {
+        draft.date = addMonths(draft.date, 1);
+        if (getYearAndMonth(draft.date) === getYearAndMonth(new Date())) {
           draft.navigating = false;
         } else {
           draft.navigating = true;
         }
       }),
-    decreaseCurrentDateByOne: () =>
+    decreaseCurrentDateByOneMonth: () =>
       set(draft => {
-        draft.date = addDays(draft.date, -1);
-        if (draft.date.toDateString() === new Date().toDateString()) {
+        draft.date = addMonths(draft.date, -1);
+        if (getYearAndMonth(draft.date) === getYearAndMonth(new Date())) {
           draft.navigating = false;
         } else {
           draft.navigating = true;

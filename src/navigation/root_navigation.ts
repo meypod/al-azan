@@ -91,3 +91,18 @@ export function popToTop() {
     };
   }
 }
+
+type setParamsType = typeof navigationRef.setParams;
+
+export const setRouteParams = function setRouteParams(
+  ...options: Parameters<setParamsType>
+) {
+  if (navigationRef.isReady()) {
+    navigationRef.setParams(...options);
+  } else {
+    todoAction = {
+      fn: setRouteParams,
+      args: options,
+    };
+  }
+} as setParamsType;
