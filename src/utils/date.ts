@@ -131,18 +131,26 @@ export function getPrevDayBeginning(date: Date) {
   return getDayBeginning(addDays(date, -1));
 }
 
+function toEnglishDigits(s: string) {
+  return s.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, function (a): string {
+    return (a.charCodeAt(0) & 0xf) as any;
+  });
+}
+
 export function getMonthBeginning(date: Date, hijri?: boolean) {
   let beginningOfMonth = hijri
     ? addDays(date, HIJRI_DATE_ADJUSTMENT)
     : new Date(date.valueOf());
-  const day = CreateIntlDateTimeFormatter(
-    'en-US-u-ca-' + hijri
-      ? SELECTED_ARABIC_CALENDAR
-      : SELECTED_SECONDARY_CALENDAR,
-    {
-      day: 'numeric',
-    },
-  ).format(date);
+  const day = toEnglishDigits(
+    CreateIntlDateTimeFormatter(
+      'en-US-u-nu-latn-ca-' + hijri
+        ? SELECTED_ARABIC_CALENDAR
+        : SELECTED_SECONDARY_CALENDAR,
+      {
+        day: 'numeric',
+      },
+    ).format(date),
+  );
   const subtractAmount = parseInt(day, 10) - 1;
   beginningOfMonth.setDate(beginningOfMonth.getDate() - subtractAmount);
   while (getMonthName(beginningOfMonth, hijri) !== getMonthName(date, hijri)) {

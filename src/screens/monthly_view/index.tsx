@@ -10,13 +10,19 @@ import {
 import {ListRenderItemInfo} from 'react-native';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
-import {Prayer, getPrayerTimes, translatePrayer} from '@/adhan';
+import {
+  Prayer,
+  getPrayerTimes,
+  isMinimumSettingsAvailable,
+  translatePrayer,
+} from '@/adhan';
 import {RestoreIcon} from '@/assets/icons/material_icons/restore';
 import {UpdateIcon} from '@/assets/icons/material_icons/update';
 import {SafeArea} from '@/components/safe_area';
 import {isRTL} from '@/i18n';
 import {setRouteParams} from '@/navigation/root_navigation';
 import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
+import {calcSettings} from '@/store/calculation';
 import {monthlyViewStore} from '@/store/monthly_view';
 import {settings} from '@/store/settings';
 import {
@@ -75,14 +81,21 @@ export function MonthlyView() {
     shallow,
   );
 
+  const canSeeTimes = useMemo(
+    () => isMinimumSettingsAvailable(calcSettings.getState()),
+    [],
+  );
+
   const isHijriView = useStore(settings, s => s.HIJRI_MONTHLY_VIEW);
 
   const monthPrayerTimes = useMemo(
     () =>
-      getMonthDates(currentDate, isHijriView)
-        .map(getPrayerTimes)
-        .filter(Boolean) as CachedPrayerTimes[],
-    [currentDate, isHijriView],
+      (canSeeTimes
+        ? getMonthDates(currentDate, isHijriView)
+            .map(getPrayerTimes)
+            .filter(Boolean)
+        : []) as CachedPrayerTimes[],
+    [currentDate, isHijriView, canSeeTimes],
   );
 
   const month = useMemo(
@@ -192,7 +205,8 @@ export function MonthlyView() {
           data={monthPrayerTimes}
           renderItem={renderItem}
           getItemLayout={getItemLayout}
-          keyExtractor={keyExtractor}></FlatList>
+          keyExtractor={keyExtractor}
+          ListEmptyComponent={listEmptyComponent}></FlatList>
       </Stack>
     </SafeArea>
   );
@@ -208,5 +222,15 @@ const listHeaderComponent = memo(function listHeaderComponent() {
       <TableCell>{translatePrayer(Prayer.Maghrib)}</TableCell>
       <TableCell>{translatePrayer(Prayer.Isha)}</TableCell>
     </HStack>
+  );
+});
+
+const listEmptyComponent = memo(function listEmptyComponent() {
+  return (
+    <Text
+      flex={1}
+      textAlign="center"
+      p="3"
+      color="muted.500">{t`Required settings are incomplete. For app to show prayer times, You have to configure it from settings later.`}</Text>
   );
 });

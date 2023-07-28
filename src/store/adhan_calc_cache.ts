@@ -1,11 +1,6 @@
 import {storage} from './mmkv';
 import {Prayer, PrayersInOrder, calculatePrayerTimes} from '@/adhan';
-import {
-  addDays,
-  getDayBeginning,
-  getMonthBeginning,
-  getNextDayBeginning,
-} from '@/utils/date';
+import {addDays, getDayBeginning, getNextDayBeginning} from '@/utils/date';
 
 const CACHE_PREFIX = 'PTC_';
 
@@ -44,11 +39,9 @@ export function getCachedPrayerTimes(
 const keysToCache = [...PrayersInOrder, 'date'];
 
 export function cacheMonth(date: Date) {
-  const monthBeginning = getMonthBeginning(date);
+  let dayToCache = addDays(date, -30);
 
-  let dayToCache = monthBeginning;
-
-  for (let i = 0; i < 31; i++) {
+  for (let i = 0; i <= 31; i++) {
     const prayerTimes = calculatePrayerTimes(dayToCache);
     storage.set(
       getDayKey(dayToCache),
