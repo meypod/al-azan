@@ -286,8 +286,8 @@ export function getYearAndMonth(date: Date) {
 
 const faDayPeriodRegex = /([قب]).+از.?ظهر/;
 
-export function getTime(date: Date, force24?: boolean) {
-  if (IS_24_HOUR_FORMAT || force24) {
+export function getTime(date: Date) {
+  if (IS_24_HOUR_FORMAT) {
     return new Intl.DateTimeFormat(SELECTED_LOCALE, {
       hour12: false,
       hour: '2-digit',
