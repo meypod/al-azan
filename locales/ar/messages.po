@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-26 04:38+0330\n"
+"POT-Creation-Date: 2023-07-28 05:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -272,7 +272,7 @@ msgstr "لا تحتوي بيانات الحافظة على إحداثيات"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:145
 msgid "Close"
-msgstr "يغلق"
+msgstr "إغلاق"
 
 #: src/screens/settings_calculation/index.tsx:223
 msgid "Closest City"
@@ -332,6 +332,10 @@ msgstr "وقت التنبيه المخصص القادم"
 #: src/screens/settings_display/theme_settings.tsx:40
 msgid "Dark"
 msgstr "داکن"
+
+#: src/screens/monthly_view/index.tsx:175
+msgid "Date"
+msgstr "تاريخ"
 
 #: src/screens/qada_counter/counter_view.tsx:57
 msgid "Decrement"
@@ -426,7 +430,7 @@ msgstr "الأرقام العربية الشرقية"
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
-msgstr "يحرر"
+msgstr "تعديل"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:140
 msgid "Edit Calculation Parameters"
@@ -438,7 +442,7 @@ msgstr "تحرير العداد"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "Edit Location"
-msgstr "تحریر الموقع"
+msgstr "تعديل الموقع"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "Edit Reminder"
@@ -497,7 +501,7 @@ msgstr "ابحث عن موقعي"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:76
+#: src/navigation/types.ts:77
 msgid "Fix Common Problems"
 msgstr "إصلاح المشاكل الشائعة"
 
@@ -672,7 +676,7 @@ msgstr "إسلامي (جدولي)"
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "جعفري (منتصف الغروب إلى الفجر)"
 
-#: src/utils/date.ts:329
+#: src/utils/date.ts:412
 msgid "Just now"
 msgstr "الآن"
 
@@ -761,7 +765,7 @@ msgstr "زاوية المغرب"
 
 #: src/screens/settings_reminders/reminder_item.tsx:131
 msgid "Make a Copy"
-msgstr "اعمل نسخة"
+msgstr "أنشئ نسخة"
 
 #: fastlane/update/update.ts:55
 #: website/src/_includes/home.tsx:92
@@ -817,7 +821,7 @@ msgstr "عداد جديد"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "New Location"
-msgstr "موقع جديد"
+msgstr "إضافة موقع جديد"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "New Reminder"
@@ -830,9 +834,13 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:218
+#: src/screens/home/index.tsx:210
 msgid "Next Day"
 msgstr "اليوم التالي"
+
+#: src/screens/monthly_view/index.tsx:155
+msgid "Next Month"
+msgstr "الشهر القادم"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:14
@@ -1007,9 +1015,13 @@ msgstr "اضغط للبحث"
 msgid "Press to select a method"
 msgstr "اضغط لتحديد طريقة"
 
-#: src/screens/home/index.tsx:187
+#: src/screens/home/index.tsx:179
 msgid "Prev Day"
 msgstr "اليوم السابق"
+
+#: src/screens/monthly_view/index.tsx:124
+msgid "Prev Month"
+msgstr "الشهر السابق"
 
 #: website/src/_data/navigation.ts:5
 #: website/src/_includes/privacy-policy.tsx:19
@@ -1109,7 +1121,7 @@ msgstr "بحث"
 msgid "Secondary Calendar"
 msgstr "التقويم الثانوي"
 
-#: src/screens/home/index.tsx:237
+#: src/screens/home/index.tsx:229
 msgid "See favorite locations"
 msgstr "شاهد المواقع المفضلة"
 
@@ -1124,7 +1136,7 @@ msgstr "اختر صوت أذان مختلف لصلاة الفجر"
 
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:55
 msgid "Selected"
-msgstr "المحدد"
+msgstr "محدد"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:154
 msgid "Selected as adhan"
@@ -1192,7 +1204,7 @@ msgstr "هل يهتز الهاتف عندما يبدأ الأذان أو الت�
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:210
+#: src/screens/home/index.tsx:202
 msgid "Show Today"
 msgstr "عرض اليوم"
 
@@ -1200,6 +1212,10 @@ msgstr "عرض اليوم"
 #: src/screens/settings_widget/index.tsx:79
 msgid "Show countdown?"
 msgstr "عرض العد التنازلي؟"
+
+#: src/screens/monthly_view/index.tsx:147
+msgid "Show current"
+msgstr ""
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
@@ -1562,7 +1578,7 @@ msgid "about.credits.google"
 msgstr "معظم الأيقونات المستخدمة في هذا التطبيق هي من Google Material Icons."
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "about_settings"
 msgstr "عن التطبيق"
 
@@ -1575,7 +1591,7 @@ msgstr "عدد الدقائق التي ستضاف إلى الأوقات المح
 msgid "after"
 msgstr "بعد"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "ago"
 msgstr "منذ"
 
@@ -1584,7 +1600,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "backup_settings"
 msgstr "النسخ الاحتياطي"
 
@@ -1593,7 +1609,7 @@ msgid "before"
 msgstr "قبل"
 
 #. screen title
-#: src/navigation/types.ts:71
+#: src/navigation/types.ts:72
 msgid "calculation_settings"
 msgstr "حساب"
 
@@ -1619,7 +1635,7 @@ msgid "date.second"
 msgstr "ثانية"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "dev_settings"
 msgstr "مطور"
 
@@ -1628,7 +1644,7 @@ msgid "dhuhr.prayer"
 msgstr "ظهر"
 
 #. screen title
-#: src/navigation/types.ts:51
+#: src/navigation/types.ts:52
 msgid "display_settings"
 msgstr "العرض"
 
@@ -1637,7 +1653,7 @@ msgid "fajr.prayer"
 msgstr "فجر"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:117
+#: src/navigation/types.ts:118
 msgid "favorite_location"
 msgstr "المواقع المفضلة"
 
@@ -1654,7 +1670,7 @@ msgid "from settings"
 msgstr "من الإعدادات"
 
 #. screen title
-#: src/navigation/types.ts:41
+#: src/navigation/types.ts:42
 msgid "fullscreen_alarm"
 msgstr "تشغيل الأذان"
 
@@ -1663,7 +1679,7 @@ msgstr "تشغيل الأذان"
 msgid "hijri.adjustment.hint"
 msgstr "عدد الأيام التي ستتم إضافتها إلى التقويم القمري"
 
-#: src/navigation/types.ts:33
+#: src/navigation/types.ts:34
 msgid "home"
 msgstr "الرئيسية"
 
@@ -1680,12 +1696,12 @@ msgstr "هل وقت الصلاة مخفي؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "later"
 msgstr "لاحقاً"
 
 #. screen title
-#: src/navigation/types.ts:56
+#: src/navigation/types.ts:57
 msgid "location_settings"
 msgstr "موقع"
 
@@ -1701,32 +1717,36 @@ msgstr "المسجد النبوي"
 msgid "moazen_zade"
 msgstr "مؤذن زاده"
 
+#: src/navigation/types.ts:124
+msgid "monthly_view"
+msgstr "عرض شهري"
+
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:66
+#: src/navigation/types.ts:67
 msgid "muezzin_settings"
 msgstr "المؤذن"
 
 #. screen title
-#: src/navigation/types.ts:61
+#: src/navigation/types.ts:62
 msgid "notification_settings"
 msgstr "الإشعار و الصوت"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:113
 msgid "qada_counter"
 msgstr "عداد القضاء"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:109
 msgid "qibla_compass"
 msgstr "بوصلة القبلة"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 msgid "qibla_finder"
 msgstr "مُحدد القبلة"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "qibla_map"
 msgstr "خريطة القبلة"
 
@@ -1735,11 +1755,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفى غلوش"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "reminders_settings"
 msgstr "التذكيرات"
 
-#: src/navigation/types.ts:37
+#: src/navigation/types.ts:38
 msgid "settings"
 msgstr "إعدادات"
 
@@ -1773,7 +1793,7 @@ msgid "sunset"
 msgstr "غروب الشمس"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "widget_settings"
 msgstr "إعدادات المصغر"
 

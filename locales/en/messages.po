@@ -339,6 +339,10 @@ msgstr "Custom upcoming alarm time"
 msgid "Dark"
 msgstr "Dark"
 
+#: src/screens/monthly_view/index.tsx:175
+msgid "Date"
+msgstr "Date"
+
 #: src/screens/qada_counter/counter_view.tsx:57
 msgid "Decrement"
 msgstr "Decrement"
@@ -503,7 +507,7 @@ msgstr "Find My Location"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:76
+#: src/navigation/types.ts:77
 msgid "Fix Common Problems"
 msgstr "Fix Common Problems"
 
@@ -678,7 +682,7 @@ msgstr "Islamic (tabular)"
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "Jafari (Mid Sunset to Fajr)"
 
-#: src/utils/date.ts:329
+#: src/utils/date.ts:412
 msgid "Just now"
 msgstr "Just now"
 
@@ -836,9 +840,13 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:218
+#: src/screens/home/index.tsx:210
 msgid "Next Day"
 msgstr "Next Day"
+
+#: src/screens/monthly_view/index.tsx:155
+msgid "Next Month"
+msgstr "Next Month"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:14
@@ -1013,9 +1021,13 @@ msgstr "Press to search"
 msgid "Press to select a method"
 msgstr "Press to select a method"
 
-#: src/screens/home/index.tsx:187
+#: src/screens/home/index.tsx:179
 msgid "Prev Day"
 msgstr "Prev Day"
+
+#: src/screens/monthly_view/index.tsx:124
+msgid "Prev Month"
+msgstr "Prev Month"
 
 #: website/src/_data/navigation.ts:5
 #: website/src/_includes/privacy-policy.tsx:19
@@ -1119,7 +1131,7 @@ msgstr "Search"
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
-#: src/screens/home/index.tsx:237
+#: src/screens/home/index.tsx:229
 msgid "See favorite locations"
 msgstr "See favorite locations"
 
@@ -1205,7 +1217,7 @@ msgstr "Should phone vibrate when adhan or reminder starts playing?"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:210
+#: src/screens/home/index.tsx:202
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -1213,6 +1225,10 @@ msgstr "Show Today"
 #: src/screens/settings_widget/index.tsx:79
 msgid "Show countdown?"
 msgstr "Show countdown?"
+
+#: src/screens/monthly_view/index.tsx:147
+msgid "Show current"
+msgstr "Show current"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
@@ -1580,7 +1596,7 @@ msgid "about.credits.google"
 msgstr "Most of icons used in this app are from google material icons."
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "about_settings"
 msgstr "About"
 
@@ -1593,7 +1609,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "ago"
 msgstr "ago"
 
@@ -1602,7 +1618,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "backup_settings"
 msgstr "Backup"
 
@@ -1611,7 +1627,7 @@ msgid "before"
 msgstr "before"
 
 #. screen title
-#: src/navigation/types.ts:71
+#: src/navigation/types.ts:72
 msgid "calculation_settings"
 msgstr "Calculation"
 
@@ -1637,7 +1653,7 @@ msgid "date.second"
 msgstr "second"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "dev_settings"
 msgstr "Developer"
 
@@ -1646,7 +1662,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:51
+#: src/navigation/types.ts:52
 msgid "display_settings"
 msgstr "Display"
 
@@ -1655,7 +1671,7 @@ msgid "fajr.prayer"
 msgstr "Fajr"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:117
+#: src/navigation/types.ts:118
 msgid "favorite_location"
 msgstr "Favorite Locations"
 
@@ -1672,7 +1688,7 @@ msgid "from settings"
 msgstr "from settings"
 
 #. screen title
-#: src/navigation/types.ts:41
+#: src/navigation/types.ts:42
 msgid "fullscreen_alarm"
 msgstr "Playing Adhan"
 
@@ -1681,7 +1697,7 @@ msgstr "Playing Adhan"
 msgid "hijri.adjustment.hint"
 msgstr "Number of days that will be added to the lunar calendar"
 
-#: src/navigation/types.ts:33
+#: src/navigation/types.ts:34
 msgid "home"
 msgstr "Home"
 
@@ -1698,12 +1714,12 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "later"
 msgstr "later"
 
 #. screen title
-#: src/navigation/types.ts:56
+#: src/navigation/types.ts:57
 msgid "location_settings"
 msgstr "Location"
 
@@ -1719,32 +1735,36 @@ msgstr "Masjid An Nabawi"
 msgid "moazen_zade"
 msgstr "Moazen Zade"
 
+#: src/navigation/types.ts:124
+msgid "monthly_view"
+msgstr "Monthly View"
+
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:66
+#: src/navigation/types.ts:67
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:61
+#: src/navigation/types.ts:62
 msgid "notification_settings"
 msgstr "Notification & Sound"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:113
 msgid "qada_counter"
 msgstr "Qada Counter"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:109
 msgid "qibla_compass"
 msgstr "Qibla Compass"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 msgid "qibla_finder"
 msgstr "Qibla Finder"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "qibla_map"
 msgstr "Qibla Map"
 
@@ -1753,11 +1773,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "reminders_settings"
 msgstr "Reminders"
 
-#: src/navigation/types.ts:37
+#: src/navigation/types.ts:38
 msgid "settings"
 msgstr "Settings"
 
@@ -1791,7 +1811,7 @@ msgid "sunset"
 msgstr "Sunset"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "widget_settings"
 msgstr "Widget Settings"
 

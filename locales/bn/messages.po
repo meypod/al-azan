@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-26 04:38+0330\n"
+"POT-Creation-Date: 2023-07-28 05:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -333,6 +333,10 @@ msgstr "কাস্টম আসন্ন অ্যালার্ম সময
 msgid "Dark"
 msgstr "অন্ধকার"
 
+#: src/screens/monthly_view/index.tsx:175
+msgid "Date"
+msgstr "তারিখ"
+
 #: src/screens/qada_counter/counter_view.tsx:57
 msgid "Decrement"
 msgstr "হ্রাস"
@@ -497,7 +501,7 @@ msgstr "আমার অবস্থান খুঁজুন"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:76
+#: src/navigation/types.ts:77
 msgid "Fix Common Problems"
 msgstr "সাধারণ সমস্যা ঠিক করুন"
 
@@ -672,7 +676,7 @@ msgstr "ইসলামিক (সারণী)"
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "জাফরি (মধ্য সূর্যাস্ত থেকে ফজর পর্যন্ত)"
 
-#: src/utils/date.ts:329
+#: src/utils/date.ts:412
 msgid "Just now"
 msgstr "এক্ষুনি"
 
@@ -830,9 +834,13 @@ msgstr "রিমাইন্ডার যোগ করুন"
 msgid "Next"
 msgstr "পরবর্তী"
 
-#: src/screens/home/index.tsx:218
+#: src/screens/home/index.tsx:210
 msgid "Next Day"
 msgstr "পরবর্তী দিন"
+
+#: src/screens/monthly_view/index.tsx:155
+msgid "Next Month"
+msgstr "পরের মাসে"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:14
@@ -1007,9 +1015,13 @@ msgstr "অনুসন্ধান করতে টিপুন"
 msgid "Press to select a method"
 msgstr "একটি পদ্ধতি নির্বাচন করতে টিপুন"
 
-#: src/screens/home/index.tsx:187
+#: src/screens/home/index.tsx:179
 msgid "Prev Day"
 msgstr "আগের দিন"
+
+#: src/screens/monthly_view/index.tsx:124
+msgid "Prev Month"
+msgstr "আগের মাস"
 
 #: website/src/_data/navigation.ts:5
 #: website/src/_includes/privacy-policy.tsx:19
@@ -1109,7 +1121,7 @@ msgstr "অনুসন্ধান করুন"
 msgid "Secondary Calendar"
 msgstr "দ্বিতীয় ক্যালেন্ডার"
 
-#: src/screens/home/index.tsx:237
+#: src/screens/home/index.tsx:229
 msgid "See favorite locations"
 msgstr "প্রিয় অবস্থান দেখুন"
 
@@ -1192,7 +1204,7 @@ msgstr "আযান বা রিমাইন্ডার বাজানো �
 msgid "Show Adhan Options"
 msgstr "আযান অপশন দেখুন"
 
-#: src/screens/home/index.tsx:210
+#: src/screens/home/index.tsx:202
 msgid "Show Today"
 msgstr "আজ দেখুন"
 
@@ -1200,6 +1212,10 @@ msgstr "আজ দেখুন"
 #: src/screens/settings_widget/index.tsx:79
 msgid "Show countdown?"
 msgstr "কাউন্টডাউন দেখবেন?"
+
+#: src/screens/monthly_view/index.tsx:147
+msgid "Show current"
+msgstr "বর্তমান দেখান"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
@@ -1559,7 +1575,7 @@ msgid "about.credits.google"
 msgstr "এই অ্যাপে ব্যবহৃত বেশিরভাগ আইকন গুগল ম্যাটেরিয়াল আইকন থেকে।"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "about_settings"
 msgstr "সম্পর্কিত"
 
@@ -1572,7 +1588,7 @@ msgstr "গণনা করা সময়ের সাথে যোগ কর�
 msgid "after"
 msgstr "পরে"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "ago"
 msgstr "আগে"
 
@@ -1581,7 +1597,7 @@ msgid "asr.prayer"
 msgstr "আসর"
 
 #. screen title
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "backup_settings"
 msgstr "ব্যাকআপ"
 
@@ -1590,7 +1606,7 @@ msgid "before"
 msgstr "আগে"
 
 #. screen title
-#: src/navigation/types.ts:71
+#: src/navigation/types.ts:72
 msgid "calculation_settings"
 msgstr "হিসাব"
 
@@ -1616,7 +1632,7 @@ msgid "date.second"
 msgstr "দ্বিতীয়"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "dev_settings"
 msgstr "ডেভেলপার"
 
@@ -1625,7 +1641,7 @@ msgid "dhuhr.prayer"
 msgstr "যোহর"
 
 #. screen title
-#: src/navigation/types.ts:51
+#: src/navigation/types.ts:52
 msgid "display_settings"
 msgstr "প্রদর্শন"
 
@@ -1634,7 +1650,7 @@ msgid "fajr.prayer"
 msgstr "ফজর"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:117
+#: src/navigation/types.ts:118
 msgid "favorite_location"
 msgstr "প্রিয় অবস্থান"
 
@@ -1651,7 +1667,7 @@ msgid "from settings"
 msgstr "সেটিংস থেকে"
 
 #. screen title
-#: src/navigation/types.ts:41
+#: src/navigation/types.ts:42
 msgid "fullscreen_alarm"
 msgstr "আযান হচ্ছে"
 
@@ -1660,7 +1676,7 @@ msgstr "আযান হচ্ছে"
 msgid "hijri.adjustment.hint"
 msgstr "চন্দ্র ক্যালেন্ডারে যোগ করা দিনের সংখ্যা"
 
-#: src/navigation/types.ts:33
+#: src/navigation/types.ts:34
 msgid "home"
 msgstr "হোম"
 
@@ -1677,12 +1693,12 @@ msgstr "নামাজের সময় কি লুকানো আছে?"
 msgid "isha.prayer"
 msgstr "ইশা"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "later"
 msgstr "পরে"
 
 #. screen title
-#: src/navigation/types.ts:56
+#: src/navigation/types.ts:57
 msgid "location_settings"
 msgstr "অবস্থান"
 
@@ -1698,32 +1714,36 @@ msgstr "মসজিদে নববী"
 msgid "moazen_zade"
 msgstr "মোয়াজেন যেইড"
 
+#: src/navigation/types.ts:124
+msgid "monthly_view"
+msgstr "মাসিক ভিউ"
+
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:66
+#: src/navigation/types.ts:67
 msgid "muezzin_settings"
 msgstr "মুয়াজ্জিন"
 
 #. screen title
-#: src/navigation/types.ts:61
+#: src/navigation/types.ts:62
 msgid "notification_settings"
 msgstr "নোটিফিকেশন এবং শব্দ"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:113
 msgid "qada_counter"
 msgstr "কাযা কাউন্টার"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:109
 msgid "qibla_compass"
 msgstr "কিবলা কম্পাস"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 msgid "qibla_finder"
 msgstr "কিবলা সন্ধানকারী"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "qibla_map"
 msgstr "কিবলা মানচিত্র"
 
@@ -1732,11 +1752,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "রাগেব মোস্তফা গালওয়াশ"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "reminders_settings"
 msgstr "রিমাইন্ডারসমূহ"
 
-#: src/navigation/types.ts:37
+#: src/navigation/types.ts:38
 msgid "settings"
 msgstr "সেটিংস"
 
@@ -1770,7 +1790,7 @@ msgid "sunset"
 msgstr "সূর্যাস্ত"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "widget_settings"
 msgstr "উইজেট সেটিংস"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-26 04:38+0330\n"
+"POT-Creation-Date: 2023-07-28 05:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -333,6 +333,10 @@ msgstr "कस्टम आगामी अलार्म समय"
 msgid "Dark"
 msgstr "अँधेरा"
 
+#: src/screens/monthly_view/index.tsx:175
+msgid "Date"
+msgstr "तारीख"
+
 #: src/screens/qada_counter/counter_view.tsx:57
 msgid "Decrement"
 msgstr "घटती"
@@ -497,7 +501,7 @@ msgstr "मेरा स्थान खोजें"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:76
+#: src/navigation/types.ts:77
 msgid "Fix Common Problems"
 msgstr "सामान्य समस्याओं को ठीक करें"
 
@@ -672,7 +676,7 @@ msgstr "इस्लामी (सारणीबद्ध)"
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "जाफ़री (मध्य सूर्यास्त से फज्र तक)"
 
-#: src/utils/date.ts:329
+#: src/utils/date.ts:412
 msgid "Just now"
 msgstr "बस अब"
 
@@ -830,9 +834,13 @@ msgstr "नया अनुस्मारक"
 msgid "Next"
 msgstr "अगला"
 
-#: src/screens/home/index.tsx:218
+#: src/screens/home/index.tsx:210
 msgid "Next Day"
 msgstr "अगले दिन"
+
+#: src/screens/monthly_view/index.tsx:155
+msgid "Next Month"
+msgstr "अगले महीने"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:14
@@ -1007,9 +1015,13 @@ msgstr "खोजने के लिए दबाएँ"
 msgid "Press to select a method"
 msgstr "कोई विधि चुनने के लिए दबाएँ"
 
-#: src/screens/home/index.tsx:187
+#: src/screens/home/index.tsx:179
 msgid "Prev Day"
 msgstr "पिछला दिन"
+
+#: src/screens/monthly_view/index.tsx:124
+msgid "Prev Month"
+msgstr "पिछला महीना"
 
 #: website/src/_data/navigation.ts:5
 #: website/src/_includes/privacy-policy.tsx:19
@@ -1109,7 +1121,7 @@ msgstr "खोज"
 msgid "Secondary Calendar"
 msgstr "माध्यमिक कैलेंडर"
 
-#: src/screens/home/index.tsx:237
+#: src/screens/home/index.tsx:229
 msgid "See favorite locations"
 msgstr "पसंदीदा स्थान देखें"
 
@@ -1192,7 +1204,7 @@ msgstr "क्या अज़ान या रिमाइंडर बजन�
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
-#: src/screens/home/index.tsx:210
+#: src/screens/home/index.tsx:202
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 
@@ -1200,6 +1212,10 @@ msgstr "आज दिखाएँ"
 #: src/screens/settings_widget/index.tsx:79
 msgid "Show countdown?"
 msgstr "उलटी गिनती दिखाएं?"
+
+#: src/screens/monthly_view/index.tsx:147
+msgid "Show current"
+msgstr "वर्तमान दिखाएँ"
 
 #: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
@@ -1559,7 +1575,7 @@ msgid "about.credits.google"
 msgstr "इस ऐप में इस्तेमाल होने वाले ज्यादातर आइकन गूगल मटेरियल आइकन के हैं।"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "about_settings"
 msgstr "के बारे में"
 
@@ -1572,7 +1588,7 @@ msgstr "गणना किए गए समय में जोड़े जा
 msgid "after"
 msgstr "बाद में"
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "ago"
 msgstr "पहले"
 
@@ -1581,7 +1597,7 @@ msgid "asr.prayer"
 msgstr "असर "
 
 #. screen title
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "backup_settings"
 msgstr "बैकअप"
 
@@ -1590,7 +1606,7 @@ msgid "before"
 msgstr "इस से पहले"
 
 #. screen title
-#: src/navigation/types.ts:71
+#: src/navigation/types.ts:72
 msgid "calculation_settings"
 msgstr "गणना"
 
@@ -1616,7 +1632,7 @@ msgid "date.second"
 msgstr "सेकंड"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "dev_settings"
 msgstr "डेवलपर"
 
@@ -1625,7 +1641,7 @@ msgid "dhuhr.prayer"
 msgstr "ज़ुहर "
 
 #. screen title
-#: src/navigation/types.ts:51
+#: src/navigation/types.ts:52
 msgid "display_settings"
 msgstr "डिस्प्ले"
 
@@ -1634,7 +1650,7 @@ msgid "fajr.prayer"
 msgstr "फज्र"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:117
+#: src/navigation/types.ts:118
 msgid "favorite_location"
 msgstr "पसंदीदा स्थान"
 
@@ -1651,7 +1667,7 @@ msgid "from settings"
 msgstr "सेटिंग्स से"
 
 #. screen title
-#: src/navigation/types.ts:41
+#: src/navigation/types.ts:42
 msgid "fullscreen_alarm"
 msgstr "अज़ान प्ले हो रही है"
 
@@ -1660,7 +1676,7 @@ msgstr "अज़ान प्ले हो रही है"
 msgid "hijri.adjustment.hint"
 msgstr "चंद्र कैलेंडर में जोड़े जाने वाले दिनों की संख्या"
 
-#: src/navigation/types.ts:33
+#: src/navigation/types.ts:34
 msgid "home"
 msgstr "घर"
 
@@ -1677,12 +1693,12 @@ msgstr "क्या नमाज़ का वक्त छिपा हुआ 
 msgid "isha.prayer"
 msgstr "इशां "
 
-#: src/utils/date.ts:334
+#: src/utils/date.ts:417
 msgid "later"
 msgstr "बाद में"
 
 #. screen title
-#: src/navigation/types.ts:56
+#: src/navigation/types.ts:57
 msgid "location_settings"
 msgstr "स्थान"
 
@@ -1698,32 +1714,36 @@ msgstr "मस्जिद अन नबवी"
 msgid "moazen_zade"
 msgstr "मोअज़न ज़ादे"
 
+#: src/navigation/types.ts:124
+msgid "monthly_view"
+msgstr "मासिक दृश्य"
+
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:66
+#: src/navigation/types.ts:67
 msgid "muezzin_settings"
 msgstr "मुअज़्ज़िन"
 
 #. screen title
-#: src/navigation/types.ts:61
+#: src/navigation/types.ts:62
 msgid "notification_settings"
 msgstr "सूचना और ध्वनि"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:112
+#: src/navigation/types.ts:113
 msgid "qada_counter"
 msgstr "कड़ा काउंटर"
 
-#: src/navigation/types.ts:108
+#: src/navigation/types.ts:109
 msgid "qibla_compass"
 msgstr "किबला कम्पास"
 
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 msgid "qibla_finder"
 msgstr "किबला खोजक"
 
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "qibla_map"
 msgstr "किबला नक्शा"
 
@@ -1732,11 +1752,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "राघेब मुस्तफा गलवाश"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "reminders_settings"
 msgstr "अनुस्मारक"
 
-#: src/navigation/types.ts:37
+#: src/navigation/types.ts:38
 msgid "settings"
 msgstr "समायोजन"
 
@@ -1770,7 +1790,7 @@ msgid "sunset"
 msgstr "सूर्यास्त"
 
 #. screen title
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "widget_settings"
 msgstr "विजेट सेटिंग्स"
 
