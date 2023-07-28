@@ -41,7 +41,7 @@ export function render({page}: ReturnType<typeof data> & {page: Page}) {
           )}
           <br />
           {i18n._(
-            'However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app.',
+            'However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app.',
           )}
         </p>
         <p>
