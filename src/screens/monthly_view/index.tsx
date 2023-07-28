@@ -41,10 +41,18 @@ function getMonthDetails(date: Date, hijri: boolean): MonthDetails {
 
 const TableCell = memo(function TableCell({
   children,
+  highlighted,
   flex = 2,
-}: PropsWithChildren & {flex?: number}) {
+}: PropsWithChildren & {flex?: number; highlighted?: boolean}) {
   return (
-    <Text flex={flex} flexShrink={0} noOfLines={1} pr="3" textAlign="left">
+    <Text
+      flex={flex}
+      flexShrink={0}
+      noOfLines={1}
+      pr="3"
+      textAlign="left"
+      color={highlighted ? 'green.600' : 'darkText'}
+      _dark={{color: highlighted ? 'green.400' : 'light.50'}}>
       {children}
     </Text>
   );
@@ -89,16 +97,30 @@ export function MonthlyView() {
   }, [month]);
 
   const renderItem = useCallback(
-    ({item}: ListRenderItemInfo<CachedPrayerTimes>) => (
-      <HStack p="1" px="2">
-        <TableCell flex={1}>{getDayNumeric(item.date, isHijriView)}</TableCell>
-        <TableCell>{getTime(item.fajr)}</TableCell>
-        <TableCell>{getTime(item.dhuhr)}</TableCell>
-        <TableCell>{getTime(item.asr)}</TableCell>
-        <TableCell>{getTime(item.maghrib)}</TableCell>
-        <TableCell>{getTime(item.isha)}</TableCell>
-      </HStack>
-    ),
+    ({item}: ListRenderItemInfo<CachedPrayerTimes>) => {
+      const highlighted =
+        item.date.toDateString() === new Date().toDateString();
+      const bw = highlighted ? 0.5 : 0;
+      return (
+        <HStack
+          p="1"
+          px="2"
+          borderTopWidth={bw}
+          borderBottomWidth={bw}
+          borderColor="coolGray.400">
+          <TableCell flex={1} highlighted={highlighted}>
+            {getDayNumeric(item.date, isHijriView)}
+          </TableCell>
+          <TableCell highlighted={highlighted}>{getTime(item.fajr)}</TableCell>
+          <TableCell highlighted={highlighted}>{getTime(item.dhuhr)}</TableCell>
+          <TableCell highlighted={highlighted}>{getTime(item.asr)}</TableCell>
+          <TableCell highlighted={highlighted}>
+            {getTime(item.maghrib)}
+          </TableCell>
+          <TableCell highlighted={highlighted}>{getTime(item.isha)}</TableCell>
+        </HStack>
+      );
+    },
     [isHijriView],
   );
 
