@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-28 05:58+0330\n"
+"POT-Creation-Date: 2023-07-28 18:37+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +89,7 @@ msgstr "Menambahkan penghitung baru"
 msgid "Add new location"
 msgstr "Tambahkan lokasi baru"
 
-#: src/screens/fullscreen_alarm/index.tsx:83
+#: src/screens/fullscreen_alarm/index.tsx:61
 msgid "Adhan"
 msgstr "Adzan"
 
@@ -333,7 +333,7 @@ msgstr "Menyesuaikan waktu alarm yang akan datang"
 msgid "Dark"
 msgstr "Gelap"
 
-#: src/screens/monthly_view/index.tsx:175
+#: src/screens/monthly_view/index.tsx:218
 msgid "Date"
 msgstr "Tanggal"
 
@@ -382,7 +382,7 @@ msgstr "Tidak Aktif"
 msgid "Disclaimer"
 msgstr "Penafian"
 
-#: src/screens/fullscreen_alarm/index.tsx:154
+#: src/screens/fullscreen_alarm/index.tsx:150
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "Hentikan"
@@ -573,8 +573,8 @@ msgid "Homescreen and notification Widgets"
 msgstr "Widget Layar Beranda dan pemberitahuan"
 
 #: website/src/_includes/privacy-policy.tsx:43
-msgid "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
-msgstr "Namun, ketika menggunakan layanan online, seperti mencari koordinat lokasi berdasarkan nama atau peta kiblat, aplikasi dapat mengirimkan data minimum yang diperlukan yang mungkin atau mungkin tidak secara unik mengidentifikasi Anda. Harap ingatlah hal ini saat menggunakan aplikasi."
+msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
+msgstr "Namun, ketika menggunakan layanan online, seperti peta kiblat, aplikasi dapat mengirimkan data minimum yang diperlukan yang mungkin atau mungkin tidak secara unik mengidentifikasi Anda. Harap ingatlah hal ini saat menggunakan aplikasi."
 
 #: src/screens/qibla_finder/index.tsx:100
 msgid "I Understand"
@@ -676,7 +676,7 @@ msgstr "Islam (tabular)"
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "Jafari (Pertengahan Matahari Terbenam hingga Subuh)"
 
-#: src/utils/date.ts:412
+#: src/utils/date.ts:463
 msgid "Just now"
 msgstr "Baru saja"
 
@@ -838,7 +838,7 @@ msgstr "Lanjut"
 msgid "Next Day"
 msgstr "Hari Brkut"
 
-#: src/screens/monthly_view/index.tsx:155
+#: src/screens/monthly_view/index.tsx:197
 msgid "Next Month"
 msgstr "Bulan Depan"
 
@@ -1019,7 +1019,7 @@ msgstr "Tekan untuk memilih metode"
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
-#: src/screens/monthly_view/index.tsx:124
+#: src/screens/monthly_view/index.tsx:166
 msgid "Prev Month"
 msgstr "Bulan Sebelumnya"
 
@@ -1086,7 +1086,7 @@ msgstr "Sisa sampai"
 msgid "Remind me next year"
 msgstr "Ingatkan saya tahun depan"
 
-#: src/screens/fullscreen_alarm/index.tsx:87
+#: src/screens/fullscreen_alarm/index.tsx:65
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1097,6 +1097,7 @@ msgid "Repeat"
 msgstr "Ulangi"
 
 #: src/intro/intro.tsx:120
+#: src/screens/monthly_view/index.tsx:234
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Pengaturan yang diperlukan tidak lengkap. Agar aplikasi menampilkan waktu sholat, proses pengaturan perlu dilanjutkan kembali nanti."
 
@@ -1215,7 +1216,7 @@ msgstr "Hari Ini"
 msgid "Show countdown?"
 msgstr "Tampilkan hitungan mundur?"
 
-#: src/screens/monthly_view/index.tsx:147
+#: src/screens/monthly_view/index.tsx:189
 msgid "Show current"
 msgstr "Tampilkan saat ini"
 
@@ -1590,7 +1591,7 @@ msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 msgid "after"
 msgstr "setelah"
 
-#: src/utils/date.ts:417
+#: src/utils/date.ts:468
 msgid "ago"
 msgstr "yang lalu"
 
@@ -1617,19 +1618,19 @@ msgstr "Perhitungan"
 msgid "counter.fast"
 msgstr "puasa"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:13
 msgid "date.day"
 msgstr "hari"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:17
 msgid "date.hour"
 msgstr "jam"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:21
 msgid "date.minute"
 msgstr "menit"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:25
 msgid "date.second"
 msgstr "detik"
 
@@ -1695,7 +1696,7 @@ msgstr "apakah waktu sholat tersembunyi?"
 msgid "isha.prayer"
 msgstr "Isya'"
 
-#: src/utils/date.ts:417
+#: src/utils/date.ts:468
 msgid "later"
 msgstr "nanti"
 

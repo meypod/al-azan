@@ -95,7 +95,7 @@ msgstr "Add new counter"
 msgid "Add new location"
 msgstr "Add new location"
 
-#: src/screens/fullscreen_alarm/index.tsx:83
+#: src/screens/fullscreen_alarm/index.tsx:61
 msgid "Adhan"
 msgstr "Adhan"
 
@@ -339,7 +339,7 @@ msgstr "Custom upcoming alarm time"
 msgid "Dark"
 msgstr "Dark"
 
-#: src/screens/monthly_view/index.tsx:175
+#: src/screens/monthly_view/index.tsx:218
 msgid "Date"
 msgstr "Date"
 
@@ -388,7 +388,7 @@ msgstr "Disabled"
 msgid "Disclaimer"
 msgstr "Disclaimer"
 
-#: src/screens/fullscreen_alarm/index.tsx:154
+#: src/screens/fullscreen_alarm/index.tsx:150
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "Dismiss"
@@ -579,8 +579,8 @@ msgid "Homescreen and notification Widgets"
 msgstr "Homescreen and notification Widgets"
 
 #: website/src/_includes/privacy-policy.tsx:43
-msgid "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
-msgstr "However, When using online services, such as searching for location coordinates by name or Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
+msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
+msgstr "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 
 #: src/screens/qibla_finder/index.tsx:100
 msgid "I Understand"
@@ -682,7 +682,7 @@ msgstr "Islamic (tabular)"
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "Jafari (Mid Sunset to Fajr)"
 
-#: src/utils/date.ts:412
+#: src/utils/date.ts:463
 msgid "Just now"
 msgstr "Just now"
 
@@ -844,7 +844,7 @@ msgstr "Next"
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/screens/monthly_view/index.tsx:155
+#: src/screens/monthly_view/index.tsx:197
 msgid "Next Month"
 msgstr "Next Month"
 
@@ -1025,7 +1025,7 @@ msgstr "Press to select a method"
 msgid "Prev Day"
 msgstr "Prev Day"
 
-#: src/screens/monthly_view/index.tsx:124
+#: src/screens/monthly_view/index.tsx:166
 msgid "Prev Month"
 msgstr "Prev Month"
 
@@ -1092,7 +1092,7 @@ msgstr "Remaining till"
 msgid "Remind me next year"
 msgstr "Remind me next year"
 
-#: src/screens/fullscreen_alarm/index.tsx:87
+#: src/screens/fullscreen_alarm/index.tsx:65
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1103,6 +1103,7 @@ msgid "Repeat"
 msgstr "Repeat"
 
 #: src/intro/intro.tsx:120
+#: src/screens/monthly_view/index.tsx:234
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 
@@ -1226,7 +1227,7 @@ msgstr "Show Today"
 msgid "Show countdown?"
 msgstr "Show countdown?"
 
-#: src/screens/monthly_view/index.tsx:147
+#: src/screens/monthly_view/index.tsx:189
 msgid "Show current"
 msgstr "Show current"
 
@@ -1609,7 +1610,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:417
+#: src/utils/date.ts:468
 msgid "ago"
 msgstr "ago"
 
@@ -1636,19 +1637,19 @@ msgstr "Calculation"
 msgid "counter.fast"
 msgstr "Fast"
 
-#: src/utils/date.ts:8
+#: src/utils/date.ts:13
 msgid "date.day"
 msgstr "day"
 
-#: src/utils/date.ts:12
+#: src/utils/date.ts:17
 msgid "date.hour"
 msgstr "hour"
 
-#: src/utils/date.ts:16
+#: src/utils/date.ts:21
 msgid "date.minute"
 msgstr "minute"
 
-#: src/utils/date.ts:20
+#: src/utils/date.ts:25
 msgid "date.second"
 msgstr "second"
 
@@ -1714,7 +1715,7 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:417
+#: src/utils/date.ts:468
 msgid "later"
 msgstr "later"
 
