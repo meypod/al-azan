@@ -86,9 +86,10 @@ const SubtitleHeaderRight = function SubtitleHeaderRight() {
   return <Text>{subtitle}</Text>;
 };
 
-export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
+export function App(): JSX.Element {
   const appIntroDone = useStore(settings, s => s.APP_INTRO_DONE);
   const isPlayingAudio = useStore(settings, s => s.IS_PLAYING_AUDIO);
+  const themeColor = useStore(settings, s => s.computed.themeColor);
 
   const navigationTheme = useMemo(
     () => (themeColor === 'dark' ? DarkTheme : DefaultTheme),

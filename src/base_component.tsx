@@ -1,10 +1,10 @@
 import {i18n} from '@lingui/core';
 import {I18nProvider} from '@lingui/react';
 import {ColorMode, extendTheme, NativeBaseProvider} from 'native-base';
-import React, {useEffect, useMemo} from 'react';
-import {PixelRatio, useColorScheme, Dimensions} from 'react-native';
+import React, {useEffect} from 'react';
+import {PixelRatio, Dimensions} from 'react-native';
 import {setupNotifeeForegroundHandler} from '@/notifee';
-import {useSettings} from '@/store/settings';
+import {settings} from '@/store/settings';
 import {colors} from '@/theme/colors';
 import {components} from '@/theme/components';
 
@@ -64,6 +64,15 @@ const config = {
   suppressColorAccessibilityWarning: true,
 };
 
+const colorCodeManager = {
+  async get() {
+    return settings.getState().computed.themeColor;
+  },
+  async set(value: ColorMode | 'default') {
+    settings.getState().setSetting('THEME_COLOR', value);
+  },
+};
+
 export function BaseComponent(
   ChildComponent: React.FunctionComponent<any>,
   args: any,
@@ -76,34 +85,13 @@ export function BaseComponent(
     };
   }, []);
 
-  const systemColorScheme = useColorScheme();
-
-  const [themeColor, setThemeColor] = useSettings('THEME_COLOR');
-
-  const currentThemeColor = useMemo(() => {
-    if (themeColor === 'default') {
-      return systemColorScheme;
-    } else {
-      return themeColor;
-    }
-  }, [systemColorScheme, themeColor]);
-
-  const colorCodeManager = {
-    async get() {
-      return currentThemeColor;
-    },
-    async set(value: ColorMode | 'default') {
-      setThemeColor(value);
-    },
-  };
-
   return (
     <I18nProvider i18n={i18n}>
       <NativeBaseProvider
         theme={extendedTheme}
         config={config}
         colorModeManager={colorCodeManager}>
-        <ChildComponent {...args} themeColor={currentThemeColor} />
+        <ChildComponent {...args} />
       </NativeBaseProvider>
     </I18nProvider>
   );

@@ -2,6 +2,7 @@ import notifee from '@notifee/react-native';
 import {produce} from 'immer';
 import {ColorMode} from 'native-base';
 import {useCallback} from 'react';
+import {Appearance} from 'react-native';
 import {FileSystem} from 'react-native-file-access';
 import {useStore} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
@@ -83,6 +84,10 @@ export type SettingsStore = {
   // alarm type for adaptive charging compatiblity
   USE_DIFFERENT_ALARM_TYPE: boolean;
 
+  computed: {
+    themeColor: Required<ColorMode>;
+  };
+
   // helper functions
   saveAdhanEntry: (entry: AdhanEntry) => void;
   deleteAdhanEntry: (entry: AdhanEntry) => void;
@@ -110,11 +115,12 @@ const invalidKeys = [
   'deleteAdhanEntry',
   'saveTimestamp',
   'deleteTimestamp',
+  'computed',
 ];
 
 export const settings = createStore<SettingsStore>()(
   persist(
-    set => ({
+    (set, get) => ({
       THEME_COLOR: 'default',
       SELECTED_LOCALE: PREFERRED_LOCALE,
       SELECTED_ARABIC_CALENDAR: '',
@@ -158,6 +164,17 @@ export const settings = createStore<SettingsStore>()(
       RAMADAN_REMINDER_DONT_SHOW: false,
       ADVANCED_CUSTOM_ADHAN: false,
       USE_DIFFERENT_ALARM_TYPE: false,
+
+      computed: {
+        get themeColor() {
+          const state = get();
+          if (state.THEME_COLOR === 'default') {
+            return Appearance.getColorScheme();
+          } else {
+            return state.THEME_COLOR;
+          }
+        },
+      },
 
       // adhan entry helper
       saveAdhanEntry: entry =>
