@@ -42,7 +42,7 @@ const TableCell = memo(function TableCell({
   flex = 2,
 }: PropsWithChildren & {flex?: number}) {
   return (
-    <Text flex={flex} flexShrink={0} noOfLines={1} pr="4" textAlign="left">
+    <Text flex={flex} flexShrink={0} noOfLines={1} pr="3" textAlign="left">
       {children}
     </Text>
   );
@@ -85,11 +85,11 @@ export function MonthlyView() {
     ({item}: ListRenderItemInfo<CachedPrayerTimes>) => (
       <HStack p="1" px="2">
         <TableCell flex={1}>{getDayNumeric(item.date)}</TableCell>
-        <TableCell>{getTime(item.fajr, true)}</TableCell>
-        <TableCell>{getTime(item.dhuhr, true)}</TableCell>
-        <TableCell>{getTime(item.asr, true)}</TableCell>
-        <TableCell>{getTime(item.maghrib, true)}</TableCell>
-        <TableCell>{getTime(item.isha, true)}</TableCell>
+        <TableCell>{getTime(item.fajr)}</TableCell>
+        <TableCell>{getTime(item.dhuhr)}</TableCell>
+        <TableCell>{getTime(item.asr)}</TableCell>
+        <TableCell>{getTime(item.maghrib)}</TableCell>
+        <TableCell>{getTime(item.isha)}</TableCell>
       </HStack>
     ),
     [],
