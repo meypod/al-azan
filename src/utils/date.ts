@@ -127,7 +127,9 @@ export function getPrevDayBeginning(date: Date) {
 }
 
 export function getMonthBeginning(date: Date, hijri?: boolean) {
-  let beginningOfMonth = new Date(date.valueOf());
+  let beginningOfMonth = hijri
+    ? addDays(date, HIJRI_DATE_ADJUSTMENT)
+    : new Date(date.valueOf());
   const day = new Intl.DateTimeFormat(
     'en-US-u-ca-' + hijri
       ? SELECTED_ARABIC_CALENDAR
@@ -349,6 +351,7 @@ export function getTime(date: Date) {
 }
 
 export function getArabicMonthName(date: Date) {
+  const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
   return new Intl.DateTimeFormat(
     addNumberingToLocale(
       `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
@@ -357,7 +360,7 @@ export function getArabicMonthName(date: Date) {
     {
       month: 'long',
     },
-  ).format(date);
+  ).format(adjustedDate);
 }
 
 export function getArabicDate(date: Date) {
