@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {NativeModules, NativeEventEmitter, Image} from 'react-native';
 
 const MediaPlayerModule = (
@@ -92,33 +92,23 @@ export const getRingtones = MediaPlayerModule.getRingtones;
 
 export const usePlaybackState = () => {
   const [state, setState] = useState(PlaybackState.stopped);
-  const isUnmountedRef = useRef(true);
-
   useEffect(() => {
-    isUnmountedRef.current = false;
-    return () => {
-      isUnmountedRef.current = true;
-    };
-  }, []);
-
-  useEffect(() => {
-    async function setPlayerState() {
-      const playerState = await getState();
-
-      // If the component has been unmounted, exit
-      if (isUnmountedRef.current) return;
-
-      setState(playerState);
-    }
-
+    let unmounted = false;
     // Set initial state
-    setPlayerState();
+    getState().then(playerState => {
+      // If the component has been unmounted, exit
+      if (unmounted) return;
+      setState(playerState);
+    });
 
     const sub = addEventListener('state', s => {
       setState(s);
     });
 
-    return () => sub.remove();
+    return () => {
+      unmounted = true;
+      sub.remove();
+    };
   }, []);
 
   return state;
