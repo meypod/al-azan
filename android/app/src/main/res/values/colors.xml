@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <color name="active_prayer">#008205</color>
+  <color name="secondary_text_color">#de000000</color>
+  <color name="notif_active_prayer">#008205</color>
+  <color name="notif_secondary_text_color">#de000000</color>
   <color name="text_shadow">#7F000000</color>
   <color name="text_shadow_black">#7F000000</color>
-  <color name="secondary_text_color">#de000000</color>
   <color name="bg_compat">#D5F8F8F8</color>
 </resources>

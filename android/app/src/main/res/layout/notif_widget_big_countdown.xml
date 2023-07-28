@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:theme="@style/WidgetBaseTheme">
+    android:theme="@style/NotifWidgetBaseTheme">
 
   <include layout="@layout/widget_expanded_header"/>
   <include layout="@layout/widget_expanded_content"/>

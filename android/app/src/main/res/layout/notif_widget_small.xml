@@ -6,7 +6,7 @@
     android:gravity="center"
     android:layoutDirection="rtl"
     android:orientation="horizontal"
-    android:theme="@style/WidgetBaseTheme">
+    android:theme="@style/NotifWidgetBaseTheme">
 
     <include layout="@layout/widget_expanded_content" />
 

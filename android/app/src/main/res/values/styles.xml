@@ -16,6 +16,15 @@
     <item name="labelFontSize">14sp</item>
   </style>
 
+  <style name="NotifWidgetBaseTheme" parent="WidgetBaseTheme">
+    <item name="labelColor">@color/notif_secondary_text_color</item>
+    <item name="labelActiveColor">@color/notif_active_prayer</item>
+  </style>
+
+  <style name="NotifWidgetExpandedBaseTheme" parent="NotifWidgetBaseTheme">
+    <item name="labelFontSize">14sp</item>
+  </style>
+
   <style name="PrayerLabels">
     <item name="android:textColor">?attr/labelColor</item>
     <item name="android:textSize">?attr/labelFontSize</item>

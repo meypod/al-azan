@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="notif_active_prayer">#fde047</color>
+  <color name="notif_secondary_text_color">#ffffffff</color>
+</resources>
