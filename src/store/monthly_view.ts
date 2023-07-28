@@ -1,5 +1,6 @@
 import {immer} from 'zustand/middleware/immer';
 import {createStore} from 'zustand/vanilla';
+import {settings} from './settings';
 import {addMonths, getYearAndMonth} from '@/utils/date';
 
 type AppState = {
@@ -16,6 +17,7 @@ export const monthlyViewStore = createStore<AppState>()(
   immer<AppState>(set => ({
     date: new Date(),
     navigating: false,
+    isHijri: false,
     changeCurrentDate: (newDate: Date) =>
       set(draft => {
         newDate.setHours(0, 0, 0, 0);
@@ -24,8 +26,12 @@ export const monthlyViewStore = createStore<AppState>()(
       }),
     increaseCurrentDateByOneMonth: () =>
       set(draft => {
-        draft.date = addMonths(draft.date, 1);
-        if (getYearAndMonth(draft.date) === getYearAndMonth(new Date())) {
+        const isHijri = settings.getState().HIJRI_MONTHLY_VIEW;
+        draft.date = addMonths(draft.date, 1, isHijri);
+        if (
+          getYearAndMonth(draft.date, isHijri) ===
+          getYearAndMonth(new Date(), isHijri)
+        ) {
           draft.navigating = false;
         } else {
           draft.navigating = true;
@@ -33,8 +39,12 @@ export const monthlyViewStore = createStore<AppState>()(
       }),
     decreaseCurrentDateByOneMonth: () =>
       set(draft => {
-        draft.date = addMonths(draft.date, -1);
-        if (getYearAndMonth(draft.date) === getYearAndMonth(new Date())) {
+        const isHijri = settings.getState().HIJRI_MONTHLY_VIEW;
+        draft.date = addMonths(draft.date, -1, isHijri);
+        if (
+          getYearAndMonth(draft.date, isHijri) ===
+          getYearAndMonth(new Date(), isHijri)
+        ) {
           draft.navigating = false;
         } else {
           draft.navigating = true;
