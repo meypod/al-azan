@@ -6,7 +6,8 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HStack, Text} from 'native-base';
-import {useEffect, useMemo} from 'react';
+import {useEffect, useLayoutEffect, useMemo} from 'react';
+import {useStore} from 'zustand';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {FavoriteLocations} from './screens/favorite_locations';
 import {MonthlyView} from './screens/monthly_view';
@@ -39,7 +40,7 @@ import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
-import {useSettings} from '@/store/settings';
+import {settings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
@@ -86,7 +87,8 @@ const SubtitleHeaderRight = function SubtitleHeaderRight() {
 };
 
 export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
-  const [appIntroDone] = useSettings('APP_INTRO_DONE');
+  const appIntroDone = useStore(settings, s => s.APP_INTRO_DONE);
+  const isPlayingAudio = useStore(settings, s => s.IS_PLAYING_AUDIO);
 
   const navigationTheme = useMemo(
     () => (themeColor === 'dark' ? DarkTheme : DefaultTheme),
@@ -100,9 +102,7 @@ export function App({themeColor}: {themeColor: 'dark' | 'light'}): JSX.Element {
     updateWidgets();
   }, []);
 
-  const [isPlayingAudio] = useSettings('IS_PLAYING_AUDIO');
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isPlayingAudio) {
       replace('FullscreenAlarm');
     }
