@@ -18,6 +18,7 @@ import {isRTL} from '@/i18n';
 import {setRouteParams} from '@/navigation/root_navigation';
 import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {monthlyViewStore} from '@/store/monthly_view';
+import {settings} from '@/store/settings';
 import {
   getTime,
   getMonthDates,
@@ -30,10 +31,11 @@ type MonthDetails = {
   isThisMonth: boolean;
 };
 
-function getMonthDetails(date: Date): MonthDetails {
+function getMonthDetails(date: Date, hijri: boolean): MonthDetails {
   return {
-    yearAndMonth: getYearAndMonth(date),
-    isThisMonth: getYearAndMonth(date) === getYearAndMonth(new Date()),
+    yearAndMonth: getYearAndMonth(date, hijri),
+    isThisMonth:
+      getYearAndMonth(date, hijri) === getYearAndMonth(new Date(), hijri),
   };
 }
 
@@ -65,15 +67,20 @@ export function MonthlyView() {
     shallow,
   );
 
+  const isHijriView = useStore(settings, s => s.HIJRI_MONTHLY_VIEW);
+
   const monthPrayerTimes = useMemo(
     () =>
-      getMonthDates(currentDate)
+      getMonthDates(currentDate, isHijriView)
         .map(getPrayerTimes)
         .filter(Boolean) as CachedPrayerTimes[],
-    [currentDate],
+    [currentDate, isHijriView],
   );
 
-  const month = useMemo(() => getMonthDetails(currentDate), [currentDate]);
+  const month = useMemo(
+    () => getMonthDetails(currentDate, isHijriView),
+    [currentDate, isHijriView],
+  );
 
   useLayoutEffect(() => {
     setRouteParams({
@@ -84,7 +91,7 @@ export function MonthlyView() {
   const renderItem = useCallback(
     ({item}: ListRenderItemInfo<CachedPrayerTimes>) => (
       <HStack p="1" px="2">
-        <TableCell flex={1}>{getDayNumeric(item.date)}</TableCell>
+        <TableCell flex={1}>{getDayNumeric(item.date, isHijriView)}</TableCell>
         <TableCell>{getTime(item.fajr)}</TableCell>
         <TableCell>{getTime(item.dhuhr)}</TableCell>
         <TableCell>{getTime(item.asr)}</TableCell>
@@ -92,7 +99,7 @@ export function MonthlyView() {
         <TableCell>{getTime(item.isha)}</TableCell>
       </HStack>
     ),
-    [],
+    [isHijriView],
   );
 
   const getItemLayout = useCallback(

@@ -84,6 +84,9 @@ export type SettingsStore = {
   // alarm type for adaptive charging compatiblity
   USE_DIFFERENT_ALARM_TYPE: boolean;
 
+  // monthly view
+  HIJRI_MONTHLY_VIEW: boolean;
+
   computed: {
     themeColor: Required<ColorMode>;
   };
@@ -164,6 +167,8 @@ export const settings = createStore<SettingsStore>()(
       RAMADAN_REMINDER_DONT_SHOW: false,
       ADVANCED_CUSTOM_ADHAN: false,
       USE_DIFFERENT_ALARM_TYPE: false,
+      // monthly view
+      HIJRI_MONTHLY_VIEW: false,
 
       computed: {
         get themeColor() {
