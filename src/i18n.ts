@@ -11,7 +11,7 @@ export function loadLocale(targetLocale: string) {
   if (loadStatuses[targetLocale]) return;
   const detectedLocale = loadLocaleCommon(targetLocale);
   loadStatuses[targetLocale] = true;
-  isRTL = isRtlLang(detectedLocale)!;
+  isRTL = !!isRtlLang(detectedLocale);
   I18nManager.allowRTL(isRTL);
   I18nManager.forceRTL(isRTL);
 }

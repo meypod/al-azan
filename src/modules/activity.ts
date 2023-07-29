@@ -1,10 +1,5 @@
-import {
-  I18nManager,
-  NativeEventEmitter,
-  NativeModule,
-  NativeModules,
-} from 'react-native';
-import {isRTL, loadLocale} from '@/i18n';
+import {NativeEventEmitter, NativeModule, NativeModules} from 'react-native';
+import {loadLocale} from '@/i18n';
 import {push, replace} from '@/navigation/root_navigation';
 import {storage} from '@/store/mmkv';
 import {settings} from '@/store/settings';
@@ -71,9 +66,8 @@ export function handleDemoCommands() {
             SELECTED_LOCALE: args.lang === 'en-US' ? 'en' : args.lang,
           });
           loadLocale(args.lang);
-          I18nManager.forceRTL(isRTL);
           // allow some time for forceRTL to work
-          setTimeout(restart, 200);
+          setTimeout(restart, 300);
           break;
         case 'set': {
           switch (args.store) {
