@@ -138,9 +138,7 @@ function toEnglishDigits(s: string) {
 }
 
 export function getMonthBeginning(date: Date, hijri?: boolean) {
-  let beginningOfMonth = hijri
-    ? addDays(date, HIJRI_DATE_ADJUSTMENT)
-    : new Date(date.valueOf());
+  let beginningOfMonth = new Date(date.valueOf());
   const day = toEnglishDigits(
     CreateIntlDateTimeFormatter(
       'en-US-u-nu-latn-ca-' + hijri
