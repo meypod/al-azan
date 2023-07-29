@@ -12,7 +12,7 @@ import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {
   Prayer,
-  getPrayerTimes,
+  calculatePrayerTimes,
   isMinimumSettingsAvailable,
   translatePrayer,
 } from '@/adhan';
@@ -92,7 +92,7 @@ export function MonthlyView() {
     () =>
       (canSeeTimes
         ? getMonthDates(currentDate, isHijriView)
-            .map(getPrayerTimes)
+            .map(calculatePrayerTimes)
             .filter(Boolean)
         : []) as CachedPrayerTimes[],
     [currentDate, isHijriView, canSeeTimes],

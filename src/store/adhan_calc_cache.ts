@@ -33,15 +33,22 @@ export function getCachedPrayerTimes(
     cacheMonth(date);
     return getCachedPrayerTimes(date, true);
   }
-  return calculatePrayerTimes(date)!;
+  throw new Error('INVALID_CACHE');
 }
 
 const keysToCache = [...PrayersInOrder, 'date'];
 
-export function cacheMonth(date: Date) {
-  let dayToCache = addDays(date, -30);
+function getMonthBeginning(date: Date) {
+  const beginningOfMonth = new Date(date.valueOf());
+  beginningOfMonth.setHours(0, 0, 0, 0);
+  beginningOfMonth.setDate(1);
+  return beginningOfMonth;
+}
 
-  for (let i = 0; i <= 31; i++) {
+export function cacheMonth(date: Date) {
+  let dayToCache = getMonthBeginning(date);
+
+  while (dayToCache.getMonth() === date.getMonth()) {
     const prayerTimes = calculatePrayerTimes(dayToCache);
     storage.set(
       getDayKey(dayToCache),
