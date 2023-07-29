@@ -95,8 +95,8 @@ export function addDays(date: Date, days: number) {
 }
 
 export function addMonths(date: Date, months: number, hijri?: boolean) {
-  if (!months) return new Date(date.getTime());
   let result = new Date(date.getTime());
+  if (!months) return result;
   result.setDate(date.getDate() + months * 28);
   while (getMonthName(result, hijri) === getMonthName(date, hijri)) {
     // this is for tricky daylight savings
@@ -360,7 +360,7 @@ export function getTime(date: Date) {
       dayPeriod: 'short',
     })
       .format(date)
-      .replace(faDayPeriodRegex, '$1.ظ.');
+      .replace(faDayPeriodRegex, '$1.ظ');
   }
 }
 
