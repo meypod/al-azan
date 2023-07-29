@@ -117,7 +117,7 @@ export function MonthlyView() {
       return (
         <HStack
           p="1"
-          px="2"
+          pl="2"
           borderTopWidth={bw}
           borderBottomWidth={bw}
           borderColor="coolGray.400">
@@ -214,7 +214,7 @@ export function MonthlyView() {
 
 const listHeaderComponent = memo(function listHeaderComponent() {
   return (
-    <HStack p="1" px="2">
+    <HStack p="1" pl="2">
       <TableCell flex={1}>{t`Date`}</TableCell>
       <TableCell>{translatePrayer(Prayer.Fajr)}</TableCell>
       <TableCell>{translatePrayer(Prayer.Dhuhr)}</TableCell>
