@@ -30,6 +30,7 @@ import {
   getMonthDates,
   getYearAndMonth,
   getDayNumeric,
+  isDateToday,
 } from '@/utils/date';
 
 type MonthDetails = {
@@ -111,8 +112,7 @@ export function MonthlyView() {
 
   const renderItem = useCallback(
     ({item}: ListRenderItemInfo<CachedPrayerTimes>) => {
-      const highlighted =
-        item.date.toDateString() === new Date().toDateString();
+      const highlighted = isDateToday(item.date, isHijriView);
       const bw = highlighted ? 0.5 : 0;
       return (
         <HStack

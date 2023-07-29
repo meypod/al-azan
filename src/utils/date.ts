@@ -476,6 +476,14 @@ export function getFormattedDateDiff(diff: DateDiff) {
   }
 }
 
+export function isDateToday(date: Date, hijri?: boolean) {
+  if (hijri) {
+    return getArabicDate(date) === getArabicDate(new Date());
+  } else {
+    return date.toDateString() === new Date().toDateString();
+  }
+}
+
 export type WeekDayName =
   | 'sunday'
   | 'monday'
