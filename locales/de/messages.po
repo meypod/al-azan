@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-28 18:37+0330\n"
+"POT-Creation-Date: 2023-07-29 16:26+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +89,7 @@ msgstr "Neuen Zähler hinzufügen"
 msgid "Add new location"
 msgstr "Neuen Standort hinzufügen"
 
-#: src/screens/fullscreen_alarm/index.tsx:61
+#: src/screens/fullscreen_alarm/index.tsx:64
 msgid "Adhan"
 msgstr "Adhan"
 
@@ -228,7 +228,7 @@ msgstr "Berechnungsmethode auswählen"
 msgid "Choose High Latitude Setting"
 msgstr "Hohen Breitengrad festlegen"
 
-#: src/screens/settings_display/language_settings.tsx:108
+#: src/screens/settings_display/language_settings.tsx:106
 msgid "Choose Language"
 msgstr "Sprache auswählen"
 
@@ -382,7 +382,7 @@ msgstr "Deaktiviert"
 msgid "Disclaimer"
 msgstr "Haftungsausschluss"
 
-#: src/screens/fullscreen_alarm/index.tsx:150
+#: src/screens/fullscreen_alarm/index.tsx:153
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "Ablehnen"
@@ -574,7 +574,7 @@ msgstr "Startbildschirm- und Benachrichtigungs-Widgets"
 
 #: website/src/_includes/privacy-policy.tsx:43
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
-msgstr "Bei der Nutzung von Online-Diensten, wie z. B. der Qibla-Karte, kann die App jedoch ein Minimum an notwendigen Daten übertragen, die Sie möglicherweise nicht eindeutig identifizieren. Bitte bedenken Sie dies bei der Nutzung der App."
+msgstr "Bei der Nutzung von Online-Diensten, wie z. B. der Qibla-Karte, werden dafür notwendige Daten übertragen, die Sie möglicherweise eindeutig identifizieren. Bitte bedenken Sie dies bei der Nutzung der App."
 
 #: src/screens/qibla_finder/index.tsx:100
 msgid "I Understand"
@@ -698,7 +698,7 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Bezeichnung"
 
-#: src/screens/settings_display/language_settings.tsx:105
+#: src/screens/settings_display/language_settings.tsx:103
 msgid "Language"
 msgstr "Sprache"
 
@@ -1088,7 +1088,7 @@ msgstr "Verbleibend bis"
 msgid "Remind me next year"
 msgstr "Erinnern Sie mich nächstes Jahr daran"
 
-#: src/screens/fullscreen_alarm/index.tsx:65
+#: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1426,7 +1426,7 @@ msgstr "Unzuverlässig"
 msgid "Unresolved (default)"
 msgstr "Ungelöst (Standard)"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
 msgstr "Ohne Unterstützung"
 

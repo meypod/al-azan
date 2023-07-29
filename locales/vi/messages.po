@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-28 18:37+0330\n"
+"POT-Creation-Date: 2023-07-29 16:26+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +89,7 @@ msgstr "Thêm bộ đếm mới"
 msgid "Add new location"
 msgstr "Thêm vị trí mới"
 
-#: src/screens/fullscreen_alarm/index.tsx:61
+#: src/screens/fullscreen_alarm/index.tsx:64
 msgid "Adhan"
 msgstr "Azan"
 
@@ -228,7 +228,7 @@ msgstr "Chọn phương pháp tính toán"
 msgid "Choose High Latitude Setting"
 msgstr "Chọn Cài đặt Vĩ độ Cao"
 
-#: src/screens/settings_display/language_settings.tsx:108
+#: src/screens/settings_display/language_settings.tsx:106
 msgid "Choose Language"
 msgstr "Chọn ngôn ngữ"
 
@@ -382,7 +382,7 @@ msgstr "Đã tắt"
 msgid "Disclaimer"
 msgstr "Lưu ý"
 
-#: src/screens/fullscreen_alarm/index.tsx:150
+#: src/screens/fullscreen_alarm/index.tsx:153
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "Bỏ qua"
@@ -446,7 +446,7 @@ msgstr "Sửa Vị trí"
 
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:96
 msgid "Edit Reminder"
-msgstr "Chỉnh sửa Lời nhắc"
+msgstr "Sửa Lời nhắc"
 
 #: src/adhan/calculation_methods.ts:32
 msgid "Egyptian General Survey Authority"
@@ -574,7 +574,7 @@ msgstr "Màn hình chính và Tiện Ích thông báo"
 
 #: website/src/_includes/privacy-policy.tsx:43
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
-msgstr "Tuy nhiên, khi sử dụng các dịch vụ trực tuyến, chẳng hạn như bản đồ Qibla, ứng dụng có thể truyền dữ liệu cần thiết tối thiểu có thể nhận dạng duy nhất bạn hoặc không. Hãy ghi nhớ điều này trong khi sử dụng ứng dụng."
+msgstr "Tuy nhiên, khi dùng các dịch vụ trực tuyến, chẳng hạn như bản đồ Qibla, ứng dụng có thể truyền dữ liệu cần thiết và nó có thể nhận dạng bạn hoặc không. Hãy ghi nhớ điều này khi sử dụng ứng dụng."
 
 #: src/screens/qibla_finder/index.tsx:100
 msgid "I Understand"
@@ -698,7 +698,7 @@ msgstr "Cô-oét"
 msgid "Label"
 msgstr "Tên"
 
-#: src/screens/settings_display/language_settings.tsx:105
+#: src/screens/settings_display/language_settings.tsx:103
 msgid "Language"
 msgstr "Ngôn ngữ"
 
@@ -1086,7 +1086,7 @@ msgstr "Đếm ngược tới"
 msgid "Remind me next year"
 msgstr "Nhắc tôi năm sau"
 
-#: src/screens/fullscreen_alarm/index.tsx:65
+#: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1425,7 +1425,7 @@ msgstr "Không tin cậy"
 msgid "Unresolved (default)"
 msgstr "Chưa giải quyết (mặc định)"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
 msgstr "Không hỗ trợ"
 

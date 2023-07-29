@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-28 18:37+0330\n"
+"POT-Creation-Date: 2023-07-29 16:26+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +89,7 @@ msgstr "নতুন কাউন্টার যোগ করুন"
 msgid "Add new location"
 msgstr "নতুন অবস্থান যোগ করুন"
 
-#: src/screens/fullscreen_alarm/index.tsx:61
+#: src/screens/fullscreen_alarm/index.tsx:64
 msgid "Adhan"
 msgstr "আযান"
 
@@ -228,7 +228,7 @@ msgstr "গণনা পদ্ধতি নির্বাচন করুন"
 msgid "Choose High Latitude Setting"
 msgstr "উচ্চ অক্ষাংশের সেটিং নির্বাচন করুন"
 
-#: src/screens/settings_display/language_settings.tsx:108
+#: src/screens/settings_display/language_settings.tsx:106
 msgid "Choose Language"
 msgstr "ভাষা নির্বাচন করুন"
 
@@ -382,7 +382,7 @@ msgstr "বন্ধ আছে"
 msgid "Disclaimer"
 msgstr "দাবিত্যাগ"
 
-#: src/screens/fullscreen_alarm/index.tsx:150
+#: src/screens/fullscreen_alarm/index.tsx:153
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "খারিজ"
@@ -698,7 +698,7 @@ msgstr "কুয়েত"
 msgid "Label"
 msgstr "লেবেল"
 
-#: src/screens/settings_display/language_settings.tsx:105
+#: src/screens/settings_display/language_settings.tsx:103
 msgid "Language"
 msgstr "ভাষা"
 
@@ -1086,7 +1086,7 @@ msgstr "পর্যন্ত বাকি"
 msgid "Remind me next year"
 msgstr "পরের বছর আমাকে মনে করিয়ে দিন"
 
-#: src/screens/fullscreen_alarm/index.tsx:65
+#: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1419,7 +1419,7 @@ msgstr "অবিশ্বস্ত"
 msgid "Unresolved (default)"
 msgstr "অমীমাংসিত (ডিফল্ট)"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
 msgstr "অসমর্থিত"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-28 18:37+0330\n"
+"POT-Creation-Date: 2023-07-29 16:26+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +89,7 @@ msgstr "Ajouter un nouveau compteur"
 msgid "Add new location"
 msgstr "Ajouter un nouveau lieu"
 
-#: src/screens/fullscreen_alarm/index.tsx:61
+#: src/screens/fullscreen_alarm/index.tsx:64
 msgid "Adhan"
 msgstr "Adhan"
 
@@ -228,7 +228,7 @@ msgstr "Choisir la méthode de calcul"
 msgid "Choose High Latitude Setting"
 msgstr "Choisir le réglage de la latitude élevée"
 
-#: src/screens/settings_display/language_settings.tsx:108
+#: src/screens/settings_display/language_settings.tsx:106
 msgid "Choose Language"
 msgstr "Choisir la langue"
 
@@ -382,7 +382,7 @@ msgstr "Désactivé"
 msgid "Disclaimer"
 msgstr "Clause de non-responsabilité"
 
-#: src/screens/fullscreen_alarm/index.tsx:150
+#: src/screens/fullscreen_alarm/index.tsx:153
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "Passer"
@@ -698,7 +698,7 @@ msgstr "Koweït"
 msgid "Label"
 msgstr "Intitulé"
 
-#: src/screens/settings_display/language_settings.tsx:105
+#: src/screens/settings_display/language_settings.tsx:103
 msgid "Language"
 msgstr "Langue"
 
@@ -1086,7 +1086,7 @@ msgstr "Restant jusqu'au"
 msgid "Remind me next year"
 msgstr "Rappelez-moi l'année prochaine"
 
-#: src/screens/fullscreen_alarm/index.tsx:65
+#: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1431,7 +1431,7 @@ msgstr "Précision peu fiable"
 msgid "Unresolved (default)"
 msgstr "Non résolu (par défaut)"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
 msgstr "Non pris en charge"
 

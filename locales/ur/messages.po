@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-28 18:37+0330\n"
+"POT-Creation-Date: 2023-07-29 16:26+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -89,7 +89,7 @@ msgstr "نیا کاؤنٹر شامل کریں۔"
 msgid "Add new location"
 msgstr "نیا مقام شامل کریں۔"
 
-#: src/screens/fullscreen_alarm/index.tsx:61
+#: src/screens/fullscreen_alarm/index.tsx:64
 msgid "Adhan"
 msgstr "اذان"
 
@@ -228,7 +228,7 @@ msgstr "حساب کتاب کا طریقہ منتخب کریں۔"
 msgid "Choose High Latitude Setting"
 msgstr "اعلی عرض بلد کی ترتیب کا انتخاب کریں۔"
 
-#: src/screens/settings_display/language_settings.tsx:108
+#: src/screens/settings_display/language_settings.tsx:106
 msgid "Choose Language"
 msgstr "زبان کا انتخاب کریں۔"
 
@@ -382,7 +382,7 @@ msgstr "غیر فعال"
 msgid "Disclaimer"
 msgstr "ڈس کلیمر"
 
-#: src/screens/fullscreen_alarm/index.tsx:150
+#: src/screens/fullscreen_alarm/index.tsx:153
 #: src/tasks/set_alarm.ts:107
 msgid "Dismiss"
 msgstr "برطرف کرنا"
@@ -698,7 +698,7 @@ msgstr "کویت"
 msgid "Label"
 msgstr "لیبل"
 
-#: src/screens/settings_display/language_settings.tsx:105
+#: src/screens/settings_display/language_settings.tsx:103
 msgid "Language"
 msgstr "زبان"
 
@@ -1086,7 +1086,7 @@ msgstr "تک باقی ہے۔"
 msgid "Remind me next year"
 msgstr "اگلے سال مجھے یاد دلائیں۔"
 
-#: src/screens/fullscreen_alarm/index.tsx:65
+#: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
 msgid "Reminder"
@@ -1419,7 +1419,7 @@ msgstr "ناقابل اعتبار"
 msgid "Unresolved (default)"
 msgstr "غیر حل شدہ (پہلے سے طے شدہ)"
 
-#: src/screens/settings_display/language_settings.tsx:84
+#: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
 msgstr "غیر تعاون یافتہ"
 
