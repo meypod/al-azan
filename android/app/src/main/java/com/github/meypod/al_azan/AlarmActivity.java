@@ -7,7 +7,6 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
-import com.facebook.react.modules.i18nmanager.I18nUtil;
 import io.invertase.notifee.NotifeeApiModule;
 
 public class AlarmActivity extends ReactActivity {
@@ -16,8 +15,6 @@ public class AlarmActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(null);
-        I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance();
-        sharedI18nUtilInstance.allowRTL(getApplicationContext(), true);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
