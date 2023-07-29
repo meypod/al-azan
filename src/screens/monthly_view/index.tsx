@@ -58,6 +58,7 @@ const TableCell = memo(function TableCell({
       noOfLines={1}
       pr="3"
       textAlign="left"
+      fontSize="xs"
       color={highlighted ? 'green.600' : 'darkText'}
       _dark={{color: highlighted ? 'green.400' : 'light.50'}}>
       {children}

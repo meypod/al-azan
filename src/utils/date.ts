@@ -137,31 +137,73 @@ function toEnglishDigits(s: string) {
   });
 }
 
-export function getMonthBeginning(date: Date, hijri?: boolean) {
-  let beginningOfMonth = new Date(date.valueOf());
-  const day = toEnglishDigits(
-    CreateIntlDateTimeFormatter(
-      'en-US-u-nu-latn-ca-' + hijri
-        ? SELECTED_ARABIC_CALENDAR
-        : SELECTED_SECONDARY_CALENDAR,
+export function getMonthDates(date: Date, hijri?: boolean) {
+  const dates = [];
+
+  if (hijri) {
+    // Hijri date is tricky
+    // have to get current representation of adjusted date, count days back to month's start,
+    // then count up to month's end
+    // while counting add the day to the original date as new date
+    // push the calculated dates
+
+    const hijriDayNumFormatter = CreateIntlDateTimeFormatter(
+      `en-US-u-ca-${SELECTED_ARABIC_CALENDAR}`,
       {
         day: 'numeric',
       },
-    ).format(date),
-  );
+    );
+
+    // toEnglishDigits is to be able to parse the number
+    // older androids don't respect the -nu-latn parameter even if added.
+
+    const adjustedHijriDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
+    // coutdown to 1
+    for (
+      let dateInHijriMonth = parseInt(
+          toEnglishDigits(hijriDayNumFormatter.format(adjustedHijriDate)),
+          10,
+        ),
+        j = 0;
+      dateInHijriMonth > 0;
+      dateInHijriMonth--, j++
+    ) {
+      dates.push(addDays(date, -j));
+    }
+
+    dates.reverse(); // so for example that dates are 1, 2, 3 instead of 3, 2, 1
+
+    // coutdown to end of the month, which can vary between 29,30 ? or maybe some other weird numbers.
+    // start from current date representation in hijri and increase it until
+    // the month changes
+    for (
+      let i = addDays(date, 1), j = 1;
+      getYearAndMonth(date, true) === getYearAndMonth(i, true);
+      j++, i = addDays(i, 1)
+    ) {
+      dates.push(i);
+    }
+    return dates;
+  }
+
+  // for secondary calendar, which does not do representation adjustment:
+
+  let beginningOfMonth = new Date(date.valueOf());
+
+  const day = CreateIntlDateTimeFormatter(
+    `en-US-u-ca-${SELECTED_SECONDARY_CALENDAR}`,
+    {
+      day: 'numeric',
+    },
+  ).format(date);
   const subtractAmount = parseInt(day, 10) - 1;
   beginningOfMonth.setDate(beginningOfMonth.getDate() - subtractAmount);
   while (getMonthName(beginningOfMonth, hijri) !== getMonthName(date, hijri)) {
     beginningOfMonth = new Date(beginningOfMonth.getTime() + 60 * 60 * 1000);
   }
-  return beginningOfMonth;
-}
-
-export function getMonthDates(date: Date, hijri?: boolean) {
   const ymOfOgDate = getYearAndMonth(date, hijri);
   // get first day in month:
-  let counterDate = new Date(getMonthBeginning(date, hijri));
-  const dates = [];
+  let counterDate = new Date(beginningOfMonth);
   // iter
   for (
     ;
