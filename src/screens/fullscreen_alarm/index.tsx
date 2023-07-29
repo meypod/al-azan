@@ -18,15 +18,18 @@ import {getTime} from '@/utils/date';
 import {usePrevious} from '@/utils/hooks/use_previous';
 
 let handlingFinish = false;
-
 async function audioFinished() {
   if (handlingFinish) return;
   handlingFinish = true;
-  if ((await getActivityName()) === 'AlarmActivity') {
-    return finishAndRemoveTask();
-  } else {
-    await stopAudio();
-    return replace('Home');
+  try {
+    if ((await getActivityName()) === 'AlarmActivity') {
+      return finishAndRemoveTask();
+    } else {
+      await stopAudio();
+      return replace('Home');
+    }
+  } finally {
+    handlingFinish = false;
   }
 }
 
