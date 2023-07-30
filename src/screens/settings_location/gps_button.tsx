@@ -20,7 +20,7 @@ export function GPSButton({onLocated}: GPSButtonProps) {
     setGettingLocation(true);
     LocationProvider.getCurrentPosition({
       enableHighAccuracy: true,
-      timeout: 15000,
+      timeout: 25000,
     })
       .then(loc => {
         onLocated({
