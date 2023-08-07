@@ -1,7 +1,5 @@
 package com.github.meypod.al_azan;
 
-import static com.github.meypod.al_azan.PrayerTimesWidget.requestWidgetUpdate;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +16,7 @@ public class VolumeChangeReceiver extends BroadcastReceiver {
             ContextHolder.setApplicationContext(context.getApplicationContext());
         }
 
-        ReactUtils.startHeadlessTask("volume_pressed",
+        ReactUtils.startHeadlessTask("volume_btn_pressed",
                 null,
                 30000,
                 null);

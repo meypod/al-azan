@@ -1,6 +1,9 @@
 import {defer} from '@xutl/defer';
 import SystemSetting from 'react-native-system-setting';
-import MediaPlayer, {AudioEntry} from '@/modules/media_player';
+import MediaPlayer, {
+  AudioEntry,
+  onVolumeBtnPressed,
+} from '@/modules/media_player';
 
 /** returns `true` if interrupted during play, `false` otherwise */
 export async function play({
@@ -37,18 +40,26 @@ export async function play({
     console.error('MediaPlayer Error: ', err);
     onFinally(true);
   });
-  const volumeListener = SystemSetting.addVolumeListener(data => {
+
+  async function handleVolumeChange(data: {value: number}) {
     if (volumeBtnInterrupts) {
-      stop();
+      await stop();
     } else {
-      MediaPlayer.setVolume(data.value);
+      await MediaPlayer.setVolume(data.value);
     }
-  });
+  }
+
+  const volumeListener = SystemSetting.addVolumeListener(handleVolumeChange);
+
+  if (volumeBtnInterrupts) {
+    onVolumeBtnPressed(stop);
+  }
 
   const removeListeners = () => {
     volumeListener.remove();
     endSub.remove();
     errorSub.remove();
+    onVolumeBtnPressed(undefined);
   };
 
   try {

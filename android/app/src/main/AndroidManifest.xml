@@ -58,17 +58,13 @@
       </intent-filter>
     </receiver>
 
-    <receiver
+    <service
       android:exported="false"
-      android:name=".VolumeChangeReceiver">
+      android:name=".modules.MediaPlayerService">
       <intent-filter>
         <action android:name="android.media.VOLUME_CHANGED_ACTION" /> 
       </intent-filter>
-    </receiver>
-
-    <service
-      android:exported="false"
-      android:name=".modules.MediaPlayerService" />
+    </service>
     <!-- for allowing app to start the foreground service -->
     <service android:name="app.notifee.core.ForegroundService" android:foregroundServiceType="mediaPlayback" />
   </application>

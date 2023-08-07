@@ -7,6 +7,7 @@ import static com.github.meypod.al_azan.utils.Utils.getIdFromRawResourceUri;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
@@ -34,6 +35,7 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.github.meypod.al_azan.ReactUtils;
+import com.github.meypod.al_azan.VolumeChangeReceiver;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -60,6 +62,12 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private TelephonyStateListener telephonyStateListener;
   private PhoneStateListener phoneStateListener;
   private int currentState = TelephonyManager.CALL_STATE_IDLE;
+
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    registerReceiver(new VolumeChangeReceiver(), new IntentFilter("android.media.VOLUME_CHANGED_ACTION"));
+  }
 
   @Nullable
   @Override

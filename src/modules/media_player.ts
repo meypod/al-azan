@@ -1,5 +1,11 @@
 import {useEffect, useState} from 'react';
-import {NativeModules, NativeEventEmitter, Image} from 'react-native';
+import {
+  NativeModules,
+  NativeEventEmitter,
+  Image,
+  Platform,
+  AppRegistry,
+} from 'react-native';
 
 const MediaPlayerModule = (
   NativeModules.MediaPlayerModule
@@ -112,6 +118,21 @@ export const usePlaybackState = () => {
   }, []);
 
   return state;
+};
+
+let volumePressHandler: (() => Promise<void>) | undefined;
+
+if (Platform.OS === 'android') {
+  AppRegistry.registerHeadlessTask('volume_btn_pressed', () => {
+    // silently ignore volume pressed if there's no handler
+    return () => {
+      return volumePressHandler ? volumePressHandler() : Promise.resolve();
+    };
+  });
+}
+
+export const onVolumeBtnPressed = (handler: typeof volumePressHandler) => {
+  volumePressHandler = handler;
 };
 
 export default {
