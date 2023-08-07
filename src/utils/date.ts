@@ -262,7 +262,7 @@ const persianMonthNames: Record<string, Record<string | number, string>> = {
   },
 };
 
-export function getFormattedDate(date: Date) {
+export function getFormattedDate(date: Date, weekday?: boolean) {
   if (
     Platform.OS === 'android' &&
     Platform.Version < 30 &&
@@ -299,6 +299,7 @@ export function getFormattedDate(date: Date) {
       month: 'long',
       year: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
+      weekday: weekday ? 'long' : undefined,
     }).format(date);
   }
 }

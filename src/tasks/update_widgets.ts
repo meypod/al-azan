@@ -80,7 +80,7 @@ export async function updateWidgets() {
     prayers.reverse();
   }
 
-  const secondaryDate = getFormattedDate(now);
+  const secondaryDate = getFormattedDate(now, true);
   const hijriDate = getArabicDate(now);
 
   if (settings.getState().SHOW_WIDGET) {
