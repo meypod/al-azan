@@ -22,7 +22,7 @@ async function audioFinished() {
   if (handlingFinish) return;
   handlingFinish = true;
   try {
-    if ((await getActivityName()) === 'AlarmActivity') {
+    if ((await getActivityName()).includes('AlarmActivity')) {
       return finishAndRemoveTask();
     } else {
       await stopAudio();
