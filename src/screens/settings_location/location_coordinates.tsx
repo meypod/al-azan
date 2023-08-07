@@ -12,7 +12,7 @@ import {
 } from 'native-base';
 import {memo, useCallback} from 'react';
 import {ToastAndroid} from 'react-native';
-import NumericInput from '@/components/numeric_input';
+import {NumericInput} from '@/components/numeric_input';
 import {LocationDetail} from '@/store/calculation';
 
 const clipboardCoordsRegex = /\s*([-\d.]+)[\s°NS]*[,| ]{1}\s*([-\d.]+)[\s°EW]*/;

@@ -14,7 +14,7 @@ import {translateCommonIds} from './counter_view';
 import {PrayersInOrder, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {DeleteIcon} from '@/assets/icons/material_icons/delete';
-import NumericInput from '@/components/numeric_input';
+import {NumericInput} from '@/components/numeric_input';
 import {Counter} from '@/store/counter';
 import {showDeleteDialog} from '@/utils/dialogs';
 

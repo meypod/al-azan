@@ -2,7 +2,7 @@ import {IInputProps, Input} from 'native-base';
 import {memo, useCallback, useEffect, useState} from 'react';
 import {NativeSyntheticEvent, TextInputEndEditingEventData} from 'react-native';
 
-function NumericInput(
+export const NumericInput = memo(function NumericInput(
   props: Omit<IInputProps, 'value' | 'onChange' | 'onChangeText'> & {
     value: number | string | undefined;
     onChange: (num: number) => void;
@@ -82,6 +82,6 @@ function NumericInput(
       />
     );
   }
-}
+});
 
-export default memo(NumericInput);
+export default NumericInput;
