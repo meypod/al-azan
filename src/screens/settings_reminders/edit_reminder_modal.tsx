@@ -10,16 +10,17 @@ import {
   Input,
   Switch,
 } from 'native-base';
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {Modal} from 'react-native';
 import {Prayer, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {AudioPicker} from '@/components/audio_picker';
+import {NumericInput} from '@/components/numeric_input';
 import type {AudioEntry} from '@/modules/media_player';
 import {Reminder} from '@/store/reminder';
 
-const minute = 60 * 1000;
-const defaultDuration = 5 * minute;
+const minuteMs = 60 * 1000;
+const predefinedMinutes = [5, 10, 15, 30, 60, 90];
 
 export type EditReminderModalProps = {
   reminderState: Partial<Reminder> | null;
@@ -54,7 +55,7 @@ export function EditReminderModal({
         ...reminderState,
         id: eMode ? reminderState.id : 'reminder_' + Date.now().toString(),
         enabled: true,
-        duration: reminderState?.duration || defaultDuration,
+        duration: reminderState?.duration || predefinedMinutes[0] * minuteMs,
         durationModifier: reminderState?.durationModifier || -1,
         prayer: reminderState?.prayer || Prayer.Fajr,
       });
@@ -67,6 +68,27 @@ export function EditReminderModal({
     onConfirm(draftReminderState as Reminder);
     setDraftReminderState(null);
   }, [draftReminderState, onConfirm]);
+
+  const onReminderTimeChanged = useCallback(
+    (minutes: string | number) => {
+      setDraftReminderState({
+        ...draftReminderState,
+        duration: parseInt(minutes as string, 10) * minuteMs,
+      });
+    },
+    [draftReminderState],
+  );
+
+  const durationInMinutes = useMemo(
+    () =>
+      draftReminderState?.duration ? draftReminderState.duration / minuteMs : 0,
+    [draftReminderState?.duration],
+  );
+
+  const durationIsPredefined = useMemo(
+    () => predefinedMinutes.includes(durationInMinutes),
+    [durationInMinutes],
+  );
 
   return (
     <Modal
@@ -117,43 +139,57 @@ export function EditReminderModal({
               <FormControl.Label>{t`Time`}:</FormControl.Label>
               <VStack>
                 <HStack minH={12}>
-                  <Select
-                    accessibilityLabel={t`Time list`}
-                    borderRadius={0}
-                    borderTopLeftRadius={'sm'}
-                    flex={1}
-                    selectedValue={draftReminderState?.duration?.toString()}
-                    onValueChange={d =>
-                      setDraftReminderState({
-                        ...draftReminderState,
-                        duration: parseInt(d, 10),
-                      })
-                    }>
-                    <Select.Item
-                      label={t`5 min`}
-                      value={defaultDuration.toString()}
-                    />
-                    <Select.Item
-                      label={t`10 min`}
-                      value={(10 * minute).toString()}
-                    />
-                    <Select.Item
-                      label={t`15 min`}
-                      value={(15 * minute).toString()}
-                    />
-                    <Select.Item
-                      label={t`30 min`}
-                      value={(30 * minute).toString()}
-                    />
-                    <Select.Item
-                      label={t`60 min`}
-                      value={(60 * minute).toString()}
-                    />
-                    <Select.Item
-                      label={t`90 min`}
-                      value={(90 * minute).toString()}
-                    />
-                  </Select>
+                  {durationIsPredefined ? (
+                    <Select
+                      accessibilityLabel={t`Time list`}
+                      borderRadius={0}
+                      borderTopLeftRadius={'sm'}
+                      flex={1}
+                      selectedValue={durationInMinutes.toString()}
+                      onValueChange={onReminderTimeChanged}>
+                      <Select.Item
+                        label={t`5 min`}
+                        value={predefinedMinutes[0].toString()}
+                      />
+                      <Select.Item
+                        label={t`10 min`}
+                        value={predefinedMinutes[1].toString()}
+                      />
+                      <Select.Item
+                        label={t`15 min`}
+                        value={predefinedMinutes[2].toString()}
+                      />
+                      <Select.Item
+                        label={t`30 min`}
+                        value={predefinedMinutes[3].toString()}
+                      />
+                      <Select.Item
+                        label={t`60 min`}
+                        value={predefinedMinutes[4].toString()}
+                      />
+                      <Select.Item
+                        label={t`90 min`}
+                        value={predefinedMinutes[5].toString()}
+                      />
+                      <Select.Item label={t`Custom`} value={(1).toString()} />
+                    </Select>
+                  ) : (
+                    <Stack
+                      flexDirection="row"
+                      alignItems="center"
+                      justifyContent="center"
+                      flex={1}>
+                      <NumericInput
+                        flex={1}
+                        flexShrink={1}
+                        int
+                        strict
+                        value={durationInMinutes}
+                        onChange={onReminderTimeChanged}
+                      />
+                      <Text flexShrink={0} px="1">{t`minutes`}</Text>
+                    </Stack>
+                  )}
                   <Select
                     accessibilityLabel={t`Time condition`}
                     borderRadius={0}
