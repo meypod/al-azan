@@ -429,7 +429,6 @@ export function getArabicDate(date: Date) {
       day: '2-digit',
       month: 'long',
       year: 'numeric',
-      weekday: 'long',
     },
   ).format(adjustedDate);
 }
