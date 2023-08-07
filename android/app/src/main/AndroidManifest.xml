@@ -58,6 +58,14 @@
       </intent-filter>
     </receiver>
 
+    <receiver
+      android:exported="false"
+      android:name=".VolumeChangeReceiver">
+      <intent-filter>
+        <action android:name="android.media.VOLUME_CHANGED_ACTION" /> 
+      </intent-filter>
+    </receiver>
+
     <service
       android:exported="false"
       android:name=".modules.MediaPlayerService" />
