@@ -1,8 +1,6 @@
 import {Text} from 'native-base';
 import {PropsWithChildren} from 'react';
 
-export default IntroItem;
-
 export function IntroItem({
   item,
 }: {
