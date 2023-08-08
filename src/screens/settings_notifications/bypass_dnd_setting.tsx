@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import {HStack, FormControl, IStackProps, Switch, Text} from 'native-base';
 import {useCallback} from 'react';
 import {useSettings} from '@/store/settings';
-import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
+import {useNoInitialEffect} from '@/utils/hooks/use_no_initial_effect';
 import {askPermissions} from '@/utils/permission';
 
 export function BypassDnDSetting(props: IStackProps) {

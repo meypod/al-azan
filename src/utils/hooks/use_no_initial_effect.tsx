@@ -7,7 +7,7 @@ import {useRef, EffectCallback, DependencyList, useEffect} from 'react';
  * @param dependencies
  *
  */
-export default function useNoInitialEffect(
+export function useNoInitialEffect(
   effect: EffectCallback,
   dependencies?: DependencyList,
 ) {

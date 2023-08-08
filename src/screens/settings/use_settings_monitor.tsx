@@ -7,7 +7,7 @@ import {settings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {updateWidgets} from '@/tasks/update_widgets';
-import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
+import {useNoInitialEffect} from '@/utils/hooks/use_no_initial_effect';
 
 export function useSettingsMonitor() {
   const calcSettingsHash = useCalcSettingsMonitor();

@@ -13,7 +13,7 @@ import {FavoriteLocations} from './screens/favorite_locations';
 import {MonthlyView} from './screens/monthly_view';
 import {CalculationAdjustmentsSettings} from './screens/settings_calculation_adjustments';
 import {CalculationAdvancedSettings} from './screens/settings_calculation_advanced';
-import useNoInitialEffect from './utils/hooks/use_no_initial_effect';
+import {useNoInitialEffect} from './utils/hooks/use_no_initial_effect';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';

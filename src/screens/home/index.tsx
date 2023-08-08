@@ -22,7 +22,7 @@ import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
 
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
-import useNoInitialEffect from '@/utils/hooks/use_no_initial_effect';
+import {useNoInitialEffect} from '@/utils/hooks/use_no_initial_effect';
 import {askPermissions} from '@/utils/permission';
 
 type DayDetails = {
