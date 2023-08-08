@@ -13,6 +13,7 @@ import {FavoriteLocations} from './screens/favorite_locations';
 import {MonthlyView} from './screens/monthly_view';
 import {CalculationAdjustmentsSettings} from './screens/settings_calculation_adjustments';
 import {CalculationAdvancedSettings} from './screens/settings_calculation_advanced';
+import {NotificationAdvancedSettings} from './screens/settings_notifications_advanced';
 import {useNoInitialEffect} from './utils/hooks/use_no_initial_effect';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
@@ -207,6 +208,11 @@ export function App(): JSX.Element {
           <Stack.Screen
             name="NotificationSettings"
             component={NotificationsSettings}
+          />
+          <Stack.Screen
+            name="NotificationAdvancedSettings"
+            component={NotificationAdvancedSettings}
+            options={{presentation: 'modal'}}
           />
           <Stack.Screen
             name="AdhanSettings"

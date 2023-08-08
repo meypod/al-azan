@@ -10,6 +10,7 @@ export type RootStackParamList = {
   DisplaySettings: undefined;
   LocationSettings: undefined;
   NotificationSettings: undefined;
+  NotificationAdvancedSettings: undefined;
   AdhanSettings: undefined;
   CalculationSettings: undefined;
   CalculationAdjustmentsSettings: undefined;
@@ -69,6 +70,11 @@ const routeTranslations = {
   NotificationSettings: defineMessage({
     id: 'notification_settings',
     message: 'Notification & Sound',
+    comment: 'screen title',
+  }),
+  NotificationAdvancedSettings: defineMessage({
+    id: 'notification_advanced_settings',
+    message: 'Advanced Settings',
     comment: 'screen title',
   }),
   AdhanSettings: defineMessage({
