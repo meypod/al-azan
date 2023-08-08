@@ -1,5 +1,5 @@
-import {NotificationSettings} from '@/screens/settings_notifications';
+import {NotificationsSettings} from '@/screens/settings_notifications';
 
 export function NotificationAndSoundSlide() {
-  return <NotificationSettings />;
+  return <NotificationsSettings />;
 }

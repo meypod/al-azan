@@ -40,7 +40,7 @@ import {DevSettings} from '@/screens/settings_dev';
 import {DisplaySettings} from '@/screens/settings_display';
 import {FixCommonProblemsSettings} from '@/screens/settings_fix_common_problems';
 import {LocationSettings} from '@/screens/settings_location';
-import {NotificationSettings} from '@/screens/settings_notifications';
+import {NotificationsSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {settings, useSettings} from '@/store/settings';
@@ -206,7 +206,7 @@ export function App(): JSX.Element {
           <Stack.Screen name="LocationSettings" component={LocationSettings} />
           <Stack.Screen
             name="NotificationSettings"
-            component={NotificationSettings}
+            component={NotificationsSettings}
           />
           <Stack.Screen
             name="AdhanSettings"

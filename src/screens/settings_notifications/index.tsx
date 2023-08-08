@@ -19,7 +19,7 @@ import {Prayer, PrayersInOrder} from '@/adhan';
 import {SafeArea} from '@/components/safe_area';
 import {NotificationSetting} from '@/screens/settings_notifications/notification_setting';
 
-export function NotificationSettings(props: IScrollViewProps) {
+export function NotificationsSettings(props: IScrollViewProps) {
   const [expandedPrayer, setExpandedPrayer] = useState<Prayer | undefined>();
 
   const onExpandChanged = useCallback(
