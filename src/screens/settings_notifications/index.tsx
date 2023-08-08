@@ -5,18 +5,15 @@ import {
   InfoIcon,
   HStack,
   Text,
+  Button,
 } from 'native-base';
 import {useCallback, useState} from 'react';
 import {BypassDnDSetting} from './bypass_dnd_setting';
-import {CustomUpcomingTimeSetting} from './custom_upcoming_time_setting';
 import {DontNotifyUpcomingSetting} from './dont_notify_upcoming_setting';
-import {DontTurnOnScreenSetting} from './dont_turn_on_screen';
-import {NotifyNextAdhanSetting} from './notify_next_adhan_setting';
-import {PreferHeadphoneSetting} from './prefer_headphone_setting';
 import {VibrationSetting} from './vibration_setting';
-import {VolumeButtonSetting} from './volume_button_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {SafeArea} from '@/components/safe_area';
+import {push} from '@/navigation/root_navigation';
 import {NotificationSetting} from '@/screens/settings_notifications/notification_setting';
 
 export function NotificationSettings(props: IScrollViewProps) {
@@ -32,6 +29,10 @@ export function NotificationSettings(props: IScrollViewProps) {
     },
     [setExpandedPrayer],
   );
+
+  const goToAdvancedSettings = useCallback(() => {
+    push('NotificationAdvancedSettings');
+  }, []);
 
   return (
     <SafeArea>
@@ -69,14 +70,14 @@ export function NotificationSettings(props: IScrollViewProps) {
             {t`Tahajjud time mentioned in the app is the last third of the night`}
           </Text>
         </HStack>
-        <NotifyNextAdhanSetting mb="6" />
+
         <DontNotifyUpcomingSetting mb="6" />
-        <PreferHeadphoneSetting mb="4" />
-        <VolumeButtonSetting mb="8" />
         <BypassDnDSetting mb="8" />
         <VibrationSetting mb="8" />
-        <DontTurnOnScreenSetting mb="8" />
-        <CustomUpcomingTimeSetting mb="8" />
+
+        <Button
+          mb="5"
+          onPress={goToAdvancedSettings}>{t`Advanced Settings`}</Button>
       </ScrollView>
     </SafeArea>
   );
