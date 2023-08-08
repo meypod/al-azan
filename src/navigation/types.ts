@@ -2,6 +2,7 @@ import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
 export type RootStackParamList = {
+  Intro: undefined;
   Home: undefined;
   Settings: undefined;
   FullscreenAlarm: {options: string};
@@ -33,6 +34,10 @@ declare global {
 }
 
 const routeTranslations = {
+  Intro: defineMessage({
+    id: 'intro',
+    message: '',
+  }),
   Home: defineMessage({
     id: 'home',
     message: 'Home',

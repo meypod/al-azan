@@ -13,6 +13,7 @@ import {FavoriteLocations} from './screens/favorite_locations';
 import {MonthlyView} from './screens/monthly_view';
 import {CalculationAdjustmentsSettings} from './screens/settings_calculation_adjustments';
 import {CalculationAdvancedSettings} from './screens/settings_calculation_advanced';
+import useNoInitialEffect from './utils/hooks/use_no_initial_effect';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
@@ -133,9 +134,16 @@ export function App(): JSX.Element {
     }
   }, [appIntroDone]);
 
-  if (!appIntroDone) {
-    return <Intro></Intro>;
-  }
+  useNoInitialEffect(() => {
+    if (appIntroDone) {
+      replace('Home');
+    }
+  }, [appIntroDone]);
+
+  const initialRouteName = useMemo(
+    () => (appIntroDone ? 'Home' : 'Intro'),
+    [appIntroDone],
+  );
 
   return (
     <NavigationContainer
@@ -147,11 +155,18 @@ export function App(): JSX.Element {
           headerTitle: TranslatedHeaderTitle,
           animation: 'fade',
         }}
-        initialRouteName="Home">
+        initialRouteName={initialRouteName}>
         <Stack.Group screenOptions={{headerShown: false}}>
           <Stack.Screen
             name="Home"
             component={Home}
+            options={{animation: 'none'}}
+          />
+        </Stack.Group>
+        <Stack.Group screenOptions={{headerShown: false}}>
+          <Stack.Screen
+            name="Intro"
+            component={Intro}
             options={{animation: 'none'}}
           />
         </Stack.Group>
