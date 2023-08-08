@@ -168,7 +168,11 @@ export function App(): JSX.Element {
             component={QadaCounter}
             options={{headerRight: QadaCounterHeaderRight}}
           />
-          <Stack.Screen name="QiblaFinder" component={QiblaFinder} />
+          <Stack.Screen
+            name="QiblaFinder"
+            component={QiblaFinder}
+            options={{presentation: 'modal'}}
+          />
           <Stack.Screen
             name="QiblaMap"
             component={QiblaMap}
