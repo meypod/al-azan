@@ -11,6 +11,8 @@ export type RootStackParamList = {
   NotificationSettings: undefined;
   AdhanSettings: undefined;
   CalculationSettings: undefined;
+  CalculationAdjustmentsSettings: undefined;
+  CalculationAdvancedSettings: undefined;
   FixCommonProblemsSettings: undefined;
   WidgetSettings: undefined;
   RemindersSettings: undefined;
@@ -72,6 +74,16 @@ const routeTranslations = {
   CalculationSettings: defineMessage({
     id: 'calculation_settings',
     message: 'Calculation',
+    comment: 'screen title',
+  }),
+  CalculationAdjustmentsSettings: defineMessage({
+    id: 'calculation_adjustments_settings',
+    message: 'Adjustments',
+    comment: 'screen title',
+  }),
+  CalculationAdvancedSettings: defineMessage({
+    id: 'calculation_advanced_settings',
+    message: 'Advanced Calculation Settings',
     comment: 'screen title',
   }),
   FixCommonProblemsSettings: defineMessage({

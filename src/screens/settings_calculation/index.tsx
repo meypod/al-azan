@@ -1,18 +1,11 @@
 import {t} from '@lingui/macro';
+
 import {
-  PolarCircleResolution,
-  HighLatitudeRule,
-  Madhab,
-  Shafaq,
-  MidnightMethod,
-} from 'adhan-extended';
-import {
-  Select,
   FormControl,
-  Accordion,
   ScrollView,
   IScrollViewProps,
   Text,
+  Button,
 } from 'native-base';
 import {useCallback, useMemo} from 'react';
 import {useStore} from 'zustand';
@@ -20,10 +13,10 @@ import {CalcParamsBox} from './calc_params_box';
 import {CalendarSettings} from './calendar_settings';
 import {CalculationMethods} from '@/adhan';
 import {CalculationMethodEntry} from '@/adhan/calculation_methods';
-import {MenuIcon} from '@/assets/icons/material_icons/menu';
 import {AutocompleteInput} from '@/components/AutocompleteInput';
 import {SafeArea} from '@/components/safe_area';
-import {AdjustmentSettings} from '@/screens/settings_calculation/adjustment_settings';
+
+import {push} from '@/navigation/root_navigation';
 import {calcSettings, useCalcSettings} from '@/store/calculation';
 
 export function CalculationSettings(props: IScrollViewProps) {
@@ -45,20 +38,6 @@ export function CalculationSettings(props: IScrollViewProps) {
     },
     [isMethodModified],
   );
-
-  const [highLatitudeRuleSetting, setHighLatitudeRuleSetting] =
-    useCalcSettings('HIGH_LATITUDE_RULE');
-
-  const [asrCalculationSetting, setAsrCalculationSetting] =
-    useCalcSettings('ASR_CALCULATION');
-
-  const [polarResolutionSetting, setPolarResolutionSetting] =
-    useCalcSettings('POLAR_RESOLUTION');
-
-  const [shafaqSetting, setShafaqSetting] = useCalcSettings('SHAFAQ');
-
-  const [midnightMethod, setMidnightMethod] =
-    useCalcSettings('MIDNIGHT_METHOD');
 
   const calculationMethodChanged = useCallback(
     (itemValue: CalculationMethodEntry) => {
@@ -99,6 +78,14 @@ export function CalculationSettings(props: IScrollViewProps) {
     [],
   );
 
+  const goToAdjustments = useCallback(() => {
+    push('CalculationAdjustmentsSettings');
+  }, []);
+
+  const goToAdvancedSettings = useCallback(() => {
+    push('CalculationAdvancedSettings');
+  }, []);
+
   return (
     <SafeArea>
       <ScrollView
@@ -129,130 +116,14 @@ export function CalculationSettings(props: IScrollViewProps) {
           <CalcParamsBox />
         </FormControl>
         <CalendarSettings mb="7" />
-        <Accordion mb="5" borderRadius={0}>
-          <Accordion.Item>
-            <Accordion.Summary>
-              {t`Adjustments`}
-              <MenuIcon></MenuIcon>
-            </Accordion.Summary>
-            <Accordion.Details>
-              <AdjustmentSettings />
-            </Accordion.Details>
-          </Accordion.Item>
-        </Accordion>
-        <Accordion mb="5" borderRadius={0}>
-          <Accordion.Item>
-            <Accordion.Summary>
-              {t`Advanced Calculation Settings`}
-              <MenuIcon></MenuIcon>
-            </Accordion.Summary>
-            <Accordion.Details>
-              <FormControl mb="3">
-                <FormControl.Label m="0">
-                  {t`Midnight Method`}:
-                </FormControl.Label>
-                <Select
-                  accessibilityLabel={t`Choose midnight calculation method`}
-                  selectedValue={midnightMethod || MidnightMethod.Standard}
-                  onValueChange={setMidnightMethod as (str: string) => void}
-                  flex="1">
-                  <Select.Item
-                    label={t`Default (Mid Sunset to Sunrise)`}
-                    value={MidnightMethod.Standard}
-                  />
-                  <Select.Item
-                    label={t`Jafari (Mid Sunset to Fajr)`}
-                    value={MidnightMethod.Jafari}
-                  />
-                </Select>
-              </FormControl>
-              <FormControl mb="3">
-                <FormControl.Label m="0">{t`High Latitude`}:</FormControl.Label>
-                <Select
-                  accessibilityLabel={t`Choose High Latitude Setting`}
-                  selectedValue={highLatitudeRuleSetting || 'none'}
-                  onValueChange={setHighLatitudeRuleSetting}
-                  flex="1">
-                  <Select.Item label={t`None (Automatic)`} value="none" />
-                  <Select.Item
-                    label={t`Middle of the Night`}
-                    value={HighLatitudeRule.MiddleOfTheNight}
-                  />
-                  <Select.Item
-                    label={t`One-Seventh of the Night`}
-                    value={HighLatitudeRule.SeventhOfTheNight}
-                  />
-                  <Select.Item
-                    label={t`Twilight Angle`}
-                    value={HighLatitudeRule.TwilightAngle}
-                  />
-                </Select>
-              </FormControl>
-              <FormControl mb="3">
-                <FormControl.Label m="0">
-                  {t`Asr Calculation`}:
-                </FormControl.Label>
-                <Select
-                  accessibilityLabel={t`Choose Asr Calculation Madhab`}
-                  selectedValue={asrCalculationSetting || Madhab.Shafi}
-                  onValueChange={setAsrCalculationSetting}
-                  flex="1">
-                  <Select.Item
-                    label={t`Shafi, Maliki, Hanbali (Default)`}
-                    value={Madhab.Shafi}
-                  />
-                  <Select.Item label={t`Hanafi`} value={Madhab.Hanafi} />
-                </Select>
-              </FormControl>
-              <FormControl mb="3">
-                <FormControl.Label m="0">
-                  {t`Polar Resolution`}:
-                </FormControl.Label>
-                <Select
-                  accessibilityLabel={t`Choose Polar Resolution`}
-                  onValueChange={setPolarResolutionSetting}
-                  selectedValue={
-                    polarResolutionSetting || PolarCircleResolution.Unresolved
-                  }
-                  flex="1">
-                  <Select.Item
-                    label={t`Unresolved (default)`}
-                    value={PolarCircleResolution.Unresolved}
-                  />
-                  <Select.Item
-                    label={t`Closest City`}
-                    value={PolarCircleResolution.AqrabBalad}
-                  />
-                  <Select.Item
-                    label={t`Closest Date`}
-                    value={PolarCircleResolution.AqrabYaum}
-                  />
-                </Select>
-              </FormControl>
-              <FormControl mb="3">
-                <FormControl.Label m="0">{t`Shafaq`}:</FormControl.Label>
-                <FormControl.HelperText my="0">
-                  {t`Shafaq is used by the MoonsightingCommittee method to 
-              determine what type of twilight to use in order to
-              determine the time for Isha`}
-                </FormControl.HelperText>
-                <Select
-                  mt="1"
-                  accessibilityLabel={t`Choose Shafaq method`}
-                  onValueChange={setShafaqSetting}
-                  selectedValue={shafaqSetting || Shafaq.General}
-                  flex="1">
-                  <Select.Item
-                    label={t`General (default)`}
-                    value={Shafaq.General}
-                  />
-                  <Select.Item label={t`Ahmer`} value={Shafaq.Ahmer} />
-                  <Select.Item label={t`Abyad`} value={Shafaq.Abyad} />
-                </Select>
-              </FormControl>
-            </Accordion.Details>
-          </Accordion.Item>
-        </Accordion>
+
+        <Button mb="5" onPress={goToAdjustments}>{t`Adjustments`}</Button>
+
+        <Button
+          mb="5"
+          onPress={
+            goToAdvancedSettings
+          }>{t`Advanced Calculation Settings`}</Button>
       </ScrollView>
     </SafeArea>
   );

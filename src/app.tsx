@@ -11,6 +11,8 @@ import {useStore} from 'zustand';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {FavoriteLocations} from './screens/favorite_locations';
 import {MonthlyView} from './screens/monthly_view';
+import {CalculationAdjustmentsSettings} from './screens/settings_calculation_adjustments';
+import {CalculationAdvancedSettings} from './screens/settings_calculation_advanced';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
@@ -199,6 +201,16 @@ export function App(): JSX.Element {
           <Stack.Screen
             name="CalculationSettings"
             component={CalculationSettings}
+          />
+          <Stack.Screen
+            name="CalculationAdjustmentsSettings"
+            component={CalculationAdjustmentsSettings}
+            options={{presentation: 'modal'}}
+          />
+          <Stack.Screen
+            name="CalculationAdvancedSettings"
+            component={CalculationAdvancedSettings}
+            options={{presentation: 'modal'}}
           />
           <Stack.Screen
             name="FixCommonProblemsSettings"
