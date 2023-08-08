@@ -8,7 +8,7 @@ Funkcije aplikacije:
 
 * Otvorenog izvora
 
-* Možete tražiti svoju lokaciju van mreže ili koristiti GPS
+* Možete naći svoju lokaciju bez interneta ili koristeći GPS
 
 * Postavite prilagođeni zvuk za Ezan
 
@@ -35,5 +35,5 @@ Funkcije aplikacije:
 Otvoreno spremište:
 https://github.com/meypod/al-azan
 
-Budući da ne koristimo nikakvu vrstu tragača ili analitiku rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repo:
+Budući da ne koristimo nikakvu vrstu tragača ili analitike rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repozitoruju:
 https://github.com/meypod/al-azan/issues

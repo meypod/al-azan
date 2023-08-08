@@ -1,43 +1,43 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-29 16:26+0330\n"
+"POT-Creation-Date: 2023-08-08 05:37+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: bs\n"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:137
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
 msgid "10 min"
 msgstr "10 min"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:159
 msgid "15 min"
 msgstr "15 min"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:145
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:163
 msgid "30 min"
 msgstr "Pola Sata"
 
-#: src/screens/settings_calculation/index.tsx:124
+#: src/screens/settings_calculation/index.tsx:111
 msgid "30 minutes is added to Isha time during Ramadan in this method"
-msgstr "30 minuta se dodaje na Isha vrijeme tokom Ramazana u ovoj metodi"
+msgstr "30 minuta se dodaje na Jaciju tokom Ramazana u ovoj metodi"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:151
 msgid "5 min"
 msgstr "5 min"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:149
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:167
 msgid "60 min"
 msgstr "Sat Vremena"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
 msgid "90 min"
 msgstr "Sat i Po"
 
@@ -45,7 +45,7 @@ msgstr "Sat i Po"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Ezan"
 
-#: src/screens/settings_calculation/index.tsx:250
+#: src/screens/settings_calculation_advanced/index.tsx:122
 msgid "Abyad"
 msgstr "Ebdžed"
 
@@ -60,7 +60,7 @@ msgstr "Bez oglasa"
 
 #: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:15
 msgid "Adaptive Charging"
-msgstr "Adaptivno punjenje"
+msgstr "Adaptivno Punjenje"
 
 #: src/components/audio_picker.tsx:407
 #: src/components/new_audio_dialog.tsx:60
@@ -75,7 +75,7 @@ msgstr "Dodajte Prilagođeni Ezan"
 
 #: src/components/new_audio_dialog.tsx:40
 msgid "Add Custom Audio"
-msgstr "Dodajte prilagođeni audio"
+msgstr "Dodajte Prilagođeni Audio"
 
 #: src/screens/settings_reminders/index.tsx:80
 msgid "Add Reminder"
@@ -83,7 +83,7 @@ msgstr "Dodajte Podsjetnik"
 
 #: src/screens/qada_counter/index.tsx:87
 msgid "Add new counter"
-msgstr "Dodaj novi brojač"
+msgstr "Dodajte novi brojač"
 
 #: src/screens/favorite_locations/index.tsx:119
 msgid "Add new location"
@@ -97,7 +97,7 @@ msgstr "Ezan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Zvučni snimak za Ezan još nije skinut"
 
-#: src/screens/settings_calculation/index.tsx:135
+#: src/screens/settings_calculation/index.tsx:120
 msgid "Adjustments"
 msgstr "Prilagođenja"
 
@@ -106,11 +106,15 @@ msgstr "Prilagođenja"
 msgid "Advanced"
 msgstr "Napredno"
 
-#: src/screens/settings_calculation/index.tsx:146
+#: src/screens/settings_calculation/index.tsx:126
 msgid "Advanced Calculation Settings"
 msgstr "Napredne Postavke Kalkulacije"
 
-#: src/screens/settings_calculation/index.tsx:249
+#: src/screens/settings_notifications/index.tsx:80
+msgid "Advanced Settings"
+msgstr "Napredne postavke"
+
+#: src/screens/settings_calculation_advanced/index.tsx:121
 msgid "Ahmer"
 msgstr "Amar"
 
@@ -127,11 +131,11 @@ msgstr "Al-Azan - Vremena Molitve"
 
 #: website/src/_includes/privacy-policy.tsx:61
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
-msgstr "Al-Azan se distribuira u nadi da će biti koristan, ali BEZ IKAKVE GARANCIJE; čak i bez implicitne garancije o PRODAJNOSTI ili PRIKLADNOSTI ZA ODREĐENU NAMJENU. Za više detalja pogledajte GNU Affero General Public License."
+msgstr "Al-Azan je distribuiran u nadi da će biti koristan, ali BEZ IKAKVE GARANCIJE; čak i bez implicitne garancije o PRODAJNOSTI ili PRIKLADNOSTI ZA ODREĐENU NAMJENU. Za više detalja pogledajte GNU Affero Opću Javnu Dozvolu."
 
 #: website/src/_includes/privacy-policy.tsx:56
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
-msgstr "Al-Azan je slobodan softver: možete ga redistribuirati i/ili modificirati pod uslovima GNU Affero Opće javne licence (v3.0) koju je objavila Fondacija za slobodni softver."
+msgstr "Al-Azan je besplatan program: možete ga preraspodjeliti i(li) izmjeniti pod uslovima GNU Affero Opće Javne Dozvole (v3.0) koju je objavila Osnova za Slobodni Softver."
 
 #: src/utils/permission.ts:169
 msgid "Alarms Permission"
@@ -139,7 +143,7 @@ msgstr "Dozvole za Alarm"
 
 #: website/src/_includes/privacy-policy.tsx:39
 msgid "All data provided to Al-Azan is only stored locally in your device. Your data is not uploaded anywhere. The developers of Al-Azan do not have access to it. Your data is not shared with any third parties. Al-Azan does not include any advertisement libraries or any 3rd party tracking (analytics) code, such as Google Analytics or Facebook SDK."
-msgstr "Svi podaci dostavljeni Al-Azanu pohranjuju se samo lokalno na vašem uređaju. Vaši podaci se nigdje ne učitavaju. Programeri Al-Azana nemaju pristup njemu. Vaši podaci se ne dijele s trećim licima. Al-Azan ne uključuje biblioteke oglasa ili bilo koji kod za praćenje (analitički) treće strane, kao što je Google Analytics ili Facebook SDK."
+msgstr "Svi podaci dostavljeni Al-Azanu pohranjuju se samo lokalno na vašem uređaju. Vaši podaci se nigdje ne učitavaju. Programeri Al-Azana nemaju pristup njemu. Vaši podaci se ne dijele s trećim licima. Al-Azan ne uključuje biblioteke oglasa ili bilo koji kod za praćenje (analitički) treće strane, kao što su Google Analitike ili Facebook SRP."
 
 #: src/screens/settings_adhan/index.tsx:77
 msgid "An error occured while playing the current track"
@@ -162,7 +166,7 @@ msgstr "Jeste li sigurni da želite izbrisati \"{itemName}\" ?"
 msgid "Are you sure you want to delete this?"
 msgstr "Jeste li sigurni da želite ovo izbrisati?"
 
-#: src/screens/settings_calculation/index.tsx:193
+#: src/screens/settings_calculation_advanced/index.tsx:71
 msgid "Asr Calculation"
 msgstr "Kalkulacija Ikindije"
 
@@ -180,9 +184,9 @@ msgstr "Pažnja"
 
 #: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
 msgid "Bypass \"Do Not Disturb\"?"
-msgstr "Zaobići \"Ne ometaj\"?"
+msgstr "Zaobiđite \"Ne smjetaj\" napomenu?"
 
-#: src/screens/settings_calculation/index.tsx:109
+#: src/screens/settings_calculation/index.tsx:96
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Kalkulacija Ezana ima mnogo različitih metoda. Svaka metoda daje različite rezultate. Vaša je odgovornost da nađete i iskoristite pravu metodu."
 
@@ -190,8 +194,8 @@ msgstr "Kalkulacija Ezana ima mnogo različitih metoda. Svaka metoda daje razli�
 msgid "Calculation"
 msgstr "Kalkulacija"
 
-#: src/screens/settings_calculation/index.tsx:111
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:98
+#: src/screens/settings_calculation/index.tsx:100
 msgid "Calculation Method"
 msgstr "Metoda Kalkulacije"
 
@@ -205,8 +209,8 @@ msgstr "Kalendar"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:101
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:286
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "Otkažite"
@@ -215,16 +219,16 @@ msgstr "Otkažite"
 msgid "Cancel download"
 msgstr "Otkažite preuzimanje"
 
-#: src/screens/settings_calculation/index.tsx:196
+#: src/screens/settings_calculation_advanced/index.tsx:73
 msgid "Choose Asr Calculation Madhab"
 msgstr "Odaberite Mezheb Kalkulaciju Ikindije"
 
-#: src/screens/settings_calculation/index.tsx:114
+#: src/screens/settings_calculation/index.tsx:101
 #: src/screens/settings_notifications/vibration_setting.tsx:25
 msgid "Choose Calculation Method"
 msgstr "Odaberite Metodu Kalkulacije"
 
-#: src/screens/settings_calculation/index.tsx:172
+#: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose High Latitude Setting"
 msgstr "Odaberite Postavku Velike Geografske Širine"
 
@@ -232,11 +236,11 @@ msgstr "Odaberite Postavku Velike Geografske Širine"
 msgid "Choose Language"
 msgstr "Odaberite Jezik"
 
-#: src/screens/settings_calculation/index.tsx:212
+#: src/screens/settings_calculation_advanced/index.tsx:87
 msgid "Choose Polar Resolution"
 msgstr "Odaberite Polarnu Procjenu Razmaka"
 
-#: src/screens/settings_calculation/index.tsx:241
+#: src/screens/settings_calculation_advanced/index.tsx:116
 msgid "Choose Shafaq method"
 msgstr "Odaberite Šafak metodu"
 
@@ -245,7 +249,7 @@ msgstr "Odaberite Šafak metodu"
 msgid "Choose calendar type"
 msgstr "Odaberite tip kalndara"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation_advanced/index.tsx:34
 msgid "Choose midnight calculation method"
 msgstr "Odaberite metodu izračuna ponoći"
 
@@ -274,11 +278,11 @@ msgstr "Podaci međuspremnika ne sadrže koordinate"
 msgid "Close"
 msgstr "Zatvori"
 
-#: src/screens/settings_calculation/index.tsx:223
+#: src/screens/settings_calculation_advanced/index.tsx:98
 msgid "Closest City"
 msgstr "Najbliži Grad"
 
-#: src/screens/settings_calculation/index.tsx:227
+#: src/screens/settings_calculation_advanced/index.tsx:102
 msgid "Closest Date"
 msgstr "Najbliži Datum"
 
@@ -292,7 +296,7 @@ msgstr "Senzor kompasa je nedostupan"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:249
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
 msgid "Confirm"
 msgstr "Potvrdite"
 
@@ -318,14 +322,15 @@ msgid "Country"
 msgstr "Zemlja"
 
 #: src/adhan/calculation_methods.ts:14
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "Custom"
-msgstr "Custom"
+msgstr "Prilagođeno"
 
 #: src/screens/settings_backup/export_settings.tsx:27
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "Prilagođeni zvukovi i mujezini neće biti izvezeni"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:26
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:26
 msgid "Custom upcoming alarm time"
 msgstr "Prilagođeno vrijeme nadolazećeg alarma"
 
@@ -333,13 +338,13 @@ msgstr "Prilagođeno vrijeme nadolazećeg alarma"
 msgid "Dark"
 msgstr "Mračna"
 
-#: src/screens/monthly_view/index.tsx:218
+#: src/screens/monthly_view/index.tsx:219
 msgid "Date"
 msgstr "Datum"
 
 #: src/screens/qada_counter/counter_view.tsx:57
 msgid "Decrement"
-msgstr "Dekrement"
+msgstr "Unižavanje"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
@@ -349,9 +354,9 @@ msgstr "Dekrement"
 msgid "Default"
 msgstr "Zadano"
 
-#: src/screens/settings_calculation/index.tsx:160
+#: src/screens/settings_calculation_advanced/index.tsx:39
 msgid "Default (Mid Sunset to Sunrise)"
-msgstr "Zadano (od sredine zalaska do izlaska sunca)"
+msgstr "Zadano (od Sredine Zalaska do Izlaska sunca)"
 
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
@@ -387,9 +392,9 @@ msgstr "Odricanje"
 msgid "Dismiss"
 msgstr "Odbaci"
 
-#: src/screens/settings_calculation/index.tsx:127
+#: src/screens/settings_calculation/index.tsx:114
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
-msgstr "Diyanet metoda navedena u Al-Azanu je aproksimacija službenog vremena. Budući da nema dovoljno dokumentacije o tome kako se tačno računaju vremena, vremena možda neće biti usklađena sa službenim web stranicama, posebno izvan Turske."
+msgstr "Diyanet metoda navedena u Al-Azanu je približnost službenog vremena. Budući da nema dovoljno dokumentacije o tome kako se tačno računaju vremena, vremena moguće neće biti usklađena sa službenim web stranicama, posebno izvan Turske."
 
 #: src/adhan/calculation_methods.ts:92
 msgid "Diyanet İşleri Başkanlığı, Turkey"
@@ -411,7 +416,7 @@ msgstr "Ne pitaj opet"
 msgid "Don't show again"
 msgstr "Ne prikazuj ponovo"
 
-#: src/screens/settings_notifications/dont_turn_on_screen.tsx:12
+#: src/screens/settings_notifications_advanced/dont_turn_on_screen.tsx:12
 msgid "Don't show alarm screen?"
 msgstr "Ne prikazati ekran alarma?"
 
@@ -425,7 +430,7 @@ msgstr "Skinuti"
 
 #: src/screens/settings_display/number_format_settings.tsx:30
 msgid "Eastern Arabic"
-msgstr "istočni arapski"
+msgstr "Istočno-Arapski"
 
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
 #: src/screens/settings_reminders/reminder_item.tsx:111
@@ -434,7 +439,7 @@ msgstr "Uredi"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:140
 msgid "Edit Calculation Parameters"
-msgstr "Uredi parametre izračuna"
+msgstr "Uredi Parametre Izračuna"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:109
 msgid "Edit Counter"
@@ -442,9 +447,9 @@ msgstr "Uredite Brojač"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "Edit Location"
-msgstr "Uredi lokaciju"
+msgstr "Uredi Lokaciju"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:96
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
 msgid "Edit Reminder"
 msgstr "Uredite Podsjetnik"
 
@@ -460,7 +465,7 @@ msgstr "Uključeno"
 msgid "Error getting clipboard data"
 msgstr "Greška pri preuzimanju podataka međuspremnika"
 
-#: src/screens/settings_calculation/index.tsx:121
+#: src/screens/settings_calculation/index.tsx:108
 #: src/screens/settings_location/location_search.tsx:92
 msgid "Error in loading countries"
 msgstr "Greška pri učitavanju zemalja"
@@ -493,7 +498,7 @@ msgstr "Izvezite podatke"
 #: src/screens/settings_calculation/calc_params_box.tsx:59
 #: src/screens/settings_calculation/calc_params_box.tsx:154
 msgid "Fajr Angle"
-msgstr "Fajr Angle"
+msgstr "Kut Sabaha"
 
 #: src/screens/settings_location/gps_button.tsx:48
 msgid "Find My Location"
@@ -501,7 +506,7 @@ msgstr "Nađite Moju Lokaciju"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:77
+#: src/navigation/types.ts:100
 msgid "Fix Common Problems"
 msgstr "Popravite uobičajene probleme"
 
@@ -509,7 +514,7 @@ msgstr "Popravite uobičajene probleme"
 msgid "Friday"
 msgstr "Petak"
 
-#: src/screens/settings_calculation/index.tsx:246
+#: src/screens/settings_calculation_advanced/index.tsx:120
 msgid "General (default)"
 msgstr "Općenito (zadano)"
 
@@ -531,7 +536,7 @@ msgstr "Gregorijanski"
 msgid "Gulf region"
 msgstr "Zaljevsko područje"
 
-#: src/screens/settings_calculation/index.tsx:204
+#: src/screens/settings_calculation_advanced/index.tsx:81
 msgid "Hanafi"
 msgstr "Hanefijski"
 
@@ -554,7 +559,7 @@ msgstr "Sakrijte vremena koja vam nisu potrebna"
 msgid "High"
 msgstr "Visoka"
 
-#: src/screens/settings_calculation/index.tsx:170
+#: src/screens/settings_calculation_advanced/index.tsx:49
 msgid "High Latitude"
 msgstr "Visoka Geografska Širina"
 
@@ -574,7 +579,7 @@ msgstr "Početni ekran i vidžeti za obaveštenja"
 
 #: website/src/_includes/privacy-policy.tsx:43
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
-msgstr "Međutim, kada koristite online usluge, kao što je Qibla mapa, aplikacija može prenijeti minimalne potrebne podatke koji vas mogu, ali ne moraju, jedinstveno identificirati. Imajte to na umu dok koristite aplikaciju."
+msgstr "Međutim, kada koristite online usluge, kao što je Qibla mapa, aplikacija može prenijeti minimalne potrebne podatke koji vas mogu, ali ne moraju, jedinstveno identificirati. Čuvajte to na umu dok koristite aplikaciju."
 
 #: src/screens/qibla_finder/index.tsx:100
 msgid "I Understand"
@@ -582,15 +587,15 @@ msgstr "Ja Razumijem"
 
 #: src/constants/notification.ts:49
 msgid "IMPORTANT_CHANNEL_ID"
-msgstr "Bitan"
+msgstr "Bitno"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
+#: src/screens/settings_notifications_advanced/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Ako je omogućeno, kada se prikaže obavijest, sadržavat će informacije za sljedeće vrijeme molitve"
 
 #: website/src/_includes/privacy-policy.tsx:49
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
-msgstr "Ako ste aktivirali “Backup & Reset” u postavkama svog telefona (Postavke / Sigurnosna kopija i resetiranje / Sigurnosna kopija mojih podataka), treba da budete svjesni da će sam Android (ne Al-Azan) povremeno spremati kopiju podataka vašeg telefona u Googleovu serveri. Ovo omogućava Androidu da povrati vaše podatke u slučaju da se vaš uređaj ošteti ili da kupite novi uređaj. Programeri Al-Azana nemaju pristup ovim podacima."
+msgstr "Ako ste aktivirali “Rezerviši i Resetuj” u postavkama vašeg telefona (Postavke / Sigurnosna kopija i resetiranje / Sigurnosna kopija mojih podataka), treba da budete svjesni da će sam Android (ne Al-Azan) povremeno spremati kopiju podataka vašeg telefona u Google-ove servere. Ovo omogućava Androidu da povrati vaše podatke u slučaju da se vaš uređaj ošteti ili da kupite novi uređaj. Programeri Al-Azana nemaju pristup ovim podacima."
 
 #: src/screens/settings_fix_common_problems/index.tsx:105
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
@@ -645,12 +650,12 @@ msgstr "Lokaliziran je na engleski, perzijski, arapski, turski, indonezijski, fr
 #: src/screens/settings_calculation/calc_params_box.tsx:72
 #: src/screens/settings_calculation/calc_params_box.tsx:161
 msgid "Isha Angle"
-msgstr "Isha Angle"
+msgstr "Kut Jacije"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:85
 #: src/screens/settings_calculation/calc_params_box.tsx:168
 msgid "Isha Interval"
-msgstr "Isha Interval"
+msgstr "Interval Jacije"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:31
 msgid "Islamic"
@@ -672,11 +677,11 @@ msgstr "Islamski (civilni)"
 msgid "Islamic (tabular)"
 msgstr "Islamski (tabelarni)"
 
-#: src/screens/settings_calculation/index.tsx:164
+#: src/screens/settings_calculation_advanced/index.tsx:43
 msgid "Jafari (Mid Sunset to Fajr)"
-msgstr "Jafari (od sredine zalaska sunca do Fadžra)"
+msgstr "Džaferija (od Sredine Zalaska Sunca do Sabaha)"
 
-#: src/utils/date.ts:463
+#: src/utils/date.ts:503
 msgid "Just now"
 msgstr "Tek sad"
 
@@ -686,7 +691,7 @@ msgstr "Ministarstvo Vjera Republike Indonezije (KEMENAG)"
 
 #: src/adhan/calculation_methods.ts:136
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
-msgstr "Kementrian Hal Ehwal Ugama (Brunej Darussalam)"
+msgstr "Ministarstvo za Vjerska Pitanja (Brunej)"
 
 #: src/adhan/calculation_methods.ts:68
 msgid "Kuwait"
@@ -694,7 +699,7 @@ msgstr "Kuvajt"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:107
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
 msgid "Label"
 msgstr "Oznaka"
 
@@ -761,11 +766,11 @@ msgstr "Niska"
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
 msgid "Maghrib Angle"
-msgstr "Maghrib Angle"
+msgstr "Kut Akšama"
 
 #: src/screens/settings_reminders/reminder_item.tsx:131
 msgid "Make a Copy"
-msgstr "Napravite kopiju"
+msgstr "Napravite Kopiju"
 
 #: fastlane/update/update.ts:55
 #: website/src/_includes/home.tsx:92
@@ -776,23 +781,23 @@ msgstr "Mnogo opcija za izračunavanje ezana (اذان)"
 msgid "Medium"
 msgstr "Srednja"
 
-#: src/screens/settings_calculation/index.tsx:178
+#: src/screens/settings_calculation_advanced/index.tsx:57
 msgid "Middle of the Night"
 msgstr "Usred Noći"
 
-#: src/screens/settings_calculation/index.tsx:152
+#: src/screens/settings_calculation_advanced/index.tsx:32
 msgid "Midnight Method"
-msgstr "Ponoćni metod"
+msgstr "Ponoćna Metoda"
 
 #: src/adhan/calculation_methods.ts:122
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
-msgstr "Ministarstvo vjerskih poslova i vakfa, Alžir"
+msgstr "Ministarstvo Vjerskih Poslova i Vakfa, Alžir"
 
 #: src/screens/qibla_finder/index.tsx:58
 msgid "Mobile Data"
 msgstr "Mobilna Mreža"
 
-#: src/screens/settings_calculation/index.tsx:42
+#: src/screens/settings_calculation/index.tsx:35
 msgid "Modified"
 msgstr "Izmijenjeno"
 
@@ -821,9 +826,9 @@ msgstr "Novi Brojač"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:101
 msgid "New Location"
-msgstr "Nova lokacija"
+msgstr "Nova Lokacija"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:96
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
 msgid "New Reminder"
 msgstr "Novi Podsjetnik"
 
@@ -838,9 +843,9 @@ msgstr "Sljedeći"
 msgid "Next Day"
 msgstr "Sljedeći Dan"
 
-#: src/screens/monthly_view/index.tsx:197
+#: src/screens/monthly_view/index.tsx:198
 msgid "Next Month"
-msgstr "Sljedeći mjesec"
+msgstr "Sljedeći Mjesec"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
 #: src/utils/dialogs.ts:14
@@ -856,7 +861,7 @@ msgstr "Nema Date"
 msgid "No Results"
 msgstr "Nema Rezultata"
 
-#: src/screens/settings_calculation/index.tsx:176
+#: src/screens/settings_calculation_advanced/index.tsx:55
 msgid "None (Automatic)"
 msgstr "Ništa (Automatski)"
 
@@ -909,12 +914,12 @@ msgstr "Na Androidu 12 i novijem, aplikaciji je potrebna i dozvola za alarme da 
 msgid "Once"
 msgstr "Jednom"
 
-#: src/screens/settings_calculation/index.tsx:182
+#: src/screens/settings_calculation_advanced/index.tsx:61
 msgid "One-Seventh of the Night"
 msgstr "Jedna Sedmina Večeri"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:254
 msgid "Only once?"
 msgstr "Samo jednom?"
 
@@ -940,17 +945,17 @@ msgstr "Otvoreno spremište"
 msgid "Open-source"
 msgstr "Otvorenog izvora"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:251
 msgid "Options"
 msgstr "Postavke"
 
 #: src/components/orientation_lock.tsx:55
 msgid "Orientation Lock: Landscape"
-msgstr "Zaključavanje orijentacije: pejzaž"
+msgstr "Zaključavanje Orijentacije: Pejzaž"
 
 #: src/components/orientation_lock.tsx:50
 msgid "Orientation Lock: Portrait"
-msgstr "Zaključavanje orijentacije: portret"
+msgstr "Zaključavanje Orijentacije: Portret"
 
 #: src/components/orientation_lock.tsx:61
 msgid "Orientation: Unlocked"
@@ -970,7 +975,7 @@ msgstr "Zalijepi"
 
 #: src/screens/settings_display/number_format_settings.tsx:31
 msgid "Persian"
-msgstr "perzijski"
+msgstr "Perzijski"
 
 #: src/utils/permission.ts:201
 msgid "Phone State Permission"
@@ -979,17 +984,17 @@ msgstr "Dozvola Stanja Telefona"
 #: src/components/audio_picker.tsx:379
 #: src/screens/settings_adhan/adhan_list_item.tsx:223
 msgid "Play"
-msgstr "Igraj"
+msgstr "Pokreni"
 
 #: src/utils/dialogs.ts:36
 msgid "Please enable location service"
-msgstr "Omogućite uslugu lokacije"
+msgstr "Molimo vas da omogućite uslugu lokacije"
 
 #: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:22
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
-msgstr "Imajte na umu da omogućavanje ove opcije može uzrokovati pokretanje ezana i podsjetnika sa zakašnjenjem ili nikako u nekim slučajevima. Omogućite ovo s oprezom."
+msgstr "Imajte na umu da omogućavanje ove postavke može uzrokovati pokretanje ezana i podsjetnika sa zakašnjenjem ili nikako u nekim slučajevima. Omogućite ovo s oprezom."
 
-#: src/screens/settings_calculation/index.tsx:209
+#: src/screens/settings_calculation_advanced/index.tsx:85
 msgid "Polar Resolution"
 msgstr "Polarna Procjena Razmaka"
 
@@ -1001,7 +1006,7 @@ msgstr "Napojni Menadžer"
 msgid "Prayer Times"
 msgstr "Vremena Molitve"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:178
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "Prayer list"
 msgstr "Molitvena lista"
 
@@ -1011,7 +1016,7 @@ msgstr "Molitvena lista"
 msgid "Press to search"
 msgstr "Pritisnite za pretragu"
 
-#: src/screens/settings_calculation/index.tsx:120
+#: src/screens/settings_calculation/index.tsx:107
 msgid "Press to select a method"
 msgstr "Pritisnite za odabir metode"
 
@@ -1019,15 +1024,15 @@ msgstr "Pritisnite za odabir metode"
 msgid "Prev Day"
 msgstr "Prošli Dan"
 
-#: src/screens/monthly_view/index.tsx:166
+#: src/screens/monthly_view/index.tsx:167
 msgid "Prev Month"
-msgstr "Prethodni mjesec"
+msgstr "Prethodni Mjesec"
 
 #: website/src/_data/navigation.ts:5
 #: website/src/_includes/privacy-policy.tsx:19
 #: website/src/_includes/privacy-policy.tsx:37
 msgid "Privacy Policy"
-msgstr "Politika privatnosti"
+msgstr "Politika Privatnosti"
 
 #. Max. 80 characters
 #: fastlane/update/update.ts:16
@@ -1084,7 +1089,7 @@ msgstr "Ostaje do"
 #: src/utils/ramadan.ts:78
 #: src/utils/ramadan.ts:104
 msgid "Remind me next year"
-msgstr "Podsjeti me sljedeće godine"
+msgstr "Podsjeti me tek sljedeće godine"
 
 #: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
@@ -1097,7 +1102,7 @@ msgid "Repeat"
 msgstr "Ponovite"
 
 #: src/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:234
+#: src/screens/monthly_view/index.tsx:235
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Potrebne postavke su nepotpune. Da bi aplikacija prikazivala vremena molitve, morate je kasnije konfigurirati iz postavkih."
 
@@ -1149,7 +1154,7 @@ msgstr "Odabrano kao ezan"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:163
 msgid "Selected as fajr adhan"
-msgstr "Odabrano kao fadžr ezan"
+msgstr "Odabrano kao sabah ezan"
 
 #: src/components/new_audio_dialog.tsx:51
 #: src/screens/settings_adhan/index.tsx:233
@@ -1166,11 +1171,11 @@ msgstr "Postavite prilagođeni zvuk za Ezan"
 msgid "Set reminders before or after a prayer time"
 msgstr "Postavite podsjetnike prije ili poslije molitvenog vremena"
 
-#: src/screens/settings_calculation/index.tsx:233
+#: src/screens/settings_calculation_advanced/index.tsx:108
 msgid "Shafaq"
 msgstr "Šafak"
 
-#: src/screens/settings_calculation/index.tsx:235
+#: src/screens/settings_calculation_advanced/index.tsx:110
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
@@ -1180,7 +1185,7 @@ msgstr ""
 "odredi koju vrstu sumraka da koristi kako biste\n"
 "odredili vrijeme za Jaciju"
 
-#: src/screens/settings_calculation/index.tsx:201
+#: src/screens/settings_calculation_advanced/index.tsx:78
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Šafija, Malikija, Hanbelija (Zadano)"
 
@@ -1198,15 +1203,15 @@ msgstr "Treba li aplikacija istaknuti trenutnu molitvu umjesto sljedeće?"
 
 #: src/screens/settings_notifications/bypass_dnd_setting.tsx:30
 msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
-msgstr "Treba li aplikacija i dalje puštati ezan kada je \"Ne uznemiravaj\" aktivna?"
+msgstr "Treba li aplikacija i dalje puštati ezan kada je \"Ne smjetaj\" postavka aktivna?"
 
-#: src/screens/settings_notifications/volume_button_setting.tsx:30
+#: src/screens/settings_notifications_advanced/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Da li aplikacija treba da prestane da pušta ezan kada se pritisne dugme za jačinu zvuka?"
 
 #: src/screens/settings_notifications/vibration_setting.tsx:21
 msgid "Should phone vibrate when adhan or reminder starts playing?"
-msgstr "Da li telefon treba da vibrira kada ezan ili podsjetnik počne svirati?"
+msgstr "Da li telefon treba da se trese i zuji kada ezan ili podsjetnik počne svirati?"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Show Adhan Options"
@@ -1221,11 +1226,11 @@ msgstr "Prikažite Danas"
 msgid "Show countdown?"
 msgstr "Prikažite odbrojavanje?"
 
-#: src/screens/monthly_view/index.tsx:189
+#: src/screens/monthly_view/index.tsx:190
 msgid "Show current"
 msgstr "Prikaži trenutni"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
+#: src/screens/settings_notifications_advanced/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "Prikažite sljedeće u obavještenju?"
 
@@ -1248,7 +1253,7 @@ msgstr "Tiho"
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
-msgstr "Budući da ne koristimo nikakvu vrstu tragača ili analitiku rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repo"
+msgstr "Budući da ne koristimo nikakvu vrstu tragača ili analitike rušenja, molimo prijavite svaki problem ili prijedlog koji imate na našem github repozitoruju"
 
 #: src/adhan/calculation_methods.ts:80
 msgid "Singapore"
@@ -1260,7 +1265,7 @@ msgstr "Preskoči"
 
 #: website/src/_includes/privacy-policy.tsx:54
 msgid "Software License"
-msgstr "Softverska licenca"
+msgstr "Softverska Dozvola"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:31
 msgid "Solar Hijri"
@@ -1278,8 +1283,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:234
 #: src/screens/settings_notifications/notification_setting.tsx:274
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:204
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:240
 msgid "Sound"
 msgstr "Zvuk"
 
@@ -1304,7 +1309,7 @@ msgstr "Nedelja"
 msgid "System Default"
 msgstr "Sistemski Zadana"
 
-#: src/screens/settings_notifications/index.tsx:69
+#: src/screens/settings_notifications/index.tsx:70
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Noćni Namaz naveden u aplikaciji je zadnja trećina noći"
 
@@ -1351,12 +1356,12 @@ msgid "Thursday"
 msgstr "Četvrtak"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:117
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:139
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Vrijeme"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "Time condition"
 msgstr "Vremensko stanje"
 
@@ -1364,9 +1369,9 @@ msgstr "Vremensko stanje"
 msgid "Time format"
 msgstr "Vremenski format"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:144
 msgid "Time list"
-msgstr "Vremenska lista"
+msgstr "Vremenski spisak"
 
 #: src/screens/settings_location/index.tsx:19
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
@@ -1390,7 +1395,7 @@ msgstr "Utorak"
 
 #: src/screens/qibla_finder_map/index.tsx:116
 msgid "Turn Left"
-msgstr "Skrenuti lijevo"
+msgstr "Skrenite lijevo"
 
 #: src/screens/qibla_finder_map/index.tsx:117
 msgid "Turn Right"
@@ -1398,13 +1403,13 @@ msgstr "Skrenite desno"
 
 #: src/components/qada_history_toggle.tsx:27
 msgid "Turn history off"
-msgstr "Isključite historiju"
+msgstr "Isključite povijest"
 
 #: src/components/qada_history_toggle.tsx:27
 msgid "Turn history on"
-msgstr "Uključite historiju"
+msgstr "Uključite povijest"
 
-#: src/screens/settings_calculation/index.tsx:186
+#: src/screens/settings_calculation_advanced/index.tsx:65
 msgid "Twilight Angle"
 msgstr "Ugao Sumraka"
 
@@ -1428,7 +1433,7 @@ msgstr "Nepoznata Greška"
 msgid "Unreliable"
 msgstr "Nepouzdano"
 
-#: src/screens/settings_calculation/index.tsx:219
+#: src/screens/settings_calculation_advanced/index.tsx:94
 msgid "Unresolved (default)"
 msgstr "Neriješeno (zadano)"
 
@@ -1459,14 +1464,14 @@ msgstr "Koristite Kartu"
 
 #: src/screens/settings_fix_common_problems/adaptive_charging_toggle.tsx:26
 msgid "Use a different alarm type?"
-msgstr "Koristiti drugu vrstu alarma?"
+msgstr "Koristite drugu vrstu alarma?"
 
 #: src/screens/settings_widget/index.tsx:87
 #: src/screens/settings_widget/index.tsx:102
 msgid "Use adaptive theme?"
 msgstr "Koristite adaptivnu temu?"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
+#: src/screens/settings_notifications_advanced/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
 msgstr "Koristite slušalice kad je dostupno?"
 
@@ -1488,9 +1493,9 @@ msgstr "Verzija"
 
 #: src/screens/settings_notifications/vibration_setting.tsx:19
 msgid "Vibration Mode"
-msgstr "Vibration Mode"
+msgstr "Mod Tresanja"
 
-#: src/screens/settings_notifications/volume_button_setting.tsx:22
+#: src/screens/settings_notifications_advanced/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "Dugme za jačinu zvuka zaustavlja ezan"
 
@@ -1516,13 +1521,13 @@ msgstr "Dobrodošli"
 
 #: src/screens/settings_display/number_format_settings.tsx:29
 msgid "Western Arabic"
-msgstr "zapadni arapski"
+msgstr "Zapadno-Arapski"
 
-#: src/screens/settings_notifications/dont_turn_on_screen.tsx:16
+#: src/screens/settings_notifications_advanced/dont_turn_on_screen.tsx:16
 msgid "When enabled, the screen will remain off when adhan or reminder starts playing, and alarm screen won't be shown"
 msgstr "Kada je omogućeno, ekran će ostati isključen kada ezan ili podsjetnik počne svirati, a ekran alarma neće biti prikazan"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
+#: src/screens/settings_notifications_advanced/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "Kada je omogućeno, kada koristite slušalice, sav zvuk će se pokretati samo na slušalicama."
 
@@ -1537,7 +1542,7 @@ msgstr "Da"
 
 #: src/screens/qibla_finder_map/index.tsx:276
 msgid "You are facing Kaaba"
-msgstr "Okrenuti ste Kaabi"
+msgstr "Okrenuti ste Kabi"
 
 #: src/screens/qibla_finder_map/index.tsx:277
 msgid "You are not facing Kaaba"
@@ -1551,9 +1556,9 @@ msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme is
 msgid "You can also paste coords from clipboard"
 msgstr "Možete također zalijepiti koordinate iz međuspremnika"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:41
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
-msgstr "Možete promijeniti kada se nadolazeće obavještenje o alarmu šalje prije ezana ili podsjetnika"
+msgstr "Možete promijeniti kada će nadolazeći alarm ko obavještenje se poslati prije ezana kao podsjetnik"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1566,11 +1571,11 @@ msgstr "Možete sakriti vremena molitve koja ne želite da vidite u vidžetu ovd
 #: fastlane/update/update.ts:47
 #: website/src/_includes/home.tsx:83
 msgid "You can search for your location offline Or use GPS"
-msgstr "Možete tražiti svoju lokaciju van mreže ili koristiti GPS"
+msgstr "Možete naći svoju lokaciju bez interneta ili koristeći GPS"
 
 #: website/src/_includes/privacy-policy.tsx:66
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
-msgstr "Trebali ste dobiti kopiju GNU Affero General Public License zajedno s ovim programom. Ako ne, pogledajte https://www.gnu.org/licenses/."
+msgstr "Trebali ste dobiti kopiju GNU Affero Opće Javne Dozvole zajedno s ovim programom. Ako niste, pogledajte https://www.gnu.org/licenses/."
 
 #: src/components/audio_picker.tsx:84
 msgid "Your sounds"
@@ -1589,10 +1594,10 @@ msgstr ""
 
 #: src/screens/settings_about/index.tsx:56
 msgid "about.credits.google"
-msgstr "Većina ikona koje se koriste u ovoj aplikaciji su iz ikona google materijala."
+msgstr "Većina ikona koje se koriste u ovoj aplikaciji su iz Google Materijalskog Dizajna."
 
 #. screen title
-#: src/navigation/types.ts:91
+#: src/navigation/types.ts:114
 msgid "about_settings"
 msgstr "O Aplikaciji"
 
@@ -1601,11 +1606,11 @@ msgstr "O Aplikaciji"
 msgid "adjustment.hint"
 msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:210
 msgid "after"
 msgstr "nakon"
 
-#: src/utils/date.ts:468
+#: src/utils/date.ts:508
 msgid "ago"
 msgstr "prije"
 
@@ -1614,16 +1619,26 @@ msgid "asr.prayer"
 msgstr "Ikindija"
 
 #. screen title
-#: src/navigation/types.ts:47
+#: src/navigation/types.ts:55
 msgid "backup_settings"
 msgstr "Rezerva"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
 msgid "before"
 msgstr "prije"
 
 #. screen title
-#: src/navigation/types.ts:72
+#: src/navigation/types.ts:90
+msgid "calculation_adjustments_settings"
+msgstr "Prilagođenja"
+
+#. screen title
+#: src/navigation/types.ts:95
+msgid "calculation_advanced_settings"
+msgstr "Napredne Postavke Kalkulacije"
+
+#. screen title
+#: src/navigation/types.ts:85
 msgid "calculation_settings"
 msgstr "Kalkulacija"
 
@@ -1649,7 +1664,7 @@ msgid "date.second"
 msgstr "sekunda"
 
 #. screen title
-#: src/navigation/types.ts:96
+#: src/navigation/types.ts:119
 msgid "dev_settings"
 msgstr "Razvodničke Postavke"
 
@@ -1658,7 +1673,7 @@ msgid "dhuhr.prayer"
 msgstr "Podne"
 
 #. screen title
-#: src/navigation/types.ts:52
+#: src/navigation/types.ts:60
 msgid "display_settings"
 msgstr "Prikaz"
 
@@ -1667,9 +1682,9 @@ msgid "fajr.prayer"
 msgstr "Sabah"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:118
+#: src/navigation/types.ts:141
 msgid "favorite_location"
-msgstr "Omiljene lokacije"
+msgstr "Omiljene Lokacije"
 
 #: src/screens/settings_display/number_format_settings.tsx:21
 msgid "forces all numbers to be in the selected system"
@@ -1684,7 +1699,7 @@ msgid "from settings"
 msgstr "iz postavkih"
 
 #. screen title
-#: src/navigation/types.ts:42
+#: src/navigation/types.ts:50
 msgid "fullscreen_alarm"
 msgstr "Ezan je u toku"
 
@@ -1693,13 +1708,17 @@ msgstr "Ezan je u toku"
 msgid "hijri.adjustment.hint"
 msgstr "Broj dana koji će biti dodati lunarnom kalendaru"
 
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:42
 msgid "home"
 msgstr "Početna"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
 msgstr "ako je omogućeno, obavijest će se prikazati oko jedan sat prije vremena molitve ili podsjetnika koji ima zvuk"
+
+#: src/navigation/types.ts:38
+msgid "intro"
+msgstr "intro"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
@@ -1710,12 +1729,12 @@ msgstr "da li je vrijeme molitve skriveno?"
 msgid "isha.prayer"
 msgstr "Jacija"
 
-#: src/utils/date.ts:468
+#: src/utils/date.ts:508
 msgid "later"
 msgstr "poslije"
 
 #. screen title
-#: src/navigation/types.ts:57
+#: src/navigation/types.ts:65
 msgid "location_settings"
 msgstr "Lokacija"
 
@@ -1727,40 +1746,49 @@ msgstr "Akšam"
 msgid "masjid_an_nabawi"
 msgstr "Poslanikova Džamija"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:190
+msgid "minutes"
+msgstr "minuta"
+
 #: src/assets/adhan_entries.ts:30
 msgid "moazen_zade"
 msgstr "Mujezin Zade"
 
-#: src/navigation/types.ts:124
+#: src/navigation/types.ts:147
 msgid "monthly_view"
-msgstr "Monthly View"
+msgstr "Mjesečni Prikaz"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:67
+#: src/navigation/types.ts:80
 msgid "muezzin_settings"
 msgstr "Mujezin"
 
 #. screen title
-#: src/navigation/types.ts:62
+#: src/navigation/types.ts:75
+msgid "notification_advanced_settings"
+msgstr "Napredne postavke"
+
+#. screen title
+#: src/navigation/types.ts:70
 msgid "notification_settings"
 msgstr "Obavijesti i Zvuk"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:113
+#: src/navigation/types.ts:136
 msgid "qada_counter"
 msgstr "Kadski Brojač"
 
-#: src/navigation/types.ts:109
+#: src/navigation/types.ts:132
 msgid "qibla_compass"
 msgstr "Kibla Kompas"
 
-#: src/navigation/types.ts:101
+#: src/navigation/types.ts:124
 msgid "qibla_finder"
 msgstr "Kibla Pronalaznik"
 
-#: src/navigation/types.ts:105
+#: src/navigation/types.ts:128
 msgid "qibla_map"
 msgstr "Kibla Karta"
 
@@ -1769,11 +1797,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Rahib Mustafa Galvaš"
 
 #. screen title
-#: src/navigation/types.ts:86
+#: src/navigation/types.ts:109
 msgid "reminders_settings"
 msgstr "Podsjetnici"
 
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:46
 msgid "settings"
 msgstr "Postavke"
 
@@ -1788,7 +1816,7 @@ msgstr "bi li {prayerName} trebalo biti sakriveno?"
 
 #: src/utils/ramadan.ts:53
 msgid "since the app's calendar is pre-calculated and not based on moon sightings, it may show incorrect date for the start and the end of Ramadan."
-msgstr "budući da je kalendar aplikacije unaprijed izračunat i nije zasnovan na viđanjima Mjeseca, može prikazati netačan datum početka i kraja Ramazana."
+msgstr "budući da je kalendar aplikacije unaprijed izračunat i nije zasnovan na viđanjima mjeseca, može prikazati netačan datum početka i kraja Ramazana."
 
 #: src/adhan/prayer.ts:68
 msgid "sunnah.midnight"
@@ -1807,7 +1835,7 @@ msgid "sunset"
 msgstr "Zalazak"
 
 #. screen title
-#: src/navigation/types.ts:81
+#: src/navigation/types.ts:104
 msgid "widget_settings"
 msgstr "Postavke za Vidžete"
 

@@ -1,43 +1,43 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-07-29 16:26+0330\n"
+"POT-Creation-Date: 2023-08-08 05:37+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: tr\n"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:137
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
 msgid "10 min"
 msgstr "10 dk."
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:159
 msgid "15 min"
 msgstr "15 dk."
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:145
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:163
 msgid "30 min"
 msgstr "30 dk."
 
-#: src/screens/settings_calculation/index.tsx:124
+#: src/screens/settings_calculation/index.tsx:111
 msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "Bu yöntemde ramazan boyunca yatsı vaktine 30 dakika eklenir"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:133
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:151
 msgid "5 min"
 msgstr "15 dk."
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:149
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:167
 msgid "60 min"
 msgstr "60 dk."
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
 msgid "90 min"
 msgstr "90 dk."
 
@@ -45,7 +45,7 @@ msgstr "90 dk."
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Ezan"
 
-#: src/screens/settings_calculation/index.tsx:250
+#: src/screens/settings_calculation_advanced/index.tsx:122
 msgid "Abyad"
 msgstr "Abyad (Beyazlık)"
 
@@ -97,7 +97,7 @@ msgstr "Ezan"
 msgid "Adhan audio file is not downloaded yet"
 msgstr "Ezan sesleri henüz indirilmedi"
 
-#: src/screens/settings_calculation/index.tsx:135
+#: src/screens/settings_calculation/index.tsx:120
 msgid "Adjustments"
 msgstr "Ayarlamalar"
 
@@ -106,11 +106,15 @@ msgstr "Ayarlamalar"
 msgid "Advanced"
 msgstr "Gelişmiş"
 
-#: src/screens/settings_calculation/index.tsx:146
+#: src/screens/settings_calculation/index.tsx:126
 msgid "Advanced Calculation Settings"
 msgstr "Gelişmiş hesaplama ayarları"
 
-#: src/screens/settings_calculation/index.tsx:249
+#: src/screens/settings_notifications/index.tsx:80
+msgid "Advanced Settings"
+msgstr "Gelişmiş Ayarlar"
+
+#: src/screens/settings_calculation_advanced/index.tsx:121
 msgid "Ahmer"
 msgstr "Ahmer (Kızıllık)"
 
@@ -162,7 +166,7 @@ msgstr "\"{itemName}\" silmek istediğinizden emin misiniz?"
 msgid "Are you sure you want to delete this?"
 msgstr "Silmek istediğinizden emin misiniz?"
 
-#: src/screens/settings_calculation/index.tsx:193
+#: src/screens/settings_calculation_advanced/index.tsx:71
 msgid "Asr Calculation"
 msgstr "İkindi hesaplama"
 
@@ -182,7 +186,7 @@ msgstr "Dikkat"
 msgid "Bypass \"Do Not Disturb\"?"
 msgstr "\"Rahatsız Etmeyin \"i atlamak mı?"
 
-#: src/screens/settings_calculation/index.tsx:109
+#: src/screens/settings_calculation/index.tsx:96
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı sonuçlar verir. Doğru yöntemi bulmak ve kullanmak sizin sorumluluğunuzdadır."
 
@@ -190,8 +194,8 @@ msgstr "Ezan hesaplamanın birçok farklı yöntemi vardır. Her yöntem farklı
 msgid "Calculation"
 msgstr "Hesaplama"
 
-#: src/screens/settings_calculation/index.tsx:111
-#: src/screens/settings_calculation/index.tsx:113
+#: src/screens/settings_calculation/index.tsx:98
+#: src/screens/settings_calculation/index.tsx:100
 msgid "Calculation Method"
 msgstr "Hesaplama yöntemi"
 
@@ -205,8 +209,8 @@ msgstr "Takvim"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:240
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:101
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:286
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "İptal"
@@ -215,16 +219,16 @@ msgstr "İptal"
 msgid "Cancel download"
 msgstr "İndirmeyi iptal et"
 
-#: src/screens/settings_calculation/index.tsx:196
+#: src/screens/settings_calculation_advanced/index.tsx:73
 msgid "Choose Asr Calculation Madhab"
 msgstr "İkindi hesaplama mezhebini seçin"
 
-#: src/screens/settings_calculation/index.tsx:114
+#: src/screens/settings_calculation/index.tsx:101
 #: src/screens/settings_notifications/vibration_setting.tsx:25
 msgid "Choose Calculation Method"
 msgstr "Hesaplama yöntemini seçin"
 
-#: src/screens/settings_calculation/index.tsx:172
+#: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose High Latitude Setting"
 msgstr "Yüksek enlem ayarını seçin"
 
@@ -232,11 +236,11 @@ msgstr "Yüksek enlem ayarını seçin"
 msgid "Choose Language"
 msgstr "Dil seçiniz"
 
-#: src/screens/settings_calculation/index.tsx:212
+#: src/screens/settings_calculation_advanced/index.tsx:87
 msgid "Choose Polar Resolution"
 msgstr "Kutuplar için çözüm"
 
-#: src/screens/settings_calculation/index.tsx:241
+#: src/screens/settings_calculation_advanced/index.tsx:116
 msgid "Choose Shafaq method"
 msgstr "Şafak hesaplama methodu"
 
@@ -245,7 +249,7 @@ msgstr "Şafak hesaplama methodu"
 msgid "Choose calendar type"
 msgstr "Takvim türünü seçin"
 
-#: src/screens/settings_calculation/index.tsx:155
+#: src/screens/settings_calculation_advanced/index.tsx:34
 msgid "Choose midnight calculation method"
 msgstr "Gece yarısı hesaplama yöntemini seçin"
 
@@ -274,11 +278,11 @@ msgstr "Kopyalanan veriler koordinat içermiyor"
 msgid "Close"
 msgstr "Kapat"
 
-#: src/screens/settings_calculation/index.tsx:223
+#: src/screens/settings_calculation_advanced/index.tsx:98
 msgid "Closest City"
 msgstr "En yakın şehir"
 
-#: src/screens/settings_calculation/index.tsx:227
+#: src/screens/settings_calculation_advanced/index.tsx:102
 msgid "Closest Date"
 msgstr "En yakın tarih"
 
@@ -292,7 +296,7 @@ msgstr "Pusula sensörü kullanılamıyor"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:249
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
 msgid "Confirm"
 msgstr "Onayla"
 
@@ -318,6 +322,7 @@ msgid "Country"
 msgstr "Ülke"
 
 #: src/adhan/calculation_methods.ts:14
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "Custom"
 msgstr "Özel"
 
@@ -325,7 +330,7 @@ msgstr "Özel"
 msgid "Custom sounds and muezzins will not be exported"
 msgstr "Özel sesler ve müezzinler dışa aktarılmayacaktır"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:26
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:26
 msgid "Custom upcoming alarm time"
 msgstr "Özel yaklaşan alarm zamanı"
 
@@ -333,7 +338,7 @@ msgstr "Özel yaklaşan alarm zamanı"
 msgid "Dark"
 msgstr "Koyu"
 
-#: src/screens/monthly_view/index.tsx:218
+#: src/screens/monthly_view/index.tsx:219
 msgid "Date"
 msgstr "Tarih"
 
@@ -349,7 +354,7 @@ msgstr "Azalma"
 msgid "Default"
 msgstr "Varsayılan"
 
-#: src/screens/settings_calculation/index.tsx:160
+#: src/screens/settings_calculation_advanced/index.tsx:39
 msgid "Default (Mid Sunset to Sunrise)"
 msgstr "Varsayılan (Gün Batımından Gün Doğumuna)"
 
@@ -387,7 +392,7 @@ msgstr "Sorumluluk reddi"
 msgid "Dismiss"
 msgstr "Reddet"
 
-#: src/screens/settings_calculation/index.tsx:127
+#: src/screens/settings_calculation/index.tsx:114
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "Al-Azan'da verilen Diyanet yöntemi resmi saatlerin yaklaşık bir değeridir. Zamanların tam olarak nasıl hesaplandığına dair yeterli belge bulunmadığından, özellikle Türkiye dışında zamanlar resmi web sitesiyle uyumlu olmayabilir."
 
@@ -411,7 +416,7 @@ msgstr "Bir daha sorma"
 msgid "Don't show again"
 msgstr "Bir daha gösterme"
 
-#: src/screens/settings_notifications/dont_turn_on_screen.tsx:12
+#: src/screens/settings_notifications_advanced/dont_turn_on_screen.tsx:12
 msgid "Don't show alarm screen?"
 msgstr "Alarm ekranını göstermiyor mu?"
 
@@ -444,7 +449,7 @@ msgstr "Sayacı düzenle"
 msgid "Edit Location"
 msgstr "Konumu Düzenle"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:96
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
 msgid "Edit Reminder"
 msgstr "Hatırlatıcıyı düzenle"
 
@@ -460,7 +465,7 @@ msgstr "Etkinleştir"
 msgid "Error getting clipboard data"
 msgstr "Kopyalanan veriler alınırken hata oluştu"
 
-#: src/screens/settings_calculation/index.tsx:121
+#: src/screens/settings_calculation/index.tsx:108
 #: src/screens/settings_location/location_search.tsx:92
 msgid "Error in loading countries"
 msgstr "Ülkeler yüklenirken hata oluştu"
@@ -501,7 +506,7 @@ msgstr "Konumumu bul"
 
 #. screen title
 #: src/intro/intro.tsx:40
-#: src/navigation/types.ts:77
+#: src/navigation/types.ts:100
 msgid "Fix Common Problems"
 msgstr "Yaygın Sorunları Giderin"
 
@@ -509,7 +514,7 @@ msgstr "Yaygın Sorunları Giderin"
 msgid "Friday"
 msgstr "Cuma"
 
-#: src/screens/settings_calculation/index.tsx:246
+#: src/screens/settings_calculation_advanced/index.tsx:120
 msgid "General (default)"
 msgstr "Genel (varsayılan)"
 
@@ -531,7 +536,7 @@ msgstr "Gregoryen"
 msgid "Gulf region"
 msgstr "Körfez bölgesi"
 
-#: src/screens/settings_calculation/index.tsx:204
+#: src/screens/settings_calculation_advanced/index.tsx:81
 msgid "Hanafi"
 msgstr "Hanefi"
 
@@ -554,7 +559,7 @@ msgstr "İhtiyacınız olmayan zamanları gizleme"
 msgid "High"
 msgstr "Yüksek"
 
-#: src/screens/settings_calculation/index.tsx:170
+#: src/screens/settings_calculation_advanced/index.tsx:49
 msgid "High Latitude"
 msgstr "Yüksek enlem"
 
@@ -584,7 +589,7 @@ msgstr "Anlıyorum"
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "Önemli"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:22
+#: src/screens/settings_notifications_advanced/notify_next_adhan_setting.tsx:22
 msgid "If enabled, when a notification is shown, it will contain info for the next prayer time"
 msgstr "Etkinleştirilirse, bir sonraki namaz vakti bilgisini bildirim ekranından gösterir"
 
@@ -672,11 +677,11 @@ msgstr "İslami (Sivil)"
 msgid "Islamic (tabular)"
 msgstr "İslami (Cetvele göre hesaplanmış)"
 
-#: src/screens/settings_calculation/index.tsx:164
+#: src/screens/settings_calculation_advanced/index.tsx:43
 msgid "Jafari (Mid Sunset to Fajr)"
 msgstr "Caferi (Gün Batımından Fecre Kadar)"
 
-#: src/utils/date.ts:463
+#: src/utils/date.ts:503
 msgid "Just now"
 msgstr "Hemen şimdi"
 
@@ -694,7 +699,7 @@ msgstr "Kuveyt"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:107
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
 msgid "Label"
 msgstr "Etiket"
 
@@ -776,11 +781,11 @@ msgstr "Ezan hesaplaması için birçok seçenek"
 msgid "Medium"
 msgstr "Orta"
 
-#: src/screens/settings_calculation/index.tsx:178
+#: src/screens/settings_calculation_advanced/index.tsx:57
 msgid "Middle of the Night"
 msgstr "Gece yarısı"
 
-#: src/screens/settings_calculation/index.tsx:152
+#: src/screens/settings_calculation_advanced/index.tsx:32
 msgid "Midnight Method"
 msgstr "Gece Yarısı Yöntemi"
 
@@ -792,7 +797,7 @@ msgstr "Diyanet İşleri ve Vakıflar Bakanlığı, Cezayir"
 msgid "Mobile Data"
 msgstr "Mobil veri"
 
-#: src/screens/settings_calculation/index.tsx:42
+#: src/screens/settings_calculation/index.tsx:35
 msgid "Modified"
 msgstr "Değiştirilmiş"
 
@@ -823,7 +828,7 @@ msgstr "Yeni sayaç"
 msgid "New Location"
 msgstr "Yeni Konum"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:96
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
 msgid "New Reminder"
 msgstr "Yeni hatırlatıcı"
 
@@ -838,7 +843,7 @@ msgstr "Sonraki"
 msgid "Next Day"
 msgstr "Ertesi gün"
 
-#: src/screens/monthly_view/index.tsx:197
+#: src/screens/monthly_view/index.tsx:198
 msgid "Next Month"
 msgstr "Gelecek Ay"
 
@@ -856,7 +861,7 @@ msgstr "Veri yok"
 msgid "No Results"
 msgstr "Sonuç yok"
 
-#: src/screens/settings_calculation/index.tsx:176
+#: src/screens/settings_calculation_advanced/index.tsx:55
 msgid "None (Automatic)"
 msgstr "Yok (Otomatik)"
 
@@ -909,12 +914,12 @@ msgstr "Android 12 ve daha yeni sürümlerde, uygulamanın düzgün çalışmas�
 msgid "Once"
 msgstr "Bir kez"
 
-#: src/screens/settings_calculation/index.tsx:182
+#: src/screens/settings_calculation_advanced/index.tsx:61
 msgid "One-Seventh of the Night"
 msgstr "Gecenin yedide biri"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:254
 msgid "Only once?"
 msgstr "Sadece bir kez mi?"
 
@@ -940,7 +945,7 @@ msgstr "Açık kaynak deposu"
 msgid "Open-source"
 msgstr "Açık kaynak"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:251
 msgid "Options"
 msgstr "Seçenekler"
 
@@ -989,7 +994,7 @@ msgstr "Lütfen konum hizmetini etkinleştirin"
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "Bu seçeneğin etkinleştirilmesinin ezan ve hatırlatıcıların gecikmeli olarak devreye girmesine veya bazı durumlarda hiç devreye girmemesine neden olabileceğini lütfen unutmayın. Bunu dikkatli bir şekilde etkinleştirin."
 
-#: src/screens/settings_calculation/index.tsx:209
+#: src/screens/settings_calculation_advanced/index.tsx:85
 msgid "Polar Resolution"
 msgstr "Kutuplar için hesaplama yöntemi"
 
@@ -1001,7 +1006,7 @@ msgstr "Güç yöneticisi"
 msgid "Prayer Times"
 msgstr "Namaz Vakitleri"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:178
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "Prayer list"
 msgstr "Dua listesi"
 
@@ -1011,7 +1016,7 @@ msgstr "Dua listesi"
 msgid "Press to search"
 msgstr "Aramak için basın"
 
-#: src/screens/settings_calculation/index.tsx:120
+#: src/screens/settings_calculation/index.tsx:107
 msgid "Press to select a method"
 msgstr "Bir yöntem seçmek için basın"
 
@@ -1019,7 +1024,7 @@ msgstr "Bir yöntem seçmek için basın"
 msgid "Prev Day"
 msgstr "Önceki gün"
 
-#: src/screens/monthly_view/index.tsx:166
+#: src/screens/monthly_view/index.tsx:167
 msgid "Prev Month"
 msgstr "Önceki Ay"
 
@@ -1097,7 +1102,7 @@ msgid "Repeat"
 msgstr "Tekrarla"
 
 #: src/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:234
+#: src/screens/monthly_view/index.tsx:235
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar tamamlanmadı. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
 
@@ -1162,18 +1167,18 @@ msgstr "Özel Ezan sesi ayarlama"
 msgid "Set reminders before or after a prayer time"
 msgstr "Dua zamanından önce veya sonra hatırlatıcı ayarlama"
 
-#: src/screens/settings_calculation/index.tsx:233
+#: src/screens/settings_calculation_advanced/index.tsx:108
 msgid "Shafaq"
 msgstr "Şafak"
 
-#: src/screens/settings_calculation/index.tsx:235
+#: src/screens/settings_calculation_advanced/index.tsx:110
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "Şafak tipi seçimi, sabah namazının zamanını belirlemek için MoonsightingCommittee'nin hesap yönteminde kullanılır."
 
-#: src/screens/settings_calculation/index.tsx:201
+#: src/screens/settings_calculation_advanced/index.tsx:78
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Şafi, Maliki, Hanbeli (Varsayılan)"
 
@@ -1193,7 +1198,7 @@ msgstr "Uygulama bir sonraki dua yerine mevcut duayı vurgulamalı mı?"
 msgid "Should app still play adhan when \"Do Not Disturb\" is active?"
 msgstr "\"Rahatsız Etmeyin\" aktifken uygulama hala ezan çalmalı mı?"
 
-#: src/screens/settings_notifications/volume_button_setting.tsx:30
+#: src/screens/settings_notifications_advanced/volume_button_setting.tsx:30
 msgid "Should app stop playing adhan when the volume button is pressed?"
 msgstr "Ses düğmesine basıldığında uygulama ezan çalmayı durdursun mu?"
 
@@ -1214,11 +1219,11 @@ msgstr "Bugünü göster"
 msgid "Show countdown?"
 msgstr "Geri sayım gösterilsin mi?"
 
-#: src/screens/monthly_view/index.tsx:189
+#: src/screens/monthly_view/index.tsx:190
 msgid "Show current"
 msgstr "Geçerli göster"
 
-#: src/screens/settings_notifications/notify_next_adhan_setting.tsx:14
+#: src/screens/settings_notifications_advanced/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "Sonraki bildirim gösterilsin mi?"
 
@@ -1268,8 +1273,8 @@ msgstr "Bazı cihazlarda, uygulamanın arka planda çalışmaya devam edebilmesi
 
 #: src/screens/settings_notifications/notification_setting.tsx:234
 #: src/screens/settings_notifications/notification_setting.tsx:274
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:202
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:204
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:240
 msgid "Sound"
 msgstr "Ses"
 
@@ -1294,7 +1299,7 @@ msgstr "Pazar"
 msgid "System Default"
 msgstr "Sistem varsayılanı"
 
-#: src/screens/settings_notifications/index.tsx:69
+#: src/screens/settings_notifications/index.tsx:70
 msgid "Tahajjud time mentioned in the app is the last third of the night"
 msgstr "Uygulamada belirtilen teheccüd vakti gecenin son üçte biridir"
 
@@ -1338,12 +1343,12 @@ msgid "Thursday"
 msgstr "Perşembe"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:117
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:139
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Vakit"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "Time condition"
 msgstr "Zaman koşulu"
 
@@ -1351,7 +1356,7 @@ msgstr "Zaman koşulu"
 msgid "Time format"
 msgstr "Zaman formatı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:144
 msgid "Time list"
 msgstr "Zaman listesi"
 
@@ -1391,7 +1396,7 @@ msgstr "Geçmişi kapatın"
 msgid "Turn history on"
 msgstr "Geçmişi açın"
 
-#: src/screens/settings_calculation/index.tsx:186
+#: src/screens/settings_calculation_advanced/index.tsx:65
 msgid "Twilight Angle"
 msgstr "Güneş ufuk açısı"
 
@@ -1415,7 +1420,7 @@ msgstr "Bilinmeyen hata"
 msgid "Unreliable"
 msgstr "Güvenilmez"
 
-#: src/screens/settings_calculation/index.tsx:219
+#: src/screens/settings_calculation_advanced/index.tsx:94
 msgid "Unresolved (default)"
 msgstr "Çözümlenmemiş (varsayılan)"
 
@@ -1453,7 +1458,7 @@ msgstr "Farklı bir alarm türü mü kullanıyorsunuz?"
 msgid "Use adaptive theme?"
 msgstr "Uyarlanabilir bir tema mı kullanıyorsunuz?"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:22
+#: src/screens/settings_notifications_advanced/prefer_headphone_setting.tsx:22
 msgid "Use headphones when available?"
 msgstr "Uygun olduğunda kulaklık kullanılsın mı?"
 
@@ -1477,7 +1482,7 @@ msgstr "Sürüm"
 msgid "Vibration Mode"
 msgstr "Titreşim Modu"
 
-#: src/screens/settings_notifications/volume_button_setting.tsx:22
+#: src/screens/settings_notifications_advanced/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "Ses düğmesi ezanı durdursun"
 
@@ -1505,11 +1510,11 @@ msgstr "Hoş geldiniz"
 msgid "Western Arabic"
 msgstr "Batı Arapçası"
 
-#: src/screens/settings_notifications/dont_turn_on_screen.tsx:16
+#: src/screens/settings_notifications_advanced/dont_turn_on_screen.tsx:16
 msgid "When enabled, the screen will remain off when adhan or reminder starts playing, and alarm screen won't be shown"
 msgstr "Etkinleştirildiğinde, ezan veya hatırlatma çalmaya başladığında ekran kapalı kalır ve alarm ekranı gösterilmez"
 
-#: src/screens/settings_notifications/prefer_headphone_setting.tsx:26
+#: src/screens/settings_notifications_advanced/prefer_headphone_setting.tsx:26
 msgid "When enabled, when using headphones, all audio will play only on headphones."
 msgstr "Etkinleştirildiğinde, kulaklık takılıyken tüm ses yalnızca kulaklıkta çalınır."
 
@@ -1538,7 +1543,7 @@ msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine eri
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kordinatları yapıştırabilirsiniz"
 
-#: src/screens/settings_notifications/custom_upcoming_time_setting.tsx:41
+#: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Yaklaşan alarm bildiriminin ezan veya hatırlatmadan önce ne zaman gönderileceğini değiştirebilirsiniz"
 
@@ -1579,7 +1584,7 @@ msgid "about.credits.google"
 msgstr "Bu uygulamada kullanılan simgelerin çoğu Google Material simgelerinden alınmıştır."
 
 #. screen title
-#: src/navigation/types.ts:91
+#: src/navigation/types.ts:114
 msgid "about_settings"
 msgstr "Hakkında"
 
@@ -1588,11 +1593,11 @@ msgstr "Hakkında"
 msgid "adjustment.hint"
 msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:210
 msgid "after"
 msgstr "sonra"
 
-#: src/utils/date.ts:468
+#: src/utils/date.ts:508
 msgid "ago"
 msgstr "önce"
 
@@ -1601,16 +1606,26 @@ msgid "asr.prayer"
 msgstr "İkindi"
 
 #. screen title
-#: src/navigation/types.ts:47
+#: src/navigation/types.ts:55
 msgid "backup_settings"
 msgstr "Yedekleme"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
 msgid "before"
 msgstr "önce"
 
 #. screen title
-#: src/navigation/types.ts:72
+#: src/navigation/types.ts:90
+msgid "calculation_adjustments_settings"
+msgstr "Ayarlamalar"
+
+#. screen title
+#: src/navigation/types.ts:95
+msgid "calculation_advanced_settings"
+msgstr "Gelişmiş hesaplama ayarları"
+
+#. screen title
+#: src/navigation/types.ts:85
 msgid "calculation_settings"
 msgstr "Hesaplama"
 
@@ -1636,7 +1651,7 @@ msgid "date.second"
 msgstr "saniye"
 
 #. screen title
-#: src/navigation/types.ts:96
+#: src/navigation/types.ts:119
 msgid "dev_settings"
 msgstr "Geliştirici"
 
@@ -1645,7 +1660,7 @@ msgid "dhuhr.prayer"
 msgstr "Öğle"
 
 #. screen title
-#: src/navigation/types.ts:52
+#: src/navigation/types.ts:60
 msgid "display_settings"
 msgstr "Görünüm"
 
@@ -1654,7 +1669,7 @@ msgid "fajr.prayer"
 msgstr "Sabah"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:118
+#: src/navigation/types.ts:141
 msgid "favorite_location"
 msgstr "Favori Mekanlar"
 
@@ -1671,7 +1686,7 @@ msgid "from settings"
 msgstr "ayarlardan"
 
 #. screen title
-#: src/navigation/types.ts:42
+#: src/navigation/types.ts:50
 msgid "fullscreen_alarm"
 msgstr "Ezanı dinle"
 
@@ -1680,13 +1695,17 @@ msgstr "Ezanı dinle"
 msgid "hijri.adjustment.hint"
 msgstr "Ay takvimine eklenecek gün sayısı"
 
-#: src/navigation/types.ts:34
+#: src/navigation/types.ts:42
 msgid "home"
 msgstr "Anasayfa"
 
 #: src/screens/settings_notifications/dont_notify_upcoming_setting.tsx:29
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
 msgstr "etkinleştirilirse, herhangi bir namaz vaktinden veya sesli hatırlatıcıdan yaklaşık bir saat önce bir bildirim gösterilecektir"
+
+#: src/navigation/types.ts:38
+msgid "intro"
+msgstr "gİRİŞ"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:46
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:68
@@ -1697,12 +1716,12 @@ msgstr "namaz vakti gizlensin mi?"
 msgid "isha.prayer"
 msgstr "Yatsı"
 
-#: src/utils/date.ts:468
+#: src/utils/date.ts:508
 msgid "later"
 msgstr "daha sonra"
 
 #. screen title
-#: src/navigation/types.ts:57
+#: src/navigation/types.ts:65
 msgid "location_settings"
 msgstr "Konum"
 
@@ -1714,40 +1733,49 @@ msgstr "Akşam"
 msgid "masjid_an_nabawi"
 msgstr "Mescid-i Nebevî"
 
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:190
+msgid "minutes"
+msgstr "dakika"
+
 #: src/assets/adhan_entries.ts:30
 msgid "moazen_zade"
 msgstr "Moazen Zade"
 
-#: src/navigation/types.ts:124
+#: src/navigation/types.ts:147
 msgid "monthly_view"
 msgstr "Aylık Görünüm"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:67
+#: src/navigation/types.ts:80
 msgid "muezzin_settings"
 msgstr "Müezzin"
 
 #. screen title
-#: src/navigation/types.ts:62
+#: src/navigation/types.ts:75
+msgid "notification_advanced_settings"
+msgstr "Gelişmiş Ayarlar"
+
+#. screen title
+#: src/navigation/types.ts:70
 msgid "notification_settings"
 msgstr "Bildirim & Ses"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:113
+#: src/navigation/types.ts:136
 msgid "qada_counter"
 msgstr "Kaza sayacı"
 
-#: src/navigation/types.ts:109
+#: src/navigation/types.ts:132
 msgid "qibla_compass"
 msgstr "Kıble pusulası"
 
-#: src/navigation/types.ts:101
+#: src/navigation/types.ts:124
 msgid "qibla_finder"
 msgstr "Kıble Bulucu"
 
-#: src/navigation/types.ts:105
+#: src/navigation/types.ts:128
 msgid "qibla_map"
 msgstr "Kıble haritası"
 
@@ -1756,11 +1784,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:86
+#: src/navigation/types.ts:109
 msgid "reminders_settings"
 msgstr "Hatırlatıcılar"
 
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:46
 msgid "settings"
 msgstr "Ayarlar"
 
@@ -1794,7 +1822,7 @@ msgid "sunset"
 msgstr "Gün batımı"
 
 #. screen title
-#: src/navigation/types.ts:81
+#: src/navigation/types.ts:104
 msgid "widget_settings"
 msgstr "Widget ayarları"
 

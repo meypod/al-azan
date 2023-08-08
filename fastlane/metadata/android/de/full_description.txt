@@ -31,7 +31,7 @@ Features der App:
 
 * Qada-Zähler
 
-* Ist lokalisiert in Englisch, Persisch, Arabisch, Türkisch, Indonesisch, Französisch, Urdu, Hindi, Deutsch, Bosnisch, Vietnamesisch, Bangla
+* Ist lokalisiert in Englisch, Persisch, Arabisch, Türkisch, Indonesisch, Französisch, Urdu, Hindi, Deutsch, Bosnisch, Vietnamesisch, Bengalisch
 
 Open-Source Repository:
 https://github.com/meypod/al-azan
