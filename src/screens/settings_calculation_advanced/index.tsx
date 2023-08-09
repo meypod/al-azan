@@ -5,6 +5,7 @@ import {
   Madhab,
   Shafaq,
   MidnightMethod,
+  Rounding,
 } from 'adhan-extended';
 import {ScrollView, Select, FormControl} from 'native-base';
 import {SafeArea} from '@/components/safe_area';
@@ -25,9 +26,27 @@ export function CalculationAdvancedSettings() {
   const [midnightMethod, setMidnightMethod] =
     useCalcSettings('MIDNIGHT_METHOD');
 
+  const [roundingMethod, setRoundingMethod] =
+    useCalcSettings('ROUNDING_METHOD');
+
   return (
     <SafeArea>
       <ScrollView p="4">
+        <FormControl mb="3">
+          <FormControl.Label m="0">{t`Rounding Method`}:</FormControl.Label>
+          <Select
+            accessibilityLabel={t`Choose calculation rounding method`}
+            selectedValue={roundingMethod || Rounding.Nearest}
+            onValueChange={setRoundingMethod as (str: string) => void}
+            flex="1">
+            <Select.Item
+              label={t`Nearest (Default)`}
+              value={Rounding.Nearest}
+            />
+            <Select.Item label={t`None`} value={Rounding.None} />
+            <Select.Item label={t`Up`} value={Rounding.Up} />
+          </Select>
+        </FormControl>
         <FormControl mb="3">
           <FormControl.Label m="0">{t`Midnight Method`}:</FormControl.Label>
           <Select

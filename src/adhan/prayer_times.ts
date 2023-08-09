@@ -62,6 +62,7 @@ function getPrayerTimesOptionsFromSettings() {
   const shafaqCalcSetting = state.SHAFAQ;
   const polarCicleResolutionSetting = state.POLAR_RESOLUTION;
   const midnightMethod = state.MIDNIGHT_METHOD;
+  const roundingMethod = state.ROUNDING_METHOD;
   const midnightAdjustment = state.MIDNIGHT_ADJUSTMENT;
 
   const prayerTimeOptions: PrayerTimesOptions = {
@@ -71,6 +72,8 @@ function getPrayerTimesOptionsFromSettings() {
     midnightMethod,
     midnightAdjustment,
   };
+
+  prayerTimeOptions.calculationParameters.rounding = roundingMethod;
 
   prayerTimeOptions.calculationParameters.adjustments = {
     fajr: state.FAJR_ADJUSTMENT,

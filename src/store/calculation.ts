@@ -3,6 +3,7 @@ import {
   MidnightMethod,
   PolarCircleResolution,
   Shafaq,
+  Rounding,
 } from 'adhan-extended';
 import {produce} from 'immer';
 import {useCallback} from 'react';
@@ -46,6 +47,7 @@ export type CalcSettingsStore = {
   SHAFAQ: string;
   POLAR_RESOLUTION: string;
   MIDNIGHT_METHOD: MidnightMethod;
+  ROUNDING_METHOD: (typeof Rounding)[keyof typeof Rounding];
   // Parameters override
   FAJR_ANGLE_OVERRIDE: undefined | number;
   ISHA_ANGLE_OVERRIDE: undefined | number;
@@ -89,6 +91,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SHAFAQ: Shafaq.General,
       POLAR_RESOLUTION: PolarCircleResolution.Unresolved,
       MIDNIGHT_METHOD: MidnightMethod.SunsetToFajr,
+      ROUNDING_METHOD: Rounding.Nearest,
       // Parameters override
       FAJR_ANGLE_OVERRIDE: undefined,
       ISHA_ANGLE_OVERRIDE: undefined,
