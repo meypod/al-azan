@@ -88,7 +88,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       ASR_CALCULATION: Madhab.Shafi,
       SHAFAQ: Shafaq.General,
       POLAR_RESOLUTION: PolarCircleResolution.Unresolved,
-      MIDNIGHT_METHOD: MidnightMethod.Standard,
+      MIDNIGHT_METHOD: MidnightMethod.SunsetToFajr,
       // Parameters override
       FAJR_ANGLE_OVERRIDE: undefined,
       ISHA_ANGLE_OVERRIDE: undefined,
@@ -146,7 +146,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 5,
+      version: 6,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -181,10 +181,9 @@ export const calcSettings = createStore<CalcSettingsStore>()(
               clearCache();
             }
           case 3:
-            // a cache reset force for Radaman fix for Umm al-Qura University method
             if (!(persistedState as CalcSettingsStore).MIDNIGHT_METHOD) {
               (persistedState as CalcSettingsStore).MIDNIGHT_METHOD =
-                MidnightMethod.Standard;
+                MidnightMethod.SunsetToFajr;
             }
           case 4:
             if (
@@ -209,8 +208,18 @@ export const calcSettings = createStore<CalcSettingsStore>()(
                 long: (persistedState as any).LOCATION_LONG,
               };
             }
-            break;
           }
+          case 6:
+            if (
+              ![
+                MidnightMethod.SunsetToFajr,
+                MidnightMethod.SunsetToSunrise,
+              ].includes((persistedState as CalcSettingsStore).MIDNIGHT_METHOD)
+            ) {
+              (persistedState as CalcSettingsStore).MIDNIGHT_METHOD =
+                MidnightMethod.SunsetToFajr;
+            }
+            break;
         }
         /* eslint-enable no-fallthrough */
         return persistedState as CalcSettingsStore;

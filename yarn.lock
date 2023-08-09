@@ -3607,10 +3607,10 @@ acorn@^8.5.0, acorn@^8.8.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
-adhan-extended@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/adhan-extended/-/adhan-extended-5.0.2.tgz#9c0f8a789ff6f010823814bc0c78752fe9b1fb66"
-  integrity sha512-le0yF4slZcsav1JCAR3EFlutQIeIgp/0X043FhsW2B9CsGJCK+TI4zkdVKG+m7/SeKdKmx9F2Su28s2b2VlNdA==
+adhan-extended@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/adhan-extended/-/adhan-extended-6.0.0.tgz#2e1eebb14aeca064f992f0076804fc2cd49df1d9"
+  integrity sha512-wVLWuxvwl7JzJEKX1GijMO5OS2RjslP49U2VT+u6PfUuxnMS+xKqwYFT+NrZmglQB1rIKHzu24nDWn89XIZmGw==
 
 aggregate-error@^3.0.0:
   version "3.1.0"

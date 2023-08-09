@@ -32,16 +32,16 @@ export function CalculationAdvancedSettings() {
           <FormControl.Label m="0">{t`Midnight Method`}:</FormControl.Label>
           <Select
             accessibilityLabel={t`Choose midnight calculation method`}
-            selectedValue={midnightMethod || MidnightMethod.Standard}
+            selectedValue={midnightMethod || MidnightMethod.SunsetToFajr}
             onValueChange={setMidnightMethod as (str: string) => void}
             flex="1">
             <Select.Item
-              label={t`Default (Mid Sunset to Sunrise)`}
-              value={MidnightMethod.Standard}
+              label={t`Sunset to Fajr (Default)`}
+              value={MidnightMethod.SunsetToFajr}
             />
             <Select.Item
-              label={t`Jafari (Mid Sunset to Fajr)`}
-              value={MidnightMethod.Jafari}
+              label={t`Sunset to Sunrise`}
+              value={MidnightMethod.SunsetToSunrise}
             />
           </Select>
         </FormControl>
