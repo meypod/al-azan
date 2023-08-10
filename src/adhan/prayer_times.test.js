@@ -266,7 +266,7 @@ describe('getNextPrayer()', () => {
           calculatedFrom: new Date(
             new Date('2022-12-27T12:02:00.000Z').valueOf() + 1000,
           ),
-          date: new Date('2022-12-28T01:57:00.000Z'),
+          date: new Date('2022-12-28T01:08:00.000Z'),
           playSound: true,
           prayer: 'tahajjud',
         });
@@ -290,7 +290,7 @@ describe('getNextPrayer()', () => {
             ),
             -1,
           ),
-          date: new Date('2022-12-28T01:57:00.000Z'),
+          date: new Date('2022-12-28T01:08:00.000Z'),
           playSound: true,
           prayer: 'tahajjud',
         });
