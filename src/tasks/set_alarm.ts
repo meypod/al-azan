@@ -77,7 +77,6 @@ export async function setAlarmTask(options: SetAlarmTaskOptions) {
       subtitle: subtitle,
       body: body,
       android: {
-        lightUpScreen: !dontTurnOnScreen && intrusive,
         smallIcon: 'ic_stat_name',
         channelId: notifChannelId,
         category: AndroidCategory.ALARM,
