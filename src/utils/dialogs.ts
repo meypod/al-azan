@@ -70,7 +70,7 @@ export function showBatteryOptimizationReminder() {
           isPreferred: true,
         },
         {
-          text: t`Okay`,
+          text: t`Dismiss`,
           style: 'cancel',
           onPress: () => resolve(undefined),
         },
