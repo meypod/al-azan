@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
 import {HStack, Text, Button, VStack, Checkbox, Stack} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
-import {memo, useCallback} from 'react';
+import {memo, useCallback, useMemo} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {ExpandCircleDownIcon} from '@/assets/icons/material_icons/expand_circle_down';
 import Divider from '@/components/Divider';
@@ -335,10 +335,16 @@ export const NotificationSetting = function NotificationSetting({
     setNotifyProxy(!notify);
   }, [notify, setNotifyProxy]);
 
-  const prayerName = translatePrayer(prayer);
+  const prayerName = useMemo(() => translatePrayer(prayer), [prayer]);
 
-  const notifyFullActive = notify && typeof notify === 'boolean';
-  const soundFullActive = sound && typeof sound === 'boolean';
+  const notifyFullActive = useMemo(
+    () => notify && typeof notify === 'boolean',
+    [notify],
+  );
+  const soundFullActive = useMemo(
+    () => sound && typeof sound === 'boolean',
+    [sound],
+  );
 
   return (
     <VStack

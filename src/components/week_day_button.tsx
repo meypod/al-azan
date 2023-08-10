@@ -14,16 +14,14 @@ type WeekDayButtonProps = {
 export const WeekDayButton = memo(function WeekDayButton(
   props: WeekDayButtonProps,
 ) {
-  const [isActive, setIsActive] = useState(!!props.isActive);
   const [colorScheme] = useState(props.colorScheme || 'primary');
 
   const setIsActiveProxy = useCallback(
     (isAct: boolean) => {
-      setIsActive(isAct);
       typeof props.onChanged === 'function' &&
         props.onChanged(isAct, props.dayIndex);
     },
-    [setIsActive, props],
+    [props],
   );
 
   return (
@@ -34,14 +32,16 @@ export const WeekDayButton = memo(function WeekDayButton(
       variant="unstyled"
       _text={{noOfLines: 1, fontSize: 'xs'}}
       _light={{
-        backgroundColor: isActive ? colorScheme + '.500' : 'black:alpha.5',
-        _text: {color: isActive ? 'white' : 'black:alpha.70'},
+        backgroundColor: props.isActive
+          ? colorScheme + '.500'
+          : 'black:alpha.5',
+        _text: {color: props.isActive ? 'white' : 'black:alpha.70'},
       }}
       _dark={{
-        backgroundColor: isActive ? colorScheme + '.800' : 'black',
+        backgroundColor: props.isActive ? colorScheme + '.800' : 'black',
         _text: {color: 'white:alpha.90'},
       }}
-      onPress={() => setIsActiveProxy(!isActive)}>
+      onPress={() => setIsActiveProxy(!props.isActive)}>
       {props.label}
     </Button>
   );

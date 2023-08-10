@@ -3,7 +3,7 @@ import {defineMessage} from '@lingui/macro';
 
 import keys from 'lodash/keys';
 import {Stack, FormControl, IStackProps} from 'native-base';
-import {memo, useCallback, useState} from 'react';
+import {memo, useCallback} from 'react';
 import {WeekDayButton} from '@/components/week_day_button';
 import {WeekDayIndex, WeekDayName, WeekDays} from '@/utils/date';
 
@@ -33,6 +33,16 @@ export const WeekDaysInOrder = {
 
 export type SelectorValue = Partial<Record<WeekDayIndex, boolean>> | boolean;
 
+function isDayActive(dayName: WeekDayName, value: SelectorValue | undefined) {
+  if (!value) return false;
+
+  if (typeof value === 'boolean') {
+    return value;
+  }
+
+  return value[WeekDays[dayName]];
+}
+
 export const WeekDaySelector = memo(function WeekDaySelector(
   props: IStackProps & {
     value?: SelectorValue;
@@ -41,25 +51,18 @@ export const WeekDaySelector = memo(function WeekDaySelector(
     colorScheme?: string;
   },
 ) {
-  const [selectedDays, setSelectedDays] = useState<SelectorValue>(
-    props.value || false,
-  );
-
   const setSelectedDaysProxy = useCallback(
     (obj: SelectorValue) => {
-      setSelectedDays(obj);
-      if (typeof props.onChanged === 'function') {
-        props.onChanged(obj);
-      }
+      props.onChanged && props.onChanged(obj);
     },
-    [setSelectedDays, props],
+    [props],
   );
 
   const dayChanged = useCallback(
     (isActive: boolean, dayIndex: WeekDayIndex) => {
       let values: SelectorValue = {
-        ...(typeof selectedDays === 'boolean'
-          ? selectedDays
+        ...(typeof props.value === 'boolean'
+          ? props.value
             ? {
                 0: true,
                 1: true,
@@ -70,7 +73,7 @@ export const WeekDaySelector = memo(function WeekDaySelector(
                 6: true,
               }
             : {}
-          : selectedDays),
+          : props.value),
         [dayIndex]: isActive,
       };
       if (!values[dayIndex]) delete values[dayIndex];
@@ -82,7 +85,7 @@ export const WeekDaySelector = memo(function WeekDaySelector(
       }
       setSelectedDaysProxy(values);
     },
-    [selectedDays, setSelectedDaysProxy],
+    [props.value, setSelectedDaysProxy],
   );
 
   return (
@@ -97,11 +100,7 @@ export const WeekDaySelector = memo(function WeekDaySelector(
               label={i18n._(WeekDaysInOrder[dayName])}
               key={dayName}
               colorScheme={props.colorScheme}
-              isActive={
-                typeof selectedDays === 'boolean'
-                  ? selectedDays
-                  : selectedDays[WeekDays[dayName as WeekDayName]]
-              }
+              isActive={isDayActive(dayName as WeekDayName, props.value)}
             />
           );
         })}
