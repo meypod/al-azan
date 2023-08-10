@@ -393,6 +393,7 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
     destroyCallStateListener();
     if (volumeChangeReceiver != null) {
       unregisterReceiver(volumeChangeReceiver);
+      volumeChangeReceiver = null;
     }
     stopForeground(true);
     stopSelf();
