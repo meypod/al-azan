@@ -246,6 +246,7 @@ function shouldNotifyPrayer(prayer: Prayer, date: Date, useSettings?: boolean) {
     const notifySetting = alarmSettings.getState()[
       getAdhanSettingKey(prayer, 'notify')
     ] as PrayerAlarmSettings;
+    console.log(date, notifySetting, date.getDay());
     if (
       typeof notifySetting === 'boolean' ||
       typeof notifySetting === 'undefined'
@@ -321,7 +322,7 @@ export function getNextPrayer(
   for (let prayer of prayers) {
     if (
       originalDate <= prayerTimes[prayer] &&
-      shouldNotifyPrayer(prayer, date, useSettings)
+      shouldNotifyPrayer(prayer, prayerTimes[prayer], useSettings)
     ) {
       prayerTime = {
         date: prayerTimes[prayer],
