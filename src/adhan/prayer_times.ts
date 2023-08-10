@@ -241,7 +241,11 @@ export type PrayerTime = {
   playSound?: boolean;
 };
 
-function shouldNotifyPrayer(prayer: Prayer, date: Date, useSettings?: boolean) {
+function shouldNotifyPrayer(
+  prayer: Prayer,
+  prayerTime: Date,
+  useSettings?: boolean,
+) {
   if (useSettings) {
     const notifySetting = alarmSettings.getState()[
       getAdhanSettingKey(prayer, 'notify')
@@ -251,7 +255,7 @@ function shouldNotifyPrayer(prayer: Prayer, date: Date, useSettings?: boolean) {
       typeof notifySetting === 'undefined'
     ) {
       return !!notifySetting;
-    } else if (notifySetting[date.getDay() as WeekDayIndex]) {
+    } else if (notifySetting[prayerTime.getDay() as WeekDayIndex]) {
       return true;
     }
     return false;
