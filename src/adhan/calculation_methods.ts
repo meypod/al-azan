@@ -47,7 +47,7 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
   },
 
   NorthAmerica: {
-    label: t`Referred to as the ISNA method`,
+    label: t`Islamic Society of North America (ISNA)`,
     info: 'This method is included for completeness, but is not recommended.\nUses a Fajr angle of 15 and an Isha angle of 15.' as const,
     get: CalculationMethod.NorthAmerica,
   },
