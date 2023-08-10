@@ -18,7 +18,6 @@ import {useNoInitialEffect} from './utils/hooks/use_no_initial_effect';
 import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
-import {Intro} from '@/intro';
 import {
   getCurrentRoute,
   navigationRef,
@@ -28,6 +27,7 @@ import {
 import {RootStackParamList, translateRoute} from '@/navigation/types';
 import {FullscreenAlarm} from '@/screens/fullscreen_alarm';
 import {Home} from '@/screens/home';
+import {Intro} from '@/screens/intro';
 import {QadaCounter} from '@/screens/qada_counter';
 import {QiblaFinder} from '@/screens/qibla_finder';
 import {QiblaCompass} from '@/screens/qibla_finder_compass';
