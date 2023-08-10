@@ -47,7 +47,7 @@ export type CalcSettingsStore = {
   SHAFAQ: string;
   POLAR_RESOLUTION: string;
   MIDNIGHT_METHOD: MidnightMethod;
-  ROUNDING_METHOD: (typeof Rounding)[keyof typeof Rounding];
+  ROUNDING_METHOD: (typeof Rounding)[keyof typeof Rounding] | undefined;
   // Parameters override
   FAJR_ANGLE_OVERRIDE: undefined | number;
   ISHA_ANGLE_OVERRIDE: undefined | number;
@@ -91,7 +91,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       SHAFAQ: Shafaq.General,
       POLAR_RESOLUTION: PolarCircleResolution.Unresolved,
       MIDNIGHT_METHOD: MidnightMethod.SunsetToFajr,
-      ROUNDING_METHOD: Rounding.Nearest,
+      ROUNDING_METHOD: undefined,
       // Parameters override
       FAJR_ANGLE_OVERRIDE: undefined,
       ISHA_ANGLE_OVERRIDE: undefined,

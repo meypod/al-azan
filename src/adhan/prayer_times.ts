@@ -73,7 +73,8 @@ function getPrayerTimesOptionsFromSettings() {
     midnightAdjustment,
   };
 
-  prayerTimeOptions.calculationParameters.rounding = roundingMethod;
+  prayerTimeOptions.calculationParameters.rounding =
+    roundingMethod || prayerTimeOptions.calculationParameters.rounding;
 
   prayerTimeOptions.calculationParameters.adjustments = {
     fajr: state.FAJR_ADJUSTMENT,
