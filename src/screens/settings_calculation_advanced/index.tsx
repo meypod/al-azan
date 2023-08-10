@@ -36,13 +36,11 @@ export function CalculationAdvancedSettings() {
           <FormControl.Label m="0">{t`Rounding Method`}:</FormControl.Label>
           <Select
             accessibilityLabel={t`Choose calculation rounding method`}
-            selectedValue={roundingMethod || Rounding.Nearest}
+            selectedValue={roundingMethod || ''}
             onValueChange={setRoundingMethod as (str: string) => void}
             flex="1">
-            <Select.Item
-              label={t`Nearest (Default)`}
-              value={Rounding.Nearest}
-            />
+            <Select.Item label={t`Auto (Default)`} value={''} />
+            <Select.Item label={t`Nearest`} value={Rounding.Nearest} />
             <Select.Item label={t`None`} value={Rounding.None} />
             <Select.Item label={t`Up`} value={Rounding.Up} />
           </Select>
