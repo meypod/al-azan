@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-08 05:37+0330\n"
+"POT-Creation-Date: 2023-08-10 08:48+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +45,7 @@ msgstr "৯০ মিনিট"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "আযান"
 
-#: src/screens/settings_calculation_advanced/index.tsx:122
+#: src/screens/settings_calculation_advanced/index.tsx:141
 msgid "Abyad"
 msgstr "আবইয়াদ"
 
@@ -114,7 +114,7 @@ msgstr "আরও গণনার সেটিংস"
 msgid "Advanced Settings"
 msgstr "উন্নত সেটিংস"
 
-#: src/screens/settings_calculation_advanced/index.tsx:121
+#: src/screens/settings_calculation_advanced/index.tsx:140
 msgid "Ahmer"
 msgstr "আহমার"
 
@@ -137,7 +137,7 @@ msgstr "আল-আজান অ্যাপটি এই আশায় বি�
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "আল-আজান একটি বিনামূল্যের সফ্টওয়্যার: আপনি ফ্রি সফটওয়্যার ফাউন্ডেশন দ্বারা প্রকাশিত GNU Affero জেনারেল পাবলিক লাইসেন্স (v3.0) এর শর্তাবলীর অধীনে এটিকে পুনরায় বিতরণ এবং/অথবা সংশোধন করতে পারেন।"
 
-#: src/utils/permission.ts:169
+#: src/utils/permission.ts:177
 msgid "Alarms Permission"
 msgstr "অ্যালার্মের অনুমতি"
 
@@ -158,15 +158,15 @@ msgstr "অ্যাপের বৈশিষ্ট্যসমুহ"
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "আপনি কি \"{0}\" মুছতে ফেলতে চান?"
 
-#: src/utils/dialogs.ts:10
+#: src/utils/dialogs.ts:11
 msgid "Are you sure you want to delete \"{itemName}\" ?"
 msgstr "আপনি কি নিশ্চিত যে \"{itemName}\" কে মুছতে চান?"
 
-#: src/utils/dialogs.ts:11
+#: src/utils/dialogs.ts:12
 msgid "Are you sure you want to delete this?"
 msgstr "আপনি কি এটি মুছতে চান?"
 
-#: src/screens/settings_calculation_advanced/index.tsx:71
+#: src/screens/settings_calculation_advanced/index.tsx:90
 msgid "Asr Calculation"
 msgstr "আসরের হিসাব"
 
@@ -174,7 +174,7 @@ msgstr "আসরের হিসাব"
 msgid "At least one prayer time must be shown"
 msgstr "অন্তত একটি নামাজের সময় দেখাতে হবে"
 
-#: src/intro/intro.tsx:118
+#: src/screens/intro/intro.tsx:118
 #: src/screens/settings_calculation/calendar_settings.tsx:44
 #: src/utils/ramadan.ts:74
 #: src/utils/ramadan.ts:95
@@ -190,7 +190,7 @@ msgstr "বাইপাস \"ডু নট ডিস্টার্ব\"?"
 msgid "Calculating Adhan has many different methods. Each method provides different results. It is your responsibility to search and use the right method."
 msgstr "আযান গণনার বিভিন্ন পদ্ধতি রয়েছে। প্রতিটি পদ্ধতি ভিন্ন ফলাফল প্রদান করে। সঠিক পদ্ধতি অনুসন্ধান এবং ব্যবহার করা আপনার দায়িত্ব।"
 
-#: src/intro/intro.tsx:32
+#: src/screens/intro/intro.tsx:32
 msgid "Calculation"
 msgstr "হিসাব"
 
@@ -219,7 +219,7 @@ msgstr "বাতিল করুন"
 msgid "Cancel download"
 msgstr "ডাউনলোড বাতিল করুন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:73
+#: src/screens/settings_calculation_advanced/index.tsx:92
 msgid "Choose Asr Calculation Madhab"
 msgstr "আসর গণনা মাধব নির্বাচন করুন"
 
@@ -228,7 +228,7 @@ msgstr "আসর গণনা মাধব নির্বাচন করু�
 msgid "Choose Calculation Method"
 msgstr "গণনা পদ্ধতি নির্বাচন করুন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:51
+#: src/screens/settings_calculation_advanced/index.tsx:70
 msgid "Choose High Latitude Setting"
 msgstr "উচ্চ অক্ষাংশের সেটিং নির্বাচন করুন"
 
@@ -236,20 +236,24 @@ msgstr "উচ্চ অক্ষাংশের সেটিং নির্ব
 msgid "Choose Language"
 msgstr "ভাষা নির্বাচন করুন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:87
+#: src/screens/settings_calculation_advanced/index.tsx:106
 msgid "Choose Polar Resolution"
 msgstr "পোলার রেজোলিউশন নির্বাচন করুন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:116
+#: src/screens/settings_calculation_advanced/index.tsx:135
 msgid "Choose Shafaq method"
 msgstr "শাফাকের পদ্ধতি বেছে নিন"
+
+#: src/screens/settings_calculation_advanced/index.tsx:38
+msgid "Choose calculation rounding method"
+msgstr "গণনার রাউন্ডিং পদ্ধতি বেছে নিন"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:26
 #: src/screens/settings_display/calendar_secondary_settings.tsx:26
 msgid "Choose calendar type"
 msgstr "ক্যালেন্ডারের ধরন বেছে নিন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:34
+#: src/screens/settings_calculation_advanced/index.tsx:53
 msgid "Choose midnight calculation method"
 msgstr "মধ্যরাত গণনা পদ্ধতি চয়ন করুন"
 
@@ -278,11 +282,11 @@ msgstr "ক্লিপবোর্ড ডেটায় স্থানাঙ্�
 msgid "Close"
 msgstr "বন্ধ"
 
-#: src/screens/settings_calculation_advanced/index.tsx:98
+#: src/screens/settings_calculation_advanced/index.tsx:117
 msgid "Closest City"
 msgstr "নিকটতম শহর"
 
-#: src/screens/settings_calculation_advanced/index.tsx:102
+#: src/screens/settings_calculation_advanced/index.tsx:121
 msgid "Closest Date"
 msgstr "নিকটতম তারিখ"
 
@@ -348,22 +352,18 @@ msgstr "হ্রাস"
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:57
+#: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "ডিফল্ট"
-
-#: src/screens/settings_calculation_advanced/index.tsx:39
-msgid "Default (Mid Sunset to Sunrise)"
-msgstr "ডিফল্ট (মধ্য সূর্যাস্ত থেকে সূর্যোদয়)"
 
 #: src/components/audio_picker_item.tsx:63
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
 #: src/screens/settings_reminders/reminder_item.tsx:125
-#: src/utils/dialogs.ts:8
+#: src/utils/dialogs.ts:9
 msgid "Delete"
 msgstr "মুছে ফেলা"
 
@@ -388,7 +388,7 @@ msgid "Disclaimer"
 msgstr "দাবিত্যাগ"
 
 #: src/screens/fullscreen_alarm/index.tsx:153
-#: src/tasks/set_alarm.ts:107
+#: src/tasks/set_alarm.ts:106
 msgid "Dismiss"
 msgstr "খারিজ"
 
@@ -405,9 +405,9 @@ msgstr "Diyanet İşleri Başkanlığı, তুরস্ক"
 msgid "Doesn't use any kind of trackers"
 msgstr "কোনো ধরনের ট্র্যাকার ব্যবহার করে না"
 
-#: src/utils/permission.ts:44
-#: src/utils/permission.ts:173
-#: src/utils/permission.ts:205
+#: src/utils/permission.ts:45
+#: src/utils/permission.ts:181
+#: src/utils/permission.ts:220
 msgid "Don't ask again"
 msgstr "আবার জিজ্ঞাসা করবেন না"
 
@@ -420,7 +420,7 @@ msgstr "আবার দেখাবেন না"
 msgid "Don't show alarm screen?"
 msgstr "অ্যালার্ম স্ক্রীন দেখাবেন না?"
 
-#: src/intro/intro.tsx:101
+#: src/screens/intro/intro.tsx:101
 msgid "Done"
 msgstr "সম্পন্ন"
 
@@ -479,7 +479,7 @@ msgstr "অডিও ডাউনলোড করার সময় সমস�
 msgid "Error while getting coordinates"
 msgstr "স্থানাঙ্কগুলি পাওয়ার সময় সমস্যার সম্মুখীন হয়েছে"
 
-#: src/screens/settings_backup/import_settings.tsx:74
+#: src/screens/settings_backup/import_settings.tsx:78
 msgid "Error: failed to open file"
 msgstr "এরর: ফাইল খুলতে ব্যর্থ হয়েছে৷"
 
@@ -505,8 +505,8 @@ msgid "Find My Location"
 msgstr "আমার অবস্থান খুঁজুন"
 
 #. screen title
-#: src/intro/intro.tsx:40
 #: src/navigation/types.ts:100
+#: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "সাধারণ সমস্যা ঠিক করুন"
 
@@ -514,7 +514,7 @@ msgstr "সাধারণ সমস্যা ঠিক করুন"
 msgid "Friday"
 msgstr "শুক্রবার"
 
-#: src/screens/settings_calculation_advanced/index.tsx:120
+#: src/screens/settings_calculation_advanced/index.tsx:139
 msgid "General (default)"
 msgstr "সাধারণ (ডিফল্ট)"
 
@@ -524,7 +524,7 @@ msgstr "সাধারণ (ডিফল্ট)"
 msgid "Getting coordinates"
 msgstr "স্থানাঙ্ক পাওয়া"
 
-#: src/intro/intro.tsx:124
+#: src/screens/intro/intro.tsx:124
 msgid "Got it"
 msgstr "বুঝেছি"
 
@@ -536,7 +536,7 @@ msgstr "গ্রেগরিয়ান"
 msgid "Gulf region"
 msgstr "উপসাগরীয় অঞ্চল"
 
-#: src/screens/settings_calculation_advanced/index.tsx:81
+#: src/screens/settings_calculation_advanced/index.tsx:100
 msgid "Hanafi"
 msgstr "হানাফী"
 
@@ -559,7 +559,7 @@ msgstr "অপ্রয়জনিয় সময় লুকান"
 msgid "High"
 msgstr "উচ্চ"
 
-#: src/screens/settings_calculation_advanced/index.tsx:49
+#: src/screens/settings_calculation_advanced/index.tsx:68
 msgid "High Latitude"
 msgstr "উচ্চ অক্ষাংশ"
 
@@ -609,15 +609,15 @@ msgstr "আপনি যদি নিশ্চিত করতে চান য�
 msgid "If your device has adaptive charging, like Google Pixel, and you don't want adhan or reminders to be recognized as an alarm, you can enable this option."
 msgstr "যদি আপনার ডিভাইসে Google Pixel-এর মতো অ্যাডাপ্টিভ চার্জিং থাকে এবং আপনি আধান বা অনুস্মারকগুলিকে অ্যালার্ম হিসাবে চিহ্নিত করতে না চান, তাহলে আপনি এই বিকল্পটি সক্ষম করতে পারেন৷"
 
-#: src/screens/settings_backup/import_settings.tsx:85
+#: src/screens/settings_backup/import_settings.tsx:87
 msgid "Import"
 msgstr "ইমপোর্ট"
 
-#: src/screens/settings_backup/import_settings.tsx:83
+#: src/screens/settings_backup/index.tsx:12
 msgid "Import app data"
 msgstr "অ্যাপ ডেটা ইমপোর্ট করুন"
 
-#: src/screens/settings_backup/import_settings.tsx:69
+#: src/screens/settings_backup/import_settings.tsx:73
 msgid "Import successful"
 msgstr "ইমপোর্ট সফল"
 
@@ -677,9 +677,9 @@ msgstr "ইসলামিক (সিভিল)"
 msgid "Islamic (tabular)"
 msgstr "ইসলামিক (সারণী)"
 
-#: src/screens/settings_calculation_advanced/index.tsx:43
-msgid "Jafari (Mid Sunset to Fajr)"
-msgstr "জাফরি (মধ্য সূর্যাস্ত থেকে ফজর পর্যন্ত)"
+#: src/utils/dialogs.ts:63
+msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
+msgstr "মনে হচ্ছে আপনি একটি ব্যাকআপ আমদানি করেছেন, এই অ্যাপের জন্য ব্যাটারি অপ্টিমাইজেশন অক্ষম করতে ভুলবেন না"
 
 #: src/utils/date.ts:503
 msgid "Just now"
@@ -740,13 +740,13 @@ msgstr "তালিকা খালি"
 msgid "Loading"
 msgstr "লোড হচ্ছে"
 
-#: src/intro/intro.tsx:28
+#: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
-#: src/utils/dialogs.ts:35
+#: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "অবস্থান"
 
-#: src/utils/dialogs.ts:44
+#: src/utils/dialogs.ts:45
 msgid "Location settings"
 msgstr "অবস্থান সেটিংস"
 
@@ -781,11 +781,11 @@ msgstr "আযান (اذان) গণনার পদ্ধতিসমূহ"
 msgid "Medium"
 msgstr "মাধ্যম"
 
-#: src/screens/settings_calculation_advanced/index.tsx:57
+#: src/screens/settings_calculation_advanced/index.tsx:76
 msgid "Middle of the Night"
 msgstr "রাতের মাঝখানে"
 
-#: src/screens/settings_calculation_advanced/index.tsx:32
+#: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Midnight Method"
 msgstr "মধ্যরাতের পদ্ধতি"
 
@@ -820,6 +820,10 @@ msgstr "মুসলিম বিশ্ব লীগ"
 msgid "Name"
 msgstr "নাম"
 
+#: src/screens/settings_calculation_advanced/index.tsx:43
+msgid "Nearest (Default)"
+msgstr "নিকটতম (ডিফল্ট)"
+
 #: src/screens/qada_counter/edit_counter_modal.tsx:109
 msgid "New Counter"
 msgstr "নতুন কাউন্টার"
@@ -832,14 +836,14 @@ msgstr "নতুন অবস্থান"
 msgid "New Reminder"
 msgstr "রিমাইন্ডার যোগ করুন"
 
-#: src/intro/intro.tsx:100
+#: src/screens/intro/intro.tsx:100
 #: src/screens/settings_dev/index.tsx:39
 #: src/tasks/set_next_adhan.ts:85
 #: src/tasks/set_next_adhan.ts:127
 msgid "Next"
 msgstr "পরবর্তী"
 
-#: src/screens/home/index.tsx:210
+#: src/screens/home/index.tsx:223
 msgid "Next Day"
 msgstr "পরবর্তী দিন"
 
@@ -848,7 +852,7 @@ msgid "Next Month"
 msgstr "পরের মাসে"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:108
-#: src/utils/dialogs.ts:14
+#: src/utils/dialogs.ts:15
 msgid "No"
 msgstr "না"
 
@@ -861,11 +865,15 @@ msgstr "কোন ডেটা নেই"
 msgid "No Results"
 msgstr "কোন ফলাফল নেই"
 
-#: src/screens/settings_calculation_advanced/index.tsx:55
+#: src/screens/settings_calculation_advanced/index.tsx:46
+msgid "None"
+msgstr "কোনোটিই নয়"
+
+#: src/screens/settings_calculation_advanced/index.tsx:74
 msgid "None (Automatic)"
 msgstr "কোনটিই নয় (স্বয়ংক্রিয়)"
 
-#: src/utils/permission.ts:178
+#: src/utils/permission.ts:189
 msgid "Not now"
 msgstr "এখন না"
 
@@ -875,17 +883,17 @@ msgstr "মনে রাখবেন যে সফ্টওয়্যার �
 
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
-#: src/screens/settings_backup/import_settings.tsx:57
+#: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_notifications/notification_setting.tsx:170
 #: src/screens/settings_notifications/notification_setting.tsx:270
 msgid "Notification"
 msgstr "নোটিফিকেশন"
 
-#: src/intro/intro.tsx:36
+#: src/screens/intro/intro.tsx:36
 msgid "Notification & Sound"
 msgstr "নোটিফিকেশন এবং শব্দ"
 
-#: src/utils/permission.ts:40
+#: src/utils/permission.ts:41
 msgid "Notifications Permission"
 msgstr "নোটিফিকেশন দেখানোর অনুমতি"
 
@@ -899,13 +907,14 @@ msgstr "বন্ধ"
 
 #: src/screens/qibla_finder/index.tsx:36
 #: src/screens/qibla_finder/index.tsx:53
-#: src/utils/dialogs.ts:39
-#: src/utils/permission.ts:50
-#: src/utils/permission.ts:211
+#: src/utils/dialogs.ts:73
+#: src/utils/dialogs.ts:40
+#: src/utils/permission.ts:53
+#: src/utils/permission.ts:228
 msgid "Okay"
 msgstr "ঠিক আছে"
 
-#: src/utils/permission.ts:170
+#: src/utils/permission.ts:178
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "অ্যান্ড্রয়েড 12 এবং নতুন সংস্করণে, অ্যাপটিকে সঠিকভাবে কাজ করার জন্য অ্যালার্মের অনুমতিরও প্রয়োজন, তাই আপনাকে অবশ্যই এটির অনুমতি দিতে হবে।"
 
@@ -914,7 +923,7 @@ msgstr "অ্যান্ড্রয়েড 12 এবং নতুন সং
 msgid "Once"
 msgstr "একবার"
 
-#: src/screens/settings_calculation_advanced/index.tsx:61
+#: src/screens/settings_calculation_advanced/index.tsx:80
 msgid "One-Seventh of the Night"
 msgstr "রাতের এক-সপ্তমাংশ"
 
@@ -949,6 +958,10 @@ msgstr "ওপেন সোর্স"
 msgid "Options"
 msgstr "অপশনসমূহ"
 
+#: src/screens/intro/slides/welcome.tsx:16
+msgid "Or if you have a backup, you can import it"
+msgstr "অথবা আপনার যদি ব্যাকআপ থাকে তবে আপনি এটি আমদানি করতে পারেন"
+
 #: src/components/orientation_lock.tsx:55
 msgid "Orientation Lock: Landscape"
 msgstr "ওরিয়েন্টেশন লক: ল্যান্ডস্কেপ"
@@ -977,7 +990,7 @@ msgstr "পেস্ট করুন"
 msgid "Persian"
 msgstr "ফার্সি"
 
-#: src/utils/permission.ts:201
+#: src/utils/permission.ts:216
 msgid "Phone State Permission"
 msgstr "ফোন স্টেট অনুমতি"
 
@@ -986,7 +999,7 @@ msgstr "ফোন স্টেট অনুমতি"
 msgid "Play"
 msgstr "খেলা"
 
-#: src/utils/dialogs.ts:36
+#: src/utils/dialogs.ts:37
 msgid "Please enable location service"
 msgstr "অনুগ্রহ করে অবস্থান পরিষেবা চালু করুন"
 
@@ -994,7 +1007,7 @@ msgstr "অনুগ্রহ করে অবস্থান পরিষেব
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "অনুগ্রহ করে মনে রাখবেন যে এই অপশনটি সক্রিয় করার ফলে আযান এবং রিমাইন্ডারসমূহ বিলম্বিত হতে পারে অথবা নাও সংঘটিত হতে পারে। সতর্কতার সাথে এটি চালু করুন।"
 
-#: src/screens/settings_calculation_advanced/index.tsx:85
+#: src/screens/settings_calculation_advanced/index.tsx:104
 msgid "Polar Resolution"
 msgstr "পোলার রেজোলিউশন"
 
@@ -1020,7 +1033,7 @@ msgstr "অনুসন্ধান করতে টিপুন"
 msgid "Press to select a method"
 msgstr "একটি পদ্ধতি নির্বাচন করতে টিপুন"
 
-#: src/screens/home/index.tsx:179
+#: src/screens/home/index.tsx:192
 msgid "Prev Day"
 msgstr "আগের দিন"
 
@@ -1094,6 +1107,7 @@ msgstr "পরের বছর আমাকে মনে করিয়ে দ�
 #: src/screens/fullscreen_alarm/index.tsx:68
 #: src/tasks/set_reminder.ts:90
 #: src/tasks/set_reminder.ts:123
+#: src/utils/dialogs.ts:62
 msgid "Reminder"
 msgstr "রিমাইন্ডার"
 
@@ -1101,10 +1115,14 @@ msgstr "রিমাইন্ডার"
 msgid "Repeat"
 msgstr "পুনরাবৃত্তি করুন"
 
-#: src/intro/intro.tsx:120
+#: src/screens/intro/intro.tsx:120
 #: src/screens/monthly_view/index.tsx:235
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "প্রয়োজনীয় সেটিংসসমূহ অসম্পূর্ণ। অ্যাপটি সালাতের সময় দেখানোর জন্য, আপনাকে পরে সেটিংস থেকে কনফিগার করতে হবে।"
+
+#: src/screens/settings_calculation_advanced/index.tsx:36
+msgid "Rounding Method"
+msgstr "রাউন্ডিং পদ্ধতি"
 
 #: src/screens/settings_fix_common_problems/index.tsx:85
 msgid ""
@@ -1127,7 +1145,7 @@ msgstr "অনুসন্ধান করুন"
 msgid "Secondary Calendar"
 msgstr "দ্বিতীয় ক্যালেন্ডার"
 
-#: src/screens/home/index.tsx:229
+#: src/screens/home/index.tsx:242
 msgid "See favorite locations"
 msgstr "প্রিয় অবস্থান দেখুন"
 
@@ -1167,18 +1185,18 @@ msgstr "কাস্টম আযান অডিও সেট করুন"
 msgid "Set reminders before or after a prayer time"
 msgstr "প্রার্থনার আগে বা পরে রিমাইন্ডার সেট করুন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:108
+#: src/screens/settings_calculation_advanced/index.tsx:127
 msgid "Shafaq"
 msgstr "শাফাক"
 
-#: src/screens/settings_calculation_advanced/index.tsx:110
+#: src/screens/settings_calculation_advanced/index.tsx:129
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "শাফাকের সময় নির্ধারণের জন্য কোন ধরনের গোধূলি ব্যবহার করতে হবে তা নির্ধারণ করতে চাঁদ দেখা কমিটির পদ্ধতি দ্বারা শাফাক ব্যবহার করা হয়।"
 
-#: src/screens/settings_calculation_advanced/index.tsx:78
+#: src/screens/settings_calculation_advanced/index.tsx:97
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "শফি, মালিকি, হাম্বলী (ডিফল্ট)"
 
@@ -1210,7 +1228,7 @@ msgstr "আযান বা রিমাইন্ডার বাজানো �
 msgid "Show Adhan Options"
 msgstr "আযান অপশন দেখুন"
 
-#: src/screens/home/index.tsx:202
+#: src/screens/home/index.tsx:215
 msgid "Show Today"
 msgstr "আজ দেখুন"
 
@@ -1223,6 +1241,10 @@ msgstr "কাউন্টডাউন দেখবেন?"
 msgid "Show current"
 msgstr "বর্তমান দেখান"
 
+#: src/utils/dialogs.ts:66
+msgid "Show me"
+msgstr "আমাকে দেখাও"
+
 #: src/screens/settings_notifications_advanced/notify_next_adhan_setting.tsx:14
 msgid "Show next in notification?"
 msgstr "পরবর্তী নোটিফিকেশনে দেখবেন?"
@@ -1231,7 +1253,7 @@ msgstr "পরবর্তী নোটিফিকেশনে দেখবে�
 msgid "Show notification widget?"
 msgstr "বিজ্ঞপ্তি উইজেট দেখাবেন?"
 
-#: src/utils/permission.ts:182
+#: src/utils/permission.ts:194
 msgid "Show settings"
 msgstr "সেটিংস দেখুন"
 
@@ -1252,7 +1274,7 @@ msgstr "যেহেতু আমরা কোনো ধরনের ট্র�
 msgid "Singapore"
 msgstr "সিঙ্গাপুর"
 
-#: src/intro/intro.tsx:102
+#: src/screens/intro/intro.tsx:102
 msgid "Skip"
 msgstr "এড়িয়ে যান"
 
@@ -1295,6 +1317,14 @@ msgstr "থামো"
 msgid "Sunday"
 msgstr "রবিবার"
 
+#: src/screens/settings_calculation_advanced/index.tsx:58
+msgid "Sunset to Fajr (Default)"
+msgstr "সূর্যাস্ত থেকে ফজর (ডিফল্ট)"
+
+#: src/screens/settings_calculation_advanced/index.tsx:62
+msgid "Sunset to Sunrise"
+msgstr "সূর্যাস্ত থেকে সূর্যোদয়"
+
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
 msgstr "সিস্টেমের ডিফল্ট"
@@ -1307,10 +1337,8 @@ msgstr "অ্যাপটিতে তাহাজ্জুদের সময�
 msgid "Thai Solar"
 msgstr "থাই সোলার"
 
-#: src/intro/slides/welcome.tsx:9
-msgid ""
-"Thanks for choosing this app! There are things you need to do before you\n"
-"can start using this app."
+#: src/screens/intro/slides/welcome.tsx:10
+msgid "Thanks for choosing this app! There are things you need to do before you can start using this app."
 msgstr "এই অ্যাপটি বেছে নেওয়ার জন্য ধন্যবাদ! এই অ্যাপটি ব্যবহার শুরু করার আগে আপনাকে কিছু কাজ করতে হবে।"
 
 #: src/adhan/calculation_methods.ts:62
@@ -1364,11 +1392,11 @@ msgstr "সময়ের তালিকা"
 msgid "To calculate Adhan, We need your location. You can use the \"Find My Location\" button, or use the country and city/area search, or enter your coordinates manually."
 msgstr "আযান গণনা করতে, আমাদের আপনার অবস্থান প্রয়োজন। আপনি \"আমার অবস্থান খুঁজুন\" বোতামটি ব্যবহার করতে পারেন, অথবা দেশ এবং শহর/এলাকা অনুসন্ধান ব্যবহার করতে পারেন, অথবা ম্যানুয়ালি আপনার স্থানাঙ্ক লিখতে পারেন।"
 
-#: src/utils/permission.ts:41
+#: src/utils/permission.ts:42
 msgid "To see notifications about adhan, we need your permission."
 msgstr "আজান সম্পর্কে নোটিফিকেশন দেখতে, আমাদের আপনার অনুমতি প্রয়োজন।"
 
-#: src/utils/permission.ts:202
+#: src/utils/permission.ts:217
 msgid "To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature."
 msgstr "আপনি একটি কল পেলে আযান বাজানো বন্ধ করতে, আমাদের আপনার ফোনের অবস্থা সম্পর্কে জানতে হবে। এই অনুমতি না দেওয়া হলে এই ফিচারটি বন্ধ থাকবে।"
 
@@ -1396,7 +1424,7 @@ msgstr "ইতিহাস বন্ধ করুন"
 msgid "Turn history on"
 msgstr "ইতিহাস চালু করুন"
 
-#: src/screens/settings_calculation_advanced/index.tsx:65
+#: src/screens/settings_calculation_advanced/index.tsx:84
 msgid "Twilight Angle"
 msgstr "গোধূলি কোণ"
 
@@ -1420,13 +1448,17 @@ msgstr "অজানা সমস্যা"
 msgid "Unreliable"
 msgstr "অবিশ্বস্ত"
 
-#: src/screens/settings_calculation_advanced/index.tsx:94
+#: src/screens/settings_calculation_advanced/index.tsx:113
 msgid "Unresolved (default)"
 msgstr "অমীমাংসিত (ডিফল্ট)"
 
 #: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
 msgstr "অসমর্থিত"
+
+#: src/screens/settings_calculation_advanced/index.tsx:47
+msgid "Up"
+msgstr "উপরে"
 
 #. notification title
 #: src/tasks/set_pre_alarm.ts:46
@@ -1494,7 +1526,7 @@ msgstr "উইজেট"
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "উইজেট আপডেট"
 
-#: src/intro/slides/welcome.tsx:14
+#: src/screens/intro/slides/welcome.tsx:12
 msgid "We'll help you do them quickly."
 msgstr "আমরা আপনাকে দ্রুত সেগুলি করতে সাহায্য করব৷"
 
@@ -1502,7 +1534,7 @@ msgstr "আমরা আপনাকে দ্রুত সেগুলি ক�
 msgid "Wednesday"
 msgstr "বুধবার"
 
-#: src/intro/intro.tsx:24
+#: src/screens/intro/intro.tsx:24
 msgid "Welcome"
 msgstr "স্বাগত"
 
@@ -1523,7 +1555,7 @@ msgid "Wifi"
 msgstr "ওয়াইফাই"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:112
-#: src/utils/dialogs.ts:19
+#: src/utils/dialogs.ts:20
 msgid "Yes"
 msgstr "হ্যাঁ"
 
