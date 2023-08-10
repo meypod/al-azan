@@ -62,11 +62,15 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   private TelephonyStateListener telephonyStateListener;
   private PhoneStateListener phoneStateListener;
   private int currentState = TelephonyManager.CALL_STATE_IDLE;
+  private VolumeChangeReceiver volumeChangeReceiver;
 
   @Override
   public void onCreate() {
     super.onCreate();
-    registerReceiver(new VolumeChangeReceiver(), new IntentFilter("android.media.VOLUME_CHANGED_ACTION"));
+    if (volumeChangeReceiver == null) {
+      volumeChangeReceiver = new VolumeChangeReceiver();
+      registerReceiver(volumeChangeReceiver, new IntentFilter("android.media.VOLUME_CHANGED_ACTION"));
+    }
   }
 
   @Nullable
@@ -387,6 +391,9 @@ public class MediaPlayerService extends HeadlessJsTaskService implements
   public void destroy() {
     releasePlayer();
     destroyCallStateListener();
+    if (volumeChangeReceiver != null) {
+      unregisterReceiver(volumeChangeReceiver);
+    }
     stopForeground(true);
     stopSelf();
   }
