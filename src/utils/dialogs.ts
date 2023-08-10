@@ -1,4 +1,5 @@
 import {t} from '@lingui/macro';
+import notifee from '@notifee/react-native';
 import {Alert} from 'react-native';
 import {isLocationEnabled, openLocationSettings} from '@/modules/activity';
 
@@ -53,4 +54,27 @@ export async function askForLocationService(message?: string) {
   } else {
     return locationEnabled;
   }
+}
+
+export function showBatteryOptimizationReminder() {
+  return new Promise(resolve => {
+    Alert.alert(
+      t`Reminder`,
+      t`It seems that you have imported a backup, don't forget to disable battery optimizations for this app`,
+      [
+        {
+          text: t`Show me`,
+          style: 'default',
+          onPress: () =>
+            notifee.openBatteryOptimizationSettings().then(resolve),
+          isPreferred: true,
+        },
+        {
+          text: t`Okay`,
+          style: 'cancel',
+          onPress: () => resolve(undefined),
+        },
+      ],
+    );
+  });
 }

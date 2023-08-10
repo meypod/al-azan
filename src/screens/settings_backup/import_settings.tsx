@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import {FormControl, IFormControlProps, Button, Spinner} from 'native-base';
+import {Button, Spinner, IButtonProps} from 'native-base';
 import {useCallback, useState} from 'react';
 // eslint-disable-next-line import/no-named-as-default
 import {ToastAndroid} from 'react-native';
@@ -10,8 +10,11 @@ import {restart} from '@/modules/activity';
 import {storage} from '@/store/mmkv';
 import {ReminderStore, REMINDER_STORAGE_KEY} from '@/store/reminder';
 import {settings, SettingsStore, SETTINGS_STORAGE_KEY} from '@/store/settings';
+import {setItem} from '@/store/simple';
 
-export function ImportSettings(props: IFormControlProps) {
+export const SettingsWasImportedKey = 'settings_was_imported';
+
+export function ImportSettings(props: IButtonProps) {
   const [busy, setBusy] = useState(false);
   const importSettings = useCallback(async () => {
     if (busy) return;
@@ -66,6 +69,7 @@ export function ImportSettings(props: IFormControlProps) {
       if (foundLocale) {
         loadLocale(foundLocale);
       }
+      setItem(SettingsWasImportedKey, {});
       ToastAndroid.show(t`Import successful`, ToastAndroid.SHORT);
       setTimeout(restart, 200);
     } catch (e: any) {
@@ -79,11 +83,8 @@ export function ImportSettings(props: IFormControlProps) {
   }, [busy]);
 
   return (
-    <FormControl fontSize="md" {...props}>
-      <FormControl.Label>{t`Import app data`}</FormControl.Label>
-      <Button onPress={importSettings}>
-        {busy ? <Spinner color="lime.300" /> : t`Import`}
-      </Button>
-    </FormControl>
+    <Button onPress={importSettings} {...props}>
+      {busy ? <Spinner color="lime.300" /> : t`Import`}
+    </Button>
   );
 }

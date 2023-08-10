@@ -36,36 +36,43 @@ async function askNotificationPermission() {
       notifySettings.authorizationStatus === AuthorizationStatus.DENIED &&
       !settings.getState().DONT_ASK_PERMISSION_NOTIFICATIONS
     ) {
-      Alert.alert(
-        t`Notifications Permission`,
-        t`To see notifications about adhan, we need your permission.`,
-        [
+      await new Promise(resolve => {
+        Alert.alert(
+          t`Notifications Permission`,
+          t`To see notifications about adhan, we need your permission.`,
+          [
+            {
+              text: t`Don't ask again`,
+              style: 'destructive',
+              onPress: () => {
+                settings.setState({DONT_ASK_PERMISSION_NOTIFICATIONS: true});
+                resolve(undefined);
+              },
+            },
+            {
+              text: t`Okay`,
+              style: 'default',
+              onPress: () =>
+                PermissionsAndroid.request(
+                  PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
+                )
+                  .then(result => {
+                    if (result === 'denied') {
+                      notifee.openNotificationSettings();
+                    } else {
+                      permissionGiven = true;
+                      setNextAdhan();
+                    }
+                  })
+                  .finally(() => resolve(undefined)),
+            },
+          ],
           {
-            text: t`Don't ask again`,
-            style: 'destructive',
-            onPress: () =>
-              settings.setState({DONT_ASK_PERMISSION_NOTIFICATIONS: true}),
+            cancelable: true,
+            onDismiss: () => resolve(undefined),
           },
-          {
-            text: t`Okay`,
-            style: 'default',
-            onPress: () =>
-              PermissionsAndroid.request(
-                PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
-              ).then(result => {
-                if (result === 'denied') {
-                  notifee.openNotificationSettings();
-                } else {
-                  permissionGiven = true;
-                  setNextAdhan();
-                }
-              }),
-          },
-        ],
-        {
-          cancelable: true,
-        },
-      );
+        );
+      });
     }
   }
   if (permissionGiven) {
@@ -165,29 +172,36 @@ async function askAlarmPermission() {
     notifySettings.android.alarm === AndroidNotificationSetting.DISABLED &&
     !settings.getState().DONT_ASK_PERMISSION_ALARM
   ) {
-    Alert.alert(
-      t`Alarms Permission`,
-      t`On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well.`,
-      [
+    await new Promise(resolve => {
+      Alert.alert(
+        t`Alarms Permission`,
+        t`On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well.`,
+        [
+          {
+            text: t`Don't ask again`,
+            style: 'destructive',
+            onPress: () => {
+              settings.setState({DONT_ASK_PERMISSION_ALARM: true});
+              resolve(undefined);
+            },
+          },
+          {
+            text: t`Not now`,
+            style: 'cancel',
+            onPress: () => resolve(undefined),
+          },
+          {
+            text: t`Show settings`,
+            style: 'default',
+            onPress: () => notifee.openAlarmPermissionSettings().then(resolve),
+          },
+        ],
         {
-          text: t`Don't ask again`,
-          style: 'destructive',
-          onPress: () => settings.setState({DONT_ASK_PERMISSION_ALARM: true}),
+          cancelable: true,
+          onDismiss: () => resolve(undefined),
         },
-        {
-          text: t`Not now`,
-          style: 'cancel',
-        },
-        {
-          text: t`Show settings`,
-          style: 'default',
-          onPress: () => notifee.openAlarmPermissionSettings(),
-        },
-      ],
-      {
-        cancelable: true,
-      },
-    );
+      );
+    });
   }
 }
 
@@ -197,35 +211,42 @@ async function askPhoneStatePermission() {
   );
 
   if (!granted && !settings.getState().DONT_ASK_PERMISSION_PHONE_STATE) {
-    Alert.alert(
-      t`Phone State Permission`,
-      t`To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature.`,
-      [
+    await new Promise(resolve => {
+      Alert.alert(
+        t`Phone State Permission`,
+        t`To stop playing adhan when you receive a call, we need to read your phone state. not allowing this permission simply disables the feature.`,
+        [
+          {
+            text: t`Don't ask again`,
+            style: 'destructive',
+            onPress: () => {
+              settings.setState({DONT_ASK_PERMISSION_PHONE_STATE: true});
+              resolve(undefined);
+            },
+          },
+          {
+            text: t`Okay`,
+            style: 'default',
+            onPress: () =>
+              PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.READ_PHONE_STATE,
+              )
+                .then(result => {
+                  if (result === 'denied') {
+                    openApplicationSettings();
+                  } else {
+                    setNextAdhan();
+                  }
+                })
+                .finally(() => resolve(undefined)),
+          },
+        ],
         {
-          text: t`Don't ask again`,
-          style: 'destructive',
-          onPress: () =>
-            settings.setState({DONT_ASK_PERMISSION_PHONE_STATE: true}),
+          cancelable: true,
+          onDismiss: () => resolve(undefined),
         },
-        {
-          text: t`Okay`,
-          style: 'default',
-          onPress: () =>
-            PermissionsAndroid.request(
-              PermissionsAndroid.PERMISSIONS.READ_PHONE_STATE,
-            ).then(result => {
-              if (result === 'denied') {
-                openApplicationSettings();
-              } else {
-                setNextAdhan();
-              }
-            }),
-        },
-      ],
-      {
-        cancelable: true,
-      },
-    );
+      );
+    });
   }
 }
 

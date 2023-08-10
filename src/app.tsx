@@ -15,7 +15,6 @@ import {CalculationAdjustmentsSettings} from './screens/settings_calculation_adj
 import {CalculationAdvancedSettings} from './screens/settings_calculation_advanced';
 import {NotificationAdvancedSettings} from './screens/settings_notifications_advanced';
 import {useNoInitialEffect} from './utils/hooks/use_no_initial_effect';
-import {shouldShowRamadanNotice, showRamadanAlert} from './utils/ramadan';
 import {OrientationLock} from '@/components/orientation_lock';
 import {QadaHistoryToggle} from '@/components/qada_history_toggle';
 import {
@@ -128,12 +127,6 @@ export function App(): JSX.Element {
       replace('FullscreenAlarm');
     }
   }, [isPlayingAudio]);
-
-  useEffect(() => {
-    if (appIntroDone && shouldShowRamadanNotice()) {
-      showRamadanAlert();
-    }
-  }, [appIntroDone]);
 
   useNoInitialEffect(() => {
     if (appIntroDone) {

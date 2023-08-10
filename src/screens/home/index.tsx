@@ -17,13 +17,17 @@ import {isRTL} from '@/i18n';
 import {navigate} from '@/navigation/root_navigation';
 
 import {translateRoute} from '@/navigation/types';
+import {SettingsWasImportedKey} from '@/screens/settings_backup/import_settings';
 import {calcSettings} from '@/store/calculation';
 import {homeStore} from '@/store/home';
 import {settings} from '@/store/settings';
+import {deleteItem, getItem} from '@/store/simple';
 
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
+import {showBatteryOptimizationReminder} from '@/utils/dialogs';
 import {useNoInitialEffect} from '@/utils/hooks/use_no_initial_effect';
 import {askPermissions} from '@/utils/permission';
+import {shouldShowRamadanNotice, showRamadanAlert} from '@/utils/ramadan';
 
 type DayDetails = {
   dateString: string;
@@ -81,7 +85,16 @@ export function Home() {
   const day = useMemo(() => getDayDetails(currentDate), [currentDate]);
 
   useEffect(() => {
-    void askPermissions();
+    askPermissions().finally(async () => {
+      if (getItem(SettingsWasImportedKey)) {
+        await showBatteryOptimizationReminder().then(() => {
+          deleteItem(SettingsWasImportedKey);
+        });
+      }
+      if (shouldShowRamadanNotice()) {
+        showRamadanAlert();
+      }
+    });
   }, []);
 
   useNoInitialEffect(() => {
