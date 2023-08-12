@@ -182,6 +182,7 @@ export function Home() {
             mt="2"
             justifyContent="space-between"
             alignItems="center"
+            flexWrap="wrap"
             w="100%"
             flexDirection={isRTL ? 'row-reverse' : 'row'}>
             <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
