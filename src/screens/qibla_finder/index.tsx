@@ -1,6 +1,6 @@
 import {t} from '@lingui/macro';
 import MapLibreGL from '@maplibre/maplibre-react-native';
-import {Stack, Button, HStack, Text} from 'native-base';
+import {Button, HStack, Text, ScrollView, Spacer} from 'native-base';
 import {useCallback} from 'react';
 import {Alert} from 'react-native';
 import {SafeArea} from '@/components/safe_area';
@@ -84,7 +84,7 @@ export function QiblaFinder() {
 
   return (
     <SafeArea>
-      <Stack p="3">
+      <ScrollView p="3">
         <Text textAlign="center" fontSize="xl">
           {t`Disclaimer`}
         </Text>
@@ -92,14 +92,20 @@ export function QiblaFinder() {
           {t`Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong.`}
         </Text>
         {understood ? (
-          <HStack justifyContent="space-around">
-            <Button onPress={navigateToQiblaMap}>{t`Use Map`}</Button>
-            <Button onPress={navigateToQiblaCompass}>{t`Use Compass`}</Button>
+          <HStack justifyContent="space-between" flexWrap="wrap" px="3">
+            <Button
+              onPress={navigateToQiblaMap}
+              mr="2"
+              mb="2">{t`Use Map`}</Button>
+            <Button
+              onPress={navigateToQiblaCompass}
+              mb="2">{t`Use Compass`}</Button>
           </HStack>
         ) : (
           <Button onPress={onUnderstood}>{t`I Understand`}</Button>
         )}
-      </Stack>
+        <Spacer mb="8" />
+      </ScrollView>
     </SafeArea>
   );
 }
