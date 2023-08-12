@@ -202,6 +202,7 @@ export function Home() {
                 _text={{
                   adjustsFontSizeToFit: true,
                   fontSize: 'xs',
+                  minimumFontScale: 0.8,
                   noOfLines: 1,
                   _light: {
                     color: 'primary.700',
