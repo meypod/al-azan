@@ -19,6 +19,7 @@ function PrayerTimeRow({
 }: TimeRowProps) {
   return (
     <Stack
+      flexWrap="wrap"
       flexDirection="row"
       width="100%"
       py="2"
