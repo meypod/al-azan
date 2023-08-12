@@ -154,10 +154,11 @@ export function MonthlyView() {
 
   return (
     <SafeArea>
-      <Stack flex={1}>
+      <Stack flex={1} alignItems="stretch">
         <HStack
           justifyContent="space-between"
           alignItems="center"
+          flexWrap="wrap"
           w="100%"
           flexDirection={isRTL ? 'row-reverse' : 'row'}>
           <Button variant="ghost" onPress={decreaseCurrentDateByOneMonth}>
@@ -177,6 +178,7 @@ export function MonthlyView() {
               flexShrink={1}
               _text={{
                 adjustsFontSizeToFit: true,
+                minimumFontScale: 0.8,
                 fontSize: 'xs',
                 noOfLines: 1,
                 _light: {
