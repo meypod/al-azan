@@ -232,6 +232,7 @@ export function Home() {
           />
           <Text
             key={impactfulSettings.SELECTED_ARABIC_CALENDAR}
+            fontSize="md"
             textAlign="center">
             {day.arabicDate}
           </Text>
