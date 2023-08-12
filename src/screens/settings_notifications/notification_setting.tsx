@@ -379,7 +379,7 @@ export const NotificationSetting = function NotificationSetting({
           notifyFullActive={notifyFullActive}
         />
 
-        <Spacer flexGrow={0} px="0.5" />
+        <Spacer flexGrow={0} px="1" />
 
         <SoundToggleButton
           prayerName={prayerName}
