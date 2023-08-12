@@ -1,12 +1,13 @@
 import {t} from '@lingui/macro';
-import {Button, FlatList, HStack, Stack, Text, Divider} from 'native-base';
 import {
-  PropsWithChildren,
-  memo,
-  useCallback,
-  useMemo,
-  useLayoutEffect,
-} from 'react';
+  Button,
+  FlatList,
+  HStack,
+  Stack,
+  Text,
+  Divider as SolidDivider,
+} from 'native-base';
+import {PropsWithChildren, memo, useCallback, useMemo} from 'react';
 import {ListRenderItemInfo} from 'react-native';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
@@ -20,11 +21,10 @@ import {RestoreIcon} from '@/assets/icons/material_icons/restore';
 import {UpdateIcon} from '@/assets/icons/material_icons/update';
 import {SafeArea} from '@/components/safe_area';
 import {isRTL} from '@/i18n';
-import {setRouteParams} from '@/navigation/root_navigation';
 import {CachedPrayerTimes} from '@/store/adhan_calc_cache';
 import {calcSettings} from '@/store/calculation';
 import {monthlyViewStore} from '@/store/monthly_view';
-import {settings} from '@/store/settings';
+import {useSettings} from '@/store/settings';
 import {
   getTime,
   getMonthDates,
@@ -88,7 +88,10 @@ export function MonthlyView() {
     [],
   );
 
-  const isHijriView = useStore(settings, s => s.HIJRI_MONTHLY_VIEW);
+  const [isHijriView, setHijri] = useSettings('HIJRI_MONTHLY_VIEW');
+  const toggleHijri = useCallback(() => {
+    setHijri(!isHijriView);
+  }, [isHijriView, setHijri]);
 
   const monthPrayerTimes = useMemo(
     () =>
@@ -104,12 +107,6 @@ export function MonthlyView() {
     () => getMonthDetails(currentDate, isHijriView),
     [currentDate, isHijriView],
   );
-
-  useLayoutEffect(() => {
-    setRouteParams({
-      subtitle: month.yearAndMonth,
-    });
-  }, [month]);
 
   const renderItem = useCallback(
     ({item}: ListRenderItemInfo<CachedPrayerTimes>) => {
@@ -155,6 +152,15 @@ export function MonthlyView() {
   return (
     <SafeArea>
       <Stack flex={1} alignItems="stretch">
+        <Button
+          py="0.5"
+          mb="0.5"
+          mt="0.5"
+          mx="1"
+          variant="outline"
+          onPress={toggleHijri}>
+          {month.yearAndMonth}
+        </Button>
         <HStack
           justifyContent="space-between"
           alignItems="center"
@@ -201,7 +207,7 @@ export function MonthlyView() {
             </Stack>
           </Button>
         </HStack>
-        <Divider borderColor="coolGray.300" mb="2"></Divider>
+        <SolidDivider borderColor="coolGray.300" mb="2"></SolidDivider>
         <FlatList
           flex={1}
           ListHeaderComponent={listHeaderComponent}

@@ -5,8 +5,8 @@ import {
   DefaultTheme,
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Button, HStack} from 'native-base';
-import {useCallback, useEffect, useLayoutEffect, useMemo} from 'react';
+import {HStack} from 'native-base';
+import {useEffect, useLayoutEffect, useMemo} from 'react';
 import {useStore} from 'zustand';
 import {AdvancedCustomAdhanToggle} from './components/advanced_custom_adhan_toggle';
 import {FavoriteLocations} from './screens/favorite_locations';
@@ -43,7 +43,7 @@ import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
 import {WidgetSettings} from '@/screens/settings_widget';
-import {settings, useSettings} from '@/store/settings';
+import {settings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
@@ -81,27 +81,6 @@ const SettingsAdhanHeaderRight = function SettingsAdhanHeaderRight() {
     <HStack>
       <AdvancedCustomAdhanToggle fontSize="sm"></AdvancedCustomAdhanToggle>
     </HStack>
-  );
-};
-
-const SubtitleHeaderRight = function SubtitleHeaderRight() {
-  const [hijri, setHijri] = useSettings('HIJRI_MONTHLY_VIEW');
-  const toggleHijri = useCallback(() => {
-    setHijri(!hijri);
-  }, [hijri, setHijri]);
-  const {subtitle = ''} = getCurrentRoute().params || ({} as any);
-  return (
-    <Button
-      variant="outline"
-      _text={{color: 'darkText'}}
-      _dark={{
-        _text: {
-          color: 'lightText',
-        },
-      }}
-      onPress={toggleHijri}>
-      {subtitle}
-    </Button>
   );
 };
 
@@ -169,11 +148,7 @@ export function App(): JSX.Element {
             name="FavoriteLocations"
             component={FavoriteLocations}
           />
-          <Stack.Screen
-            name="MonthlyView"
-            component={MonthlyView}
-            options={{headerRight: SubtitleHeaderRight}}
-          />
+          <Stack.Screen name="MonthlyView" component={MonthlyView} />
           <Stack.Screen
             name="QadaCounter"
             component={QadaCounter}

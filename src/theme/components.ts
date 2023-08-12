@@ -43,4 +43,18 @@ export const components: Theme['components'] | (Record<string, any> & {}) = {
       },
     },
   },
+  Button: {
+    variants: {
+      outline: {
+        _text: {
+          color: 'darkText',
+        },
+        _dark: {
+          _text: {
+            color: 'lightText',
+          },
+        },
+      },
+    },
+  },
 };
