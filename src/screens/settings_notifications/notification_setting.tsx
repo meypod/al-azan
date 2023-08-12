@@ -1,7 +1,15 @@
 import {t} from '@lingui/macro';
 import keys from 'lodash/keys';
-import {HStack, Text, Button, VStack, Checkbox, Stack} from 'native-base';
-import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
+import {
+  HStack,
+  Text,
+  Button,
+  VStack,
+  Checkbox,
+  Stack,
+  Spacer,
+  IStackProps,
+} from 'native-base';
 import {memo, useCallback, useMemo} from 'react';
 import {Prayer, translatePrayer} from '@/adhan';
 import {ExpandCircleDownIcon} from '@/assets/icons/material_icons/expand_circle_down';
@@ -288,8 +296,8 @@ export const NotificationSetting = function NotificationSetting({
   prayer,
   onExpandChanged,
   expanded,
-  ...vStackProps
-}: NotificationSettingProps & IVStackProps) {
+  ...stackProps
+}: NotificationSettingProps & IStackProps) {
   const [notify, setNotify] = useAlarmSettings(
     getAdhanSettingKey(prayer, 'notify') as 'FAJR_NOTIFY', // any notify/sound key to get the types
   );
@@ -347,41 +355,56 @@ export const NotificationSetting = function NotificationSetting({
   );
 
   return (
-    <VStack
+    <Stack
       backgroundColor={'coolGray.400:alpha.20'}
       borderRadius={4}
       mb="1"
-      {...vStackProps}>
-      <HStack alignItems="center" py="1" pl="2" pr="1" mb={expanded ? -2 : 0}>
-        <Text width="1/4" flex={0} flexShrink={0}>
-          {prayerName}
-        </Text>
-        <HStack justifyContent="center" alignItems="center" flex={1} px="2">
-          <NotificationToggleButton
-            prayerName={prayerName}
-            toggleNotify={toggleNotify}
-            notify={notify}
-            notifyFullActive={notifyFullActive}
-          />
-          <HStack flex={0} flexGrow={0} mx="1" />
-          <SoundToggleButton
-            prayerName={prayerName}
-            toggleSound={toggleSound}
-            sound={sound}
-            soundFullActive={soundFullActive}
-          />
-        </HStack>
+      {...stackProps}>
+      <HStack
+        alignItems="center"
+        py="1"
+        pl="2"
+        pr="1"
+        flexWrap="wrap"
+        justifyContent="space-between"
+        mb={expanded ? -2 : 0}>
+        <Text flex={1}>{prayerName}</Text>
 
-        <HStack justifyContent="flex-end" flexShrink={1}>
-          <Button onPress={toggleExpanded} variant="unstyled" size="sm" p="0">
-            <ExpandCircleDownIcon
-              size="2xl"
-              style={{
-                transform: [{rotate: expanded ? '180deg' : '0deg'}],
-              }}
-            />
-          </Button>
-        </HStack>
+        <Spacer flexGrow={0} px="0.5" />
+
+        <NotificationToggleButton
+          prayerName={prayerName}
+          toggleNotify={toggleNotify}
+          notify={notify}
+          notifyFullActive={notifyFullActive}
+        />
+
+        <Spacer flexGrow={0} px="0.5" />
+
+        <SoundToggleButton
+          prayerName={prayerName}
+          toggleSound={toggleSound}
+          sound={sound}
+          soundFullActive={soundFullActive}
+        />
+
+        <Spacer flexGrow={0} px="0.5" />
+
+        <Button
+          onPress={toggleExpanded}
+          variant="unstyled"
+          size="sm"
+          p="0"
+          flex={0}
+          flexGrow={0}
+          flexShrink={1}>
+          <ExpandCircleDownIcon
+            size="2xl"
+            style={{
+              transform: [{rotate: expanded ? '180deg' : '0deg'}],
+            }}
+          />
+        </Button>
       </HStack>
       <CollapsibleSelector
         setNotifyProxy={setNotifyProxy}
@@ -390,6 +413,6 @@ export const NotificationSetting = function NotificationSetting({
         notify={notify}
         sound={sound}
       />
-    </VStack>
+    </Stack>
   );
 };
