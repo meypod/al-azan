@@ -131,14 +131,13 @@ export function Home() {
   return (
     <SafeArea>
       <ScrollView>
-        <Stack flex={1} alignItems="center" pb="4">
+        <Stack flex={1} alignItems="stretch" pb="4">
           <HStack
             mb="-3"
             px="3"
             justifyContent="space-between"
-            alignItems="center"
-            w="100%">
-            <Text py="1" onPress={goToMonthlyView}>
+            alignItems="center">
+            <Text py="1" onPress={goToMonthlyView} flex={1}>
               {day.dateString}
             </Text>
             <HStack alignItems="center">
@@ -229,7 +228,9 @@ export function Home() {
             prayerTimes={prayerTimes}
             settings={impactfulSettings}
           />
-          <Text key={impactfulSettings.SELECTED_ARABIC_CALENDAR}>
+          <Text
+            key={impactfulSettings.SELECTED_ARABIC_CALENDAR}
+            textAlign="center">
             {day.arabicDate}
           </Text>
           {location && (
