@@ -137,7 +137,8 @@ Translation to other languages has been done by these awesome people:
 
 #### French
 
-* Contributor has chosen to stay anonymous
+* First Contributor has chosen to stay anonymous
+* [@programer786](https://github.com/programer00112)
 
 #### Urdu
 
