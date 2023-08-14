@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-10 08:48+0330\n"
+"POT-Creation-Date: 2023-08-14 06:53+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,7 +45,7 @@ msgstr "90 دقيقة"
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "أذان"
 
-#: src/screens/settings_calculation_advanced/index.tsx:141
+#: src/screens/settings_calculation_advanced/index.tsx:139
 msgid "Abyad"
 msgstr "أبيض"
 
@@ -114,7 +114,7 @@ msgstr "إعدادات الحسابات المتقدمة"
 msgid "Advanced Settings"
 msgstr "إعدادات متقدمة"
 
-#: src/screens/settings_calculation_advanced/index.tsx:140
+#: src/screens/settings_calculation_advanced/index.tsx:138
 msgid "Ahmer"
 msgstr "أحمر"
 
@@ -166,7 +166,7 @@ msgstr "هل أنت متأكد أنك تريد حذف \"{itemName}\"؟"
 msgid "Are you sure you want to delete this?"
 msgstr "هل أنت متأكد أنك تريد حذف هذا؟"
 
-#: src/screens/settings_calculation_advanced/index.tsx:90
+#: src/screens/settings_calculation_advanced/index.tsx:88
 msgid "Asr Calculation"
 msgstr "طريقة حساب أذان العصر"
 
@@ -181,6 +181,10 @@ msgstr "يجب إظهار وقت صلاة واحد على الأقل"
 #: website/src/_includes/privacy-policy.tsx:48
 msgid "Attention"
 msgstr "انتباه"
+
+#: src/screens/settings_calculation_advanced/index.tsx:42
+msgid "Auto (Default)"
+msgstr "تلقائي (افتراضي)"
 
 #: src/screens/settings_notifications/bypass_dnd_setting.tsx:26
 msgid "Bypass \"Do Not Disturb\"?"
@@ -219,7 +223,7 @@ msgstr "إلغاء"
 msgid "Cancel download"
 msgstr "إلغاء التنزيل"
 
-#: src/screens/settings_calculation_advanced/index.tsx:92
+#: src/screens/settings_calculation_advanced/index.tsx:90
 msgid "Choose Asr Calculation Madhab"
 msgstr "اختر مذهب حساب أذان العصر"
 
@@ -228,7 +232,7 @@ msgstr "اختر مذهب حساب أذان العصر"
 msgid "Choose Calculation Method"
 msgstr "اختر طريقة الحساب"
 
-#: src/screens/settings_calculation_advanced/index.tsx:70
+#: src/screens/settings_calculation_advanced/index.tsx:68
 msgid "Choose High Latitude Setting"
 msgstr "اختر إعداد خط العرض العالي"
 
@@ -236,11 +240,11 @@ msgstr "اختر إعداد خط العرض العالي"
 msgid "Choose Language"
 msgstr "اختر اللغة"
 
-#: src/screens/settings_calculation_advanced/index.tsx:106
+#: src/screens/settings_calculation_advanced/index.tsx:104
 msgid "Choose Polar Resolution"
 msgstr "اختر دقة الأقطاب"
 
-#: src/screens/settings_calculation_advanced/index.tsx:135
+#: src/screens/settings_calculation_advanced/index.tsx:133
 msgid "Choose Shafaq method"
 msgstr "اختر طريقة شفق"
 
@@ -253,7 +257,7 @@ msgstr "اختر طريقة تقريب الحساب"
 msgid "Choose calendar type"
 msgstr "اختر نوع التقويم"
 
-#: src/screens/settings_calculation_advanced/index.tsx:53
+#: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "اختر طريقة حساب منتصف الليل"
 
@@ -282,11 +286,11 @@ msgstr "لا تحتوي بيانات الحافظة على إحداثيات"
 msgid "Close"
 msgstr "إغلاق"
 
-#: src/screens/settings_calculation_advanced/index.tsx:117
+#: src/screens/settings_calculation_advanced/index.tsx:115
 msgid "Closest City"
 msgstr "أقرب مدينة"
 
-#: src/screens/settings_calculation_advanced/index.tsx:121
+#: src/screens/settings_calculation_advanced/index.tsx:119
 msgid "Closest Date"
 msgstr "أقرب تاريخ"
 
@@ -342,7 +346,7 @@ msgstr "وقت التنبيه المخصص القادم"
 msgid "Dark"
 msgstr "داکن"
 
-#: src/screens/monthly_view/index.tsx:219
+#: src/screens/monthly_view/index.tsx:227
 msgid "Date"
 msgstr "التاريخ"
 
@@ -389,6 +393,7 @@ msgstr "تنويه"
 
 #: src/screens/fullscreen_alarm/index.tsx:153
 #: src/tasks/set_alarm.ts:106
+#: src/utils/dialogs.ts:73
 msgid "Dismiss"
 msgstr "تجاهل"
 
@@ -514,7 +519,7 @@ msgstr "إصلاح المشاكل الشائعة"
 msgid "Friday"
 msgstr "الجمعة"
 
-#: src/screens/settings_calculation_advanced/index.tsx:139
+#: src/screens/settings_calculation_advanced/index.tsx:137
 msgid "General (default)"
 msgstr "عام (افتراضي)"
 
@@ -536,7 +541,7 @@ msgstr "ميلادي"
 msgid "Gulf region"
 msgstr "منطقة الخليج"
 
-#: src/screens/settings_calculation_advanced/index.tsx:100
+#: src/screens/settings_calculation_advanced/index.tsx:98
 msgid "Hanafi"
 msgstr "حنفي"
 
@@ -559,7 +564,7 @@ msgstr "إخفاء الأوقات التي لا تحتاجها"
 msgid "High"
 msgstr "عالي"
 
-#: src/screens/settings_calculation_advanced/index.tsx:68
+#: src/screens/settings_calculation_advanced/index.tsx:66
 msgid "High Latitude"
 msgstr "خط العرض العالي"
 
@@ -581,7 +586,7 @@ msgstr "المصغر و الإشعارات"
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 msgstr "ومع ذلك، عند استخدام الخدمات عبر الإنترنت، مثل خريطة القبلة، قد ينقل التطبيق الحد الأدنى من البيانات الضرورية التي قد تحدد أو لا تحدد هويتك بشكل فريد. يرجى وضع ذلك في الاعتبار أثناء استخدام التطبيق."
 
-#: src/screens/qibla_finder/index.tsx:100
+#: src/screens/qibla_finder/index.tsx:105
 msgid "I Understand"
 msgstr "أفهم"
 
@@ -677,11 +682,15 @@ msgstr "إسلامي (مدني)"
 msgid "Islamic (tabular)"
 msgstr "إسلامي (جدولي)"
 
+#: src/adhan/calculation_methods.ts:50
+msgid "Islamic Society of North America (ISNA)"
+msgstr "الجمعية الإسلامية لأمريكا الشمالية (ISNA)"
+
 #: src/utils/dialogs.ts:63
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
-msgstr "يبدو أنك قمت باستيراد نسخة احتياطية ، فلا تنس تعطيل تحسينات البطارية لهذا التطبيق"
+msgstr "يبدو أنك قمت بإستيراد نسخة احتياطية، لا تنسى تعطيل تحسين البطارية لهذا التطبيق"
 
-#: src/utils/date.ts:503
+#: src/utils/date.ts:495
 msgid "Just now"
 msgstr "الآن"
 
@@ -781,11 +790,11 @@ msgstr "العديد من الخيارات لحساب الأذان"
 msgid "Medium"
 msgstr "متوسط"
 
-#: src/screens/settings_calculation_advanced/index.tsx:76
+#: src/screens/settings_calculation_advanced/index.tsx:74
 msgid "Middle of the Night"
 msgstr "منتصف الليل"
 
-#: src/screens/settings_calculation_advanced/index.tsx:51
+#: src/screens/settings_calculation_advanced/index.tsx:49
 msgid "Midnight Method"
 msgstr "طريقة منتصف الليل"
 
@@ -821,8 +830,8 @@ msgid "Name"
 msgstr "اسم"
 
 #: src/screens/settings_calculation_advanced/index.tsx:43
-msgid "Nearest (Default)"
-msgstr "أقرب (افتراضي)"
+msgid "Nearest"
+msgstr "الأقرب"
 
 #: src/screens/qada_counter/edit_counter_modal.tsx:109
 msgid "New Counter"
@@ -843,11 +852,11 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:223
+#: src/screens/home/index.tsx:224
 msgid "Next Day"
 msgstr "اليوم التالي"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:206
 msgid "Next Month"
 msgstr "الشهر القادم"
 
@@ -865,11 +874,11 @@ msgstr "لايوجد بيانات"
 msgid "No Results"
 msgstr "لا يوجد نتائج"
 
-#: src/screens/settings_calculation_advanced/index.tsx:46
+#: src/screens/settings_calculation_advanced/index.tsx:44
 msgid "None"
-msgstr "لا أحد"
+msgstr "لا شيء"
 
-#: src/screens/settings_calculation_advanced/index.tsx:74
+#: src/screens/settings_calculation_advanced/index.tsx:72
 msgid "None (Automatic)"
 msgstr "لا شيء (تلقائي)"
 
@@ -884,8 +893,8 @@ msgstr "يُرجى ملاحظة أنه نظرًا لأخطاء البرمجيا�
 #: src/components/audio_picker.tsx:73
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
-#: src/screens/settings_notifications/notification_setting.tsx:170
-#: src/screens/settings_notifications/notification_setting.tsx:270
+#: src/screens/settings_notifications/notification_setting.tsx:178
+#: src/screens/settings_notifications/notification_setting.tsx:278
 msgid "Notification"
 msgstr "إشعار"
 
@@ -907,7 +916,6 @@ msgstr "غير مفعّل"
 
 #: src/screens/qibla_finder/index.tsx:36
 #: src/screens/qibla_finder/index.tsx:53
-#: src/utils/dialogs.ts:73
 #: src/utils/dialogs.ts:40
 #: src/utils/permission.ts:53
 #: src/utils/permission.ts:228
@@ -923,7 +931,7 @@ msgstr "على أندرويد 12 والأحدث، يحتاج التطبيق أي
 msgid "Once"
 msgstr "مرة واحدة"
 
-#: src/screens/settings_calculation_advanced/index.tsx:80
+#: src/screens/settings_calculation_advanced/index.tsx:78
 msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
@@ -1007,7 +1015,7 @@ msgstr "يُرجى تمكين خدمة الموقع"
 msgid "Please note that enabling this option may cause adhan and reminders to fire with a delay or not at all in some cases. Enable this with caution."
 msgstr "يرجى ملاحظة أن تمكين هذا الخيار قد يتسبب في تأخير أو عدم إطلاق الأذان والتذكير في بعض الحالات. يرجى تفعيله بحذر."
 
-#: src/screens/settings_calculation_advanced/index.tsx:104
+#: src/screens/settings_calculation_advanced/index.tsx:102
 msgid "Polar Resolution"
 msgstr "دقة الأقطاب"
 
@@ -1037,7 +1045,7 @@ msgstr "اضغط لتحديد طريقة"
 msgid "Prev Day"
 msgstr "اليوم السابق"
 
-#: src/screens/monthly_view/index.tsx:167
+#: src/screens/monthly_view/index.tsx:174
 msgid "Prev Month"
 msgstr "الشهر السابق"
 
@@ -1091,10 +1099,6 @@ msgstr "شهر رمضان ينتهي،"
 msgid "Ramadan is near,"
 msgstr "شهر رمضان قريب،"
 
-#: src/adhan/calculation_methods.ts:50
-msgid "Referred to as the ISNA method"
-msgstr "الطريقة المشار إليها بـ \"ISNA\" تشير إلى طريقة حساب أوقات الصلاة المعتمدة من قبل الجمعية الإسلامية في أمريكا الشمالية."
-
 #: src/tasks/update_widgets.ts:21
 msgid "Remaining till"
 msgstr "المتبقي حتى"
@@ -1116,7 +1120,7 @@ msgid "Repeat"
 msgstr "يكرر"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:235
+#: src/screens/monthly_view/index.tsx:243
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "إعدادات مطلوبة غير مكتملة. لكي يتمكن التطبيق من عرض أوقات الصلاة، يجب عليك تهيئتها من الإعدادات لاحقًا."
 
@@ -1145,7 +1149,7 @@ msgstr "بحث"
 msgid "Secondary Calendar"
 msgstr "التقويم الثانوي"
 
-#: src/screens/home/index.tsx:242
+#: src/screens/home/index.tsx:246
 msgid "See favorite locations"
 msgstr "شاهد المواقع المفضلة"
 
@@ -1185,18 +1189,18 @@ msgstr "تعيين صوت أذان مخصص"
 msgid "Set reminders before or after a prayer time"
 msgstr "اضبط التذكيرات قبل أو بعد وقت الصلاة"
 
-#: src/screens/settings_calculation_advanced/index.tsx:127
+#: src/screens/settings_calculation_advanced/index.tsx:125
 msgid "Shafaq"
 msgstr "شفق"
 
-#: src/screens/settings_calculation_advanced/index.tsx:129
+#: src/screens/settings_calculation_advanced/index.tsx:127
 msgid ""
 "Shafaq is used by the MoonsightingCommittee method to \n"
 "determine what type of twilight to use in order to\n"
 "determine the time for Isha"
 msgstr "يُستخدم الشفق بواسطة طريقة \"لجنة رؤية الهلال\" لتحديد نوع الشفق الذي يجب استخدامه لتحديد وقت العشاء."
 
-#: src/screens/settings_calculation_advanced/index.tsx:97
+#: src/screens/settings_calculation_advanced/index.tsx:95
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "شافعي ، مالكي ، حنبلي (افتراضي)"
 
@@ -1228,7 +1232,7 @@ msgstr "هل يهتز الهاتف عندما يبدأ الأذان أو الت�
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:215
+#: src/screens/home/index.tsx:216
 msgid "Show Today"
 msgstr "عرض اليوم"
 
@@ -1237,7 +1241,7 @@ msgstr "عرض اليوم"
 msgid "Show countdown?"
 msgstr "عرض العد التنازلي؟"
 
-#: src/screens/monthly_view/index.tsx:190
+#: src/screens/monthly_view/index.tsx:198
 msgid "Show current"
 msgstr "عرض الحالي"
 
@@ -1293,8 +1297,8 @@ msgid ""
 "In that case disable any power saving option for the app."
 msgstr "بعض الأجهزة تحتاج إلى إعدادات إضافية داخل مدير الطاقة لمنع التطبيق من الإغلاق في الخلفية. في هذه الحالة ، قم بتعطيل أي خيار لتوفير الطاقة للتطبيق"
 
-#: src/screens/settings_notifications/notification_setting.tsx:234
-#: src/screens/settings_notifications/notification_setting.tsx:274
+#: src/screens/settings_notifications/notification_setting.tsx:242
+#: src/screens/settings_notifications/notification_setting.tsx:282
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:238
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:240
 msgid "Sound"
@@ -1317,11 +1321,11 @@ msgstr "قف"
 msgid "Sunday"
 msgstr "الأحد"
 
-#: src/screens/settings_calculation_advanced/index.tsx:58
+#: src/screens/settings_calculation_advanced/index.tsx:56
 msgid "Sunset to Fajr (Default)"
 msgstr "من غروب الشمس إلى الفجر (افتراضي)"
 
-#: src/screens/settings_calculation_advanced/index.tsx:62
+#: src/screens/settings_calculation_advanced/index.tsx:60
 msgid "Sunset to Sunrise"
 msgstr "من غروب الشمس إلى شروقها"
 
@@ -1339,7 +1343,7 @@ msgstr "شمسي تايلاندي"
 
 #: src/screens/intro/slides/welcome.tsx:10
 msgid "Thanks for choosing this app! There are things you need to do before you can start using this app."
-msgstr "شكرا لاختيار هذا التطبيق! هناك أشياء تحتاج إلى القيام بها قبل أن تتمكن من استخدام هذا التطبيق."
+msgstr "شكرا لاختيار هذا التطبيق! هناك إرشادات قد تكون مفيدة قبل أن تستخدام هذا التطبيق."
 
 #: src/adhan/calculation_methods.ts:62
 msgid "The Gulf Region (Dubai)"
@@ -1424,7 +1428,7 @@ msgstr "إيقاف تشغيل السجل"
 msgid "Turn history on"
 msgstr "تشغيل السجل (التاريخ)"
 
-#: src/screens/settings_calculation_advanced/index.tsx:84
+#: src/screens/settings_calculation_advanced/index.tsx:82
 msgid "Twilight Angle"
 msgstr "زاوية الشفق"
 
@@ -1448,7 +1452,7 @@ msgstr "خطأ غير معروف"
 msgid "Unreliable"
 msgstr "غير موثق"
 
-#: src/screens/settings_calculation_advanced/index.tsx:113
+#: src/screens/settings_calculation_advanced/index.tsx:111
 msgid "Unresolved (default)"
 msgstr "لم يتم حلها (افتراضي)"
 
@@ -1456,7 +1460,7 @@ msgstr "لم يتم حلها (افتراضي)"
 msgid "Unsupported"
 msgstr "غير مدعوم"
 
-#: src/screens/settings_calculation_advanced/index.tsx:47
+#: src/screens/settings_calculation_advanced/index.tsx:45
 msgid "Up"
 msgstr "أعلى"
 
@@ -1473,11 +1477,11 @@ msgstr "تحدیث المصغّر"
 msgid "Use 24-Hour format"
 msgstr "استخدام تنسيق 24 ساعة"
 
-#: src/screens/qibla_finder/index.tsx:97
+#: src/screens/qibla_finder/index.tsx:102
 msgid "Use Compass"
 msgstr "استخدم البوصلة"
 
-#: src/screens/qibla_finder/index.tsx:96
+#: src/screens/qibla_finder/index.tsx:99
 msgid "Use Map"
 msgstr "استخدم الخريطة"
 
@@ -1629,7 +1633,7 @@ msgstr "عدد الدقائق التي ستضاف إلى الأوقات المح
 msgid "after"
 msgstr "بعد"
 
-#: src/utils/date.ts:508
+#: src/utils/date.ts:500
 msgid "ago"
 msgstr "منذ"
 
@@ -1666,19 +1670,19 @@ msgstr "حساب"
 msgid "counter.fast"
 msgstr "صيام"
 
-#: src/utils/date.ts:13
+#: src/utils/date.ts:8
 msgid "date.day"
 msgstr "يوم"
 
-#: src/utils/date.ts:17
+#: src/utils/date.ts:12
 msgid "date.hour"
 msgstr "ساعة"
 
-#: src/utils/date.ts:21
+#: src/utils/date.ts:16
 msgid "date.minute"
 msgstr "دقيقة"
 
-#: src/utils/date.ts:25
+#: src/utils/date.ts:20
 msgid "date.second"
 msgstr "ثانية"
 
@@ -1748,7 +1752,7 @@ msgstr "هل وقت الصلاة مخفي؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:508
+#: src/utils/date.ts:500
 msgid "later"
 msgstr "لاحقاً"
 
@@ -1866,10 +1870,10 @@ msgstr "{durationInMinutes} دقيقة بعد ال{prayer}"
 msgid "{durationInMinutes} min before {prayer}"
 msgstr "{durationInMinutes} دقيقة قبل ال{prayer}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:178
+#: src/screens/settings_notifications/notification_setting.tsx:186
 msgid "{prayerName} notification will be shown"
 msgstr "سيتم عرض إشعار ال{prayerName}"
 
-#: src/screens/settings_notifications/notification_setting.tsx:243
+#: src/screens/settings_notifications/notification_setting.tsx:251
 msgid "{prayerName} sound will be played"
 msgstr "سيتم تشغيل صوت ال{prayerName}"

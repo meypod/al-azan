@@ -12,7 +12,7 @@ Caractéristiques de l'application:
 
 * Définir l'audio personnalisé pour l'Adhan
 
-* Sélectionnez un son Adhan différent pour le Fajr
+* Sélectionnez un son Adhan différent pour Fajr
 
 * En plus des cinq prières quotidiennes, il y a des réglages pour le lever du soleil, le coucher du soleil, minuit et la prière de nuit (Tahajjud)
 
@@ -35,5 +35,5 @@ Caractéristiques de l'application:
 Répositoire open source:
 https://github.com/meypod/al-azan
 
-Puisque nous n'utilisons aucune sorte de tracker ou de crash analytics, merci de nous faire part de tout problème ou suggestion sur notre répositoire GitHub:
+Puisque nous n'utilisons aucune sorte de traqueur ou de crash analytics, merci de nous faire part de tout problème ou suggestion sur notre répositoire GitHub:
 https://github.com/meypod/al-azan/issues
