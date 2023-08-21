@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-17 04:28+0330\n"
+"POT-Creation-Date: 2023-08-21 16:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -346,7 +346,7 @@ msgstr "Benutzerdefinierte bevorstehende Alarmzeit"
 msgid "Dark"
 msgstr "Dunkel"
 
-#: src/screens/monthly_view/index.tsx:227
+#: src/screens/monthly_view/index.tsx:226
 msgid "Date"
 msgstr "Datum"
 
@@ -854,11 +854,11 @@ msgstr "Neue Erinnerung"
 msgid "Next"
 msgstr "Weiter"
 
-#: src/screens/home/index.tsx:224
+#: src/screens/home/index.tsx:222
 msgid "Next Day"
 msgstr "Nächster Tag"
 
-#: src/screens/monthly_view/index.tsx:206
+#: src/screens/monthly_view/index.tsx:205
 msgid "Next Month"
 msgstr "Nächster Monat"
 
@@ -1043,11 +1043,11 @@ msgstr "Zum Suchen drücken"
 msgid "Press to select a method"
 msgstr "Zur Auswahl einer Methode drücken"
 
-#: src/screens/home/index.tsx:192
+#: src/screens/home/index.tsx:190
 msgid "Prev Day"
 msgstr "Voriger Tag"
 
-#: src/screens/monthly_view/index.tsx:174
+#: src/screens/monthly_view/index.tsx:173
 msgid "Prev Month"
 msgstr "Voriger Monat"
 
@@ -1122,7 +1122,7 @@ msgid "Repeat"
 msgstr "Wiederholen"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:243
+#: src/screens/monthly_view/index.tsx:242
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Die erforderlichen Einstellungen sind unvollständig. Damit die App die Gebetszeiten anzeigen kann, müssen Sie diese später in den Einstellungen konfigurieren."
 
@@ -1153,7 +1153,7 @@ msgstr "Suchen"
 msgid "Secondary Calendar"
 msgstr "Sekundärer Kalender"
 
-#: src/screens/home/index.tsx:246
+#: src/screens/home/index.tsx:244
 msgid "See favorite locations"
 msgstr "Lieblingsorte anzeigen"
 
@@ -1239,7 +1239,7 @@ msgstr "Soll das Telefon vibrieren, wenn der Adhan oder eine Erinnerung abgespie
 msgid "Show Adhan Options"
 msgstr "Adhan-Optionen anzeigen"
 
-#: src/screens/home/index.tsx:216
+#: src/screens/home/index.tsx:214
 msgid "Show Today"
 msgstr "Heute anzeigen"
 
@@ -1248,7 +1248,7 @@ msgstr "Heute anzeigen"
 msgid "Show countdown?"
 msgstr "Countdown anzeigen?"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:197
 msgid "Show current"
 msgstr "Heute anzeigen"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-17 04:28+0330\n"
+"POT-Creation-Date: 2023-08-21 16:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -346,7 +346,7 @@ msgstr "زمان دلخواه هشدار بعدی"
 msgid "Dark"
 msgstr "تاریک"
 
-#: src/screens/monthly_view/index.tsx:227
+#: src/screens/monthly_view/index.tsx:226
 msgid "Date"
 msgstr "تاریخ"
 
@@ -856,11 +856,11 @@ msgstr "یادآوری جدید"
 msgid "Next"
 msgstr "بعدی"
 
-#: src/screens/home/index.tsx:224
+#: src/screens/home/index.tsx:222
 msgid "Next Day"
 msgstr "روز بعد"
 
-#: src/screens/monthly_view/index.tsx:206
+#: src/screens/monthly_view/index.tsx:205
 msgid "Next Month"
 msgstr "ماه بعد"
 
@@ -1045,11 +1045,11 @@ msgstr "برای جستجو لمس کنید"
 msgid "Press to select a method"
 msgstr "برای انتخاب لمس کنید"
 
-#: src/screens/home/index.tsx:192
+#: src/screens/home/index.tsx:190
 msgid "Prev Day"
 msgstr "روز قبل"
 
-#: src/screens/monthly_view/index.tsx:174
+#: src/screens/monthly_view/index.tsx:173
 msgid "Prev Month"
 msgstr "ماه قبل"
 
@@ -1124,7 +1124,7 @@ msgid "Repeat"
 msgstr "تکرار"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:243
+#: src/screens/monthly_view/index.tsx:242
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "تنظیمات مورد نیاز ناقص هستند. برای اینکه برنامه اوقات شرعی را نشان دهد، بعداً باید آن را از صفحه تنظیمات تنظیم کنید."
 
@@ -1153,7 +1153,7 @@ msgstr "جستجو"
 msgid "Secondary Calendar"
 msgstr "تقویم ثانویه"
 
-#: src/screens/home/index.tsx:246
+#: src/screens/home/index.tsx:244
 msgid "See favorite locations"
 msgstr "مکان های مورد علاقه را ببینید"
 
@@ -1236,7 +1236,7 @@ msgstr "آیا هنگام شروع پخش اذان یا یادآوری، تلف�
 msgid "Show Adhan Options"
 msgstr "نمایش گزینه های اذان"
 
-#: src/screens/home/index.tsx:216
+#: src/screens/home/index.tsx:214
 msgid "Show Today"
 msgstr "نمایش امروز"
 
@@ -1245,7 +1245,7 @@ msgstr "نمایش امروز"
 msgid "Show countdown?"
 msgstr "شمارش معکوس نشان داده شود؟"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:197
 msgid "Show current"
 msgstr "نمایش فعلی"
 

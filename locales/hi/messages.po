@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-17 04:28+0330\n"
+"POT-Creation-Date: 2023-08-21 16:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -346,7 +346,7 @@ msgstr "कस्टम आगामी अलार्म समय"
 msgid "Dark"
 msgstr "अँधेरा"
 
-#: src/screens/monthly_view/index.tsx:227
+#: src/screens/monthly_view/index.tsx:226
 msgid "Date"
 msgstr "तारीख"
 
@@ -852,11 +852,11 @@ msgstr "नया अनुस्मारक"
 msgid "Next"
 msgstr "अगला"
 
-#: src/screens/home/index.tsx:224
+#: src/screens/home/index.tsx:222
 msgid "Next Day"
 msgstr "अगले दिन"
 
-#: src/screens/monthly_view/index.tsx:206
+#: src/screens/monthly_view/index.tsx:205
 msgid "Next Month"
 msgstr "अगले महीने"
 
@@ -1041,11 +1041,11 @@ msgstr "खोजने के लिए दबाएँ"
 msgid "Press to select a method"
 msgstr "कोई विधि चुनने के लिए दबाएँ"
 
-#: src/screens/home/index.tsx:192
+#: src/screens/home/index.tsx:190
 msgid "Prev Day"
 msgstr "पिछला दिन"
 
-#: src/screens/monthly_view/index.tsx:174
+#: src/screens/monthly_view/index.tsx:173
 msgid "Prev Month"
 msgstr "पिछला महीना"
 
@@ -1120,7 +1120,7 @@ msgid "Repeat"
 msgstr "दोहराना"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:243
+#: src/screens/monthly_view/index.tsx:242
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "आवश्यक सेटिंग्स अपूर्ण हैं। ऐप में नमाज़ का वक्त दिखाने के लिए, आपको इसे बाद में सेटिंग्स से कॉन्फ़िगर करना होगा।"
 
@@ -1149,7 +1149,7 @@ msgstr "खोज"
 msgid "Secondary Calendar"
 msgstr "माध्यमिक कैलेंडर"
 
-#: src/screens/home/index.tsx:246
+#: src/screens/home/index.tsx:244
 msgid "See favorite locations"
 msgstr "पसंदीदा स्थान देखें"
 
@@ -1232,7 +1232,7 @@ msgstr "क्या अज़ान या रिमाइंडर बजन�
 msgid "Show Adhan Options"
 msgstr "अज़ान के विकल्प दिखाएं"
 
-#: src/screens/home/index.tsx:216
+#: src/screens/home/index.tsx:214
 msgid "Show Today"
 msgstr "आज दिखाएँ"
 
@@ -1241,7 +1241,7 @@ msgstr "आज दिखाएँ"
 msgid "Show countdown?"
 msgstr "उलटी गिनती दिखाएं?"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:197
 msgid "Show current"
 msgstr "वर्तमान दिखाएँ"
 

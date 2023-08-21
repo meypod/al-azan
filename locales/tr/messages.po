@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-17 04:28+0330\n"
+"POT-Creation-Date: 2023-08-21 16:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -346,7 +346,7 @@ msgstr "Özel yaklaşan alarm zamanı"
 msgid "Dark"
 msgstr "Koyu"
 
-#: src/screens/monthly_view/index.tsx:227
+#: src/screens/monthly_view/index.tsx:226
 msgid "Date"
 msgstr "Tarih"
 
@@ -852,11 +852,11 @@ msgstr "Yeni hatırlatıcı"
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:224
+#: src/screens/home/index.tsx:222
 msgid "Next Day"
 msgstr "Ertesi gün"
 
-#: src/screens/monthly_view/index.tsx:206
+#: src/screens/monthly_view/index.tsx:205
 msgid "Next Month"
 msgstr "Gelecek Ay"
 
@@ -1041,11 +1041,11 @@ msgstr "Aramak için basın"
 msgid "Press to select a method"
 msgstr "Bir yöntem seçmek için basın"
 
-#: src/screens/home/index.tsx:192
+#: src/screens/home/index.tsx:190
 msgid "Prev Day"
 msgstr "Önceki gün"
 
-#: src/screens/monthly_view/index.tsx:174
+#: src/screens/monthly_view/index.tsx:173
 msgid "Prev Month"
 msgstr "Önceki Ay"
 
@@ -1120,7 +1120,7 @@ msgid "Repeat"
 msgstr "Tekrarla"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:243
+#: src/screens/monthly_view/index.tsx:242
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Gerekli ayarlar tamamlanmadı. Uygulamanın namaz vakitlerini göstermesi için daha sonra ayarlardan yapılandırmanız gerekmektedir."
 
@@ -1149,7 +1149,7 @@ msgstr "Ara"
 msgid "Secondary Calendar"
 msgstr "İkincil takvim"
 
-#: src/screens/home/index.tsx:246
+#: src/screens/home/index.tsx:244
 msgid "See favorite locations"
 msgstr "Favori konumları görün"
 
@@ -1232,7 +1232,7 @@ msgstr "Ezan veya hatırlatma çalmaya başladığında telefon titremeli mi?"
 msgid "Show Adhan Options"
 msgstr "Ezan seçeneklerini göster"
 
-#: src/screens/home/index.tsx:216
+#: src/screens/home/index.tsx:214
 msgid "Show Today"
 msgstr "Bugünü göster"
 
@@ -1241,7 +1241,7 @@ msgstr "Bugünü göster"
 msgid "Show countdown?"
 msgstr "Geri sayım gösterilsin mi?"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:197
 msgid "Show current"
 msgstr "Geçerli göster"
 

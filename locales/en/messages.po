@@ -352,7 +352,7 @@ msgstr "Custom upcoming alarm time"
 msgid "Dark"
 msgstr "Dark"
 
-#: src/screens/monthly_view/index.tsx:227
+#: src/screens/monthly_view/index.tsx:226
 msgid "Date"
 msgstr "Date"
 
@@ -858,11 +858,11 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:224
+#: src/screens/home/index.tsx:222
 msgid "Next Day"
 msgstr "Next Day"
 
-#: src/screens/monthly_view/index.tsx:206
+#: src/screens/monthly_view/index.tsx:205
 msgid "Next Month"
 msgstr "Next Month"
 
@@ -1047,11 +1047,11 @@ msgstr "Press to search"
 msgid "Press to select a method"
 msgstr "Press to select a method"
 
-#: src/screens/home/index.tsx:192
+#: src/screens/home/index.tsx:190
 msgid "Prev Day"
 msgstr "Prev Day"
 
-#: src/screens/monthly_view/index.tsx:174
+#: src/screens/monthly_view/index.tsx:173
 msgid "Prev Month"
 msgstr "Prev Month"
 
@@ -1126,7 +1126,7 @@ msgid "Repeat"
 msgstr "Repeat"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:243
+#: src/screens/monthly_view/index.tsx:242
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 
@@ -1159,7 +1159,7 @@ msgstr "Search"
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
-#: src/screens/home/index.tsx:246
+#: src/screens/home/index.tsx:244
 msgid "See favorite locations"
 msgstr "See favorite locations"
 
@@ -1245,7 +1245,7 @@ msgstr "Should phone vibrate when adhan or reminder starts playing?"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:216
+#: src/screens/home/index.tsx:214
 msgid "Show Today"
 msgstr "Show Today"
 
@@ -1254,7 +1254,7 @@ msgstr "Show Today"
 msgid "Show countdown?"
 msgstr "Show countdown?"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:197
 msgid "Show current"
 msgstr "Show current"
 

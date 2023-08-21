@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-17 04:28+0330\n"
+"POT-Creation-Date: 2023-08-21 16:55+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -346,7 +346,7 @@ msgstr "وقت التنبيه المخصص القادم"
 msgid "Dark"
 msgstr "داکن"
 
-#: src/screens/monthly_view/index.tsx:227
+#: src/screens/monthly_view/index.tsx:226
 msgid "Date"
 msgstr "التاريخ"
 
@@ -852,11 +852,11 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:224
+#: src/screens/home/index.tsx:222
 msgid "Next Day"
 msgstr "اليوم التالي"
 
-#: src/screens/monthly_view/index.tsx:206
+#: src/screens/monthly_view/index.tsx:205
 msgid "Next Month"
 msgstr "الشهر القادم"
 
@@ -1041,11 +1041,11 @@ msgstr "اضغط للبحث"
 msgid "Press to select a method"
 msgstr "اضغط لتحديد طريقة"
 
-#: src/screens/home/index.tsx:192
+#: src/screens/home/index.tsx:190
 msgid "Prev Day"
 msgstr "اليوم السابق"
 
-#: src/screens/monthly_view/index.tsx:174
+#: src/screens/monthly_view/index.tsx:173
 msgid "Prev Month"
 msgstr "الشهر السابق"
 
@@ -1120,7 +1120,7 @@ msgid "Repeat"
 msgstr "يكرر"
 
 #: src/screens/intro/intro.tsx:120
-#: src/screens/monthly_view/index.tsx:243
+#: src/screens/monthly_view/index.tsx:242
 msgid "Required settings are incomplete. For app to show prayer times, You have to configure it from settings later."
 msgstr "إعدادات مطلوبة غير مكتملة. لكي يتمكن التطبيق من عرض أوقات الصلاة، يجب عليك تهيئتها من الإعدادات لاحقًا."
 
@@ -1149,7 +1149,7 @@ msgstr "بحث"
 msgid "Secondary Calendar"
 msgstr "التقويم الثانوي"
 
-#: src/screens/home/index.tsx:246
+#: src/screens/home/index.tsx:244
 msgid "See favorite locations"
 msgstr "شاهد المواقع المفضلة"
 
@@ -1232,7 +1232,7 @@ msgstr "هل يهتز الهاتف عندما يبدأ الأذان أو الت�
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:216
+#: src/screens/home/index.tsx:214
 msgid "Show Today"
 msgstr "عرض اليوم"
 
@@ -1241,7 +1241,7 @@ msgstr "عرض اليوم"
 msgid "Show countdown?"
 msgstr "عرض العد التنازلي؟"
 
-#: src/screens/monthly_view/index.tsx:198
+#: src/screens/monthly_view/index.tsx:197
 msgid "Show current"
 msgstr "عرض الحالي"
 
