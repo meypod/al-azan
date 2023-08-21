@@ -10,7 +10,7 @@ import {
   vibrate,
   vibrateStop,
 } from './modules/activity';
-import {isIntrusive, isSilent} from './modules/media_player';
+import {isSilent} from './modules/media_player';
 import {Reminder, reminderSettings} from './store/reminder';
 import {settings} from './store/settings';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
@@ -201,7 +201,7 @@ async function handleNotification({
           .catch(console.error);
       }
 
-      if (isIntrusive(options.sound)) {
+      if (options.intrusive) {
         // even though we could not check options.playSound and
         // this would simply become a noop,
         // we have to reduce the cpu usage as much as we can
