@@ -35,14 +35,11 @@ import {
 
 type MonthDetails = {
   yearAndMonth: string;
-  isThisMonth: boolean;
 };
 
 function getMonthDetails(date: Date, hijri: boolean): MonthDetails {
   return {
     yearAndMonth: getYearAndMonth(date, hijri),
-    isThisMonth:
-      getYearAndMonth(date, hijri) === getYearAndMonth(new Date(), hijri),
   };
 }
 
@@ -69,6 +66,7 @@ const TableCell = memo(function TableCell({
 export function MonthlyView() {
   const {
     currentDate,
+    isNotThisMonth,
     increaseCurrentDateByOneMonth,
     decreaseCurrentDateByOneMonth,
     resetCurrentDate,
@@ -76,6 +74,7 @@ export function MonthlyView() {
     monthlyViewStore,
     state => ({
       currentDate: state.date,
+      isNotThisMonth: state.isNotThisMonth,
       increaseCurrentDateByOneMonth: state.increaseCurrentDateByOneMonth,
       decreaseCurrentDateByOneMonth: state.decreaseCurrentDateByOneMonth,
       resetCurrentDate: state.resetCurrentDate,
@@ -175,7 +174,7 @@ export function MonthlyView() {
               <RestoreIcon size="lg" />
             </Stack>
           </Button>
-          {!month.isThisMonth && (
+          {isNotThisMonth && (
             <Button
               onPress={resetCurrentDate}
               variant="outline"

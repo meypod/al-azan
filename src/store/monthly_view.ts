@@ -5,64 +5,48 @@ import {addMonths, getYearAndMonth} from '@/utils/date';
 
 type AppState = {
   date: Date;
-  navigating: boolean;
+  isNotThisMonth: boolean;
   changeCurrentDate: (newDate: Date) => void;
   increaseCurrentDateByOneMonth: () => void;
   decreaseCurrentDateByOneMonth: () => void;
-  updateCurrentDate: () => void;
   resetCurrentDate: () => void;
 };
+
+function isNotThisMonth(date: Date, isHijri: boolean) {
+  return !(
+    getYearAndMonth(date, isHijri) === getYearAndMonth(new Date(), isHijri)
+  );
+}
 
 export const monthlyViewStore = createStore<AppState>()(
   immer<AppState>(set => ({
     date: new Date(),
-    navigating: false,
+    isNotThisMonth: false,
     isHijri: false,
     changeCurrentDate: (newDate: Date) =>
       set(draft => {
+        const isHijri = settings.getState().HIJRI_MONTHLY_VIEW;
         newDate.setHours(0, 0, 0, 0);
         draft.date = newDate;
-        draft.navigating = true;
+        draft.isNotThisMonth = isNotThisMonth(draft.date, isHijri);
       }),
     increaseCurrentDateByOneMonth: () =>
       set(draft => {
         const isHijri = settings.getState().HIJRI_MONTHLY_VIEW;
         draft.date = addMonths(draft.date, 1, isHijri);
-        if (
-          getYearAndMonth(draft.date, isHijri) ===
-          getYearAndMonth(new Date(), isHijri)
-        ) {
-          draft.navigating = false;
-        } else {
-          draft.navigating = true;
-        }
+        draft.isNotThisMonth = isNotThisMonth(draft.date, isHijri);
       }),
     decreaseCurrentDateByOneMonth: () =>
       set(draft => {
         const isHijri = settings.getState().HIJRI_MONTHLY_VIEW;
         draft.date = addMonths(draft.date, -1, isHijri);
-        if (
-          getYearAndMonth(draft.date, isHijri) ===
-          getYearAndMonth(new Date(), isHijri)
-        ) {
-          draft.navigating = false;
-        } else {
-          draft.navigating = true;
-        }
-      }),
-    updateCurrentDate: () =>
-      set(draft => {
-        const now = new Date();
-        let newDate = new Date(draft.date); // to update the current selected date
-        if (!draft.navigating) {
-          newDate = now;
-        }
-        draft.date = newDate;
+        draft.isNotThisMonth = isNotThisMonth(draft.date, isHijri);
       }),
     resetCurrentDate: () =>
       set(draft => {
+        const isHijri = settings.getState().HIJRI_MONTHLY_VIEW;
         draft.date = new Date();
-        draft.navigating = false;
+        draft.isNotThisMonth = isNotThisMonth(draft.date, isHijri);
       }),
   })),
 );

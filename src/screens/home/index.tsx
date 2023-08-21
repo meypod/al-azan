@@ -33,7 +33,6 @@ type DayDetails = {
   dateString: string;
   dayName: string;
   arabicDate: string;
-  isToday: boolean;
 };
 
 function getDayDetails(date: Date): DayDetails {
@@ -41,7 +40,6 @@ function getDayDetails(date: Date): DayDetails {
     dayName: getDayName(date),
     dateString: getFormattedDate(date),
     arabicDate: getArabicDate(date),
-    isToday: date.toDateString() === new Date().toDateString(),
   };
 }
 
@@ -50,15 +48,15 @@ export function Home() {
     currentDate,
     increaseCurrentDateByOne,
     decreaseCurrentDateByOne,
-    updateCurrentDate,
     resetCurrentDate,
+    isNotToday,
   } = useStore(
     homeStore,
     state => ({
       currentDate: state.date,
+      isNotToday: state.isNotToday,
       increaseCurrentDateByOne: state.increaseCurrentDateByOne,
       decreaseCurrentDateByOne: state.decreaseCurrentDateByOne,
-      updateCurrentDate: state.updateCurrentDate,
       resetCurrentDate: state.resetCurrentDate,
     }),
     shallow,
@@ -98,8 +96,8 @@ export function Home() {
   }, []);
 
   useNoInitialEffect(() => {
-    updateCurrentDate();
-  }, [impactfulSettings, updateCurrentDate]);
+    resetCurrentDate();
+  }, [impactfulSettings, resetCurrentDate]);
 
   const goToLocations = useCallback(() => navigate('FavoriteLocations'), []);
   const goToMonthlyView = useCallback(() => navigate('MonthlyView'), []);
@@ -193,7 +191,7 @@ export function Home() {
                 <RestoreIcon size="xl" />
               </Stack>
             </Button>
-            {!day.isToday && (
+            {isNotToday && (
               <Button
                 onPress={resetCurrentDate}
                 variant="outline"
