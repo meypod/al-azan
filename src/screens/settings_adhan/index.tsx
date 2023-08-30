@@ -153,6 +153,7 @@ export function AdhanSettings(props: IStackProps & AdhanSettingsProps) {
         'audio/opus',
         'audio/x-wav',
         'audio/webm',
+        'audio/m4a',
       ],
     })
       .then(val => {
