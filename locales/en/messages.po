@@ -68,14 +68,14 @@ msgstr "Ad-Free"
 msgid "Adaptive Charging"
 msgstr "Adaptive Charging"
 
-#: src/components/audio_picker.tsx:407
+#: src/components/audio_picker.tsx:408
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:243
+#: src/screens/settings_adhan/index.tsx:244
 msgid "Add"
 msgstr "Add"
 
-#: src/screens/settings_adhan/index.tsx:213
-#: src/screens/settings_adhan/index.tsx:221
+#: src/screens/settings_adhan/index.tsx:214
+#: src/screens/settings_adhan/index.tsx:222
 msgid "Add Custom Adhan"
 msgstr "Add Custom Adhan"
 
@@ -218,7 +218,7 @@ msgstr "Calendar"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
-#: src/screens/settings_adhan/index.tsx:240
+#: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:286
 #: src/tasks/set_pre_alarm.ts:60
@@ -830,8 +830,8 @@ msgstr "Muslim World League"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:224
-#: src/screens/settings_adhan/index.tsx:227
+#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:228
 msgid "Name"
 msgstr "Name"
 
@@ -875,7 +875,7 @@ msgstr "No"
 msgid "No Data"
 msgstr "No Data"
 
-#: src/components/audio_picker.tsx:423
+#: src/components/audio_picker.tsx:424
 #: src/components/AutocompleteInput.tsx:211
 msgid "No Results"
 msgstr "No Results"
@@ -1008,7 +1008,7 @@ msgstr "Persian"
 msgid "Phone State Permission"
 msgstr "Phone State Permission"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:380
 #: src/screens/settings_adhan/adhan_list_item.tsx:223
 msgid "Play"
 msgstr "Play"
@@ -1037,7 +1037,7 @@ msgstr "Prayer Times"
 msgid "Prayer list"
 msgstr "Prayer list"
 
-#: src/components/audio_picker.tsx:365
+#: src/components/audio_picker.tsx:366
 #: src/screens/settings_location/location_search.tsx:89
 #: src/screens/settings_location/location_search.tsx:108
 msgid "Press to search"
@@ -1150,7 +1150,7 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
-#: src/components/audio_picker.tsx:401
+#: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
 msgstr "Search"
@@ -1185,7 +1185,7 @@ msgid "Selected as fajr adhan"
 msgstr "Selected as fajr adhan"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:233
+#: src/screens/settings_adhan/index.tsx:234
 msgid "Selecting a name is required"
 msgstr "Selecting a name is required"
 
@@ -1328,7 +1328,7 @@ msgstr "Spiritual Administration of Muslims of Russia"
 msgid "Status"
 msgstr "Status"
 
-#: src/components/audio_picker.tsx:377
+#: src/components/audio_picker.tsx:378
 #: src/screens/settings_adhan/adhan_list_item.tsx:221
 msgid "Stop"
 msgstr "Stop"

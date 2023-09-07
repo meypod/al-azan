@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-27 11:34+0330\n"
+"POT-Creation-Date: 2023-09-07 13:52+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,14 +62,14 @@ msgstr "বিজ্ঞাপন-মুক্ত"
 msgid "Adaptive Charging"
 msgstr "অ্যাডাপ্টিভ চার্জিং"
 
-#: src/components/audio_picker.tsx:407
+#: src/components/audio_picker.tsx:408
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:243
+#: src/screens/settings_adhan/index.tsx:244
 msgid "Add"
 msgstr "যোগ করুন"
 
-#: src/screens/settings_adhan/index.tsx:213
-#: src/screens/settings_adhan/index.tsx:221
+#: src/screens/settings_adhan/index.tsx:214
+#: src/screens/settings_adhan/index.tsx:222
 msgid "Add Custom Adhan"
 msgstr "কাস্টম আযান যোগ করুন"
 
@@ -212,7 +212,7 @@ msgstr "ক্যালেন্ডার"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
-#: src/screens/settings_adhan/index.tsx:240
+#: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:286
 #: src/tasks/set_pre_alarm.ts:60
@@ -824,8 +824,8 @@ msgstr "মুসলিম বিশ্ব লীগ"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:224
-#: src/screens/settings_adhan/index.tsx:227
+#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:228
 msgid "Name"
 msgstr "নাম"
 
@@ -869,7 +869,7 @@ msgstr "না"
 msgid "No Data"
 msgstr "কোন ডেটা নেই"
 
-#: src/components/audio_picker.tsx:423
+#: src/components/audio_picker.tsx:424
 #: src/components/AutocompleteInput.tsx:211
 msgid "No Results"
 msgstr "কোন ফলাফল নেই"
@@ -1002,7 +1002,7 @@ msgstr "ফার্সি"
 msgid "Phone State Permission"
 msgstr "ফোন স্টেট অনুমতি"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:380
 #: src/screens/settings_adhan/adhan_list_item.tsx:223
 msgid "Play"
 msgstr "খেলা"
@@ -1031,7 +1031,7 @@ msgstr "সালাতের সময়"
 msgid "Prayer list"
 msgstr "প্রার্থনা তালিকা"
 
-#: src/components/audio_picker.tsx:365
+#: src/components/audio_picker.tsx:366
 #: src/screens/settings_location/location_search.tsx:89
 #: src/screens/settings_location/location_search.tsx:108
 msgid "Press to search"
@@ -1140,7 +1140,7 @@ msgstr "স্যামসাং ডিভাইসগুলির নিজস�
 msgid "Saturday"
 msgstr "শনিবার"
 
-#: src/components/audio_picker.tsx:401
+#: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
 msgstr "অনুসন্ধান করুন"
@@ -1175,7 +1175,7 @@ msgid "Selected as fajr adhan"
 msgstr "ফজরের আজান হিসেবে নির্বাচিত"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:233
+#: src/screens/settings_adhan/index.tsx:234
 msgid "Selecting a name is required"
 msgstr "একটি নাম নির্বাচন করা প্রয়োজন"
 
@@ -1312,7 +1312,7 @@ msgstr "রাশিয়ার মুসলমানদের আধ্যা�
 msgid "Status"
 msgstr "অবস্থা"
 
-#: src/components/audio_picker.tsx:377
+#: src/components/audio_picker.tsx:378
 #: src/screens/settings_adhan/adhan_list_item.tsx:221
 msgid "Stop"
 msgstr "থামো"

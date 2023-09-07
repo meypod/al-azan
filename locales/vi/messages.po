@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-27 11:34+0330\n"
+"POT-Creation-Date: 2023-09-07 13:52+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,14 +62,14 @@ msgstr "Không quảng cáo"
 msgid "Adaptive Charging"
 msgstr "Sạc Thích ứng"
 
-#: src/components/audio_picker.tsx:407
+#: src/components/audio_picker.tsx:408
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:243
+#: src/screens/settings_adhan/index.tsx:244
 msgid "Add"
 msgstr "Thêm"
 
-#: src/screens/settings_adhan/index.tsx:213
-#: src/screens/settings_adhan/index.tsx:221
+#: src/screens/settings_adhan/index.tsx:214
+#: src/screens/settings_adhan/index.tsx:222
 msgid "Add Custom Adhan"
 msgstr "Thêm Azan tùy chỉnh"
 
@@ -212,7 +212,7 @@ msgstr "Lịch"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
-#: src/screens/settings_adhan/index.tsx:240
+#: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:286
 #: src/tasks/set_pre_alarm.ts:60
@@ -230,7 +230,7 @@ msgstr "Chọn tính toán Asr Madhab"
 #: src/screens/settings_calculation/index.tsx:101
 #: src/screens/settings_notifications/vibration_setting.tsx:25
 msgid "Choose Calculation Method"
-msgstr "Chọn phương pháp tính toán"
+msgstr "Chọn phương pháp tính"
 
 #: src/screens/settings_calculation_advanced/index.tsx:68
 msgid "Choose High Latitude Setting"
@@ -242,7 +242,7 @@ msgstr "Chọn ngôn ngữ"
 
 #: src/screens/settings_calculation_advanced/index.tsx:104
 msgid "Choose Polar Resolution"
-msgstr "Chọn Độ phân giải Cực"
+msgstr "Chọn phân giải vùng Bắc & Nam cực"
 
 #: src/screens/settings_calculation_advanced/index.tsx:133
 msgid "Choose Shafaq method"
@@ -250,7 +250,7 @@ msgstr "Chọn phương pháp Shafaq"
 
 #: src/screens/settings_calculation_advanced/index.tsx:38
 msgid "Choose calculation rounding method"
-msgstr "Chọn phương pháp làm tròn tính toán"
+msgstr "Chọn phương pháp làm tròn"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:26
 #: src/screens/settings_display/calendar_secondary_settings.tsx:26
@@ -824,8 +824,8 @@ msgstr "Liên đoàn Hồi giáo Thế giới"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:224
-#: src/screens/settings_adhan/index.tsx:227
+#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:228
 msgid "Name"
 msgstr "Tên"
 
@@ -869,14 +869,14 @@ msgstr "Không"
 msgid "No Data"
 msgstr "Không có dữ liệu"
 
-#: src/components/audio_picker.tsx:423
+#: src/components/audio_picker.tsx:424
 #: src/components/AutocompleteInput.tsx:211
 msgid "No Results"
 msgstr "Không kết quả"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
 msgid "None"
-msgstr "Không có"
+msgstr "Không làm tròn"
 
 #: src/screens/settings_calculation_advanced/index.tsx:72
 msgid "None (Automatic)"
@@ -1002,7 +1002,7 @@ msgstr "Ba Tư"
 msgid "Phone State Permission"
 msgstr "Quyền Trạng thái Thiết bị"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:380
 #: src/screens/settings_adhan/adhan_list_item.tsx:223
 msgid "Play"
 msgstr "Phát"
@@ -1017,7 +1017,7 @@ msgstr "Lưu ý rằng việc bật tùy chọn này có thể khiến Azan và 
 
 #: src/screens/settings_calculation_advanced/index.tsx:102
 msgid "Polar Resolution"
-msgstr "Độ Phân giải Cực"
+msgstr "Phân giải vùng cực"
 
 #: src/screens/settings_fix_common_problems/index.tsx:69
 msgid "Power Manager"
@@ -1031,7 +1031,7 @@ msgstr "Giờ cầu nguyện"
 msgid "Prayer list"
 msgstr "Danh sách cầu nguyện"
 
-#: src/components/audio_picker.tsx:365
+#: src/components/audio_picker.tsx:366
 #: src/screens/settings_location/location_search.tsx:89
 #: src/screens/settings_location/location_search.tsx:108
 msgid "Press to search"
@@ -1140,7 +1140,7 @@ msgstr "Các thiết bị Samsung có Trình quản lý nguồn tùy chỉnh c�
 msgid "Saturday"
 msgstr "Thứ 7"
 
-#: src/components/audio_picker.tsx:401
+#: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
 msgstr "Tìm kiếm"
@@ -1175,7 +1175,7 @@ msgid "Selected as fajr adhan"
 msgstr "Đã chọn làm fajr azan"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:233
+#: src/screens/settings_adhan/index.tsx:234
 msgid "Selecting a name is required"
 msgstr "Chọn tên là bắt buộc"
 
@@ -1229,7 +1229,7 @@ msgstr "Ứng dụng có nên dừng phát Azan khi nhấn nút âm lượng kh�
 
 #: src/screens/settings_notifications/vibration_setting.tsx:21
 msgid "Should phone vibrate when adhan or reminder starts playing?"
-msgstr "Điện thoại có nên rung khi quảng cáo hoặc lời nhắc bắt đầu phát không?"
+msgstr "Điện thoại có nên rung khi azan hoặc lời nhắc bắt đầu phát không?"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:195
 msgid "Show Adhan Options"
@@ -1318,7 +1318,7 @@ msgstr "Cơ quan Quản lý Tinh thần của người Hồi giáo ở Nga"
 msgid "Status"
 msgstr "Trạng thái"
 
-#: src/components/audio_picker.tsx:377
+#: src/components/audio_picker.tsx:378
 #: src/screens/settings_adhan/adhan_list_item.tsx:221
 msgid "Stop"
 msgstr "Dừng"
@@ -1333,7 +1333,7 @@ msgstr "Hoàng hôn đến Fajr (Mặc định)"
 
 #: src/screens/settings_calculation_advanced/index.tsx:60
 msgid "Sunset to Sunrise"
-msgstr "Hoàng Hôn Đến Bình Minh"
+msgstr "Hoàng hôn đến mặt trời mọc"
 
 #: src/screens/settings_display/theme_settings.tsx:44
 msgid "System Default"
@@ -1460,7 +1460,7 @@ msgstr "Không tin cậy"
 
 #: src/screens/settings_calculation_advanced/index.tsx:111
 msgid "Unresolved (default)"
-msgstr "Chưa giải quyết (mặc định)"
+msgstr "Không dùng (mặc định)"
 
 #: src/screens/settings_display/language_settings.tsx:83
 msgid "Unsupported"
@@ -1468,7 +1468,7 @@ msgstr "Không hỗ trợ"
 
 #: src/screens/settings_calculation_advanced/index.tsx:45
 msgid "Up"
-msgstr "Hướng lên"
+msgstr "Lên"
 
 #. notification title
 #: src/tasks/set_pre_alarm.ts:46
@@ -1587,7 +1587,7 @@ msgstr "Bạn cũng có thể dán toạ độ từ khay nhớ tạm"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
-msgstr "Bạn có thể thay đổi lúc mà thông báo sắp tới hiện trước azan hoặc lời nhắc"
+msgstr "Bạn có thể thay đổi lúc mà thông báo báo thức sắp tới hiện trước azan và lời nhắc"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"

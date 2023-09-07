@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-08-27 11:34+0330\n"
+"POT-Creation-Date: 2023-09-07 13:52+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,14 +62,14 @@ msgstr "خالٍ من الإعلانات"
 msgid "Adaptive Charging"
 msgstr "الشحن المتكيف"
 
-#: src/components/audio_picker.tsx:407
+#: src/components/audio_picker.tsx:408
 #: src/components/new_audio_dialog.tsx:60
-#: src/screens/settings_adhan/index.tsx:243
+#: src/screens/settings_adhan/index.tsx:244
 msgid "Add"
 msgstr "إضافة"
 
-#: src/screens/settings_adhan/index.tsx:213
-#: src/screens/settings_adhan/index.tsx:221
+#: src/screens/settings_adhan/index.tsx:214
+#: src/screens/settings_adhan/index.tsx:222
 msgid "Add Custom Adhan"
 msgstr "إضافة أذان مخصص"
 
@@ -212,7 +212,7 @@ msgstr "التقويم"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
-#: src/screens/settings_adhan/index.tsx:240
+#: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:286
 #: src/tasks/set_pre_alarm.ts:60
@@ -824,8 +824,8 @@ msgstr "رابطة العالم الإسلامي"
 
 #: src/components/new_audio_dialog.tsx:43
 #: src/components/new_audio_dialog.tsx:46
-#: src/screens/settings_adhan/index.tsx:224
-#: src/screens/settings_adhan/index.tsx:227
+#: src/screens/settings_adhan/index.tsx:225
+#: src/screens/settings_adhan/index.tsx:228
 msgid "Name"
 msgstr "اسم"
 
@@ -869,7 +869,7 @@ msgstr "لا"
 msgid "No Data"
 msgstr "لايوجد بيانات"
 
-#: src/components/audio_picker.tsx:423
+#: src/components/audio_picker.tsx:424
 #: src/components/AutocompleteInput.tsx:211
 msgid "No Results"
 msgstr "لا يوجد نتائج"
@@ -1002,7 +1002,7 @@ msgstr "الفارسية"
 msgid "Phone State Permission"
 msgstr "إذن حالة الهاتف"
 
-#: src/components/audio_picker.tsx:379
+#: src/components/audio_picker.tsx:380
 #: src/screens/settings_adhan/adhan_list_item.tsx:223
 msgid "Play"
 msgstr "تشغيل"
@@ -1031,7 +1031,7 @@ msgstr "أوقات الصلاة"
 msgid "Prayer list"
 msgstr "قائمة الصلاة"
 
-#: src/components/audio_picker.tsx:365
+#: src/components/audio_picker.tsx:366
 #: src/screens/settings_location/location_search.tsx:89
 #: src/screens/settings_location/location_search.tsx:108
 msgid "Press to search"
@@ -1140,7 +1140,7 @@ msgstr "تحتوي أجهزة Samsung على مدير طاقة مخصص يسمى
 msgid "Saturday"
 msgstr "السبت"
 
-#: src/components/audio_picker.tsx:401
+#: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
 msgstr "بحث"
@@ -1175,7 +1175,7 @@ msgid "Selected as fajr adhan"
 msgstr "تم اختياره كأذان الفجر"
 
 #: src/components/new_audio_dialog.tsx:51
-#: src/screens/settings_adhan/index.tsx:233
+#: src/screens/settings_adhan/index.tsx:234
 msgid "Selecting a name is required"
 msgstr "اختيار الاسم مطلوب"
 
@@ -1312,7 +1312,7 @@ msgstr "الإدارة الروحية لمسلمي روسيا"
 msgid "Status"
 msgstr "حالة"
 
-#: src/components/audio_picker.tsx:377
+#: src/components/audio_picker.tsx:378
 #: src/screens/settings_adhan/adhan_list_item.tsx:221
 msgid "Stop"
 msgstr "قف"
