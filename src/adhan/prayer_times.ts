@@ -214,7 +214,7 @@ export function calculatePrayerTimes(date: Date) {
 
       // for rule (c)
       if (
-        prayerTimes.date!.getMonth() >= 2 ||
+        prayerTimes.date!.getMonth() > 2 &&
         prayerTimes.date!.getMonth() < 8
       ) {
         // between March (2) and September (8)
