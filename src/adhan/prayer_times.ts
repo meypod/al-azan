@@ -211,22 +211,6 @@ export function calculatePrayerTimes(date: Date) {
           prayerTimes.maghrib!.getTime() + 80 * 60 * 1000,
         );
       }
-
-      // for rule (c)
-      if (
-        prayerTimes.date!.getMonth() >= 2 &&
-        prayerTimes.date!.getMonth() < 8
-      ) {
-        // between March (2) and September (8)
-        let intervalTime =
-          prayerTimes.isha!.getTime() -
-          prayerTimes.maghrib!.getTime() +
-          10 * 60 * 1000;
-
-        prayerTimes.fajr = new Date(
-          prayerTimes.sunrise!.getTime() - intervalTime,
-        );
-      }
     }
   }
 
