@@ -131,18 +131,16 @@ function getPrayerTimesOptionsFromSettings() {
       break;
   }
 
-  if (calcMethodKey === 'MoonsightingCommittee') {
-    switch (shafaqCalcSetting) {
-      case Shafaq.Abyad:
-        prayerTimeOptions.calculationParameters.shafaq = Shafaq.Abyad;
-        break;
-      case Shafaq.Ahmer:
-        prayerTimeOptions.calculationParameters.shafaq = Shafaq.Ahmer;
-        break;
-      default:
-        prayerTimeOptions.calculationParameters.shafaq = Shafaq.General;
-        break;
-    }
+  switch (shafaqCalcSetting) {
+    case Shafaq.Abyad:
+      prayerTimeOptions.calculationParameters.shafaq = Shafaq.Abyad;
+      break;
+    case Shafaq.Ahmer:
+      prayerTimeOptions.calculationParameters.shafaq = Shafaq.Ahmer;
+      break;
+    default:
+      prayerTimeOptions.calculationParameters.shafaq = Shafaq.General;
+      break;
   }
 
   switch (polarCicleResolutionSetting) {
