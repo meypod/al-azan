@@ -183,7 +183,6 @@ export function EditReminderModal({
                         flex={1}
                         flexShrink={1}
                         int
-                        strict
                         value={durationInMinutes}
                         onChange={onReminderTimeChanged}
                       />
