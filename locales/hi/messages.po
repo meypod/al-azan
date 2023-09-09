@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-07 13:52+0330\n"
+"POT-Creation-Date: 2023-09-09 18:09+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -214,7 +214,7 @@ msgstr "पंचांग"
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:286
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "रद्द करें"
@@ -304,7 +304,7 @@ msgstr "कम्पास सेंसर अनुपलब्ध"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
 msgid "Confirm"
 msgstr "पुष्टि करें "
 
@@ -586,7 +586,7 @@ msgstr "होमस्क्रीन और अधिसूचना विज
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 msgstr "हालाँकि, किबला मानचित्र जैसी ऑनलाइन सेवाओं का उपयोग करते समय, ऐप न्यूनतम आवश्यक डेटा संचारित कर सकता है जो आपकी विशिष्ट पहचान कर भी सकता है और नहीं भी। कृपया ऐप का उपयोग करते समय इसे ध्यान में रखें।"
 
-#: src/screens/qibla_finder/index.tsx:105
+#: src/screens/qibla_finder/index.tsx:106
 msgid "I Understand"
 msgstr "मैं समझता हूँ"
 
@@ -936,7 +936,7 @@ msgid "One-Seventh of the Night"
 msgstr "रात का एक-सातवां हिस्सा"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:254
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
 msgid "Only once?"
 msgstr "सिर्फ एक बार?"
 
@@ -962,7 +962,7 @@ msgstr "ओपन सोर्स रिपॉजिटरी"
 msgid "Open-source"
 msgstr "खुला स्त्रोत"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:251
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
 msgid "Options"
 msgstr "विकल्प"
 
@@ -981,6 +981,10 @@ msgstr "ओरिएंटेशन लॉक: पोर्ट्रेट"
 #: src/components/orientation_lock.tsx:61
 msgid "Orientation: Unlocked"
 msgstr "दिशा: खुला"
+
+#: src/screens/qibla_finder/index.tsx:93
+msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
+msgstr "अन्य चुंबकीय उपकरण आपके फ़ोन के कंपास में हस्तक्षेप कर सकते हैं और आपके कंपास को अंशांकन की आवश्यकता हो सकती है।"
 
 #: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
@@ -1027,7 +1031,7 @@ msgstr "पावर मैनेजर"
 msgid "Prayer Times"
 msgstr "प्रार्थना का समय"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Prayer list"
 msgstr "प्रार्थना सूची"
 
@@ -1299,8 +1303,8 @@ msgstr "ऐप को बैकग्राउंड में बंद हो�
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:240
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
 msgid "Sound"
 msgstr "ध्वनि"
 
@@ -1380,7 +1384,7 @@ msgstr "गुरुवार"
 msgid "Time"
 msgstr "समय"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
 msgid "Time condition"
 msgstr "समय की स्थिति"
 
@@ -1477,11 +1481,11 @@ msgstr "विजेट अपडेट कर रहा है"
 msgid "Use 24-Hour format"
 msgstr "24 घंटे के प्रारूप का प्रयोग करें"
 
-#: src/screens/qibla_finder/index.tsx:102
+#: src/screens/qibla_finder/index.tsx:103
 msgid "Use Compass"
 msgstr "कम्पास का प्रयोग करें"
 
-#: src/screens/qibla_finder/index.tsx:99
+#: src/screens/qibla_finder/index.tsx:100
 msgid "Use Map"
 msgstr "मानचित्र का प्रयोग करें"
 
@@ -1626,7 +1630,7 @@ msgstr "के बारे में"
 msgid "adjustment.hint"
 msgstr "गणना किए गए समय में जोड़े जाने वाले मिनटों की संख्या"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:210
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
 msgid "after"
 msgstr "बाद में"
 
@@ -1643,7 +1647,7 @@ msgstr "असर "
 msgid "backup_settings"
 msgstr "बैकअप"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
 msgid "before"
 msgstr "इस से पहले"
 
@@ -1766,7 +1770,7 @@ msgstr "मग़रिब"
 msgid "masjid_an_nabawi"
 msgstr "मस्जिद अन नबवी"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:190
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
 msgid "minutes"
 msgstr "मिनट"
 

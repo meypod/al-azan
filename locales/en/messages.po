@@ -220,7 +220,7 @@ msgstr "Calendar"
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:286
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "Cancel"
@@ -310,7 +310,7 @@ msgstr "Compass sensor unavailable"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
 msgid "Confirm"
 msgstr "Confirm"
 
@@ -592,7 +592,7 @@ msgstr "Homescreen and notification Widgets"
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 msgstr "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 
-#: src/screens/qibla_finder/index.tsx:105
+#: src/screens/qibla_finder/index.tsx:106
 msgid "I Understand"
 msgstr "I Understand"
 
@@ -942,7 +942,7 @@ msgid "One-Seventh of the Night"
 msgstr "One-Seventh of the Night"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:254
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
 msgid "Only once?"
 msgstr "Only once?"
 
@@ -968,7 +968,7 @@ msgstr "Open source repository"
 msgid "Open-source"
 msgstr "Open-source"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:251
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
 msgid "Options"
 msgstr "Options"
 
@@ -987,6 +987,10 @@ msgstr "Orientation Lock: Portrait"
 #: src/components/orientation_lock.tsx:61
 msgid "Orientation: Unlocked"
 msgstr "Orientation: Unlocked"
+
+#: src/screens/qibla_finder/index.tsx:93
+msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
+msgstr "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
 
 #: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
@@ -1033,7 +1037,7 @@ msgstr "Power Manager"
 msgid "Prayer Times"
 msgstr "Prayer Times"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Prayer list"
 msgstr "Prayer list"
 
@@ -1315,8 +1319,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:240
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
 msgid "Sound"
 msgstr "Sound"
 
@@ -1396,7 +1400,7 @@ msgstr "Thursday"
 msgid "Time"
 msgstr "Time"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
 msgid "Time condition"
 msgstr "Time condition"
 
@@ -1493,11 +1497,11 @@ msgstr "Updating widgets"
 msgid "Use 24-Hour format"
 msgstr "Use 24-Hour format"
 
-#: src/screens/qibla_finder/index.tsx:102
+#: src/screens/qibla_finder/index.tsx:103
 msgid "Use Compass"
 msgstr "Use Compass"
 
-#: src/screens/qibla_finder/index.tsx:99
+#: src/screens/qibla_finder/index.tsx:100
 msgid "Use Map"
 msgstr "Use Map"
 
@@ -1645,7 +1649,7 @@ msgstr "About"
 msgid "adjustment.hint"
 msgstr "Number of minutes that will be added to the calculated times"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:210
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
 msgid "after"
 msgstr "after"
 
@@ -1662,7 +1666,7 @@ msgstr "Asr"
 msgid "backup_settings"
 msgstr "Backup"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
 msgid "before"
 msgstr "before"
 
@@ -1785,7 +1789,7 @@ msgstr "Maghrib"
 msgid "masjid_an_nabawi"
 msgstr "Masjid An Nabawi"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:190
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
 msgid "minutes"
 msgstr "minutes"
 

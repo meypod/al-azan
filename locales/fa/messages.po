@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-07 13:52+0330\n"
+"POT-Creation-Date: 2023-09-09 18:09+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -214,7 +214,7 @@ msgstr "تقویم"
 #: src/screens/qada_counter/edit_counter_modal.tsx:168
 #: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:286
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "لغو"
@@ -304,7 +304,7 @@ msgstr "سنسور قطب نما در دسترس نیست"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
 msgid "Confirm"
 msgstr "تایید"
 
@@ -586,7 +586,7 @@ msgstr "ویجت های صفحه نمایش و اعلان"
 msgid "However, When using online services, such as Qibla map, app may transmit minimum necessary data that may or may not uniquely identify you. Please keep this in mind while using the app."
 msgstr "با این حال، هنگام استفاده از سرویس‌های آنلاین، مانند نقشه قبله، برنامه ممکن است حداقل داده‌های لازم را منتقل کند که ممکن است شما را به طور منحصربه‌فرد شناسایی کند یا نکند. لطفاً هنگام استفاده از برنامه این را در نظر داشته باشید."
 
-#: src/screens/qibla_finder/index.tsx:105
+#: src/screens/qibla_finder/index.tsx:106
 msgid "I Understand"
 msgstr "متوجه ام"
 
@@ -940,7 +940,7 @@ msgid "One-Seventh of the Night"
 msgstr "یک هفتم شب"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:254
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
 msgid "Only once?"
 msgstr "فقط یک بار؟"
 
@@ -966,7 +966,7 @@ msgstr "مخزن اوپن سورس"
 msgid "Open-source"
 msgstr "اوپن سورس یا متن باز"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:251
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
 msgid "Options"
 msgstr "گزینه ها"
 
@@ -985,6 +985,10 @@ msgstr "قفل جهت: عمودی"
 #: src/components/orientation_lock.tsx:61
 msgid "Orientation: Unlocked"
 msgstr "جهت: قفل نشده"
+
+#: src/screens/qibla_finder/index.tsx:93
+msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
+msgstr "سایر دستگاه های مغناطیسی ممکن است با قطب نمای تلفن شما تداخل داشته باشند و قطب نمای شما ممکن است نیاز به تنظیم داشته باشد."
 
 #: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
@@ -1031,7 +1035,7 @@ msgstr "مدیریت انرژی"
 msgid "Prayer Times"
 msgstr "اوقات شرعی"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "Prayer list"
 msgstr "فهرست نمازها"
 
@@ -1303,8 +1307,8 @@ msgstr "برخی از دستگاه‌ها به تنظیمات اضافی در \"
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:238
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:240
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
 msgid "Sound"
 msgstr "صدا"
 
@@ -1384,7 +1388,7 @@ msgstr "پنج شنبه"
 msgid "Time"
 msgstr "وقت"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
 msgid "Time condition"
 msgstr "شرایط زمانی"
 
@@ -1481,11 +1485,11 @@ msgstr "در حال به روزرسانی ویجت ها"
 msgid "Use 24-Hour format"
 msgstr "استفاده از قالب 24 ساعته"
 
-#: src/screens/qibla_finder/index.tsx:102
+#: src/screens/qibla_finder/index.tsx:103
 msgid "Use Compass"
 msgstr "استفاده از قطب نما"
 
-#: src/screens/qibla_finder/index.tsx:99
+#: src/screens/qibla_finder/index.tsx:100
 msgid "Use Map"
 msgstr "استفاده از نقشه"
 
@@ -1633,7 +1637,7 @@ msgstr "درباره"
 msgid "adjustment.hint"
 msgstr "تعداد دقیقه هایی که به زمان های محاسبه شده اضافه می شود"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:210
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
 msgid "after"
 msgstr "بعد از"
 
@@ -1650,7 +1654,7 @@ msgstr "عصر"
 msgid "backup_settings"
 msgstr "پشتیبان گیری"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
 msgid "before"
 msgstr "قبل از"
 
@@ -1773,7 +1777,7 @@ msgstr "مغرب"
 msgid "masjid_an_nabawi"
 msgstr "مسجد النبی"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:190
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
 msgid "minutes"
 msgstr "دقیقه"
 
