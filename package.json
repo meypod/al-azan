@@ -5,7 +5,7 @@
   "scripts": {
     "android": "react-native run-android --no-packager",
     "ios": "react-native run-ios",
-    "start": "react-native start --host 127.0.0.1",
+    "start": "react-native start",
     "log": "react-native log-android",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
