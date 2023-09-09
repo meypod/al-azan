@@ -89,7 +89,8 @@ export function QiblaFinder() {
           {t`Disclaimer`}
         </Text>
         <Text mb="8" textAlign="justify">
-          {t`Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong.`}
+          {t`Note that due to software and hardware errors, Qibla direction shown by this app, particularly in compass mode, can be wrong.`}{' '}
+          {t`Other magnetic devices may interfere with your phone's compass and your compass may need calibration.`}
         </Text>
         {understood ? (
           <HStack justifyContent="space-between" flexWrap="wrap" px="3">
