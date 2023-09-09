@@ -193,25 +193,6 @@ export function calculatePrayerTimes(date: Date) {
   );
   prayerTimes.tahajjud = sunnahTimes.lastThirdOfTheNight;
 
-  // post fix for turkey
-  if (options.calcMethodKey === 'Turkey') {
-    // Diyanet appendix (a) and (b)
-    if (options.coordinates.latitude > 45) {
-      const oneThirdOfNightDurationMs = sunnahTimes.nightDuration / 3;
-
-      if (oneThirdOfNightDurationMs <= 80 * 60 * 1000) {
-        // 1 Hour and 20 min in milliseconds
-        prayerTimes.isha = new Date(
-          prayerTimes.maghrib!.getTime() + oneThirdOfNightDurationMs,
-        );
-      } else {
-        prayerTimes.isha = new Date(
-          prayerTimes.maghrib!.getTime() + 80 * 60 * 1000,
-        );
-      }
-    }
-  }
-
   return prayerTimes as Required<CachedPrayerTimes>;
 }
 
