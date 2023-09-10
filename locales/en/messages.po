@@ -407,7 +407,7 @@ msgstr "Dismiss"
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 
-#: src/adhan/calculation_methods.ts:92
+#: src/adhan/calculation_methods.ts:104
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Diyanet İşleri Başkanlığı, Turkey"
 
@@ -520,6 +520,14 @@ msgstr "Find My Location"
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "Fix Common Problems"
+
+#: src/adhan/calculation_methods.ts:92
+msgid "France angle 15"
+msgstr "France angle 15"
+
+#: src/adhan/calculation_methods.ts:98
+msgid "France angle 18"
+msgstr "France angle 18"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -700,11 +708,11 @@ msgstr "It seems that you have imported a backup, don't forget to disable batter
 msgid "Just now"
 msgstr "Just now"
 
-#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:128
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 
-#: src/adhan/calculation_methods.ts:136
+#: src/adhan/calculation_methods.ts:148
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 
@@ -804,9 +812,13 @@ msgstr "Middle of the Night"
 msgid "Midnight Method"
 msgstr "Midnight Method"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:134
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "Ministry of Religious Affairs and Wakfs, Algeria"
+
+#: src/adhan/calculation_methods.ts:154
+msgid "Ministry of Religious Affairs of Tunisia"
+msgstr "Ministry of Religious Affairs of Tunisia"
 
 #: src/screens/qibla_finder/index.tsx:58
 msgid "Mobile Data"
@@ -1221,11 +1233,11 @@ msgstr ""
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Shafi, Maliki, Hanbali (Default)"
 
-#: src/adhan/calculation_methods.ts:104
+#: src/adhan/calculation_methods.ts:116
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 
-#: src/adhan/calculation_methods.ts:110
+#: src/adhan/calculation_methods.ts:122
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
@@ -1324,7 +1336,7 @@ msgstr ""
 msgid "Sound"
 msgstr "Sound"
 
-#: src/adhan/calculation_methods.ts:98
+#: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Spiritual Administration of Muslims of Russia"
 

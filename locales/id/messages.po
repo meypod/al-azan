@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-09 18:09+0330\n"
+"POT-Creation-Date: 2023-09-10 17:23+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -401,7 +401,7 @@ msgstr "Hentikan"
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "Metode Diyanet yang disediakan di Al-Azan adalah perkiraan waktu resmi. Karena tidak ada dokumentasi yang cukup tersedia tentang bagaimana waktu-waktu tersebut dihitung secara tepat, waktu-waktu tersebut mungkin tidak sama dengan situs web resmi, terutama di luar Turki."
 
-#: src/adhan/calculation_methods.ts:92
+#: src/adhan/calculation_methods.ts:104
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "Presidensi Urusan Agama Republik Turki (Diyanet)"
 
@@ -514,6 +514,14 @@ msgstr "Temukan Lokasi Saya"
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "Memperbaiki Masalah Umum"
+
+#: src/adhan/calculation_methods.ts:92
+msgid "France angle 15"
+msgstr "Sudut Prancis 15"
+
+#: src/adhan/calculation_methods.ts:98
+msgid "France angle 18"
+msgstr "Sudut Prancis 18"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -694,11 +702,11 @@ msgstr "Sepertinya Anda telah mengimpor cadangan, jangan lupa untuk menonaktifka
 msgid "Just now"
 msgstr "Baru saja"
 
-#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:128
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 
-#: src/adhan/calculation_methods.ts:136
+#: src/adhan/calculation_methods.ts:148
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 
@@ -798,9 +806,13 @@ msgstr "Pertengahan malam"
 msgid "Midnight Method"
 msgstr "Metode Tengah Malam"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:134
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "Kementerian Agama dan Wakaf, Aljazair"
+
+#: src/adhan/calculation_methods.ts:154
+msgid "Ministry of Religious Affairs of Tunisia"
+msgstr "Kementerian Agama Tunisia"
 
 #: src/screens/qibla_finder/index.tsx:58
 msgid "Mobile Data"
@@ -1208,13 +1220,13 @@ msgstr "Shafaq digunakan metode Komite Moonsighting untuk menentukan jenis senja
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "Syafi'i, Maliki, Hanbali (Default)"
 
-#: src/adhan/calculation_methods.ts:104
+#: src/adhan/calculation_methods.ts:116
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr ""
 "Shia Ithna Ashari, Leva Institute, Qum\n"
 ""
 
-#: src/adhan/calculation_methods.ts:110
+#: src/adhan/calculation_methods.ts:122
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 
@@ -1310,7 +1322,7 @@ msgstr "Beberapa perangkat memerlukan pengaturan tambahan pada Power Manager unt
 msgid "Sound"
 msgstr "Suara"
 
-#: src/adhan/calculation_methods.ts:98
+#: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Administrasi Keagamaan Muslim Rusia"
 

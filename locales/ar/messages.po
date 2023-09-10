@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-09 18:09+0330\n"
+"POT-Creation-Date: 2023-09-10 17:23+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -401,7 +401,7 @@ msgstr "تجاهل"
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "طريقة \"الديانة\" المتوفرة في الأذان، تقريبية للأوقات الرسمية. نظرًا لعدم توفر وثائق كافية حول كيفية حساب الأوقات بدقة، فقد لا تتوافق الأوقات مع الموقع الرسمي، خاصة خارج تركيا."
 
-#: src/adhan/calculation_methods.ts:92
+#: src/adhan/calculation_methods.ts:104
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "رئاسة الشؤون الدينية، تركيا"
 
@@ -514,6 +514,14 @@ msgstr "ابحث عن موقعي"
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "إصلاح المشاكل الشائعة"
+
+#: src/adhan/calculation_methods.ts:92
+msgid "France angle 15"
+msgstr "فرنسا الزاوية 15"
+
+#: src/adhan/calculation_methods.ts:98
+msgid "France angle 18"
+msgstr "فرنسا الزاوية 18"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -694,11 +702,11 @@ msgstr "يبدو أنك قمت بإستيراد نسخة احتياطية، لا
 msgid "Just now"
 msgstr "الآن"
 
-#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:128
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "وزارة الشؤون الدينية لجمهورية إندونيسيا"
 
-#: src/adhan/calculation_methods.ts:136
+#: src/adhan/calculation_methods.ts:148
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "وزارة الشؤون الدينية (بروناي دار السلام)"
 
@@ -798,9 +806,13 @@ msgstr "منتصف الليل"
 msgid "Midnight Method"
 msgstr "طريقة منتصف الليل"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:134
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "وزارة الشؤون الدينية والأوقاف (الجزائر)"
+
+#: src/adhan/calculation_methods.ts:154
+msgid "Ministry of Religious Affairs of Tunisia"
+msgstr "وزارة الشؤون الدينية التونسية"
 
 #: src/screens/qibla_finder/index.tsx:58
 msgid "Mobile Data"
@@ -984,7 +996,7 @@ msgstr "الاتجاه: مفتوح"
 
 #: src/screens/qibla_finder/index.tsx:93
 msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
-msgstr "قد تتداخل الأجهزة المغناطيسية الأخرى مع بوصلة هاتفك وقد تحتاج البوصلة إلى المعايرة."
+msgstr "قد يتعارض الأجهزة المغناطيسية الأخرى مع بوصلة هاتفك وقد تحتاج بوصلتك إلى معايرة."
 
 #: src/constants/notification.ts:29
 msgid "PRE_ADHAN_CHANNEL_NAME"
@@ -1208,11 +1220,11 @@ msgstr "يُستخدم الشفق بواسطة طريقة \"لجنة رؤية ا
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "شافعي ، مالكي ، حنبلي (افتراضي)"
 
-#: src/adhan/calculation_methods.ts:104
+#: src/adhan/calculation_methods.ts:116
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "الشيعة الإثنا عشرية، معهد ليفا، قم"
 
-#: src/adhan/calculation_methods.ts:110
+#: src/adhan/calculation_methods.ts:122
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "الشيعة، معهد الجيوفيزياء، جامعة طهران"
 
@@ -1308,7 +1320,7 @@ msgstr "بعض الأجهزة تحتاج إلى إعدادات إضافية دا
 msgid "Sound"
 msgstr "صوت"
 
-#: src/adhan/calculation_methods.ts:98
+#: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "الإدارة الروحية لمسلمي روسيا"
 

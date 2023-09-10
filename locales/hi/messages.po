@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-09 18:09+0330\n"
+"POT-Creation-Date: 2023-09-10 17:23+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -401,7 +401,7 @@ msgstr "हटा दीजिए"
 msgid "Diyanet method provided in Al-Azan is an approximation of the official times. Since there's not enough documentation available on how the times are exactly calculated, times may not align with the official website, especially out of Turkey."
 msgstr "अल-अज़ान में प्रदान की गई डायनेट पद्धति आधिकारिक समय का एक अनुमान है। चूंकि समय की सटीक गणना कैसे की जाती है, इस पर पर्याप्त दस्तावेज उपलब्ध नहीं हैं, इसलिए समय आधिकारिक वेबसाइट के साथ संरेखित नहीं हो सकता है, खासकर तुर्की से बाहर।"
 
-#: src/adhan/calculation_methods.ts:92
+#: src/adhan/calculation_methods.ts:104
 msgid "Diyanet İşleri Başkanlığı, Turkey"
 msgstr "दियानेट्ज़ इसलेरी बशकांगलू, तुर्की"
 
@@ -514,6 +514,14 @@ msgstr "मेरा स्थान खोजें"
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "सामान्य समस्याओं को ठीक करें"
+
+#: src/adhan/calculation_methods.ts:92
+msgid "France angle 15"
+msgstr "फ़्रांस कोण 15"
+
+#: src/adhan/calculation_methods.ts:98
+msgid "France angle 18"
+msgstr "फ़्रांस कोण 18"
 
 #: src/components/week_day_selector.tsx:26
 msgid "Friday"
@@ -694,11 +702,11 @@ msgstr "ऐसा लगता है कि आपने बैकअप आय
 msgid "Just now"
 msgstr "बस अब"
 
-#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:128
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "केमेंट्रियन अगामा रिपब्लिक इंडोनेशिया (केमेनाग)"
 
-#: src/adhan/calculation_methods.ts:136
+#: src/adhan/calculation_methods.ts:148
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "केमेंट्रियन हाल एहवाल उगामा (ब्रुनेई दारुस्सलाम)"
 
@@ -798,9 +806,13 @@ msgstr "आधी रात में"
 msgid "Midnight Method"
 msgstr "आधी रात की विधि"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:134
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "धार्मिक मामलों और वक्फ मंत्रालय, अल्जीरिया"
+
+#: src/adhan/calculation_methods.ts:154
+msgid "Ministry of Religious Affairs of Tunisia"
+msgstr "ट्यूनीशिया के धार्मिक मामलों का मंत्रालय"
 
 #: src/screens/qibla_finder/index.tsx:58
 msgid "Mobile Data"
@@ -1208,11 +1220,11 @@ msgstr "इशां के लिए समय निर्धारित क�
 msgid "Shafi, Maliki, Hanbali (Default)"
 msgstr "शाफइ, मलिकी, हनबली (डिफ़ॉल्ट)"
 
-#: src/adhan/calculation_methods.ts:104
+#: src/adhan/calculation_methods.ts:116
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "शिया इथना अशरी, लेवा संस्थान, ख़ुम"
 
-#: src/adhan/calculation_methods.ts:110
+#: src/adhan/calculation_methods.ts:122
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "शिया, भूभौतिकी संस्थान, तेहरान विश्वविद्यालय"
 
@@ -1308,7 +1320,7 @@ msgstr "ऐप को बैकग्राउंड में बंद हो�
 msgid "Sound"
 msgstr "ध्वनि"
 
-#: src/adhan/calculation_methods.ts:98
+#: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "रूस के मुसलमानों का आध्यात्मिक प्रशासन"
 
