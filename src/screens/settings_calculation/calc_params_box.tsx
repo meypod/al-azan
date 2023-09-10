@@ -149,14 +149,14 @@ export function CalcParamsBox() {
               <Stack p="3">
                 <HStack>
                   <AdjustmentSetting
-                    isFloat
+                    int={false}
                     settingKey={'FAJR_ANGLE_OVERRIDE'}
                     label={t`Fajr Angle`}
                     fallbackInitial={calculationParameters.fajrAngle}
                   />
                   <AdjustmentSetting
                     ml="2"
-                    isFloat
+                    int={false}
                     settingKey={'ISHA_ANGLE_OVERRIDE'}
                     label={t`Isha Angle`}
                     fallbackInitial={calculationParameters.ishaAngle}
@@ -170,7 +170,7 @@ export function CalcParamsBox() {
                   />
                   <AdjustmentSetting
                     ml="2"
-                    isFloat
+                    int={false}
                     settingKey={'MAGHRIB_ANGLE_OVERRIDE'}
                     label={t`Maghrib Angle`}
                     fallbackInitial={calculationParameters.maghribAngle}

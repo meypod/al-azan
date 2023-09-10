@@ -1,11 +1,9 @@
-import {Text, Input, HStack, VStack, Button} from 'native-base';
+import {Text, HStack, VStack, Button} from 'native-base';
 import {IVStackProps} from 'native-base/lib/typescript/components/primitives/Stack/VStack';
 import {useCallback, useMemo, useState} from 'react';
-import type {
-  NativeSyntheticEvent,
-  TextInputEndEditingEventData,
-} from 'react-native';
+
 import {Prayer, translatePrayer} from '@/adhan';
+import {NumericInput} from '@/components/numeric_input';
 import {
   type CalcSettingsStore,
   getPrayerAdjustmentSettingKey,
@@ -17,7 +15,7 @@ import {useUnmounted} from '@/utils/hooks/use_unmounted';
 import {sumFloats} from '@/utils/numbers';
 
 type AdjustmentSettingProps = {
-  isFloat?: boolean;
+  int?: boolean;
   fallbackInitial?: number;
 } & (
   | {
@@ -36,7 +34,7 @@ export function AdjustmentSetting({
   prayer,
   label,
   settingKey,
-  isFloat,
+  int = true,
   fallbackInitial,
   ...hStackProps
 }: AdjustmentSettingProps & IVStackProps) {
@@ -56,47 +54,21 @@ export function AdjustmentSetting({
   const adjustmentLabel =
     label !== undefined ? label : translatePrayer(prayer!);
 
-  const setLocalAdjustmentHelper = useCallback(
-    (value: string) => {
-      let parsedValue = NaN;
-      if (isFloat) {
-        parsedValue = parseFloat(value);
-      } else {
-        parsedValue = parseInt(value, 10);
-      }
-      if (Number.isNaN(parsedValue)) {
-        setLocalAdjustment(undefined);
-      } else {
-        setLocalAdjustment(parsedValue);
-      }
-    },
-    [setLocalAdjustment, isFloat],
-  );
-
-  const setLocalAdjustmentHelperForced = useCallback(
-    (e: NativeSyntheticEvent<TextInputEndEditingEventData>) => {
-      if (!e.nativeEvent.text) {
-        setLocalAdjustmentHelper('0');
-      }
-    },
-    [setLocalAdjustmentHelper],
-  );
-
   const increaseLocalAdjustmentByOne = useCallback(() => {
-    if (isFloat) {
-      setLocalAdjustment(adj => sumFloats(adj || 0, 0.1));
-    } else {
+    if (int) {
       setLocalAdjustment(adj => (adj || 0) + 1);
+    } else {
+      setLocalAdjustment(adj => sumFloats(adj || 0, 0.1));
     }
-  }, [isFloat]);
+  }, [int]);
 
   const decreaseLocalAdjustmentByOne = useCallback(() => {
-    if (isFloat) {
-      setLocalAdjustment(adj => sumFloats(adj || 0, -0.1));
-    } else {
+    if (int) {
       setLocalAdjustment(adj => (adj || 0) - 1);
+    } else {
+      setLocalAdjustment(adj => sumFloats(adj || 0, -0.1));
     }
-  }, [isFloat]);
+  }, [int]);
 
   useNoInitialEffect(() => {
     // to set values when user finishes
@@ -136,16 +108,16 @@ export function AdjustmentSetting({
           p="0">
           +
         </Button>
-        <Input
+        <NumericInput
           borderLeftWidth={0}
           borderRightWidth={0}
           flex={1}
           size="md"
           keyboardType="numeric"
           value={localAdjustmentString}
-          onChangeText={setLocalAdjustmentHelper}
+          onChange={setLocalAdjustment}
           textAlign={'center'}
-          onEndEditing={setLocalAdjustmentHelperForced}
+          int={int}
         />
         <Button
           variant="outline"

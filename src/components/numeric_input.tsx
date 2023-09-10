@@ -83,5 +83,3 @@ export const NumericInput = memo(function NumericInput(
     );
   }
 });
-
-export default NumericInput;
