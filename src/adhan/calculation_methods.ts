@@ -88,6 +88,18 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
     get: () => new CalculationParameters('Other', 12.0, 12.0),
   },
 
+  France15: {
+    label: t`France angle 15`,
+    info: 'Uses a Fajr angle of 15 and an Isha angle of 15.',
+    get: () => new CalculationParameters('Other', 15.0, 15.0),
+  },
+
+  France18: {
+    label: t`France angle 18`,
+    info: 'Uses a Fajr angle of 18 and an Isha angle of 18.',
+    get: () => new CalculationParameters('Other', 18.0, 18.0),
+  },
+
   Turkey: {
     label: t`Diyanet İşleri Başkanlığı, Turkey`,
     info: 'Uses a Fajr angle of 18 and an Isha angle of 17.',
