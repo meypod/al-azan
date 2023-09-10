@@ -137,4 +137,10 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
     info: 'Uses Fajr angle of 20 and Isha angle of 18',
     get: () => new CalculationParameters('Other', 20.0, 18.0),
   },
+
+  Tunisia: {
+    label: t`Ministry of Religious Affairs of Tunisia`,
+    info: 'Uses Fajr angle of 18 and Isha angle of 18',
+    get: () => new CalculationParameters('Other', 18.0, 18.0),
+  },
 };

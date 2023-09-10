@@ -1,2 +1,3 @@
 - Improve Diyanet method
 - Fix reminder custom time input 
+- Add more calculation methods
