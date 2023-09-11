@@ -1,3 +1,3 @@
-- Improve Diyanet method
-- Fix reminder custom time input 
+- Remove two conditions that were added to Diyanet method after calculation related to latitudes over 45
+- Fix reminder custom time input issue
 - Add more calculation methods
