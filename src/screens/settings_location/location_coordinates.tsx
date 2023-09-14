@@ -62,8 +62,7 @@ export const LocationCoordinates = memo(function LocationCoordinates({
             isValidCoords(parsedLat) &&
             isValidCoords(parsedLong)
           ) {
-            onLatChange(parsedLat);
-            onLongChange(parsedLong);
+            onLocationSelected({long: parsedLong, lat: parsedLat});
           }
         } else {
           ToastAndroid.show(
@@ -75,7 +74,7 @@ export const LocationCoordinates = memo(function LocationCoordinates({
       .catch(() => {
         ToastAndroid.show(t`Error getting clipboard data`, ToastAndroid.SHORT);
       });
-  }, [onLatChange, onLongChange]);
+  }, [onLocationSelected]);
 
   return (
     <Stack>
