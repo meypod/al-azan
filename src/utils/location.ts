@@ -3,7 +3,10 @@ import type {LocationDetail} from '@/store/calculation';
 export function getLocationLabel(location?: LocationDetail) {
   if (location) {
     let label =
-      location.label || location.city?.selectedName || location.city?.name;
+      location.label ||
+      location.city?.selectedName ||
+      location.city?.name ||
+      '';
 
     if (!label) {
       if (location.lat && location.long) {
@@ -17,7 +20,7 @@ export function getLocationLabel(location?: LocationDetail) {
       }
     }
 
-    return '';
+    return label;
   } else {
     return '';
   }
