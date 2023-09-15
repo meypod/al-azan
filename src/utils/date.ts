@@ -349,21 +349,19 @@ export function getYearAndMonth(date: Date, hijri?: boolean) {
       calendar: SELECTED_SECONDARY_CALENDAR,
     }).format(date);
 
-    let dateParts = Intl.DateTimeFormat(SELECTED_LOCALE, {
+    const year = Intl.DateTimeFormat(SELECTED_LOCALE, {
       year: 'numeric',
       calendar: SELECTED_SECONDARY_CALENDAR,
-    })
-      .format(date)
-      .split(' ');
+    }).format(date);
 
     let formattedDate;
 
     if (SELECTED_LOCALE.startsWith('fa')) {
       const monthName = persianMonthNames['fa'][month];
-      formattedDate = `${dateParts[1]} ${monthName} ${dateParts[0]}`;
+      formattedDate = `${monthName} ${year}`;
     } else {
       const monthName = persianMonthNames['en'][month];
-      formattedDate = `${monthName} ${dateParts[0]}, ${dateParts[1]} AP`;
+      formattedDate = `${monthName}, ${year} AP`;
     }
 
     return formattedDate;
