@@ -14,8 +14,10 @@ import {
   cancelPermanentNotifWidget,
   updatePermanentNotifWidget,
 } from '@/notifee';
+import {calcSettings} from '@/store/calculation';
 import {settings} from '@/store/settings';
 import {getArabicDate, getFormattedDate, getTime} from '@/utils/date';
+import {getLocationLabel} from '@/utils/location';
 
 function getCountdownLabel(prayer: Prayer) {
   return t`Remaining till` + ' ' + translatePrayer(prayer) + ': ';
@@ -33,6 +35,7 @@ export async function updateWidgets() {
     ADAPTIVE_WIDGETS: adaptiveTheme,
     SHOW_WIDGET_COUNTDOWN: showCountdown,
     HIGHLIGHT_CURRENT_PRAYER,
+    WIDGET_CITY_NAME_POS,
   } = settings.getState();
 
   const visiblePrayerTimes = difference(PrayersInOrder, hiddenPrayers);
@@ -80,13 +83,23 @@ export async function updateWidgets() {
     prayers.reverse();
   }
 
-  const secondaryDate = getFormattedDate(now, true);
-  const hijriDate = getArabicDate(now);
+  let topStartText = getArabicDate(now);
+  let topEndText = getFormattedDate(now, true);
+
+  let locationName = getLocationLabel(calcSettings.getState().LOCATION);
+
+  if (locationName) {
+    if (WIDGET_CITY_NAME_POS === 'top_start') {
+      topStartText = locationName;
+    } else if (WIDGET_CITY_NAME_POS === 'top_end') {
+      topEndText = locationName;
+    }
+  }
 
   if (settings.getState().SHOW_WIDGET) {
     await updatePermanentNotifWidget({
-      secondaryDate,
-      hijriDate,
+      topStartText,
+      topEndText,
       prayers,
       adaptiveTheme,
       showCountdown,
@@ -98,8 +111,8 @@ export async function updateWidgets() {
   }
 
   await updateScreenWidget({
-    secondaryDate,
-    hijriDate,
+    topStartText,
+    topEndText,
     prayers,
     adaptiveTheme,
     showCountdown,

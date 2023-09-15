@@ -18,8 +18,8 @@ const NotificationWidgetModule = (
 export type UpdateWidgetOptions = {
   channelId: string;
   notificationId: string;
-  hijriDate: string;
-  secondaryDate: string;
+  topStartText: string;
+  topEndText: string;
   adaptiveTheme: boolean;
   showCountdown: boolean;
   countdownLabel: string | null;

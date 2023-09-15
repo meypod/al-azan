@@ -62,11 +62,11 @@ public class WidgetUtils {
             R.id.prayer6active_time,
     };
 
-    public static RemoteViews getViewUpdate(Context context, int layoutResourceId,String hijriDate, String secondaryDate, ReadableArray prayers){
-        return getViewUpdate(context, layoutResourceId, hijriDate, secondaryDate, prayers, null, 0);
+    public static RemoteViews getViewUpdate(Context context, int layoutResourceId,String topStartText, String topEndText, ReadableArray prayers){
+        return getViewUpdate(context, layoutResourceId, topStartText, topEndText, prayers, null, 0);
     }
 
-    public static RemoteViews getViewUpdate(Context context, int layoutResourceId,String hijriDate, String secondaryDate, ReadableArray prayers,String countdownLabel, long countdownBase){
+    public static RemoteViews getViewUpdate(Context context, int layoutResourceId,String topStartText, String topEndText, ReadableArray prayers,String countdownLabel, long countdownBase){
         RemoteViews widgetView = new RemoteViews(context.getPackageName(), layoutResourceId);
 
         String[] names = new String[prayers.size()];
@@ -83,8 +83,8 @@ public class WidgetUtils {
         }
 
         // set top views text first
-        widgetView.setTextViewText(R.id.hijri_date_v, hijriDate);
-        widgetView.setTextViewText(R.id.secondary_date_v, secondaryDate);
+        widgetView.setTextViewText(R.id.top_start_text, topStartText);
+        widgetView.setTextViewText(R.id.top_end_text, topEndText);
 
         // hide all views first
         for (int i = 0; i < prayersViewId.length; i++) {

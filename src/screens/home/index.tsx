@@ -26,6 +26,7 @@ import {deleteItem, getItem} from '@/store/simple';
 import {getArabicDate, getDayName, getFormattedDate} from '@/utils/date';
 import {showBatteryOptimizationReminder} from '@/utils/dialogs';
 import {useNoInitialEffect} from '@/utils/hooks/use_no_initial_effect';
+import {getLocationLabel} from '@/utils/location';
 import {askPermissions} from '@/utils/permission';
 import {shouldShowRamadanNotice, showRamadanAlert} from '@/utils/ramadan';
 
@@ -102,29 +103,7 @@ export function Home() {
   const goToLocations = useCallback(() => navigate('FavoriteLocations'), []);
   const goToMonthlyView = useCallback(() => navigate('MonthlyView'), []);
 
-  const locationText = useMemo(() => {
-    if (location) {
-      if (location.label) {
-        return location.label;
-      }
-      if (location.city) {
-        return location.city.selectedName || location.city.name;
-      }
-
-      if (location.lat && location.long) {
-        const latString =
-          Math.abs(location.lat).toFixed(2) +
-          (location.lat > 0 ? '° N' : '° S');
-        const longString =
-          Math.abs(location.long).toFixed(2) +
-          (location.long > 0 ? '° E' : '° W');
-        return latString + ', ' + longString;
-      }
-      return '';
-    } else {
-      return '';
-    }
-  }, [location]);
+  const locationText = useMemo(() => getLocationLabel(location), [location]);
 
   return (
     <SafeArea>

@@ -9,6 +9,7 @@ import {
 } from 'native-base';
 import {useEffect, useMemo} from 'react';
 import {Platform} from 'react-native';
+import {CityNamePosSettings} from './city_name_pos_settings';
 import {SafeArea} from '@/components/safe_area';
 import {HideWidgetPrayerSettings} from '@/screens/settings_widget/hide_widget_prayer_settings';
 import {useSettings} from '@/store/settings';
@@ -105,6 +106,8 @@ export function WidgetSettings(props: IScrollViewProps) {
             </Stack>
           </HStack>
         )}
+
+        <CityNamePosSettings mb="4" />
 
         <HideWidgetPrayerSettings />
       </ScrollView>

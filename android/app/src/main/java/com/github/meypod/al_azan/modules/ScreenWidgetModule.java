@@ -34,8 +34,8 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
             promise.reject("ERROR", "args cannot be null");
             return;
         }
-        String hijriDate = args.getString("hijriDate");
-        String secondaryDate = args.getString("secondaryDate");
+        String topStartText = args.getString("topStartText");
+        String topEndText = args.getString("topEndText");
         ReadableArray prayers = args.getArray("prayers");
         boolean adaptiveTheme = args.getBoolean("adaptiveTheme");
         boolean showCountdown = args.getBoolean("showCountdown");
@@ -49,7 +49,7 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
             countdownBase = 0;
         }
 
-        if (prayers == null || hijriDate == null || secondaryDate == null) {
+        if (prayers == null || topStartText == null || topEndText == null) {
             promise.reject("ERROR", "required args were missing.");
             return;
         }
@@ -77,7 +77,7 @@ public class ScreenWidgetModule extends ReactContextBaseJavaModule {
             int[] classicWidgetIds = appWidgetManager.getAppWidgetIds(screenWidget);
             if (classicWidgetIds.length > 0) {
                 RemoteViews widgetView = WidgetUtils.getViewUpdate(getReactApplicationContext(),
-                        layoutId, hijriDate, secondaryDate, prayers, countdownLabel, countdownBase);
+                        layoutId, topStartText, topEndText, prayers, countdownLabel, countdownBase);
                 appWidgetManager.updateAppWidget(classicWidgetIds, widgetView);
             }
         }

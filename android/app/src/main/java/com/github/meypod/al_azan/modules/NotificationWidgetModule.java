@@ -39,8 +39,8 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
         }
         String channelId = args.getString("channelId");
         String notificationId = args.getString("notificationId");
-        String hijriDate = args.getString("hijriDate");
-        String secondaryDate = args.getString("secondaryDate");
+        String topStartText = args.getString("topStartText");
+        String topEndText = args.getString("topEndText");
         boolean adaptiveTheme = args.getBoolean("adaptiveTheme");
         boolean showCountdown = args.getBoolean("showCountdown");
         final String countdownLabel;
@@ -55,7 +55,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
 
         ReadableArray prayers = args.getArray("prayers");
 
-        if (channelId == null || notificationId == null || hijriDate == null || secondaryDate == null
+        if (channelId == null || notificationId == null || topStartText == null || topEndText == null
                 || prayers == null) {
             promise.reject("ERROR", "required args were missing.");
             return;
@@ -70,7 +70,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
         }
 
         RemoteViews notificationLayout = WidgetUtils.getViewUpdate(getReactApplicationContext(),
-                smallLayoutId, hijriDate, secondaryDate, prayers);
+                smallLayoutId, topStartText, topEndText, prayers);
 
 
         final int layoutId;
@@ -91,7 +91,7 @@ public class NotificationWidgetModule extends ReactContextBaseJavaModule {
         RemoteViews notificationLayoutExpanded = WidgetUtils.getViewUpdate(
                 getReactApplicationContext(),
                 layoutId,
-                hijriDate, secondaryDate, prayers, countdownLabel, countdownBase);
+                topStartText, topEndText, prayers, countdownLabel, countdownBase);
 
         Notification customNotification = new NotificationCompat.Builder(
                 getReactApplicationContext(), channelId) // channel is created with another module in js

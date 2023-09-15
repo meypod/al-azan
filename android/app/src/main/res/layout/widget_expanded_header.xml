@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/hijri_date_v"
+        android:id="@+id/top_start_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -16,7 +16,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/secondary_date_v"
+        android:id="@+id/top_end_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

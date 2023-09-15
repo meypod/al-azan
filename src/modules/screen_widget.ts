@@ -31,8 +31,8 @@ if (Platform.OS === 'android') {
 }
 
 export type UpdateWidgetOptions = {
-  hijriDate: string;
-  secondaryDate: string;
+  topStartText: string;
+  topEndText: string;
   prayers: Array<[prayerName: string, prayerTime: string, isActive: Boolean]>;
   adaptiveTheme: boolean;
   showCountdown: boolean;

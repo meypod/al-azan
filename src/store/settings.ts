@@ -48,16 +48,17 @@ export type SettingsStore = {
   // LOCATION_CITY: CityInfo | undefined; // moved to calculation store
   LAST_APP_FOCUS_TIMESTAMP?: number;
   HIDDEN_PRAYERS: Array<Prayer>;
-  HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
   ADHAN_VOLUME: number;
   // behavior related
   VOLUME_BUTTON_STOPS_ADHAN: boolean;
   PREFER_EXTERNAL_AUDIO_DEVICE: boolean;
   BYPASS_DND: boolean;
   // widget
+  HIDDEN_WIDGET_PRAYERS: Array<Prayer>;
   SHOW_WIDGET: boolean;
   SHOW_WIDGET_COUNTDOWN: boolean;
   ADAPTIVE_WIDGETS: boolean;
+  WIDGET_CITY_NAME_POS: 'top_start' | 'top_end' | undefined;
   // to detect settings change
   CALC_SETTINGS_HASH: string;
   ALARM_SETTINGS_HASH: string;
@@ -136,11 +137,13 @@ export const settings = createStore<SettingsStore>()(
       LOCATION_COUNTRY: undefined,
       LOCATION_CITY: undefined,
       HIDDEN_PRAYERS: [Prayer.Tahajjud],
-      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight, Prayer.Tahajjud],
       ADHAN_VOLUME: 70,
+      // widget
+      HIDDEN_WIDGET_PRAYERS: [Prayer.Sunset, Prayer.Midnight, Prayer.Tahajjud],
       SHOW_WIDGET: false,
       SHOW_WIDGET_COUNTDOWN: false,
       ADAPTIVE_WIDGETS: false,
+      WIDGET_CITY_NAME_POS: undefined,
       // DISPLAY
       IS_24_HOUR_FORMAT: true,
       NUMBERING_SYSTEM: '',
