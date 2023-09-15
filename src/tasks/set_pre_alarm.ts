@@ -57,7 +57,7 @@ export async function setPreAlarmTask(options: SetPreAlarmTaskOptions) {
         },
         actions: [
           {
-            title: t`Cancel`,
+            title: t`Cancel Alarm`,
             pressAction: {
               id: 'cancel_alarm',
             },
