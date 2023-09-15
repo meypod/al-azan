@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "Odaberite metodu izračuna ponoći"
 msgid "Choose numbering system"
 msgstr "Odaberite brojni sistem"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "Odaberite koji kalendar želite zamijeniti"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "Grad/Okruženje"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "Obrišite koordinate"
 
@@ -278,7 +282,7 @@ msgstr "Obrišite koordinate"
 msgid "Clear the location"
 msgstr "Obrišite lokaciju"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "Podaci međuspremnika ne sadrže koordinate"
 
@@ -466,7 +470,7 @@ msgstr "Egipatska Generalna Geodetska Uprava"
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "Greška pri preuzimanju podataka međuspremnika"
 
@@ -698,7 +702,7 @@ msgstr "Islamsko društvo Sjeverne Amerike (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Čini se da ste uvezli sigurnosnu kopiju, ne zaboravite onemogućiti optimizaciju baterije za ovu aplikaciju"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "Tek sad"
 
@@ -724,12 +728,12 @@ msgstr "Oznaka"
 msgid "Language"
 msgstr "Jezik"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "Geografska Širina"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "Geografska Širina ne važi"
 
@@ -759,6 +763,7 @@ msgstr "Učitavanje"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "Lokacija"
@@ -767,18 +772,22 @@ msgstr "Lokacija"
 msgid "Location settings"
 msgstr "Postavke za lokaciju"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "Geografska Dužina"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "Geografska Dužina ne važi"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Niska"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "Lunarni kalendar"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -864,7 +873,7 @@ msgstr "Novi Podsjetnik"
 msgid "Next"
 msgstr "Sljedeći"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "Sljedeći Dan"
 
@@ -887,6 +896,7 @@ msgid "No Results"
 msgstr "Nema Rezultata"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "Nema"
 
@@ -1006,7 +1016,7 @@ msgstr "Nadolazeći ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Nadolazeća podsjeta"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Zalijepi"
 
@@ -1057,7 +1067,7 @@ msgstr "Pritisnite za pretragu"
 msgid "Press to select a method"
 msgstr "Pritisnite za odabir metode"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "Prošli Dan"
 
@@ -1115,7 +1125,7 @@ msgstr "Ramazan se završava,"
 msgid "Ramadan is near,"
 msgstr "Ramazan je blizu,"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "Ostaje do"
 
@@ -1166,10 +1176,11 @@ msgid "Search"
 msgstr "Tražite"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "Sekundarni Kalendar"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "Pogledajte omiljene lokacije"
 
@@ -1255,12 +1266,12 @@ msgstr "Da li telefon treba da se trese i zuji kada ezan ili podsjetnik počne s
 msgid "Show Adhan Options"
 msgstr "Prikažite Postavke za Ezan"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "Prikažite Danas"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "Prikažite odbrojavanje?"
 
@@ -1276,7 +1287,7 @@ msgstr "Pokaži mi"
 msgid "Show next in notification?"
 msgstr "Prikažite sljedeće u obavještenju?"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "Prikažite vidžet za obavještenje?"
 
@@ -1518,8 +1529,8 @@ msgstr "Koristite Kartu"
 msgid "Use a different alarm type?"
 msgstr "Koristite drugu vrstu alarma?"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "Koristite adaptivnu temu?"
 
@@ -1604,13 +1615,17 @@ msgstr "Niste okrenuti ka Kabi"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme ispod."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "Možete također zalijepiti koordinate iz međuspremnika"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Možete promijeniti kada će nadolazeći alarm ko obavještenje se poslati prije ezana kao podsjetnik"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "Možete odabrati da zamijenite jedan od kalendara svojom trenutnom lokacijom"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1662,7 +1677,7 @@ msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 msgid "after"
 msgstr "nakon"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "prije"
 
@@ -1781,7 +1796,7 @@ msgstr "da li je vrijeme molitve skriveno?"
 msgid "isha.prayer"
 msgstr "Jacija"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "poslije"
 
@@ -1857,7 +1872,7 @@ msgstr "Podsjetnici"
 msgid "settings"
 msgstr "Postavke"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "bi li vidžet za obavještenje trebao biti prikazan?"
 

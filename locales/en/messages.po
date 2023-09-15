@@ -271,12 +271,16 @@ msgstr "Choose midnight calculation method"
 msgid "Choose numbering system"
 msgstr "Choose numbering system"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "Choose which calendar to replace"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "City/Area"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "Clear the coordinates"
 
@@ -284,7 +288,7 @@ msgstr "Clear the coordinates"
 msgid "Clear the location"
 msgstr "Clear the location"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "Clipboard data does not contain coordinates"
 
@@ -472,7 +476,7 @@ msgstr "Egyptian General Survey Authority"
 msgid "Enabled"
 msgstr "Enabled"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "Error getting clipboard data"
 
@@ -704,7 +708,7 @@ msgstr "Islamic Society of North America (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "Just now"
 
@@ -730,12 +734,12 @@ msgstr "Label"
 msgid "Language"
 msgstr "Language"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "Latitude"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "Latitude is invalid"
 
@@ -765,6 +769,7 @@ msgstr "Loading"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "Location"
@@ -773,18 +778,22 @@ msgstr "Location"
 msgid "Location settings"
 msgstr "Location settings"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "Longitude"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "Longitude is invalid"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Low"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "Lunar Calendar"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -870,7 +879,7 @@ msgstr "New Reminder"
 msgid "Next"
 msgstr "Next"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "Next Day"
 
@@ -893,6 +902,7 @@ msgid "No Results"
 msgstr "No Results"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "None"
 
@@ -1012,7 +1022,7 @@ msgstr "Upcoming adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Upcoming reminder"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Paste"
 
@@ -1063,7 +1073,7 @@ msgstr "Press to search"
 msgid "Press to select a method"
 msgstr "Press to select a method"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "Prev Day"
 
@@ -1121,7 +1131,7 @@ msgstr "Ramadan is ending,"
 msgid "Ramadan is near,"
 msgstr "Ramadan is near,"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "Remaining till"
 
@@ -1172,10 +1182,11 @@ msgid "Search"
 msgstr "Search"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "Secondary Calendar"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "See favorite locations"
 
@@ -1261,12 +1272,12 @@ msgstr "Should phone vibrate when adhan or reminder starts playing?"
 msgid "Show Adhan Options"
 msgstr "Show Adhan Options"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "Show Today"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "Show countdown?"
 
@@ -1282,7 +1293,7 @@ msgstr "Show me"
 msgid "Show next in notification?"
 msgstr "Show next in notification?"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "Show notification widget?"
 
@@ -1521,8 +1532,8 @@ msgstr "Use Map"
 msgid "Use a different alarm type?"
 msgstr "Use a different alarm type?"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "Use adaptive theme?"
 
@@ -1607,13 +1618,17 @@ msgstr "You are not facing Kaaba"
 msgid "You can access your device Power Manager using the button below."
 msgstr "You can access your device Power Manager using the button below."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "You can change when the upcoming alarm notification is sent before adhan or reminder"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "You can choose to replace one of calendars with your current location"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1665,7 +1680,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "ago"
 
@@ -1784,7 +1799,7 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "later"
 
@@ -1860,7 +1875,7 @@ msgstr "Reminders"
 msgid "settings"
 msgstr "Settings"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "should notification widget be shown?"
 

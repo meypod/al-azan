@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "Gece yarısı hesaplama yöntemini seçin"
 msgid "Choose numbering system"
 msgstr "Sayı sistemini seçin"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "Hangi takvimin değiştirileceğini seçin"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "Şehir/Bölge"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "Koordinatları temizleyin"
 
@@ -278,7 +282,7 @@ msgstr "Koordinatları temizleyin"
 msgid "Clear the location"
 msgstr "Konumu temizleyin"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "Kopyalanan veriler koordinat içermiyor"
 
@@ -466,7 +470,7 @@ msgstr "Mısır Genel Araştırma Kurumu"
 msgid "Enabled"
 msgstr "Etkinleştir"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "Kopyalanan veriler alınırken hata oluştu"
 
@@ -698,7 +702,7 @@ msgstr "Kuzey Amerika İslam Toplumu (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Görünüşe göre bir yedeği içe aktardınız, bu uygulama için pil optimizasyonlarını devre dışı bırakmayı unutmayın"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "Hemen şimdi"
 
@@ -724,12 +728,12 @@ msgstr "Etiket"
 msgid "Language"
 msgstr "Dil"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "Enlem"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "Enlem geçersiz"
 
@@ -759,6 +763,7 @@ msgstr "Yükleniyor"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "Konum"
@@ -767,18 +772,22 @@ msgstr "Konum"
 msgid "Location settings"
 msgstr "Konum ayarları"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "Boylam"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "Boylam geçersiz"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Düşük"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "Ay Takvimi"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -864,7 +873,7 @@ msgstr "Yeni hatırlatıcı"
 msgid "Next"
 msgstr "Sonraki"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "Ertesi gün"
 
@@ -887,6 +896,7 @@ msgid "No Results"
 msgstr "Sonuç yok"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "Hiçbiri"
 
@@ -1006,7 +1016,7 @@ msgstr "Yaklaşan ezan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Yaklaşan hatırlatma"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Yapıştır"
 
@@ -1057,7 +1067,7 @@ msgstr "Aramak için basın"
 msgid "Press to select a method"
 msgstr "Bir yöntem seçmek için basın"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "Önceki gün"
 
@@ -1115,7 +1125,7 @@ msgstr "Ramazan bitiyor,"
 msgid "Ramadan is near,"
 msgstr "Ramazan yaklaşıyor,"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "Kalan süre"
 
@@ -1162,10 +1172,11 @@ msgid "Search"
 msgstr "Ara"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "İkincil takvim"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "Favori konumları görün"
 
@@ -1248,12 +1259,12 @@ msgstr "Ezan veya hatırlatma çalmaya başladığında telefon titremeli mi?"
 msgid "Show Adhan Options"
 msgstr "Ezan seçeneklerini göster"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "Bugünü göster"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "Geri sayım gösterilsin mi?"
 
@@ -1269,7 +1280,7 @@ msgstr "Göster bana"
 msgid "Show next in notification?"
 msgstr "Sonraki bildirim gösterilsin mi?"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "Bildirim gereci gösterilsin mi?"
 
@@ -1505,8 +1516,8 @@ msgstr "Kullanım haritası"
 msgid "Use a different alarm type?"
 msgstr "Farklı bir alarm türü mü kullanıyorsunuz?"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "Uyarlanabilir bir tema mı kullanıyorsunuz?"
 
@@ -1591,13 +1602,17 @@ msgstr "Kâbe'ye dönük değilsin"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine erişebilirsiniz."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kordinatları yapıştırabilirsiniz"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Yaklaşan alarm bildiriminin ezan veya hatırlatmadan önce ne zaman gönderileceğini değiştirebilirsiniz"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "Takvimlerden birini geçerli konumunuzla değiştirmeyi seçebilirsiniz"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1649,7 +1664,7 @@ msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 msgid "after"
 msgstr "sonra"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "önce"
 
@@ -1768,7 +1783,7 @@ msgstr "namaz vakti gizlensin mi?"
 msgid "isha.prayer"
 msgstr "Yatsı"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "daha sonra"
 
@@ -1844,7 +1859,7 @@ msgstr "Hatırlatıcılar"
 msgid "settings"
 msgstr "Ayarlar"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "bildirim widget'ı gösterilmeli mi?"
 

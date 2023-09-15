@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "اختر طريقة حساب منتصف الليل"
 msgid "Choose numbering system"
 msgstr "اختر نظام الترقيم"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "اختر التقويم الذي تريد استبداله"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "مدينة/منطقة"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "مسح الإحداثيات"
 
@@ -278,7 +282,7 @@ msgstr "مسح الإحداثيات"
 msgid "Clear the location"
 msgstr "مسح الموقع"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "لا تحتوي بيانات الحافظة على إحداثيات"
 
@@ -466,7 +470,7 @@ msgstr "الهيئة العامة المصرية للمساحة"
 msgid "Enabled"
 msgstr "مفعّل"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "خطأ في الحصول على بيانات الحافظة"
 
@@ -698,7 +702,7 @@ msgstr "الجمعية الإسلامية لأمريكا الشمالية (ISNA)
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "يبدو أنك قمت بإستيراد نسخة احتياطية، لا تنسى تعطيل تحسين البطارية لهذا التطبيق"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "الآن"
 
@@ -724,12 +728,12 @@ msgstr "تسمية"
 msgid "Language"
 msgstr "لغة"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "خط العرض"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "خط العرض غير صالح"
 
@@ -759,6 +763,7 @@ msgstr "جاري تحميل البيانات"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "موقع"
@@ -767,18 +772,22 @@ msgstr "موقع"
 msgid "Location settings"
 msgstr "إعدادات الموقع"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "خط الطول"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "خط الطول غير صالح"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "قليل"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "تقويم قمري"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -864,7 +873,7 @@ msgstr "تذكير جديد"
 msgid "Next"
 msgstr "التالي"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "اليوم التالي"
 
@@ -887,6 +896,7 @@ msgid "No Results"
 msgstr "لا يوجد نتائج"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "لا شيء"
 
@@ -1006,7 +1016,7 @@ msgstr "الآذان القادم"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "التذكير القادم"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "لصق"
 
@@ -1057,7 +1067,7 @@ msgstr "اضغط للبحث"
 msgid "Press to select a method"
 msgstr "اضغط لتحديد طريقة"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "اليوم السابق"
 
@@ -1115,7 +1125,7 @@ msgstr "شهر رمضان ينتهي،"
 msgid "Ramadan is near,"
 msgstr "شهر رمضان قريب،"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "المتبقي حتى"
 
@@ -1162,10 +1172,11 @@ msgid "Search"
 msgstr "بحث"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "التقويم الثانوي"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "شاهد المواقع المفضلة"
 
@@ -1248,12 +1259,12 @@ msgstr "هل يهتز الهاتف عندما يبدأ الأذان أو الت�
 msgid "Show Adhan Options"
 msgstr "إظهار خيارات الأذان"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "عرض اليوم"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "عرض العد التنازلي؟"
 
@@ -1269,7 +1280,7 @@ msgstr "عرض"
 msgid "Show next in notification?"
 msgstr "إظهار الأذان التالي في الإشعار؟"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "عرض المصغّر في الإشعارات؟"
 
@@ -1505,8 +1516,8 @@ msgstr "استخدم الخريطة"
 msgid "Use a different alarm type?"
 msgstr "استخدم نوع إنذار مختلف؟"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "استخدم السمة المتكيفة؟"
 
@@ -1591,13 +1602,17 @@ msgstr "أنت لا تواجه الكعبة"
 msgid "You can access your device Power Manager using the button below."
 msgstr "يمكنك الوصول إلى \"مدير الطاقة\" (Power Manager) بجهازك باستخدام الزر أدناه."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "يمكنك أيضًا لصق الإحداثيات من الحافظة"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "يمكنك تغيير وقت إرسال إشعار التنبيه القادم قبل الأذان أو التذكير"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "يمكنك اختيار استبدال أحد التقاويم بموقعك الحالي"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1649,7 +1664,7 @@ msgstr "عدد الدقائق التي ستضاف إلى الأوقات المح
 msgid "after"
 msgstr "بعد"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "منذ"
 
@@ -1768,7 +1783,7 @@ msgstr "هل وقت الصلاة مخفي؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "لاحقاً"
 
@@ -1844,7 +1859,7 @@ msgstr "التذكيرات"
 msgid "settings"
 msgstr "إعدادات"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "هل يجب عرض المصغر في الإشعارات؟"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "Berechnungsmethode für Mitternacht wählen"
 msgid "Choose numbering system"
 msgstr "Nummerierungssystem auswählen"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "Wählen Sie den zu ersetzenden Kalender"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "Stadt/Gebiet"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "Koordinaten löschen"
 
@@ -278,7 +282,7 @@ msgstr "Koordinaten löschen"
 msgid "Clear the location"
 msgstr "Standort löschen"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "Die Zwischenablage enthält keine Koordinaten"
 
@@ -466,7 +470,7 @@ msgstr "Ägyptische Generalvermessungsbehörde"
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "Fehler beim Abrufen der Zwischenablage"
 
@@ -698,7 +702,7 @@ msgstr "Islamische Gesellschaft Nordamerikas (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Es scheint, dass Sie eine Sicherung importiert haben. Vergessen Sie nicht, die Akku-Optimierung für diese App zu deaktivieren"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "jetzt gerade"
 
@@ -724,12 +728,12 @@ msgstr "Bezeichnung"
 msgid "Language"
 msgstr "Sprache"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "Breitengrad"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "Der Breitengrad ist ungültig"
 
@@ -759,6 +763,7 @@ msgstr "Laden"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "Standort"
@@ -767,18 +772,22 @@ msgstr "Standort"
 msgid "Location settings"
 msgstr "Standort-Einstellungen"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "Längengrad"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "Der Längengrad ist ungültig"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Niedrig"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "Mondkalender"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -866,7 +875,7 @@ msgstr "Neue Erinnerung"
 msgid "Next"
 msgstr "Weiter"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "Nächster Tag"
 
@@ -889,6 +898,7 @@ msgid "No Results"
 msgstr "Keine Ergebnisse"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "Keine"
 
@@ -1008,7 +1018,7 @@ msgstr "Bevorstehender Adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Kommende Erinnerung"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Einfügen"
 
@@ -1059,7 +1069,7 @@ msgstr "Zum Suchen drücken"
 msgid "Press to select a method"
 msgstr "Zur Auswahl einer Methode drücken"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "Voriger Tag"
 
@@ -1117,7 +1127,7 @@ msgstr "Der Ramadan geht zu Ende,"
 msgid "Ramadan is near,"
 msgstr "Der Ramadan ist nah,"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "Verbleibend bis"
 
@@ -1166,10 +1176,11 @@ msgid "Search"
 msgstr "Suchen"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "Sekundärer Kalender"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "Lieblingsorte anzeigen"
 
@@ -1255,12 +1266,12 @@ msgstr "Soll das Telefon vibrieren, wenn der Adhan oder eine Erinnerung abgespie
 msgid "Show Adhan Options"
 msgstr "Adhan-Optionen anzeigen"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "Heute anzeigen"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "Countdown anzeigen?"
 
@@ -1276,7 +1287,7 @@ msgstr "Zeigen"
 msgid "Show next in notification?"
 msgstr "Als nächstes in der Benachrichtigung anzeigen?"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "Benachrichtigungs-Widget anzeigen?"
 
@@ -1512,8 +1523,8 @@ msgstr "Karte verwenden"
 msgid "Use a different alarm type?"
 msgstr "Einen anderen Alarmtyp verwenden?"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "Adaptives Thema verwenden?"
 
@@ -1598,13 +1609,17 @@ msgstr "Sie stehen nicht in Richtung der Kaaba"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Über die untere Schaltfläche können Sie auf die Energieverwaltung Ihres Geräts zugreifen."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "Sie können die Koordinaten auch aus der Zwischenablage einfügen"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Sie können festlegen, wann die Benachrichtigung über einen bevorstehenden Alarm vor dem Adhan oder der Erinnerung gesendet wird"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "Sie können wählen, ob Sie einen der Kalender durch Ihren aktuellen Standort ersetzen möchten"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1656,7 +1671,7 @@ msgstr "Anzahl der Minuten, die zu den berechneten Zeiten hinzugefügt werden"
 msgid "after"
 msgstr "nach"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "vergangen"
 
@@ -1775,7 +1790,7 @@ msgstr "Ist die Gebetszeit versteckt?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "später"
 
@@ -1851,7 +1866,7 @@ msgstr "Erinnerungen"
 msgid "settings"
 msgstr "Einstellungen"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "Soll das Benachrichtigungs-Widget angezeigt werden?"
 

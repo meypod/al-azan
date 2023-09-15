@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "Pilih metode penghitungan tengah malam"
 msgid "Choose numbering system"
 msgstr "Pilih sistem penomoran"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "Pilih kalender mana yang akan diganti"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "Kota/Daerah"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "Menghapus koordinat"
 
@@ -278,7 +282,7 @@ msgstr "Menghapus koordinat"
 msgid "Clear the location"
 msgstr "Menghapus lokasi"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "Data clipboard tidak mengandung koordinat"
 
@@ -466,7 +470,7 @@ msgstr "Otoritas Umum Mesir"
 msgid "Enabled"
 msgstr "Aktif"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "Tidak mendapatkan data clipboard"
 
@@ -698,7 +702,7 @@ msgstr "Masyarakat Islam Amerika Utara (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Sepertinya Anda telah mengimpor cadangan, jangan lupa untuk menonaktifkan pengoptimalan baterai untuk aplikasi ini"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "Baru saja"
 
@@ -724,12 +728,12 @@ msgstr "Judul"
 msgid "Language"
 msgstr "Bahasa"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "Latitud"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "Latitud tidak valid"
 
@@ -759,6 +763,7 @@ msgstr "Memuat"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "Lokasi"
@@ -767,18 +772,22 @@ msgstr "Lokasi"
 msgid "Location settings"
 msgstr "Pengaturan lokasi"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "Longitud"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "Longitud tidak valid"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Rendah"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "Kalender Lunar"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -864,7 +873,7 @@ msgstr "Buat Pengingat"
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -887,6 +896,7 @@ msgid "No Results"
 msgstr "Tidak ada hasil"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "Tidak ada"
 
@@ -1006,7 +1016,7 @@ msgstr "Adzan yang akan datang"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Pengingat yang akan datang"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Tempel"
 
@@ -1057,7 +1067,7 @@ msgstr "Tekan untuk mencari"
 msgid "Press to select a method"
 msgstr "Tekan untuk memilih metode"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -1115,7 +1125,7 @@ msgstr "Ramadan telah berakhir,"
 msgid "Ramadan is near,"
 msgstr "Ramadan sudah dekat,"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "Sisa sampai"
 
@@ -1162,10 +1172,11 @@ msgid "Search"
 msgstr "Pencarian"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "Kalender Sekunder"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "Lihat lokasi favorit"
 
@@ -1250,12 +1261,12 @@ msgstr "Haruskah ponsel bergetar saat adzan atau pengingat mulai diputar?"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "Hari Ini"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "Tampilkan hitungan mundur?"
 
@@ -1271,7 +1282,7 @@ msgstr "Tunjukkan padaku"
 msgid "Show next in notification?"
 msgstr "Tampilkan pemberitahuan berikutnya?"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "Tampilkan widget notifikasi?"
 
@@ -1507,8 +1518,8 @@ msgstr "Gunakan Peta"
 msgid "Use a different alarm type?"
 msgstr "Menggunakan jenis alarm yang berbeda?"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "Gunakan tema adaptif?"
 
@@ -1593,13 +1604,17 @@ msgstr "Anda tidak menghadap Ka'bah"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Anda dapat mengubah kapan notifikasi alarm yang akan datang dikirim sebelum azan atau pengingat"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "Anda dapat memilih untuk mengganti salah satu kalender dengan lokasi Anda saat ini"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1648,7 +1663,7 @@ msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 msgid "after"
 msgstr "setelah"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "yang lalu"
 
@@ -1767,7 +1782,7 @@ msgstr "apakah waktu sholat tersembunyi?"
 msgid "isha.prayer"
 msgstr "Isya'"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "nanti"
 
@@ -1843,7 +1858,7 @@ msgstr "Pengingat"
 msgid "settings"
 msgstr "Pengaturan"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "Apakah ingin menampilkan widget notifikasi?"
 

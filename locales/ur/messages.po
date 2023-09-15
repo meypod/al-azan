@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "آدھی رات کے حساب کتاب کا طریقہ منتخب کری
 msgid "Choose numbering system"
 msgstr "نمبرنگ سسٹم کا انتخاب کریں۔"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "منتخب کریں کہ کون سا کیلنڈر تبدیل کرنا ہے۔"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "شہر/علاقہ"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "نقاط کو صاف کریں۔"
 
@@ -278,7 +282,7 @@ msgstr "نقاط کو صاف کریں۔"
 msgid "Clear the location"
 msgstr "مقام صاف کریں۔"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "کلپ بورڈ ڈیٹا میں نقاط پر مشتمل نہیں ہے۔"
 
@@ -466,7 +470,7 @@ msgstr "مصری جنرل سروے اتھارٹی"
 msgid "Enabled"
 msgstr "فعال"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "کلپ بورڈ ڈیٹا حاصل کرنے میں مسلئہ "
 
@@ -698,7 +702,7 @@ msgstr "اسلامک سوسائٹی آف نارتھ امریکہ (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "ایسا لگتا ہے کہ آپ نے بیک اپ درآمد کیا ہے، اس ایپ کے لیے بیٹری کی اصلاح کو غیر فعال کرنا نہ بھولیں"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "ابھی ابھی"
 
@@ -724,12 +728,12 @@ msgstr "لیبل"
 msgid "Language"
 msgstr "زبان"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "طول"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "عرض البلد غلط ہے۔"
 
@@ -759,6 +763,7 @@ msgstr "لوڈ ہو رہا ہے۔"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "مقام"
@@ -767,18 +772,22 @@ msgstr "مقام"
 msgid "Location settings"
 msgstr "مقام کی ترتیبات"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "طول البلد"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "طول البلد غلط ہے۔"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "کم"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "قمری کیلنڑر"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -864,7 +873,7 @@ msgstr "نئی یاد دہانی"
 msgid "Next"
 msgstr "اگلے"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "اگلے دن"
 
@@ -887,6 +896,7 @@ msgid "No Results"
 msgstr "کوئی نتیجہ نہیں"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "کوئی نہیں۔"
 
@@ -1006,7 +1016,7 @@ msgstr "آنے والی اذان"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "آنے والی یاد دہانی"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "چسپاں کریں۔"
 
@@ -1057,7 +1067,7 @@ msgstr "تلاش کرنے کے لیے دبائیں۔"
 msgid "Press to select a method"
 msgstr "طریقہ منتخب کرنے کے لیے دبائیں۔"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "پچھلا دن"
 
@@ -1115,7 +1125,7 @@ msgstr "رمضان ختم ہو رہا ہے،"
 msgid "Ramadan is near,"
 msgstr "رمضان قریب ہے،"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "تک باقی ہے۔"
 
@@ -1162,10 +1172,11 @@ msgid "Search"
 msgstr "تلاش کریں۔"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "ثانوی کیلنڈر"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "پسندیدہ مقامات دیکھیں"
 
@@ -1248,12 +1259,12 @@ msgstr "کیا اذان یا یاد دہانی شروع ہونے پر فون و�
 msgid "Show Adhan Options"
 msgstr "اذان کے اختیارات دکھائیں۔"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "آج دکھائیں۔"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "الٹی گنتی دکھائیں؟"
 
@@ -1269,7 +1280,7 @@ msgstr "مجھے دکھا"
 msgid "Show next in notification?"
 msgstr "اطلاع میں اگلا دکھائیں؟"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "اطلاع ویجیٹ دکھائیں؟"
 
@@ -1505,8 +1516,8 @@ msgstr "نقشہ استعمال کریں۔"
 msgid "Use a different alarm type?"
 msgstr "ایک مختلف الارم کی قسم استعمال کریں؟"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "انکولی تھیم استعمال کریں؟"
 
@@ -1591,13 +1602,17 @@ msgstr "آپ کا رخ کعبہ کی طرف نہیں ہے۔"
 msgid "You can access your device Power Manager using the button below."
 msgstr "آپ نیچے دیئے گئے بٹن کا استعمال کرکے اپنے ڈیوائس پاور مینیجر تک رسائی حاصل کرسکتے ہیں۔"
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "آپ کلپ بورڈ سے بھی کوڈ پیسٹ کر سکتے ہیں۔"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "اذان یا یاد دہانی سے پہلے آنے والے الارم کی اطلاع بھیجے جانے پر آپ تبدیل کر سکتے ہیں۔"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "آپ اپنے موجودہ مقام کے ساتھ کیلنڈرز میں سے کسی ایک کو تبدیل کرنے کا انتخاب کر سکتے ہیں۔"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1646,7 +1661,7 @@ msgstr "منٹوں کی تعداد جو شمار شدہ اوقات میں شام
 msgid "after"
 msgstr "کے بعد"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "پہلے"
 
@@ -1765,7 +1780,7 @@ msgstr "کیا نماز کا وقت مخفی ہے؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "بعد میں"
 
@@ -1841,7 +1856,7 @@ msgstr "یاد دہانیاں"
 msgid "settings"
 msgstr "ترتیبات"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "کیا نوٹیفکیشن ویجیٹ دکھایا جانا چاہئے؟"
 

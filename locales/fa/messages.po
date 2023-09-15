@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "روش محاسبه نیمه شب را انتخاب کنید"
 msgid "Choose numbering system"
 msgstr "سیستم شماره گذاری را انتخاب کنید"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "انتخاب کنید کدام تقویم جایگزین شود"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "شهر/ناحیه"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "مختصات را پاک کنید"
 
@@ -278,7 +282,7 @@ msgstr "مختصات را پاک کنید"
 msgid "Clear the location"
 msgstr "مکان را پاک کنید"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "داده های کلیپ بورد حاوی مختصات نیستند"
 
@@ -466,7 +470,7 @@ msgstr "اداره کل بررسی مصر"
 msgid "Enabled"
 msgstr "فعال"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "خطا در دریافت داده های کلیپ بورد"
 
@@ -698,7 +702,7 @@ msgstr "جامعه اسلامی آمریکای شمالی (ایسنا)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "به نظر می رسد که یک نسخه پشتیبان وارد کرده اید، فراموش نکنید که بهینه سازی باتری را برای این برنامه غیرفعال کنید"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "همین الان"
 
@@ -724,12 +728,12 @@ msgstr "برچسب"
 msgid "Language"
 msgstr "زبان"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "عرض جغرافیایی"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "عرض جغرافیایی نامعتبر است"
 
@@ -761,6 +765,7 @@ msgstr "در حال بارگذاری"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "موقعیت"
@@ -769,18 +774,22 @@ msgstr "موقعیت"
 msgid "Location settings"
 msgstr "تنظیمات مکان"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "طول جغرافیایی"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "طول جغرافیایی نامعتبر است"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "کم"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "تقویم قمری"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -868,7 +877,7 @@ msgstr "یادآوری جدید"
 msgid "Next"
 msgstr "بعدی"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "روز بعد"
 
@@ -891,6 +900,7 @@ msgid "No Results"
 msgstr "نتیجه ای یافت نشد"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "هیچکدام"
 
@@ -1010,7 +1020,7 @@ msgstr "هشدار بعدی"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "یادآوری بعدی"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "چسباندن"
 
@@ -1061,7 +1071,7 @@ msgstr "برای جستجو لمس کنید"
 msgid "Press to select a method"
 msgstr "برای انتخاب لمس کنید"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "روز قبل"
 
@@ -1119,7 +1129,7 @@ msgstr "ماه مبارک رمضان رو به اتمام است،"
 msgid "Ramadan is near,"
 msgstr "ماه مبارک رمضان نزدیک است،"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "مانده تا"
 
@@ -1166,10 +1176,11 @@ msgid "Search"
 msgstr "جستجو"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "تقویم ثانویه"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "مکان های مورد علاقه را ببینید"
 
@@ -1252,12 +1263,12 @@ msgstr "آیا هنگام شروع پخش اذان یا یادآوری، تلف�
 msgid "Show Adhan Options"
 msgstr "نمایش گزینه های اذان"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "نمایش امروز"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "شمارش معکوس نشان داده شود؟"
 
@@ -1273,7 +1284,7 @@ msgstr "نشانم بده"
 msgid "Show next in notification?"
 msgstr "بعدی در اعلان نشان داده شود؟"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "ابزارک اعلان نمایش داده شود؟"
 
@@ -1509,8 +1520,8 @@ msgstr "استفاده از نقشه"
 msgid "Use a different alarm type?"
 msgstr "از نوع دیگری از زنگ هشدار استفاده شود؟"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "استفاده از تم تطبیقی؟"
 
@@ -1595,13 +1606,17 @@ msgstr "ره به قبله نیستید"
 msgid "You can access your device Power Manager using the button below."
 msgstr "با استفاده از دکمه زیر می توانید به \"مدیریت انرژی\" (Power Manager) دستگاه خود دسترسی پیدا کنید."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "همچنین می توانید مختصات را از کلیپ بورد بچسبانید"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "می‌توانید زمان ارسال اعلان \"هشدار بعدی\" را قبل از اذان یا یادآوری تغییر دهید"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "می‌توانید یکی از تقویم‌ها را با مکان فعلی خود جایگزین کنید"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1653,7 +1668,7 @@ msgstr "تعداد دقیقه هایی که به زمان های محاسبه ش
 msgid "after"
 msgstr "بعد از"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "پیش"
 
@@ -1772,7 +1787,7 @@ msgstr "آیا وقت نماز پنهان است؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "بعد"
 
@@ -1848,7 +1863,7 @@ msgstr "یادآوری ها"
 msgid "settings"
 msgstr "تنظیمات"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "آیا ابزارک اعلان نشان داده شود؟"
 

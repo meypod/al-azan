@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-11 16:02+0330\n"
+"POT-Creation-Date: 2023-09-15 15:50+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,12 +265,16 @@ msgstr "Chọn cách tính nửa đêm"
 msgid "Choose numbering system"
 msgstr "Chọn hệ thống số đếm"
 
+#: src/screens/settings_widget/city_name_pos_settings.tsx:22
+msgid "Choose which calendar to replace"
+msgstr "Chọn lịch để thay thế"
+
 #: src/screens/settings_location/location_search.tsx:97
 #: src/screens/settings_location/location_search.tsx:100
 msgid "City/Area"
 msgstr "Th. phố/Khu vực"
 
-#: src/screens/settings_location/location_coordinates.tsx:123
+#: src/screens/settings_location/location_coordinates.tsx:122
 msgid "Clear the coordinates"
 msgstr "Xóa tọa độ"
 
@@ -278,7 +282,7 @@ msgstr "Xóa tọa độ"
 msgid "Clear the location"
 msgstr "Xóa vị trí"
 
-#: src/screens/settings_location/location_coordinates.tsx:70
+#: src/screens/settings_location/location_coordinates.tsx:69
 msgid "Clipboard data does not contain coordinates"
 msgstr "Dữ liệu nhớ tạm không chứa tọa độ"
 
@@ -466,7 +470,7 @@ msgstr "Tổng cục Khảo sát Ai Cập"
 msgid "Enabled"
 msgstr "Đã bật"
 
-#: src/screens/settings_location/location_coordinates.tsx:76
+#: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
 msgstr "Lỗi khi nhận dữ liệu khay nhớ tạm"
 
@@ -698,7 +702,7 @@ msgstr "Hiệp hội Hồi giáo Bắc Mỹ (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Có vẻ như bạn đã nhập một bản sao lưu, đừng quên tắt tối ưu hóa pin cho ứng dụng này"
 
-#: src/utils/date.ts:495
+#: src/utils/date.ts:502
 msgid "Just now"
 msgstr "Vừa nãy"
 
@@ -724,12 +728,12 @@ msgstr "Tên"
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: src/screens/settings_location/location_coordinates.tsx:84
-#: src/screens/settings_location/location_coordinates.tsx:90
+#: src/screens/settings_location/location_coordinates.tsx:83
+#: src/screens/settings_location/location_coordinates.tsx:89
 msgid "Latitude"
 msgstr "Vĩ độ"
 
-#: src/screens/settings_location/location_coordinates.tsx:97
+#: src/screens/settings_location/location_coordinates.tsx:96
 msgid "Latitude is invalid"
 msgstr "Vĩ độ không hợp lệ"
 
@@ -759,6 +763,7 @@ msgstr "Đang tải"
 
 #: src/screens/intro/intro.tsx:28
 #: src/screens/qibla_finder_compass/index.tsx:155
+#: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
 msgid "Location"
 msgstr "Vị trí"
@@ -767,18 +772,22 @@ msgstr "Vị trí"
 msgid "Location settings"
 msgstr "Cài đặt vị trí"
 
-#: src/screens/settings_location/location_coordinates.tsx:101
-#: src/screens/settings_location/location_coordinates.tsx:107
+#: src/screens/settings_location/location_coordinates.tsx:100
+#: src/screens/settings_location/location_coordinates.tsx:106
 msgid "Longitude"
 msgstr "Kinh độ"
 
-#: src/screens/settings_location/location_coordinates.tsx:114
+#: src/screens/settings_location/location_coordinates.tsx:113
 msgid "Longitude is invalid"
 msgstr "Kinh độ không hợp lệ"
 
 #: src/screens/qibla_finder_compass/accuracy_indicator.tsx:18
 msgid "Low"
 msgstr "Thấp"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:27
+msgid "Lunar Calendar"
+msgstr "Âm lịch"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -864,7 +873,7 @@ msgstr "Lời nhắc Mới"
 msgid "Next"
 msgstr "Tiếp"
 
-#: src/screens/home/index.tsx:222
+#: src/screens/home/index.tsx:201
 msgid "Next Day"
 msgstr "Ngày Sau"
 
@@ -887,6 +896,7 @@ msgid "No Results"
 msgstr "Không kết quả"
 
 #: src/screens/settings_calculation_advanced/index.tsx:44
+#: src/screens/settings_widget/city_name_pos_settings.tsx:26
 msgid "None"
 msgstr "Không làm tròn"
 
@@ -1006,7 +1016,7 @@ msgstr "Azan sắp tới"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Lời nhắc sắp tới"
 
-#: src/screens/settings_location/location_coordinates.tsx:144
+#: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Dán"
 
@@ -1057,7 +1067,7 @@ msgstr "Nhấn để tìm"
 msgid "Press to select a method"
 msgstr "Nhấn để chọn một phương pháp"
 
-#: src/screens/home/index.tsx:190
+#: src/screens/home/index.tsx:169
 msgid "Prev Day"
 msgstr "Ngày Trước"
 
@@ -1115,7 +1125,7 @@ msgstr "Ramadan sắp kết thúc,"
 msgid "Ramadan is near,"
 msgstr "Lễ Ramadan đã gần kề,"
 
-#: src/tasks/update_widgets.ts:21
+#: src/tasks/update_widgets.ts:23
 msgid "Remaining till"
 msgstr "Đếm ngược tới"
 
@@ -1162,10 +1172,11 @@ msgid "Search"
 msgstr "Tìm kiếm"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:21
+#: src/screens/settings_widget/city_name_pos_settings.tsx:28
 msgid "Secondary Calendar"
 msgstr "Lịch phụ"
 
-#: src/screens/home/index.tsx:244
+#: src/screens/home/index.tsx:223
 msgid "See favorite locations"
 msgstr "Xem các địa điểm yêu thích"
 
@@ -1251,12 +1262,12 @@ msgstr "Điện thoại có nên rung khi azan hoặc lời nhắc bắt đầu 
 msgid "Show Adhan Options"
 msgstr "Tùy chọn Hiển thị Azan"
 
-#: src/screens/home/index.tsx:214
+#: src/screens/home/index.tsx:193
 msgid "Show Today"
 msgstr "Hôm nay"
 
-#: src/screens/settings_widget/index.tsx:64
-#: src/screens/settings_widget/index.tsx:79
+#: src/screens/settings_widget/index.tsx:65
+#: src/screens/settings_widget/index.tsx:80
 msgid "Show countdown?"
 msgstr "Hiện đếm ngược?"
 
@@ -1272,7 +1283,7 @@ msgstr "Cho tôi xem"
 msgid "Show next in notification?"
 msgstr "Hiện \"tiếp\" trong thông báo?"
 
-#: src/screens/settings_widget/index.tsx:42
+#: src/screens/settings_widget/index.tsx:43
 msgid "Show notification widget?"
 msgstr "Hiện tiện ích thông báo?"
 
@@ -1511,8 +1522,8 @@ msgstr "Dùng Bản đồ"
 msgid "Use a different alarm type?"
 msgstr "Sử dụng một loại báo thức khác?"
 
-#: src/screens/settings_widget/index.tsx:87
-#: src/screens/settings_widget/index.tsx:102
+#: src/screens/settings_widget/index.tsx:88
+#: src/screens/settings_widget/index.tsx:103
 msgid "Use adaptive theme?"
 msgstr "Sử dụng chủ đề thích ứng?"
 
@@ -1597,13 +1608,17 @@ msgstr "Bạn chưa hướng về Kaaba"
 msgid "You can access your device Power Manager using the button below."
 msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết bị bằng cách ấn nút bên dưới."
 
-#: src/screens/settings_location/location_coordinates.tsx:138
+#: src/screens/settings_location/location_coordinates.tsx:137
 msgid "You can also paste coords from clipboard"
 msgstr "Bạn cũng có thể dán toạ độ từ khay nhớ tạm"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Bạn có thể thay đổi lúc mà thông báo báo thức sắp tới hiện trước azan và lời nhắc"
+
+#: src/screens/settings_widget/city_name_pos_settings.tsx:19
+msgid "You can choose to replace one of calendars with your current location"
+msgstr "Bạn có thể chọn thay thế một trong các lịch bằng vị trí hiện tại của mình"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:38
 msgid "You can hide prayer times you don't want to see in the main screen here:"
@@ -1652,7 +1667,7 @@ msgstr "Số phút sẽ được thêm vào thời gian tính toán"
 msgid "after"
 msgstr "sau"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "ago"
 msgstr "trước"
 
@@ -1771,7 +1786,7 @@ msgstr "giờ cầu nguyện bị ẩn?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:500
+#: src/utils/date.ts:507
 msgid "later"
 msgstr "sau đó"
 
@@ -1847,7 +1862,7 @@ msgstr "Lời nhắc"
 msgid "settings"
 msgstr "Cài đặt"
 
-#: src/screens/settings_widget/index.tsx:57
+#: src/screens/settings_widget/index.tsx:58
 msgid "should notification widget be shown?"
 msgstr "tiện ích thông báo có nên được hiển thị không?"
 
