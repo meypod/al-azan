@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-15 15:50+0330\n"
+"POT-Creation-Date: 2023-09-15 23:52+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -215,9 +215,12 @@ msgstr "کیلنڈر"
 #: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:285
-#: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "منسوخ کریں۔"
+
+#: src/tasks/set_pre_alarm.ts:60
+msgid "Cancel Alarm"
+msgstr "الارم منسوخ کریں۔"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:183
 msgid "Cancel download"

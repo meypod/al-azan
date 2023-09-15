@@ -221,9 +221,12 @@ msgstr "Calendar"
 #: src/screens/settings_adhan/index.tsx:241
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:123
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:285
-#: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel"
 msgstr "Cancel"
+
+#: src/tasks/set_pre_alarm.ts:60
+msgid "Cancel Alarm"
+msgstr "Cancel Alarm"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:183
 msgid "Cancel download"
