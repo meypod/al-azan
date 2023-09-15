@@ -274,14 +274,23 @@ export function getFormattedDate(date: Date, weekday?: boolean) {
       .format(date)
       .split(' ');
 
+    let dayName = '';
+    if (weekday) {
+      dayName =
+        Intl.DateTimeFormat(SELECTED_LOCALE, {
+          calendar: SELECTED_SECONDARY_CALENDAR,
+          weekday: weekday ? 'long' : undefined,
+        }).format(date) + ' ';
+    }
+
     let formattedDate;
 
     if (SELECTED_LOCALE.startsWith('fa')) {
       const monthName = persianMonthNames['fa'][month];
-      formattedDate = `${dateParts[1]} ${monthName} ${dateParts[0]}`;
+      formattedDate = `${dayName}${dateParts[1]} ${monthName} ${dateParts[0]}`;
     } else {
       const monthName = persianMonthNames['en'][month];
-      formattedDate = `${monthName} ${dateParts[0]}, ${dateParts[1]} AP`;
+      formattedDate = `${dayName}${monthName} ${dateParts[0]}, ${dateParts[1]} AP`;
     }
 
     return formattedDate;
