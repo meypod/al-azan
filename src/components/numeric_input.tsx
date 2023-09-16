@@ -1,6 +1,5 @@
 import {IInputProps, Input} from 'native-base';
-import {memo, useCallback, useEffect, useState} from 'react';
-import {NativeSyntheticEvent, TextInputEndEditingEventData} from 'react-native';
+import {memo, useCallback, useEffect, useRef, useState} from 'react';
 
 export const NumericInput = memo(function NumericInput(
   props: Omit<IInputProps, 'value' | 'onChange' | 'onChangeText'> & {
@@ -12,74 +11,63 @@ export const NumericInput = memo(function NumericInput(
     invalidLabel?: string;
     /** parse as integer? */
     int?: boolean;
-    /** should the input striction be immediate? */
-    strict?: boolean;
   },
 ) {
   const {
     value,
     onChange,
-    invalidLabel = '0',
     invalidValue = 0,
+    invalidLabel = invalidValue.toString(),
     int = false,
-    strict = false,
     ...otherProps
   } = props;
   const [tmpText, setTmpText] = useState<string>(
     (value || invalidLabel).toString(),
   );
 
-  const onEndEditing = useCallback(
-    (e: NativeSyntheticEvent<TextInputEndEditingEventData>) => {
-      const parsedValue = int
-        ? parseInt(e.nativeEvent.text, 10)
-        : parseFloat(e.nativeEvent.text);
-      if (!isNaN(parsedValue)) {
-        setTmpText(parsedValue.toString());
-        onChange && onChange(parsedValue);
+  const parsedValue = useRef(
+    int ? parseInt(value as string, 10) : parseFloat(value as string),
+  );
+
+  const onInputChange = useCallback(
+    (text: string) => {
+      const newValueInt = parseInt(text, 10);
+      const newValueFloat = parseFloat(text);
+
+      const newValue = int ? newValueInt : newValueFloat;
+
+      if (
+        newValue !== parsedValue.current ||
+        (int && newValueInt !== newValueFloat)
+      ) {
+        parsedValue.current = newValue;
+        if (!isNaN(newValue)) {
+          setTmpText(newValue.toString());
+          onChange && onChange(newValue);
+        } else {
+          setTmpText(invalidLabel);
+          onChange && onChange(invalidValue);
+        }
       } else {
-        setTmpText(invalidLabel);
-        onChange && onChange(invalidValue);
+        setTmpText(text);
       }
     },
     [int, invalidLabel, invalidValue, onChange],
   );
 
   useEffect(() => {
-    if (typeof value === 'string') {
-      onEndEditing({
-        nativeEvent: {
-          text: value,
-        },
-      } as NativeSyntheticEvent<TextInputEndEditingEventData>);
-    } else {
-      if (typeof value === 'number') {
-        setTmpText(value.toString());
-      } else {
-        setTmpText(invalidLabel.toString());
-      }
+    // we just need loose equality here
+    if (value != parsedValue.current) {
+      onInputChange(value as string);
     }
-  }, [invalidLabel, onEndEditing, value]);
+  }, [onInputChange, value]);
 
-  if (strict) {
-    return (
-      <Input
-        keyboardType="numeric"
-        {...otherProps}
-        onChange={onEndEditing}
-        onChangeText={setTmpText}
-        value={tmpText}
-      />
-    );
-  } else {
-    return (
-      <Input
-        keyboardType="numeric"
-        {...otherProps}
-        onEndEditing={onEndEditing}
-        onChangeText={setTmpText}
-        value={tmpText}
-      />
-    );
-  }
+  return (
+    <Input
+      keyboardType="numeric"
+      {...otherProps}
+      onChangeText={onInputChange}
+      value={tmpText}
+    />
+  );
 });
