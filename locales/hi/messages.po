@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:33+0330\n"
+"POT-Creation-Date: 2023-09-16 13:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -662,6 +662,11 @@ msgstr "इंटरनेट कनेक्शन"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "किबला मैप के काम करने के लिए इंटरनेट कनेक्शन आवश्यक है। कृपया अपना वाईफाई या मोबाइल डेटा सक्षम करें और पुनः प्रयास करें।"
 
+#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:123
+msgid "Iran"
+msgstr "ईरान"
+
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
@@ -709,11 +714,11 @@ msgstr "ऐसा लगता है कि आपने बैकअप आय
 msgid "Just now"
 msgstr "बस अब"
 
-#: src/adhan/calculation_methods.ts:128
+#: src/adhan/calculation_methods.ts:129
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "केमेंट्रियन अगामा रिपब्लिक इंडोनेशिया (केमेनाग)"
 
-#: src/adhan/calculation_methods.ts:148
+#: src/adhan/calculation_methods.ts:149
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "केमेंट्रियन हाल एहवाल उगामा (ब्रुनेई दारुस्सलाम)"
 
@@ -818,11 +823,11 @@ msgstr "आधी रात में"
 msgid "Midnight Method"
 msgstr "आधी रात की विधि"
 
-#: src/adhan/calculation_methods.ts:134
+#: src/adhan/calculation_methods.ts:135
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "धार्मिक मामलों और वक्फ मंत्रालय, अल्जीरिया"
 
-#: src/adhan/calculation_methods.ts:154
+#: src/adhan/calculation_methods.ts:155
 msgid "Ministry of Religious Affairs of Tunisia"
 msgstr "ट्यूनीशिया के धार्मिक मामलों का मंत्रालय"
 
@@ -1019,6 +1024,10 @@ msgstr "आगामी अधन"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "आगामी अनुस्मारक"
 
+#: src/adhan/calculation_methods.ts:38
+msgid "Pakistan"
+msgstr "पाकिस्तान"
+
 #: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "पेस्ट करें"
@@ -1169,6 +1178,10 @@ msgstr "सैमसंग उपकरणों का अपना खुद �
 msgid "Saturday"
 msgstr "शनिवार"
 
+#: src/adhan/calculation_methods.ts:44
+msgid "Saudi Arabia"
+msgstr "सऊदी अरब"
+
 #: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
@@ -1238,7 +1251,7 @@ msgstr "शाफइ, मलिकी, हनबली (डिफ़ॉल्ट
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "शिया इथना अशरी, लेवा संस्थान, ख़ुम"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:123
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "शिया, भूभौतिकी संस्थान, तेहरान विश्वविद्यालय"
 

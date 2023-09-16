@@ -35,13 +35,13 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
   },
 
   Karachi: {
-    label: t`University of Islamic Sciences, Karachi`,
+    label: t`University of Islamic Sciences, Karachi` + ', ' + t`Pakistan`,
     info: 'Uses Fajr angle of 18 and an Isha angle of 18' as const,
     get: CalculationMethod.Karachi,
   },
 
   UmmAlQura: {
-    label: t`Umm al-Qura University, Makkah`,
+    label: t`Umm al-Qura University, Makkah` + ', ' + t`Saudi Arabia`,
     info: 'Uses a Fajr angle of 18.5 and an Isha interval of 90 minutes.\nNote: You should add a +30 minute custom adjustment of Isha during Ramadan.' as const,
     get: CalculationMethod.UmmAlQura,
   },
@@ -113,13 +113,14 @@ export const CalculationMethods: Record<string, CalculationMethodEntry> = {
   },
 
   Jafari: {
-    label: t`Shia Ithna Ashari, Leva Institute, Qum`,
+    label: t`Shia Ithna Ashari, Leva Institute, Qum` + ', ' + t`Iran`,
     info: 'Uses Fajr angle of 16, Maghrib angle of 4 and Isha angle of 14',
     get: () => new CalculationParameters('Other', 16.0, 14.0, 0, 4.0),
   },
 
   Tehran: {
-    label: t`Shia, Institute of Geophysics, University of Tehran`,
+    label:
+      t`Shia, Institute of Geophysics, University of Tehran` + ', ' + t`Iran`,
     info: 'Uses Fajr angle of 17.7, Maghrib angle of 4.5 and Isha angle of 14',
     get: CalculationMethod.Tehran,
   },

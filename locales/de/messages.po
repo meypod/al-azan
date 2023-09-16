@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:33+0330\n"
+"POT-Creation-Date: 2023-09-16 13:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -662,6 +662,11 @@ msgstr "Internetverbindung"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Damit die Qibla-Karte funktioniert, ist eine Internetverbindung erforderlich. Bitte aktivieren Sie Ihr WLAN oder Ihre mobilen Daten und versuchen Sie es erneut."
 
+#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:123
+msgid "Iran"
+msgstr "Iran"
+
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
@@ -709,11 +714,11 @@ msgstr "Es scheint, dass Sie eine Sicherung importiert haben. Vergessen Sie nich
 msgid "Just now"
 msgstr "jetzt gerade"
 
-#: src/adhan/calculation_methods.ts:128
+#: src/adhan/calculation_methods.ts:129
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Kementrian Agama Republik Indonesien (KEMENAG)"
 
-#: src/adhan/calculation_methods.ts:148
+#: src/adhan/calculation_methods.ts:149
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 
@@ -820,11 +825,11 @@ msgstr "Mitten in der Nacht"
 msgid "Midnight Method"
 msgstr "Mitternachtsmethode"
 
-#: src/adhan/calculation_methods.ts:134
+#: src/adhan/calculation_methods.ts:135
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "Ministerium für religiöse Angelegenheiten und Wakfs, Algerien"
 
-#: src/adhan/calculation_methods.ts:154
+#: src/adhan/calculation_methods.ts:155
 msgid "Ministry of Religious Affairs of Tunisia"
 msgstr "Ministerium für religiöse Angelegenheiten von Tunesien"
 
@@ -1021,6 +1026,10 @@ msgstr "Bevorstehender Adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Kommende Erinnerung"
 
+#: src/adhan/calculation_methods.ts:38
+msgid "Pakistan"
+msgstr "Pakistan"
+
 #: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Einfügen"
@@ -1173,6 +1182,10 @@ msgstr ""
 msgid "Saturday"
 msgstr "Samstag"
 
+#: src/adhan/calculation_methods.ts:44
+msgid "Saudi Arabia"
+msgstr "Saudi-Arabien"
+
 #: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
@@ -1245,7 +1258,7 @@ msgstr "Shafi, Maliki, Hanbali (Standard)"
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "Shia Ithna Ashari, Leva-Institut, Qom"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:123
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institut für Geophysik, Universität von Teheran"
 

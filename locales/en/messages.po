@@ -668,6 +668,11 @@ msgstr "Internet connection"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 
+#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:123
+msgid "Iran"
+msgstr "Iran"
+
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
@@ -715,11 +720,11 @@ msgstr "It seems that you have imported a backup, don't forget to disable batter
 msgid "Just now"
 msgstr "Just now"
 
-#: src/adhan/calculation_methods.ts:128
+#: src/adhan/calculation_methods.ts:129
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "Kementrian Agama Republik Indonesia (KEMENAG)"
 
-#: src/adhan/calculation_methods.ts:148
+#: src/adhan/calculation_methods.ts:149
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 
@@ -824,11 +829,11 @@ msgstr "Middle of the Night"
 msgid "Midnight Method"
 msgstr "Midnight Method"
 
-#: src/adhan/calculation_methods.ts:134
+#: src/adhan/calculation_methods.ts:135
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "Ministry of Religious Affairs and Wakfs, Algeria"
 
-#: src/adhan/calculation_methods.ts:154
+#: src/adhan/calculation_methods.ts:155
 msgid "Ministry of Religious Affairs of Tunisia"
 msgstr "Ministry of Religious Affairs of Tunisia"
 
@@ -1025,6 +1030,10 @@ msgstr "Upcoming adhan"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Upcoming reminder"
 
+#: src/adhan/calculation_methods.ts:38
+msgid "Pakistan"
+msgstr "Pakistan"
+
 #: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "Paste"
@@ -1179,6 +1188,10 @@ msgstr ""
 msgid "Saturday"
 msgstr "Saturday"
 
+#: src/adhan/calculation_methods.ts:44
+msgid "Saudi Arabia"
+msgstr "Saudi Arabia"
+
 #: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
@@ -1251,7 +1264,7 @@ msgstr "Shafi, Maliki, Hanbali (Default)"
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "Shia Ithna Ashari, Leva Institute, Qum"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:123
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "Shia, Institute of Geophysics, University of Tehran"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:33+0330\n"
+"POT-Creation-Date: 2023-09-16 13:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -662,6 +662,11 @@ msgstr "انٹرنیٹ کنکشن"
 msgid "Internet connection is necessary for qibla map to work. Please enable your wifi or mobile data and try again."
 msgstr "قبلہ نقشہ کے کام کرنے کے لیے انٹرنیٹ کنکشن ضروری ہے۔ براہ کرم اپنا وائی فائی یا موبائل ڈیٹا فعال کریں اور دوبارہ کوشش کریں۔"
 
+#: src/adhan/calculation_methods.ts:116
+#: src/adhan/calculation_methods.ts:123
+msgid "Iran"
+msgstr "ایران"
+
 #: fastlane/update/update.ts:69
 #: website/src/_includes/home.tsx:100
 msgid "Is localized in English, Persian, Arabic, Turkish, Indonesian, French, Urdu, Hindi, German, Bosnian, Vietnamese, Bangla"
@@ -709,11 +714,11 @@ msgstr "ایسا لگتا ہے کہ آپ نے بیک اپ درآمد کیا ہے
 msgid "Just now"
 msgstr "ابھی ابھی"
 
-#: src/adhan/calculation_methods.ts:128
+#: src/adhan/calculation_methods.ts:129
 msgid "Kementrian Agama Republik Indonesia (KEMENAG)"
 msgstr "کیمینٹرین اگاما ریپبلک انڈونیشیا (کیمیناگ)"
 
-#: src/adhan/calculation_methods.ts:148
+#: src/adhan/calculation_methods.ts:149
 msgid "Kementrian Hal Ehwal Ugama (Brunei Darussalam)"
 msgstr "کیمینٹرین ہال ایہوال یوگاما (برونائی دارالسلام)"
 
@@ -818,11 +823,11 @@ msgstr "آدھی رات"
 msgid "Midnight Method"
 msgstr "آدھی رات کا طریقہ"
 
-#: src/adhan/calculation_methods.ts:134
+#: src/adhan/calculation_methods.ts:135
 msgid "Ministry of Religious Affairs and Wakfs, Algeria"
 msgstr "وزارت مذہبی امور اور وقف، الجزائر"
 
-#: src/adhan/calculation_methods.ts:154
+#: src/adhan/calculation_methods.ts:155
 msgid "Ministry of Religious Affairs of Tunisia"
 msgstr "تیونس کی وزارت مذہبی امور"
 
@@ -1019,6 +1024,10 @@ msgstr "آنے والی اذان"
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "آنے والی یاد دہانی"
 
+#: src/adhan/calculation_methods.ts:38
+msgid "Pakistan"
+msgstr "پاکستان"
+
 #: src/screens/settings_location/location_coordinates.tsx:143
 msgid "Paste"
 msgstr "چسپاں کریں۔"
@@ -1169,6 +1178,10 @@ msgstr "سام سنگ ڈیوائسز کا اپنا حسب ضرورت پاور م
 msgid "Saturday"
 msgstr "ہفتہ"
 
+#: src/adhan/calculation_methods.ts:44
+msgid "Saudi Arabia"
+msgstr "سعودی عرب"
+
 #: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:177
 msgid "Search"
@@ -1238,7 +1251,7 @@ msgstr "شافعی، مالکی، حنبلی (پہلے سے طے شدہ)"
 msgid "Shia Ithna Ashari, Leva Institute, Qum"
 msgstr "شیعہ اتھنا اشعری، لیوا انسٹی ٹیوٹ، قم"
 
-#: src/adhan/calculation_methods.ts:122
+#: src/adhan/calculation_methods.ts:123
 msgid "Shia, Institute of Geophysics, University of Tehran"
 msgstr "شیعہ، انسٹی ٹیوٹ آف جیو فزکس، یونیورسٹی آف تہران"
 
