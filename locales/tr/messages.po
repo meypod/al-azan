@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-15 23:52+0330\n"
+"POT-Creation-Date: 2023-09-16 07:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: tr\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "10 min"
 msgstr "10 dk."
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:159
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
 msgid "15 min"
 msgstr "15 dk."
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:163
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
 msgid "30 min"
 msgstr "30 dk."
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "Bu yöntemde ramazan boyunca yatsı vaktine 30 dakika eklenir"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:151
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "5 min"
 msgstr "15 dk."
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:167
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "60 min"
 msgstr "60 dk."
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
 msgid "90 min"
 msgstr "90 dk."
 
@@ -211,10 +211,10 @@ msgstr "Takvim"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
-#: src/screens/qada_counter/edit_counter_modal.tsx:168
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
 msgid "Cancel"
 msgstr "İptal"
 
@@ -310,8 +310,8 @@ msgid "Compass sensor unavailable"
 msgstr "Pusula sensörü kullanılamıyor"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
-#: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
 msgid "Confirm"
 msgstr "Onayla"
 
@@ -337,7 +337,7 @@ msgid "Country"
 msgstr "Ülke"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
 msgid "Custom"
 msgstr "Özel"
 
@@ -461,7 +461,7 @@ msgstr "Sayacı düzenle"
 msgid "Edit Location"
 msgstr "Konumu Düzenle"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "Edit Reminder"
 msgstr "Hatırlatıcıyı düzenle"
 
@@ -723,7 +723,7 @@ msgstr "Kuveyt"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
 msgid "Label"
 msgstr "Etiket"
 
@@ -865,7 +865,7 @@ msgstr "Yeni sayaç"
 msgid "New Location"
 msgstr "Yeni Konum"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "New Reminder"
 msgstr "Yeni hatırlatıcı"
 
@@ -961,7 +961,7 @@ msgid "One-Seventh of the Night"
 msgstr "Gecenin yedide biri"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
 msgid "Only once?"
 msgstr "Sadece bir kez mi?"
 
@@ -987,7 +987,7 @@ msgstr "Açık kaynak deposu"
 msgid "Open-source"
 msgstr "Açık kaynak"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
 msgid "Options"
 msgstr "Seçenekler"
 
@@ -1056,7 +1056,7 @@ msgstr "Güç yöneticisi"
 msgid "Prayer Times"
 msgstr "Namaz Vakitleri"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
 msgid "Prayer list"
 msgstr "Dua listesi"
 
@@ -1329,8 +1329,8 @@ msgstr "Bazı cihazlarda, uygulamanın arka planda çalışmaya devam edebilmesi
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Sound"
 msgstr "Ses"
 
@@ -1405,12 +1405,12 @@ msgid "Thursday"
 msgstr "Perşembe"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:139
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Vakit"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
 msgid "Time condition"
 msgstr "Zaman koşulu"
 
@@ -1418,7 +1418,7 @@ msgstr "Zaman koşulu"
 msgid "Time format"
 msgstr "Zaman formatı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:144
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "Time list"
 msgstr "Zaman listesi"
 
@@ -1663,7 +1663,7 @@ msgstr "Hakkında"
 msgid "adjustment.hint"
 msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "after"
 msgstr "sonra"
 
@@ -1680,7 +1680,7 @@ msgstr "İkindi"
 msgid "backup_settings"
 msgstr "Yedekleme"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "before"
 msgstr "önce"
 
@@ -1803,7 +1803,7 @@ msgstr "Akşam"
 msgid "masjid_an_nabawi"
 msgstr "Mescid-i Nebevî"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "minutes"
 msgstr "dakika"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-15 23:52+0330\n"
+"POT-Creation-Date: 2023-09-16 07:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: bs\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "10 min"
 msgstr "10 min"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:159
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
 msgid "15 min"
 msgstr "15 min"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:163
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
 msgid "30 min"
 msgstr "Pola Sata"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 minuta se dodaje na Jaciju tokom Ramazana u ovoj metodi"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:151
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "5 min"
 msgstr "5 min"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:167
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "60 min"
 msgstr "Sat Vremena"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
 msgid "90 min"
 msgstr "Sat i Po"
 
@@ -211,10 +211,10 @@ msgstr "Kalendar"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
-#: src/screens/qada_counter/edit_counter_modal.tsx:168
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
 msgid "Cancel"
 msgstr "Otkažite"
 
@@ -310,8 +310,8 @@ msgid "Compass sensor unavailable"
 msgstr "Senzor kompasa je nedostupan"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
-#: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
 msgid "Confirm"
 msgstr "Potvrdite"
 
@@ -337,7 +337,7 @@ msgid "Country"
 msgstr "Zemlja"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
 msgid "Custom"
 msgstr "Prilagođeno"
 
@@ -461,7 +461,7 @@ msgstr "Uredite Brojač"
 msgid "Edit Location"
 msgstr "Uredi Lokaciju"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "Edit Reminder"
 msgstr "Uredite Podsjetnik"
 
@@ -723,7 +723,7 @@ msgstr "Kuvajt"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
 msgid "Label"
 msgstr "Oznaka"
 
@@ -865,7 +865,7 @@ msgstr "Novi Brojač"
 msgid "New Location"
 msgstr "Nova Lokacija"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "New Reminder"
 msgstr "Novi Podsjetnik"
 
@@ -961,7 +961,7 @@ msgid "One-Seventh of the Night"
 msgstr "Jedna Sedmina Večeri"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
 msgid "Only once?"
 msgstr "Samo jednom?"
 
@@ -987,7 +987,7 @@ msgstr "Otvoreno spremište"
 msgid "Open-source"
 msgstr "Otvorenog izvora"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
 msgid "Options"
 msgstr "Postavke"
 
@@ -1056,7 +1056,7 @@ msgstr "Napojni Menadžer"
 msgid "Prayer Times"
 msgstr "Vremena Molitve"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
 msgid "Prayer list"
 msgstr "Molitvena lista"
 
@@ -1339,8 +1339,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Sound"
 msgstr "Zvuk"
 
@@ -1418,12 +1418,12 @@ msgid "Thursday"
 msgstr "Četvrtak"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:139
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Vrijeme"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
 msgid "Time condition"
 msgstr "Vremensko stanje"
 
@@ -1431,7 +1431,7 @@ msgstr "Vremensko stanje"
 msgid "Time format"
 msgstr "Vremenski format"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:144
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "Time list"
 msgstr "Vremenski spisak"
 
@@ -1676,7 +1676,7 @@ msgstr "O Aplikaciji"
 msgid "adjustment.hint"
 msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "after"
 msgstr "nakon"
 
@@ -1693,7 +1693,7 @@ msgstr "Ikindija"
 msgid "backup_settings"
 msgstr "Rezerva"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "before"
 msgstr "prije"
 
@@ -1816,7 +1816,7 @@ msgstr "Akšam"
 msgid "masjid_an_nabawi"
 msgstr "Poslanikova Džamija"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "minutes"
 msgstr "minuta"
 

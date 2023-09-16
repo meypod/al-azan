@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-15 23:52+0330\n"
+"POT-Creation-Date: 2023-09-16 07:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: hi\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "10 min"
 msgstr "10 मिनट"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:159
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
 msgid "15 min"
 msgstr "15 मिनट"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:163
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
 msgid "30 min"
 msgstr "30 मिनट"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "इस तरीके से रमजान के दौरान ईशा के समय में 30 मिनट जोड़ा जाता है"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:151
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "5 min"
 msgstr "5 मिनट"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:167
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "60 min"
 msgstr "60 मिनट"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
 msgid "90 min"
 msgstr "90 मिनट"
 
@@ -211,10 +211,10 @@ msgstr "पंचांग"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
-#: src/screens/qada_counter/edit_counter_modal.tsx:168
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
 msgid "Cancel"
 msgstr "रद्द करें"
 
@@ -310,8 +310,8 @@ msgid "Compass sensor unavailable"
 msgstr "कम्पास सेंसर अनुपलब्ध"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
-#: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
 msgid "Confirm"
 msgstr "पुष्टि करें "
 
@@ -337,7 +337,7 @@ msgid "Country"
 msgstr "देश"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
 msgid "Custom"
 msgstr "रिवाज़"
 
@@ -461,7 +461,7 @@ msgstr "काउंटर संपादित करें"
 msgid "Edit Location"
 msgstr "स्थान संपादित करें"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "Edit Reminder"
 msgstr "रिमाइंडर संपादित करें"
 
@@ -723,7 +723,7 @@ msgstr "कुवैट"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
 msgid "Label"
 msgstr "लेबल"
 
@@ -865,7 +865,7 @@ msgstr "नया काउंटर"
 msgid "New Location"
 msgstr "नया स्थान"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "New Reminder"
 msgstr "नया अनुस्मारक"
 
@@ -961,7 +961,7 @@ msgid "One-Seventh of the Night"
 msgstr "रात का एक-सातवां हिस्सा"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
 msgid "Only once?"
 msgstr "सिर्फ एक बार?"
 
@@ -987,7 +987,7 @@ msgstr "ओपन सोर्स रिपॉजिटरी"
 msgid "Open-source"
 msgstr "खुला स्त्रोत"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
 msgid "Options"
 msgstr "विकल्प"
 
@@ -1056,7 +1056,7 @@ msgstr "पावर मैनेजर"
 msgid "Prayer Times"
 msgstr "प्रार्थना का समय"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
 msgid "Prayer list"
 msgstr "प्रार्थना सूची"
 
@@ -1329,8 +1329,8 @@ msgstr "ऐप को बैकग्राउंड में बंद हो�
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Sound"
 msgstr "ध्वनि"
 
@@ -1405,12 +1405,12 @@ msgid "Thursday"
 msgstr "गुरुवार"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:139
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "समय"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
 msgid "Time condition"
 msgstr "समय की स्थिति"
 
@@ -1418,7 +1418,7 @@ msgstr "समय की स्थिति"
 msgid "Time format"
 msgstr "समय प्रारूप"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:144
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "Time list"
 msgstr "समय सूची"
 
@@ -1660,7 +1660,7 @@ msgstr "के बारे में"
 msgid "adjustment.hint"
 msgstr "गणना किए गए समय में जोड़े जाने वाले मिनटों की संख्या"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "after"
 msgstr "बाद में"
 
@@ -1677,7 +1677,7 @@ msgstr "असर "
 msgid "backup_settings"
 msgstr "बैकअप"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "before"
 msgstr "इस से पहले"
 
@@ -1800,7 +1800,7 @@ msgstr "मग़रिब"
 msgid "masjid_an_nabawi"
 msgstr "मस्जिद अन नबवी"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "minutes"
 msgstr "मिनट"
 

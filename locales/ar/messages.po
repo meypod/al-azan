@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-15 23:52+0330\n"
+"POT-Creation-Date: 2023-09-16 07:44+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: ar\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:155
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
 msgid "10 min"
 msgstr "10 دقيقة"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:159
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
 msgid "15 min"
 msgstr "15 دقيقة"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:163
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
 msgid "30 min"
 msgstr "30 دقيقة"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "يتم إضافة 30 دقيقة إلى وقت صلاة العشاء خلال شهر رمضان"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:151
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
 msgid "5 min"
 msgstr "5 دقيقة"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:167
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
 msgid "60 min"
 msgstr "60 دقيقة"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:171
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
 msgid "90 min"
 msgstr "90 دقيقة"
 
@@ -211,16 +211,16 @@ msgstr "التقويم"
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:106
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:145
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
-#: src/screens/qada_counter/edit_counter_modal.tsx:168
+#: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:123
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:285
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
 msgid "Cancel"
 msgstr "إلغاء"
 
 #: src/tasks/set_pre_alarm.ts:60
 msgid "Cancel Alarm"
-msgstr "إلغاء التنبيه"
+msgstr "إلغاء المنبه"
 
 #: src/screens/settings_adhan/adhan_list_item.tsx:183
 msgid "Cancel download"
@@ -310,8 +310,8 @@ msgid "Compass sensor unavailable"
 msgstr "مستشعر البوصلة غير متوفر"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
-#: src/screens/qada_counter/edit_counter_modal.tsx:167
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:284
+#: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
 msgid "Confirm"
 msgstr "تأكيد"
 
@@ -337,7 +337,7 @@ msgid "Country"
 msgstr "دولة"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
 msgid "Custom"
 msgstr "مخصص"
 
@@ -461,7 +461,7 @@ msgstr "تحرير العداد"
 msgid "Edit Location"
 msgstr "تعديل الموقع"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "Edit Reminder"
 msgstr "تحرير تذكير"
 
@@ -723,7 +723,7 @@ msgstr "الكويت"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:129
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
 msgid "Label"
 msgstr "تسمية"
 
@@ -865,7 +865,7 @@ msgstr "عداد جديد"
 msgid "New Location"
 msgstr "إضافة موقع جديد"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:118
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
 msgid "New Reminder"
 msgstr "تذكير جديد"
 
@@ -961,7 +961,7 @@ msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:253
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
 msgid "Only once?"
 msgstr "مرة واحدة فقط؟"
 
@@ -987,7 +987,7 @@ msgstr "مستودع مفتوح المصدر"
 msgid "Open-source"
 msgstr "مفتوح المصدر"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:250
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
 msgid "Options"
 msgstr "خيارات"
 
@@ -1056,7 +1056,7 @@ msgstr "مدير الطاقة"
 msgid "Prayer Times"
 msgstr "أوقات الصلاة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
 msgid "Prayer list"
 msgstr "قائمة الصلاة"
 
@@ -1329,8 +1329,8 @@ msgstr "بعض الأجهزة تحتاج إلى إعدادات إضافية دا
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:237
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:239
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
 msgid "Sound"
 msgstr "صوت"
 
@@ -1405,12 +1405,12 @@ msgid "Thursday"
 msgstr "الخميس"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:139
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "وقت"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:193
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
 msgid "Time condition"
 msgstr "شرط الوقت"
 
@@ -1418,7 +1418,7 @@ msgstr "شرط الوقت"
 msgid "Time format"
 msgstr "تنسيق الوقت"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:144
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
 msgid "Time list"
 msgstr "قائمة الوقت"
 
@@ -1663,7 +1663,7 @@ msgstr "عن التطبيق"
 msgid "adjustment.hint"
 msgstr "عدد الدقائق التي ستضاف إلى الأوقات المحسوبة"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:209
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "after"
 msgstr "بعد"
 
@@ -1680,7 +1680,7 @@ msgstr "عصر"
 msgid "backup_settings"
 msgstr "النسخ الاحتياطي"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:208
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
 msgid "before"
 msgstr "قبل"
 
@@ -1803,7 +1803,7 @@ msgstr "مغرب"
 msgid "masjid_an_nabawi"
 msgstr "المسجد النبوي"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:189
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
 msgid "minutes"
 msgstr "دقيقة"
 
