@@ -37,6 +37,7 @@ export type SettingsStore = {
   HIGHLIGHT_CURRENT_PRAYER: boolean;
   // other
   SELECTED_LOCALE: string;
+  SELECTED_LOCALE_FOR_ARABIC_CALENDAR: string;
   SELECTED_ARABIC_CALENDAR: string;
   SELECTED_SECONDARY_CALENDAR: string;
   APP_INITIAL_CONFIG_DONE: boolean;
@@ -128,6 +129,7 @@ export const settings = createStore<SettingsStore>()(
       THEME_COLOR: 'default',
       SELECTED_LOCALE: PREFERRED_LOCALE,
       SELECTED_ARABIC_CALENDAR: '',
+      SELECTED_LOCALE_FOR_ARABIC_CALENDAR: '',
       SELECTED_SECONDARY_CALENDAR: 'gregory',
       APP_INITIAL_CONFIG_DONE: false,
       APP_INTRO_DONE: false,

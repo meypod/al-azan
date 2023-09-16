@@ -1,8 +1,8 @@
 import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage, t} from '@lingui/macro';
 import {Platform} from 'react-native';
-import {calcSettings} from '@/store/calculation';
-import {settings} from '@/store/settings';
+import {CalcSettingsStore, calcSettings} from '@/store/calculation';
+import {SettingsStore, settings} from '@/store/settings';
 
 const timeTranslations = {
   day: defineMessage({
@@ -23,11 +23,13 @@ const timeTranslations = {
   }),
 } as Record<string, MessageDescriptor>;
 
+/** adding numbering to a locale that already has a numbering system is a noop */
 function addNumberingToLocale(
   SELECTED_LOCALE: string,
   NUMBERING_SYSTEM: string,
 ) {
   if (!NUMBERING_SYSTEM) return SELECTED_LOCALE;
+  if (SELECTED_LOCALE.includes('-nu-')) return SELECTED_LOCALE;
   if (SELECTED_LOCALE.includes('-u-')) {
     return `${SELECTED_LOCALE}-nu-${NUMBERING_SYSTEM}`;
   } else {
@@ -35,43 +37,83 @@ function addNumberingToLocale(
   }
 }
 
-let {
-  IS_24_HOUR_FORMAT,
-  NUMBERING_SYSTEM,
-  SELECTED_LOCALE,
-  SELECTED_ARABIC_CALENDAR,
-  SELECTED_SECONDARY_CALENDAR,
-} = settings.getState();
-SELECTED_LOCALE = addNumberingToLocale(SELECTED_LOCALE, NUMBERING_SYSTEM);
-
-export let formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
-
-if (!SELECTED_ARABIC_CALENDAR) {
-  SELECTED_ARABIC_CALENDAR = SELECTED_LOCALE.startsWith('fa')
-    ? 'islamic-civil'
-    : 'islamic';
-}
-SELECTED_SECONDARY_CALENDAR = SELECTED_SECONDARY_CALENDAR || 'gregory';
-
-let HIJRI_DATE_ADJUSTMENT = calcSettings.getState().HIJRI_DATE_ADJUSTMENT;
-
-settings.subscribe(state => {
-  IS_24_HOUR_FORMAT = state.IS_24_HOUR_FORMAT;
-  NUMBERING_SYSTEM = state.NUMBERING_SYSTEM;
-  SELECTED_LOCALE = state.SELECTED_LOCALE; // probably unnecessary but anyway
-  SELECTED_LOCALE = addNumberingToLocale(SELECTED_LOCALE, NUMBERING_SYSTEM);
-  formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
-  SELECTED_ARABIC_CALENDAR = state.SELECTED_ARABIC_CALENDAR;
-  if (!SELECTED_ARABIC_CALENDAR) {
-    SELECTED_ARABIC_CALENDAR = SELECTED_LOCALE.startsWith('fa')
-      ? 'islamic-civil'
-      : 'islamic';
+function addCalendarToLocale(SELECTED_LOCALE: string, CALENDAR?: string) {
+  if (!CALENDAR) return SELECTED_LOCALE;
+  if (SELECTED_LOCALE.includes('-u-')) {
+    return `${SELECTED_LOCALE}-ca-${CALENDAR}`;
+  } else {
+    return `${SELECTED_LOCALE}-u-ca-${CALENDAR}`;
   }
-  SELECTED_SECONDARY_CALENDAR = state.SELECTED_SECONDARY_CALENDAR || 'gregory';
-});
+}
 
-calcSettings.subscribe(state => {
-  HIJRI_DATE_ADJUSTMENT = state.HIJRI_DATE_ADJUSTMENT;
+let IS_24_HOUR_FORMAT: SettingsStore['IS_24_HOUR_FORMAT'],
+  NUMBERING_SYSTEM: SettingsStore['NUMBERING_SYSTEM'],
+  SELECTED_LOCALE: SettingsStore['SELECTED_LOCALE'],
+  SELECTED_ARABIC_CALENDAR: SettingsStore['SELECTED_ARABIC_CALENDAR'],
+  SELECTED_LOCALE_FOR_ARABIC_CALENDAR: SettingsStore['SELECTED_LOCALE_FOR_ARABIC_CALENDAR'],
+  SELECTED_SECONDARY_CALENDAR: SettingsStore['SELECTED_SECONDARY_CALENDAR'];
+let HIJRI_DATE_ADJUSTMENT: CalcSettingsStore['HIJRI_DATE_ADJUSTMENT'];
+
+export let formatNu: Intl.NumberFormat['format'] = new Intl.NumberFormat(
+  'en-US',
+).format;
+
+function updateState({
+  settingsState,
+  calcSettingsState,
+}: {
+  settingsState?: SettingsStore;
+  calcSettingsState?: CalcSettingsStore;
+} = {}) {
+  if (settingsState) {
+    IS_24_HOUR_FORMAT = settingsState.IS_24_HOUR_FORMAT;
+    NUMBERING_SYSTEM = settingsState.NUMBERING_SYSTEM;
+    SELECTED_LOCALE = addNumberingToLocale(
+      settingsState.SELECTED_LOCALE,
+      NUMBERING_SYSTEM,
+    );
+    formatNu = new Intl.NumberFormat(SELECTED_LOCALE).format;
+
+    SELECTED_ARABIC_CALENDAR = settingsState.SELECTED_ARABIC_CALENDAR;
+    if (!SELECTED_ARABIC_CALENDAR) {
+      SELECTED_ARABIC_CALENDAR = SELECTED_LOCALE.startsWith('fa')
+        ? 'islamic-civil'
+        : 'islamic';
+    }
+
+    if (settingsState.SELECTED_LOCALE_FOR_ARABIC_CALENDAR) {
+      SELECTED_LOCALE_FOR_ARABIC_CALENDAR = addNumberingToLocale(
+        settingsState.SELECTED_LOCALE_FOR_ARABIC_CALENDAR,
+        NUMBERING_SYSTEM,
+      );
+    }
+
+    SELECTED_LOCALE_FOR_ARABIC_CALENDAR = addCalendarToLocale(
+      settingsState.SELECTED_LOCALE_FOR_ARABIC_CALENDAR || SELECTED_LOCALE,
+      SELECTED_ARABIC_CALENDAR,
+    );
+    SELECTED_SECONDARY_CALENDAR =
+      settingsState.SELECTED_SECONDARY_CALENDAR || 'gregory';
+  }
+
+  if (calcSettingsState) {
+    HIJRI_DATE_ADJUSTMENT = calcSettingsState.HIJRI_DATE_ADJUSTMENT;
+  }
+}
+
+updateState({
+  settingsState: settings.getState(),
+  calcSettingsState: calcSettings.getState(),
+});
+settings.subscribe(settingsState => {
+  updateState({
+    settingsState,
+  });
+});
+calcSettings.subscribe(calcSettingsState => {
+  updateState({
+    calcSettingsState,
+  });
 });
 
 const oneMinuteInMs = 60 * 1000;
@@ -335,16 +377,10 @@ export function getYearAndMonth(date: Date, hijri?: boolean) {
   if (hijri) {
     const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-    return Intl.DateTimeFormat(
-      addNumberingToLocale(
-        `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
-        NUMBERING_SYSTEM,
-      ),
-      {
-        year: 'numeric',
-        month: 'long',
-      },
-    ).format(adjustedDate);
+    return Intl.DateTimeFormat(SELECTED_LOCALE_FOR_ARABIC_CALENDAR, {
+      year: 'numeric',
+      month: 'long',
+    }).format(adjustedDate);
   }
 
   if (
@@ -406,69 +442,42 @@ export function getTime(date: Date) {
 
 export function getArabicMonthName(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
-  return Intl.DateTimeFormat(
-    addNumberingToLocale(
-      `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
-      NUMBERING_SYSTEM,
-    ),
-    {
-      month: 'long',
-    },
-  ).format(adjustedDate);
+  return Intl.DateTimeFormat(SELECTED_LOCALE_FOR_ARABIC_CALENDAR, {
+    month: 'long',
+  }).format(adjustedDate);
 }
 
 export function getArabicDate(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return Intl.DateTimeFormat(
-    addNumberingToLocale(
-      `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
-      NUMBERING_SYSTEM,
-    ),
-    {
-      day: '2-digit',
-      month: 'long',
-      year: 'numeric',
-    },
-  ).format(adjustedDate);
+  return Intl.DateTimeFormat(SELECTED_LOCALE_FOR_ARABIC_CALENDAR, {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+  }).format(adjustedDate);
 }
 
 export function getHijriYear(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return Intl.DateTimeFormat(
-    addNumberingToLocale(
-      `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
-      NUMBERING_SYSTEM,
-    ),
-    {
-      year: 'numeric',
-    },
-  ).format(adjustedDate);
+  return Intl.DateTimeFormat(SELECTED_LOCALE_FOR_ARABIC_CALENDAR, {
+    year: 'numeric',
+  }).format(adjustedDate);
 }
 
 export function getHijriMonth(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
-  return Intl.DateTimeFormat(
-    addNumberingToLocale(
-      `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
-      NUMBERING_SYSTEM,
-    ),
-    {
-      month: 'numeric',
-    },
-  ).format(adjustedDate);
+  return Intl.DateTimeFormat(SELECTED_LOCALE_FOR_ARABIC_CALENDAR, {
+    month: 'numeric',
+  }).format(adjustedDate);
 }
 
 export function getHijriDay(date: Date) {
   const adjustedDate = addDays(date, HIJRI_DATE_ADJUSTMENT);
 
   return Intl.DateTimeFormat(
-    addNumberingToLocale(
-      `ar-u-ca-${SELECTED_ARABIC_CALENDAR}`,
-      NUMBERING_SYSTEM,
-    ),
+    addNumberingToLocale(SELECTED_LOCALE_FOR_ARABIC_CALENDAR, NUMBERING_SYSTEM),
     {
       day: 'numeric',
     },

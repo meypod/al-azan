@@ -20,7 +20,7 @@ export function CalendarSecondarySettings(props: IStackProps) {
       <FormControl fontSize="md">
         <FormControl.Label>{t`Secondary Calendar`}:</FormControl.Label>
         <FormControl.HelperText>
-          {t`The type of calendar that is shown on top of home screen and beside lunar date in widgets`}
+          {t`The type of calendar that is shown on top of home screen and beside lunar calendar in widgets`}
         </FormControl.HelperText>
         <Select
           accessibilityLabel={t`Choose calendar type`}

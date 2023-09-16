@@ -1,4 +1,5 @@
 import {ScrollView, IScrollViewProps} from 'native-base';
+import {CalendarLunarSettings} from './calendar_lunar_settings';
 import {CalendarSecondarySettings} from './calendar_secondary_settings';
 import {HighlightCurrentSetting} from './highlight_current_setting';
 import {SafeArea} from '@/components/safe_area';
@@ -17,6 +18,7 @@ export function DisplaySettings(props: IScrollViewProps) {
         <HidePrayerSettings />
         <TimeFormatSettings mb="6" />
         <NumberFormatSettings mb="6" />
+        <CalendarLunarSettings mb="6" />
         <CalendarSecondarySettings mb="6" />
         <HighlightCurrentSetting mb="6" />
       </ScrollView>
