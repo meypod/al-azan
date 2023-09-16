@@ -85,9 +85,11 @@ export function EditReminderModal({
     [draftReminderState?.duration],
   );
 
+  const [isEditingMinutes, setIsEditingMinutes] = useState(false);
+
   const durationIsPredefined = useMemo(
-    () => predefinedMinutes.includes(durationInMinutes),
-    [durationInMinutes],
+    () => !isEditingMinutes && predefinedMinutes.includes(durationInMinutes),
+    [durationInMinutes, isEditingMinutes],
   );
 
   return (
@@ -183,8 +185,11 @@ export function EditReminderModal({
                         flex={1}
                         flexShrink={1}
                         int
+                        invalidValue={1}
                         value={durationInMinutes}
                         onChange={onReminderTimeChanged}
+                        onTextInput={setIsEditingMinutes.bind(null, true)}
+                        onEndEditing={setIsEditingMinutes.bind(null, false)}
                       />
                       <Text flexShrink={0} px="1">{t`minutes`}</Text>
                     </Stack>
