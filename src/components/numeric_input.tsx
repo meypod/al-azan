@@ -64,8 +64,8 @@ export const NumericInput = memo(function NumericInput(
   if (strict) {
     return (
       <Input
+        keyboardType="numeric"
         {...otherProps}
-        keyboardType="number-pad"
         onChange={onEndEditing}
         onChangeText={setTmpText}
         value={tmpText}
@@ -74,8 +74,8 @@ export const NumericInput = memo(function NumericInput(
   } else {
     return (
       <Input
+        keyboardType="numeric"
         {...otherProps}
-        keyboardType="number-pad"
         onEndEditing={onEndEditing}
         onChangeText={setTmpText}
         value={tmpText}
