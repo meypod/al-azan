@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "Đã xảy ra lỗi khi phát âm báo hiện tại"
 msgid "App features"
 msgstr "Tính năng ứng dụng"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "tiếng Ả Rập"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Bạn có chắc chắn muốn xóa \"{0}\" không?"
@@ -260,6 +264,10 @@ msgstr "Chọn phương pháp làm tròn"
 msgid "Choose calendar type"
 msgstr "Chọn loại lịch"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "Chọn ngôn ngữ âm lịch"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "Chọn cách tính nửa đêm"
@@ -365,6 +373,7 @@ msgstr "Giảm"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Mặc định"
@@ -710,7 +719,7 @@ msgstr "Hiệp hội Hồi giáo Bắc Mỹ (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Có vẻ như bạn đã nhập một bản sao lưu, đừng quên tắt tối ưu hóa pin cho ứng dụng này"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "Vừa nãy"
 
@@ -796,6 +805,10 @@ msgstr "Thấp"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "Âm lịch"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "Ngôn ngữ âm lịch"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1407,8 +1420,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "Văn bản tìm thấy trên trang web này và trong ứng dụng có thể không chính xác bằng các ngôn ngữ khác, vì vậy trong mọi trường hợp, chỉ nên xem xét phiên bản tiếng Anh."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "Loại lịch được hiển thị trên đầu màn hình chính và bên cạnh ngày âm lịch trong tiện ích"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "Loại lịch được hiển thị trên đầu màn hình chính và bên cạnh lịch âm trong widget"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1628,6 +1641,10 @@ msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết b
 msgid "You can also paste coords from clipboard"
 msgstr "Bạn cũng có thể dán toạ độ từ khay nhớ tạm"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "Bạn có thể thay đổi ngôn ngữ sử dụng cho âm lịch"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Bạn có thể thay đổi lúc mà thông báo báo thức sắp tới hiện trước azan và lời nhắc"
@@ -1683,7 +1700,7 @@ msgstr "Số phút sẽ được thêm vào thời gian tính toán"
 msgid "after"
 msgstr "sau"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "trước"
 
@@ -1802,7 +1819,7 @@ msgstr "giờ cầu nguyện bị ẩn?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "sau đó"
 

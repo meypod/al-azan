@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "वर्तमान ट्रैक चलाते समय एक �
 msgid "App features"
 msgstr "ऐप सुविधाएँ"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "अरबी"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "क्या आप वाकई \"{0}\" हटाना चाहते हैं?"
@@ -260,6 +264,10 @@ msgstr "गणना पूर्णांकन विधि चुनें"
 msgid "Choose calendar type"
 msgstr "कैलेंडर के प्रकार चुनें"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "चंद्र कैलेंडर भाषा चुनें"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "मध्यरात्रि गणना पद्धति चुनें"
@@ -365,6 +373,7 @@ msgstr "घटती"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "डिफॉल्ट "
@@ -710,7 +719,7 @@ msgstr "इस्लामिक सोसायटी ऑफ नॉर्थ �
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "ऐसा लगता है कि आपने बैकअप आयात कर लिया है, इस ऐप के लिए बैटरी अनुकूलन अक्षम करना न भूलें"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "बस अब"
 
@@ -796,6 +805,10 @@ msgstr "कम"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "चंद्र कैलेंडर"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "चंद्र कैलेंडर भाषा"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1401,8 +1414,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "इस वेबसाइट और ऐप में पाया जाने वाला पाठ अन्य भाषाओं में सटीक नहीं हो सकता है, इसलिए किसी भी स्थिति में केवल अंग्रेजी संस्करण पर विचार किया जाना चाहिए।"
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "कैलेंडर का वह प्रकार जो होम स्क्रीन के शीर्ष पर और विजेट में चंद्र तिथि के पास दिखाया जाता है"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "कैलेंडर का प्रकार जो होम स्क्रीन के शीर्ष पर और विजेट्स में चंद्र कैलेंडर के बगल में दिखाया गया है"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1622,6 +1635,10 @@ msgstr "आप नीचे दिए गए बटन का उपयोग �
 msgid "You can also paste coords from clipboard"
 msgstr "आप क्लिपबोर्ड से भी कोऑरड पेस्ट कर सकते हैं"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "आप चंद्र कैलेंडर के लिए उपयोग की जाने वाली भाषा को बदल सकते हैं"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "जब आगामी अलार्म अधिसूचना अज़ान या अनुस्मारक से पहले भेजी जाती है तो आप बदल सकते हैं"
@@ -1677,7 +1694,7 @@ msgstr "गणना किए गए समय में जोड़े जा
 msgid "after"
 msgstr "बाद में"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "पहले"
 
@@ -1796,7 +1813,7 @@ msgstr "क्या नमाज़ का वक्त छिपा हुआ 
 msgid "isha.prayer"
 msgstr "इशां "
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "बाद में"
 

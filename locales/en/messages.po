@@ -160,6 +160,10 @@ msgstr "An error occured while playing the current track"
 msgid "App features"
 msgstr "App features"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "Arabic"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Are you sure you want to delete \"{0}\" ?"
@@ -266,6 +270,10 @@ msgstr "Choose calculation rounding method"
 msgid "Choose calendar type"
 msgstr "Choose calendar type"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "Choose lunar calendar language"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "Choose midnight calculation method"
@@ -371,6 +379,7 @@ msgstr "Decrement"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Default"
@@ -716,7 +725,7 @@ msgstr "Islamic Society of North America (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "Just now"
 
@@ -802,6 +811,10 @@ msgstr "Low"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "Lunar Calendar"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "Lunar Calendar Language"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1417,8 +1430,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1638,6 +1651,10 @@ msgstr "You can access your device Power Manager using the button below."
 msgid "You can also paste coords from clipboard"
 msgstr "You can also paste coords from clipboard"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "You can change the language used for lunar calendar"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "You can change when the upcoming alarm notification is sent before adhan or reminder"
@@ -1696,7 +1713,7 @@ msgstr "Number of minutes that will be added to the calculated times"
 msgid "after"
 msgstr "after"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "ago"
 
@@ -1815,7 +1832,7 @@ msgstr "is prayer time hidden?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "later"
 

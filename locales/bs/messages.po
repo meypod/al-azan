@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "Došlo je do greške prilikom pokretanja trenutnog snimka"
 msgid "App features"
 msgstr "Funkcije aplikacije"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "arapski"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Jeste li sigurni da želite izbrisati \"{0}\" ?"
@@ -260,6 +264,10 @@ msgstr "Odaberite metodu zaokruživanja izračuna"
 msgid "Choose calendar type"
 msgstr "Odaberite tip kalndara"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "Odaberite jezik lunarnog kalendara"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "Odaberite metodu izračuna ponoći"
@@ -365,6 +373,7 @@ msgstr "Unižavanje"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Zadano"
@@ -710,7 +719,7 @@ msgstr "Islamsko društvo Sjeverne Amerike (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Čini se da ste uvezli sigurnosnu kopiju, ne zaboravite onemogućiti optimizaciju baterije za ovu aplikaciju"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "Tek sad"
 
@@ -796,6 +805,10 @@ msgstr "Niska"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "Lunarni kalendar"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "Jezik lunarnog kalendara"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1414,8 +1427,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "Tekst koji se nalazi na ovoj web stranici i u aplikaciji možda nije tačan na drugim jezicima, tako da u svakom slučaju treba uzeti u obzir samo englesku verziju."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "Vrsta kalendara koja se prikazuje na vrhu početnog ekrana i pored lunarnog datuma u vidžetima"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "Tip kalendara koji se prikazuje na vrhu početnog ekrana i pored lunarnog kalendara u widgetima"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1635,6 +1648,10 @@ msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme is
 msgid "You can also paste coords from clipboard"
 msgstr "Možete također zalijepiti koordinate iz međuspremnika"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "Možete promijeniti jezik koji se koristi za lunarni kalendar"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Možete promijeniti kada će nadolazeći alarm ko obavještenje se poslati prije ezana kao podsjetnik"
@@ -1693,7 +1710,7 @@ msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 msgid "after"
 msgstr "nakon"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "prije"
 
@@ -1812,7 +1829,7 @@ msgstr "da li je vrijeme molitve skriveno?"
 msgid "isha.prayer"
 msgstr "Jacija"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "poslije"
 

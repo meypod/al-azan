@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "حدث خطأ أثناء تشغيل المقطع الحالي"
 msgid "App features"
 msgstr "ميزات التطبيق"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "عربي"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "هل أنت متأكد أنك تريد حذف \"{0}\"؟"
@@ -260,6 +264,10 @@ msgstr "اختر طريقة تقريب الحساب"
 msgid "Choose calendar type"
 msgstr "اختر نوع التقويم"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "اختر لغة التقويم القمري"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "اختر طريقة حساب منتصف الليل"
@@ -365,6 +373,7 @@ msgstr "إنقاص"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "افتراضي"
@@ -710,7 +719,7 @@ msgstr "الجمعية الإسلامية لأمريكا الشمالية (ISNA)
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "يبدو أنك قمت بإستيراد نسخة احتياطية، لا تنسى تعطيل تحسين البطارية لهذا التطبيق"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "الآن"
 
@@ -796,6 +805,10 @@ msgstr "قليل"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "تقويم قمري"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "لغة التقويم القمري"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1401,8 +1414,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "قد لا يكون النص الموجود في هذا الموقع والتطبيق دقيقًا بلغات أخرى، لذلك في أي حال، يجب مراعاة النسخة الإنجليزية فقط."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "نوع التقويم الذي يظهر أعلى الشاشة الرئيسية وبجانب التاريخ القمري في المصغّر"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "نوع التقويم الذي يظهر أعلى الشاشة الرئيسية وبجانب التقويم القمري في الأدوات"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1622,6 +1635,10 @@ msgstr "يمكنك الوصول إلى \"مدير الطاقة\" (Power Manager)
 msgid "You can also paste coords from clipboard"
 msgstr "يمكنك أيضًا لصق الإحداثيات من الحافظة"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "يمكنك تغيير اللغة المستخدمة للتقويم القمري"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "يمكنك تغيير وقت إرسال إشعار التنبيه القادم قبل الأذان أو التذكير"
@@ -1680,7 +1697,7 @@ msgstr "عدد الدقائق التي ستضاف إلى الأوقات المح
 msgid "after"
 msgstr "بعد"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "منذ"
 
@@ -1799,7 +1816,7 @@ msgstr "هل وقت الصلاة مخفي؟"
 msgid "isha.prayer"
 msgstr "عشاء"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "لاحقاً"
 

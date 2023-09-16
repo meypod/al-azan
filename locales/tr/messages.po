@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "Geçerli ses çalınırken bir hata oluştu"
 msgid "App features"
 msgstr "Uygulama özellikleri"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "Arapça"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "\"{0}\" dosyasını silmek istediğinizden emin misiniz?"
@@ -260,6 +264,10 @@ msgstr "Hesaplama yuvarlama yöntemini seçin"
 msgid "Choose calendar type"
 msgstr "Takvim türünü seçin"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "Ay takvimi dilini seçin"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "Gece yarısı hesaplama yöntemini seçin"
@@ -365,6 +373,7 @@ msgstr "Azalma"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Varsayılan"
@@ -710,7 +719,7 @@ msgstr "Kuzey Amerika İslam Toplumu (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Görünüşe göre bir yedeği içe aktardınız, bu uygulama için pil optimizasyonlarını devre dışı bırakmayı unutmayın"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "Hemen şimdi"
 
@@ -796,6 +805,10 @@ msgstr "Düşük"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "Ay Takvimi"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "Ay Takvimi Dili"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1401,8 +1414,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "Bu web sitesinde ve uygulamada bulunan metin diğer dillerde doğru olmayabilir, bu nedenle her durumda yalnızca İngilizce sürüm dikkate alınmalıdır."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "Ana ekranın üstünde ve widget'larda ay tarihinin yanında gösterilen takvim türü"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "Ana ekranın üstünde ve widget'larda ay takviminin yanında gösterilen takvim türü"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1622,6 +1635,10 @@ msgstr "Aşağıdaki düğmeyi kullanarak cihazınızın Güç Yöneticisine eri
 msgid "You can also paste coords from clipboard"
 msgstr "Ayrıca panodan kordinatları yapıştırabilirsiniz"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "Ay takvimi için kullanılan dili değiştirebilirsiniz"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Yaklaşan alarm bildiriminin ezan veya hatırlatmadan önce ne zaman gönderileceğini değiştirebilirsiniz"
@@ -1680,7 +1697,7 @@ msgstr "Hesaplanan sürelere eklenecek dakika sayısı"
 msgid "after"
 msgstr "sonra"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "önce"
 
@@ -1799,7 +1816,7 @@ msgstr "namaz vakti gizlensin mi?"
 msgid "isha.prayer"
 msgstr "Yatsı"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "daha sonra"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "Eror saat memutar track audio"
 msgid "App features"
 msgstr "Fitur aplikasi"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "Bahasa Arab"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Yakin ingin menghapus \"{0}\" ?"
@@ -260,6 +264,10 @@ msgstr "Memilih metode pembulatan perhitungan"
 msgid "Choose calendar type"
 msgstr "Pilih jenis kalender"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "Memilih bahasa kalender lunar"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "Pilih metode penghitungan tengah malam"
@@ -365,6 +373,7 @@ msgstr "Penurunan"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Bawaan"
@@ -710,7 +719,7 @@ msgstr "Masyarakat Islam Amerika Utara (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Sepertinya Anda telah mengimpor cadangan, jangan lupa untuk menonaktifkan pengoptimalan baterai untuk aplikasi ini"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "Baru saja"
 
@@ -796,6 +805,10 @@ msgstr "Rendah"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "Kalender Lunar"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "Bahasa Kalender Imlek"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1403,8 +1416,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "Teks yang terdapat di situs web dan aplikasi ini mungkin tidak akurat dalam bahasa lain, jadi dalam hal apa pun, hanya versi bahasa Inggris yang harus dipertimbangkan."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "Jenis kalender yang ditampilkan di bagian atas layar beranda dan di samping tanggal lunar di widget"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "Jenis kalender yang ditampilkan di atas layar beranda dan di samping kalender lunar di widget"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1624,6 +1637,10 @@ msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 msgid "You can also paste coords from clipboard"
 msgstr "Anda juga dapat menempelkan koordinat dari clipboard"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "Anda dapat mengubah bahasa yang digunakan untuk kalender lunar"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Anda dapat mengubah kapan notifikasi alarm yang akan datang dikirim sebelum azan atau pengingat"
@@ -1679,7 +1696,7 @@ msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 msgid "after"
 msgstr "setelah"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "yang lalu"
 
@@ -1798,7 +1815,7 @@ msgstr "apakah waktu sholat tersembunyi?"
 msgid "isha.prayer"
 msgstr "Isya'"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "nanti"
 

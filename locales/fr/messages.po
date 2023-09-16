@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-16 13:58+0330\n"
+"POT-Creation-Date: 2023-09-16 18:36+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,6 +154,10 @@ msgstr "Une erreur s'est produite pendant la lecture de la piste en cours"
 msgid "App features"
 msgstr "Caractéristiques de l'application"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:31
+msgid "Arabic"
+msgstr "Arabe"
+
 #: src/screens/settings_adhan/adhan_list_item.tsx:103
 msgid "Are you sure you want to delete \"{0}\" ?"
 msgstr "Êtes-vous sûr de vouloir supprimer \"{0}\" ?"
@@ -260,6 +264,10 @@ msgstr "Choisir la méthode d'arrondi des calculs"
 msgid "Choose calendar type"
 msgstr "Choisir le type de calendrier"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:26
+msgid "Choose lunar calendar language"
+msgstr "Choisir la langue du calendrier lunaire"
+
 #: src/screens/settings_calculation_advanced/index.tsx:51
 msgid "Choose midnight calculation method"
 msgstr "Choisir la méthode de calcul de minuit"
@@ -365,6 +373,7 @@ msgstr "Décroissance"
 #: src/components/audio_picker.tsx:108
 #: src/screens/settings_backup/import_settings.tsx:60
 #: src/screens/settings_calculation/calendar_settings.tsx:30
+#: src/screens/settings_display/calendar_lunar_settings.tsx:30
 #: src/screens/settings_display/number_format_settings.tsx:28
 msgid "Default"
 msgstr "Défaut"
@@ -710,7 +719,7 @@ msgstr "Société islamique d'Amérique du Nord (ISNA)"
 msgid "It seems that you have imported a backup, don't forget to disable battery optimizations for this app"
 msgstr "Il semble que vous ayez importé une sauvegarde, n'oubliez pas de désactiver les optimisations de batterie pour cette application"
 
-#: src/utils/date.ts:502
+#: src/utils/date.ts:511
 msgid "Just now"
 msgstr "À l'instant"
 
@@ -796,6 +805,10 @@ msgstr "Faible précison"
 #: src/screens/settings_widget/city_name_pos_settings.tsx:27
 msgid "Lunar Calendar"
 msgstr "Calendrier lunaire"
+
+#: src/screens/settings_display/calendar_lunar_settings.tsx:21
+msgid "Lunar Calendar Language"
+msgstr "Langue du calendrier lunaire"
 
 #: src/screens/settings_calculation/calc_params_box.tsx:98
 #: src/screens/settings_calculation/calc_params_box.tsx:175
@@ -1411,8 +1424,8 @@ msgid "The text found in this website and in the app may not be accurate in othe
 msgstr "Le texte figurant sur ce site web et dans l'application peut ne pas être exact dans d'autres langues, seule la version anglaise doit donc être prise en compte dans tous les cas."
 
 #: src/screens/settings_display/calendar_secondary_settings.tsx:23
-msgid "The type of calendar that is shown on top of home screen and beside lunar date in widgets"
-msgstr "Le type de calendrier qui s'affiche en haut de l'écran d'accueil et à côté de la date lunaire dans les widgets"
+msgid "The type of calendar that is shown on top of home screen and beside lunar calendar in widgets"
+msgstr "Le type de calendrier qui s'affiche en haut de l'écran d'accueil et à côté du calendrier lunaire dans les widgets"
 
 #: src/screens/settings_calculation/calendar_settings.tsx:23
 msgid "The type of lunar calendar shown in main screen and widgets"
@@ -1632,6 +1645,10 @@ msgstr "Vous pouvez accéder au gestionnaire d'énergie de votre appareil en uti
 msgid "You can also paste coords from clipboard"
 msgstr "Vous pouvez également coller les coordonnées à partir du presse-papiers"
 
+#: src/screens/settings_display/calendar_lunar_settings.tsx:23
+msgid "You can change the language used for lunar calendar"
+msgstr "Vous pouvez changer la langue utilisée pour le calendrier lunaire"
+
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:41
 msgid "You can change when the upcoming alarm notification is sent before adhan or reminder"
 msgstr "Vous pouvez modifier le moment où la notification de l'alarme à venir est envoyée avant l'adhan ou le rappel"
@@ -1690,7 +1707,7 @@ msgstr "Nombre de minutes qui seront ajoutées aux temps calculés"
 msgid "after"
 msgstr "après"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "ago"
 msgstr "auparavant"
 
@@ -1809,7 +1826,7 @@ msgstr "Le temps de prière est-il caché ?"
 msgid "isha.prayer"
 msgstr "Isha"
 
-#: src/utils/date.ts:507
+#: src/utils/date.ts:516
 msgid "later"
 msgstr "plus tard"
 
