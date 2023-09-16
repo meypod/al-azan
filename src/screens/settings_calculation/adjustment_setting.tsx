@@ -113,7 +113,6 @@ export function AdjustmentSetting({
           borderRightWidth={0}
           flex={1}
           size="md"
-          keyboardType="numeric"
           value={localAdjustmentString}
           onChange={setLocalAdjustment}
           textAlign={'center'}
