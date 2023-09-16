@@ -145,7 +145,6 @@ export function EditCounterModal({
                 <FormControl.Label>{t`Count`}:</FormControl.Label>
                 <NumericInput
                   int
-                  strict
                   value={draftCounterState?.count}
                   onChange={onCountChanged}
                 />
