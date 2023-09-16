@@ -23,7 +23,7 @@ export function CalendarLunarSettings(props: IStackProps) {
           {t`You can change the language used for lunar calendar`}
         </FormControl.HelperText>
         <Select
-          accessibilityLabel={t`Choose calendar language`}
+          accessibilityLabel={t`Choose lunar calendar language`}
           onValueChange={setLocale}
           selectedValue={locale || ''}
           flex="1">
