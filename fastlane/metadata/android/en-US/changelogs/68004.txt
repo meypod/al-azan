@@ -1,4 +1,5 @@
 - Added option to replace one of calendars in widget with current location
 - Fixed a date formatting issue for solar hijri on older android devices (< 10)
 - Fixed coordinate pasting not working as expected
+- Hijri/Lunar calendar now follows system language by default. You can change it back to Arabic in display settings.
 - Other minor improvements
