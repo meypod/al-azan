@@ -16,6 +16,7 @@ import {
   FavoriteLocation,
 } from '@/store/favorite_locations';
 import {showDeleteDialog} from '@/utils/dialogs';
+import {getLocationLabel} from '@/utils/location';
 
 export function FavoriteLocations() {
   useSettingsMonitor();
@@ -48,13 +49,11 @@ export function FavoriteLocations() {
 
   const onDeletePress = useCallback(
     (location: FavoriteLocation) => {
-      showDeleteDialog(location.city?.selectedName || location.city?.name).then(
-        agreed => {
-          if (agreed && location.id) {
-            removeFavorite(location);
-          }
-        },
-      );
+      showDeleteDialog(getLocationLabel(location)).then(agreed => {
+        if (agreed && location.id) {
+          removeFavorite(location);
+        }
+      });
     },
     [removeFavorite],
   );
