@@ -91,7 +91,7 @@ msgstr "Add Reminder"
 msgid "Add new counter"
 msgstr "Add new counter"
 
-#: src/screens/favorite_locations/index.tsx:119
+#: src/screens/favorite_locations/index.tsx:118
 msgid "Add new location"
 msgstr "Add new location"
 
@@ -776,7 +776,7 @@ msgstr "Light and Dark theme"
 msgid "Light/Dark theme"
 msgstr "Light/Dark theme"
 
-#: src/screens/favorite_locations/index.tsx:114
+#: src/screens/favorite_locations/index.tsx:113
 msgid "List is empty"
 msgstr "List is empty"
 

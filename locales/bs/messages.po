@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-18 08:45+0330\n"
+"POT-Creation-Date: 2023-09-23 05:02+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -85,7 +85,7 @@ msgstr "Dodajte Podsjetnik"
 msgid "Add new counter"
 msgstr "Dodajte novi brojač"
 
-#: src/screens/favorite_locations/index.tsx:119
+#: src/screens/favorite_locations/index.tsx:118
 msgid "Add new location"
 msgstr "Dodajte novu lokaciju"
 
@@ -770,7 +770,7 @@ msgstr "Svjetla/mračna tema"
 msgid "Light/Dark theme"
 msgstr "Svjetla/mračna tema"
 
-#: src/screens/favorite_locations/index.tsx:114
+#: src/screens/favorite_locations/index.tsx:113
 msgid "List is empty"
 msgstr "Lista je prazna"
 
