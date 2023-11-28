@@ -6,6 +6,6 @@
   android:minWidth="250dp"
   android:previewImage="@drawable/screen_widget_preview"
   android:previewLayout="@layout/screen_widget"
-  android:resizeMode="horizontal"
+  android:resizeMode="horizontal|vertical"
   android:updatePeriodMillis="0"
   android:widgetCategory="home_screen|keyguard" />
