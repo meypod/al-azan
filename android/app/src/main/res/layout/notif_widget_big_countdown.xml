@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
     android:theme="@style/NotifWidgetBaseTheme">
 
-  <include layout="@layout/widget_expanded_header"/>
-  <include layout="@layout/widget_expanded_content"/>
-  <include layout="@layout/widget_expanded_countdown"/>
+    <include
+        layout="@layout/widget_expanded_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <include
+        layout="@layout/widget_expanded_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <include
+        layout="@layout/widget_expanded_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
 </LinearLayout>
 

@@ -10,10 +10,22 @@
     android:paddingBottom="2sp"
     android:theme="@style/WidgetExpandedBaseTheme">
 
-    <include layout="@layout/widget_expanded_header" />
+    <include
+        layout="@layout/widget_expanded_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"  />
 
-    <include layout="@layout/widget_expanded_content" />
+    <include
+        layout="@layout/widget_expanded_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"  />
 
-    <include layout="@layout/widget_expanded_countdown" />
+    <include
+        layout="@layout/widget_expanded_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
 </LinearLayout>
