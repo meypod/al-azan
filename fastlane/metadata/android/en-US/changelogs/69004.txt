@@ -1,0 +1,1 @@
+- Change widget layout slightly and allow resize
