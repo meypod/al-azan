@@ -7,7 +7,7 @@ import {
   MidnightMethod,
   Rounding,
 } from 'adhan-extended';
-import {ScrollView, Select, FormControl} from 'native-base';
+import {ScrollView, Select, FormControl, Spacer} from 'native-base';
 import {SafeArea} from '@/components/safe_area';
 import {useCalcSettings} from '@/store/calculation';
 
@@ -139,6 +139,7 @@ export function CalculationAdvancedSettings() {
             <Select.Item label={t`Abyad`} value={Shafaq.Abyad} />
           </Select>
         </FormControl>
+        <Spacer mb="8" />
       </ScrollView>
     </SafeArea>
   );
