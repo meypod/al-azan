@@ -1,0 +1,1 @@
+- fixes some issues related to small screens
