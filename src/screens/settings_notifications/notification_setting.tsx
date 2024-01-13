@@ -368,43 +368,45 @@ export const NotificationSetting = function NotificationSetting({
         flexWrap="wrap"
         justifyContent="space-between"
         mb={expanded ? -2 : 0}>
-        <Text flex={1}>{prayerName}</Text>
-
+        <Text noOfLines={1} flexShrink={0} flexGrow={1}>
+          {prayerName}
+        </Text>
         <Spacer flexGrow={0} px="0.5" />
-
-        <NotificationToggleButton
-          prayerName={prayerName}
-          toggleNotify={toggleNotify}
-          notify={notify}
-          notifyFullActive={notifyFullActive}
-        />
-
-        <Spacer flexGrow={0} px="1" />
-
-        <SoundToggleButton
-          prayerName={prayerName}
-          toggleSound={toggleSound}
-          sound={sound}
-          soundFullActive={soundFullActive}
-        />
-
-        <Spacer flexGrow={0} px="0.5" />
-
-        <Button
-          onPress={toggleExpanded}
-          variant="unstyled"
-          size="sm"
-          p="0"
-          flex={0}
-          flexGrow={0}
-          flexShrink={1}>
-          <ExpandCircleDownIcon
-            size="2xl"
-            style={{
-              transform: [{rotate: expanded ? '180deg' : '0deg'}],
-            }}
+        <HStack flexShrink={0} flexGrow={1} justifyContent="flex-end">
+          <NotificationToggleButton
+            prayerName={prayerName}
+            toggleNotify={toggleNotify}
+            notify={notify}
+            notifyFullActive={notifyFullActive}
           />
-        </Button>
+
+          <Spacer flexGrow={0} px="1" />
+
+          <SoundToggleButton
+            prayerName={prayerName}
+            toggleSound={toggleSound}
+            sound={sound}
+            soundFullActive={soundFullActive}
+          />
+
+          <Spacer flexGrow={0} px="0.5" />
+
+          <Button
+            onPress={toggleExpanded}
+            variant="unstyled"
+            size="sm"
+            p="0"
+            flex={0}
+            flexGrow={0}
+            flexShrink={1}>
+            <ExpandCircleDownIcon
+              size="2xl"
+              style={{
+                transform: [{rotate: expanded ? '180deg' : '0deg'}],
+              }}
+            />
+          </Button>
+        </HStack>
       </HStack>
       <CollapsibleSelector
         setNotifyProxy={setNotifyProxy}
