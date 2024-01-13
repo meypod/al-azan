@@ -11,6 +11,7 @@ export const NumericInput = memo(function NumericInput(
     invalidLabel?: string;
     /** parse as integer? */
     int?: boolean;
+    ignoreValueChange?: boolean;
   },
 ) {
   const {
@@ -19,6 +20,7 @@ export const NumericInput = memo(function NumericInput(
     invalidValue = 0,
     invalidLabel = invalidValue.toString(),
     int = false,
+    ignoreValueChange,
     ...otherProps
   } = props;
   const [tmpText, setTmpText] = useState<string>(
@@ -30,7 +32,7 @@ export const NumericInput = memo(function NumericInput(
   );
 
   const onInputChange = useCallback(
-    (text: string) => {
+    (text: string, dontEmit?: Boolean) => {
       const newValueInt = parseInt(text, 10);
       const newValueFloat = parseFloat(text);
 
@@ -43,10 +45,14 @@ export const NumericInput = memo(function NumericInput(
         parsedValue.current = newValue;
         if (!isNaN(newValue)) {
           setTmpText(newValue.toString());
-          onChange && onChange(newValue);
+          if (!dontEmit && onChange) {
+            onChange(newValue);
+          }
         } else {
           setTmpText(invalidLabel);
-          onChange && onChange(invalidValue);
+          if (!dontEmit && onChange) {
+            onChange(invalidValue);
+          }
         }
       } else {
         setTmpText(text);
@@ -58,9 +64,9 @@ export const NumericInput = memo(function NumericInput(
   useEffect(() => {
     // we just need loose equality here
     if (value != parsedValue.current) {
-      onInputChange(value as string);
+      onInputChange(value as string, true);
     }
-  }, [onInputChange, value]);
+  }, [ignoreValueChange, onInputChange, value]);
 
   return (
     <Input
