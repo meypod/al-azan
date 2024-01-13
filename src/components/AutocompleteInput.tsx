@@ -150,8 +150,10 @@ export const AutocompleteInput = <T extends unknown>(
         onAccessibilityAction={onOpen}
         autoCorrect={false}
         caretHidden={true}
+        multiline={true}
         _input={{
           contextMenuHidden: true,
+          paddingY: 0,
         }}
         value={textValue}
         placeholder={placeholder}
