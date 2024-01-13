@@ -57,4 +57,9 @@ export const components: Theme['components'] | (Record<string, any> & {}) = {
       },
     },
   },
+  Select: {
+    baseStyle: {
+      multiline: true,
+    },
+  },
 };
