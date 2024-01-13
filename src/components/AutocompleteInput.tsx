@@ -153,7 +153,6 @@ export const AutocompleteInput = <T extends unknown>(
         multiline={true}
         _input={{
           contextMenuHidden: true,
-          paddingY: 0,
         }}
         value={textValue}
         placeholder={placeholder}
