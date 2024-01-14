@@ -1,6 +1,6 @@
 import {i18n} from '@lingui/core';
 import {t} from '@lingui/macro';
-import produce from 'immer';
+import {produce} from 'immer';
 import debounce from 'lodash/debounce';
 import {
   FlatList,
