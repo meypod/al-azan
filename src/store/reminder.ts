@@ -1,5 +1,4 @@
-import {produce} from 'immer';
-import {WritableDraft} from 'immer/dist/internal';
+import {produce, type Draft} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
 import {createJSONStorage, persist} from 'zustand/middleware';
@@ -10,7 +9,7 @@ import type {AudioEntry} from '@/modules/media_player';
 
 export const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
 
-function sortReminders(a: WritableDraft<Reminder>, b: WritableDraft<Reminder>) {
+function sortReminders(a: Draft<Reminder>, b: Draft<Reminder>) {
   let aIndex = PrayersInOrder.indexOf(a.prayer);
   let bIndex = PrayersInOrder.indexOf(b.prayer);
   if (aIndex === bIndex) {
