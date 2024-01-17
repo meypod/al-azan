@@ -6,6 +6,7 @@ export {
   getPrayerTimes,
   getCurrentPrayer,
   getNextPrayer,
+  getNextPrayerByDays,
   calculatePrayerTimes,
   isMinimumSettingsAvailable,
 } from './prayer_times';

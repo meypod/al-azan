@@ -16,6 +16,7 @@ import {Prayer, translatePrayer} from '@/adhan';
 import {CloseIcon} from '@/assets/icons/material_icons/close';
 import {AudioPicker} from '@/components/audio_picker';
 import {NumericInput} from '@/components/numeric_input';
+import {WeekDaySelector} from '@/components/week_day_selector';
 import type {AudioEntry} from '@/modules/media_player';
 import {Reminder} from '@/store/reminder';
 
@@ -253,7 +254,7 @@ export function EditReminderModal({
 
             <FormControl>
               <FormControl.Label>{t`Options`}:</FormControl.Label>
-              <HStack alignItems="center" justifyContent="space-between">
+              <HStack alignItems="center" justifyContent="space-between" mb="2">
                 <Text flexShrink={1}>
                   {t({
                     message: `Only once?`,
@@ -270,6 +271,19 @@ export function EditReminderModal({
                     })
                   }
                   size="lg"
+                />
+              </HStack>
+              <HStack justifyContent="center">
+                <WeekDaySelector
+                  w={'64'}
+                  value={draftReminderState?.days}
+                  onChanged={days =>
+                    setDraftReminderState({
+                      ...draftReminderState,
+                      days: days || true,
+                    })
+                  }
+                  justifyContent="center"
                 />
               </HStack>
             </FormControl>

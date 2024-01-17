@@ -12,6 +12,7 @@ import {
 import intersection from 'lodash/intersection';
 import {CalculationMethods} from './calculation_methods';
 import {PrayersInOrder, Prayer} from './prayer';
+import {SelectorValue} from '@/components/week_day_selector';
 import {
   CachedPrayerTimes,
   getCachedPrayerTimes,
@@ -326,6 +327,84 @@ export function getNextPrayer(
         date: dayToCheck,
         prayers: prayers,
         _originalDate: false, // this makes it a boolean, and thus not checking the day before it
+      });
+      if (prayerTime) {
+        break;
+      }
+    }
+  }
+
+  return prayerTime;
+}
+
+export function getNextPrayerByDays(
+  options?: Omit<NextPrayerOptions, 'checkNextDay' | 'useSettings'> & {
+    days?: SelectorValue;
+  },
+): PrayerTime | undefined {
+  const {
+    date = new Date(),
+    _originalDate = undefined,
+    checkNextDays = true,
+    prayers = PrayersInOrder,
+    days,
+  } = options || {};
+
+  if (!days) return;
+
+  if (!prayers.length) return;
+
+  const originalDate = _originalDate || date;
+
+  const prayerTimes = getPrayerTimes(date);
+
+  if (!prayerTimes) return;
+
+  let prayerTime: PrayerTime | undefined;
+
+  // we need this check only for the first 6 hours of the day
+  if (date.getHours() < 6 && typeof _originalDate === 'undefined') {
+    const prayerTimeFromPrevDay = getNextPrayerByDays({
+      date: addDays(date, -1),
+      _originalDate: date,
+      prayers: intersection([Prayer.Midnight, Prayer.Tahajjud], prayers), // we only need to check prayers that can go after 00:00 AM
+      days,
+      checkNextDays,
+    });
+    if (prayerTimeFromPrevDay) return prayerTimeFromPrevDay; // otherwise continue getting it normally
+  }
+
+  function isInDays(prayer: Prayer) {
+    if (typeof days === 'boolean' || typeof days === 'undefined') {
+      return !!days;
+    } else if (days[prayerTimes![prayer].getDay() as WeekDayIndex]) {
+      return true;
+    }
+    return false;
+  }
+
+  for (let prayer of prayers) {
+    if (originalDate <= prayerTimes[prayer] && isInDays(prayer)) {
+      prayerTime = {
+        date: prayerTimes[prayer],
+        calculatedFrom: date,
+        prayer,
+      };
+      break;
+    }
+  }
+
+  if (!prayerTime && !_originalDate && checkNextDays) {
+    // n+1 for limit (n starts from 1)
+    let limit = 8;
+    for (let i = 1; i < limit; i++) {
+      const dayToCheck = getDayBeginning(addDays(date, i));
+      prayerTime = getNextPrayerByDays({
+        date: dayToCheck,
+        prayers: prayers,
+        _originalDate: false, // this makes it a boolean, and thus not checking the day before it
+        days,
+        checkNextDays: false,
       });
       if (prayerTime) {
         break;

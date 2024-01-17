@@ -2,7 +2,7 @@ import {t} from '@lingui/macro';
 import notifee, {AlarmType} from '@notifee/react-native';
 import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
 import {setPreAlarmTask} from './set_pre_alarm';
-import {getPrayerTimes} from '@/adhan';
+import {getNextPrayerByDays} from '@/adhan';
 import {
   PRE_REMINDER_CHANNEL_ID,
   REMINDER_CHANNEL_ID,
@@ -12,7 +12,6 @@ import {getReminderSubtitle} from '@/screens/settings_reminders/reminder_item';
 import {alarmSettings} from '@/store/alarm';
 import {reminderSettings, Reminder} from '@/store/reminder';
 import {settings} from '@/store/settings';
-import {getNextDayBeginning} from '@/utils/date';
 import {canScheduleNotifications} from '@/utils/permission';
 import {showUpcomingToast} from '@/utils/upcoming';
 
@@ -55,30 +54,38 @@ export async function setReminders(options?: SetReminderOptions) {
   }
 
   const date = new Date();
-
-  let prayerTimes = getPrayerTimes(date);
-  let tomorrowPrayerTimes = getPrayerTimes(getNextDayBeginning(date));
-
-  if (!prayerTimes || !tomorrowPrayerTimes) return;
-
   const tasks = [];
 
   for (const reminder of reminders.filter(r => r.enabled)) {
     const dismissedAlarmTS =
       settings.getState().DELIVERED_ALARM_TIMESTAMPS[reminder.id] || 0;
 
-    let pTime = prayerTimes[reminder.prayer].valueOf();
+    let prayerTime = getNextPrayerByDays({
+      date: date,
+      days: reminder.days,
+      prayers: [reminder.prayer],
+    });
+    if (!prayerTime) continue;
+
     let triggerDate = new Date(
-      pTime + reminder.duration * reminder.durationModifier,
+      prayerTime.date.valueOf() + reminder.duration * reminder.durationModifier,
     );
 
     if (
       triggerDate.valueOf() < Date.now() ||
       dismissedAlarmTS >= triggerDate.valueOf()
     ) {
-      pTime = tomorrowPrayerTimes[reminder.prayer].valueOf();
+      prayerTime = getNextPrayerByDays({
+        date: new Date(
+          date.valueOf() + (Date.now() - triggerDate.valueOf() + 20_000),
+        ),
+        days: reminder.days,
+        prayers: [reminder.prayer],
+      });
+      if (!prayerTime) continue;
       triggerDate = new Date(
-        pTime + reminder.duration * reminder.durationModifier,
+        prayerTime.date.valueOf() +
+          reminder.duration * reminder.durationModifier,
       );
     }
 

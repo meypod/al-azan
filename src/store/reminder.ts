@@ -5,6 +5,7 @@ import {createJSONStorage, persist} from 'zustand/middleware';
 import {createStore} from 'zustand/vanilla';
 import {zustandStorage} from './mmkv';
 import {Prayer, PrayersInOrder} from '@/adhan';
+import type {SelectorValue} from '@/components/week_day_selector';
 import type {AudioEntry} from '@/modules/media_player';
 
 export const REMINDER_STORAGE_KEY = 'REMINDER_STORAGE';
@@ -43,6 +44,7 @@ export type Reminder = {
   sound?: AudioEntry;
   /** should reminder be set only once? */
   once?: boolean;
+  days: SelectorValue;
 };
 
 export type ReminderStore = {
@@ -133,13 +135,18 @@ export const reminderSettings = createStore<ReminderStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 0,
+      version: 1,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
         switch (version) {
           case 0:
-            // this will be run when storage version is changed to 1
+            for (const reminder of (persistedState as any)
+              .REMINDERS as Reminder[]) {
+              reminder.days = true;
+            }
+          case 1:
+            // this will be run when storage version is changed to 2
             break;
         }
         /* eslint-enable no-fallthrough */

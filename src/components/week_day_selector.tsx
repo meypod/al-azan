@@ -2,7 +2,7 @@ import {MessageDescriptor, i18n} from '@lingui/core';
 import {defineMessage} from '@lingui/macro';
 
 import keys from 'lodash/keys';
-import {Stack, FormControl, IStackProps} from 'native-base';
+import {Stack, IStackProps} from 'native-base';
 import {memo, useCallback} from 'react';
 import {WeekDayButton} from '@/components/week_day_button';
 import {WeekDayIndex, WeekDayName, WeekDays} from '@/utils/date';
@@ -89,22 +89,19 @@ export const WeekDaySelector = memo(function WeekDaySelector(
   );
 
   return (
-    <FormControl>
-      {props.label && <FormControl.Label>{props.label}:</FormControl.Label>}
-      <Stack flexDirection="row" flexWrap="wrap" {...props}>
-        {keys(WeekDaysInOrder).map((dayName: string) => {
-          return (
-            <WeekDayButton
-              dayIndex={WeekDays[dayName as WeekDayName]}
-              onChanged={dayChanged}
-              label={i18n._(WeekDaysInOrder[dayName])}
-              key={dayName}
-              colorScheme={props.colorScheme}
-              isActive={isDayActive(dayName as WeekDayName, props.value)}
-            />
-          );
-        })}
-      </Stack>
-    </FormControl>
+    <Stack flexDirection="row" flexWrap="wrap" {...props}>
+      {keys(WeekDaysInOrder).map((dayName: string) => {
+        return (
+          <WeekDayButton
+            dayIndex={WeekDays[dayName as WeekDayName]}
+            onChanged={dayChanged}
+            label={i18n._(WeekDaysInOrder[dayName])}
+            key={dayName}
+            colorScheme={props.colorScheme}
+            isActive={isDayActive(dayName as WeekDayName, props.value)}
+          />
+        );
+      })}
+    </Stack>
   );
 });

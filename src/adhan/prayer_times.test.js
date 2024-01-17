@@ -4,6 +4,7 @@ import {
   Prayer,
   PrayersInOrder,
   getNextPrayer,
+  getNextPrayerByDays,
 } from '@/adhan';
 import {alarmSettings, getAdhanSettingKey} from '@/store/alarm';
 import {calcSettings} from '@/store/calculation';
@@ -460,6 +461,138 @@ describe('getNextPrayer()', () => {
           expect(next.date.getDay()).toEqual(2);
           expect(next.playSound).toBeFalsy();
           expect(next.prayer).toEqual(Prayer.Dhuhr);
+        }
+      });
+    });
+  });
+});
+
+describe('getNextPrayerByDays()', () => {
+  beforeAll(() => {
+    calcSettings.setState({
+      LOCATION: {
+        lat: 1,
+        long: 1,
+      },
+      CALCULATION_METHOD_KEY: 'MoonsightingCommittee', // doesn't matter which for test
+    });
+  });
+  afterAll(() => {
+    calcSettings.setState({
+      LOCATION: undefined,
+      CALCULATION_METHOD_KEY: undefined,
+    });
+  });
+
+  describe('when {days} in option is used', () => {
+    it('returns undefined when days settings is undefined', () => {
+      expect(
+        getNextPrayerByDays({
+          date: new Date('2022-12-27T00:00:00.000Z'),
+          days: undefined,
+        }),
+      ).toBeUndefined();
+    });
+
+    describe('With given days and a prayer', () => {
+      it('returns the correct prayer (without checkNextDays)', () => {
+        expect(
+          getNextPrayerByDays({
+            days: true,
+            prayers: [Prayer.Fajr],
+            date: new Date('2022-12-27T00:00:00.000Z'),
+          }),
+        ).toEqual({
+          calculatedFrom: new Date('2022-12-27T00:00:00.000Z'),
+          date: new Date('2022-12-27T04:40:00.000Z'),
+          prayer: 'fajr',
+        });
+
+        // test by setting tahajjud, and getting next prayer when the time is
+        // behind the tahajjud, which is usually part of previous day's prayer times
+        // so for example, if we are at 00:01 (AM) and tahajjud is 01:08 (AM),
+        // it should return the tahajjud from the previous day's prayer times
+        // without proper implementation, it would return today's fajr prayer probably.
+        expect(
+          getNextPrayerByDays({
+            date: new Date(
+              new Date('2022-12-28T00:01:00.000Z').valueOf() + 1000,
+            ),
+            prayers: [Prayer.Tahajjud],
+            days: true,
+          }),
+        ).toEqual({
+          calculatedFrom: addDays(
+            new Date(
+              new Date('2022-12-28T00:01:00.000Z').valueOf() + 1000, // it should be from the previous day
+            ),
+            -1,
+          ),
+          date: new Date('2022-12-28T01:08:00.000Z'),
+          prayer: 'tahajjud',
+        });
+      });
+
+      it('skips days that are disabled (checks next days)', () => {
+        const testDate = new Date('2022-12-25T09:00:00.000Z'); // near the end of the day, so fajr is behind us, but dhuhr in front
+        expect(testDate.getDay()).toBe(0);
+
+        {
+          const next = getNextPrayerByDays({
+            date: testDate,
+            days: {0: true},
+            prayers: [Prayer.Fajr],
+          });
+          expect(next).toBeTruthy();
+          expect(next.prayer).toEqual(Prayer.Fajr);
+          // next prayer should be on the same day as settings
+          expect(next.date.getDay()).toEqual(0);
+          // it should be at least 6 days away
+          expect(next.date.valueOf() - testDate.valueOf()).toBeGreaterThan(
+            6 * 24 * 60 * 60 * 1000,
+          );
+        }
+
+        {
+          const next = getNextPrayerByDays({
+            date: testDate,
+            days: {0: true},
+            prayers: [Prayer.Dhuhr],
+          });
+          expect(next).toBeTruthy();
+          expect(next.prayer).toEqual(Prayer.Dhuhr);
+          expect(next.date.getDay()).toEqual(0);
+          expect(next.date.valueOf() - testDate.valueOf()).toBeLessThan(
+            10 * 60 * 60 * 1000, // within 10 hours of fajr
+          );
+        }
+
+        {
+          const next = getNextPrayerByDays({
+            date: testDate,
+            days: {1: true},
+            prayers: [Prayer.Dhuhr],
+          });
+          expect(next).toBeTruthy();
+          expect(next.prayer).toEqual(Prayer.Dhuhr);
+          expect(next.date.getDay()).toEqual(1);
+          expect(next.date.valueOf() - testDate.valueOf()).toBeLessThan(
+            2 * 24 * 60 * 60 * 1000, // within 48 hours
+          );
+        }
+
+        {
+          const next = getNextPrayerByDays({
+            date: testDate,
+            days: {6: true},
+            prayers: [Prayer.Dhuhr],
+          });
+          expect(next).toBeTruthy();
+          expect(next.prayer).toEqual(Prayer.Dhuhr);
+          expect(next.date.getDay()).toEqual(6);
+          expect(next.date.valueOf() - testDate.valueOf()).toBeLessThan(
+            7 * 24 * 60 * 60 * 1000, // within 7 days
+          );
         }
       });
     });

@@ -19,7 +19,9 @@ export function RemindersSettings(props: IStackProps) {
 
   const onAddReminderPressed = () => {
     // reset and show new reminder modal
-    setCreatingReminder({});
+    setCreatingReminder({
+      days: true,
+    });
   };
 
   const cancelReminderCreation = () => {
