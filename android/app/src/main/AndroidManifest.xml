@@ -86,5 +86,6 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
   <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
 </manifest>

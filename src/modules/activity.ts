@@ -38,6 +38,7 @@ interface ActivityModuleInterface extends NativeModule {
   openLocationSettings(): Promise<boolean>;
   /** resolve true if internet became available */
   openMobileWifiSettings(): Promise<boolean>;
+  requestBatteryOptimizationSettings(): Promise<void>;
   /** resolve true if internet became available */
   openMobileDataSettings(): Promise<boolean>;
   saveJsonDocument(data: string, initialName: string): Promise<boolean>;
@@ -124,5 +125,7 @@ export const openMobileDataSettings = ActivityModule.openMobileDataSettings;
 export const saveJsonDocument = ActivityModule.saveJsonDocument;
 export const vibrate = ActivityModule.vibrate;
 export const vibrateStop = ActivityModule.vibrateStop;
+export const requestBatteryOptimizationSettings =
+  ActivityModule.requestBatteryOptimizationSettings;
 
 export default ActivityModule;

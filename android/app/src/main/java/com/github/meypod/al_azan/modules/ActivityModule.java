@@ -3,6 +3,7 @@ package com.github.meypod.al_azan.modules;
 import static android.content.Context.CONNECTIVITY_SERVICE;
 import static android.content.Context.LOCATION_SERVICE;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,6 +17,7 @@ import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.Settings;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,6 +35,8 @@ public class ActivityModule extends ReactContextBaseJavaModule {
     private static final int REQUEST_ENABLE_LOCATION_SERVICES = 1000;
     private static final int REQUEST_ENABLE_DATA_ROAMING = 1001;
     private static final int REQUEST_ENABLE_WIFI = 1002;
+
+    private static final String TAG = "ActivityModule";
 
     ActivityModule(ReactApplicationContext context) {
         super(context);
@@ -233,7 +237,31 @@ public class ActivityModule extends ReactContextBaseJavaModule {
         }
     }
 
-    private static int SAVE_REQUEST = 1;
+    @SuppressLint("BatteryLife")
+    @ReactMethod
+    public void requestBatteryOptimizationSettings(final Promise promise) {
+        ReactApplicationContext context = getReactApplicationContext();
+        Activity currentActivity = getReactApplicationContext().getCurrentActivity();
+        if (currentActivity == null) {
+            promise.resolve(null);
+            return;
+        }
+        try {
+            // our use-case is valid for requesting ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS.
+            currentActivity.startActivity(new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:" + context.getPackageName())));
+        } catch (Exception e) {
+            Log.d(TAG, "requestBatteryOptimizationSettings: failed to request battery optimization exemption");
+            try {
+                currentActivity.startActivity(new Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS));
+            } catch (Exception _e) {
+                // ignore
+                Log.d(TAG, "requestBatteryOptimizationSettings: failed to open battery optimization settings");
+            }
+        }
+        promise.resolve(null);
+    }
+
+    private static final int SAVE_REQUEST = 1;
 
     @ReactMethod
     public void saveJsonDocument(
@@ -305,7 +333,8 @@ public class ActivityModule extends ReactContextBaseJavaModule {
         if (vibrationMode == 0) {
             promise.resolve(null);
             return;
-        };
+        }
+        ;
         var context = getReactApplicationContext();
         Vibrator vibrator = (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
         if (vibrationMode == 1) {

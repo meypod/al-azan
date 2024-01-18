@@ -9,10 +9,11 @@ import {
   IScrollViewProps,
   Accordion,
 } from 'native-base';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {AdaptiveChargingToggle} from './adaptive_charging_toggle';
 import {MenuIcon} from '@/assets/icons/material_icons/menu';
 import {SafeArea} from '@/components/safe_area';
+import {requestBatteryOptimizationSettings} from '@/modules/activity';
 import useInterval from '@/utils/hooks/use_interval';
 
 export function FixCommonProblemsSettings(props: IScrollViewProps) {
@@ -39,6 +40,14 @@ export function FixCommonProblemsSettings(props: IScrollViewProps) {
       .catch(() => {});
   });
 
+  const requestOrOpenSettings = useCallback(() => {
+    if (batteryOptimizationStatus) {
+      return requestBatteryOptimizationSettings();
+    } else {
+      return notifee.openBatteryOptimizationSettings();
+    }
+  }, [batteryOptimizationStatus]);
+
   return (
     <SafeArea>
       <ScrollView p="4" _contentContainerStyle={{paddingBottom: 20}} {...props}>
@@ -59,8 +68,8 @@ export function FixCommonProblemsSettings(props: IScrollViewProps) {
           </FormControl.HelperText>
 
           <Button
-            onPress={async () =>
-              await notifee.openBatteryOptimizationSettings()
+            onPress={
+              requestOrOpenSettings
             }>{t`Open Battery Optimization Settings`}</Button>
         </FormControl>
 
