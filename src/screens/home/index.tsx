@@ -1,6 +1,12 @@
 import {t} from '@lingui/macro';
 import {Button, HStack, ScrollView, Stack, Text} from 'native-base';
 import {useCallback, useEffect, useMemo} from 'react';
+import {
+  Gesture,
+  GestureDetector,
+  Directions,
+  GestureHandlerRootView,
+} from 'react-native-gesture-handler';
 import {useStore} from 'zustand';
 import {shallow} from 'zustand/shallow';
 import {getPrayerTimes} from '@/adhan';
@@ -105,139 +111,152 @@ export function Home() {
 
   const locationText = useMemo(() => getLocationLabel(location), [location]);
 
+  const flingLeft = Gesture.Fling()
+    .direction(Directions.LEFT)
+    .onEnd(increaseCurrentDateByOne);
+  const flingRight = Gesture.Fling()
+    .direction(Directions.RIGHT)
+    .onEnd(decreaseCurrentDateByOne);
+
   return (
     <SafeArea>
-      <ScrollView>
-        <Stack flex={1} alignItems="stretch" pb="4">
-          <HStack
-            mb="-3"
-            px="3"
-            justifyContent="space-between"
-            alignItems="center">
-            <Text py="1" onPress={goToMonthlyView} flex={1}>
-              {day.dateString}
-            </Text>
-            <HStack alignItems="center">
-              <Button
-                accessibilityLabel={translateRoute('QadaCounter')}
-                p="2"
-                marginLeft="3"
-                variant="ghost"
-                onPress={() => {
-                  navigate('QadaCounter');
-                }}>
-                <AddCircleIcon size="2xl" />
-              </Button>
-              <Button
-                accessibilityLabel={translateRoute('QiblaFinder')}
-                p="2"
-                variant="ghost"
-                onPress={() => {
-                  navigate('QiblaFinder');
-                }}>
-                <ExploreIcon size="2xl" />
-              </Button>
-              <Button
-                accessibilityLabel={translateRoute('Settings')}
-                p="2"
-                marginRight="-3"
-                variant="ghost"
-                onPress={() => {
-                  navigate('Settings');
-                }}>
-                <SettingsSharpIcon size="2xl" />
-              </Button>
-            </HStack>
-          </HStack>
-          <Divider
-            borderColor="coolGray.300"
-            mb="-2"
-            _text={{fontWeight: 'bold'}}>
-            {day.dayName}
-          </Divider>
-          <HStack
-            mt="2"
-            justifyContent="space-between"
-            alignItems="center"
-            flexWrap="wrap"
-            w="100%"
-            flexDirection={isRTL ? 'row-reverse' : 'row'}>
-            <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
-              <Stack
-                flexDirection={isRTL ? 'row' : 'row-reverse'}
-                alignItems="center">
-                <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
-                <RestoreIcon size="xl" />
+      <GestureHandlerRootView style={{flex: 1}}>
+        <GestureDetector gesture={flingLeft}>
+          <GestureDetector gesture={flingRight}>
+            <ScrollView>
+              <Stack flex={1} alignItems="stretch" pb="4">
+                <HStack
+                  mb="-3"
+                  px="3"
+                  justifyContent="space-between"
+                  alignItems="center">
+                  <Text py="1" onPress={goToMonthlyView} flex={1}>
+                    {day.dateString}
+                  </Text>
+                  <HStack alignItems="center">
+                    <Button
+                      accessibilityLabel={translateRoute('QadaCounter')}
+                      p="2"
+                      marginLeft="3"
+                      variant="ghost"
+                      onPress={() => {
+                        navigate('QadaCounter');
+                      }}>
+                      <AddCircleIcon size="2xl" />
+                    </Button>
+                    <Button
+                      accessibilityLabel={translateRoute('QiblaFinder')}
+                      p="2"
+                      variant="ghost"
+                      onPress={() => {
+                        navigate('QiblaFinder');
+                      }}>
+                      <ExploreIcon size="2xl" />
+                    </Button>
+                    <Button
+                      accessibilityLabel={translateRoute('Settings')}
+                      p="2"
+                      marginRight="-3"
+                      variant="ghost"
+                      onPress={() => {
+                        navigate('Settings');
+                      }}>
+                      <SettingsSharpIcon size="2xl" />
+                    </Button>
+                  </HStack>
+                </HStack>
+                <Divider
+                  borderColor="coolGray.300"
+                  mb="-2"
+                  _text={{fontWeight: 'bold'}}>
+                  {day.dayName}
+                </Divider>
+                <HStack
+                  mt="2"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  flexWrap="wrap"
+                  w="100%"
+                  flexDirection={isRTL ? 'row-reverse' : 'row'}>
+                  <Button variant="ghost" onPress={decreaseCurrentDateByOne}>
+                    <Stack
+                      flexDirection={isRTL ? 'row' : 'row-reverse'}
+                      alignItems="center">
+                      <Text fontSize="xs" mx="1">{t`Prev Day`}</Text>
+                      <RestoreIcon size="xl" />
+                    </Stack>
+                  </Button>
+                  {isNotToday && (
+                    <Button
+                      onPress={resetCurrentDate}
+                      variant="outline"
+                      py="2"
+                      px="1"
+                      flexShrink={1}
+                      _text={{
+                        adjustsFontSizeToFit: true,
+                        fontSize: 'xs',
+                        minimumFontScale: 0.8,
+                        noOfLines: 1,
+                        _light: {
+                          color: 'primary.700',
+                        },
+                        _dark: {
+                          color: 'primary.300',
+                        },
+                      }}
+                      borderColor="primary.500">
+                      {t`Show Today`}
+                    </Button>
+                  )}
+                  <Button variant="ghost" onPress={increaseCurrentDateByOne}>
+                    <Stack
+                      flexDirection={isRTL ? 'row' : 'row-reverse'}
+                      alignItems="center">
+                      <UpdateIcon size="xl" />
+                      <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
+                    </Stack>
+                  </Button>
+                </HStack>
+                <PrayerTimesBox
+                  pt="2.5"
+                  prayerTimes={prayerTimes}
+                  settings={impactfulSettings}
+                />
+                <Text
+                  key={impactfulSettings.SELECTED_ARABIC_CALENDAR}
+                  fontSize="md"
+                  textAlign="center">
+                  {day.arabicDate}
+                </Text>
+                {location && (
+                  <Button
+                    pt="1"
+                    p="3"
+                    accessibilityActions={[
+                      {
+                        name: 'activate',
+                        label: t`See favorite locations`,
+                      },
+                    ]}
+                    onPress={goToLocations}
+                    onAccessibilityAction={goToLocations}
+                    variant="unstyled">
+                    <Text
+                      borderBottomWidth={1}
+                      borderColor="muted.300"
+                      _dark={{
+                        borderColor: 'muted.500',
+                      }}>
+                      {locationText}
+                    </Text>
+                  </Button>
+                )}
               </Stack>
-            </Button>
-            {isNotToday && (
-              <Button
-                onPress={resetCurrentDate}
-                variant="outline"
-                py="2"
-                px="1"
-                flexShrink={1}
-                _text={{
-                  adjustsFontSizeToFit: true,
-                  fontSize: 'xs',
-                  minimumFontScale: 0.8,
-                  noOfLines: 1,
-                  _light: {
-                    color: 'primary.700',
-                  },
-                  _dark: {
-                    color: 'primary.300',
-                  },
-                }}
-                borderColor="primary.500">
-                {t`Show Today`}
-              </Button>
-            )}
-            <Button variant="ghost" onPress={increaseCurrentDateByOne}>
-              <Stack
-                flexDirection={isRTL ? 'row' : 'row-reverse'}
-                alignItems="center">
-                <UpdateIcon size="xl" />
-                <Text mx="1" fontSize="xs">{t`Next Day`}</Text>
-              </Stack>
-            </Button>
-          </HStack>
-          <PrayerTimesBox
-            pt="2.5"
-            prayerTimes={prayerTimes}
-            settings={impactfulSettings}
-          />
-          <Text
-            key={impactfulSettings.SELECTED_ARABIC_CALENDAR}
-            fontSize="md"
-            textAlign="center">
-            {day.arabicDate}
-          </Text>
-          {location && (
-            <Button
-              pt="1"
-              p="3"
-              accessibilityActions={[
-                {
-                  name: 'activate',
-                  label: t`See favorite locations`,
-                },
-              ]}
-              onPress={goToLocations}
-              onAccessibilityAction={goToLocations}
-              variant="unstyled">
-              <Text
-                borderBottomWidth={1}
-                borderColor="muted.300"
-                _dark={{
-                  borderColor: 'muted.500',
-                }}>
-                {locationText}
-              </Text>
-            </Button>
-          )}
-        </Stack>
-      </ScrollView>
+            </ScrollView>
+          </GestureDetector>
+        </GestureDetector>
+      </GestureHandlerRootView>
     </SafeArea>
   );
 }
