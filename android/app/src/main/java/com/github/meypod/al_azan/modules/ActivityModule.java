@@ -3,8 +3,12 @@ package com.github.meypod.al_azan.modules;
 import static android.content.Context.CONNECTIVITY_SERVICE;
 import static android.content.Context.LOCATION_SERVICE;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
@@ -21,6 +25,8 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Promise;
@@ -35,6 +41,7 @@ public class ActivityModule extends ReactContextBaseJavaModule {
     private static final int REQUEST_ENABLE_LOCATION_SERVICES = 1000;
     private static final int REQUEST_ENABLE_DATA_ROAMING = 1001;
     private static final int REQUEST_ENABLE_WIFI = 1002;
+    private static final int REQUEST_ENABLE_DND_SETTINGS = 1003;
 
     private static final String TAG = "ActivityModule";
 
@@ -259,6 +266,36 @@ public class ActivityModule extends ReactContextBaseJavaModule {
             }
         }
         promise.resolve(null);
+    }
+
+    @ReactMethod
+    public void isNotificationPolicyAccessGranted(final Promise promise) {
+        NotificationManager notificationManager = (NotificationManager) getReactApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        promise.resolve(notificationManager.isNotificationPolicyAccessGranted());
+    }
+
+    @ReactMethod
+    public void openDnDPermissionSettings(final Promise promise) {
+        Activity activity = getCurrentActivity();
+        if (activity != null) {
+            final String action = Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS;
+            getReactApplicationContext().addActivityEventListener(new ActivityEventListener() {
+                @Override
+                public void onActivityResult(Activity activity, int requestCode, int resultCode, @Nullable Intent intent) {
+                    if (requestCode == REQUEST_ENABLE_DND_SETTINGS) {
+                        getReactApplicationContext().removeActivityEventListener(this);
+                        isNotificationPolicyAccessGranted(promise);
+                    }
+                }
+
+                @Override
+                public void onNewIntent(Intent intent) {
+                }
+            });
+            activity.startActivityForResult(new Intent(action), REQUEST_ENABLE_DND_SETTINGS);
+        } else {
+            promise.resolve(false);
+        }
     }
 
     private static final int SAVE_REQUEST = 1;

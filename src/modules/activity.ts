@@ -39,6 +39,8 @@ interface ActivityModuleInterface extends NativeModule {
   /** resolve true if internet became available */
   openMobileWifiSettings(): Promise<boolean>;
   requestBatteryOptimizationSettings(): Promise<void>;
+  isNotificationPolicyAccessGranted(): Promise<Boolean>;
+  openDnDPermissionSettings(): Promise<Boolean>;
   /** resolve true if internet became available */
   openMobileDataSettings(): Promise<boolean>;
   saveJsonDocument(data: string, initialName: string): Promise<boolean>;
@@ -127,5 +129,9 @@ export const vibrate = ActivityModule.vibrate;
 export const vibrateStop = ActivityModule.vibrateStop;
 export const requestBatteryOptimizationSettings =
   ActivityModule.requestBatteryOptimizationSettings;
+export const isNotificationPolicyAccessGranted =
+  ActivityModule.isNotificationPolicyAccessGranted;
+export const openDnDPermissionSettings =
+  ActivityModule.openDnDPermissionSettings;
 
 export default ActivityModule;
