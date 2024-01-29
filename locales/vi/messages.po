@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-23 05:02+0330\n"
+"POT-Creation-Date: 2024-01-29 07:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: vi\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "10 min"
 msgstr "10 phút"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:162
 msgid "15 min"
 msgstr "15 phút"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:166
 msgid "30 min"
 msgstr "30 phút"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 phút được thêm vào thời gian Isha trong tháng Ramadan theo phương pháp này"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
 msgid "5 min"
 msgstr "5 phút"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "60 min"
 msgstr "60 phút"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "90 min"
 msgstr "90 phút"
 
@@ -77,7 +77,7 @@ msgstr "Thêm Azan tùy chỉnh"
 msgid "Add Custom Audio"
 msgstr "Thêm Âm báo Tùy chỉnh"
 
-#: src/screens/settings_reminders/index.tsx:80
+#: src/screens/settings_reminders/index.tsx:82
 msgid "Add Reminder"
 msgstr "Thêm Lời nhắc"
 
@@ -102,7 +102,7 @@ msgid "Adjustments"
 msgstr "Điều chỉnh"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:16
-#: src/screens/settings_fix_common_problems/index.tsx:110
+#: src/screens/settings_fix_common_problems/index.tsx:119
 msgid "Advanced"
 msgstr "Nâng cao"
 
@@ -217,8 +217,8 @@ msgstr "Lịch"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:126
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Cancel"
 msgstr "Hủy"
 
@@ -319,7 +319,7 @@ msgstr "Cảm biến la bàn không khả dụng"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:303
 msgid "Confirm"
 msgstr "Xác nhận"
 
@@ -331,7 +331,7 @@ msgstr "Liên tục"
 msgid "Coordinates updated"
 msgstr "Đã cập nhật tọa độ"
 
-#: src/screens/settings_reminders/index.tsx:44
+#: src/screens/settings_reminders/index.tsx:46
 msgid "Copy"
 msgstr "Sao chép"
 
@@ -345,7 +345,7 @@ msgid "Country"
 msgstr "Quốc gia"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:177
 msgid "Custom"
 msgstr "Tùy chọn"
 
@@ -387,7 +387,7 @@ msgstr "Mặc định"
 msgid "Delete"
 msgstr "Xóa"
 
-#: src/screens/settings_fix_common_problems/index.tsx:48
+#: src/screens/settings_fix_common_problems/index.tsx:57
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tùy thuộc vào thiết bị và phiên bản Android của bạn, Đôi khi thiết bị của bạn có thể tắt ứng dụng chạy nền để tiết kiệm pin. Điều này có thể ngăn việc hiện báo thức/thông báo."
 
@@ -399,7 +399,7 @@ msgstr "Bỏ chọn làm Fajr Azan"
 msgid "Device sounds"
 msgstr "Âm thanh thiết bị"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Disabled"
 msgstr "Đã tắt"
 
@@ -470,7 +470,7 @@ msgstr "Chỉnh sửa Bộ đếm"
 msgid "Edit Location"
 msgstr "Sửa Vị trí"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "Edit Reminder"
 msgstr "Sửa Lời nhắc"
 
@@ -478,7 +478,7 @@ msgstr "Sửa Lời nhắc"
 msgid "Egyptian General Survey Authority"
 msgstr "Tổng cục Khảo sát Ai Cập"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "Đã bật"
 
@@ -626,11 +626,11 @@ msgstr "Nếu bật, khi một thông báo được hiển thị, nó sẽ chứ
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Nếu bạn đã kích hoạt “Sao lưu & Khôi phục” trong cài đặt điện thoại của mình (Cài đặt / Sao lưu & Khôi phục / Sao lưu dữ liệu của tôi), bạn nên lưu ý rằng chính Android (không phải Al-Azan) sẽ lưu định kỳ một bản sao dữ liệu điện thoại của bạn trên máy chủ của Google. Điều này cho phép Android khôi phục dữ liệu của bạn nếu thiết bị của bạn bị hỏng hoặc bạn mua một thiết bị mới. Các nhà phát triển của Azan không có quyền truy cập dữ liệu này."
 
-#: src/screens/settings_fix_common_problems/index.tsx:105
+#: src/screens/settings_fix_common_problems/index.tsx:114
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Nếu bạn vẫn gặp sự cố dừng ứng dụng sau một thời gian, vui lòng truy cập dontkillmyapp.com để biết thêm giải pháp."
 
-#: src/screens/settings_fix_common_problems/index.tsx:51
+#: src/screens/settings_fix_common_problems/index.tsx:60
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Nếu bạn muốn đảm bảo ứng dụng có thể hoạt động ổn định, Bạn phải tắt tính năng tối ưu hóa pin cho ứng dụng này. Bạn có thể mở các cài đặt liên quan bằng cách sử dụng nút bên dưới."
 
@@ -737,7 +737,7 @@ msgstr "Cô-oét"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:132
 msgid "Label"
 msgstr "Tên"
 
@@ -774,7 +774,7 @@ msgstr "Chủ đề Sáng/Tối"
 msgid "List is empty"
 msgstr "Danh sách trống"
 
-#: src/components/AutocompleteInput.tsx:203
+#: src/components/AutocompleteInput.tsx:204
 msgid "Loading"
 msgstr "Đang tải"
 
@@ -883,7 +883,7 @@ msgstr "Bộ đếm mới"
 msgid "New Location"
 msgstr "Vị trí mới"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "New Reminder"
 msgstr "Lời nhắc Mới"
 
@@ -894,7 +894,7 @@ msgstr "Lời nhắc Mới"
 msgid "Next"
 msgstr "Tiếp"
 
-#: src/screens/home/index.tsx:201
+#: src/screens/home/index.tsx:217
 msgid "Next Day"
 msgstr "Ngày Sau"
 
@@ -907,12 +907,12 @@ msgstr "Tháng Sau"
 msgid "No"
 msgstr "Không"
 
-#: src/components/AutocompleteInput.tsx:207
+#: src/components/AutocompleteInput.tsx:208
 msgid "No Data"
 msgstr "Không có dữ liệu"
 
 #: src/components/audio_picker.tsx:424
-#: src/components/AutocompleteInput.tsx:211
+#: src/components/AutocompleteInput.tsx:212
 msgid "No Results"
 msgstr "Không kết quả"
 
@@ -979,7 +979,7 @@ msgid "One-Seventh of the Night"
 msgstr "Một phần bảy đêm"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:259
 msgid "Only once?"
 msgstr "Chỉ một lần?"
 
@@ -987,11 +987,11 @@ msgstr "Chỉ một lần?"
 msgid "Only six items can be shown at the same time"
 msgstr "Chỉ có sáu mục có thể được hiển thị cùng một lúc"
 
-#: src/screens/settings_fix_common_problems/index.tsx:64
+#: src/screens/settings_fix_common_problems/index.tsx:73
 msgid "Open Battery Optimization Settings"
 msgstr "Mở cài đặt Tối ưu hóa Pin"
 
-#: src/screens/settings_fix_common_problems/index.tsx:95
+#: src/screens/settings_fix_common_problems/index.tsx:104
 msgid "Open Power Manager Settings"
 msgstr "Mở cài đặt Trình quản lý Pin"
 
@@ -1005,7 +1005,7 @@ msgstr "Kho mã nguồn mở"
 msgid "Open-source"
 msgstr "Mã nguồn mở"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:256
 msgid "Options"
 msgstr "Tùy chọn"
 
@@ -1070,7 +1070,7 @@ msgstr "Lưu ý rằng việc bật tùy chọn này có thể khiến Azan và 
 msgid "Polar Resolution"
 msgstr "Phân giải vùng cực"
 
-#: src/screens/settings_fix_common_problems/index.tsx:69
+#: src/screens/settings_fix_common_problems/index.tsx:78
 msgid "Power Manager"
 msgstr "Quản lý Pin"
 
@@ -1078,7 +1078,7 @@ msgstr "Quản lý Pin"
 msgid "Prayer Times"
 msgstr "Giờ cầu nguyện"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:219
 msgid "Prayer list"
 msgstr "Danh sách cầu nguyện"
 
@@ -1092,7 +1092,7 @@ msgstr "Nhấn để tìm"
 msgid "Press to select a method"
 msgstr "Nhấn để chọn một phương pháp"
 
-#: src/screens/home/index.tsx:169
+#: src/screens/home/index.tsx:185
 msgid "Prev Day"
 msgstr "Ngày Trước"
 
@@ -1160,8 +1160,8 @@ msgid "Remind me next year"
 msgstr "Nhắc tôi năm sau"
 
 #: src/screens/fullscreen_alarm/index.tsx:68
-#: src/tasks/set_reminder.ts:90
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:130
 #: src/utils/dialogs.ts:62
 msgid "Reminder"
 msgstr "Lời nhắc"
@@ -1179,7 +1179,7 @@ msgstr "Cài đặt bắt buộc chưa hoàn tất. Để ứng dụng hiển th
 msgid "Rounding Method"
 msgstr "Phương pháp làm tròn"
 
-#: src/screens/settings_fix_common_problems/index.tsx:85
+#: src/screens/settings_fix_common_problems/index.tsx:94
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1196,7 +1196,7 @@ msgid "Saudi Arabia"
 msgstr "Ả Rập Saudi"
 
 #: src/components/audio_picker.tsx:402
-#: src/components/AutocompleteInput.tsx:177
+#: src/components/AutocompleteInput.tsx:178
 msgid "Search"
 msgstr "Tìm kiếm"
 
@@ -1205,7 +1205,7 @@ msgstr "Tìm kiếm"
 msgid "Secondary Calendar"
 msgstr "Lịch phụ"
 
-#: src/screens/home/index.tsx:223
+#: src/screens/home/index.tsx:239
 msgid "See favorite locations"
 msgstr "Xem các địa điểm yêu thích"
 
@@ -1291,7 +1291,7 @@ msgstr "Điện thoại có nên rung khi azan hoặc lời nhắc bắt đầu 
 msgid "Show Adhan Options"
 msgstr "Tùy chọn Hiển thị Azan"
 
-#: src/screens/home/index.tsx:193
+#: src/screens/home/index.tsx:209
 msgid "Show Today"
 msgstr "Hôm nay"
 
@@ -1349,7 +1349,7 @@ msgstr "Bản quyền phần mềm"
 msgid "Solar Hijri"
 msgstr "Lịch Hijri mặt trời"
 
-#: src/screens/settings_fix_common_problems/index.tsx:73
+#: src/screens/settings_fix_common_problems/index.tsx:82
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1361,8 +1361,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:243
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 msgid "Sound"
 msgstr "Âm báo"
 
@@ -1370,7 +1370,7 @@ msgstr "Âm báo"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Cơ quan Quản lý Tinh thần của người Hồi giáo ở Nga"
 
-#: src/screens/settings_fix_common_problems/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
 msgstr "Trạng thái"
 
@@ -1437,12 +1437,12 @@ msgid "Thursday"
 msgstr "Thứ 5"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Lần"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
 msgid "Time condition"
 msgstr "Điều kiện giờ"
 
@@ -1450,7 +1450,7 @@ msgstr "Điều kiện giờ"
 msgid "Time format"
 msgstr "Định dạng giờ"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:147
 msgid "Time list"
 msgstr "Danh sách giờ"
 
@@ -1506,7 +1506,7 @@ msgstr "Tổ chức Liên minh Hồi giáo de France"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Đại học Khoa học Hồi giáo, Karachi"
 
-#: src/components/AutocompleteInput.tsx:198
+#: src/components/AutocompleteInput.tsx:199
 msgid "Unknown Error"
 msgstr "Lỗi không rõ"
 
@@ -1633,7 +1633,7 @@ msgstr "Bạn đang hướng về Kaaba"
 msgid "You are not facing Kaaba"
 msgstr "Bạn chưa hướng về Kaaba"
 
-#: src/screens/settings_fix_common_problems/index.tsx:78
+#: src/screens/settings_fix_common_problems/index.tsx:87
 msgid "You can access your device Power Manager using the button below."
 msgstr "Bạn có thể truy cập Trình quản lý Pin điện của thiết bị bằng cách ấn nút bên dưới."
 
@@ -1696,7 +1696,7 @@ msgstr "Về Ứng dụng"
 msgid "adjustment.hint"
 msgstr "Số phút sẽ được thêm vào thời gian tính toán"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "after"
 msgstr "sau"
 
@@ -1713,7 +1713,7 @@ msgstr "Asr"
 msgid "backup_settings"
 msgstr "Sao lưu"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "before"
 msgstr "trước"
 
@@ -1836,7 +1836,7 @@ msgstr "Maghrib"
 msgid "masjid_an_nabawi"
 msgstr "Masjid An Nabawi"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "minutes"
 msgstr "phút"
 

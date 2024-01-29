@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-23 05:02+0330\n"
+"POT-Creation-Date: 2024-01-29 07:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: bs\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "10 min"
 msgstr "10 min"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:162
 msgid "15 min"
 msgstr "15 min"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:166
 msgid "30 min"
 msgstr "Pola Sata"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 minuta se dodaje na Jaciju tokom Ramazana u ovoj metodi"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
 msgid "5 min"
 msgstr "5 min"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "60 min"
 msgstr "Sat Vremena"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "90 min"
 msgstr "Sat i Po"
 
@@ -77,7 +77,7 @@ msgstr "Dodajte Prilagođeni Ezan"
 msgid "Add Custom Audio"
 msgstr "Dodajte Prilagođeni Audio"
 
-#: src/screens/settings_reminders/index.tsx:80
+#: src/screens/settings_reminders/index.tsx:82
 msgid "Add Reminder"
 msgstr "Dodajte Podsjetnik"
 
@@ -102,7 +102,7 @@ msgid "Adjustments"
 msgstr "Prilagođenja"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:16
-#: src/screens/settings_fix_common_problems/index.tsx:110
+#: src/screens/settings_fix_common_problems/index.tsx:119
 msgid "Advanced"
 msgstr "Napredno"
 
@@ -217,8 +217,8 @@ msgstr "Kalendar"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:126
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Cancel"
 msgstr "Otkažite"
 
@@ -319,7 +319,7 @@ msgstr "Senzor kompasa je nedostupan"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:303
 msgid "Confirm"
 msgstr "Potvrdite"
 
@@ -331,7 +331,7 @@ msgstr "Kontinuirano"
 msgid "Coordinates updated"
 msgstr "Koordinati su ažurirani"
 
-#: src/screens/settings_reminders/index.tsx:44
+#: src/screens/settings_reminders/index.tsx:46
 msgid "Copy"
 msgstr "Kopiraj"
 
@@ -345,7 +345,7 @@ msgid "Country"
 msgstr "Zemlja"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:177
 msgid "Custom"
 msgstr "Prilagođeno"
 
@@ -387,7 +387,7 @@ msgstr "Zadano"
 msgid "Delete"
 msgstr "Izbrišite"
 
-#: src/screens/settings_fix_common_problems/index.tsx:48
+#: src/screens/settings_fix_common_problems/index.tsx:57
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Ovisno o vašem uređaju i verziji Androida, ponekad vaš uređaj može ugasiti aplikaciju u pozadini kako bi uštedio bateriju. Ovo može spriječiti isporuku alarma/obavještenja."
 
@@ -399,7 +399,7 @@ msgstr "Poništite odabir kao Sabah Ezan"
 msgid "Device sounds"
 msgstr "Zvukovi uređaja"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Disabled"
 msgstr "Isključeno"
 
@@ -470,7 +470,7 @@ msgstr "Uredite Brojač"
 msgid "Edit Location"
 msgstr "Uredi Lokaciju"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "Edit Reminder"
 msgstr "Uredite Podsjetnik"
 
@@ -478,7 +478,7 @@ msgstr "Uredite Podsjetnik"
 msgid "Egyptian General Survey Authority"
 msgstr "Egipatska Generalna Geodetska Uprava"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "Uključeno"
 
@@ -626,11 +626,11 @@ msgstr "Ako je omogućeno, kada se prikaže obavijest, sadržavat će informacij
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Ako ste aktivirali “Rezerviši i Resetuj” u postavkama vašeg telefona (Postavke / Sigurnosna kopija i resetiranje / Sigurnosna kopija mojih podataka), treba da budete svjesni da će sam Android (ne Al-Azan) povremeno spremati kopiju podataka vašeg telefona u Google-ove servere. Ovo omogućava Androidu da povrati vaše podatke u slučaju da se vaš uređaj ošteti ili da kupite novi uređaj. Programeri Al-Azana nemaju pristup ovim podacima."
 
-#: src/screens/settings_fix_common_problems/index.tsx:105
+#: src/screens/settings_fix_common_problems/index.tsx:114
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Ako ste i dalje imali problema sa zaustavljanjem aplikacije nakon nekog vremena, molim vas da posjetite dontkillmyapp.com za više rješenja."
 
-#: src/screens/settings_fix_common_problems/index.tsx:51
+#: src/screens/settings_fix_common_problems/index.tsx:60
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Ako želite biti sigurni da aplikacija može raditi pouzdano, morate onemogućiti optimizaciju napajanja za ovu aplikaciju. Povezane postavke možete otvoriti koristeći dugme ispod."
 
@@ -737,7 +737,7 @@ msgstr "Kuvajt"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:132
 msgid "Label"
 msgstr "Oznaka"
 
@@ -774,7 +774,7 @@ msgstr "Svjetla/mračna tema"
 msgid "List is empty"
 msgstr "Lista je prazna"
 
-#: src/components/AutocompleteInput.tsx:203
+#: src/components/AutocompleteInput.tsx:204
 msgid "Loading"
 msgstr "Učitavanje"
 
@@ -883,7 +883,7 @@ msgstr "Novi Brojač"
 msgid "New Location"
 msgstr "Nova Lokacija"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "New Reminder"
 msgstr "Novi Podsjetnik"
 
@@ -894,7 +894,7 @@ msgstr "Novi Podsjetnik"
 msgid "Next"
 msgstr "Sljedeći"
 
-#: src/screens/home/index.tsx:201
+#: src/screens/home/index.tsx:217
 msgid "Next Day"
 msgstr "Sljedeći Dan"
 
@@ -907,12 +907,12 @@ msgstr "Sljedeći Mjesec"
 msgid "No"
 msgstr "Ne"
 
-#: src/components/AutocompleteInput.tsx:207
+#: src/components/AutocompleteInput.tsx:208
 msgid "No Data"
 msgstr "Nema Date"
 
 #: src/components/audio_picker.tsx:424
-#: src/components/AutocompleteInput.tsx:211
+#: src/components/AutocompleteInput.tsx:212
 msgid "No Results"
 msgstr "Nema Rezultata"
 
@@ -979,7 +979,7 @@ msgid "One-Seventh of the Night"
 msgstr "Jedna Sedmina Večeri"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:259
 msgid "Only once?"
 msgstr "Samo jednom?"
 
@@ -987,11 +987,11 @@ msgstr "Samo jednom?"
 msgid "Only six items can be shown at the same time"
 msgstr "Samo šest stvari može biti pokazano istovremeno"
 
-#: src/screens/settings_fix_common_problems/index.tsx:64
+#: src/screens/settings_fix_common_problems/index.tsx:73
 msgid "Open Battery Optimization Settings"
 msgstr "Otvorite Postavke za Optimizaciju Baterije"
 
-#: src/screens/settings_fix_common_problems/index.tsx:95
+#: src/screens/settings_fix_common_problems/index.tsx:104
 msgid "Open Power Manager Settings"
 msgstr "Otvorite Postavke Napojnog Menadžera"
 
@@ -1005,7 +1005,7 @@ msgstr "Otvoreno spremište"
 msgid "Open-source"
 msgstr "Otvorenog izvora"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:256
 msgid "Options"
 msgstr "Postavke"
 
@@ -1070,7 +1070,7 @@ msgstr "Imajte na umu da omogućavanje ove postavke može uzrokovati pokretanje 
 msgid "Polar Resolution"
 msgstr "Polarna Procjena Razmaka"
 
-#: src/screens/settings_fix_common_problems/index.tsx:69
+#: src/screens/settings_fix_common_problems/index.tsx:78
 msgid "Power Manager"
 msgstr "Napojni Menadžer"
 
@@ -1078,7 +1078,7 @@ msgstr "Napojni Menadžer"
 msgid "Prayer Times"
 msgstr "Vremena Molitve"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:219
 msgid "Prayer list"
 msgstr "Molitvena lista"
 
@@ -1092,7 +1092,7 @@ msgstr "Pritisnite za pretragu"
 msgid "Press to select a method"
 msgstr "Pritisnite za odabir metode"
 
-#: src/screens/home/index.tsx:169
+#: src/screens/home/index.tsx:185
 msgid "Prev Day"
 msgstr "Prošli Dan"
 
@@ -1160,8 +1160,8 @@ msgid "Remind me next year"
 msgstr "Podsjeti me tek sljedeće godine"
 
 #: src/screens/fullscreen_alarm/index.tsx:68
-#: src/tasks/set_reminder.ts:90
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:130
 #: src/utils/dialogs.ts:62
 msgid "Reminder"
 msgstr "Podsjetnik"
@@ -1179,7 +1179,7 @@ msgstr "Potrebne postavke su nepotpune. Da bi aplikacija prikazivala vremena mol
 msgid "Rounding Method"
 msgstr "Metoda zaokruživanja"
 
-#: src/screens/settings_fix_common_problems/index.tsx:85
+#: src/screens/settings_fix_common_problems/index.tsx:94
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1200,7 +1200,7 @@ msgid "Saudi Arabia"
 msgstr "Saudijska Arabija"
 
 #: src/components/audio_picker.tsx:402
-#: src/components/AutocompleteInput.tsx:177
+#: src/components/AutocompleteInput.tsx:178
 msgid "Search"
 msgstr "Tražite"
 
@@ -1209,7 +1209,7 @@ msgstr "Tražite"
 msgid "Secondary Calendar"
 msgstr "Sekundarni Kalendar"
 
-#: src/screens/home/index.tsx:223
+#: src/screens/home/index.tsx:239
 msgid "See favorite locations"
 msgstr "Pogledajte omiljene lokacije"
 
@@ -1295,7 +1295,7 @@ msgstr "Da li telefon treba da se trese i zuji kada ezan ili podsjetnik počne s
 msgid "Show Adhan Options"
 msgstr "Prikažite Postavke za Ezan"
 
-#: src/screens/home/index.tsx:193
+#: src/screens/home/index.tsx:209
 msgid "Show Today"
 msgstr "Prikažite Danas"
 
@@ -1353,7 +1353,7 @@ msgstr "Softverska Dozvola"
 msgid "Solar Hijri"
 msgstr "Iranski Kalendar"
 
-#: src/screens/settings_fix_common_problems/index.tsx:73
+#: src/screens/settings_fix_common_problems/index.tsx:82
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1365,8 +1365,8 @@ msgstr ""
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:243
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 msgid "Sound"
 msgstr "Zvuk"
 
@@ -1374,7 +1374,7 @@ msgstr "Zvuk"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Duhovna Uprava Muslimana Rusije"
 
-#: src/screens/settings_fix_common_problems/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
 msgstr "Stanje"
 
@@ -1444,12 +1444,12 @@ msgid "Thursday"
 msgstr "Četvrtak"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Vrijeme"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
 msgid "Time condition"
 msgstr "Vremensko stanje"
 
@@ -1457,7 +1457,7 @@ msgstr "Vremensko stanje"
 msgid "Time format"
 msgstr "Vremenski format"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:147
 msgid "Time list"
 msgstr "Vremenski spisak"
 
@@ -1513,7 +1513,7 @@ msgstr "Islamska Organizacija Francuske"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Univerzitet Islamskih Nauka, Karači"
 
-#: src/components/AutocompleteInput.tsx:198
+#: src/components/AutocompleteInput.tsx:199
 msgid "Unknown Error"
 msgstr "Nepoznata Greška"
 
@@ -1640,7 +1640,7 @@ msgstr "Okrenuti ste Kabi"
 msgid "You are not facing Kaaba"
 msgstr "Niste okrenuti ka Kabi"
 
-#: src/screens/settings_fix_common_problems/index.tsx:78
+#: src/screens/settings_fix_common_problems/index.tsx:87
 msgid "You can access your device Power Manager using the button below."
 msgstr "Možete pristupiti Napojnom Menadžeru svog uređaja koristeći dugme ispod."
 
@@ -1706,7 +1706,7 @@ msgstr "O Aplikaciji"
 msgid "adjustment.hint"
 msgstr "Broj minuta koji će se dodati izračunatim vremenima"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "after"
 msgstr "nakon"
 
@@ -1723,7 +1723,7 @@ msgstr "Ikindija"
 msgid "backup_settings"
 msgstr "Rezerva"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "before"
 msgstr "prije"
 
@@ -1846,7 +1846,7 @@ msgstr "Akšam"
 msgid "masjid_an_nabawi"
 msgstr "Poslanikova Džamija"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "minutes"
 msgstr "minuta"
 

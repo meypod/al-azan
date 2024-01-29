@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-23 05:02+0330\n"
+"POT-Creation-Date: 2024-01-29 07:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: id\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "10 min"
 msgstr "10 menit"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:162
 msgid "15 min"
 msgstr "15 menit"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:166
 msgid "30 min"
 msgstr "30 menit"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "30 menit ditambahkan pada waktu Isya selama bulan Ramadan dalam metode ini"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
 msgid "5 min"
 msgstr "5 menit"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "60 min"
 msgstr "60 menit"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "90 min"
 msgstr "90 menit"
 
@@ -77,7 +77,7 @@ msgstr "Tambah Suara Adzan Kustom"
 msgid "Add Custom Audio"
 msgstr "Menambahkan Audio Khusus"
 
-#: src/screens/settings_reminders/index.tsx:80
+#: src/screens/settings_reminders/index.tsx:82
 msgid "Add Reminder"
 msgstr "Buat Pengingat"
 
@@ -102,7 +102,7 @@ msgid "Adjustments"
 msgstr "Penyesuaian"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:16
-#: src/screens/settings_fix_common_problems/index.tsx:110
+#: src/screens/settings_fix_common_problems/index.tsx:119
 msgid "Advanced"
 msgstr "Lanjutan"
 
@@ -217,8 +217,8 @@ msgstr "Kalender"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:126
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Cancel"
 msgstr "Batal"
 
@@ -319,7 +319,7 @@ msgstr "Sensor kompas tidak tersedia"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:303
 msgid "Confirm"
 msgstr "Selesai"
 
@@ -331,7 +331,7 @@ msgstr "Berkelanjutan"
 msgid "Coordinates updated"
 msgstr "Koordinat diperbarui"
 
-#: src/screens/settings_reminders/index.tsx:44
+#: src/screens/settings_reminders/index.tsx:46
 msgid "Copy"
 msgstr "Salin"
 
@@ -345,7 +345,7 @@ msgid "Country"
 msgstr "Negara"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:177
 msgid "Custom"
 msgstr "Kustom"
 
@@ -387,7 +387,7 @@ msgstr "Bawaan"
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/screens/settings_fix_common_problems/index.tsx:48
+#: src/screens/settings_fix_common_problems/index.tsx:57
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "Tergantung pada perangkat dan versi android Anda, Terkadang beberapa perangkat mungkin memberhentikan aplikasi di latar belakang untuk menghemat baterai. Hal Ini dapat membuat alarm/notifikasi tidak muncul."
 
@@ -399,7 +399,7 @@ msgstr "Batalkan pilihan sebagai Adzan Subuh"
 msgid "Device sounds"
 msgstr "Suara perangkat"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Disabled"
 msgstr "Tidak Aktif"
 
@@ -470,7 +470,7 @@ msgstr "Edit Penghitung"
 msgid "Edit Location"
 msgstr "Edit Lokasi"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "Edit Reminder"
 msgstr "Ubah Pengingat"
 
@@ -478,7 +478,7 @@ msgstr "Ubah Pengingat"
 msgid "Egyptian General Survey Authority"
 msgstr "Otoritas Umum Mesir"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "Aktif"
 
@@ -626,11 +626,11 @@ msgstr "Jika diaktifkan, ketika notifikasi ditampilkan, maka akan berisi info un
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "Jika Anda telah mengaktifkan \"Pencadangan & Pengaturan Ulang\" di pengaturan ponsel Anda (Pengaturan / Pencadangan & Pengaturan Ulang / Cadangkan data saya), Anda harus mengetahui bahwa Android itu sendiri (bukan Al-Azan) akan menyimpan salinan data ponsel Anda secara berkala di server Google. Hal ini memungkinkan Android untuk memulihkan data Anda jika perangkat Anda rusak, atau Anda membeli perangkat baru. Pengembang Al-Azan tidak memiliki akses ke data ini."
 
-#: src/screens/settings_fix_common_problems/index.tsx:105
+#: src/screens/settings_fix_common_problems/index.tsx:114
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "Jika Anda masih memiliki masalah dengan aplikasi yang berhenti setelah beberapa waktu, silakan kunjungi dontkillmyapp.com untuk solusi lebih lanjut."
 
-#: src/screens/settings_fix_common_problems/index.tsx:51
+#: src/screens/settings_fix_common_problems/index.tsx:60
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "Untuk memastikan aplikasi berjalan dengan lancar, Anda perlu menonaktifkan pengoptimalan daya untuk aplikasi ini. Buka halaman pengaturan daya dengan tombol berikut."
 
@@ -737,7 +737,7 @@ msgstr "Kuwait"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:132
 msgid "Label"
 msgstr "Judul"
 
@@ -774,7 +774,7 @@ msgstr "Tema terang/gelap"
 msgid "List is empty"
 msgstr "Daftar kosong"
 
-#: src/components/AutocompleteInput.tsx:203
+#: src/components/AutocompleteInput.tsx:204
 msgid "Loading"
 msgstr "Memuat"
 
@@ -883,7 +883,7 @@ msgstr "Penghitung Baru"
 msgid "New Location"
 msgstr "Lokasi Baru"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "New Reminder"
 msgstr "Buat Pengingat"
 
@@ -894,7 +894,7 @@ msgstr "Buat Pengingat"
 msgid "Next"
 msgstr "Lanjut"
 
-#: src/screens/home/index.tsx:201
+#: src/screens/home/index.tsx:217
 msgid "Next Day"
 msgstr "Hari Brkut"
 
@@ -907,12 +907,12 @@ msgstr "Bulan Depan"
 msgid "No"
 msgstr "Tidak"
 
-#: src/components/AutocompleteInput.tsx:207
+#: src/components/AutocompleteInput.tsx:208
 msgid "No Data"
 msgstr "Tidak ada data"
 
 #: src/components/audio_picker.tsx:424
-#: src/components/AutocompleteInput.tsx:211
+#: src/components/AutocompleteInput.tsx:212
 msgid "No Results"
 msgstr "Tidak ada hasil"
 
@@ -979,7 +979,7 @@ msgid "One-Seventh of the Night"
 msgstr "Sepertujuh Malam"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:259
 msgid "Only once?"
 msgstr "Hanya sekali?"
 
@@ -987,11 +987,11 @@ msgstr "Hanya sekali?"
 msgid "Only six items can be shown at the same time"
 msgstr "Hanya enam item yang dapat ditampilkan secara bersamaan"
 
-#: src/screens/settings_fix_common_problems/index.tsx:64
+#: src/screens/settings_fix_common_problems/index.tsx:73
 msgid "Open Battery Optimization Settings"
 msgstr "Buka Pengaturan"
 
-#: src/screens/settings_fix_common_problems/index.tsx:95
+#: src/screens/settings_fix_common_problems/index.tsx:104
 msgid "Open Power Manager Settings"
 msgstr "Buka Pengaturan"
 
@@ -1005,7 +1005,7 @@ msgstr "Repositori sumber terbuka"
 msgid "Open-source"
 msgstr "Sumber terbuka"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:256
 msgid "Options"
 msgstr "Opsi"
 
@@ -1070,7 +1070,7 @@ msgstr "Harap diperhatikan bahwa mengaktifkan opsi ini dapat menyebabkan adzan d
 msgid "Polar Resolution"
 msgstr "Resolusi Kutub"
 
-#: src/screens/settings_fix_common_problems/index.tsx:69
+#: src/screens/settings_fix_common_problems/index.tsx:78
 msgid "Power Manager"
 msgstr "Pengelola Daya"
 
@@ -1078,7 +1078,7 @@ msgstr "Pengelola Daya"
 msgid "Prayer Times"
 msgstr "Waktu Sholat"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:219
 msgid "Prayer list"
 msgstr "Daftar doa"
 
@@ -1092,7 +1092,7 @@ msgstr "Tekan untuk mencari"
 msgid "Press to select a method"
 msgstr "Tekan untuk memilih metode"
 
-#: src/screens/home/index.tsx:169
+#: src/screens/home/index.tsx:185
 msgid "Prev Day"
 msgstr "Hari Sblum"
 
@@ -1160,8 +1160,8 @@ msgid "Remind me next year"
 msgstr "Ingatkan saya tahun depan"
 
 #: src/screens/fullscreen_alarm/index.tsx:68
-#: src/tasks/set_reminder.ts:90
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:130
 #: src/utils/dialogs.ts:62
 msgid "Reminder"
 msgstr "Pengingat"
@@ -1179,7 +1179,7 @@ msgstr "Pengaturan yang diperlukan tidak lengkap. Agar aplikasi menampilkan wakt
 msgid "Rounding Method"
 msgstr "Metode Pembulatan"
 
-#: src/screens/settings_fix_common_problems/index.tsx:85
+#: src/screens/settings_fix_common_problems/index.tsx:94
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1196,7 +1196,7 @@ msgid "Saudi Arabia"
 msgstr "Arab Saudi"
 
 #: src/components/audio_picker.tsx:402
-#: src/components/AutocompleteInput.tsx:177
+#: src/components/AutocompleteInput.tsx:178
 msgid "Search"
 msgstr "Pencarian"
 
@@ -1205,7 +1205,7 @@ msgstr "Pencarian"
 msgid "Secondary Calendar"
 msgstr "Kalender Sekunder"
 
-#: src/screens/home/index.tsx:223
+#: src/screens/home/index.tsx:239
 msgid "See favorite locations"
 msgstr "Lihat lokasi favorit"
 
@@ -1290,7 +1290,7 @@ msgstr "Haruskah ponsel bergetar saat adzan atau pengingat mulai diputar?"
 msgid "Show Adhan Options"
 msgstr "Tampilkan Pilihan Adzan"
 
-#: src/screens/home/index.tsx:193
+#: src/screens/home/index.tsx:209
 msgid "Show Today"
 msgstr "Hari Ini"
 
@@ -1348,7 +1348,7 @@ msgstr "Lisensi Perangkat Lunak"
 msgid "Solar Hijri"
 msgstr "Matahari Hijriah"
 
-#: src/screens/settings_fix_common_problems/index.tsx:73
+#: src/screens/settings_fix_common_problems/index.tsx:82
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1357,8 +1357,8 @@ msgstr "Beberapa perangkat memerlukan pengaturan tambahan pada Power Manager unt
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:243
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 msgid "Sound"
 msgstr "Suara"
 
@@ -1366,7 +1366,7 @@ msgstr "Suara"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Administrasi Keagamaan Muslim Rusia"
 
-#: src/screens/settings_fix_common_problems/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
 msgstr "Status"
 
@@ -1433,12 +1433,12 @@ msgid "Thursday"
 msgstr "Kamis"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "Waktu"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
 msgid "Time condition"
 msgstr "Kondisi waktu"
 
@@ -1446,7 +1446,7 @@ msgstr "Kondisi waktu"
 msgid "Time format"
 msgstr "Format waktu"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:147
 msgid "Time list"
 msgstr "Daftar waktu"
 
@@ -1502,7 +1502,7 @@ msgstr "Serikat Organisasi Islam Perancis (UOIF)"
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Universitas Ilmu Islam, Karachi"
 
-#: src/components/AutocompleteInput.tsx:198
+#: src/components/AutocompleteInput.tsx:199
 msgid "Unknown Error"
 msgstr "Kesalahan Tidak Dikenal"
 
@@ -1629,7 +1629,7 @@ msgstr "Anda menghadap Ka'bah"
 msgid "You are not facing Kaaba"
 msgstr "Anda tidak menghadap Ka'bah"
 
-#: src/screens/settings_fix_common_problems/index.tsx:78
+#: src/screens/settings_fix_common_problems/index.tsx:87
 msgid "You can access your device Power Manager using the button below."
 msgstr "Akses pengaturan Power Manager menggunakan tombol di bawah ini."
 
@@ -1692,7 +1692,7 @@ msgstr "Tentang"
 msgid "adjustment.hint"
 msgstr "Jumlah menit yang akan ditambahkan ke waktu yang dihitung"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "after"
 msgstr "setelah"
 
@@ -1709,7 +1709,7 @@ msgstr "Ashar"
 msgid "backup_settings"
 msgstr "Cadangan"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "before"
 msgstr "sebelum"
 
@@ -1832,7 +1832,7 @@ msgstr "Maghrib"
 msgid "masjid_an_nabawi"
 msgstr "Masjid Nabawi"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "minutes"
 msgstr "menit"
 

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-09-23 05:02+0330\n"
+"POT-Creation-Date: 2024-01-29 07:58+0330\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,17 +8,17 @@ msgstr ""
 "Language: bn\n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:157
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:158
 msgid "10 min"
 msgstr "১০ মিনিট"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:35
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:161
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:162
 msgid "15 min"
 msgstr "১৫ মিনিট"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:36
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:165
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:166
 msgid "30 min"
 msgstr "৩০ মিনিট"
 
@@ -27,17 +27,17 @@ msgid "30 minutes is added to Isha time during Ramadan in this method"
 msgstr "এই পদ্ধতিতে রমজানে ইশার সময়ের সাথে ৩০ মিনিট যোগ করা হয়"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:33
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:153
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:154
 msgid "5 min"
 msgstr "৫ মিনিট"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:37
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:169
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:170
 msgid "60 min"
 msgstr "৬০ মিনিট"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:38
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:173
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:174
 msgid "90 min"
 msgstr "৯০ মিনিট"
 
@@ -77,7 +77,7 @@ msgstr "কাস্টম আযান যোগ করুন"
 msgid "Add Custom Audio"
 msgstr "কাস্টম অডিও যোগ করুন"
 
-#: src/screens/settings_reminders/index.tsx:80
+#: src/screens/settings_reminders/index.tsx:82
 msgid "Add Reminder"
 msgstr "রিমাইন্ডার যোগ করুন"
 
@@ -102,7 +102,7 @@ msgid "Adjustments"
 msgstr "সমন্বয়"
 
 #: src/components/advanced_custom_adhan_toggle.tsx:16
-#: src/screens/settings_fix_common_problems/index.tsx:110
+#: src/screens/settings_fix_common_problems/index.tsx:119
 msgid "Advanced"
 msgstr "আরও"
 
@@ -217,8 +217,8 @@ msgstr "ক্যালেন্ডার"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:125
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:290
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:126
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Cancel"
 msgstr "বাতিল করুন"
 
@@ -319,7 +319,7 @@ msgstr "কম্পাস সেন্সর নেই"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:289
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:303
 msgid "Confirm"
 msgstr "নিশ্চিত করুন"
 
@@ -331,7 +331,7 @@ msgstr "একটানা"
 msgid "Coordinates updated"
 msgstr "স্থানাঙ্ক আপডেট করা হয়েছে"
 
-#: src/screens/settings_reminders/index.tsx:44
+#: src/screens/settings_reminders/index.tsx:46
 msgid "Copy"
 msgstr "কপি"
 
@@ -345,7 +345,7 @@ msgid "Country"
 msgstr "দেশ"
 
 #: src/adhan/calculation_methods.ts:14
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:176
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:177
 msgid "Custom"
 msgstr "কাস্টম"
 
@@ -387,7 +387,7 @@ msgstr "ডিফল্ট"
 msgid "Delete"
 msgstr "মুছে ফেলা"
 
-#: src/screens/settings_fix_common_problems/index.tsx:48
+#: src/screens/settings_fix_common_problems/index.tsx:57
 msgid "Depending on your device and android version, Sometimes your device may kill the app in the background to save battery. This can prevent alarms/notifications from being delivered."
 msgstr "আপনার ডিভাইস এবং অ্যান্ড্রয়েড সংস্করণের উপর নির্ভর করে, কখনও কখনও আপনার ডিভাইস ব্যাটারি বাঁচাতে ব্যাকগ্রাউন্ডে অ্যাপটিকে  থামিয়ে পারে। এটি অ্যালার্ম/নোটিফিকেশন ডেলিভারি হওয়া থেকে আটকাতে পারে।"
 
@@ -399,7 +399,7 @@ msgstr "ফজরের আযান হিসেবে নির্বাচন
 msgid "Device sounds"
 msgstr "ডিভাইসের শব্দ"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Disabled"
 msgstr "বন্ধ আছে"
 
@@ -470,7 +470,7 @@ msgstr "কাউন্টার এডিট করুন"
 msgid "Edit Location"
 msgstr "অবস্থান সম্পাদনা করুন"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "Edit Reminder"
 msgstr "রিমাইন্ডার এডিট করুন"
 
@@ -478,7 +478,7 @@ msgstr "রিমাইন্ডার এডিট করুন"
 msgid "Egyptian General Survey Authority"
 msgstr "মিশরীয় সাধারণ জরিপ কর্তৃপক্ষ"
 
-#: src/screens/settings_fix_common_problems/index.tsx:56
+#: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "সক্রিয় আছে"
 
@@ -626,11 +626,11 @@ msgstr "যদি সক্রিয় থাকে, যখন একটি ন
 msgid "If you have activated “Backup & Reset” in your phone settings (Settings / Backup & Reset / Back up my data), you should be aware that Android itself (not Al-Azan) will periodically save a copy of your phone’s data in Google’s servers. This allows Android to recover your data in case your device gets damaged, or you purchase a new device. The developers of Al-Azan do not have access to this data."
 msgstr "আপনি যদি আপনার ফোন সেটিংসে \"ব্যাকআপ এবং রিসেট\" সক্রিয় করে থাকেন (সেটিংস / ব্যাকআপ এবং রিসেট / আমার ডেটা ব্যাক আপ করুন), আপনার সচেতন হওয়া উচিত যে অ্যান্ড্রয়েড নিজেই (আল-আজান নয়) পর্যায়ক্রমে Google-এ আপনার ফোনের ডেটার একটি অনুলিপি সংরক্ষণ করবে তাদের সার্ভারে। আপনার ডিভাইস ক্ষতিগ্রস্ত হলে বা আপনি একটি নতুন ডিভাইস কিনলে এটি অ্যান্ড্রয়েডকে আপনার ডেটা পুনরুদ্ধার করতে দেয়। আল-আজানের ডেভেলপারদের এই ডেটাতে অ্যাক্সেস নেই।"
 
-#: src/screens/settings_fix_common_problems/index.tsx:105
+#: src/screens/settings_fix_common_problems/index.tsx:114
 msgid "If you still had problem with app stopping after some time, please visit dontkillmyapp.com for more solutions."
 msgstr "কিছু সময়ের পরেও অ্যাপ বন্ধ হয়ে যাওয়ার সমস্যা থাকলে, আরও সমাধানের জন্য অনুগ্রহ করে dontkillmyapp.com -এ যান।"
 
-#: src/screens/settings_fix_common_problems/index.tsx:51
+#: src/screens/settings_fix_common_problems/index.tsx:60
 msgid "If you want to make sure the app can work reliably, You have to disable power optimization for this app. You can open related settings using the button below."
 msgstr "আপনি যদি নিশ্চিত করতে চান যে অ্যাপটি নির্ভরযোগ্যভাবে কাজ করতে পারে, তাহলে আপনাকে এই অ্যাপটির জন্য পাওয়ার অপ্টিমাইজেশন বন্ধ করতে হবে। আপনি নীচের বাটন ব্যবহার করে এই সম্পর্কিত সেটিংস খুলতে পারবেন।"
 
@@ -737,7 +737,7 @@ msgstr "কুয়েত"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:113
 #: src/screens/qada_counter/edit_counter_modal.tsx:127
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:131
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:132
 msgid "Label"
 msgstr "লেবেল"
 
@@ -774,7 +774,7 @@ msgstr "আলো/অন্ধকার থিম"
 msgid "List is empty"
 msgstr "তালিকা খালি"
 
-#: src/components/AutocompleteInput.tsx:203
+#: src/components/AutocompleteInput.tsx:204
 msgid "Loading"
 msgstr "লোড হচ্ছে"
 
@@ -883,7 +883,7 @@ msgstr "নতুন কাউন্টার"
 msgid "New Location"
 msgstr "নতুন অবস্থান"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:120
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:121
 msgid "New Reminder"
 msgstr "রিমাইন্ডার যোগ করুন"
 
@@ -894,7 +894,7 @@ msgstr "রিমাইন্ডার যোগ করুন"
 msgid "Next"
 msgstr "পরবর্তী"
 
-#: src/screens/home/index.tsx:201
+#: src/screens/home/index.tsx:217
 msgid "Next Day"
 msgstr "পরবর্তী দিন"
 
@@ -907,12 +907,12 @@ msgstr "পরের মাসে"
 msgid "No"
 msgstr "না"
 
-#: src/components/AutocompleteInput.tsx:207
+#: src/components/AutocompleteInput.tsx:208
 msgid "No Data"
 msgstr "কোন ডেটা নেই"
 
 #: src/components/audio_picker.tsx:424
-#: src/components/AutocompleteInput.tsx:211
+#: src/components/AutocompleteInput.tsx:212
 msgid "No Results"
 msgstr "কোন ফলাফল নেই"
 
@@ -979,7 +979,7 @@ msgid "One-Seventh of the Night"
 msgstr "রাতের এক-সপ্তমাংশ"
 
 #. shown in add/edit reminder dialog
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:258
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:259
 msgid "Only once?"
 msgstr "শুধুমাত্র একবার?"
 
@@ -987,11 +987,11 @@ msgstr "শুধুমাত্র একবার?"
 msgid "Only six items can be shown at the same time"
 msgstr "একই সময়ে মাত্র ছয়টি আইটেম দেখানো যাবে"
 
-#: src/screens/settings_fix_common_problems/index.tsx:64
+#: src/screens/settings_fix_common_problems/index.tsx:73
 msgid "Open Battery Optimization Settings"
 msgstr "ব্যাটারি অপ্টিমাইজেশান সেটিংস খুলুন"
 
-#: src/screens/settings_fix_common_problems/index.tsx:95
+#: src/screens/settings_fix_common_problems/index.tsx:104
 msgid "Open Power Manager Settings"
 msgstr "পাওয়ার ম্যানেজার সেটিংস খুলুন"
 
@@ -1005,7 +1005,7 @@ msgstr "ওপেন সোর্স রিপোজিটরি"
 msgid "Open-source"
 msgstr "ওপেন সোর্স"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:255
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:256
 msgid "Options"
 msgstr "অপশনসমূহ"
 
@@ -1070,7 +1070,7 @@ msgstr "অনুগ্রহ করে মনে রাখবেন যে এ�
 msgid "Polar Resolution"
 msgstr "পোলার রেজোলিউশন"
 
-#: src/screens/settings_fix_common_problems/index.tsx:69
+#: src/screens/settings_fix_common_problems/index.tsx:78
 msgid "Power Manager"
 msgstr "পাওয়ার ম্যানেজার"
 
@@ -1078,7 +1078,7 @@ msgstr "পাওয়ার ম্যানেজার"
 msgid "Prayer Times"
 msgstr "সালাতের সময়"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:218
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:219
 msgid "Prayer list"
 msgstr "প্রার্থনা তালিকা"
 
@@ -1092,7 +1092,7 @@ msgstr "অনুসন্ধান করতে টিপুন"
 msgid "Press to select a method"
 msgstr "একটি পদ্ধতি নির্বাচন করতে টিপুন"
 
-#: src/screens/home/index.tsx:169
+#: src/screens/home/index.tsx:185
 msgid "Prev Day"
 msgstr "আগের দিন"
 
@@ -1160,8 +1160,8 @@ msgid "Remind me next year"
 msgstr "পরের বছর আমাকে মনে করিয়ে দিন"
 
 #: src/screens/fullscreen_alarm/index.tsx:68
-#: src/tasks/set_reminder.ts:90
-#: src/tasks/set_reminder.ts:123
+#: src/tasks/set_reminder.ts:97
+#: src/tasks/set_reminder.ts:130
 #: src/utils/dialogs.ts:62
 msgid "Reminder"
 msgstr "রিমাইন্ডার"
@@ -1179,7 +1179,7 @@ msgstr "প্রয়োজনীয় সেটিংসসমূহ অস�
 msgid "Rounding Method"
 msgstr "রাউন্ডিং পদ্ধতি"
 
-#: src/screens/settings_fix_common_problems/index.tsx:85
+#: src/screens/settings_fix_common_problems/index.tsx:94
 msgid ""
 "Samsung devices have their own custom Power Manager called \"Device Care\".\n"
 "After pressing the button below, You will be navigated to the Battery menu of Device Care.\n"
@@ -1196,7 +1196,7 @@ msgid "Saudi Arabia"
 msgstr "সৌদি আরব"
 
 #: src/components/audio_picker.tsx:402
-#: src/components/AutocompleteInput.tsx:177
+#: src/components/AutocompleteInput.tsx:178
 msgid "Search"
 msgstr "অনুসন্ধান করুন"
 
@@ -1205,7 +1205,7 @@ msgstr "অনুসন্ধান করুন"
 msgid "Secondary Calendar"
 msgstr "দ্বিতীয় ক্যালেন্ডার"
 
-#: src/screens/home/index.tsx:223
+#: src/screens/home/index.tsx:239
 msgid "See favorite locations"
 msgstr "প্রিয় অবস্থান দেখুন"
 
@@ -1288,7 +1288,7 @@ msgstr "আযান বা রিমাইন্ডার বাজানো �
 msgid "Show Adhan Options"
 msgstr "আযান অপশন দেখুন"
 
-#: src/screens/home/index.tsx:193
+#: src/screens/home/index.tsx:209
 msgid "Show Today"
 msgstr "আজ দেখুন"
 
@@ -1346,7 +1346,7 @@ msgstr "সফ্টওয়্যার লাইসেন্স"
 msgid "Solar Hijri"
 msgstr "সৌর হিজরী"
 
-#: src/screens/settings_fix_common_problems/index.tsx:73
+#: src/screens/settings_fix_common_problems/index.tsx:82
 msgid ""
 "Some devices need extra settings inside their Power Manager \n"
 "to prevent the app from getting killed in the background.\n"
@@ -1355,8 +1355,8 @@ msgstr "ব্যাকগ্রাউন্ডে অ্যাপটিকে �
 
 #: src/screens/settings_notifications/notification_setting.tsx:242
 #: src/screens/settings_notifications/notification_setting.tsx:282
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:242
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:244
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:243
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:245
 msgid "Sound"
 msgstr "শব্দ"
 
@@ -1364,7 +1364,7 @@ msgstr "শব্দ"
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "রাশিয়ার মুসলমানদের আধ্যাত্মিক প্রশাসন"
 
-#: src/screens/settings_fix_common_problems/index.tsx:54
+#: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
 msgstr "অবস্থা"
 
@@ -1431,12 +1431,12 @@ msgid "Thursday"
 msgstr "বৃহস্পতিবার"
 
 #: src/screens/settings_display/hide_prayer_settings.tsx:40
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:141
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:142
 #: src/screens/settings_widget/hide_widget_prayer_settings.tsx:62
 msgid "Time"
 msgstr "সময়"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:198
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:199
 msgid "Time condition"
 msgstr "সময়ের শর্ত"
 
@@ -1444,7 +1444,7 @@ msgstr "সময়ের শর্ত"
 msgid "Time format"
 msgstr "সময় ফর্ম্যাট"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:146
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:147
 msgid "Time list"
 msgstr "সময়ের তালিকা"
 
@@ -1500,7 +1500,7 @@ msgstr "ইউনিয়ন অর্গানাইজেশন ইসলা�
 msgid "University of Islamic Sciences, Karachi"
 msgstr "ইউনিভার্সিটি অব ইসলামিক সায়েন্সেস, করাচি"
 
-#: src/components/AutocompleteInput.tsx:198
+#: src/components/AutocompleteInput.tsx:199
 msgid "Unknown Error"
 msgstr "অজানা সমস্যা"
 
@@ -1627,7 +1627,7 @@ msgstr "আপনি কাবার দিকে মুখ করে আছে�
 msgid "You are not facing Kaaba"
 msgstr "আপনি কাবার দিকে মুখ করছেন না"
 
-#: src/screens/settings_fix_common_problems/index.tsx:78
+#: src/screens/settings_fix_common_problems/index.tsx:87
 msgid "You can access your device Power Manager using the button below."
 msgstr "আপনি নীচের বাটনটি ব্যবহার করে আপনার ডিভাইস পাওয়ার ম্যানেজার অ্যাক্সেস করতে পারেন।"
 
@@ -1690,7 +1690,7 @@ msgstr "সম্পর্কিত"
 msgid "adjustment.hint"
 msgstr "গণনা করা সময়ের সাথে যোগ করা হবে এমন মিনিটের সংখ্যা"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:215
 msgid "after"
 msgstr "পরে"
 
@@ -1707,7 +1707,7 @@ msgstr "আসর"
 msgid "backup_settings"
 msgstr "ব্যাকআপ"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:213
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:214
 msgid "before"
 msgstr "আগে"
 
@@ -1830,7 +1830,7 @@ msgstr "মাগরিব"
 msgid "masjid_an_nabawi"
 msgstr "মসজিদে নববী"
 
-#: src/screens/settings_reminders/edit_reminder_modal.tsx:194
+#: src/screens/settings_reminders/edit_reminder_modal.tsx:195
 msgid "minutes"
 msgstr "মিনিট"
 
