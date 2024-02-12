@@ -70,8 +70,6 @@ jobs:
     - name: free disk space
       run: |
         yarn cache clean
-        sudo swapoff -a
-        sudo rm -f /swapfile
         sudo apt clean
         docker rmi $(docker image ls -aq)
         df -h
