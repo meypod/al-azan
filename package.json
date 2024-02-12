@@ -23,7 +23,7 @@
     "@lingui/react": "^3.17.2",
     "@maplibre/maplibre-react-native": "^9.1.0",
     "@notifee/react-native": "^7.8.0",
-    "@react-native-clipboard/clipboard": "^1.13.2",
+    "@react-native-clipboard/clipboard": "^1.11.2",
     "@react-native/metro-config": "^0.72.11",
     "@react-navigation/native": "^6.1.10",
     "@react-navigation/native-stack": "^6.9.18",
