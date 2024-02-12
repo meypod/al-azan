@@ -67,6 +67,15 @@ jobs:
     - name: Make Gradlew Executable
       run: cd android && chmod +x ./gradlew
 
+    - name: free disk space
+      run: |
+        yarn cache clean
+        sudo swapoff -a
+        sudo rm -f /swapfile
+        sudo apt clean
+        docker rmi $(docker image ls -aq)
+        df -h
+
     - name: build
       run: |
         cd android
