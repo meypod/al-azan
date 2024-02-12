@@ -71,7 +71,6 @@ jobs:
       run: |
         yarn cache clean
         sudo apt clean
-        docker rmi $(docker image ls -aq)
         df -h
 
     - name: build
