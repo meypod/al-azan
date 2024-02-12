@@ -1,5 +1,5 @@
 import {t} from '@lingui/macro';
-import produce from 'immer';
+import {produce} from 'immer';
 import {HStack, FormControl} from 'native-base';
 import {useCallback, useMemo} from 'react';
 import {AudioPicker} from './audio_picker';
