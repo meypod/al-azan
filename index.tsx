@@ -10,10 +10,23 @@ import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
 if (__DEV__) {
-  LogBox.ignoreLogs([
+  const ignoreWarns = [
     'UNSAFE_componentWillReceiveProps',
     'UNSAFE_componentWillMount',
-  ]);
+    'If you do not provide children, you must specify an aria-label for accessibility',
+    'In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app',
+  ];
+
+  const warn = console.warn;
+  console.warn = (...arg) => {
+    for (const warning of ignoreWarns) {
+      if (arg[0].startsWith(warning)) {
+        return;
+      }
+    }
+    warn(...arg);
+  };
+  LogBox.ignoreLogs(ignoreWarns);
 }
 
 setupNotifeeHandlers();
