@@ -1,0 +1,1 @@
+- fixed the issue of not being able to add reminders and reminders not working
