@@ -1,3 +1,4 @@
+import notifee from '@notifee/react-native';
 import {produce, type Draft} from 'immer';
 import {useCallback} from 'react';
 import {useStore} from 'zustand';
@@ -135,7 +136,7 @@ export const reminderSettings = createStore<ReminderStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 1,
+      version: 2,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -146,7 +147,15 @@ export const reminderSettings = createStore<ReminderStore>()(
               reminder.days = true;
             }
           case 1:
-            // this will be run when storage version is changed to 2
+            notifee
+              .cancelAllNotifications(
+                ((persistedState as any).REMINDERS as Reminder[]).map(
+                  r => r.id,
+                ),
+              )
+              .catch(console.error);
+          case 2:
+            // this will be run when storage version is changed to 3
             break;
         }
         /* eslint-enable no-fallthrough */

@@ -22,6 +22,14 @@ type SetReminderOptions = {
   force?: boolean;
 };
 
+function getReminderNotifId(reminderId: string) {
+  return 'reminder-' + reminderId;
+}
+
+function getPreReminderNotifId(reminderId: string) {
+  return 'pre-' + reminderId;
+}
+
 export async function setReminders(options?: SetReminderOptions) {
   const {
     reminders = reminderSettings.getState().REMINDERS,
@@ -36,15 +44,19 @@ export async function setReminders(options?: SetReminderOptions) {
     // we dont need reminderIdsToCancel out of this scope, hence the extra {}
     let reminderIdsToCancel: Array<string>;
     if (force) {
-      reminderIdsToCancel = reminders.map(r => r.id);
+      reminderIdsToCancel = reminders.map(r => getReminderNotifId(r.id));
       settings.getState().deleteTimestamps(reminderIdsToCancel);
     } else {
-      reminderIdsToCancel = reminders.filter(r => !r.enabled).map(r => r.id);
+      reminderIdsToCancel = reminders
+        .filter(r => !r.enabled)
+        .map(r => getReminderNotifId(r.id));
     }
     await Promise.all([
       notifee.cancelAllNotifications(reminderIdsToCancel).catch(console.error),
       notifee
-        .cancelAllNotifications(reminderIdsToCancel.map(id => 'pre-' + id))
+        .cancelAllNotifications(
+          reminderIdsToCancel.map(id => getPreReminderNotifId(id)),
+        )
         .catch(console.error),
     ]);
   }
@@ -99,7 +111,7 @@ export async function setReminders(options?: SetReminderOptions) {
       subtitle: getReminderSubtitle(reminder),
       date: triggerDate,
       prayer: reminder.prayer,
-      notifId: reminder.id,
+      notifId: 'reminder-' + reminder.id,
       notifChannelId: BYPASS_DND
         ? REMINDER_DND_CHANNEL_ID
         : REMINDER_CHANNEL_ID,
@@ -118,9 +130,9 @@ export async function setReminders(options?: SetReminderOptions) {
         .then(() =>
           setPreAlarmTask({
             ...reminderOptions,
-            notifId: 'pre-' + reminder.id,
+            notifId: getPreReminderNotifId(reminder.id),
             notifChannelId: PRE_REMINDER_CHANNEL_ID,
-            targetAlarmNotifId: reminder.id,
+            targetAlarmNotifId: 'reminder-' + reminder.id,
           }),
         )
         .then(() => {
