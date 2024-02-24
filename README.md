@@ -8,8 +8,9 @@ an open-source Adhan (أذان) - prayer times application built using react-nat
 [<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
      alt='Get it on Google Play'
      height="80">](https://play.google.com/store/apps/details?id=com.github.meypod.al_azan)
-
-or get the APK from [the Releases section](https://github.com/meypod/al-azan/releases/latest).
+[<img src="https://raw.githubusercontent.com/meypod/al-azan/main/fastlane/get-it-on-github.png"
+     alt='Get it on GitHub'
+     height="80">](https://github.com/meypod/al-azan/releases/latest)
 
 Apks released on GitHub are per CPU architecture, if you don't know which one to download, simply download the file that has "universal" in It's name.
 
