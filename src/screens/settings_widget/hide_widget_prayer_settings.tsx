@@ -9,45 +9,67 @@ import {
   Checkbox,
   FormControl,
 } from 'native-base';
-import {ToastAndroid} from 'react-native';
+import {memo, useCallback} from 'react';
+import {Pressable, ToastAndroid} from 'react-native';
 import {Prayer, PrayersInOrder, translatePrayer} from '@/adhan';
 import {useSettings} from '@/store/settings';
 
-function HideWidgetPrayerSetting({
+const HideWidgetPrayerSetting = memo(function HideWidgetPrayerSetting({
   prayer,
+  onToggle,
   ...props
-}: {prayer: Prayer} & IStackProps) {
+}: {prayer: Prayer; onToggle: (prayer: Prayer) => void} & IStackProps) {
   const prayerName = translatePrayer(prayer);
-  return (
-    <HStack {...props} justifyContent="space-between">
-      <Text width="1/2">{prayerName}</Text>
 
-      <Stack width="1/2" justifyContent="center" alignItems="center">
-        <Checkbox
-          size="md"
-          value={prayer}
-          accessibilityLabel={t`should ${prayerName} be hidden?`}
-        />
-      </Stack>
-    </HStack>
+  const toggle = () => onToggle(prayer);
+
+  return (
+    <Pressable onPress={toggle}>
+      <HStack {...props} justifyContent="space-between">
+        <Text width="1/2">{prayerName}</Text>
+
+        <Stack
+          width="1/2"
+          justifyContent="center"
+          alignItems="center"
+          pointerEvents="none">
+          <Checkbox
+            size="md"
+            value={prayer}
+            accessibilityLabel={t`should ${prayerName} be hidden?`}
+            isReadOnly={true}
+          />
+        </Stack>
+      </HStack>
+    </Pressable>
   );
-}
+});
 
 export function HideWidgetPrayerSettings(props: IStackProps) {
   const [hiddenWidgetPrayer, setHiddenWidgetPrayers] = useSettings(
     'HIDDEN_WIDGET_PRAYERS',
   );
 
-  const setHiddenPrayersProxy = (hiddenPrayers: Prayer[]) => {
-    if (hiddenPrayers.length < 3) {
-      ToastAndroid.show(
-        t`Only six items can be shown at the same time`,
-        ToastAndroid.SHORT,
-      );
-      return;
-    }
-    setHiddenWidgetPrayers(hiddenPrayers);
-  };
+  const onPrayerToggle = useCallback(
+    (prayer: Prayer) => {
+      const indexOfPrayer = hiddenWidgetPrayer.indexOf(prayer);
+      const hiddenPrayers = hiddenWidgetPrayer.slice();
+      if (indexOfPrayer === -1) {
+        hiddenPrayers.push(prayer);
+      } else {
+        hiddenPrayers.splice(indexOfPrayer, 1);
+      }
+      if (hiddenPrayers.length < 3) {
+        ToastAndroid.show(
+          t`Only six items can be shown at the same time`,
+          ToastAndroid.SHORT,
+        );
+        return;
+      }
+      setHiddenWidgetPrayers(hiddenPrayers);
+    },
+    [setHiddenWidgetPrayers, hiddenWidgetPrayer],
+  );
 
   return (
     <VStack
@@ -63,7 +85,6 @@ export function HideWidgetPrayerSettings(props: IStackProps) {
         <Text width="1/2" textAlign="center">{t`Hidden?`}</Text>
       </HStack>
       <Checkbox.Group
-        onChange={setHiddenPrayersProxy}
         value={hiddenWidgetPrayer}
         accessibilityLabel={t`is prayer time hidden?`}>
         {PrayersInOrder.map((p, i) => (
@@ -72,6 +93,7 @@ export function HideWidgetPrayerSettings(props: IStackProps) {
             backgroundColor={i % 2 === 0 ? 'coolGray.400:alpha.20' : undefined}
             key={p.toString()}
             prayer={p}
+            onToggle={onPrayerToggle}
           />
         ))}
       </Checkbox.Group>

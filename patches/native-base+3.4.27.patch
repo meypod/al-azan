@@ -1,5 +1,5 @@
 diff --git a/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js b/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js
-index 4241fa2..6a719e4 100644
+index 4241fa2..0516137 100644
 --- a/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js
 +++ b/node_modules/native-base/lib/commonjs/components/primitives/Select/Select.js
 @@ -177,6 +177,10 @@ const Select = ({
@@ -14,7 +14,7 @@ index 4241fa2..6a719e4 100644
      pointerEvents: "none",
      variant: variant
 diff --git a/node_modules/native-base/lib/module/components/primitives/Select/Select.js b/node_modules/native-base/lib/module/components/primitives/Select/Select.js
-index 5ece8a7..965ca71 100644
+index 5ece8a7..84db2dd 100644
 --- a/node_modules/native-base/lib/module/components/primitives/Select/Select.js
 +++ b/node_modules/native-base/lib/module/components/primitives/Select/Select.js
 @@ -138,6 +138,10 @@ const Select = ({

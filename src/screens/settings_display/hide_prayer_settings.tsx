@@ -8,24 +8,35 @@ import {
   FormControl,
   IStackProps,
 } from 'native-base';
+import {useCallback} from 'react';
 import {ToastAndroid} from 'react-native';
 import HidePrayerSetting from './hide_prayer_setting';
 import {Prayer, PrayersInOrder} from '@/adhan';
 import {useSettings} from '@/store/settings';
 
 export function HidePrayerSettings(props: IStackProps) {
-  const [hiddenPrayer, setHiddenPrayers] = useSettings('HIDDEN_PRAYERS');
+  const [HIDDEN_PRAYERS, setHiddenPrayers] = useSettings('HIDDEN_PRAYERS');
 
-  const setHiddenPrayersProxy = (hiddenPrayers: Prayer[]) => {
-    if (hiddenPrayers.length >= PrayersInOrder.length) {
-      ToastAndroid.show(
-        t`At least one prayer time must be shown`,
-        ToastAndroid.SHORT,
-      );
-      return;
-    }
-    setHiddenPrayers(hiddenPrayers);
-  };
+  const onPrayerToggle = useCallback(
+    (prayer: Prayer) => {
+      const hiddenPrayers = HIDDEN_PRAYERS.slice();
+      const indexOfPrayer = hiddenPrayers.indexOf(prayer);
+      if (indexOfPrayer === -1) {
+        hiddenPrayers.push(prayer);
+      } else {
+        hiddenPrayers.splice(indexOfPrayer, 1);
+      }
+      if (hiddenPrayers.length >= PrayersInOrder.length) {
+        ToastAndroid.show(
+          t`At least one prayer time must be shown`,
+          ToastAndroid.SHORT,
+        );
+        return;
+      }
+      setHiddenPrayers(hiddenPrayers);
+    },
+    [HIDDEN_PRAYERS, setHiddenPrayers],
+  );
 
   return (
     <VStack
@@ -41,8 +52,7 @@ export function HidePrayerSettings(props: IStackProps) {
         <Text width="1/2" textAlign="center">{t`Hidden?`}</Text>
       </HStack>
       <Checkbox.Group
-        onChange={setHiddenPrayersProxy}
-        value={hiddenPrayer}
+        value={HIDDEN_PRAYERS}
         accessibilityLabel={t`is prayer time hidden?`}>
         {PrayersInOrder.map((p, i) => (
           <HidePrayerSetting
@@ -50,6 +60,7 @@ export function HidePrayerSettings(props: IStackProps) {
             backgroundColor={i % 2 === 0 ? 'coolGray.400:alpha.20' : undefined}
             key={p.toString()}
             prayer={p}
+            onToggle={onPrayerToggle}
           />
         ))}
       </Checkbox.Group>

@@ -35,7 +35,7 @@
     "immer": "^10.0.3",
     "lodash": "^4.17.21",
     "make-plural": "^7.1.0",
-    "native-base": "3.4.25",
+    "native-base": "3.4.27",
     "react": "18.2.0",
     "react-native": "0.72.10",
     "react-native-app-intro-slider": "^4.0.4",
