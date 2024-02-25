@@ -74,10 +74,9 @@ jobs:
         ./gradlew --no-daemon :app:bundleRelease -PnoSign
         ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true
 
-    - name: cleanup gradle cache and build
+    - name: cleanup gradle caches
       run: |
-        ./gradlew clean
-        rm -rf $HOME/.gradle/caches/
+        rm -rf ~/.gradle/caches/
 
     - name: Sign App Apk
       if: ${{ github.event_name == 'release'}}
