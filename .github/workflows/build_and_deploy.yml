@@ -68,17 +68,12 @@ jobs:
         sudo apt clean
         df -h
 
-    - name: build
+    - name: build Apk files
       run: |
         cd android
-        ./gradlew --no-daemon :app:bundleRelease -PnoSign
         ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true
 
-    - name: cleanup gradle caches
-      run: |
-        rm -rf ~/.gradle/caches/
-
-    - name: Sign App Apk
+    - name: Sign Apk files
       if: ${{ github.event_name == 'release'}}
       uses: r0adkll/sign-android-release@v1
       with:
@@ -91,20 +86,7 @@ jobs:
         # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
         BUILD_TOOLS_VERSION: "33.0.0" 
 
-    - name: Sign App Bundle
-      if: ${{ github.event_name == 'release' }}
-      uses: r0adkll/sign-android-release@v1
-      with:
-        releaseDirectory: android/app/build/outputs/bundle/release
-        signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
-        alias: ${{ secrets.ANDROID_ALIAS }}
-        keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
-        keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
-      env: 
-        # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
-        BUILD_TOOLS_VERSION: "33.0.0" 
-       
-    - name: Release on GitHub
+    - name: Release Apk files on GitHub
       uses: ncipollo/release-action@v1
       with:
         prerelease: true
@@ -114,7 +96,41 @@ jobs:
         allowUpdates: true
         replacesArtifacts: true
         updateOnlyUnreleased: true
-        artifacts: android/app/build/outputs/apk/release/*signed.apk,android/app/build/outputs/bundle/release/*.aab
+        artifacts: android/app/build/outputs/apk/release/*signed.apk
+    
+    - name: Remove uploaded APK files
+      run: |
+        rm -rf ./android/app/build/outputs/apk/release
+        df -h
+
+    - name: build Bundle
+      run: |
+        cd android
+        ./gradlew --no-daemon :app:bundleRelease -PnoSign
+
+    - name: Sign App Bundle
+      if: ${{ github.event_name == 'release' }}
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: android/app/build/outputs/bundle/release
+        signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
+        alias: ${{ secrets.ANDROID_ALIAS }}
+        keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      env:
+        BUILD_TOOLS_VERSION: "33.0.0" 
+       
+    - name: Release bundle on GitHub
+      uses: ncipollo/release-action@v1
+      with:
+        prerelease: true
+        omitBody: true
+        omitBodyDuringUpdate: true
+        omitName: true
+        allowUpdates: true
+        replacesArtifacts: true
+        updateOnlyUnreleased: true
+        artifacts: android/app/build/outputs/bundle/release/*.aab
 
     - name: Push to Play Store
       if: ${{ github.event_name == 'release' && !contains(github.ref, '-rc') }}
