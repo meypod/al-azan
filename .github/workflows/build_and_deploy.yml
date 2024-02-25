@@ -18,6 +18,17 @@ jobs:
       options: --user root
     
     steps:
+     - name: Maximize build space
+        uses: easimon/maximize-build-space@v10
+        with:
+          root-reserve-mb: 512
+          temp-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
+          remove-docker-images: 'true'
+          
     - name: install git
       run: |
         sudo apt-get update;
@@ -47,11 +58,6 @@ jobs:
     - name: Install yarn
       run: npm install -g yarn
     
-    - name: Load Cache
-      uses: actions/setup-node@v3
-      with:
-        cache: 'yarn'
-    
     - name: Install packages
       run: yarn install --frozen-lockfile  # install project deps with --frozen-lockfile to make sure we will have the same packages version ( very recommended  on running yarn install on ci)
 
@@ -78,6 +84,11 @@ jobs:
         cd android
         ./gradlew --no-daemon :app:bundleRelease -PnoSign
         ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true
+
+    - name: cleanup gradle cache and build
+      run: |
+        ./gradlew clean
+        rm -rf $HOME/.gradle/caches/
 
     - name: Sign App Apk
       if: ${{ github.event_name == 'release'}}
