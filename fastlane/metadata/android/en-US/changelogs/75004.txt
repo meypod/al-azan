@@ -1,0 +1,1 @@
+- fixed the issue with checkboxes changing randomly in display settings and in widget settings
