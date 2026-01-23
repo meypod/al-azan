@@ -25,6 +25,13 @@ import {
 import {calcSettings, CalcSettingsStore} from '@/store/calculation';
 import {addDays, getDayBeginning, WeekDayIndex} from '@/utils/date';
 import {isRamadan} from '@/utils/ramadan';
+import {fetchMawaqitPrayerTimes} from '@/services/mawaqit_service';
+import {
+  getCachedMawaqitPrayerTimes,
+  cacheMawaqitPrayerTimes,
+  shouldRetryMawaqitFetch,
+  recordMawaqitFetchFailure,
+} from '@/store/mawaqit_cache';
 
 export type PrayerTimesOptions = {
   calculationParameters: CalculationParameters;
@@ -161,7 +168,123 @@ function getPrayerTimesOptionsFromSettings() {
   return prayerTimeOptions;
 }
 
+/**
+ * Get prayer times from Mawaqit cache if available and enabled
+ * @param date Date to get prayer times for
+ * @returns Mawaqit prayer times in CachedPrayerTimes format, or null if not available
+ */
+function getMawaqitPrayerTimesFromCache(
+  date: Date,
+): CachedPrayerTimes | null {
+  const state = calcSettings.getState();
+
+  // Check if Mawaqit is enabled and configured
+  if (!state.MAWAQIT_ENABLED || !state.MAWAQIT_URL) {
+    return null;
+  }
+
+  const mosqueUrl = state.MAWAQIT_URL;
+
+  // Try to get from cache
+  const cached = getCachedMawaqitPrayerTimes(date, mosqueUrl);
+  if (cached) {
+    // Convert to CachedPrayerTimes format with midnight/tahajjud
+    return convertMawaqitToCachedPrayerTimes(cached, state);
+  }
+
+  // Trigger background fetch if cache miss and should retry
+  if (shouldRetryMawaqitFetch(date)) {
+    // Trigger async fetch in background (non-blocking)
+    fetchMawaqitInBackground(date, mosqueUrl);
+  }
+
+  return null;
+}
+
+/**
+ * Fetch Mawaqit prayer times in the background (non-blocking)
+ */
+function fetchMawaqitInBackground(date: Date, mosqueUrl: string): void {
+  fetchMawaqitPrayerTimes(mosqueUrl, date)
+    .then(mawaqitTimes => {
+      if (mawaqitTimes) {
+        cacheMawaqitPrayerTimes(date, mawaqitTimes, mosqueUrl);
+        console.log('Mawaqit: Successfully fetched and cached prayer times');
+      } else {
+        recordMawaqitFetchFailure(date);
+        console.log('Mawaqit: Fetch returned no data, falling back to calculation');
+      }
+    })
+    .catch(error => {
+      console.error('Mawaqit: Background fetch error:', error);
+      recordMawaqitFetchFailure(date);
+    });
+}
+
+/**
+ * Convert Mawaqit prayer times to CachedPrayerTimes format
+ */
+function convertMawaqitToCachedPrayerTimes(
+  mawaqitTimes: {
+    fajr: Date;
+    sunrise: Date;
+    dhuhr: Date;
+    asr: Date;
+    maghrib: Date;
+    isha: Date;
+    date: Date;
+  },
+  state: CalcSettingsStore,
+): CachedPrayerTimes {
+  // Calculate midnight and tahajjud times
+  const maghribTime = mawaqitTimes.maghrib.getTime();
+  const ishaTime = mawaqitTimes.isha.getTime();
+  const fajrTime = mawaqitTimes.fajr.getTime();
+
+  let midnightTime: number;
+  if (state.MIDNIGHT_METHOD === MidnightMethod.SunsetToSunrise) {
+    // Calculate sunset to sunrise
+    const nextDay = new Date(mawaqitTimes.date);
+    nextDay.setDate(nextDay.getDate() + 1);
+    // We'd need next day's sunrise, but as approximation use 12 hours after maghrib
+    const sunriseNextDay = maghribTime + 12 * 60 * 60 * 1000;
+    midnightTime = (maghribTime + sunriseNextDay) / 2;
+  } else {
+    // SunsetToFajr (default)
+    // Fajr is next day, so we need to add 24 hours to it for calculation
+    const fajrNextDay = fajrTime + 24 * 60 * 60 * 1000;
+    midnightTime = (maghribTime + fajrNextDay) / 2;
+  }
+
+  // Apply midnight adjustment
+  midnightTime += state.MIDNIGHT_ADJUSTMENT * 60 * 1000;
+
+  // Calculate last third of the night for tahajjud
+  const nightLength = fajrTime + 24 * 60 * 60 * 1000 - ishaTime;
+  const tahajjudTime = ishaTime + (nightLength * 2) / 3;
+
+  return {
+    fajr: mawaqitTimes.fajr,
+    sunrise: mawaqitTimes.sunrise,
+    dhuhr: mawaqitTimes.dhuhr,
+    asr: mawaqitTimes.asr,
+    sunset: mawaqitTimes.maghrib, // Mawaqit uses maghrib, but sunset is same
+    maghrib: mawaqitTimes.maghrib,
+    isha: mawaqitTimes.isha,
+    midnight: new Date(midnightTime),
+    tahajjud: new Date(tahajjudTime),
+    date: mawaqitTimes.date,
+  };
+}
+
 export function calculatePrayerTimes(date: Date) {
+  // Try to get from Mawaqit cache first if enabled
+  const mawaqitTimes = getMawaqitPrayerTimesFromCache(date);
+  if (mawaqitTimes) {
+    return mawaqitTimes;
+  }
+
+  // Fallback to calculation
   const options = getPrayerTimesOptionsFromSettings();
   if (!options) return;
 

@@ -6,6 +6,10 @@ import {
   IScrollViewProps,
   Text,
   Button,
+  Switch,
+  Input,
+  HStack,
+  VStack,
 } from 'native-base';
 import {useCallback, useMemo} from 'react';
 import {useStore} from 'zustand';
@@ -18,6 +22,7 @@ import {SafeArea} from '@/components/safe_area';
 
 import {push} from '@/navigation/root_navigation';
 import {calcSettings, useCalcSettings} from '@/store/calculation';
+import {clearMawaqitCache} from '@/store/mawaqit_cache';
 
 export function CalculationSettings(props: IScrollViewProps) {
   const isMethodModified = useStore(
@@ -27,6 +32,29 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   const [calculationMethodKey, setCalculationMethodKey] = useCalcSettings(
     'CALCULATION_METHOD_KEY',
+  );
+
+  const [mawaqitEnabled, setMawaqitEnabled] = useCalcSettings('MAWAQIT_ENABLED');
+  const [mawaqitUrl, setMawaqitUrl] = useCalcSettings('MAWAQIT_URL');
+
+  const handleMawaqitEnabledChange = useCallback(
+    (value: boolean) => {
+      setMawaqitEnabled(value);
+      if (!value) {
+        // Clear cache when disabling Mawaqit
+        clearMawaqitCache();
+      }
+    },
+    [setMawaqitEnabled],
+  );
+
+  const handleMawaqitUrlChange = useCallback(
+    (value: string) => {
+      setMawaqitUrl(value.trim() || undefined);
+      // Clear cache when URL changes to force re-fetch
+      clearMawaqitCache();
+    },
+    [setMawaqitUrl],
   );
 
   const getMethodLabel = useCallback(
@@ -115,6 +143,37 @@ export function CalculationSettings(props: IScrollViewProps) {
           )}
           <CalcParamsBox />
         </FormControl>
+
+        <FormControl mb="5">
+          <FormControl.Label m="0">{t`Mawaqit Integration`}</FormControl.Label>
+          <VStack space={3}>
+            <HStack alignItems="center" justifyContent="space-between">
+              <Text flex={1}>{t`Use Mawaqit prayer times`}</Text>
+              <Switch
+                isChecked={mawaqitEnabled}
+                onToggle={handleMawaqitEnabledChange}
+                accessibilityLabel={t`Enable Mawaqit`}
+              />
+            </HStack>
+            {mawaqitEnabled && (
+              <VStack space={2}>
+                <Input
+                  placeholder={t`Mosque URL (e.g., https://mawaqit.net/fr/m/mosquee-de-frejus)`}
+                  value={mawaqitUrl || ''}
+                  onChangeText={handleMawaqitUrlChange}
+                  accessibilityLabel={t`Mawaqit Mosque URL`}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  keyboardType="url"
+                />
+                <FormControl.HelperText>
+                  {t`Enter your mosque URL from mawaqit.net. Prayer times will be fetched from Mawaqit. If the fetch fails, the app will use the selected calculation method as fallback and retry later.`}
+                </FormControl.HelperText>
+              </VStack>
+            )}
+          </VStack>
+        </FormControl>
+
         <CalendarSettings mb="7" />
 
         <Button mb="5" onPress={goToAdjustments}>{t`Adjustments`}</Button>
