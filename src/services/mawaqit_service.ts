@@ -5,6 +5,40 @@
 
 import {Prayer} from '@/adhan';
 
+// Timeout for fetch requests (10 seconds)
+const FETCH_TIMEOUT_MS = 10000;
+
+/**
+ * Fetch with timeout
+ * @param url URL to fetch
+ * @param options Fetch options
+ * @param timeout Timeout in milliseconds
+ * @returns Response or throws error
+ */
+async function fetchWithTimeout(
+  url: string,
+  options: RequestInit = {},
+  timeout: number = FETCH_TIMEOUT_MS,
+): Promise<Response> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    const response = await fetch(url, {
+      ...options,
+      signal: controller.signal,
+    });
+    clearTimeout(timeoutId);
+    return response;
+  } catch (error) {
+    clearTimeout(timeoutId);
+    if (error instanceof Error && error.name === 'AbortError') {
+      throw new Error(`Request timeout after ${timeout}ms`);
+    }
+    throw error;
+  }
+}
+
 export type MawaqitPrayerTimes = {
   fajr: Date;
   sunrise: Date;
@@ -81,7 +115,7 @@ async function fetchFromIcalEndpoint(
     // Try the ical endpoint
     const icalUrl = `${mosqueUrl}/ical`;
 
-    const response = await fetch(icalUrl, {
+    const response = await fetchWithTimeout(icalUrl, {
       headers: {
         'User-Agent': 'Al-Azan-App/1.0',
       },
@@ -229,7 +263,7 @@ async function fetchFromJsonApi(
 
     for (const apiUrl of apiEndpoints) {
       try {
-        const response = await fetch(apiUrl, {
+        const response = await fetchWithTimeout(apiUrl, {
           headers: {
             'User-Agent': 'Al-Azan-App/1.0',
             'Accept': 'application/json',

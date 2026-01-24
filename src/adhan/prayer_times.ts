@@ -31,6 +31,7 @@ import {
   cacheMawaqitPrayerTimes,
   shouldRetryMawaqitFetch,
   recordMawaqitFetchFailure,
+  clearOldMawaqitCache,
 } from '@/store/mawaqit_cache';
 
 export type PrayerTimesOptions = {
@@ -205,6 +206,9 @@ function getMawaqitPrayerTimesFromCache(
  * Fetch Mawaqit prayer times in the background (non-blocking)
  */
 function fetchMawaqitInBackground(date: Date, mosqueUrl: string): void {
+  // Clean up old cache entries (older than 7 days) periodically
+  clearOldMawaqitCache(7);
+
   fetchMawaqitPrayerTimes(mosqueUrl, date)
     .then(mawaqitTimes => {
       if (mawaqitTimes) {
@@ -223,6 +227,9 @@ function fetchMawaqitInBackground(date: Date, mosqueUrl: string): void {
 
 /**
  * Convert Mawaqit prayer times to CachedPrayerTimes format
+ * Note: Midnight and Tahajjud calculations use an approximation.
+ * They assume tomorrow's Fajr is 24 hours after today's Fajr, which is
+ * typically accurate within 1-2 minutes.
  */
 function convertMawaqitToCachedPrayerTimes(
   mawaqitTimes: {
@@ -244,23 +251,25 @@ function convertMawaqitToCachedPrayerTimes(
   let midnightTime: number;
   if (state.MIDNIGHT_METHOD === MidnightMethod.SunsetToSunrise) {
     // Calculate sunset to sunrise
-    const nextDay = new Date(mawaqitTimes.date);
-    nextDay.setDate(nextDay.getDate() + 1);
-    // We'd need next day's sunrise, but as approximation use 12 hours after maghrib
-    const sunriseNextDay = maghribTime + 12 * 60 * 60 * 1000;
-    midnightTime = (maghribTime + sunriseNextDay) / 2;
+    // Approximate next sunrise as current sunrise + 24 hours
+    const sunriseTime = mawaqitTimes.sunrise.getTime();
+    const nextSunrise = sunriseTime + 24 * 60 * 60 * 1000;
+    midnightTime = (maghribTime + nextSunrise) / 2;
   } else {
     // SunsetToFajr (default)
-    // Fajr is next day, so we need to add 24 hours to it for calculation
-    const fajrNextDay = fajrTime + 24 * 60 * 60 * 1000;
-    midnightTime = (maghribTime + fajrNextDay) / 2;
+    // Midnight is between Maghrib and next day's Fajr
+    // Approximate next Fajr as current Fajr + 24 hours
+    const nextFajr = fajrTime + 24 * 60 * 60 * 1000;
+    midnightTime = (maghribTime + nextFajr) / 2;
   }
 
   // Apply midnight adjustment
   midnightTime += state.MIDNIGHT_ADJUSTMENT * 60 * 1000;
 
   // Calculate last third of the night for tahajjud
-  const nightLength = fajrTime + 24 * 60 * 60 * 1000 - ishaTime;
+  // Night is from Isha to next day's Fajr
+  const nextFajr = fajrTime + 24 * 60 * 60 * 1000;
+  const nightLength = nextFajr - ishaTime;
   const tahajjudTime = ishaTime + (nightLength * 2) / 3;
 
   return {
@@ -268,7 +277,7 @@ function convertMawaqitToCachedPrayerTimes(
     sunrise: mawaqitTimes.sunrise,
     dhuhr: mawaqitTimes.dhuhr,
     asr: mawaqitTimes.asr,
-    sunset: mawaqitTimes.maghrib, // Mawaqit uses maghrib, but sunset is same
+    sunset: mawaqitTimes.maghrib, // Mawaqit doesn't separate sunset from maghrib
     maghrib: mawaqitTimes.maghrib,
     isha: mawaqitTimes.isha,
     midnight: new Date(midnightTime),

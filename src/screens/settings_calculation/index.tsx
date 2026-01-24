@@ -11,7 +11,7 @@ import {
   HStack,
   VStack,
 } from 'native-base';
-import {useCallback, useMemo} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import {useStore} from 'zustand';
 import {CalcParamsBox} from './calc_params_box';
 import {CalendarSettings} from './calendar_settings';
@@ -36,6 +36,21 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   const [mawaqitEnabled, setMawaqitEnabled] = useCalcSettings('MAWAQIT_ENABLED');
   const [mawaqitUrl, setMawaqitUrl] = useCalcSettings('MAWAQIT_URL');
+  const [mawaqitUrlInvalid, setMawaqitUrlInvalid] = useState(false);
+
+  const isValidMawaqitUrl = useCallback((url: string): boolean => {
+    if (!url) return true; // Empty is valid (will disable Mawaqit)
+    try {
+      const urlObj = new URL(url);
+      // Check if it's a mawaqit.net URL and has the expected structure
+      return (
+        urlObj.hostname.includes('mawaqit.net') &&
+        urlObj.pathname.includes('/m/')
+      );
+    } catch {
+      return false;
+    }
+  }, []);
 
   const handleMawaqitEnabledChange = useCallback(
     (value: boolean) => {
@@ -43,6 +58,7 @@ export function CalculationSettings(props: IScrollViewProps) {
       if (!value) {
         // Clear cache when disabling Mawaqit
         clearMawaqitCache();
+        setMawaqitUrlInvalid(false);
       }
     },
     [setMawaqitEnabled],
@@ -50,11 +66,16 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   const handleMawaqitUrlChange = useCallback(
     (value: string) => {
-      setMawaqitUrl(value.trim() || undefined);
+      const trimmedUrl = value.trim();
+      setMawaqitUrl(trimmedUrl || undefined);
+
+      // Validate URL format
+      setMawaqitUrlInvalid(!isValidMawaqitUrl(trimmedUrl));
+
       // Clear cache when URL changes to force re-fetch
       clearMawaqitCache();
     },
-    [setMawaqitUrl],
+    [setMawaqitUrl, isValidMawaqitUrl],
   );
 
   const getMethodLabel = useCallback(
@@ -165,7 +186,13 @@ export function CalculationSettings(props: IScrollViewProps) {
                   autoCapitalize="none"
                   autoCorrect={false}
                   keyboardType="url"
+                  isInvalid={mawaqitUrlInvalid && !!mawaqitUrl}
                 />
+                {mawaqitUrlInvalid && mawaqitUrl && (
+                  <FormControl.ErrorMessage>
+                    {t`Please enter a valid Mawaqit URL (e.g., https://mawaqit.net/fr/m/your-mosque)`}
+                  </FormControl.ErrorMessage>
+                )}
                 <FormControl.HelperText>
                   {t`Enter your mosque URL from mawaqit.net. Prayer times will be fetched from Mawaqit. If the fetch fails, the app will use the selected calculation method as fallback and retry later.`}
                 </FormControl.HelperText>
