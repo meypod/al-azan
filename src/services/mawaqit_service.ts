@@ -375,8 +375,117 @@ function parsePrayerTimesObject(
 }
 
 /**
+ * Fetch prayer times from Mawaqit by parsing HTML page
+ * This is the most reliable method as it uses the same data the website displays
+ * @param mosqueUrl Mawaqit mosque URL
+ * @param date Date to fetch prayer times for
+ * @returns Prayer times or null if fetch fails
+ */
+async function fetchFromHtmlPage(
+  mosqueUrl: string,
+  date: Date,
+): Promise<MawaqitPrayerTimes | null> {
+  try {
+    const response = await fetchWithTimeout(mosqueUrl, {
+      headers: {
+        'User-Agent': 'Al-Azan-App/1.0',
+      },
+    });
+
+    if (!response.ok) {
+      console.error('Mawaqit HTML fetch failed:', response.status);
+      return null;
+    }
+
+    const html = await response.text();
+    return parseHtmlPage(html, date);
+  } catch (error) {
+    console.error('Error fetching from Mawaqit HTML page:', error);
+    return null;
+  }
+}
+
+/**
+ * Parse Mawaqit HTML page to extract confData and prayer times
+ * The page contains a JavaScript variable 'confData' with all prayer time information
+ * @param html HTML content of the page
+ * @param date Date to extract prayer times for
+ * @returns Prayer times or null if parsing fails
+ */
+function parseHtmlPage(
+  html: string,
+  date: Date,
+): MawaqitPrayerTimes | null {
+  try {
+    // Extract the confData JavaScript object from the HTML
+    // It's defined as: let confData = {...};
+    const confDataMatch = html.match(/let\s+confData\s*=\s*(\{[\s\S]*?\});/);
+    if (!confDataMatch) {
+      console.error('Could not find confData in HTML');
+      return null;
+    }
+
+    // Parse the JSON data
+    const confData = JSON.parse(confDataMatch[1]);
+
+    // Extract prayer times from calendar
+    // calendar is an array of 12 months (0-indexed)
+    // Each month is an object with day numbers as keys
+    // Each day is an array: [Fajr, Shuruq, Dhuhr, Asr, Maghrib, Isha]
+    const calendar = confData.calendar;
+    if (!calendar || !Array.isArray(calendar)) {
+      console.error('Invalid calendar data in confData');
+      return null;
+    }
+
+    const month = date.getMonth(); // 0-indexed (0 = January)
+    const day = date.getDate(); // 1-indexed
+
+    if (!calendar[month] || !calendar[month][day]) {
+      console.error(`No prayer times found for month ${month + 1}, day ${day}`);
+      return null;
+    }
+
+    const dayTimes = calendar[month][day];
+    // dayTimes format: [Fajr, Shuruq, Dhuhr, Asr, Maghrib, Isha]
+    if (!Array.isArray(dayTimes) || dayTimes.length < 6) {
+      console.error('Invalid day times format');
+      return null;
+    }
+
+    const [fajrStr, shuruqStr, dhuhrStr, asrStr, maghribStr, ishaStr] = dayTimes;
+
+    // Parse time strings
+    const fajr = parseTimeString(fajrStr, date);
+    const sunrise = parseTimeString(shuruqStr, date);
+    const dhuhr = parseTimeString(dhuhrStr, date);
+    const asr = parseTimeString(asrStr, date);
+    const maghrib = parseTimeString(maghribStr, date);
+    const isha = parseTimeString(ishaStr, date);
+
+    if (!fajr || !sunrise || !dhuhr || !asr || !maghrib || !isha) {
+      console.error('Failed to parse one or more prayer times from HTML');
+      return null;
+    }
+
+    return {
+      fajr,
+      sunrise,
+      dhuhr,
+      asr,
+      maghrib,
+      isha,
+      date,
+    };
+  } catch (error) {
+    console.error('Error parsing Mawaqit HTML page:', error);
+    return null;
+  }
+}
+
+/**
  * Fetch prayer times from Mawaqit for a specific date
- * Tries multiple methods: iCal, JSON API
+ * Tries multiple methods: iCal, JSON API, HTML parsing
  * @param mosqueUrl Mawaqit mosque URL
  * @param date Date to fetch prayer times for
  * @returns Prayer times or null if all methods fail
@@ -392,11 +501,24 @@ export async function fetchMawaqitPrayerTimes(
 
   // Try iCal endpoint first
   let times = await fetchFromIcalEndpoint(mosqueUrl, date);
-  if (times) return times;
+  if (times) {
+    console.log('Mawaqit: Successfully fetched from iCal endpoint');
+    return times;
+  }
 
   // Fallback to JSON API
   times = await fetchFromJsonApi(mosqueUrl, date);
-  if (times) return times;
+  if (times) {
+    console.log('Mawaqit: Successfully fetched from JSON API');
+    return times;
+  }
+
+  // Final fallback: Parse HTML page directly
+  times = await fetchFromHtmlPage(mosqueUrl, date);
+  if (times) {
+    console.log('Mawaqit: Successfully fetched from HTML page');
+    return times;
+  }
 
   console.error('All Mawaqit fetch methods failed');
   return null;
