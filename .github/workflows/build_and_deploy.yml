@@ -86,7 +86,7 @@ jobs:
 
     - name: Sign Apk files
       if: ${{ github.event_name == 'release'}}
-      uses: r0adkll/sign-android-release@v1
+      uses: r0adkll/sign-android-release@v1.0.4
       with:
         releaseDirectory: android/app/build/outputs/apk/release
         signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
@@ -137,7 +137,7 @@ jobs:
 
     - name: Sign App Bundle
       if: ${{ github.event_name == 'release' }}
-      uses: r0adkll/sign-android-release@v1
+      uses: r0adkll/sign-android-release@v1.0.4
       with:
         releaseDirectory: android/app/build/outputs/bundle/release
         signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
