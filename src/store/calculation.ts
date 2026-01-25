@@ -54,6 +54,10 @@ export type CalcSettingsStore = {
   MAGHRIB_ANGLE_OVERRIDE: undefined | number;
   ISHA_INTERVAL_OVERRIDE: undefined | number;
 
+  // Mawaqit integration
+  MAWAQIT_ENABLED: boolean;
+  MAWAQIT_URL: string | undefined;
+
   // prayer adjustment settings
   FAJR_ADJUSTMENT: number;
   SUNRISE_ADJUSTMENT: number;
@@ -97,6 +101,10 @@ export const calcSettings = createStore<CalcSettingsStore>()(
       ISHA_ANGLE_OVERRIDE: undefined,
       MAGHRIB_ANGLE_OVERRIDE: undefined,
       ISHA_INTERVAL_OVERRIDE: undefined,
+
+      // Mawaqit integration
+      MAWAQIT_ENABLED: false,
+      MAWAQIT_URL: undefined,
 
       FAJR_ADJUSTMENT: 0,
       SUNRISE_ADJUSTMENT: 0,
@@ -149,7 +157,7 @@ export const calcSettings = createStore<CalcSettingsStore>()(
         Object.fromEntries(
           Object.entries(state).filter(([key]) => !invalidKeys.includes(key)),
         ),
-      version: 6,
+      version: 7,
       migrate: (persistedState, version) => {
         /* eslint-disable no-fallthrough */
         // fall through cases is exactly the use case for migration.
@@ -221,6 +229,14 @@ export const calcSettings = createStore<CalcSettingsStore>()(
             ) {
               (persistedState as CalcSettingsStore).MIDNIGHT_METHOD =
                 MidnightMethod.SunsetToFajr;
+            }
+          case 7:
+            // added Mawaqit integration fields in version 7
+            if (typeof (persistedState as CalcSettingsStore).MAWAQIT_ENABLED === 'undefined') {
+              (persistedState as CalcSettingsStore).MAWAQIT_ENABLED = false;
+            }
+            if (typeof (persistedState as CalcSettingsStore).MAWAQIT_URL === 'undefined') {
+              (persistedState as CalcSettingsStore).MAWAQIT_URL = undefined;
             }
             break;
         }

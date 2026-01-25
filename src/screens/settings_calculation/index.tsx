@@ -6,8 +6,12 @@ import {
   IScrollViewProps,
   Text,
   Button,
+  Switch,
+  Input,
+  HStack,
+  VStack,
 } from 'native-base';
-import {useCallback, useMemo} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import {useStore} from 'zustand';
 import {CalcParamsBox} from './calc_params_box';
 import {CalendarSettings} from './calendar_settings';
@@ -18,6 +22,7 @@ import {SafeArea} from '@/components/safe_area';
 
 import {push} from '@/navigation/root_navigation';
 import {calcSettings, useCalcSettings} from '@/store/calculation';
+import {clearMawaqitCache} from '@/store/mawaqit_cache';
 
 export function CalculationSettings(props: IScrollViewProps) {
   const isMethodModified = useStore(
@@ -27,6 +32,50 @@ export function CalculationSettings(props: IScrollViewProps) {
 
   const [calculationMethodKey, setCalculationMethodKey] = useCalcSettings(
     'CALCULATION_METHOD_KEY',
+  );
+
+  const [mawaqitEnabled, setMawaqitEnabled] = useCalcSettings('MAWAQIT_ENABLED');
+  const [mawaqitUrl, setMawaqitUrl] = useCalcSettings('MAWAQIT_URL');
+  const [mawaqitUrlInvalid, setMawaqitUrlInvalid] = useState(false);
+
+  const isValidMawaqitUrl = useCallback((url: string): boolean => {
+    if (!url) return true; // Empty is valid (will disable Mawaqit)
+    try {
+      const urlObj = new URL(url);
+      // Check if it's a mawaqit.net URL and has the expected structure
+      return (
+        urlObj.hostname.includes('mawaqit.net') &&
+        urlObj.pathname.includes('/m/')
+      );
+    } catch {
+      return false;
+    }
+  }, []);
+
+  const handleMawaqitEnabledChange = useCallback(
+    (value: boolean) => {
+      setMawaqitEnabled(value);
+      if (!value) {
+        // Clear cache when disabling Mawaqit
+        clearMawaqitCache();
+        setMawaqitUrlInvalid(false);
+      }
+    },
+    [setMawaqitEnabled],
+  );
+
+  const handleMawaqitUrlChange = useCallback(
+    (value: string) => {
+      const trimmedUrl = value.trim();
+      setMawaqitUrl(trimmedUrl || undefined);
+
+      // Validate URL format
+      setMawaqitUrlInvalid(!isValidMawaqitUrl(trimmedUrl));
+
+      // Clear cache when URL changes to force re-fetch
+      clearMawaqitCache();
+    },
+    [setMawaqitUrl, isValidMawaqitUrl],
   );
 
   const getMethodLabel = useCallback(
@@ -115,6 +164,43 @@ export function CalculationSettings(props: IScrollViewProps) {
           )}
           <CalcParamsBox />
         </FormControl>
+
+        <FormControl mb="5">
+          <FormControl.Label m="0">{t`Mawaqit Integration`}</FormControl.Label>
+          <VStack space={3}>
+            <HStack alignItems="center" justifyContent="space-between">
+              <Text flex={1}>{t`Use Mawaqit prayer times`}</Text>
+              <Switch
+                isChecked={mawaqitEnabled}
+                onToggle={handleMawaqitEnabledChange}
+                accessibilityLabel={t`Enable Mawaqit`}
+              />
+            </HStack>
+            {mawaqitEnabled && (
+              <VStack space={2}>
+                <Input
+                  placeholder={t`Mosque URL (e.g., https://mawaqit.net/fr/m/mosquee-de-frejus)`}
+                  value={mawaqitUrl || ''}
+                  onChangeText={handleMawaqitUrlChange}
+                  accessibilityLabel={t`Mawaqit Mosque URL`}
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  keyboardType="url"
+                  isInvalid={mawaqitUrlInvalid && !!mawaqitUrl}
+                />
+                {mawaqitUrlInvalid && mawaqitUrl && (
+                  <FormControl.ErrorMessage>
+                    {t`Please enter a valid Mawaqit URL (e.g., https://mawaqit.net/fr/m/your-mosque)`}
+                  </FormControl.ErrorMessage>
+                )}
+                <FormControl.HelperText>
+                  {t`Enter your mosque URL from mawaqit.net. Prayer times will be fetched from Mawaqit. If the fetch fails, the app will use the selected calculation method as fallback and retry later.`}
+                </FormControl.HelperText>
+              </VStack>
+            )}
+          </VStack>
+        </FormControl>
+
         <CalendarSettings mb="7" />
 
         <Button mb="5" onPress={goToAdjustments}>{t`Adjustments`}</Button>
