@@ -8,6 +8,10 @@ on:
       - opened
       - reopened
       - synchronize
+  push:
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -73,6 +77,13 @@ jobs:
         cd android
         ./gradlew --no-daemon :app:assembleRelease -PnoSign -PuseLegacyPackaging=true
 
+    - name: Upload unsigned APK as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: unsigned-apk
+        path: android/app/build/outputs/apk/release/*.apk
+        retention-days: 30
+
     - name: Sign Apk files
       if: ${{ github.event_name == 'release'}}
       uses: r0adkll/sign-android-release@v1
@@ -82,11 +93,20 @@ jobs:
         alias: ${{ secrets.ANDROID_ALIAS }}
         keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
-      env: 
+      env:
         # build tools version is found inside cimg/android related tag pulled layers details inside docker hub. after `...-c SDK_TOOLS_URL=...`
-        BUILD_TOOLS_VERSION: "34.0.0" 
+        BUILD_TOOLS_VERSION: "34.0.0"
+
+    - name: Upload signed APK as artifact
+      if: ${{ github.event_name == 'release' }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: signed-apk
+        path: android/app/build/outputs/apk/release/*signed.apk
+        retention-days: 90
 
     - name: Release Apk files on GitHub
+      if: ${{ github.event_name == 'release' }}
       uses: ncipollo/release-action@v1
       with:
         prerelease: true
@@ -108,6 +128,13 @@ jobs:
         cd android
         ./gradlew --no-daemon :app:bundleRelease -PnoSign
 
+    - name: Upload unsigned Bundle as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: unsigned-bundle
+        path: android/app/build/outputs/bundle/release/*.aab
+        retention-days: 30
+
     - name: Sign App Bundle
       if: ${{ github.event_name == 'release' }}
       uses: r0adkll/sign-android-release@v1
@@ -118,9 +145,18 @@ jobs:
         keyStorePassword: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
         keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
       env:
-        BUILD_TOOLS_VERSION: "34.0.0" 
-       
+        BUILD_TOOLS_VERSION: "34.0.0"
+
+    - name: Upload signed Bundle as artifact
+      if: ${{ github.event_name == 'release' }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: signed-bundle
+        path: android/app/build/outputs/bundle/release/*.aab
+        retention-days: 90
+
     - name: Release bundle on GitHub
+      if: ${{ github.event_name == 'release' }}
       uses: ncipollo/release-action@v1
       with:
         prerelease: true
