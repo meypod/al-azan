@@ -1,5 +1,8 @@
 # Al-Azan
 
+> [!NOTE]
+> This repository is being archived. Development continues at [meypod/al-azan-compose](https://github.com/meypod/al-azan-compose/).
+
 an open-source Adhan (أذان) - prayer times application built using react-native.
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
