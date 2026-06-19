@@ -78,15 +78,15 @@ git clone --recurse-submodules git@github.com:meypod/al-azan.git
 cd al-azan && git submodule update --init --recursive
 ```
 
-2. install packages:
+1. install packages:
 
 ```bash
 yarn install
 ```
 
-3. Prepare language settings by renaming `lingui.config.js.example` to `lingui.config.js`.
+1. Prepare language settings by renaming `lingui.config.js.example` to `lingui.config.js`.
 
-4. Compile the languages:
+2. Compile the languages:
 
 ```bash
 # need to do only once, or when you sync the translations
@@ -216,3 +216,6 @@ THjtLAdihH57mbeaVmBfx3wAAXkpxAnqmJ
 
 Bitcoin cash:
 qqgjknfejs4zf4udsalsej2qkwt5es5ym5fwusgvx3
+
+Monero address:
+4AdNVLzrPrUMkY7A4sXNGVDLgbC6HgNM1NCr8uptD9bhMwDhNshzrsaXD11d5kjzPkcGqCUz6rLRx4WSMKfjcbU346kMW8U
