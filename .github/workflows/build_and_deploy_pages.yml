@@ -27,7 +27,7 @@ jobs:
       - name: Install packages
         run: |
           cd website
-          yarn install --frozen-lockfile
+          yarn install --no-immutable
 
       - name: Compile lingui.js locales
         run: |
