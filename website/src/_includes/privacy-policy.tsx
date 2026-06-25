@@ -51,6 +51,17 @@ export function render({page}: ReturnType<typeof data> & {page: Page}) {
           )}
         </p>
         <br />
+        <h2>{i18n._('Location')}</h2>
+        <p>
+          {i18n._(
+            'Al-Azan accesses your device location (approximate and precise) to determine your current position so it can calculate accurate prayer times and the qibla direction. With the optional “Travel mode” feature enabled, it also accesses location in the background to keep prayer times updated as you move. Location access is optional; you can instead choose your city manually.',
+          )}
+          <br />
+          {i18n._(
+            'Your location is processed only on your device to compute prayer times and the qibla direction. It is not uploaded to any server, is not shared with the developers or any third party, and is never used for advertising or tracking. You can revoke location permission at any time in your device settings, and turning off Travel mode stops any background location access.',
+          )}
+        </p>
+        <br />
         <h2>{i18n._('Software License')}</h2>
         <p>
           {i18n._(

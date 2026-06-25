@@ -135,11 +135,15 @@ msgstr "Al-Azan"
 msgid "Al-Azan - Prayer Times"
 msgstr "Al-Azan - Prayer Times"
 
-#: website/src/_includes/privacy-policy.tsx:61
+#: website/src/_includes/privacy-policy.tsx:56
+msgid "Al-Azan accesses your device location (approximate and precise) to determine your current position so it can calculate accurate prayer times and the qibla direction. With the optional “Travel mode” feature enabled, it also accesses location in the background to keep prayer times updated as you move. Location access is optional; you can instead choose your city manually."
+msgstr "Al-Azan accesses your device location (approximate and precise) to determine your current position so it can calculate accurate prayer times and the qibla direction. With the optional “Travel mode” feature enabled, it also accesses location in the background to keep prayer times updated as you move. Location access is optional; you can instead choose your city manually."
+
+#: website/src/_includes/privacy-policy.tsx:72
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
 msgstr "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
 
-#: website/src/_includes/privacy-policy.tsx:56
+#: website/src/_includes/privacy-policy.tsx:67
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 
@@ -788,6 +792,7 @@ msgstr "Loading"
 #: src/screens/qibla_finder_compass/index.tsx:155
 #: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
+#: website/src/_includes/privacy-policy.tsx:54
 msgid "Location"
 msgstr "Location"
 
@@ -917,8 +922,8 @@ msgstr "No"
 msgid "No Data"
 msgstr "No Data"
 
-#: src/components/audio_picker.tsx:424
 #: src/components/AutocompleteInput.tsx:212
+#: src/components/audio_picker.tsx:424
 msgid "No Results"
 msgstr "No Results"
 
@@ -1205,8 +1210,8 @@ msgstr "Saturday"
 msgid "Saudi Arabia"
 msgstr "Saudi Arabia"
 
-#: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:178
+#: src/components/audio_picker.tsx:402
 msgid "Search"
 msgstr "Search"
 
@@ -1351,7 +1356,7 @@ msgstr "Singapore"
 msgid "Skip"
 msgstr "Skip"
 
-#: website/src/_includes/privacy-policy.tsx:54
+#: website/src/_includes/privacy-policy.tsx:65
 msgid "Software License"
 msgstr "Software License"
 
@@ -1425,7 +1430,7 @@ msgstr "The Gulf Region (Dubai)"
 msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
 msgstr "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
 
-#: website/src/_includes/privacy-policy.tsx:71
+#: website/src/_includes/privacy-policy.tsx:82
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 msgstr "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 
@@ -1676,9 +1681,13 @@ msgstr "You can hide prayer times you don't want to see in the widget here:"
 msgid "You can search for your location offline Or use GPS"
 msgstr "You can search for your location offline Or use GPS"
 
-#: website/src/_includes/privacy-policy.tsx:66
+#: website/src/_includes/privacy-policy.tsx:77
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
+
+#: website/src/_includes/privacy-policy.tsx:60
+msgid "Your location is processed only on your device to compute prayer times and the qibla direction. It is not uploaded to any server, is not shared with the developers or any third party, and is never used for advertising or tracking. You can revoke location permission at any time in your device settings, and turning off Travel mode stops any background location access."
+msgstr "Your location is processed only on your device to compute prayer times and the qibla direction. It is not uploaded to any server, is not shared with the developers or any third party, and is never used for advertising or tracking. You can revoke location permission at any time in your device settings, and turning off Travel mode stops any background location access."
 
 #: src/components/audio_picker.tsx:84
 msgid "Your sounds"

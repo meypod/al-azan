@@ -6,6 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: tr\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:159
@@ -129,11 +135,15 @@ msgstr "Al-Azan"
 msgid "Al-Azan - Prayer Times"
 msgstr "Al-Azan - Namaz Vakitleri"
 
-#: website/src/_includes/privacy-policy.tsx:61
+#: website/src/_includes/privacy-policy.tsx:56
+msgid "Al-Azan accesses your device location (approximate and precise) to determine your current position so it can calculate accurate prayer times and the qibla direction. With the optional “Travel mode” feature enabled, it also accesses location in the background to keep prayer times updated as you move. Location access is optional; you can instead choose your city manually."
+msgstr "Al-Azan, doğru namaz vakitlerini ve kıble yönünü hesaplayabilmek için mevcut konumunuzu belirlemek amacıyla cihazınızın konumuna (yaklaşık ve kesin) erişir. İsteğe bağlı „Seyahat modu“ özelliği etkinleştirildiğinde, siz hareket ederken namaz vakitlerini güncel tutmak için arka planda da konuma erişir. Konum erişimi isteğe bağlıdır; bunun yerine şehrinizi elle de seçebilirsiniz."
+
+#: website/src/_includes/privacy-policy.tsx:72
 msgid "Al-Azan is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details."
 msgstr "Al-Azan, yararlı olacağı umuduyla, ancak HERHANGİ BİR GARANTİ OLMAKSIZIN; hatta ZIMNİ TİCARİ ELVERİŞLİLİK veya BELİRLİ BİR AMACA UYGUNLUK garantisi olmaksızın dağıtılmaktadır. Daha fazla ayrıntı için GNU Affero Genel Kamu Lisansına bakınız."
 
-#: website/src/_includes/privacy-policy.tsx:56
+#: website/src/_includes/privacy-policy.tsx:67
 msgid "Al-Azan is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License (v3.0) as published by the Free Software Foundation."
 msgstr "Al-Azan özgür bir yazılımdır: Özgür Yazılım Vakfı tarafından yayınlanan GNU Affero Genel Kamu Lisansı (v3.0) koşulları altında yeniden dağıtabilir ve/veya değiştirebilirsiniz."
 
@@ -782,6 +792,7 @@ msgstr "Yükleniyor"
 #: src/screens/qibla_finder_compass/index.tsx:155
 #: src/screens/settings_widget/city_name_pos_settings.tsx:17
 #: src/utils/dialogs.ts:36
+#: website/src/_includes/privacy-policy.tsx:54
 msgid "Location"
 msgstr "Konum"
 
@@ -911,8 +922,8 @@ msgstr "Hayır"
 msgid "No Data"
 msgstr "Veri yok"
 
-#: src/components/audio_picker.tsx:424
 #: src/components/AutocompleteInput.tsx:212
+#: src/components/audio_picker.tsx:424
 msgid "No Results"
 msgstr "Sonuç yok"
 
@@ -1195,8 +1206,8 @@ msgstr "Cumartesi"
 msgid "Saudi Arabia"
 msgstr "Suudi Arabistan"
 
-#: src/components/audio_picker.tsx:402
 #: src/components/AutocompleteInput.tsx:178
+#: src/components/audio_picker.tsx:402
 msgid "Search"
 msgstr "Ara"
 
@@ -1338,7 +1349,7 @@ msgstr "Singapur"
 msgid "Skip"
 msgstr "Atla"
 
-#: website/src/_includes/privacy-policy.tsx:54
+#: website/src/_includes/privacy-policy.tsx:65
 msgid "Software License"
 msgstr "Yazılım Lisansı"
 
@@ -1409,7 +1420,7 @@ msgstr "Körfez Bölgesi (Dubai)"
 msgid "The app's lunar calendar is pre-calculated and may not be accurate because it isn't based on moon sightings. This is especially important to note for the start and end of Ramadan."
 msgstr "Uygulamanın ay takvimi önceden hesaplanmıştır ve ay gözlemlerine dayanmadığı için doğru olmayabilir. Bu özellikle Ramazan'ın başlangıcı ve bitişi için önemlidir."
 
-#: website/src/_includes/privacy-policy.tsx:71
+#: website/src/_includes/privacy-policy.tsx:82
 msgid "The text found in this website and in the app may not be accurate in other languages, so in any case, only English version should be considered."
 msgstr "Bu web sitesinde ve uygulamada bulunan metin diğer dillerde doğru olmayabilir, bu nedenle her durumda yalnızca İngilizce sürüm dikkate alınmalıdır."
 
@@ -1660,9 +1671,13 @@ msgstr "Widget'ta görünmesini istemediğiniz vakitleri buradan gizleyebilirsin
 msgid "You can search for your location offline Or use GPS"
 msgstr "Konumunuzu çevrimdışı arayabilir veya GPS kullanabilirsiniz"
 
-#: website/src/_includes/privacy-policy.tsx:66
+#: website/src/_includes/privacy-policy.tsx:77
 msgid "You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/."
 msgstr "Bu programla birlikte GNU Affero Genel Kamu Lisansının bir kopyasını almış olmalısınız. Değilse, https://www.gnu.org/licenses/ adresine bakın."
+
+#: website/src/_includes/privacy-policy.tsx:60
+msgid "Your location is processed only on your device to compute prayer times and the qibla direction. It is not uploaded to any server, is not shared with the developers or any third party, and is never used for advertising or tracking. You can revoke location permission at any time in your device settings, and turning off Travel mode stops any background location access."
+msgstr "Konumunuz yalnızca cihazınızda namaz vakitlerini ve kıble yönünü hesaplamak için işlenir. Hiçbir sunucuya yüklenmez, geliştiricilerle veya herhangi bir üçüncü tarafla paylaşılmaz ve asla reklam veya takip için kullanılmaz. Konum iznini istediğiniz zaman cihaz ayarlarınızdan kaldırabilirsiniz; seyahat modunu kapatmak arka plandaki her türlü konum erişimini durdurur."
 
 #: src/components/audio_picker.tsx:84
 msgid "Your sounds"
